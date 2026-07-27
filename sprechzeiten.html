@@ -47,7 +47,21 @@
             <a href="presseschau.html">Presseschau</a>
             <a href="sprechzeiten.html" style="color: white; font-weight: 700;">Kontakt</a>
           </div>
-        <a href="sprechzeiten.html" class="btn-book hidden-mobile">Termin vereinbaren</a>
+                  
+          
+          
+          
+          <div class="lang-switcher hidden-mobile">
+            <div class="lang-current">DE <span>▼</span></div>
+            <div class="lang-dropdown">
+              <a href="sprechzeiten.html">Deutsch (DE)</a>
+              <a href="en/sprechzeiten.html">English (EN)</a>
+              <a href="ru/sprechzeiten.html">Русский (RU)</a>
+              <a href="tr/sprechzeiten.html">Türkçe (TR)</a>
+              <a href="ar/sprechzeiten.html">العربية (AR)</a>
+            </div>
+          </div>
+          <a href="sprechzeiten.html" class="btn-book hidden-mobile">Termin vereinbaren</a>
           <div class="burger-menu" id="burgerMenu" style="display: none; font-size: 28px; cursor: pointer; color: white;">☰</div>
         </nav>
         
@@ -60,6 +74,14 @@
           <a href="presseschau.html">Presseschau</a>
           <a href="sprechzeiten.html">Kontakt</a>
           <a href="sprechzeiten.html" style="color: var(--primary);">Termin vereinbaren</a>
+        
+        <div class="mobile-lang-switcher">
+            <a href="sprechzeiten.html" class="active">DE</a>
+            <a href="en/sprechzeiten.html" >EN</a>
+            <a href="ru/sprechzeiten.html" >RU</a>
+            <a href="tr/sprechzeiten.html" >TR</a>
+            <a href="ar/sprechzeiten.html" >AR</a>
+          </div>
         </div>
     </div>
     
@@ -140,7 +162,7 @@
             <div class="appointment-text">
               <h3>Vereinbaren Sie einen Termin</h3>
               <p>Wählen Sie bequem online einen Termin aus oder kontaktieren Sie uns telefonisch.</p>
-              <a href="https://www.doctolib.de" target="_blank" class="btn-primary">Online Termin buchen</a>
+              <a href="https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer?utm_campaign=website-button&utm_source=kasim-fischer-website-button&utm_medium=referral&utm_content=custom&utm_term=kasim-fischer" target="_blank" class="btn-primary">Online Termin buchen</a>
             </div>
           </div>
 
@@ -175,7 +197,7 @@
               </div>
               <div class="contact-info-content">
                 <h4>Adresse</h4>
-                <p>Bismarckstraße 106<br>41061 Mönchengladbach<br>Deutschland</p>
+                <p>Viersener Str. 50<br>41061 Mönchengladbach<br>Deutschland</p>
               </div>
             </div>
           </div>
@@ -193,6 +215,10 @@
         </div>
       </div>
 
+      <!-- Google Map Section -->
+      <div style="width: 100%; height: 400px; margin-top: 64px; border-radius: 24px; overflow: hidden; filter: grayscale(10%) contrast(110%); box-shadow: 0 10px 40px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03);">
+        <iframe src="https://maps.google.com/maps?q=Viersener%20Str.%2050,%2041061%20M%C3%B6nchengladbach&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
     </div>
   <div style="height: 100px;"></div></div>
 
@@ -203,7 +229,18 @@
           <div class="logo-icon">N</div>
           NEUROCHIRURGIE FISCHER
         </div>
-        <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Ihre Gesundheit und Ihr Wohlbefinden stehen bei uns im Mittelpunkt. Wir bieten modernste Diagnostik und schonende Therapien.</p>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+          Viersener Str. 50<br>41061 Mönchengladbach
+        </div>
+        <div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 4px;">
+          (02161) 678 26 83
+        </div>
+        <a href="mailto:kontakt@my-bandscheibe.de" style="color: var(--primary); text-decoration: none; font-size: 0.95rem; display: inline-block; margin-bottom: 24px;">kontakt@my-bandscheibe.de</a>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/neurokaz/" target="_blank" style="color: white; opacity: 0.7; transition: 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+        </div>
       </div>
       
       <div class="footer-links">
@@ -230,6 +267,10 @@
         <p>Sa - So: Geschlossen</p>
         <p style="margin-top: 16px;">24/7 Notfall: (02161) 678 26 83</p>
       </div>
+    
+    </div>
+    <div class="footer-bottom" style="text-align: center; padding-top: 32px; margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.85rem;">
+      &copy; 2026 Neurochirurgie Fischer
     </div>
   </footer>
 </div>
@@ -264,5 +305,21 @@
     });
   }
 </script>
+
+    <!-- Floating Doctolib Widget -->
+    <div class="floating-doctolib">
+      <div class="fd-close" onclick="this.parentElement.style.display='none'">×</div>
+      <div class="fd-content">
+        <div class="fd-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        </div>
+        <div class="fd-text">
+          <div class="fd-title">Termin vereinbaren</div>
+          <div class="fd-desc">Buchen Sie Ihren Termin schnell und einfach online.</div>
+        </div>
+      </div>
+      <a href="https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer?utm_campaign=website-button&utm_source=kasim-fischer-website-button&utm_medium=referral&utm_content=custom&utm_term=kasim-fischer" target="_blank" class="fd-btn">Auf Doctolib buchen</a>
+    </div>
 </body>
 </html>
+

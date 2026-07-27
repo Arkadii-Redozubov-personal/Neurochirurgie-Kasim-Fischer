@@ -41,6 +41,16 @@
             <a href="presseschau.html">Presseschau</a>
             <a href="sprechzeiten.html">Kontakt</a>
           </div>
+                    <div class="lang-switcher hidden-mobile">
+            <div class="lang-current">DE <span>▼</span></div>
+            <div class="lang-dropdown">
+              <a href="behandlungen.html">Deutsch (DE)</a>
+              <a href="en/behandlungen.html">English (EN)</a>
+              <a href="ru/behandlungen.html">Русский (RU)</a>
+              <a href="tr/behandlungen.html">Türkçe (TR)</a>
+              <a href="ar/behandlungen.html">العربية (AR)</a>
+            </div>
+          </div>
           <a href="sprechzeiten.html" class="btn-book hidden-mobile">Termin vereinbaren</a>
           <div class="burger-menu" id="burgerMenu" style="display: none; font-size: 28px; cursor: pointer; color: white;">☰</div>
         </nav>
@@ -54,6 +64,14 @@
           <a href="presseschau.html">Presseschau</a>
           <a href="sprechzeiten.html">Kontakt</a>
           <a href="sprechzeiten.html" style="color: var(--primary);">Termin vereinbaren</a>
+        
+        <div class="mobile-lang-switcher">
+            <a href="behandlungen.html" class="active">DE</a>
+            <a href="en/behandlungen.html">EN</a>
+            <a href="ru/behandlungen.html">RU</a>
+            <a href="tr/behandlungen.html">TR</a>
+            <a href="ar/behandlungen.html">AR</a>
+          </div>
         </div>
 
                 <div class="hero-main">
@@ -92,7 +110,7 @@
           <div class="treatment-content">
             <h3 class="treatment-title">Ambulante chirurgische Versorgung peripherer Nervenkompressionssyndrome</h3>
             <p class="treatment-desc">Zum Beispiel Karpaltunnelsyndrom und Sulcus-Ulnaris-Syndrom, Tumore peripherer Nerven etc.</p>
-            <a href="#" class="treatment-link">Mehr erfahren &rarr;</a>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Mehr erfahren &rarr;</a>
           </div>
         </div>
         <div class="treatment-card">
@@ -100,7 +118,7 @@
           <div class="treatment-content">
             <h3 class="treatment-title">Endoskopische und mikrochirurgische Bandscheibenoperation</h3>
             <p class="treatment-desc">Schonende, minimalinvasive Eingriffe an der Wirbelsäule.</p>
-            <a href="#" class="treatment-link">Mehr erfahren &rarr;</a>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Mehr erfahren &rarr;</a>
           </div>
         </div>
         <div class="treatment-card">
@@ -108,7 +126,7 @@
           <div class="treatment-content">
             <h3 class="treatment-title">Entfernung von intraspinalen Tumoren</h3>
             <p class="treatment-desc">Inklusive Gefäßanomalie-Symptomatik und Tethered-Cord-Symptomatik.</p>
-            <a href="#" class="treatment-link">Mehr erfahren &rarr;</a>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Mehr erfahren &rarr;</a>
           </div>
         </div>
         <div class="treatment-card">
@@ -116,7 +134,7 @@
           <div class="treatment-content">
             <h3 class="treatment-title">Minimalinvasive Stabilisierung</h3>
             <p class="treatment-desc">Perkutane Stabilisierungsoperationen und dynamische Stabilisierungsverfahren.</p>
-            <a href="#" class="treatment-link">Mehr erfahren &rarr;</a>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Mehr erfahren &rarr;</a>
           </div>
         </div>
         <div class="treatment-card">
@@ -124,7 +142,7 @@
           <div class="treatment-content">
             <h3 class="treatment-title">Perkutane minimalinvasive Tumor-Radiofrequenz-Thermoablation</h3>
             <p class="treatment-desc">Bei Knochentumormetastasen und ambulante Neuroonkologie in Rücksprache mit dem betreuenden Arzt.</p>
-            <a href="#" class="treatment-link">Mehr erfahren &rarr;</a>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Mehr erfahren &rarr;</a>
           </div>
         </div>
         <div class="treatment-card">
@@ -132,7 +150,7 @@
           <div class="treatment-content">
             <h3 class="treatment-title">Neuromodulation</h3>
             <p class="treatment-desc">Rückenmarksstimulation und Stimulation der sakralen Nerven zur Schmerztherapie.</p>
-            <a href="#" class="treatment-link">Mehr erfahren &rarr;</a>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Mehr erfahren &rarr;</a>
           </div>
         </div>
         <div class="treatment-card">
@@ -140,7 +158,7 @@
           <div class="treatment-content">
             <h3 class="treatment-title">Muskelbiopsie</h3>
             <p class="treatment-desc">Bei Nervenerkrankungen und unklaren Muskelerkrankungen.</p>
-            <a href="#" class="treatment-link">Mehr erfahren &rarr;</a>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Mehr erfahren &rarr;</a>
           </div>
         </div>
         <div class="treatment-card">
@@ -148,7 +166,7 @@
           <div class="treatment-content">
             <h3 class="treatment-title">Bandscheibenprothetik</h3>
             <p class="treatment-desc">Behandlung an der HWS (Halswirbelsäule) und LWS (Lendenwirbelsäule).</p>
-            <a href="#" class="treatment-link">Mehr erfahren &rarr;</a>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Mehr erfahren &rarr;</a>
           </div>
         </div>
         <div class="treatment-card">
@@ -156,7 +174,7 @@
           <div class="treatment-content">
             <h3 class="treatment-title">Wirbelgelenksblockaden und Denervation</h3>
             <p class="treatment-desc">Gezielte Schmerzbehandlung der Wirbelgelenke.</p>
-            <a href="#" class="treatment-link">Mehr erfahren &rarr;</a>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Mehr erfahren &rarr;</a>
           </div>
         </div>
         <div class="treatment-card">
@@ -164,7 +182,7 @@
           <div class="treatment-content">
             <h3 class="treatment-title">Mikrochirurgische Dekompressionsoperation</h3>
             <p class="treatment-desc">Zur Entlastung von Nervenstrukturen.</p>
-            <a href="#" class="treatment-link">Mehr erfahren &rarr;</a>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Mehr erfahren &rarr;</a>
           </div>
         </div>
         <div class="treatment-card">
@@ -172,7 +190,7 @@
           <div class="treatment-content">
             <h3 class="treatment-title">Arthroplastie und Arthrodes</h3>
             <p class="treatment-desc">Mit minimalinvasiven Operationen an Kreuzbein, Darmbein und Gelenken.</p>
-            <a href="#" class="treatment-link">Mehr erfahren &rarr;</a>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Mehr erfahren &rarr;</a>
           </div>
         </div>
         <div class="treatment-card">
@@ -180,7 +198,7 @@
           <div class="treatment-content">
             <h3 class="treatment-title">Stabilisierung von Wirbelkörperbrüchen</h3>
             <p class="treatment-desc">Perkutane minimalinvasive Radiofrequenz-Kyphoplastie bei osteoporotischen oder tumorösen Wirbelsäulenfrakturen.</p>
-            <a href="#" class="treatment-link">Mehr erfahren &rarr;</a>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Mehr erfahren &rarr;</a>
           </div>
         </div>
         <div class="treatment-card">
@@ -188,7 +206,7 @@
           <div class="treatment-content">
             <h3 class="treatment-title">Neurochirurgische Begutachtung</h3>
             <p class="treatment-desc">Professionelle medizinische Bewertungen und Gutachten.</p>
-            <a href="#" class="treatment-link">Mehr erfahren &rarr;</a>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Mehr erfahren &rarr;</a>
           </div>
         </div>
       </div>
@@ -238,7 +256,18 @@
           <div class="logo-icon">N</div>
           NEUROCHIRURGIE FISCHER
         </div>
-        <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Ihre Gesundheit und Ihr Wohlbefinden stehen bei uns im Mittelpunkt. Wir bieten modernste Diagnostik und schonende Therapien.</p>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+          Viersener Str. 50<br>41061 Mönchengladbach
+        </div>
+        <div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 4px;">
+          (02161) 678 26 83
+        </div>
+        <a href="mailto:kontakt@my-bandscheibe.de" style="color: var(--primary); text-decoration: none; font-size: 0.95rem; display: inline-block; margin-bottom: 24px;">kontakt@my-bandscheibe.de</a>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/neurokaz/" target="_blank" style="color: white; opacity: 0.7; transition: 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+        </div>
       </div>
       
       <div class="footer-links">
@@ -265,6 +294,10 @@
         <p>Sa - So: Geschlossen</p>
         <p style="margin-top: 16px;">24/7 Notfall: (02161) 678 26 83</p>
       </div>
+    
+    </div>
+    <div class="footer-bottom" style="text-align: center; padding-top: 32px; margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.85rem;">
+      &copy; 2026 Neurochirurgie Fischer
     </div>
   </footer>
 </div>
@@ -298,5 +331,74 @@
     });
   }
 </script>
+
+    <!-- Floating Doctolib Widget -->
+    <div class="floating-doctolib">
+      <div class="fd-close" onclick="this.parentElement.style.display='none'">×</div>
+      <div class="fd-content">
+        <div class="fd-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        </div>
+        <div class="fd-text">
+          <div class="fd-title">Termin vereinbaren</div>
+          <div class="fd-desc">Buchen Sie Ihren Termin schnell und einfach online.</div>
+        </div>
+      </div>
+      <a href="https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer?utm_campaign=website-button&utm_source=kasim-fischer-website-button&utm_medium=referral&utm_content=custom&utm_term=kasim-fischer" target="_blank" class="fd-btn">Auf Doctolib buchen</a>
+    </div>
+
+<!-- Treatment Modal -->
+<div id="treatmentModal" class="video-modal" style="z-index: 99999;">
+  <div class="video-modal-content" style="background: white; max-width: 800px; display: flex; flex-direction: column; height: auto; max-height: 90vh; border-radius: 20px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.2);">
+    <span class="close-video" id="closeTreatmentModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; z-index: 10;">&times;</span>
+    
+    <div style="width: 100%; aspect-ratio: 16/9; background: #000; position: relative; flex-shrink: 0;">
+      <iframe id="tModalVideo" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0;"></iframe>
+    </div>
+    
+    <div style="padding: 32px 40px; text-align: left; overflow-y: auto; background: white;">
+      <h3 id="tModalTitle" style="font-size: 1.8rem; color: #091f22; margin-bottom: 16px; font-weight: 700; line-height: 1.3;"></h3>
+      <p id="tModalDesc" style="color: #4a5568; font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;"></p>
+      
+      <a href="sprechzeiten.html" class="btn-primary" style="display: inline-block;">Termin anfragen</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openTreatmentModal(btn) {
+    const contentDiv = btn.closest('.treatment-content');
+    if(!contentDiv) return;
+    
+    const title = contentDiv.querySelector('.treatment-title').innerText;
+    const desc = contentDiv.querySelector('.treatment-desc').innerHTML;
+    
+    document.getElementById('tModalTitle').innerText = title;
+    document.getElementById('tModalDesc').innerHTML = desc;
+    
+    // Placeholder AI Video (using the YouTube ID for now)
+    document.getElementById('tModalVideo').src = "https://www.youtube.com/embed/aqz-KE-bpKQ?enablejsapi=1&rel=0";
+    
+    document.getElementById('treatmentModal').classList.add('show');
+  }
+
+  const treatmentModal = document.getElementById('treatmentModal');
+  const closeTreatmentModalBtn = document.getElementById('closeTreatmentModalBtn');
+
+  if(closeTreatmentModalBtn && treatmentModal) {
+    closeTreatmentModalBtn.addEventListener('click', () => {
+      treatmentModal.classList.remove('show');
+      document.getElementById('tModalVideo').src = ""; // Stop video
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === treatmentModal) {
+        treatmentModal.classList.remove('show');
+        document.getElementById('tModalVideo').src = ""; // Stop video
+      }
+    });
+  }
+</script>
+
 </body>
 </html>

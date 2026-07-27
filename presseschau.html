@@ -7,11 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    .hero-inner-sub {
-      background-image: linear-gradient(to right, rgba(9, 31, 34, 0.95) 0%, rgba(9, 31, 34, 0.8) 100%), url('img/Neurochirurgie_Fischer_Web_07-1024x684.jpg');
-      background-size: cover; background-position: center; min-height: 40vh;
-      display: flex; flex-direction: column; color: white; padding: 32px 0 64px 0; width: 100%;
-    }
+
     .press-card {
       background: white; border-radius: var(--radius-lg); padding: 24px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.04); border: 1px solid #f1f5f9; transition: 0.3s;
@@ -26,7 +22,7 @@
 
 <div class="page-wrapper">
   
-  <div class="hero-inner-sub" style="background: linear-gradient(to right, rgba(9, 31, 34, 0.95) 0%, rgba(9, 31, 34, 0.6) 100%), url('img/tech.png') center / cover no-repeat #091f22; min-height: auto; padding: 0;">
+  <div class="hero-inner-sub" style="background: linear-gradient(to right, rgba(9, 31, 34, 0.95) 0%, rgba(9, 31, 34, 0.6) 100%), url('img/tech.png') center / cover no-repeat #091f22;">
     <div class="container" style="display: block; padding-top: 32px;">
       <nav class="navbar" style="margin-bottom: 60px;">
           <div class="logo">
@@ -41,6 +37,23 @@
             <a href="presseschau.html" style="color: white; font-weight: 700;">Presseschau</a>
             <a href="sprechzeiten.html">Kontakt</a>
           </div>
+
+          
+
+                    
+          
+          
+          
+          <div class="lang-switcher hidden-mobile">
+            <div class="lang-current">DE <span>▼</span></div>
+            <div class="lang-dropdown">
+              <a href="presseschau.html">Deutsch (DE)</a>
+              <a href="en/presseschau.html">English (EN)</a>
+              <a href="ru/presseschau.html">Русский (RU)</a>
+              <a href="tr/presseschau.html">Türkçe (TR)</a>
+              <a href="ar/presseschau.html">العربية (AR)</a>
+            </div>
+          </div>
           <a href="sprechzeiten.html" class="btn-book hidden-mobile">Termin vereinbaren</a>
           <div class="burger-menu" id="burgerMenu" style="display: none; font-size: 28px; cursor: pointer; color: white;">☰</div>
         </nav>
@@ -54,12 +67,20 @@
           <a href="presseschau.html">Presseschau</a>
           <a href="sprechzeiten.html">Kontakt</a>
           <a href="sprechzeiten.html" style="color: var(--primary);">Termin vereinbaren</a>
+        
+        <div class="mobile-lang-switcher">
+            <a href="presseschau.html" class="active">DE</a>
+            <a href="en/presseschau.html" >EN</a>
+            <a href="ru/presseschau.html" >RU</a>
+            <a href="tr/presseschau.html" >TR</a>
+            <a href="ar/presseschau.html" >AR</a>
+          </div>
         </div>
     </div>
     
-    <div class="container" style="margin-top: 100px; margin-bottom: 100px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 40px;">
-      <div class="hero-main" style="max-width: 600px; margin-top: 0;">
-        <h1 class="hero-title" style="font-size: 4rem;">Presseschau</h1>
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 40px;">
+      <div class="hero-main" style="max-width: 600px;">
+        <h1 class="hero-title">Presseschau</h1>
         <p class="hero-desc" style="max-width: 500px; font-size: 1.1rem; line-height: 1.6; color: rgba(255,255,255,0.8);">Unsere Artikel und Interviews in führenden medizinischen Publikationen und auf Nachrichtenportalen.</p>
       </div>
 
@@ -115,10 +136,10 @@
       </div>
 
       <div class="press-grid-horizontal">
-        
-        <a href="artikel_1.pdf" target="_blank" class="press-card-horizontal">
+
+        <div class="press-card-horizontal" style="cursor: pointer;" onclick="window.open('pdfs/Starke_Partner_September_2017.pdf', '_blank')" >
           <div class="press-card-img-wrapper">
-            <img src="img/press_cover.png" alt="Minimaler Eingriff, maximale Wirkung">
+            <img src="img/Starke_Partner_September_2017_klein-150x150.jpg" alt="Minimaler Eingriff, maximale Wirkung">
           </div>
           <div class="press-card-content">
             <div class="press-card-meta">
@@ -126,15 +147,18 @@
             </div>
             <div class="press-card-title">Minimaler Eingriff, maximale Wirkung</div>
             <div class="press-card-desc">Über die Vorteile der minimalinvasiven Wirbelsäulenchirurgie und schnelle Genesung.</div>
-            <div class="press-card-meta" style="margin-bottom: 0; margin-top: auto; color: var(--text-light); font-weight: 500;">
-              15 April 2024
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
+              <div class="press-card-meta" style="margin-bottom: 0; color: var(--text-light); font-weight: 500;">
+                15 April 2024
+              </div>
+              <a href="pdfs/Starke_Partner_September_2017.pdf" download="Starke_Partner_September_2017.pdf" class="btn-book btn-download" style="padding: 8px 16px; font-size: 0.85rem; border-radius: 99px;" onclick="event.stopPropagation()" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>PDF Herunterladen</span></a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="artikel_2.pdf" target="_blank" class="press-card-horizontal">
+        <div class="press-card-horizontal" style="cursor: pointer;" onclick="window.open('pdfs/A6880993-1.1.pdf.pdf', '_blank')" >
           <div class="press-card-img-wrapper">
-            <img src="img/press_cover.png" alt="Kleiner Schnitt mit großer Wirkung">
+            <img src="img/A6880993-1.1.pdf_klein-150x150.jpg" alt="Kleiner Schnitt mit großer Wirkung">
           </div>
           <div class="press-card-content">
             <div class="press-card-meta">
@@ -142,15 +166,18 @@
             </div>
             <div class="press-card-title">Kleiner Schnitt mit großer Wirkung</div>
             <div class="press-card-desc">Wie moderne Technologien den Ansatz zur Behandlung von Bandscheibenvorfällen verändern.</div>
-            <div class="press-card-meta" style="margin-bottom: 0; margin-top: auto; color: var(--text-light); font-weight: 500;">
-              28 März 2024
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
+              <div class="press-card-meta" style="margin-bottom: 0; color: var(--text-light); font-weight: 500;">
+                28 März 2024
+              </div>
+              <a href="pdfs/A6880993-1.1.pdf.pdf" download="A6880993-1.1.pdf.pdf" class="btn-book btn-download" style="padding: 8px 16px; font-size: 0.85rem; border-radius: 99px;" onclick="event.stopPropagation()" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>PDF Herunterladen</span></a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="artikel_3.pdf" target="_blank" class="press-card-horizontal">
+        <div class="press-card-horizontal" style="cursor: pointer;" onclick="window.open('pdfs/A7367086-2.1.pdf', '_blank')" >
           <div class="press-card-img-wrapper">
-            <img src="img/press_cover.png" alt="Rückenschmerz? Da gibt's Hilfe">
+            <img src="img/A7367086-2.1-150x150.jpg" alt="Rückenschmerz? Da gibt's Hilfe">
           </div>
           <div class="press-card-content">
             <div class="press-card-meta">
@@ -158,15 +185,18 @@
             </div>
             <div class="press-card-title">Rückenschmerz? Da gibt's Hilfe</div>
             <div class="press-card-desc">Wann Sie einen Spezialisten aufsuchen sollten und welche Methoden wirklich funktionieren.</div>
-            <div class="press-card-meta" style="margin-bottom: 0; margin-top: auto; color: var(--text-light); font-weight: 500;">
-              10 März 2024
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
+              <div class="press-card-meta" style="margin-bottom: 0; color: var(--text-light); font-weight: 500;">
+                10 März 2024
+              </div>
+              <a href="pdfs/A7367086-2.1.pdf" download="A7367086-2.1.pdf" class="btn-book btn-download" style="padding: 8px 16px; font-size: 0.85rem; border-radius: 99px;" onclick="event.stopPropagation()" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>PDF Herunterladen</span></a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="artikel_4.pdf" target="_blank" class="press-card-horizontal">
+        <div class="press-card-horizontal" style="cursor: pointer;" onclick="window.open('pdfs/Starke-Partner-Marz-2018.compressed.pdf', '_blank')" >
           <div class="press-card-img-wrapper">
-            <img src="img/press_cover.png" alt="Künstliche Bandscheibe als bewegliche Wirbelsäule">
+            <img src="img/Starke-Partner-März-2018.compressed_klein-150x150.jpg" alt="Künstliche Bandscheibe als bewegliche Wirbelsäule">
           </div>
           <div class="press-card-content">
             <div class="press-card-meta">
@@ -174,15 +204,18 @@
             </div>
             <div class="press-card-title">Künstliche Bandscheibe als bewegliche Wirbelsäule</div>
             <div class="press-card-desc">Alternative zu traditionellen Methoden der chirurgischen Behandlung.</div>
-            <div class="press-card-meta" style="margin-bottom: 0; margin-top: auto; color: var(--text-light); font-weight: 500;">
-              27 Februar 2024
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
+              <div class="press-card-meta" style="margin-bottom: 0; color: var(--text-light); font-weight: 500;">
+                27 Februar 2024
+              </div>
+              <a href="pdfs/Starke-Partner-Marz-2018.compressed.pdf" download="Starke-Partner-Marz-2018.compressed.pdf" class="btn-book btn-download" style="padding: 8px 16px; font-size: 0.85rem; border-radius: 99px;" onclick="event.stopPropagation()" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>PDF Herunterladen</span></a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="artikel_5.pdf" target="_blank" class="press-card-horizontal">
+        <div class="press-card-horizontal" style="cursor: pointer;" onclick="window.open('pdfs/A6756051-1.1.pdf.pdf', '_blank')" >
           <div class="press-card-img-wrapper">
-            <img src="img/press_cover.png" alt="Wieder fit mit Bandscheibenprothese">
+            <img src="img/A6756051-1.1.pd_kleinf-150x150.jpg" alt="Wieder fit mit Bandscheibenprothese">
           </div>
           <div class="press-card-content">
             <div class="press-card-meta">
@@ -190,15 +223,18 @@
             </div>
             <div class="press-card-title">Wieder fit mit Bandscheibenprothese</div>
             <div class="press-card-desc">In welchen Fällen eine Revisionsoperation möglich ist und welche Ergebnisse sie bringt.</div>
-            <div class="press-card-meta" style="margin-bottom: 0; margin-top: auto; color: var(--text-light); font-weight: 500;">
-              12 Februar 2024
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
+              <div class="press-card-meta" style="margin-bottom: 0; color: var(--text-light); font-weight: 500;">
+                12 Februar 2024
+              </div>
+              <a href="pdfs/A6756051-1.1.pdf.pdf" download="A6756051-1.1.pdf.pdf" class="btn-book btn-download" style="padding: 8px 16px; font-size: 0.85rem; border-radius: 99px;" onclick="event.stopPropagation()" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>PDF Herunterladen</span></a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="artikel_6.pdf" target="_blank" class="press-card-horizontal">
+        <div class="press-card-horizontal" style="cursor: pointer;" onclick="window.open('pdfs/Der-Experte-fuer-Rueckenleiden.pdf', '_blank')" >
           <div class="press-card-img-wrapper">
-            <img src="img/press_cover.png" alt="Der Experte für Rückenleiden">
+            <img src="img/Der-Experte-fuer-Rueckeleiden-150x150.jpg" alt="Der Experte für Rückenleiden">
           </div>
           <div class="press-card-content">
             <div class="press-card-meta">
@@ -206,15 +242,18 @@
             </div>
             <div class="press-card-title">Der Experte für Rückenleiden</div>
             <div class="press-card-desc">Interview mit Kasim Fischer über Ansätze zur Behandlung komplexer Fälle.</div>
-            <div class="press-card-meta" style="margin-bottom: 0; margin-top: auto; color: var(--text-light); font-weight: 500;">
-              30 Januar 2024
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
+              <div class="press-card-meta" style="margin-bottom: 0; color: var(--text-light); font-weight: 500;">
+                30 Januar 2024
+              </div>
+              <a href="pdfs/Der-Experte-fuer-Rueckenleiden.pdf" download="Der-Experte-fuer-Rueckenleiden.pdf" class="btn-book btn-download" style="padding: 8px 16px; font-size: 0.85rem; border-radius: 99px;" onclick="event.stopPropagation()" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>PDF Herunterladen</span></a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="artikel_7.pdf" target="_blank" class="press-card-horizontal">
+        <div class="press-card-horizontal" style="cursor: pointer;" onclick="window.open('pdfs/Der-Helfer-bei-Rueckenschmerz.pdf', '_blank')" >
           <div class="press-card-img-wrapper">
-            <img src="img/press_cover.png" alt="Der Helfer bei Rückenschmerz">
+            <img src="img/Der-Helfer-bei-Rueckenschmerz-150x150.jpg" alt="Der Helfer bei Rückenschmerz">
           </div>
           <div class="press-card-content">
             <div class="press-card-meta">
@@ -222,15 +261,18 @@
             </div>
             <div class="press-card-title">Der Helfer bei Rückenschmerz</div>
             <div class="press-card-desc">Die Rolle der Navigation in der genauen Diagnose und Behandlung der Wirbelsäule.</div>
-            <div class="press-card-meta" style="margin-bottom: 0; margin-top: auto; color: var(--text-light); font-weight: 500;">
-              18 Januar 2024
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
+              <div class="press-card-meta" style="margin-bottom: 0; color: var(--text-light); font-weight: 500;">
+                18 Januar 2024
+              </div>
+              <a href="pdfs/Der-Helfer-bei-Rueckenschmerz.pdf" download="Der-Helfer-bei-Rueckenschmerz.pdf" class="btn-book btn-download" style="padding: 8px 16px; font-size: 0.85rem; border-radius: 99px;" onclick="event.stopPropagation()" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>PDF Herunterladen</span></a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="artikel_8.pdf" target="_blank" class="press-card-horizontal">
+        <div class="press-card-horizontal" style="cursor: pointer;" onclick="window.open('pdfs/Kleiner-Eingriff-mit-grosser-Wirkung.pdf', '_blank')" >
           <div class="press-card-img-wrapper">
-            <img src="img/press_cover.png" alt="Kleiner Eingriff mit großer Wirkung">
+            <img src="img/Kleiner-Eingriff-mit-grosser-Wirkung-150x150.jpg" alt="Kleiner Eingriff mit großer Wirkung">
           </div>
           <div class="press-card-content">
             <div class="press-card-meta">
@@ -238,15 +280,18 @@
             </div>
             <div class="press-card-title">Kleiner Eingriff mit großer Wirkung</div>
             <div class="press-card-desc">Geschichten von Patienten und ihr Weg zu einem Leben ohne Schmerzen.</div>
-            <div class="press-card-meta" style="margin-bottom: 0; margin-top: auto; color: var(--text-light); font-weight: 500;">
-              5 Januar 2024
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
+              <div class="press-card-meta" style="margin-bottom: 0; color: var(--text-light); font-weight: 500;">
+                5 Januar 2024
+              </div>
+              <a href="pdfs/Kleiner-Eingriff-mit-grosser-Wirkung.pdf" download="Kleiner-Eingriff-mit-grosser-Wirkung.pdf" class="btn-book btn-download" style="padding: 8px 16px; font-size: 0.85rem; border-radius: 99px;" onclick="event.stopPropagation()" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>PDF Herunterladen</span></a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="artikel_9.pdf" target="_blank" class="press-card-horizontal">
+        <div class="press-card-horizontal" style="cursor: pointer;" onclick="window.open('pdfs/Patienten-als-Ganzes-sehen.pdf', '_blank')" >
           <div class="press-card-img-wrapper">
-            <img src="img/press_cover.png" alt="Patienten als Ganzes sehen">
+            <img src="img/Patienten-als-Ganzes-sehen-150x150.jpg" alt="Patienten als Ganzes sehen">
           </div>
           <div class="press-card-content">
             <div class="press-card-meta">
@@ -254,15 +299,18 @@
             </div>
             <div class="press-card-title">Patienten als Ganzes sehen</div>
             <div class="press-card-desc">Was erwartet die Patienten im führenden Zentrum für Neurochirurgie.</div>
-            <div class="press-card-meta" style="margin-bottom: 0; margin-top: auto; color: var(--text-light); font-weight: 500;">
-              20 Dezember 2023
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
+              <div class="press-card-meta" style="margin-bottom: 0; color: var(--text-light); font-weight: 500;">
+                20 Dezember 2023
+              </div>
+              <a href="pdfs/Patienten-als-Ganzes-sehen.pdf" download="Patienten-als-Ganzes-sehen.pdf" class="btn-book btn-download" style="padding: 8px 16px; font-size: 0.85rem; border-radius: 99px;" onclick="event.stopPropagation()" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>PDF Herunterladen</span></a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="artikel_10.pdf" target="_blank" class="press-card-horizontal">
+        <div class="press-card-horizontal" style="cursor: pointer;" onclick="window.open('pdfs/Wenn-das-Kreuz-streikt.pdf', '_blank')" >
           <div class="press-card-img-wrapper">
-            <img src="img/press_cover.png" alt="Wenn das Kreuz streikt">
+            <img src="img/Wenn-das-Kreuz-streikt-150x150.jpg" alt="Wenn das Kreuz streikt">
           </div>
           <div class="press-card-content">
             <div class="press-card-meta">
@@ -270,15 +318,18 @@
             </div>
             <div class="press-card-title">Wenn das Kreuz streikt</div>
             <div class="press-card-desc">Häufige Ursachen für Rückenschmerzen und erste Schritte zur Linderung.</div>
-            <div class="press-card-meta" style="margin-bottom: 0; margin-top: auto; color: var(--text-light); font-weight: 500;">
-              15 November 2023
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
+              <div class="press-card-meta" style="margin-bottom: 0; color: var(--text-light); font-weight: 500;">
+                15 November 2023
+              </div>
+              <a href="pdfs/Wenn-das-Kreuz-streikt.pdf" download="Wenn-das-Kreuz-streikt.pdf" class="btn-book btn-download" style="padding: 8px 16px; font-size: 0.85rem; border-radius: 99px;" onclick="event.stopPropagation()" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>PDF Herunterladen</span></a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="artikel_11.pdf" target="_blank" class="press-card-horizontal">
+        <div class="press-card-horizontal" style="cursor: pointer;" onclick="window.open('#', '_blank')" >
           <div class="press-card-img-wrapper">
-            <img src="img/press_cover.png" alt="Volkskrankheit Rücken">
+            <img src="img/Volkskrankheit-Ruecken-150x150.jpg" alt="Volkskrankheit Rücken">
           </div>
           <div class="press-card-content">
             <div class="press-card-meta">
@@ -286,15 +337,18 @@
             </div>
             <div class="press-card-title">Volkskrankheit Rücken</div>
             <div class="press-card-desc">Statistiken und neue Ansätze zur Prävention von Wirbelsäulenerkrankungen.</div>
-            <div class="press-card-meta" style="margin-bottom: 0; margin-top: auto; color: var(--text-light); font-weight: 500;">
-              2 November 2023
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
+              <div class="press-card-meta" style="margin-bottom: 0; color: var(--text-light); font-weight: 500;">
+                2 November 2023
+              </div>
+              <a href="#" download="#" class="btn-book btn-download" style="padding: 8px 16px; font-size: 0.85rem; border-radius: 99px;" onclick="event.stopPropagation()" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>PDF Herunterladen</span></a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="artikel_12.pdf" target="_blank" class="press-card-horizontal">
+        <div class="press-card-horizontal" style="cursor: pointer;" onclick="window.open('pdfs/A7331467-1.2.pdf', '_blank')" >
           <div class="press-card-img-wrapper">
-            <img src="img/press_cover.png" alt="Schmerzquelle Iliosakralgelenk">
+            <img src="img/A7331467-1.2-150x150.jpg" alt="Schmerzquelle Iliosakralgelenk">
           </div>
           <div class="press-card-content">
             <div class="press-card-meta">
@@ -302,11 +356,52 @@
             </div>
             <div class="press-card-title">Schmerzquelle Iliosakralgelenk</div>
             <div class="press-card-desc">Diagnostik und minimalinvasive Therapie bei ISG-Syndrom.</div>
-            <div class="press-card-meta" style="margin-bottom: 0; margin-top: auto; color: var(--text-light); font-weight: 500;">
-              10 Oktober 2023
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
+              <div class="press-card-meta" style="margin-bottom: 0; color: var(--text-light); font-weight: 500;">
+                10 Oktober 2023
+              </div>
+              <a href="pdfs/A7331467-1.2.pdf" download="A7331467-1.2.pdf" class="btn-book btn-download" style="padding: 8px 16px; font-size: 0.85rem; border-radius: 99px;" onclick="event.stopPropagation()" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>PDF Herunterladen</span></a>
             </div>
           </div>
-        </a>
+        </div>
+
+        <div class="press-card-horizontal" style="cursor: pointer;" onclick="window.open('pdfs/A6595623-1.1.pdf.pdf', '_blank')" >
+          <div class="press-card-img-wrapper">
+            <img src="img/A6595623-1.1.pdf_klein-150x150.jpg" alt="Schmerzfrei nach kurzer Zeit">
+          </div>
+          <div class="press-card-content">
+            <div class="press-card-meta">
+              <span class="press-card-source">Orthopädie Nachrichten</span>
+            </div>
+            <div class="press-card-title">Schmerzfrei nach kurzer Zeit</div>
+            <div class="press-card-desc">Erfolgsgeschichten von Patienten nach der Behandlung.</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
+              <div class="press-card-meta" style="margin-bottom: 0; color: var(--text-light); font-weight: 500;">
+                25 September 2023
+              </div>
+              <a href="pdfs/A6595623-1.1.pdf.pdf" download="A6595623-1.1.pdf.pdf" class="btn-book btn-download" style="padding: 8px 16px; font-size: 0.85rem; border-radius: 99px;" onclick="event.stopPropagation()" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>PDF Herunterladen</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="press-card-horizontal" style="cursor: pointer;" onclick="window.open('pdfs/Rueckenschmerz-Dagehtwas.pdf', '_blank')" >
+          <div class="press-card-img-wrapper">
+            <img src="img/Rueckenschmerz-Dagehtwas-150x150.jpg" alt="Rückenschmerz? Da geht was!">
+          </div>
+          <div class="press-card-content">
+            <div class="press-card-meta">
+              <span class="press-card-source">Gesund Leben</span>
+            </div>
+            <div class="press-card-title">Rückenschmerz? Da geht was!</div>
+            <div class="press-card-desc">Neue Perspektiven in der modernen Schmerztherapie.</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
+              <div class="press-card-meta" style="margin-bottom: 0; color: var(--text-light); font-weight: 500;">
+                5 September 2023
+              </div>
+              <a href="pdfs/Rueckenschmerz-Dagehtwas.pdf" download="Rueckenschmerz-Dagehtwas.pdf" class="btn-book btn-download" style="padding: 8px 16px; font-size: 0.85rem; border-radius: 99px;" onclick="event.stopPropagation()" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>PDF Herunterladen</span></a>
+            </div>
+          </div>
+        </div>
 
       </div>
 
@@ -334,7 +429,18 @@
           <div class="logo-icon">N</div>
           NEUROCHIRURGIE FISCHER
         </div>
-        <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Ihre Gesundheit und Ihr Wohlbefinden stehen bei uns im Mittelpunkt. Wir bieten modernste Diagnostik und schonende Therapien.</p>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+          Viersener Str. 50<br>41061 Mönchengladbach
+        </div>
+        <div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 4px;">
+          (02161) 678 26 83
+        </div>
+        <a href="mailto:kontakt@my-bandscheibe.de" style="color: var(--primary); text-decoration: none; font-size: 0.95rem; display: inline-block; margin-bottom: 24px;">kontakt@my-bandscheibe.de</a>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/neurokaz/" target="_blank" style="color: white; opacity: 0.7; transition: 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+        </div>
       </div>
       
       <div class="footer-links">
@@ -361,6 +467,10 @@
         <p>Sa - So: Geschlossen</p>
         <p style="margin-top: 16px;">24/7 Notfall: (02161) 678 26 83</p>
       </div>
+    
+    </div>
+    <div class="footer-bottom" style="text-align: center; padding-top: 32px; margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.85rem;">
+      &copy; 2026 Neurochirurgie Fischer
     </div>
   </footer>
 </div>
@@ -407,6 +517,22 @@
     });
   });
 </script>
+
+    <!-- Floating Doctolib Widget -->
+    <div class="floating-doctolib">
+      <div class="fd-close" onclick="this.parentElement.style.display='none'">×</div>
+      <div class="fd-content">
+        <div class="fd-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        </div>
+        <div class="fd-text">
+          <div class="fd-title">Termin vereinbaren</div>
+          <div class="fd-desc">Buchen Sie Ihren Termin schnell und einfach online.</div>
+        </div>
+      </div>
+      <a href="https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer?utm_campaign=website-button&utm_source=kasim-fischer-website-button&utm_medium=referral&utm_content=custom&utm_term=kasim-fischer" target="_blank" class="fd-btn">Auf Doctolib buchen</a>
+    </div>
 </body>
 
 </html>
+

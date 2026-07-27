@@ -26,8 +26,8 @@
 
 <div class="page-wrapper">
   
-  <div class="hero-inner-sub" style="background: linear-gradient(to right, rgba(9, 31, 34, 0.95) 0%, rgba(9, 31, 34, 0.6) 100%), url('../img/imaging.png') center / cover no-repeat #091f22; min-height: auto; padding: 0;">
-    <div class="container" style="display: block; padding-top: 32px;">
+  <div class="hero-inner-sub" style="background: linear-gradient(to right, rgba(9, 31, 34, 0.95) 0%, rgba(9, 31, 34, 0.6) 100%), url('../img/imaging.png') center / cover no-repeat #091f22;">
+    <div class="container">
       <nav class="navbar" style="margin-bottom: 60px;">
           <div class="logo">
             <div class="logo-icon">N</div>
@@ -266,30 +266,31 @@
 </div>
 
 
+
 <script>
-  // Mobil Menü Geçişi
+  // Mobile Menu Toggle
   const burgerMenu = document.getElementById('burgerMenu');
   const mobileMenu = document.getElementById('mobileMenu');
-  if (burgerMenü && mobilMenü) {
-    burgerMenu.addEventListener('tıklayın', () => {
-      if (mobileMenu.style.display === 'esnek') {
-        mobileMenu.style.display = 'yok';
+  if (burgerMenu && mobileMenu) {
+    burgerMenu.addEventListener('click', () => {
+      if (mobileMenu.style.display === 'flex') {
+        mobileMenu.style.display = 'none';
         burgerMenu.textContent = '☰';
-      } başka {
-        mobileMenu.style.display = 'esnek';
+      } else {
+        mobileMenu.style.display = 'flex';
         burgerMenu.textContent = '✕';
       }
     });
   }
 </script>
 <script>
-  // Yapışkan gezinme çubuğu
+  // Sticky Navbar
   const navbar = document.querySelector('.navbar');
-  eğer (gezinme çubuğu) {
-    window.addEventListener('kaydırma', () => {
+  if (navbar) {
+    window.addEventListener('scroll', () => {
       if (window.scrollY > 10) {
         navbar.classList.add('scrolled');
-      } başka {
+      } else {
         navbar.classList.remove('scrolled');
       }
     });

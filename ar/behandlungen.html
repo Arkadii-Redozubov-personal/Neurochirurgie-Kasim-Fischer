@@ -302,16 +302,17 @@
   </footer>
 </div>
 
+
 <script>
-  // تبديل قائمة الهاتف المحمول
-  constburgerMenu = document.getElementById('burgerMenu');
+  // Mobile Menu Toggle
+  const burgerMenu = document.getElementById('burgerMenu');
   const mobileMenu = document.getElementById('mobileMenu');
-  إذا (burgerMenu && mobileMenu) {
+  if (burgerMenu && mobileMenu) {
     burgerMenu.addEventListener('click', () => {
-      إذا (mobileMenu.style.display === 'flex') {
+      if (mobileMenu.style.display === 'flex') {
         mobileMenu.style.display = 'none';
         burgerMenu.textContent = '☰';
-      } آخر {
+      } else {
         mobileMenu.style.display = 'flex';
         burgerMenu.textContent = '✕';
       }
@@ -319,13 +320,13 @@
   }
 </script>
 <script>
-  // شريط التنقل مثبت
+  // Sticky Navbar
   const navbar = document.querySelector('.navbar');
-  إذا (شريط التنقل) {
+  if (navbar) {
     window.addEventListener('scroll', () => {
-      إذا (window.scrollY > 10) {
+      if (window.scrollY > 10) {
         navbar.classList.add('scrolled');
-      } آخر {
+      } else {
         navbar.classList.remove('scrolled');
       }
     });
@@ -377,7 +378,7 @@
     document.getElementById('tModalDesc').innerHTML = desc;
     
     // Placeholder AI Video (using the YouTube ID for now)
-    document.getElementById('tModalVideo').src = "https://www.youtube.com/embed/aqz-KE-bpKQ?enablejsapi=1&rel=0";
+    document.getElementById('tModalVideo').src = "https://www.youtube.com/embed/tgbNymZ7vqY?enablejsapi=1&rel=0&autoplay=1";
     
     document.getElementById('treatmentModal').classList.add('show');
   }

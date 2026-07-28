@@ -240,7 +240,7 @@
 
     /* Feature Treatment Section */
     .section-header {
-      display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 60px;
+      display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0;
     }
     .section-title { font-size: 3.5rem; font-weight: 800; max-width: 600px; line-height: 1.1; letter-spacing: -1px; }
     .btn-dark {
@@ -320,7 +320,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 100dvh; bottom: 0;
         padding: 24px;
         z-index: 99;
       }
@@ -340,7 +340,7 @@
     @media (max-width: 768px) {
       .container { padding-left: 16px !important; padding-right: 16px !important; }
       .logo { font-size: 1.1rem; }
-      .hero-inner { padding-top: 90px; padding-bottom: 40px; background-position: 25% 20% !important; min-height: 100vh !important; justify-content: flex-start; }
+      .hero-inner { padding-top: 90px; padding-bottom: 160px; background-position: 25% 20% !important; min-height: 100vh !important; justify-content: flex-start; }
       .section-title { font-size: min(2.5rem, 8vw) !important; word-break: break-word; }
       .hero-main { margin-top: 0; }
       .hero-inner .hero-title { font-size: min(3.8rem, 14vw) !important; word-break: break-word; hyphens: auto; line-height: 1.05; margin-bottom: 20px; }
@@ -352,7 +352,7 @@
       .hero-services { margin-top: 24px !important; gap: 8px !important; justify-content: flex-start; }
       .service-pill { padding: 8px 14px !important; font-size: 0.95rem !important; }
       .hero-steps { flex-direction: column; }
-      .section { padding-top: 60px; padding-bottom: 60px; }
+      .section { padding-top: 60px; padding-bottom: 0; }
       .section-header { flex-direction: column; align-items: flex-start; gap: 24px; }
       .services-grid { grid-template-columns: 1fr !important; }
       .about-stats { flex-direction: column; align-items: flex-start; gap: 32px; }
@@ -360,14 +360,14 @@
       .about-img-small { margin-top: 0; width: 100%; }
       .steps-grid { grid-template-columns: 1fr !important; }
       .team-grid { grid-template-columns: 1fr !important; }
-      .how-it-works { padding-top: 60px; padding-bottom: 60px; }
+      .how-it-works { padding-top: 60px; padding-bottom: 0; }
       
       .service-card, .treatment-card, .step-card, .process-timeline, .contact-card, .testimonial-card { padding: 20px !important; }
       .cta-card { padding: 40px 20px !important; }
       
       .btn-dark, .btn-primary, .btn-white, .btn-outline-white { width: 100% !important; display: block !important; text-align: center !important; box-sizing: border-box; }
       .contact-grid, .services-grid, .steps-grid, .treatment-grid, .team-grid { gap: 12px !important; }
-      .hero-inner-sub { padding-bottom: 0 !important; }
+      .hero-inner-sub { padding-bottom: 40px !important; }
       .hero-bottom-bar { position: static !important; margin-top: 32px !important; margin-bottom: -40px !important; }
       .hero-bottom-grid { grid-template-columns: 1fr !important; gap: 16px !important; padding: 24px 16px !important; }
     } /* Closing the max-width: 768px media query */
@@ -382,7 +382,7 @@
     .testimonials-section .section-title { color: var(--text-dark); }
     .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1200px; margin: 0 auto; }
     .testimonial-card { background: white; border-radius: var(--radius-lg); padding: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.04); border: 1px solid #f1f5f9; display: flex; flex-direction: column; }
-    .rating-summary { font-size: 0.95rem; font-weight: 500; color: var(--text-light); margin-bottom: 60px; }
+    .rating-summary { font-size: 0.95rem; font-weight: 500; color: var(--text-light); margin-bottom: 0; }
     .stars { color: #fbbf24; font-size: 1.2rem; letter-spacing: 2px; margin-bottom: 16px; display: block; }
     .testimonial-text { font-size: 1.05rem; line-height: 1.7; color: var(--text-dark); margin-bottom: 32px; font-style: italic; flex-grow: 1; }
     .testimonial-author { display: flex; align-items: center; gap: 16px; }
@@ -1526,9 +1526,9 @@
 }
 
 .hero-inner .container {
-  position: relative;
-  z-index: 2;
-}
+    position: relative;
+    z-index: 20;
+  }
 
 
 /* Video Modal */
@@ -1703,29 +1703,53 @@
 /* Make them small on mobile */
 @media (max-width: 768px) {
   .body-parts-nav-wrapper {
-  padding: 30px 0;
-  background: rgba(10, 20, 25, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  border-top: 1px solid rgba(255,255,255,0.05);
-}
+    padding: 15px 0;
+    background: rgba(10, 20, 25, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
   .body-parts-nav {
-    gap: 15px;
+    gap: 8px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 10px;
   }
   .body-part-icon-wrapper {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 8px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 4px;
     border-width: 1px;
   }
   .body-part-text {
-    font-size: 0.75rem;
-    letter-spacing: 0.5px;
+    font-size: 0.65rem;
+    letter-spacing: 0;
+  }
+}
+  
+
+@media (max-width: 768px) {
+  .hero-benefits-list {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    padding-bottom: 4px;
+  }
+  .hero-benefits-list > div {
+    flex-shrink: 0;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 8px !important;
+    padding: 10px 14px !important;
+  }
+  .hero-benefits-list > div span {
+    font-size: 0.75rem !important;
   }
 }
 
@@ -1737,7 +1761,7 @@
   background: var(--bg-light);
   border-radius: var(--radius-lg);
   padding: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 0;
   box-shadow: 0 10px 30px rgba(0,0,0,0.03);
 }
 .doctor-showcase-img {

@@ -289,6 +289,27 @@
 
     let statusEl, progress;
 
+    const PRESS = [
+      { title: "Minimaler Eingriff, maximale Wirkung", desc: "Über die Vorteile der minimalinvasiven Wirbelsäulenchirurgie und schnelle Genesung.", source: "Medical Tribune", date: "15 April 2024", category: "interviews", image: "img/Starke_Partner_September_2017_klein-150x150.jpg", pdf: "pdfs/Starke_Partner_September_2017.pdf" },
+      { title: "Kleiner Schnitt mit großer Wirkung", desc: "Wie moderne Technologien den Ansatz zur Behandlung von Bandscheibenvorfällen verändern.", source: "Gesundheit Heute", date: "28 März 2024", category: "article", image: "img/A6880993-1.1.pdf_klein-150x150.jpg", pdf: "pdfs/A6880993-1.1.pdf.pdf" },
+      { title: "Rückenschmerz? Da gibt's Hilfe", desc: "Wann Sie einen Spezialisten aufsuchen sollten und welche Methoden wirklich funktionieren.", source: "Die Presse", date: "10 März 2024", category: "clinic-news", image: "img/A7367086-2.1-150x150.jpg", pdf: "pdfs/A7367086-2.1.pdf" },
+      { title: "Künstliche Bandscheibe als bewegliche Wirbelsäule", desc: "Alternative zu traditionellen Methoden der chirurgischen Behandlung.", source: "ÄrzteZeitung", date: "22 Februar 2024", category: "science", image: "", pdf: "pdfs/Starke-Partner-Marz-2018.compressed.pdf" },
+      { title: "Wieder fit mit Bandscheibenprothese", desc: "In welchen Fällen eine Revisionsoperation möglich ist und welche Ergebnisse sie bringt.", source: "Health Österreich", date: "15 Januar 2024", category: "interviews", image: "", pdf: "pdfs/A6756051-1.1.pdf.pdf" },
+      { title: "Der Experte für Rückenleiden", desc: "Interview mit Kasim Fischer über Ansätze zur Behandlung komplexer Fälle.", source: "Medizin & Forschung", date: "5 Januar 2024", category: "article", image: "", pdf: "pdfs/Der-Experte-fuer-Rueckenleiden.pdf" },
+      { title: "Der Helfer bei Rückenschmerz", desc: "Die Rolle der Navigation in der genauen Diagnose und Behandlung der Wirbelsäule.", source: "Wiener Zeitung", date: "20 Dezember 2023", category: "clinic-news", image: "", pdf: "pdfs/Der-Helfer-bei-Rueckenschmerz.pdf" },
+      { title: "Kleiner Eingriff mit großer Wirkung", desc: "Geschichten von Patienten und ihr Weg zu einem Leben ohne Schmerzen.", source: "Kurier Gesundheit", date: "10 Dezember 2023", category: "science", image: "", pdf: "pdfs/Kleiner-Eingriff-mit-grosser-Wirkung.pdf" },
+      { title: "Patienten als Ganzes sehen", desc: "Was erwartet die Patienten im führenden Zentrum für Neurochirurgie.", source: "ORF Gesundheit", date: "1 Dezember 2023", category: "interviews", image: "", pdf: "pdfs/Patienten-als-Ganzes-sehen.pdf" },
+      { title: "Wenn das Kreuz streikt", desc: "Häufige Ursachen für Rückenschmerzen und erste Schritte zur Linderung.", source: "Gesundheitsmagazin", date: "15 November 2023", category: "article", image: "", pdf: "pdfs/Wenn-das-Kreuz-streikt.pdf" },
+      { title: "Volkskrankheit Rücken", desc: "Statistiken und neue Ansätze zur Prävention von Wirbelsäulenerkrankungen.", source: "Medical Tribune", date: "1 November 2023", category: "clinic-news", image: "", pdf: "" },
+      { title: "Schmerzquelle Iliosakralgelenk", desc: "Diagnostik und minimalinvasive Therapie bei ISG-Syndrom.", source: "Ärzteblatt", date: "20 Oktober 2023", category: "science", image: "", pdf: "pdfs/A7331467-1.2.pdf" },
+      { title: "Schmerzfrei nach kurzer Zeit", desc: "Erfolgsgeschichten von Patienten nach der Behandlung.", source: "Orthopädie Nachrichten", date: "10 Oktober 2023", category: "interviews", image: "", pdf: "pdfs/A6595623-1.1.pdf.pdf" },
+      { title: "Rückenschmerz? Da geht was!", desc: "Neue Perspektiven in der modernen Schmerztherapie.", source: "Gesund Leben", date: "1 Oktober 2023", category: "article", image: "", pdf: "pdfs/Rueckenschmerz-Dagehtwas.pdf" }
+    ];
+
+    const COORDINATORS = [
+      { name: "Kasim Fischer", role: "Leitender Neurochirurg", languages: "Deutsch, Englisch, Arabisch, Türkisch", phone: "+49 2161 / 818 56 56", email: "kontakt@my-bandscheibe.de", desc: "Spezialist für minimal-invasive Wirbelsäulenchirurgie mit über 20 Jahren Erfahrung.", image: "img/kasim_fischer.jpg" }
+    ];
+
     function log(msg, color = '#94a3b8') {
       statusEl.innerHTML += `<div style="color:${color}; margin-bottom:4px;">${msg}</div>`;
       statusEl.scrollTop = statusEl.scrollHeight;
@@ -308,30 +329,56 @@
       log('');
 
       try {
-        // Step 1: Clear existing
+        // Step 1: Clear & seed treatments
         log('🗑️  Lösche vorhandene Behandlungen...', '#f59e0b');
         const existingSnap = await getDocs(collection(db, 'treatments'));
-        let deleted = 0;
-        for (const d of existingSnap.docs) {
-          await deleteDoc(doc(db, 'treatments', d.id));
-          deleted++;
-        }
-        log(`   ${deleted} vorhandene Einträge gelöscht.`);
-        setProgress(10);
+        for (const d of existingSnap.docs) await deleteDoc(doc(db, 'treatments', d.id));
+        log(`   ${existingSnap.size} Behandlungen gelöscht.`);
+        setProgress(5);
 
-        // Step 2: Seed treatments
-        log('');
         log('📋 Lade Behandlungen...', '#00c9a7');
         for (let i = 0; i < TREATMENTS.length; i++) {
-          const t = TREATMENTS[i];
-          await addDoc(collection(db, 'treatments'), t);
-          log(`   ✅ ${i + 1}/${TREATMENTS.length}: ${t.de.title}`, '#86efac');
-          setProgress(10 + Math.round((i + 1) / TREATMENTS.length * 85));
+          await addDoc(collection(db, 'treatments'), TREATMENTS[i]);
+          log(`   ✅ ${i + 1}/${TREATMENTS.length}: ${TREATMENTS[i].de.title}`, '#86efac');
+          setProgress(5 + Math.round((i + 1) / TREATMENTS.length * 35));
+        }
+
+        // Step 2: Clear & seed press
+        log('');
+        log('🗑️  Lösche vorhandene Presseartikel...', '#f59e0b');
+        const pressSnap = await getDocs(collection(db, 'press'));
+        for (const d of pressSnap.docs) await deleteDoc(doc(db, 'press', d.id));
+        log(`   ${pressSnap.size} Artikel gelöscht.`);
+        setProgress(42);
+
+        log('📰 Lade Presseartikel...', '#00c9a7');
+        for (let i = 0; i < PRESS.length; i++) {
+          await addDoc(collection(db, 'press'), PRESS[i]);
+          log(`   ✅ ${i + 1}/${PRESS.length}: ${PRESS[i].title}`, '#86efac');
+          setProgress(42 + Math.round((i + 1) / PRESS.length * 40));
+        }
+
+        // Step 3: Clear & seed coordinators
+        log('');
+        log('🗑️  Lösche vorhandene Koordinatoren...', '#f59e0b');
+        const coordSnap = await getDocs(collection(db, 'coordinators'));
+        for (const d of coordSnap.docs) await deleteDoc(doc(db, 'coordinators', d.id));
+        log(`   ${coordSnap.size} Koordinatoren gelöscht.`);
+        setProgress(85);
+
+        log('👤 Lade Koordinatoren...', '#00c9a7');
+        for (let i = 0; i < COORDINATORS.length; i++) {
+          await addDoc(collection(db, 'coordinators'), COORDINATORS[i]);
+          log(`   ✅ ${i + 1}/${COORDINATORS.length}: ${COORDINATORS[i].name}`, '#86efac');
+          setProgress(85 + Math.round((i + 1) / COORDINATORS.length * 15));
         }
 
         setProgress(100);
         log('');
         log('🎉 Fertig! Alle Daten wurden erfolgreich geladen.', '#00c9a7');
+        log(`   • ${TREATMENTS.length} Behandlungen`, '#86efac');
+        log(`   • ${PRESS.length} Presseartikel`, '#86efac');
+        log(`   • ${COORDINATORS.length} Koordinatoren`, '#86efac');
         log('');
         log('→ <a href="dashboard.html" style="color:#0072ff;">Zum Dashboard gehen</a>', '#94a3b8');
 

@@ -53,6 +53,15 @@
         Texte & Slogans
       </button>
 
+      <button class="nav-item" onclick="showSection('press')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Presseschau
+      </button>
+      <button class="nav-item" onclick="showSection('coordinators')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Koordinatoren
+      </button>
+
       <span class="nav-section-label">System</span>
       <button class="nav-item" onclick="showSection('sync')">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
@@ -114,20 +123,20 @@
           </div>
           <div class="stat-card">
             <div class="stat-icon orange">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </div>
             <div>
-              <div class="stat-number">5</div>
-              <div class="stat-label">Sprachen</div>
+              <div class="stat-number" id="statCoordinators">–</div>
+              <div class="stat-label">Koordinatoren</div>
             </div>
           </div>
           <div class="stat-card">
             <div class="stat-icon purple">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
             </div>
             <div>
-              <div class="stat-number">30</div>
-              <div class="stat-label">HTML Seiten</div>
+              <div class="stat-number" id="statPress">–</div>
+              <div class="stat-label">Presseartikel</div>
             </div>
           </div>
         </div>
@@ -145,16 +154,85 @@
               <div style="font-weight: 700; color: var(--text); margin-bottom: 4px;">Behandlungen</div>
               <div style="font-size: 0.82rem; color: var(--text-muted);">Inhalte aller Behandlungsseiten bearbeiten</div>
             </button>
-            <button onclick="showSection('team')" style="background: linear-gradient(135deg, rgba(0,114,255,0.1), rgba(168,85,247,0.05)); border: 1px solid rgba(0,114,255,0.2); border-radius: 12px; padding: 20px; cursor: pointer; text-align: left; transition: all 0.2s; color: inherit;">
-              <div style="font-size: 1.5rem; margin-bottom: 8px;">👨‍⚕️</div>
-              <div style="font-weight: 700; color: var(--text); margin-bottom: 4px;">Team</div>
-              <div style="font-size: 0.82rem; color: var(--text-muted);">Arzt- und Mitarbeiterprofile verwalten</div>
+            <button onclick="showSection('press')" style="background: linear-gradient(135deg, rgba(0,114,255,0.1), rgba(168,85,247,0.05)); border: 1px solid rgba(0,114,255,0.2); border-radius: 12px; padding: 20px; cursor: pointer; text-align: left; transition: all 0.2s; color: inherit;">
+              <div style="font-size: 1.5rem; margin-bottom: 8px;">📰</div>
+              <div style="font-weight: 700; color: var(--text); margin-bottom: 4px;">Presseschau</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Presseartikel und PDFs verwalten</div>
             </button>
-            <button onclick="showSection('sync')" style="background: linear-gradient(135deg, rgba(245,158,11,0.1), rgba(239,68,68,0.05)); border: 1px solid rgba(245,158,11,0.2); border-radius: 12px; padding: 20px; cursor: pointer; text-align: left; transition: all 0.2s; color: inherit;">
+            <button onclick="showSection('coordinators')" style="background: linear-gradient(135deg, rgba(245,158,11,0.1), rgba(239,68,68,0.05)); border: 1px solid rgba(245,158,11,0.2); border-radius: 12px; padding: 20px; cursor: pointer; text-align: left; transition: all 0.2s; color: inherit;">
+              <div style="font-size: 1.5rem; margin-bottom: 8px;">👤</div>
+              <div style="font-weight: 700; color: var(--text); margin-bottom: 4px;">Koordinatoren</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Koordinatorenprofile verwalten</div>
+            </button>
+            <button onclick="showSection('sync')" style="background: linear-gradient(135deg, rgba(0,201,167,0.05), rgba(0,201,167,0.02)); border: 1px solid rgba(0,201,167,0.15); border-radius: 12px; padding: 20px; cursor: pointer; text-align: left; transition: all 0.2s; color: inherit;">
               <div style="font-size: 1.5rem; margin-bottom: 8px;">🔄</div>
               <div style="font-weight: 700; color: var(--text); margin-bottom: 4px;">Website Sync</div>
               <div style="font-size: 0.82rem; color: var(--text-muted);">Änderungen auf die Website anwenden</div>
             </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PRESS SECTION ===== -->
+      <section id="section-press" style="display:none;">
+        <div class="content-card">
+          <div class="content-card-header">
+            <div>
+              <div class="content-card-title">Presseschau</div>
+              <div class="content-card-sub">Presseartikel, Interviews und PDF-Downloads verwalten</div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openAddPress()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Hinzufügen
+            </button>
+          </div>
+          <div class="content-card-body" style="padding: 0;">
+            <table class="treatment-table">
+              <thead>
+                <tr>
+                  <th style="padding-left: 24px;">#</th>
+                  <th>Titel</th>
+                  <th>Quelle</th>
+                  <th>Kategorie</th>
+                  <th>Aktionen</th>
+                </tr>
+              </thead>
+              <tbody id="pressTableBody">
+                <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== COORDINATORS SECTION ===== -->
+      <section id="section-coordinators" style="display:none;">
+        <div class="content-card">
+          <div class="content-card-header">
+            <div>
+              <div class="content-card-title">Koordinatoren</div>
+              <div class="content-card-sub">Koordinatorenprofile und Kontaktdaten verwalten</div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openAddCoordinator()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Hinzufügen
+            </button>
+          </div>
+          <div class="content-card-body" style="padding: 0;">
+            <table class="treatment-table">
+              <thead>
+                <tr>
+                  <th style="padding-left: 24px;">#</th>
+                  <th>Name</th>
+                  <th>Sprachen</th>
+                  <th>Telefon</th>
+                  <th>Aktionen</th>
+                </tr>
+              </thead>
+              <tbody id="coordinatorsTableBody">
+                <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -362,6 +440,110 @@
   </div>
 </div>
 
+<!-- Press Article Modal -->
+<div class="modal-overlay" id="pressModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="pressModalTitle">Presseartikel bearbeiten</div>
+      <button class="modal-close" onclick="closeModal('pressModal')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group-row">
+        <label class="form-label-dark">Titel (Deutsch)</label>
+        <input type="text" id="pressTitle" class="form-input-dark" placeholder="Minimaler Eingriff, maximale Wirkung">
+      </div>
+      <div class="form-group-row">
+        <label class="form-label-dark">Kurzbeschreibung</label>
+        <textarea id="pressDesc" class="form-input-dark" placeholder="Kurze Zusammenfassung des Artikels..."></textarea>
+      </div>
+      <div class="form-group-row">
+        <label class="form-label-dark">Quelle (z.B. Medical Tribune)</label>
+        <input type="text" id="pressSource" class="form-input-dark" placeholder="Medical Tribune">
+      </div>
+      <div class="form-group-row">
+        <label class="form-label-dark">Datum</label>
+        <input type="text" id="pressDate" class="form-input-dark" placeholder="15 April 2024">
+      </div>
+      <div class="form-group-row">
+        <label class="form-label-dark">Kategorie</label>
+        <select id="pressCategory" class="form-input-dark">
+          <option value="interviews">Interview</option>
+          <option value="article">Artikel</option>
+          <option value="clinic-news">Klinik-News</option>
+          <option value="science">Wissenschaft</option>
+        </select>
+      </div>
+      <div class="form-group-row">
+        <label class="form-label-dark">Bild-URL (Vorschaubild)</label>
+        <input type="text" id="pressImage" class="form-input-dark" placeholder="img/article_thumbnail.jpg">
+      </div>
+      <div class="form-group-row">
+        <label class="form-label-dark">PDF-Datei URL (z.B. pdfs/artikel.pdf)</label>
+        <input type="text" id="pressPdf" class="form-input-dark" placeholder="pdfs/artikel.pdf">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('pressModal')">Abbrechen</button>
+      <button class="btn btn-primary" onclick="savePress()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Speichern
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Coordinator Modal -->
+<div class="modal-overlay" id="coordinatorModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="coordinatorModalTitle">Koordinator bearbeiten</div>
+      <button class="modal-close" onclick="closeModal('coordinatorModal')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group-row">
+        <label class="form-label-dark">Name</label>
+        <input type="text" id="coordName" class="form-input-dark" placeholder="Maria Müller">
+      </div>
+      <div class="form-group-row">
+        <label class="form-label-dark">Rolle / Position</label>
+        <input type="text" id="coordRole" class="form-input-dark" placeholder="Patientenkoordinatorin">
+      </div>
+      <div class="form-group-row">
+        <label class="form-label-dark">Gesprochene Sprachen</label>
+        <input type="text" id="coordLanguages" class="form-input-dark" placeholder="Deutsch, Englisch, Russisch">
+      </div>
+      <div class="form-group-row">
+        <label class="form-label-dark">Telefon</label>
+        <input type="text" id="coordPhone" class="form-input-dark" placeholder="+49 2161 ...">
+      </div>
+      <div class="form-group-row">
+        <label class="form-label-dark">E-Mail</label>
+        <input type="email" id="coordEmail" class="form-input-dark" placeholder="koordinator@my-bandscheibe.de">
+      </div>
+      <div class="form-group-row">
+        <label class="form-label-dark">Kurzbeschreibung</label>
+        <textarea id="coordDesc" class="form-input-dark" placeholder="Kurze Biografie oder Aufgabenbereich..."></textarea>
+      </div>
+      <div class="form-group-row">
+        <label class="form-label-dark">Foto-URL (optional)</label>
+        <input type="text" id="coordImage" class="form-input-dark" placeholder="img/coordinator.jpg">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('coordinatorModal')">Abbrechen</button>
+      <button class="btn btn-primary" onclick="saveCoordinator()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Speichern
+      </button>
+    </div>
+  </div>
+</div>
+
+
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
   import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
@@ -408,13 +590,15 @@
   };
 
   // ========= SECTION NAVIGATION =========
-  const sections = ['dashboard', 'treatments', 'team', 'texts', 'sync'];
+  const sections = ['dashboard', 'treatments', 'team', 'texts', 'sync', 'press', 'coordinators'];
   const titles = {
     dashboard: ['Dashboard', 'Willkommen im Admin-Bereich'],
     treatments: ['Behandlungen', 'Inhalte bearbeiten'],
     team: ['Team', 'Ärzte und Mitarbeiter'],
     texts: ['Texte & Slogans', 'Globale Texte bearbeiten'],
-    sync: ['Website Sync', 'Änderungen exportieren und anwenden']
+    sync: ['Website Sync', 'Änderungen exportieren und anwenden'],
+    press: ['Presseschau', 'Artikel und PDFs verwalten'],
+    coordinators: ['Koordinatoren', 'Koordinatorenprofile verwalten']
   };
 
   window.showSection = (name) => {
@@ -458,7 +642,7 @@
   async function loadAll() {
     document.getElementById('loadingOverlay').classList.add('show');
     try {
-      await Promise.all([loadTreatments(), loadTeam(), loadTexts()]);
+      await Promise.all([loadTreatments(), loadTeam(), loadTexts(), loadPress(), loadCoordinators()]);
       updateStats();
     } catch(e) {
       showToast('Fehler beim Laden: ' + e.message, 'error');
@@ -496,6 +680,8 @@
   function updateStats() {
     document.getElementById('statTreatments').textContent = treatmentsData.length;
     document.getElementById('statTeam').textContent = teamData.length;
+    document.getElementById('statCoordinators').textContent = coordinatorsData.length;
+    document.getElementById('statPress').textContent = pressData.length;
   }
 
   // ========= TREATMENTS TABLE =========
@@ -790,6 +976,56 @@
       if (e.target === overlay) overlay.classList.remove('open');
     });
   });
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, collection, getDocs, doc, setDoc, addDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+  const _cfg = {apiKey:"AIzaSyBNcdljYigWs6nlFKy5VAVo3VPicHRQn9M",authDomain:"vertex-clinic.firebaseapp.com",projectId:"vertex-clinic",storageBucket:"vertex-clinic.firebasestorage.app",messagingSenderId:"385329227649",appId:"1:385329227649:web:5f1b4244ac3990b4a26a80"};
+  const _app = initializeApp(_cfg,'app2');
+  const _db = getFirestore(_app);
+  let pressData=[],editingPressId=null,coordData=[],editingCoordId=null;
+  async function loadPress(){const s=await getDocs(collection(_db,'press'));pressData=[];s.forEach(d=>pressData.push({id:d.id,...d.data()}));renderPress();updStats();}
+  async function loadCoord(){const s=await getDocs(collection(_db,'coordinators'));coordData=[];s.forEach(d=>coordData.push({id:d.id,...d.data()}));renderCoord();updStats();}
+  function updStats(){const e=document.getElementById('statPress');if(e)e.textContent=pressData.length;const c=document.getElementById('statCoordinators');if(c)c.textContent=coordData.length;}
+  const CAT={interviews:'Interview',article:'Artikel','clinic-news':'Klinik-News',science:'Wissenschaft'};
+  function renderPress(){
+    const t=document.getElementById('pressTableBody');
+    if(!t)return;
+    if(!pressData.length){t.innerHTML='<tr><td colspan="5" style="text-align:center;padding:40px;color:var(--text-dim)">Keine Artikel. Klicken Sie auf Hinzuf\u00fcgen.</td></tr>';return;}
+    t.innerHTML=pressData.map((p,i)=>`<tr>
+      <td style="padding-left:24px"><div class="treatment-index">${i+1}</div></td>
+      <td><div class="treatment-name">${p.title||'\u2013'}</div><div class="treatment-desc-preview">${p.desc||''}</div></td>
+      <td><span style="color:var(--text-muted);font-size:.88rem">${p.source||''}</span></td>
+      <td><span class="lang-badge">${CAT[p.category]||p.category||''}</span></td>
+      <td><div style="display:flex;gap:8px">
+        <button class="btn btn-ghost btn-sm btn-icon" onclick="openEditPress('${p.id}')">&#9998;</button>
+        <button class="btn btn-danger btn-sm btn-icon" onclick="deletePress('${p.id}')">&#128465;</button>
+      </div></td></tr>`).join('');
+  }
+  function renderCoord(){
+    const t=document.getElementById('coordinatorsTableBody');
+    if(!t)return;
+    if(!coordData.length){t.innerHTML='<tr><td colspan="5" style="text-align:center;padding:40px;color:var(--text-dim)">Keine Koordinatoren. Klicken Sie auf Hinzuf\u00fcgen.</td></tr>';return;}
+    t.innerHTML=coordData.map((c,i)=>`<tr>
+      <td style="padding-left:24px"><div class="treatment-index">${i+1}</div></td>
+      <td><div class="treatment-name">${c.name||'\u2013'}</div><div class="treatment-desc-preview">${c.role||''}</div></td>
+      <td><span style="color:var(--primary);font-size:.85rem;font-weight:600">${c.languages||''}</span></td>
+      <td><span style="color:var(--text-muted);font-size:.88rem">${c.phone||'\u2013'}</span></td>
+      <td><div style="display:flex;gap:8px">
+        <button class="btn btn-ghost btn-sm btn-icon" onclick="openEditCoordinator('${c.id}')">&#9998;</button>
+        <button class="btn btn-danger btn-sm btn-icon" onclick="deleteCoordinator('${c.id}')">&#128465;</button>
+      </div></td></tr>`).join('');
+  }
+  window.openAddPress=()=>{editingPressId=null;document.getElementById('pressModalTitle').textContent='Neuen Artikel';['pressTitle','pressDesc','pressSource','pressDate','pressImage','pressPdf'].forEach(id=>document.getElementById(id).value='');document.getElementById('pressCategory').value='article';document.getElementById('pressModal').classList.add('open');};
+  window.openEditPress=(id)=>{editingPressId=id;const p=pressData.find(x=>x.id===id);document.getElementById('pressModalTitle').textContent='Artikel bearbeiten';document.getElementById('pressTitle').value=p.title||'';document.getElementById('pressDesc').value=p.desc||'';document.getElementById('pressSource').value=p.source||'';document.getElementById('pressDate').value=p.date||'';document.getElementById('pressCategory').value=p.category||'article';document.getElementById('pressImage').value=p.image||'';document.getElementById('pressPdf').value=p.pdf||'';document.getElementById('pressModal').classList.add('open');};
+  window.savePress=async()=>{const data={title:document.getElementById('pressTitle').value.trim(),desc:document.getElementById('pressDesc').value.trim(),source:document.getElementById('pressSource').value.trim(),date:document.getElementById('pressDate').value.trim(),category:document.getElementById('pressCategory').value,image:document.getElementById('pressImage').value.trim(),pdf:document.getElementById('pressPdf').value.trim()};try{if(editingPressId){await setDoc(doc(_db,'press',editingPressId),data);window.showToast('Gespeichert!');}else{await addDoc(collection(_db,'press'),data);window.showToast('Hinzugef\u00fcgt!');}window.closeModal('pressModal');await loadPress();}catch(e){window.showToast('Fehler: '+e.message,'error');}};
+  window.deletePress=async(id)=>{if(!confirm('L\u00f6schen?'))return;try{await deleteDoc(doc(_db,'press',id));window.showToast('Gel\u00f6scht.');await loadPress();}catch(e){window.showToast('Fehler: '+e.message,'error');}};
+  window.openAddCoordinator=()=>{editingCoordId=null;document.getElementById('coordinatorModalTitle').textContent='Neuen Koordinator';['coordName','coordRole','coordLanguages','coordPhone','coordEmail','coordDesc','coordImage'].forEach(id=>document.getElementById(id).value='');document.getElementById('coordinatorModal').classList.add('open');};
+  window.openEditCoordinator=(id)=>{editingCoordId=id;const c=coordData.find(x=>x.id===id);document.getElementById('coordinatorModalTitle').textContent='Koordinator bearbeiten';document.getElementById('coordName').value=c.name||'';document.getElementById('coordRole').value=c.role||'';document.getElementById('coordLanguages').value=c.languages||'';document.getElementById('coordPhone').value=c.phone||'';document.getElementById('coordEmail').value=c.email||'';document.getElementById('coordDesc').value=c.desc||'';document.getElementById('coordImage').value=c.image||'';document.getElementById('coordinatorModal').classList.add('open');};
+  window.saveCoordinator=async()=>{const data={name:document.getElementById('coordName').value.trim(),role:document.getElementById('coordRole').value.trim(),languages:document.getElementById('coordLanguages').value.trim(),phone:document.getElementById('coordPhone').value.trim(),email:document.getElementById('coordEmail').value.trim(),desc:document.getElementById('coordDesc').value.trim(),image:document.getElementById('coordImage').value.trim()};try{if(editingCoordId){await setDoc(doc(_db,'coordinators',editingCoordId),data);window.showToast('Gespeichert!');}else{await addDoc(collection(_db,'coordinators'),data);window.showToast('Hinzugef\u00fcgt!');}window.closeModal('coordinatorModal');await loadCoord();}catch(e){window.showToast('Fehler: '+e.message,'error');}};
+  window.deleteCoordinator=async(id)=>{if(!confirm('L\u00f6schen?'))return;try{await deleteDoc(doc(_db,'coordinators',id));window.showToast('Gel\u00f6scht.');await loadCoord();}catch(e){window.showToast('Fehler: '+e.message,'error');}};
+  setTimeout(()=>{loadPress();loadCoord();},1500);
 </script>
 </body>
 </html>

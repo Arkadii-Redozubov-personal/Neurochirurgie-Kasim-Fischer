@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Seed – Einmalig ausführen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="login-page">
+  <div class="login-bg">
+    <div class="login-orb login-orb-1"></div>
+    <div class="login-orb login-orb-2"></div>
+  </div>
+
+  <div style="position:relative; z-index:1; max-width: 700px; margin: 40px auto; padding: 24px;">
+    <div style="background: rgba(17,24,39,0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 40px;">
+      <div style="font-size: 2rem; margin-bottom: 8px;">🌱</div>
+      <h1 style="font-size: 1.6rem; font-weight: 800; color: #f1f5f9; margin-bottom: 8px;">Firebase Seed</h1>
+      <p style="color: #94a3b8; margin-bottom: 28px; font-size: 0.95rem;">Diese Seite lädt alle vorhandenen Behandlungen einmalig in Ihre Firebase Datenbank. Danach können Sie sie in der Admin-Oberfläche sehen und bearbeiten.</p>
+
+      <div id="status" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px; margin-bottom: 24px; min-height: 200px; font-family: monospace; font-size: 0.85rem; color: #94a3b8; overflow-y: auto; max-height: 350px;">
+        Bereit. Drücken Sie "Starten" um fortzufahren...
+      </div>
+
+      <div id="progressBar" style="height: 4px; background: rgba(255,255,255,0.08); border-radius: 4px; margin-bottom: 24px; overflow: hidden;">
+        <div id="progressFill" style="height: 100%; width: 0%; background: linear-gradient(90deg, #00c9a7, #0072ff); border-radius: 4px; transition: width 0.4s;"></div>
+      </div>
+
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <button id="seedBtn" onclick="startSeed()" style="background: linear-gradient(135deg, #00c9a7, #0072ff); border: none; border-radius: 8px; padding: 14px 28px; color: white; font-size: 1rem; font-weight: 700; cursor: pointer; font-family: inherit;">
+          🚀 Starten – Daten in Firebase laden
+        </button>
+        <a href="dashboard.html" style="display:inline-flex; align-items:center; gap:8px; padding: 14px 24px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #94a3b8; text-decoration: none; font-weight: 600; font-size: 0.9rem;">
+          ← Zurück zum Dashboard
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+    import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBNcdljYigWs6nlFKy5VAVo3VPicHRQn9M",
+      authDomain: "vertex-clinic.firebaseapp.com",
+      projectId: "vertex-clinic",
+      storageBucket: "vertex-clinic.firebasestorage.app",
+      messagingSenderId: "385329227649",
+      appId: "1:385329227649:web:5f1b4244ac3990b4a26a80"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    onAuthStateChanged(auth, (user) => {
+      if (!user) window.location.href = "index.html";
+    });
+
+    const TREATMENTS = [
+      {
+        order: 0,
+        de: {
+          title: "Wirbelsäulen-Erkrankungen",
+          desc: "Behandlung von Bandscheibenvorfällen der HWS, BWS und LWS, degenerativen Spinalkanalstenosen, Instabilität der Wirbelsäule, intraspinalen Tumormetastasen und primären Iliosacral-Gelenkarthrosen.",
+          fullDesc: "Wir bieten umfassende Diagnostik und Therapie für alle Erkrankungen der Wirbelsäule an, von degenerativen Veränderungen über Instabilitäten bis hin zu Tumormetastasen. Unser Ziel ist es, Schmerzen zu lindern und die Beweglichkeit wiederherzustellen, wobei wir stets versuchen, die schonendste Behandlungsmethode zu wählen."
+        },
+        en: {
+          title: "Spinal Diseases",
+          desc: "Treatment of disc herniations of the cervical, thoracic and lumbar spine, degenerative spinal canal stenoses, spinal instability, intraspinal tumor metastases and primary iliosacral joint arthroses.",
+          fullDesc: "We offer comprehensive diagnostics and therapy for all diseases of the spine, from degenerative changes and instabilities to tumor metastases. Our goal is to relieve pain and restore mobility, always choosing the most minimally invasive treatment method."
+        },
+        ru: {
+          title: "Заболевания позвоночника",
+          desc: "Лечение грыж межпозвонковых дисков шейного, грудного и поясничного отделов, дегенеративных стенозов позвоночного канала, нестабильности позвоночника, внутриспинальных опухолевых метастазов.",
+          fullDesc: "Мы предлагаем комплексную диагностику и лечение всех заболеваний позвоночника — от дегенеративных изменений и нестабильности до опухолевых метастазов. Наша цель — устранить боль и восстановить подвижность, используя наименее инвазивные методы лечения."
+        },
+        tr: {
+          title: "Omurga Hastalıkları",
+          desc: "Servikal, torakal ve lomber omurganın disk hernilerinin tedavisi, dejeneratif spinal kanal stenozları, omurga instabilitesi, intraspinal tümör metastazları.",
+          fullDesc: "Dejeneratif değişikliklerden tümör metastazlarına kadar tüm omurga hastalıkları için kapsamlı tanı ve tedavi sunuyoruz. Amacımız ağrıyı gidermek ve hareketliliği geri kazandırmak, her zaman en az invaziv tedavi yöntemini seçmek."
+        },
+        ar: {
+          title: "أمراض العمود الفقري",
+          desc: "علاج الانزلاق الغضروفي في العمود الفقري العنقي والصدري والقطني، وتضيق القناة الشوكية التنكسية، وعدم استقرار العمود الفقري.",
+          fullDesc: "نقدم تشخيصاً وعلاجاً شاملاً لجميع أمراض العمود الفقري، من التغيرات التنكسية وعدم الاستقرار إلى النقائل الورمية. هدفنا تخفيف الألم وإعادة الحركة باختيار أقل الطرق توغلاً دائماً."
+        }
+      },
+      {
+        order: 1,
+        de: {
+          title: "Neurophysiologische Untersuchungen",
+          desc: "In unserer Praxis arbeiten wir mit der computergestützten, neurophysiologischen Untersuchung des Nervensystems. So stellen wir Nervenschäden fest, die durch Verletzungen oder Engpass-Syndrome wie das Karpaltunnelsyndrom entstehen.",
+          fullDesc: "Durch präzise Messungen können wir den genauen Ort und das Ausmaß der Nervenschädigung bestimmen und einen maßgeschneiderten Therapieplan entwickeln."
+        },
+        en: {
+          title: "Neurophysiological Examinations",
+          desc: "We use computer-assisted neurophysiological examination of the nervous system to detect nerve damage caused by injuries or entrapment syndromes such as carpal tunnel syndrome.",
+          fullDesc: "Through precise measurements we can determine the exact location and extent of nerve damage and develop a tailored therapy plan."
+        },
+        ru: {
+          title: "Нейрофизиологические исследования",
+          desc: "В нашей клинике мы используем компьютеризированное нейрофизиологическое исследование нервной системы для выявления повреждений нервов, вызванных травмами или синдромами сдавления.",
+          fullDesc: "С помощью точных измерений мы можем определить точное местоположение и степень повреждения нервов и разработать индивидуальный план лечения."
+        },
+        tr: {
+          title: "Nörofizyolojik İncelemeler",
+          desc: "Kliniğimizde, yaralanmalar veya karpal tünel sendromu gibi tuzak sendromları nedeniyle oluşan sinir hasarını tespit etmek için bilgisayar destekli nörofizyolojik muayene kullanıyoruz.",
+          fullDesc: "Kesin ölçümler sayesinde sinir hasarının tam yerini ve boyutunu belirleyebilir ve özelleştirilmiş bir tedavi planı geliştirebiliriz."
+        },
+        ar: {
+          title: "الفحوصات الفيزيولوجية العصبية",
+          desc: "نستخدم الفحص الفيزيولوجي العصبي بمساعدة الكمبيوتر للكشف عن تلف الأعصاب الناجم عن الإصابات أو متلازمات الانضغاط مثل متلازمة النفق الرسغي.",
+          fullDesc: "من خلال القياسات الدقيقة يمكننا تحديد الموقع الدقيق ومدى تلف الأعصاب ووضع خطة علاجية مخصصة."
+        }
+      },
+      {
+        order: 2,
+        de: {
+          title: "Neurochirurgische Schmerztherapie",
+          desc: "Behandlung von postoperativen Schmerzen der Wirbelsäule, Phantomschmerzen der Extremitäten, degenerativen Facettengelenkschmerzen, Erkrankungen der Bandscheibe und chronischem Dauerschmerz.",
+          fullDesc: "Die neurochirurgische Schmerztherapie bietet vielfältige Möglichkeiten zur Behandlung hartnäckiger und chronischer Schmerzen. Wir behandeln postoperative Schmerzen, Phantomschmerzen, degenerative Facettengelenkschmerzen und chronischen Dauerschmerz mit modernsten Methoden einschließlich Neuromodulation."
+        },
+        en: {
+          title: "Neurosurgical Pain Therapy",
+          desc: "Treatment of postoperative spinal pain, phantom limb pain, degenerative facet joint pain, disc disorders and chronic persistent pain.",
+          fullDesc: "Neurosurgical pain therapy offers diverse options for treating stubborn and chronic pain, including neuromodulation and minimally invasive procedures."
+        },
+        ru: {
+          title: "Нейрохирургическое лечение боли",
+          desc: "Лечение послеоперационных болей позвоночника, фантомных болей конечностей, дегенеративных болей фасеточных суставов, заболеваний дисков и хронической постоянной боли.",
+          fullDesc: "Нейрохирургическая терапия боли предлагает разнообразные методы лечения упорных и хронических болей, включая нейромодуляцию и малоинвазивные вмешательства."
+        },
+        tr: {
+          title: "Nöroşirürjikal Ağrı Tedavisi",
+          desc: "Postoperatif omurga ağrısı, fantom uzuv ağrısı, dejeneratif faset eklem ağrısı, disk bozuklukları ve kronik kalıcı ağrının tedavisi.",
+          fullDesc: "Nöroşirürjikal ağrı terapisi, nöromodülasyon ve minimal invaziv prosedürler dahil inatçı ve kronik ağrıların tedavisinde çeşitli seçenekler sunar."
+        },
+        ar: {
+          title: "علاج الألم الجراحي العصبي",
+          desc: "علاج آلام العمود الفقري بعد الجراحة، وآلام الأطراف الوهمية، وآلام مفاصل الوجيه التنكسية، واضطرابات الأقراص والألم المزمن المستمر.",
+          fullDesc: "يقدم علاج الألم الجراحي العصبي خيارات متنوعة لعلاج الآلام العنيدة والمزمنة بما في ذلك تعديل الأعصاب والإجراءات الأقل توغلاً."
+        }
+      },
+      {
+        order: 3,
+        de: {
+          title: "Operationen",
+          desc: "Spezialisierte operative Eingriffe bei Erkrankungen der Nerven und Tumormetastasen an der Wirbelsäule, Spinalkanal und Rückenmark unter Einsatz moderner Techniken wie der Radiofrequenz-Tumor-Ablatio.",
+          fullDesc: "Wir führen spezialisierte operative Eingriffe unter Einsatz moderner minimalinvasiver und mikrochirurgischer Techniken durch, wie der Radiofrequenz-Tumor-Ablatio, für maximale Präzision und Sicherheit."
+        },
+        en: {
+          title: "Operations",
+          desc: "Specialized surgical procedures for nerve diseases and tumor metastases of the spine, spinal canal and spinal cord using modern techniques such as radiofrequency tumor ablation.",
+          fullDesc: "We perform specialized surgical procedures using modern minimally invasive and microsurgical techniques, including radiofrequency tumor ablation, for maximum precision and safety."
+        },
+        ru: {
+          title: "Операции",
+          desc: "Специализированные хирургические вмешательства при заболеваниях нервов и опухолевых метастазах позвоночника, спинального канала и спинного мозга с применением современных методов.",
+          fullDesc: "Мы выполняем специализированные хирургические вмешательства с использованием современных малоинвазивных и микрохирургических методов, включая радиочастотную аблацию опухолей."
+        },
+        tr: {
+          title: "Operasyonlar",
+          desc: "Omurga, spinal kanal ve omurilik tümör metastazları ve sinir hastalıkları için radyofrekans tümör ablasyonu gibi modern teknikler kullanan özel cerrahi prosedürler.",
+          fullDesc: "Radyofrekans tümör ablasyonu dahil modern minimal invaziv ve mikrocerrahi teknikler kullanarak maksimum hassasiyet ve güvenlik için özel cerrahi prosedürler gerçekleştiriyoruz."
+        },
+        ar: {
+          title: "العمليات الجراحية",
+          desc: "إجراءات جراحية متخصصة لأمراض الأعصاب وانبثاثات الأورام في العمود الفقري والقناة الشوكية والحبل الشوكي باستخدام تقنيات حديثة مثل الاستئصال بالترددات الراديوية.",
+          fullDesc: "نجري إجراءات جراحية متخصصة باستخدام تقنيات جراحية مجهرية وأقل توغلاً بما في ذلك استئصال الأورام بالترددات الراديوية لتحقيق أقصى قدر من الدقة والأمان."
+        }
+      },
+      {
+        order: 4,
+        de: {
+          title: "Erkrankungen der Bandscheibe",
+          desc: "Degenerative Bandscheibenerkrankungen (Bandscheibenvorfall, Spinalkanalstenose) der HWS, BWS und LWS.",
+          fullDesc: "Die Standard-Operation bei Bandscheibenvorfällen ist die Entfernung der Bandscheibe und anschließende Fusion. Eine Alternative ist die Bandscheibenprothese, ein künstlicher Bandscheibenersatz aus Metall und Kunststoff, der die natürliche Beweglichkeit der Wirbelsäule erhält."
+        },
+        en: {
+          title: "Disc Diseases",
+          desc: "Degenerative disc diseases (disc herniation, spinal canal stenosis) of the cervical, thoracic and lumbar spine.",
+          fullDesc: "The standard operation for disc herniations is disc removal and subsequent fusion. An alternative is the disc prosthesis, an artificial disc replacement made of metal and plastic, which preserves the natural mobility of the spine."
+        },
+        ru: {
+          title: "Заболевания межпозвонковых дисков",
+          desc: "Дегенеративные заболевания межпозвонковых дисков (грыжа диска, стеноз позвоночного канала) шейного, грудного и поясничного отделов.",
+          fullDesc: "Стандартная операция при грыже диска — удаление диска с последующим сращением. Альтернативой является протез диска — искусственная замена из металла и пластика, сохраняющая естественную подвижность позвоночника."
+        },
+        tr: {
+          title: "Disk Hastalıkları",
+          desc: "Servikal, torakal ve lomber omurganın dejeneratif disk hastalıkları (disk hernisi, spinal kanal stenozu).",
+          fullDesc: "Disk herniasyonları için standart ameliyat, disk çıkarma ve ardından füzyondur. Bir alternatif disk protezi — omurganın doğal hareketliliğini koruyan metal ve plastikten yapılmış yapay bir disk değişimidir."
+        },
+        ar: {
+          title: "أمراض الأقراص الفقرية",
+          desc: "أمراض الأقراص الفقرية التنكسية (انزلاق الديسك، تضيق القناة الشوكية) في العمود الفقري العنقي والصدري والقطني.",
+          fullDesc: "العملية القياسية لانزلاق الديسك هي إزالة الديسك ثم الاندماج. والبديل هو بروتيز الديسك — استبدال اصطناعي من المعدن والبلاستيك يحافظ على الحركة الطبيعية للعمود الفقري."
+        }
+      },
+      {
+        order: 5,
+        de: {
+          title: "Dauerschmerz",
+          desc: "Diagnostik und Behandlung von chronischen Schmerzen, Polyneuropathie und medikamentenfreie Therapien.",
+          fullDesc: "Nervenschmerzen wie Brennen, Reißen, Zwicken, Taubheit und Stechen müssen nicht mit übermäßiger Einnahme von Schmerzmedikamenten behandelt werden. Wir informieren Sie über medikamentenfreie Behandlungen wie die SCS- und die PNP-Therapie."
+        },
+        en: {
+          title: "Chronic Pain",
+          desc: "Diagnostics and treatment of chronic pain, polyneuropathy and drug-free therapies.",
+          fullDesc: "Nerve pain such as burning, tearing, pinching, numbness and stabbing does not have to be treated with excessive pain medication. We inform you about drug-free treatments such as SCS and PNP therapy."
+        },
+        ru: {
+          title: "Хроническая боль",
+          desc: "Диагностика и лечение хронических болей, полинейропатии и безмедикаментозная терапия.",
+          fullDesc: "Нервные боли — жжение, разрывы, покалывание, онемение — не требуют чрезмерного приёма обезболивающих. Мы расскажем вам о безмедикаментозных методах, таких как СКС- и ПНП-терапия."
+        },
+        tr: {
+          title: "Kronik Ağrı",
+          desc: "Kronik ağrı, polinöropati tanı ve tedavisi ile ilaçsız terapiler.",
+          fullDesc: "Yanma, yırtılma, sıkışma, uyuşma ve bıçak saplanması gibi sinir ağrıları aşırı ağrı kesiciyle tedavi edilmek zorunda değildir. SCS ve PNP terapisi gibi ilaçsız tedaviler hakkında sizi bilgilendiriyoruz."
+        },
+        ar: {
+          title: "الألم المزمن",
+          desc: "تشخيص وعلاج الآلام المزمنة والاعتلال العصبي المحيطي والعلاجات الخالية من الأدوية.",
+          fullDesc: "آلام الأعصاب مثل الحرق والتمزق والتنميل والطعن لا تحتاج إلى علاج بجرعات مفرطة من مسكنات الألم. نخبركم عن العلاجات الخالية من الأدوية مثل علاج SCS وPNP."
+        }
+      },
+      {
+        order: 6,
+        de: {
+          title: "Erkrankungen der Nerven",
+          desc: "Peripherische Nervenerkrankungen/Kompressionssyndrome - CTS - SUS - TTS etc.",
+          fullDesc: "Mit der computergestützten neurophysiologischen Untersuchung messen wir schmerzfrei die gesamte Pathologie des Nervensystems. Das bekannteste Engpass-Syndrom am Handgelenk ist das Karpaltunnelsyndrom, am Ellenbogen das Sulcus-Ulnaris-Syndrom und am Fersenbein das Tarsaltunnelsyndrom."
+        },
+        en: {
+          title: "Nerve Diseases",
+          desc: "Peripheral nerve diseases/compression syndromes - CTS - USS - TTS etc.",
+          fullDesc: "Using computer-assisted neurophysiological examination we painlessly measure the entire pathology of the nervous system. The most well-known entrapment syndrome at the wrist is carpal tunnel syndrome, at the elbow the ulnar sulcus syndrome and at the heel the tarsal tunnel syndrome."
+        },
+        ru: {
+          title: "Заболевания нервов",
+          desc: "Заболевания периферических нервов/синдромы компрессии - КТС - СУС - ТТС и др.",
+          fullDesc: "С помощью компьютеризированного нейрофизиологического исследования мы безболезненно измеряем всю патологию нервной системы. Самый известный синдром сдавления на запястье — синдром карпального канала, на локте — синдром локтевого желоба, на пятке — синдром тарзального канала."
+        },
+        tr: {
+          title: "Sinir Hastalıkları",
+          desc: "Periferik sinir hastalıkları/kompresyon sendromları - CTS - USS - TTS vb.",
+          fullDesc: "Bilgisayar destekli nörofizyolojik muayene ile sinir sisteminin tüm patolojisini ağrısız olarak ölçüyoruz. Bileğin en bilinen tuzak sendromu karpal tünel sendromu, dirsekte ulnar oluk sendromu ve topukta tarsal tünel sendromudur."
+        },
+        ar: {
+          title: "أمراض الأعصاب",
+          desc: "أمراض الأعصاب المحيطية/متلازمات الانضغاط - CTS - USS - TTS إلخ.",
+          fullDesc: "باستخدام الفحص الفيزيولوجي العصبي بمساعدة الكمبيوتر نقيس علم الأمراض الكامل للجهاز العصبي بدون ألم. أكثر متلازمات الانضغاط شيوعاً في الرسغ هي متلازمة النفق الرسغي، وفي الكوع متلازمة التلم الزندي، وفي الكعب متلازمة النفق الرصغي."
+        }
+      },
+      {
+        order: 7,
+        de: {
+          title: "Metastasen",
+          desc: "Tumor-Metastasen an der Wirbelsäule, Spinalkanal und Rückenmark der HWS, BWS und LWS-Höhen.",
+          fullDesc: "Bei der Behandlung von Wirbelsäulenfrakturen setzt die Praxis auf die perkutane Radiofrequenz-Kyphoplastie. Eine neue Therapieoption ist die gezielte Tumorablation mittels Radiofrequenz (STAR). Die Eingriffe dauern meist nicht länger als 15-20 Minuten pro Wirbel."
+        },
+        en: {
+          title: "Metastases",
+          desc: "Tumor metastases of the spine, spinal canal and spinal cord at cervical, thoracic and lumbar levels.",
+          fullDesc: "For the treatment of spinal fractures, the practice relies on percutaneous radiofrequency kyphoplasty. A new therapy option is targeted tumor ablation using radiofrequency (STAR). Procedures usually take no longer than 15-20 minutes per vertebra."
+        },
+        ru: {
+          title: "Метастазы",
+          desc: "Опухолевые метастазы позвоночника, спинального канала и спинного мозга на уровне шейного, грудного и поясничного отделов.",
+          fullDesc: "Для лечения переломов позвоночника клиника использует чрескожную радиочастотную кифопластику. Новым вариантом терапии является целевая аблация опухоли с помощью радиочастоты (STAR). Вмешательства обычно занимают не более 15-20 минут на позвонок."
+        },
+        tr: {
+          title: "Metastazlar",
+          desc: "Servikal, torakal ve lomber seviyelerde omurga, spinal kanal ve omurilik tümör metastazları.",
+          fullDesc: "Omurga kırıklarının tedavisi için klinik, perkütan radyofrekans kifoplasti kullanmaktadır. Yeni bir tedavi seçeneği, radyofrekans (STAR) kullanan hedefli tümör ablasyonudur. Prosedürler genellikle vertebra başına 15-20 dakikadan uzun sürmez."
+        },
+        ar: {
+          title: "النقائل الورمية",
+          desc: "النقائل الورمية للعمود الفقري والقناة الشوكية والحبل الشوكي على المستويات العنقية والصدرية والقطنية.",
+          fullDesc: "لعلاج كسور العمود الفقري تعتمد العيادة على رأب الفقرات بالترددات الراديوية عبر الجلد. وخيار علاجي جديد هو الاستئصال الموجه للورم بالترددات الراديوية (STAR). لا تستغرق الإجراءات عادةً أكثر من 15-20 دقيقة لكل فقرة."
+        }
+      }
+    ];
+
+    let statusEl, progress;
+
+    function log(msg, color = '#94a3b8') {
+      statusEl.innerHTML += `<div style="color:${color}; margin-bottom:4px;">${msg}</div>`;
+      statusEl.scrollTop = statusEl.scrollHeight;
+    }
+
+    function setProgress(pct) {
+      document.getElementById('progressFill').style.width = pct + '%';
+    }
+
+    window.startSeed = async () => {
+      statusEl = document.getElementById('status');
+      statusEl.innerHTML = '';
+      document.getElementById('seedBtn').disabled = true;
+      document.getElementById('seedBtn').textContent = '⏳ Lädt...';
+
+      log('🔄 Starte Seed-Prozess...', '#00c9a7');
+      log('');
+
+      try {
+        // Step 1: Clear existing
+        log('🗑️  Lösche vorhandene Behandlungen...', '#f59e0b');
+        const existingSnap = await getDocs(collection(db, 'treatments'));
+        let deleted = 0;
+        for (const d of existingSnap.docs) {
+          await deleteDoc(doc(db, 'treatments', d.id));
+          deleted++;
+        }
+        log(`   ${deleted} vorhandene Einträge gelöscht.`);
+        setProgress(10);
+
+        // Step 2: Seed treatments
+        log('');
+        log('📋 Lade Behandlungen...', '#00c9a7');
+        for (let i = 0; i < TREATMENTS.length; i++) {
+          const t = TREATMENTS[i];
+          await addDoc(collection(db, 'treatments'), t);
+          log(`   ✅ ${i + 1}/${TREATMENTS.length}: ${t.de.title}`, '#86efac');
+          setProgress(10 + Math.round((i + 1) / TREATMENTS.length * 85));
+        }
+
+        setProgress(100);
+        log('');
+        log('🎉 Fertig! Alle Daten wurden erfolgreich geladen.', '#00c9a7');
+        log('');
+        log('→ <a href="dashboard.html" style="color:#0072ff;">Zum Dashboard gehen</a>', '#94a3b8');
+
+        document.getElementById('seedBtn').textContent = '✅ Erfolgreich geladen!';
+        document.getElementById('seedBtn').style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+
+      } catch(e) {
+        log('❌ Fehler: ' + e.message, '#fca5a5');
+        document.getElementById('seedBtn').disabled = false;
+        document.getElementById('seedBtn').textContent = '🔄 Erneut versuchen';
+      }
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neurochirurgie Fischer – Admin Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="login-page">
+  <div class="login-bg">
+    <div class="login-orb login-orb-1"></div>
+    <div class="login-orb login-orb-2"></div>
+  </div>
+
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-logo">
+        <div class="login-logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" fill="url(#logoGrad)" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
+            <path d="M16 8L22 12V20L16 24L10 20V12L16 8Z" fill="rgba(255,255,255,0.15)"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="4" y1="2" x2="28" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#00c9a7"/>
+                <stop offset="1" stop-color="#0072ff"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="login-logo-text">Neurochirurgie Fischer</span>
+      </div>
+
+      <h1 class="login-title">Admin Panel</h1>
+      <p class="login-subtitle">Melden Sie sich an, um Inhalte zu verwalten</p>
+
+      <div id="loginError" class="login-error" style="display:none;"></div>
+
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label class="form-label">E-Mail-Adresse</label>
+          <div class="input-wrapper">
+            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <input type="email" id="loginEmail" class="form-input" placeholder="admin@example.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Passwort</label>
+          <div class="input-wrapper">
+            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" required>
+          </div>
+        </div>
+        <button type="submit" id="loginBtn" class="btn-login">
+          <span class="btn-text">Anmelden</span>
+          <span class="btn-spinner" style="display:none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spin"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBNcdljYigWs6nlFKy5VAVo3VPicHRQn9M",
+      authDomain: "vertex-clinic.firebaseapp.com",
+      projectId: "vertex-clinic",
+      storageBucket: "vertex-clinic.firebasestorage.app",
+      messagingSenderId: "385329227649",
+      appId: "1:385329227649:web:5f1b4244ac3990b4a26a80"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Redirect if already logged in
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        window.location.href = "dashboard.html";
+      }
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("loginEmail").value;
+      const password = document.getElementById("loginPassword").value;
+      const btn = document.getElementById("loginBtn");
+      const errDiv = document.getElementById("loginError");
+
+      btn.querySelector(".btn-text").style.display = "none";
+      btn.querySelector(".btn-spinner").style.display = "inline-flex";
+      btn.disabled = true;
+      errDiv.style.display = "none";
+
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        window.location.href = "dashboard.html";
+      } catch (error) {
+        let msg = "Fehler bei der Anmeldung. Bitte versuchen Sie es erneut.";
+        if (error.code === "auth/user-not-found" || error.code === "auth/wrong-password" || error.code === "auth/invalid-credential") {
+          msg = "Ungültige E-Mail oder Passwort.";
+        }
+        errDiv.textContent = msg;
+        errDiv.style.display = "block";
+        btn.querySelector(".btn-text").style.display = "inline";
+        btn.querySelector(".btn-spinner").style.display = "none";
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

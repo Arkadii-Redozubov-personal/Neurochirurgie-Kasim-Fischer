@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard – Admin Panel | Neurochirurgie Fischer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- Loading Overlay -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loading-spinner"></div>
+</div>
+
+<!-- Toast Container -->
+<div class="toast-container" id="toastContainer"></div>
+
+<div class="dashboard-layout">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+          <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" fill="rgba(255,255,255,0.9)"/>
+        </svg>
+      </div>
+      <div>
+        <div class="sidebar-logo-text">Neurochirurgie Fischer</div>
+        <div class="sidebar-logo-sub">Admin Panel</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <span class="nav-section-label">Übersicht</span>
+      <button class="nav-item active" onclick="showSection('dashboard')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </button>
+
+      <span class="nav-section-label">Inhalt</span>
+      <button class="nav-item" onclick="showSection('treatments')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Behandlungen
+      </button>
+      <button class="nav-item" onclick="showSection('team')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Team
+      </button>
+      <button class="nav-item" onclick="showSection('texts')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Texte & Slogans
+      </button>
+
+      <span class="nav-section-label">System</span>
+      <button class="nav-item" onclick="showSection('sync')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        Website synchronisieren
+      </button>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="user-badge">
+        <div class="user-avatar" id="userAvatar">A</div>
+        <div class="user-info">
+          <div class="user-name" id="userEmail">admin@clinic.de</div>
+          <div class="user-role">Administrator</div>
+        </div>
+        <button class="logout-btn" onclick="logout()" title="Abmelden">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <div class="topbar-title" id="topbarTitle">Dashboard</div>
+        <div class="topbar-breadcrumb" id="topbarBreadcrumb">Willkommen im Admin-Bereich</div>
+      </div>
+      <div class="topbar-actions">
+        <button class="btn btn-primary btn-sm" onclick="showSection('sync')">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+          Sync
+        </button>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- ===== DASHBOARD SECTION ===== -->
+      <section id="section-dashboard">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon green">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div>
+              <div class="stat-number" id="statTreatments">–</div>
+              <div class="stat-label">Behandlungen</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon blue">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <div class="stat-number" id="statTeam">–</div>
+              <div class="stat-label">Teammitglieder</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon orange">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="stat-number">5</div>
+              <div class="stat-label">Sprachen</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon purple">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div>
+              <div class="stat-number">30</div>
+              <div class="stat-label">HTML Seiten</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-card">
+          <div class="content-card-header">
+            <div>
+              <div class="content-card-title">Schnellzugriff</div>
+              <div class="content-card-sub">Die wichtigsten Bereiche auf einen Blick</div>
+            </div>
+          </div>
+          <div class="content-card-body" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+            <button onclick="showSection('treatments')" style="background: linear-gradient(135deg, rgba(0,201,167,0.1), rgba(0,114,255,0.05)); border: 1px solid rgba(0,201,167,0.2); border-radius: 12px; padding: 20px; cursor: pointer; text-align: left; transition: all 0.2s; color: inherit;">
+              <div style="font-size: 1.5rem; margin-bottom: 8px;">🏥</div>
+              <div style="font-weight: 700; color: var(--text); margin-bottom: 4px;">Behandlungen</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Inhalte aller Behandlungsseiten bearbeiten</div>
+            </button>
+            <button onclick="showSection('team')" style="background: linear-gradient(135deg, rgba(0,114,255,0.1), rgba(168,85,247,0.05)); border: 1px solid rgba(0,114,255,0.2); border-radius: 12px; padding: 20px; cursor: pointer; text-align: left; transition: all 0.2s; color: inherit;">
+              <div style="font-size: 1.5rem; margin-bottom: 8px;">👨‍⚕️</div>
+              <div style="font-weight: 700; color: var(--text); margin-bottom: 4px;">Team</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Arzt- und Mitarbeiterprofile verwalten</div>
+            </button>
+            <button onclick="showSection('sync')" style="background: linear-gradient(135deg, rgba(245,158,11,0.1), rgba(239,68,68,0.05)); border: 1px solid rgba(245,158,11,0.2); border-radius: 12px; padding: 20px; cursor: pointer; text-align: left; transition: all 0.2s; color: inherit;">
+              <div style="font-size: 1.5rem; margin-bottom: 8px;">🔄</div>
+              <div style="font-weight: 700; color: var(--text); margin-bottom: 4px;">Website Sync</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Änderungen auf die Website anwenden</div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TREATMENTS SECTION ===== -->
+      <section id="section-treatments" style="display:none;">
+        <div class="content-card">
+          <div class="content-card-header">
+            <div>
+              <div class="content-card-title">Behandlungen</div>
+              <div class="content-card-sub">Titel, Kurz- und Vollbeschreibungen in allen Sprachen bearbeiten</div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openAddTreatment()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Hinzufügen
+            </button>
+          </div>
+          <div class="content-card-body" style="padding: 0;">
+            <table class="treatment-table">
+              <thead>
+                <tr>
+                  <th style="padding-left: 24px;">#</th>
+                  <th>Behandlung</th>
+                  <th>Sprachen</th>
+                  <th>Aktionen</th>
+                </tr>
+              </thead>
+              <tbody id="treatmentsTableBody">
+                <tr><td colspan="4" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TEAM SECTION ===== -->
+      <section id="section-team" style="display:none;">
+        <div class="content-card">
+          <div class="content-card-header">
+            <div>
+              <div class="content-card-title">Team</div>
+              <div class="content-card-sub">Ärzte und Mitarbeiter verwalten</div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openAddTeamMember()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Hinzufügen
+            </button>
+          </div>
+          <div class="content-card-body" style="padding: 0;">
+            <table class="treatment-table">
+              <thead>
+                <tr>
+                  <th style="padding-left: 24px;">#</th>
+                  <th>Name</th>
+                  <th>Rolle</th>
+                  <th>Aktionen</th>
+                </tr>
+              </thead>
+              <tbody id="teamTableBody">
+                <tr><td colspan="4" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TEXTS SECTION ===== -->
+      <section id="section-texts" style="display:none;">
+        <div class="content-card">
+          <div class="content-card-header">
+            <div>
+              <div class="content-card-title">Texte & Slogans</div>
+              <div class="content-card-sub">Allgemeine Seitenüberschriften und globale Texte</div>
+            </div>
+          </div>
+          <div class="content-card-body">
+            <div class="lang-tabs">
+              <button class="lang-tab active" onclick="switchTextLang('de')">🇩🇪 DE</button>
+              <button class="lang-tab" onclick="switchTextLang('en')">🇬🇧 EN</button>
+              <button class="lang-tab" onclick="switchTextLang('ru')">🇷🇺 RU</button>
+              <button class="lang-tab" onclick="switchTextLang('tr')">🇹🇷 TR</button>
+              <button class="lang-tab" onclick="switchTextLang('ar')">🇸🇦 AR</button>
+            </div>
+            <div id="textsEditorArea">
+              <!-- Populated by JS -->
+            </div>
+            <button class="btn btn-primary" onclick="saveTexts()" style="margin-top: 16px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              Speichern
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SYNC SECTION ===== -->
+      <section id="section-sync" style="display:none;">
+        <div class="content-card">
+          <div class="content-card-header">
+            <div>
+              <div class="content-card-title">Website synchronisieren</div>
+              <div class="content-card-sub">Exportiert alle Daten aus Firebase als JSON-Datei für den Python-Generator</div>
+            </div>
+          </div>
+          <div class="content-card-body">
+            <div style="background: rgba(0,201,167,0.06); border: 1px solid rgba(0,201,167,0.2); border-radius: 12px; padding: 24px; margin-bottom: 24px;">
+              <h3 style="font-weight: 700; color: var(--primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Wie funktioniert die Synchronisierung?
+              </h3>
+              <ol style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.8; padding-left: 20px;">
+                <li>Klicken Sie auf <strong style="color: var(--text);">"Daten exportieren"</strong> — eine Datei <code style="background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; color: var(--primary);">cms_data.json</code> wird heruntergeladen.</li>
+                <li>Legen Sie die Datei in den Hauptordner <code style="background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; color: var(--primary);">vertex/</code> Ihrer Website.</li>
+                <li>Führen Sie den Python-Skript aus: <code style="background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; color: var(--primary);">python sync_cms.py</code></li>
+                <li>Der Skript aktualisiert alle 30 HTML-Dateien automatisch!</li>
+              </ol>
+            </div>
+
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+              <button class="btn btn-primary" onclick="exportData()" style="padding: 14px 28px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Daten exportieren (cms_data.json)
+              </button>
+              <button class="btn btn-ghost" onclick="previewData()" style="padding: 14px 28px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                Vorschau
+              </button>
+            </div>
+
+            <div id="previewArea" style="display:none; margin-top: 24px;">
+              <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 8px; padding: 16px; max-height: 400px; overflow-y: auto;">
+                <pre id="previewContent" style="font-size: 0.78rem; color: var(--text-muted); white-space: pre-wrap; word-break: break-all;"></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<!-- Treatment Edit Modal -->
+<div class="modal-overlay" id="treatmentModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="treatmentModalTitle">Behandlung bearbeiten</div>
+      <button class="modal-close" onclick="closeModal('treatmentModal')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="lang-tabs">
+        <button class="lang-tab active" onclick="switchTreatLang('de')">🇩🇪 DE</button>
+        <button class="lang-tab" onclick="switchTreatLang('en')">🇬🇧 EN</button>
+        <button class="lang-tab" onclick="switchTreatLang('ru')">🇷🇺 RU</button>
+        <button class="lang-tab" onclick="switchTreatLang('tr')">🇹🇷 TR</button>
+        <button class="lang-tab" onclick="switchTreatLang('ar')">🇸🇦 AR</button>
+      </div>
+      <div id="treatmentLangPanels"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('treatmentModal')">Abbrechen</button>
+      <button class="btn btn-primary" onclick="saveTreatment()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Speichern
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Team Member Modal -->
+<div class="modal-overlay" id="teamModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="teamModalTitle">Teammitglied bearbeiten</div>
+      <button class="modal-close" onclick="closeModal('teamModal')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group-row">
+        <label class="form-label-dark">Name</label>
+        <input type="text" id="teamName" class="form-input-dark" placeholder="Dr. Max Mustermann">
+      </div>
+      <div class="form-group-row">
+        <label class="form-label-dark">Rolle / Position (Deutsch)</label>
+        <input type="text" id="teamRole" class="form-input-dark" placeholder="Leitender Neurochirurg">
+      </div>
+      <div class="form-group-row">
+        <label class="form-label-dark">Beschreibung (Deutsch)</label>
+        <textarea id="teamDesc" class="form-input-dark" placeholder="Kurze Biografie..." style="min-height: 120px;"></textarea>
+      </div>
+      <div class="form-group-row">
+        <label class="form-label-dark">Bild-URL (optional)</label>
+        <input type="text" id="teamImage" class="form-input-dark" placeholder="img/photo.jpg">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('teamModal')">Abbrechen</button>
+      <button class="btn btn-primary" onclick="saveTeamMember()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Speichern
+      </button>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+  import {
+    getFirestore, collection, getDocs, doc, setDoc, addDoc, deleteDoc, updateDoc
+  } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBNcdljYigWs6nlFKy5VAVo3VPicHRQn9M",
+    authDomain: "vertex-clinic.firebaseapp.com",
+    projectId: "vertex-clinic",
+    storageBucket: "vertex-clinic.firebasestorage.app",
+    messagingSenderId: "385329227649",
+    appId: "1:385329227649:web:5f1b4244ac3990b4a26a80"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  // Expose globals
+  window.db = db;
+  window.auth = auth;
+  window.firestoreOps = { collection, getDocs, doc, setDoc, addDoc, deleteDoc, updateDoc };
+
+  const LANGS = ['de', 'en', 'ru', 'tr', 'ar'];
+  const LANG_FLAGS = { de: '🇩🇪', en: '🇬🇧', ru: '🇷🇺', tr: '🇹🇷', ar: '🇸🇦' };
+
+  // ========= AUTH =========
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      window.location.href = "index.html";
+      return;
+    }
+    const email = user.email || "admin";
+    document.getElementById("userEmail").textContent = email;
+    document.getElementById("userAvatar").textContent = email[0].toUpperCase();
+    loadAll();
+  });
+
+  window.logout = async () => {
+    await signOut(auth);
+    window.location.href = "index.html";
+  };
+
+  // ========= SECTION NAVIGATION =========
+  const sections = ['dashboard', 'treatments', 'team', 'texts', 'sync'];
+  const titles = {
+    dashboard: ['Dashboard', 'Willkommen im Admin-Bereich'],
+    treatments: ['Behandlungen', 'Inhalte bearbeiten'],
+    team: ['Team', 'Ärzte und Mitarbeiter'],
+    texts: ['Texte & Slogans', 'Globale Texte bearbeiten'],
+    sync: ['Website Sync', 'Änderungen exportieren und anwenden']
+  };
+
+  window.showSection = (name) => {
+    sections.forEach(s => {
+      document.getElementById(`section-${s}`).style.display = s === name ? 'block' : 'none';
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    });
+    document.querySelectorAll('.nav-item').forEach(n => {
+      if (n.getAttribute('onclick') === `showSection('${name}')`) n.classList.add('active');
+    });
+    document.getElementById('topbarTitle').textContent = titles[name][0];
+    document.getElementById('topbarBreadcrumb').textContent = titles[name][1];
+  };
+
+  // ========= TOAST =========
+  window.showToast = (msg, type = 'success') => {
+    const icon = type === 'success'
+      ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>'
+      : '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>';
+    const t = document.createElement('div');
+    t.className = `toast ${type}`;
+    t.innerHTML = `${icon}<span>${msg}</span>`;
+    document.getElementById('toastContainer').appendChild(t);
+    setTimeout(() => t.remove(), 3500);
+  };
+
+  // ========= MODAL =========
+  window.closeModal = (id) => {
+    document.getElementById(id).classList.remove('open');
+  };
+
+  // ========= LOAD DATA =========
+  let treatmentsData = [];
+  let teamData = [];
+  let textsData = {};
+  let currentTextLang = 'de';
+  let currentTreatLang = 'de';
+  let editingTreatmentId = null;
+  let editingTeamId = null;
+
+  async function loadAll() {
+    document.getElementById('loadingOverlay').classList.add('show');
+    try {
+      await Promise.all([loadTreatments(), loadTeam(), loadTexts()]);
+      updateStats();
+    } catch(e) {
+      showToast('Fehler beim Laden: ' + e.message, 'error');
+    } finally {
+      document.getElementById('loadingOverlay').classList.remove('show');
+    }
+  }
+
+  async function loadTreatments() {
+    const { collection, getDocs } = window.firestoreOps;
+    const snap = await getDocs(collection(window.db, 'treatments'));
+    treatmentsData = [];
+    snap.forEach(d => treatmentsData.push({ id: d.id, ...d.data() }));
+    treatmentsData.sort((a, b) => (a.order || 0) - (b.order || 0));
+    renderTreatmentsTable();
+  }
+
+  async function loadTeam() {
+    const { collection, getDocs } = window.firestoreOps;
+    const snap = await getDocs(collection(window.db, 'team'));
+    teamData = [];
+    snap.forEach(d => teamData.push({ id: d.id, ...d.data() }));
+    renderTeamTable();
+  }
+
+  async function loadTexts() {
+    const { collection, getDocs } = window.firestoreOps;
+    const snap = await getDocs(collection(window.db, 'texts'));
+    textsData = {};
+    snap.forEach(d => { textsData[d.id] = d.data(); });
+    renderTextsEditor();
+  }
+
+  // ========= STATS =========
+  function updateStats() {
+    document.getElementById('statTreatments').textContent = treatmentsData.length;
+    document.getElementById('statTeam').textContent = teamData.length;
+  }
+
+  // ========= TREATMENTS TABLE =========
+  function renderTreatmentsTable() {
+    const tbody = document.getElementById('treatmentsTableBody');
+    if (!treatmentsData.length) {
+      tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 40px; color: var(--text-dim);">Keine Behandlungen gefunden. Klicken Sie auf "Hinzufügen".</td></tr>';
+      return;
+    }
+    tbody.innerHTML = treatmentsData.map((t, i) => `
+      <tr>
+        <td style="padding-left: 24px;"><div class="treatment-index">${i + 1}</div></td>
+        <td>
+          <div class="treatment-title-cell">
+            <div>
+              <div class="treatment-name">${(t.de && t.de.title) || t.title || 'Ohne Titel'}</div>
+              <div class="treatment-desc-preview">${(t.de && t.de.desc) || t.desc || ''}</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div style="display: flex; gap: 4px; flex-wrap: wrap;">
+            ${LANGS.map(l => `<span class="lang-badge">${LANG_FLAGS[l]} ${l.toUpperCase()}</span>`).join('')}
+          </div>
+        </td>
+        <td>
+          <div style="display: flex; gap: 8px;">
+            <button class="btn btn-ghost btn-sm btn-icon" onclick="openEditTreatment('${t.id}')" title="Bearbeiten">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            </button>
+            <button class="btn btn-danger btn-sm btn-icon" onclick="deleteTreatment('${t.id}')" title="Löschen">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+            </button>
+          </div>
+        </td>
+      </tr>
+    `).join('');
+  }
+
+  // ========= TREATMENT MODAL =========
+  function buildTreatmentPanels(data) {
+    const container = document.getElementById('treatmentLangPanels');
+    container.innerHTML = LANGS.map(lang => `
+      <div class="lang-panel ${lang === 'de' ? 'active' : ''}" id="treat-panel-${lang}">
+        <div class="form-group-row">
+          <label class="form-label-dark">Titel (${lang.toUpperCase()})</label>
+          <input type="text" id="treat-title-${lang}" class="form-input-dark" placeholder="Behandlungstitel auf ${lang.toUpperCase()}" value="${(data && data[lang] && data[lang].title) || ''}">
+        </div>
+        <div class="form-group-row">
+          <label class="form-label-dark">Kurzbeschreibung</label>
+          <textarea id="treat-desc-${lang}" class="form-input-dark" placeholder="Kurze Beschreibung...">${(data && data[lang] && data[lang].desc) || ''}</textarea>
+        </div>
+        <div class="form-group-row">
+          <label class="form-label-dark">Vollständige Beschreibung (für Modal)</label>
+          <textarea id="treat-fulldesc-${lang}" class="form-input-dark" style="min-height: 140px;" placeholder="Ausführliche Beschreibung für das Popup-Fenster...">${(data && data[lang] && data[lang].fullDesc) || ''}</textarea>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  window.switchTreatLang = (lang) => {
+    document.querySelectorAll('#treatmentLangPanels .lang-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('#treatmentModal .lang-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(`treat-panel-${lang}`).classList.add('active');
+    document.querySelectorAll('#treatmentModal .lang-tab').forEach(t => {
+      if (t.getAttribute('onclick') === `switchTreatLang('${lang}')`) t.classList.add('active');
+    });
+    currentTreatLang = lang;
+  };
+
+  window.openAddTreatment = () => {
+    editingTreatmentId = null;
+    document.getElementById('treatmentModalTitle').textContent = 'Neue Behandlung hinzufügen';
+    buildTreatmentPanels(null);
+    document.getElementById('treatmentModal').classList.add('open');
+  };
+
+  window.openEditTreatment = (id) => {
+    editingTreatmentId = id;
+    const t = treatmentsData.find(x => x.id === id);
+    document.getElementById('treatmentModalTitle').textContent = 'Behandlung bearbeiten';
+    buildTreatmentPanels(t);
+    document.getElementById('treatmentModal').classList.add('open');
+  };
+
+  window.saveTreatment = async () => {
+    const { doc, setDoc, addDoc, collection } = window.firestoreOps;
+    const data = { order: editingTreatmentId ? (treatmentsData.find(t => t.id === editingTreatmentId)?.order || 0) : treatmentsData.length };
+    LANGS.forEach(lang => {
+      data[lang] = {
+        title: document.getElementById(`treat-title-${lang}`).value.trim(),
+        desc: document.getElementById(`treat-desc-${lang}`).value.trim(),
+        fullDesc: document.getElementById(`treat-fulldesc-${lang}`).value.trim()
+      };
+    });
+    try {
+      if (editingTreatmentId) {
+        await setDoc(doc(window.db, 'treatments', editingTreatmentId), data);
+        showToast('Behandlung gespeichert!');
+      } else {
+        await addDoc(collection(window.db, 'treatments'), data);
+        showToast('Behandlung hinzugefügt!');
+      }
+      closeModal('treatmentModal');
+      await loadTreatments();
+      updateStats();
+    } catch(e) {
+      showToast('Fehler: ' + e.message, 'error');
+    }
+  };
+
+  window.deleteTreatment = async (id) => {
+    if (!confirm('Soll diese Behandlung wirklich gelöscht werden?')) return;
+    const { doc, deleteDoc } = window.firestoreOps;
+    try {
+      await deleteDoc(doc(window.db, 'treatments', id));
+      showToast('Behandlung gelöscht.');
+      await loadTreatments();
+      updateStats();
+    } catch(e) {
+      showToast('Fehler: ' + e.message, 'error');
+    }
+  };
+
+  // ========= TEAM TABLE =========
+  function renderTeamTable() {
+    const tbody = document.getElementById('teamTableBody');
+    if (!teamData.length) {
+      tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 40px; color: var(--text-dim);">Keine Teammitglieder gefunden. Klicken Sie auf "Hinzufügen".</td></tr>';
+      return;
+    }
+    tbody.innerHTML = teamData.map((t, i) => `
+      <tr>
+        <td style="padding-left: 24px;"><div class="treatment-index">${i + 1}</div></td>
+        <td><div class="treatment-name">${t.name || 'Unbekannt'}</div></td>
+        <td><span style="color: var(--text-muted); font-size: 0.88rem;">${t.role || ''}</span></td>
+        <td>
+          <div style="display: flex; gap: 8px;">
+            <button class="btn btn-ghost btn-sm btn-icon" onclick="openEditTeam('${t.id}')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            </button>
+            <button class="btn btn-danger btn-sm btn-icon" onclick="deleteTeamMember('${t.id}')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+            </button>
+          </div>
+        </td>
+      </tr>
+    `).join('');
+  }
+
+  window.openAddTeamMember = () => {
+    editingTeamId = null;
+    document.getElementById('teamModalTitle').textContent = 'Neues Teammitglied';
+    ['teamName', 'teamRole', 'teamDesc', 'teamImage'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('teamModal').classList.add('open');
+  };
+
+  window.openEditTeam = (id) => {
+    editingTeamId = id;
+    const t = teamData.find(x => x.id === id);
+    document.getElementById('teamModalTitle').textContent = 'Teammitglied bearbeiten';
+    document.getElementById('teamName').value = t.name || '';
+    document.getElementById('teamRole').value = t.role || '';
+    document.getElementById('teamDesc').value = t.desc || '';
+    document.getElementById('teamImage').value = t.image || '';
+    document.getElementById('teamModal').classList.add('open');
+  };
+
+  window.saveTeamMember = async () => {
+    const { doc, setDoc, addDoc, collection } = window.firestoreOps;
+    const data = {
+      name: document.getElementById('teamName').value.trim(),
+      role: document.getElementById('teamRole').value.trim(),
+      desc: document.getElementById('teamDesc').value.trim(),
+      image: document.getElementById('teamImage').value.trim()
+    };
+    try {
+      if (editingTeamId) {
+        await setDoc(doc(window.db, 'team', editingTeamId), data);
+        showToast('Teammitglied gespeichert!');
+      } else {
+        await addDoc(collection(window.db, 'team'), data);
+        showToast('Teammitglied hinzugefügt!');
+      }
+      closeModal('teamModal');
+      await loadTeam();
+      updateStats();
+    } catch(e) {
+      showToast('Fehler: ' + e.message, 'error');
+    }
+  };
+
+  window.deleteTeamMember = async (id) => {
+    if (!confirm('Soll dieses Teammitglied wirklich gelöscht werden?')) return;
+    const { doc, deleteDoc } = window.firestoreOps;
+    try {
+      await deleteDoc(doc(window.db, 'team', id));
+      showToast('Teammitglied gelöscht.');
+      await loadTeam();
+      updateStats();
+    } catch(e) {
+      showToast('Fehler: ' + e.message, 'error');
+    }
+  };
+
+  // ========= TEXTS =========
+  const TEXT_FIELDS = {
+    hero_title: 'Hero Titel',
+    hero_subtitle: 'Hero Untertitel',
+    hero_cta: 'Hero Button-Text',
+    treatments_title: 'Behandlungen – Abschnittstitel',
+    team_title: 'Team – Abschnittstitel'
+  };
+
+  function renderTextsEditor() {
+    const area = document.getElementById('textsEditorArea');
+    const langData = (textsData[currentTextLang] || {});
+    area.innerHTML = Object.entries(TEXT_FIELDS).map(([key, label]) => `
+      <div class="form-group-row">
+        <label class="form-label-dark">${label}</label>
+        <input type="text" id="text-${key}" class="form-input-dark" value="${langData[key] || ''}">
+      </div>
+    `).join('');
+  }
+
+  window.switchTextLang = (lang) => {
+    document.querySelectorAll('#section-texts .lang-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('#section-texts .lang-tab').forEach(t => {
+      if (t.getAttribute('onclick') === `switchTextLang('${lang}')`) t.classList.add('active');
+    });
+    currentTextLang = lang;
+    renderTextsEditor();
+  };
+
+  window.saveTexts = async () => {
+    const { doc, setDoc } = window.firestoreOps;
+    const data = {};
+    Object.keys(TEXT_FIELDS).forEach(key => {
+      data[key] = document.getElementById(`text-${key}`)?.value?.trim() || '';
+    });
+    try {
+      await setDoc(doc(window.db, 'texts', currentTextLang), data);
+      textsData[currentTextLang] = data;
+      showToast(`Texte (${currentTextLang.toUpperCase()}) gespeichert!`);
+    } catch(e) {
+      showToast('Fehler: ' + e.message, 'error');
+    }
+  };
+
+  // ========= EXPORT / SYNC =========
+  window.exportData = async () => {
+    document.getElementById('loadingOverlay').classList.add('show');
+    try {
+      const exportObj = {
+        treatments: treatmentsData,
+        team: teamData,
+        texts: textsData,
+        exportedAt: new Date().toISOString()
+      };
+      const blob = new Blob([JSON.stringify(exportObj, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'cms_data.json';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+      showToast('cms_data.json erfolgreich heruntergeladen!');
+    } catch(e) {
+      showToast('Fehler beim Export: ' + e.message, 'error');
+    } finally {
+      document.getElementById('loadingOverlay').classList.remove('show');
+    }
+  };
+
+  window.previewData = () => {
+    const previewArea = document.getElementById('previewArea');
+    const isHidden = previewArea.style.display === 'none';
+    if (isHidden) {
+      const exportObj = { treatments: treatmentsData, team: teamData, texts: textsData };
+      document.getElementById('previewContent').textContent = JSON.stringify(exportObj, null, 2);
+      previewArea.style.display = 'block';
+    } else {
+      previewArea.style.display = 'none';
+    }
+  };
+
+  // Close modals on outside click
+  document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) overlay.classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>

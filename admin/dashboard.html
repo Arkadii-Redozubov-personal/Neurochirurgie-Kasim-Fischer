@@ -402,23 +402,24 @@
           </div>
           <div class="content-card-body">
             <div style="background: rgba(0,201,167,0.06); border: 1px solid rgba(0,201,167,0.2); border-radius: 12px; padding: 24px; margin-bottom: 24px;">
-              <h3 style="font-weight: 700; color: var(--primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                Wie funktioniert die Synchronisierung?
-              </h3>
-              <ol style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.8; padding-left: 20px;">
-                <li>Klicken Sie auf <strong style="color: var(--text);">"Daten exportieren"</strong> — eine Datei <code style="background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; color: var(--primary);">cms_data.json</code> wird heruntergeladen.</li>
-                <li>Legen Sie die Datei in den Hauptordner <code style="background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; color: var(--primary);">vertex/</code> Ihrer Website.</li>
-                <li>Führen Sie den Python-Skript aus: <code style="background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; color: var(--primary);">python sync_cms.py</code></li>
-                <li>Der Skript aktualisiert alle 30 HTML-Dateien automatisch!</li>
-              </ol>
+                              <h3 style="font-weight: 700; color: var(--primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  Automatische Veröffentlichung
+                </h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 16px;">
+                  Mit einem Klick auf <strong>"Auf Website veröffentlichen"</strong> werden Ihre Änderungen an GitHub gesendet. Der Server aktualisiert die Website automatisch innerhalb von 1-2 Minuten!
+                </p>
+                <div style="margin-bottom: 16px;">
+                  <label style="display:block; margin-bottom: 6px; font-size: 0.85rem; color: #94a3b8;">GitHub Access Token (nur einmal erforderlich):</label>
+                  <input type="password" id="githubToken" class="form-input" placeholder="ghp_..." style="max-width: 400px;" onchange="localStorage.setItem('gh_token', this.value)">
+                </div>
             </div>
 
             <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-              <button class="btn btn-primary" onclick="exportData()" style="padding: 14px 28px;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Daten exportieren (cms_data.json)
-              </button>
+              <button class="btn btn-primary" onclick="publishToGithub()" style="padding: 14px 28px; background: linear-gradient(135deg, #22c55e, #16a34a); border:none;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  Auf Website veröffentlichen
+                </button>
               <button class="btn btn-ghost" onclick="previewData()" style="padding: 14px 28px;">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                 Vorschau
@@ -996,7 +997,46 @@
   };
 
   // ========= EXPORT / SYNC =========
-  window.exportData = async () => {
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedToken = localStorage.getItem('gh_token');
+      if(savedToken && document.getElementById('githubToken')) {
+        document.getElementById('githubToken').value = savedToken;
+      }
+    });
+
+    window.publishToGithub = async () => {
+      const token = document.getElementById('githubToken').value.trim();
+      if (!token) {
+        showToast('Bitte geben Sie einen GitHub Token ein!', 'error');
+        return;
+      }
+      
+      document.getElementById('loadingOverlay').classList.add('show');
+      try {
+        const res = await fetch('https://api.github.com/repos/Arkadii-Redozubov-personal/Neurochirurgie-Kasim-Fischer/dispatches', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/vnd.github.v3+json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify({ event_type: 'publish_cms' })
+        });
+        
+        if (res.ok) {
+          showToast('✅ Signal gesendet! Die Website wird in ~2 Minuten aktualisiert.');
+        } else {
+          const err = await res.text();
+          showToast('❌ Fehler: ' + res.status + ' ' + err, 'error');
+        }
+      } catch (err) {
+        showToast('❌ Netzwerkfehler: ' + err.message, 'error');
+      } finally {
+        document.getElementById('loadingOverlay').classList.remove('show');
+      }
+    };
+
+    window.exportData = async () => {
     document.getElementById('loadingOverlay').classList.add('show');
     try {
       const exportObj = {

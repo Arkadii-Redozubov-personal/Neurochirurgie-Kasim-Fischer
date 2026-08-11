@@ -48,6 +48,10 @@
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         Team
       </button>
+            <button class="nav-item" onclick="showSection('pages')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Seiteninhalte
+      </button>
       <button class="nav-item" onclick="showSection('texts')">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         Texte & Slogans
@@ -99,6 +103,66 @@
     </header>
 
     <div class="page-content">
+
+      
+      <!-- ===== PAGES SECTION ===== -->
+      <section id="section-pages" style="display:none;">
+        <div class="content-card">
+          <div class="content-card-header">
+            <div>
+              <div class="content-card-title">Seiteninhalte (Pages)</div>
+              <div class="content-card-sub">Inhalte für jede Seite bearbeiten (Hero-Titel, etc.)</div>
+            </div>
+            <!-- <button class="btn btn-primary" onclick="openPageModal()">+ Neue Seite (WIP)</button> -->
+          </div>
+          <table class="table" id="pagesTable">
+            <thead>
+              <tr>
+                <th>Seiten-ID</th>
+                <th>Name</th>
+                <th>Sektionen</th>
+                <th style="width:120px;">Aktion</th>
+              </tr>
+            </thead>
+            <tbody id="pagesTbody">
+              <tr><td colspan="4" class="text-center" style="padding: 20px; color: #94a3b8;">Lädt...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ===== PAGES MODAL ===== -->
+      <div class="modal-overlay" id="pageModal">
+        <div class="modal">
+          <div class="modal-header">
+            <div class="modal-title" id="pageModalTitle">Seite bearbeiten</div>
+            <button class="btn btn-outline" style="border:none; padding:4px;" onclick="closeModal('pageModal')">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+          <div class="modal-body" id="pageModalBody">
+            <input type="hidden" id="pageId">
+            <div style="margin-bottom: 20px;">
+              <label>Name der Seite (intern)</label>
+              <input type="text" id="pageName" class="form-input" disabled>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 12px;">
+              <h4 style="margin:0; font-size: 1.1rem; color: #fff;">Sektionen</h4>
+              <!-- <button class="btn btn-outline btn-sm" onclick="addPageSection()">+ Sektion hinzufügen</button> -->
+            </div>
+            
+            <div id="pageSectionsContainer">
+              <!-- Sections will be rendered here dynamically -->
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline" onclick="closeModal('pageModal')">Abbrechen</button>
+            <button class="btn btn-primary" id="savePageBtn" onclick="savePage()">Speichern</button>
+          </div>
+        </div>
+      </div>
 
       <!-- ===== DASHBOARD SECTION ===== -->
       <section id="section-dashboard">
@@ -936,7 +1000,8 @@
     document.getElementById('loadingOverlay').classList.add('show');
     try {
       const exportObj = {
-        treatments: treatmentsData,
+        pages: pagesData,
+          treatments: treatmentsData,
         team: teamData,
         texts: textsData,
         exportedAt: new Date().toISOString()
@@ -962,7 +1027,8 @@
     const previewArea = document.getElementById('previewArea');
     const isHidden = previewArea.style.display === 'none';
     if (isHidden) {
-      const exportObj = { treatments: treatmentsData, team: teamData, texts: textsData };
+      const exportObj = { pages: pagesData,
+          treatments: treatmentsData, team: teamData, texts: textsData };
       document.getElementById('previewContent').textContent = JSON.stringify(exportObj, null, 2);
       previewArea.style.display = 'block';
     } else {

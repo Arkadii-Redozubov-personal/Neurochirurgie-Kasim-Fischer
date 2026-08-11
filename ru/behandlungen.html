@@ -394,23 +394,29 @@
 
     <!-- Floating Doctolib Widget -->
     <div class="floating-doctolib">
-      <div class="fd-close" onclick="this.parentElement.style.display='none'">×</div>
+      <div class="fd-close" onclick="this.parentElement.style.display='none'">
+        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </div>
       <div class="fd-content">
         <div class="fd-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
         </div>
         <div class="fd-text">
           <div class="fd-title">Записаться на прием</div>
-          <div class="fd-desc">Забронируйте время визита быстро и удобно онлайн.</div>
+          <div class="fd-desc">Забронируйте время визита быстро и легко онлайн.</div>
         </div>
       </div>
-      <a href="https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer?utm_campaign=website-button&utm_source=kasim-fischer-website-button&utm_medium=referral&utm_content=custom&utm_term=kasim-fischer" target="_blank" class="fd-btn">Записаться на Doctolib</a>
+      <a href="https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer?utm_campaign=website-button&utm_source=kasim-fischer-website-button&utm_medium=referral&utm_content=custom&utm_term=kasim-fischer" target="_blank" class="fd-btn">Записаться на Doctolib &rarr;</a>
+      <div class="fd-secure">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          Ваши данные в безопасности и конфиденциальны.
+        </div>
     </div>
 
 <!-- Treatment Modal -->
 <div id="treatmentModal" class="video-modal" style="z-index: 99999;">
   <div class="video-modal-content" style="background: white; max-width: 800px; display: flex; flex-direction: column; height: auto; max-height: 90vh; border-radius: 20px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.2);">
-    <span class="close-video" id="closeTreatmentModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; z-index: 10;">&times;</span>
+    <span class="close-video" id="closeTreatmentModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; z-index: 10;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
     
     <div style="width: 100%; aspect-ratio: 16/9; background: #000; position: relative; flex-shrink: 0;">
       <iframe id="tModalVideo" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0;"></iframe>

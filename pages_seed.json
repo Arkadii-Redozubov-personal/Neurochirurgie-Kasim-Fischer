@@ -1,0 +1,194 @@
+{
+  "index": {
+    "id": "index",
+    "name": "Index",
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "content": {
+          "de": {
+            "title": "Diagnostik und Behandlung von <br><span>Nervenerkrankungen.</span>",
+            "desc": "Wir befassen uns mit der Diagnostik und Behandlung von Erkrankungen des Zentralnervensystems (ZNS) und des peripheren Nervensystems (PNS). Ihre Gesundheit ist unsere Mission."
+          },
+          "en": {
+            "title": "Diagnosis and treatment of <br><span>nervous system diseases.</span>",
+            "desc": "We provide advanced diagnostics and effective treatment for diseases of the central and peripheral nervous system. Your health is our mission."
+          },
+          "ru": {
+            "title": "Диагностика и лечение <br><span>заболеваний нервной системы.</span>",
+            "desc": "Мы предоставляем передовую диагностику и эффективное лечение заболеваний центральной и периферической нервной системы. Ваше здоровье — наша миссия."
+          },
+          "tr": {
+            "title": "Sinir sistemi hastalıklarının <br><span>teşhisi ve tedavisi.</span>",
+            "desc": "Merkezi ve periferik sinir sistemi hastalıkları için ileri teşhis ve etkili tedavi sağlıyoruz. Sağlığınız bizim misyonumuzdur."
+          },
+          "ar": {
+            "title": "تشخيص وعلاج <br><span>أمراض الجهاز العصبي.</span>",
+            "desc": "نحن نقدم تشخيصات متقدمة وعلاجًا فعالًا لأمراض الجهاز العصبي المركزي والمحيطي. صحتك هي مهمتنا."
+          }
+        }
+      }
+    ]
+  },
+  "behandlungen": {
+    "id": "behandlungen",
+    "name": "Behandlungen",
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "content": {
+          "de": {
+            "title": "Unsere Behandlungs-<br><span style=\"color: var(--primary);\">methoden</span>",
+            "desc": "Wir nutzen moderne und erprobte Verfahren zur präzisen Diagnose und effektiven Behandlung."
+          },
+          "en": {
+            "title": "Our treatment<br><span style=\"color: var(--primary);\">methods</span>",
+            "desc": "We use modern and proven procedures for precise diagnosis and effective treatment."
+          },
+          "ru": {
+            "title": "Наше лечение<br><span style=\"color: var(--primary);\">методы</span>",
+            "desc": "Мы используем современные и проверенные методы для точной диагностики и эффективного лечения."
+          },
+          "tr": {
+            "title": "Tedavimiz<br><span style=\"color: var(--primary);\">yöntemler</span>",
+            "desc": "Kesin teşhis ve etkili tedavi için modern ve kanıtlanmış prosedürleri kullanıyoruz."
+          },
+          "ar": {
+            "title": "علاجنا<br><span style=\"color: var(--primary);\">طُرق</span>",
+            "desc": "نحن نستخدم إجراءات حديثة ومثبتة للتشخيص الدقيق والعلاج الفعال."
+          }
+        }
+      }
+    ]
+  },
+  "praxis-schwerpunkte": {
+    "id": "praxis-schwerpunkte",
+    "name": "Praxis-schwerpunkte",
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "content": {
+          "de": {
+            "title": "Hauptbereiche unserer <span style=\"color: var(--primary);\">Praxis</span>",
+            "desc": "Diagnostik und Behandlung von Erkrankungen des zentralen und peripheren Nervensystems."
+          },
+          "en": {
+            "title": "Main areas of our <span style=\"color: var(--primary);\">Practice</span>",
+            "desc": "Diagnosis and treatment of diseases of the central and peripheral nervous system."
+          },
+          "ru": {
+            "title": "Основные направления нашей <span style=\"color: var(--primary);\">клиники</span>",
+            "desc": "Диагностика и лечение заболеваний центральной и периферической нервной системы."
+          },
+          "tr": {
+            "title": "Başlıca faaliyet alanlarımız <span style=\"color: var(--primary);\">Pratik</span>",
+            "desc": "Merkezi ve periferik sinir sistemi hastalıklarının tanı ve tedavisi."
+          },
+          "ar": {
+            "title": "المجالات الرئيسية لدينا <span style=\"color: var(--primary);\">يمارس</span>",
+            "desc": "تشخيص وعلاج أمراض الجهاز العصبي المركزي والمحيطي."
+          }
+        }
+      }
+    ]
+  },
+  "presseschau": {
+    "id": "presseschau",
+    "name": "Presseschau",
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "content": {
+          "de": {
+            "title": "Presseschau",
+            "desc": "Unsere Artikel und Interviews in führenden medizinischen Publikationen und auf Nachrichtenportalen."
+          },
+          "en": {
+            "title": "Press review",
+            "desc": "Our articles and interviews in leading medical publications and news portals."
+          },
+          "ru": {
+            "title": "Обзор прессы",
+            "desc": "Наши статьи и интервью в ведущих медицинских изданиях и новостных порталах."
+          },
+          "tr": {
+            "title": "Basın incelemesi",
+            "desc": "Önde gelen tıbbi yayınlarda ve haber portallarında yer alan makalelerimiz ve röportajlarımız."
+          },
+          "ar": {
+            "title": "مراجعة الصحافة",
+            "desc": "مقالاتنا ومقابلاتنا في المنشورات الطبية الرائدة والبوابات الإخبارية."
+          }
+        }
+      }
+    ]
+  },
+  "sprechzeiten": {
+    "id": "sprechzeiten",
+    "name": "Sprechzeiten",
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "content": {
+          "de": {
+            "title": "Kontaktieren Sie <span style=\"color: var(--primary);\">uns</span>",
+            "desc": "Wir sind bereit, Ihre Fragen zu beantworten und Ihnen zu helfen, die beste Lösung für Ihre Gesundheit zu finden."
+          },
+          "en": {
+            "title": "Contact <span style=\"color: var(--primary);\">us</span>",
+            "desc": "We are ready to answer your questions and help you find the best solution for your health."
+          },
+          "ru": {
+            "title": "Контакт <span style=\"color: var(--primary);\">нас</span>",
+            "desc": "Мы готовы ответить на ваши вопросы и помочь найти лучшее решение для вашего здоровья."
+          },
+          "tr": {
+            "title": "Temas etmek <span style=\"color: var(--primary);\">biz</span>",
+            "desc": "Sorularınızı yanıtlamaya ve sağlığınız için en iyi çözümü bulmanıza yardımcı olmaya hazırız."
+          },
+          "ar": {
+            "title": "اتصال <span style=\"color: var(--primary);\">نحن</span>",
+            "desc": "نحن على استعداد للإجابة على أسئلتك ومساعدتك في العثور على الحل الأفضل لصحتك."
+          }
+        }
+      }
+    ]
+  },
+  "unser-team": {
+    "id": "unser-team",
+    "name": "Unser-team",
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "content": {
+          "de": {
+            "title": "Unser <span style=\"color: var(--primary);\">Team</span>",
+            "desc": "Motivierte Mitarbeiter in einer modernen Arbeitsumgebung, vereint durch ein gemeinsames Ziel – die Sorge um Ihre Gesundheit."
+          },
+          "en": {
+            "title": "Our <span style=\"color: var(--primary);\">team</span>",
+            "desc": "Motivated employees in a modern working environment, united by a common goal - caring for your health."
+          },
+          "ru": {
+            "title": "Наш <span style=\"color: var(--primary);\">команда</span>",
+            "desc": "Мотивированные сотрудники в современной рабочей среде, объединенные общей целью – заботой о вашем здоровье."
+          },
+          "tr": {
+            "title": "Bizim <span style=\"color: var(--primary);\">takım</span>",
+            "desc": "Modern bir çalışma ortamında, sağlığınızı önemsemek gibi ortak bir amaç etrafında birleşen motive çalışanlar."
+          },
+          "ar": {
+            "title": "ملكنا <span style=\"color: var(--primary);\">فريق</span>",
+            "desc": "موظفون متحمسون في بيئة عمل حديثة، متحدون بهدف مشترك - العناية بصحتك."
+          }
+        }
+      }
+    ]
+  }
+}

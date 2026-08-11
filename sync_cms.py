@@ -15,104 +15,145 @@ DIRS = {
 def load_cms_data(path='cms_data.json'):
     if not os.path.exists(path):
         print(f"❌ ERROR: {path} not found!")
-        print("   Please export data from the Admin Panel first.")
         return None
     with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
-def sync_treatments(data):
-    treatments = data.get('treatments', [])
-    if not treatments:
-        return
-
-    print(f"\n📋 Syncing {len(treatments)} treatments to praxis-schwerpunkte.html...")
+def sync_schwerpunkte(data):
+    schwerpunkte = data.get('schwerpunkte', [])
+    if not schwerpunkte: return
+    print(f"\n📋 Syncing {len(schwerpunkte)} schwerpunkte to praxis-schwerpunkte.html...")
     for lang, directory in DIRS.items():
         filepath = os.path.join(directory, 'praxis-schwerpunkte.html')
-        if not os.path.exists(filepath):
-            continue
-
+        if not os.path.exists(filepath): continue
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
-
-        for treatment in treatments:
-            lang_data = treatment.get(lang, {})
-            if not lang_data:
-                continue
-
+        
+        # we try to replace all <h3 class="service-title-new">...</h3> and <p class="service-desc-new">...</p>
+        # but regex replacing by index is safer.
+        titles = re.split(r'(<h3 class="service-title-new">)(.*?)(</h3>)', content, flags=re.DOTALL)
+        descs = re.split(r'(<p class="service-desc-new">)(.*?)(</p>)', content, flags=re.DOTALL)
+        
+        # For simplicity, if lengths roughly match, we replace.
+        for i, sp in enumerate(schwerpunkte):
+            lang_data = sp.get(lang, {})
             title = lang_data.get('title', '')
-            if title:
-                content = re.sub(
-                    r'(<h3 class="service-title-new">)' + re.escape(title) + r'(</h3>)',
-                    r'\g<1>' + title + r'\g<2>',
-                    content
-                )
-
+            desc = lang_data.get('desc', '')
+            
+            if title and (i*4 + 2) < len(titles):
+                titles[i*4 + 2] = title
+            if desc and (i*4 + 2) < len(descs):
+                descs[i*4 + 2] = desc
+        
+        content = "".join(titles)
+        # re-split for descs since content string changed
+        descs = re.split(r'(<p class="service-desc-new">)(.*?)(</p>)', content, flags=re.DOTALL)
+        for i, sp in enumerate(schwerpunkte):
+            lang_data = sp.get(lang, {})
+            desc = lang_data.get('desc', '')
+            if desc and (i*4 + 2) < len(descs):
+                descs[i*4 + 2] = desc
+                
         with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(content)
+            f.write("".join(descs))
+
+def sync_treatments(data):
+    treatments = data.get('treatments', [])
+    if not treatments: return
+    print(f"\n📋 Syncing {len(treatments)} treatments to behandlungen.html...")
+    for lang, directory in DIRS.items():
+        filepath = os.path.join(directory, 'behandlungen.html')
+        if not os.path.exists(filepath): continue
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        titles = re.split(r'(<h3 class="treatment-title">)(.*?)(</h3>)', content, flags=re.DOTALL)
+        for i, tr in enumerate(treatments):
+            lang_data = tr.get(lang, {})
+            title = lang_data.get('title', '')
+            if title and (i*4 + 2) < len(titles):
+                titles[i*4 + 2] = title
+        content = "".join(titles)
+
+        descs = re.split(r'(<p class="treatment-desc">)(.*?)(</p>)', content, flags=re.DOTALL)
+        for i, tr in enumerate(treatments):
+            lang_data = tr.get(lang, {})
+            desc = lang_data.get('desc', '')
+            if desc and (i*4 + 2) < len(descs):
+                descs[i*4 + 2] = desc
+                
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write("".join(descs))
+
+def sync_team(data):
+    team = data.get('team', [])
+    if not team: return
+    print(f"\n📋 Syncing {len(team)} team members to unser-team.html...")
+    for lang, directory in DIRS.items():
+        filepath = os.path.join(directory, 'unser-team.html')
+        if not os.path.exists(filepath): continue
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Replace names
+        names = re.split(r'(class="team-name-new"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
+        for i, t in enumerate(team):
+            lang_data = t.get(lang, {})
+            name = lang_data.get('name', '')
+            if name and (i*4 + 2) < len(names):
+                names[i*4 + 2] = name
+        content = "".join(names)
+
+        # Replace roles
+        roles = re.split(r'(class="team-role-pill"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
+        for i, t in enumerate(team):
+            lang_data = t.get(lang, {})
+            role = lang_data.get('role', '')
+            if role and (i*4 + 2) < len(roles):
+                roles[i*4 + 2] = role
+                
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write("".join(roles))
 
 def sync_pages(data):
+    # Left intact from original logic
     pages = data.get('pages', [])
-    if not pages:
-        print("ℹ️  No pages data to sync.")
-        return
-
+    if not pages: return
     print(f"\n📝 Syncing {len(pages)} pages across all languages...")
-
     for page in pages:
         page_id = page.get('id')
         sections = page.get('sections', [])
         if not page_id: continue
-        
         filename = f"{page_id}.html"
         for lang, directory in DIRS.items():
             filepath = os.path.join(directory, filename)
-            if not os.path.exists(filepath):
-                continue
-                
+            if not os.path.exists(filepath): continue
             with open(filepath, 'r', encoding='utf-8') as f:
                 content = f.read()
-                
             for section in sections:
                 if section.get('type') == 'hero':
                     lang_data = section.get('content', {}).get(lang, {})
                     title = lang_data.get('title', '')
                     desc = lang_data.get('desc', '')
-                    
                     if title:
-                        content = re.sub(
-                            r'(<h1[^>]*class="[^"]*hero-title[^"]*"[^>]*>).*?(</h1>)',
-                            rf'\g<1>{title}\g<2>',
-                            content,
-                            flags=re.DOTALL | re.IGNORECASE
-                        )
+                        content = re.sub(r'(<h1[^>]*class="[^"]*hero-title[^"]*"[^>]*>).*?(</h1>)', rf'\g<1>{title}\g<2>', content, flags=re.DOTALL|re.IGNORECASE)
                     if desc:
-                        content = re.sub(
-                            r'(<p[^>]*class="[^"]*hero-desc[^"]*"[^>]*>).*?(</p>)',
-                            rf'\g<1>{desc}\g<2>',
-                            content,
-                            flags=re.DOTALL | re.IGNORECASE
-                        )
-            
+                        content = re.sub(r'(<p[^>]*class="[^"]*hero-desc[^"]*"[^>]*>).*?(</p>)', rf'\g<1>{desc}\g<2>', content, flags=re.DOTALL|re.IGNORECASE)
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"   ✅ Processed {filepath}")
 
 def main():
     print("=" * 55)
     print("  Neurochirurgie Fischer — CMS Sync Script")
     print("=" * 55)
-    print(f"  Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-
+    
     data = load_cms_data()
-    if not data:
-        return
-
-    print(f"✅ Loaded cms_data.json")
-    print(f"   - Pages: {len(data.get('pages', []))}")
-    print(f"   - Treatments: {len(data.get('treatments', []))}")
-
+    if not data: return
+    
     sync_pages(data)
+    sync_schwerpunkte(data)
     sync_treatments(data)
+    sync_team(data)
     print("\n✅ All synchronization tasks completed successfully!")
 
 if __name__ == '__main__':

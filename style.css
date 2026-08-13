@@ -382,9 +382,10 @@
       .hero-inner { padding-top: 80px; padding-bottom: 24px; background-position: 25% 20% !important; min-height: 100vh !important; min-height: 100svh !important; justify-content: flex-start; }
       .section-title { font-size: min(2.5rem, 8vw) !important; word-break: break-word; }
       .hero-main { margin-top: 24px !important; }
-      .hero-inner .hero-title { font-size: min(2.5rem, 10vw) !important; word-break: break-word; hyphens: auto; line-height: 1.1; margin-bottom: 8px; }
-      .hero-inner-sub .hero-title { font-size: min(2rem, 8vw) !important; word-break: break-word; hyphens: auto; line-height: 1.1; margin-bottom: 12px; }
-      .hero-desc { font-size: 1rem !important; margin-bottom: 16px !important; line-height: 1.4; }
+      .hero-overline, .trusted-overline { font-size: 0.75rem !important; }
+      .hero-inner .hero-title { font-size: min(2.25rem, 9vw) !important; word-break: break-word; hyphens: auto; line-height: 1.1; margin-bottom: 8px; }
+      .hero-inner-sub .hero-title { font-size: min(1.85rem, 7.5vw) !important; word-break: break-word; hyphens: auto; line-height: 1.1; margin-bottom: 12px; }
+      .hero-desc { font-size: 0.85rem !important; margin-bottom: 16px !important; line-height: 1.4; }
       .hero-actions { flex-direction: column; align-items: stretch !important; gap: 12px !important; margin-top: 16px !important; }
       .hero-actions .btn-primary, .hero-actions .btn-outline { width: 100%; justify-content: center; padding: 14px; font-size: 1.05rem !important; }
       .hero-actions .phone-link { width: 100%; text-align: center; font-size: 1.1rem !important; }
@@ -407,7 +408,7 @@
       .team-grid { grid-template-columns: 1fr !important; }
       .how-it-works { padding-top: 60px; padding-bottom: 0; }
       
-      .service-card, .treatment-card, .step-card, .process-timeline, .contact-card, .testimonial-card { padding: 20px !important; }
+      .service-card, .treatment-card, .step-card, .process-timeline, .contact-card, .testimonial-card, .service-card-new { padding: 20px !important; }
       .cta-card { padding: 40px 20px !important; }
       
       .btn-dark, .btn-primary, .btn-white, .btn-outline-white { width: 100% !important; display: block !important; text-align: center !important; box-sizing: border-box; }
@@ -949,6 +950,9 @@
 }
 @media (max-width: 768px) {
   .feature-row-4, .team-grid-new, .services-grid-new { grid-template-columns: 1fr; }
+  .services-grid-new { max-width: 100%; }
+  .service-card-new { min-width: 0; word-break: break-word; }
+  div[style*="min-width: 300px"] { min-width: 100% !important; }
 }
 
 /* --- Contact Page Styles --- */

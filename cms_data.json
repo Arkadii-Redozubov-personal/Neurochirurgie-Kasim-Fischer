@@ -1,0 +1,1078 @@
+{
+  "pages": [
+    {
+      "sections": [
+        {
+          "type": "hero",
+          "content": {
+            "de": {
+              "title": "Kontaktieren Sie <span style=\"color: var(--primary);\">uns</span>",
+              "desc": "Wir sind bereit, Ihre Fragen zu beantworten und Ihnen zu helfen, die beste Lösung für Ihre Gesundheit zu finden."
+            },
+            "en": {
+              "title": "Contact <span style=\"color: var(--primary);\">us</span>",
+              "desc": "We are ready to answer your questions and help you find the best solution for your health."
+            },
+            "tr": {
+              "title": "Temas etmek <span style=\"color: var(--primary);\">biz</span>",
+              "desc": "Sorularınızı yanıtlamaya ve sağlığınız için en iyi çözümü bulmanıza yardımcı olmaya hazırız."
+            },
+            "ar": {
+              "title": "اتصال <span style=\"color: var(--primary);\">نحن</span>",
+              "desc": "نحن على استعداد للإجابة على أسئلتك ومساعدتك في العثور على الحل الأفضل لصحتك."
+            },
+            "ru": {
+              "title": "Контакт <span style=\"color: var(--primary);\">нас</span>",
+              "desc": "Мы готовы ответить на ваши вопросы и помочь найти лучшее решение для вашего здоровья."
+            }
+          },
+          "id": "hero"
+        }
+      ],
+      "name": "Sprechzeiten",
+      "id": "63ElTBk6ZNfZ6KUWDDSC"
+    },
+    {
+      "sections": [
+        {
+          "type": "hero",
+          "content": {
+            "de": {
+              "title": "Unsere Behandlungs-<br><span style=\"color: var(--primary);\">methoden</span>",
+              "desc": "Wir nutzen moderne und erprobte Verfahren zur präzisen Diagnose und effektiven Behandlung."
+            },
+            "en": {
+              "title": "Our treatment<br><span style=\"color: var(--primary);\">methods</span>",
+              "desc": "We use modern and proven procedures for precise diagnosis and effective treatment."
+            },
+            "tr": {
+              "title": "Tedavimiz<br><span style=\"color: var(--primary);\">yöntemler</span>",
+              "desc": "Kesin teşhis ve etkili tedavi için modern ve kanıtlanmış prosedürleri kullanıyoruz."
+            },
+            "ar": {
+              "title": "علاجنا<br><span style=\"color: var(--primary);\">طُرق</span>",
+              "desc": "نحن نستخدم إجراءات حديثة ومثبتة للتشخيص الدقيق والعلاج الفعال."
+            },
+            "ru": {
+              "title": "Наше лечение<br><span style=\"color: var(--primary);\">методы</span>",
+              "desc": "Мы используем современные и проверенные методы для точной диагностики и эффективного лечения."
+            }
+          },
+          "id": "hero"
+        }
+      ],
+      "name": "Behandlungen",
+      "id": "QwCUSv29xVMLToav7vRY"
+    },
+    {
+      "sections": [
+        {
+          "type": "hero",
+          "content": {
+            "de": {
+              "title": "Presseschau",
+              "desc": "Unsere Artikel und Interviews in führenden medizinischen Publikationen und auf Nachrichtenportalen."
+            },
+            "en": {
+              "title": "Press review",
+              "desc": "Our articles and interviews in leading medical publications and news portals."
+            },
+            "tr": {
+              "title": "Basın incelemesi",
+              "desc": "Önde gelen tıbbi yayınlarda ve haber portallarında yer alan makalelerimiz ve röportajlarımız."
+            },
+            "ar": {
+              "title": "مراجعة الصحافة",
+              "desc": "مقالاتنا ومقابلاتنا في المنشورات الطبية الرائدة والبوابات الإخبارية."
+            },
+            "ru": {
+              "title": "Обзор прессы",
+              "desc": "Наши статьи и интервью в ведущих медицинских изданиях и новостных порталах."
+            }
+          },
+          "id": "hero"
+        }
+      ],
+      "name": "Presseschau",
+      "id": "Zsj1Ov70ZpYNxhh4ewcF"
+    },
+    {
+      "sections": [
+        {
+          "type": "hero",
+          "content": {
+            "de": {
+              "title": "Hauptbereiche unserer <span style=\"color: var(--primary);\">Praxis</span>",
+              "desc": "Diagnostik und Behandlung von Erkrankungen des zentralen und peripheren Nervensystems."
+            },
+            "en": {
+              "title": "Main areas of our <span style=\"color: var(--primary);\">Practice</span>",
+              "desc": "Diagnosis and treatment of diseases of the central and peripheral nervous system."
+            },
+            "tr": {
+              "title": "Başlıca faaliyet alanlarımız <span style=\"color: var(--primary);\">Pratik</span>",
+              "desc": "Merkezi ve periferik sinir sistemi hastalıklarının tanı ve tedavisi."
+            },
+            "ar": {
+              "title": "المجالات الرئيسية لدينا <span style=\"color: var(--primary);\">يمارس</span>",
+              "desc": "تشخيص وعلاج أمراض الجهاز العصبي المركزي والمحيطي."
+            },
+            "ru": {
+              "title": "Основные направления нашей <span style=\"color: var(--primary);\">клиники</span>",
+              "desc": "Диагностика и лечение заболеваний центральной и периферической нервной системы."
+            }
+          },
+          "id": "hero"
+        }
+      ],
+      "name": "Praxis-schwerpunkte",
+      "id": "gJAvvxNPe9EV2XBdfOVW"
+    },
+    {
+      "sections": [
+        {
+          "type": "hero",
+          "content": {
+            "de": {
+              "title": "Diagnostik und Behandlung von <br><span>Nervenerkrankungen.</span>",
+              "desc": "Wir befassen uns mit der Diagnostik und Behandlung von Erkrankungen des Zentralnervensystems (ZNS) und des peripheren Nervensystems (PNS). Ihre Gesundheit ist unsere Mission."
+            },
+            "en": {
+              "title": "Diagnosis and treatment of <br><span>nervous system diseases.</span>",
+              "desc": "We provide advanced diagnostics and effective treatment for diseases of the central and peripheral nervous system. Your health is our mission."
+            },
+            "tr": {
+              "title": "Sinir sistemi hastalıklarının <br><span>teşhisi ve tedavisi.</span>",
+              "desc": "Merkezi ve periferik sinir sistemi hastalıkları için ileri teşhis ve etkili tedavi sağlıyoruz. Sağlığınız bizim misyonumuzdur."
+            },
+            "ar": {
+              "title": "تشخيص وعلاج <br><span>أمراض الجهاز العصبي.</span>",
+              "desc": "نحن نقدم تشخيصات متقدمة وعلاجًا فعالًا لأمراض الجهاز العصبي المركزي والمحيطي. صحتك هي مهمتنا."
+            },
+            "ru": {
+              "title": "Диагностика и лечение <br><span>заболеваний нервной системы.</span>",
+              "desc": "Мы предоставляем передовую диагностику и эффективное лечение заболеваний центральной и периферической нервной системы. Ваше здоровье — наша миссия."
+            }
+          },
+          "id": "hero"
+        }
+      ],
+      "name": "Index",
+      "id": "o8yOYyqFWF83Kslz6koL"
+    },
+    {
+      "sections": [
+        {
+          "type": "hero",
+          "content": {
+            "de": {
+              "title": "Unser <span style=\"color: var(--primary);\">Team</span>",
+              "desc": "Motivierte Mitarbeiter in einer modernen Arbeitsumgebung, vereint durch ein gemeinsames Ziel – die Sorge um Ihre Gesundheit."
+            },
+            "en": {
+              "title": "Our <span style=\"color: var(--primary);\">team</span>",
+              "desc": "Motivated employees in a modern working environment, united by a common goal - caring for your health."
+            },
+            "tr": {
+              "title": "Bizim <span style=\"color: var(--primary);\">takım</span>",
+              "desc": "Modern bir çalışma ortamında, sağlığınızı önemsemek gibi ortak bir amaç etrafında birleşen motive çalışanlar."
+            },
+            "ar": {
+              "title": "ملكنا <span style=\"color: var(--primary);\">فريق</span>",
+              "desc": "موظفون متحمسون في بيئة عمل حديثة، متحدون بهدف مشترك - العناية بصحتك."
+            },
+            "ru": {
+              "title": "Наш <span style=\"color: var(--primary);\">команда</span>",
+              "desc": "Мотивированные сотрудники в современной рабочей среде, объединенные общей целью – заботой о вашем здоровье."
+            }
+          },
+          "id": "hero"
+        }
+      ],
+      "name": "Unser-team",
+      "id": "oQiolSi7hB20UXxW7IF9"
+    }
+  ],
+  "schwerpunkte": [
+    {
+      "order": 7,
+      "de": {
+        "fullDesc": "",
+        "title": "Metastasen",
+        "desc": "Tumor-Metastasen an der Wirbelsäule, Spinalkanal und Rückenmark der HWS, BWS und LWS-Höhen."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Metastases",
+        "desc": "Tumor metastases on the spine, spinal canal and spinal cord at the cervical, thoracic and lumbar levels."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Metastazlar",
+        "desc": "Servikal, torakal ve lomber seviyelerde omurga, spinal kanal ve omurilikte tümör metastazları."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "النقائل",
+        "desc": "النقائل الورمية في العمود الفقري والقناة الشوكية والحبل الشوكي في مستويات العنق والصدر والقطن."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Метастазы",
+        "desc": "Метастазы опухолей в позвоночнике, спинномозговом канале и спинном мозге шейного, грудного и поясничного отделов."
+      },
+      "id": "C3DXH5VdbMVxno0EF9rl"
+    },
+    {
+      "order": 4,
+      "de": {
+        "fullDesc": "",
+        "title": "Erkrankungen der Bandscheibe",
+        "desc": "Degenerative Bandscheibenerkrankungen (Bandscheibenvorfall, Spinalkanalstenose) der HWS, BWS und LWS."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Diseases of the Intervertebral Disc",
+        "desc": "Degenerative disc diseases (herniated disc, spinal canal stenosis) of the cervical, thoracic and lumbar spine."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Disk Hastalıkları",
+        "desc": "Servikal, torakal ve lomber omurganın dejeneratif disk hastalıkları (fıtıklaşmış disk, spinal kanal stenozu)."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "أمراض القرص",
+        "desc": "أمراض القرص التنكسية (الانزلاق الغضروفي، تضيق القناة الشوكية) في العمود الفقري العنقي والصدر والقطني."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Заболевания межпозвоночного диска",
+        "desc": "Дегенеративные заболевания дисков (грыжа, стеноз спинномозгового канала) шейного, грудного и поясничного отделов."
+      },
+      "id": "DenFM7q5vHBUef05fOgD"
+    },
+    {
+      "order": 1,
+      "de": {
+        "fullDesc": "",
+        "title": "Neurophysiologische Untersuchungen",
+        "desc": "In unserer Praxis arbeiten wir mit der computergestützten, neurophysiologischen Untersuchung des Nervensystems. So stellen wir Nervenschäden fest, die durch Verletzungen oder Engpass-Syndrome wie das Karpaltunnelsyndrom entstehen."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Neurophysiological studies",
+        "desc": "In our practice we work with computer-aided, neurophysiological examination of the nervous system. This is how we diagnose nerve damage caused by injuries or constriction syndromes such as carpal tunnel syndrome."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Nörofizyolojik çalışmalar",
+        "desc": "Uygulamamızda sinir sisteminin bilgisayar destekli, nörofizyolojik incelemesi ile çalışıyoruz. Karpal tünel sendromu gibi yaralanmaların veya daralma sendromlarının neden olduğu sinir hasarını bu şekilde teşhis ederiz."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "الدراسات الفسيولوجية العصبية",
+        "desc": "في عيادتنا، نعمل من خلال الفحص الفيزيولوجي العصبي للجهاز العصبي بمساعدة الكمبيوتر. هذه هي الطريقة التي نشخص بها تلف الأعصاب الناجم عن الإصابات أو متلازمات الانقباض مثل متلازمة النفق الرسغي."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Нейрофизиологические исследования",
+        "desc": "В нашей клинике мы проводим компьютерное нейрофизиологическое обследование нервной системы. Так мы выявляем повреждения нервов, вызванные травмами или компрессионными синдромами, такими как синдром запястного канала."
+      },
+      "id": "Hzttc1cPa4acP8RoBOaL"
+    },
+    {
+      "order": 3,
+      "de": {
+        "fullDesc": "",
+        "title": "Operationen",
+        "desc": "Spezialisierte operative Eingriffe bei Erkrankungen der Nerven und Tumormetastasen an der Wirbelsäule, Spinalkanal und Rückenmark unter Einsatz moderner Techniken wie der Radiofrequenz-Tumor-Ablatio."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Operations",
+        "desc": "Specialized surgical interventions for diseases of the nerves and tumor metastases to the spine, spinal canal and spinal cord using modern techniques such as radiofrequency tumor ablation."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Operasyonlar",
+        "desc": "Sinir hastalıkları ve omurga, omurilik kanalı ve omuriliğe tümör metastazları için radyofrekans tümör ablasyonu gibi modern teknikler kullanılarak özel cerrahi müdahaleler."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "العمليات",
+        "desc": "التدخلات الجراحية المتخصصة لأمراض الأعصاب وانتشار الأورام في العمود الفقري والقناة الشوكية والحبل الشوكي باستخدام التقنيات الحديثة مثل استئصال الورم بالترددات الراديوية."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Операции",
+        "desc": "Специализированные хирургические вмешательства при заболеваниях нервов и метастазах опухолей в позвоночник, спинномозговой канал и спинной мозг с использованием современных методов, таких как радиочастотная абляция опухолей."
+      },
+      "id": "L550B2Q3AbK1eQFCoTVa"
+    },
+    {
+      "order": 2,
+      "de": {
+        "fullDesc": "",
+        "title": "Neurochirurgische Schmerztherapie",
+        "desc": "Behandlung von postoperativen Schmerzen der Wirbelsäule, Phantomschmerzen der Extremitäten, degenerativen Facettengelenkschmerzen, Erkrankungen der Bandscheibe und chronischem Dauerschmerz."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Neurosurgical pain therapy",
+        "desc": "Treatment of postoperative spinal pain, phantom extremity pain, degenerative facet joint pain, intervertebral disc disease and chronic persistent pain."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Nöroşirürji ağrı tedavisi",
+        "desc": "Ameliyat sonrası omurga ağrısı, hayalet ekstremite ağrısı, dejeneratif faset eklem ağrısı, intervertebral disk hastalığı ve kronik inatçı ağrının tedavisi."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "علاج الألم بالجراحة العصبية",
+        "desc": "علاج آلام العمود الفقري بعد العملية الجراحية، وآلام الطرف الوهمي، وآلام المفاصل التنكسية، ومرض القرص الفقري والألم المستمر المزمن."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Нейрохирургическая терапия боли",
+        "desc": "Лечение послеоперационных болей в позвоночнике, фантомных болей в конечностях, дегенеративных болей в фасеточных суставах, заболеваний межпозвоночных дисков и хронической боли."
+      },
+      "id": "k5un62UGYYk17E8byhzY"
+    },
+    {
+      "order": 0,
+      "de": {
+        "fullDesc": "",
+        "title": "Wirbelsäulen-Erkrankungen",
+        "desc": "Behandlung von Bandscheibenvorfällen der HWS, BWS und LWS, degenerativen Spinalkanalstenosen, Instabilität der Wirbelsäule, intraspinalen Tumormetastasen und primären Iliosacral-Gelenkarthrosen."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Spinal diseases",
+        "desc": "Treatment of herniated discs of the cervical spine, thoracic spine and lumbar spine, degenerative spinal canal stenosis, instability of the spine, intraspinal tumor metastases and primary iliosacral joint arthrosis."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Omurga hastalıkları",
+        "desc": "Servikal omurga, torasik omurga ve lomber omurganın fıtıklaşmış disklerinin tedavisi, dejeneratif omurga kanalı stenozu, omurganın instabilitesi, intraspinal tümör metastazları ve primer iliosakral eklem artrozunun tedavisi."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "أمراض العمود الفقري",
+        "desc": "علاج الأقراص المنفتقة في العمود الفقري العنقي، والعمود الفقري الصدري، والعمود الفقري القطني، وتضيق القناة الشوكية التنكسية، وعدم استقرار العمود الفقري، والنقائل الورمية داخل النخاع، والتهاب المفاصل الحرقفي العجزي الأولي."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Заболевания позвоночника",
+        "desc": "Лечение грыж межпозвоночных дисков шейного, грудного и поясничного отделов, дегенеративного стеноза спинномозгового канала, нестабильности позвоночника, внутриспинномозговых метастазов опухолей и первичного артроза крестцово-подвздошного сустава."
+      },
+      "id": "o9L7FK735qmzC8jbbFE6"
+    },
+    {
+      "order": 5,
+      "de": {
+        "fullDesc": "",
+        "title": "Dauerschmerz",
+        "desc": "Diagnostik und Behandlung von chronischen Schmerzen, Polyneuropathie und medikamentenfreie Therapien."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Chronic Pain",
+        "desc": "Diagnostics and treatment of chronic pain, polyneuropathy and drug-free therapies."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Kronik Ağrı",
+        "desc": "Kronik ağrı, polinöropati teşhisi ve tedavisi ve ilaçsız tedaviler."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "الألم المزمن",
+        "desc": "تشخيص وعلاج الألم المزمن واعتلال الأعصاب المتعدد والعلاجات غير الدوائية."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Хроническая боль",
+        "desc": "Диагностика и лечение хронической боли, полинейропатии и безмедикаментозная терапия."
+      },
+      "id": "wCSCpntIGuJCQsOyBg0S"
+    },
+    {
+      "order": 6,
+      "de": {
+        "fullDesc": "",
+        "title": "Erkrankungen der Nerven",
+        "desc": "Peripherische Nervenerkrankungen/Kompressionssyndrome - CTS - SUS - TTS etc."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Diseases of the Nerves",
+        "desc": "Peripheral nerve diseases/compression syndromes - CTS - SUS - TTS etc."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Sinir Hastalıkları",
+        "desc": "Periferik sinir hastalıkları / kompresyon sendromları - CTS - SUS - TTS vb."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "أمراض الأعصاب",
+        "desc": "أمراض الأعصاب الطرفية / متلازمات الانضغاط - CTS - SUS - TTS إلخ."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Заболевания нервов",
+        "desc": "Заболевания периферических нервов/компрессионные синдромы — CTS, SUS, TTS и др."
+      },
+      "id": "x8V46OexDUQWhKD3RUyp"
+    }
+  ],
+  "treatments": [
+    {
+      "order": 11,
+      "de": {
+        "fullDesc": "",
+        "title": "Stabilisierung von Wirbelkörperbrüchen",
+        "desc": "Perkutane minimalinvasive Radiofrequenz-Kyphoplastie bei osteoporotischen oder tumorösen Wirbelsäulenfrakturen."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Stabilization of vertebral body fractures",
+        "desc": "Percutaneous minimally invasive radiofrequency kyphoplasty for osteoporotic or tumorous spinal fractures."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Omurga gövdesi kırıklarının stabilizasyonu",
+        "desc": "Osteoporotik veya tümörlü omurga kırıkları için perkütan minimal invaziv radyofrekans kifoplasti."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "تثبيت كسور الجسم الفقري",
+        "desc": "رأب الحدب بالترددات الراديوية عن طريق الجلد لعلاج كسور العمود الفقري الناتجة عن هشاشة العظام أو الورم."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Стабилизация переломов тел позвонков",
+        "desc": "Чрескожная малоинвазивная радиочастотная кифопластика при остеопорозных или опухолевидных переломах позвоночника."
+      },
+      "id": "8jRcr6ypkzvKyOS0HJtF"
+    },
+    {
+      "order": 5,
+      "de": {
+        "fullDesc": "",
+        "title": "Neuromodulation",
+        "desc": "Rückenmarksstimulation und Stimulation der sakralen Nerven zur Schmerztherapie."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Neuromodulation",
+        "desc": "Spinal cord stimulation and sacral nerve stimulation for pain management."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Nöromodülasyon",
+        "desc": "Ağrı yönetimi için omurilik stimülasyonu ve sakral sinir stimülasyonu."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "التعديل العصبي",
+        "desc": "تحفيز الحبل الشوكي وتحفيز العصب العجزي لإدارة الألم."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Нейромодуляция",
+        "desc": "Стимуляция спинного мозга и стимуляция крестцового нерва для снятия боли."
+      },
+      "id": "8zYfRKN4bmzQw2naIO60"
+    },
+    {
+      "order": 4,
+      "de": {
+        "fullDesc": "",
+        "title": "Perkutane minimalinvasive Tumor-Radiofrequenz-Thermoablation",
+        "desc": "Bei Knochentumormetastasen und ambulante Neuroonkologie in Rücksprache mit dem betreuenden Arzt."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Percutaneous minimally invasive tumor radiofrequency thermal ablation",
+        "desc": "For bone tumor metastases and outpatient neuro-oncology, please consult your attending physician."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Perkütan minimal invaziv tümör radyofrekans termal ablasyonu",
+        "desc": "Kemik tümörü metastazları ve ayakta tedavi nöroonkolojisi için lütfen ilgili doktorunuza danışın."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "الاستئصال الحراري للورم بالترددات الراديوية عن طريق الجلد",
+        "desc": "بالنسبة لانتشار أورام العظام والأورام العصبية في العيادات الخارجية، يرجى استشارة الطبيب المعالج."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Чрескожная минимально инвазивная радиочастотная термоабляция опухолей",
+        "desc": "При метастазах опухоли в кости и амбулаторной нейроонкологии проконсультируйтесь со своим лечащим врачом."
+      },
+      "id": "GOnkAWuWxlc2GuILPp0N"
+    },
+    {
+      "order": 1,
+      "de": {
+        "fullDesc": "",
+        "title": "Endoskopische und mikrochirurgische Bandscheibenoperation",
+        "desc": "Schonende, minimalinvasive Eingriffe an der Wirbelsäule."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Endoscopic and microsurgical intervertebral disc surgery",
+        "desc": "Gentle, minimally invasive procedures on the spine."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Endoskopik ve mikrocerrahi intervertebral disk cerrahisi",
+        "desc": "Omurga üzerinde nazik, minimal invaziv prosedürler."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "جراحة القرص الفقري بالمنظار والجراحة المجهرية",
+        "desc": "إجراءات لطيفة وبسيطة على العمود الفقري."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Эндоскопическая и микрохирургическая хирургия межпозвоночных дисков",
+        "desc": "Щадящие, малоинвазивные процедуры на позвоночнике."
+      },
+      "id": "PnN8YIfZ2WS6E5OwZafg"
+    },
+    {
+      "order": 12,
+      "de": {
+        "fullDesc": "",
+        "title": "Neurochirurgische Begutachtung",
+        "desc": "Professionelle medizinische Bewertungen und Gutachten."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Neurosurgical assessment",
+        "desc": "Professional medical reviews and opinions."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Nöroşirürji değerlendirmesi",
+        "desc": "Profesyonel tıbbi incelemeler ve görüşler."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "تقييم جراحة الأعصاب",
+        "desc": "التقييمات والآراء الطبية المهنية."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Да",
+        "desc": "Профессиональные медицинские обзоры и мнения."
+      },
+      "id": "R8OZNZrcats0HWBgVXWQ"
+    },
+    {
+      "order": 6,
+      "de": {
+        "fullDesc": "",
+        "title": "Muskelbiopsie",
+        "desc": "Bei Nervenerkrankungen und unklaren Muskelerkrankungen."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Muscle biopsy",
+        "desc": "For nerve diseases and unclear muscle diseases."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Kas biyopsisi",
+        "desc": "Sinir hastalıkları ve belirsiz kas hastalıkları için."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "خزعة العضلات",
+        "desc": "لأمراض الأعصاب وأمراض العضلات غير الواضحة."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Биопсия мышц",
+        "desc": "При нервных заболеваниях и неясных мышечных заболеваниях."
+      },
+      "id": "Zybjukioxsqgdc3qPwHR"
+    },
+    {
+      "order": 3,
+      "de": {
+        "fullDesc": "",
+        "title": "Minimalinvasive Stabilisierung",
+        "desc": "Perkutane Stabilisierungsoperationen und dynamische Stabilisierungsverfahren."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Minimally invasive stabilization",
+        "desc": "Percutaneous stabilization operations and dynamic stabilization procedures."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Minimal invazif stabilizasyon",
+        "desc": "Perkütan stabilizasyon operasyonları ve dinamik stabilizasyon prosedürleri."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "تحقيق الاستقرار طفيفة التوغل",
+        "desc": "عمليات التثبيت عن طريق الجلد وإجراءات التثبيت الديناميكي."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Минимально инвазивная стабилизация",
+        "desc": "Чрескожные операции по стабилизации и процедуры динамической стабилизации."
+      },
+      "id": "bfMRwuNYf9gFn1kGvZSQ"
+    },
+    {
+      "order": 0,
+      "de": {
+        "fullDesc": "",
+        "title": "Ambulante chirurgische Versorgung peripherer Nervenkompressionssyndrome",
+        "desc": "Zum Beispiel Karpaltunnelsyndrom und Sulcus-Ulnaris-Syndrom, Tumore peripherer Nerven etc."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Outpatient surgical care of peripheral nerve compression syndromes",
+        "desc": "For example, carpal tunnel syndrome and ulnar sulcus syndrome, tumors of peripheral nerves, etc."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Periferik sinir sıkışma sendromlarının ayaktan cerrahi bakımı",
+        "desc": "Örneğin karpal tünel sendromu ve ulnar sulkus sendromu, periferik sinir tümörleri vb."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "الرعاية الجراحية للمرضى الخارجيين لمتلازمات ضغط العصب المحيطي",
+        "desc": "على سبيل المثال، متلازمة النفق الرسغي ومتلازمة التلم الزندي، وأورام الأعصاب الطرفية، وما إلى ذلك."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Амбулаторная хирургическая помощь при синдромах компрессии периферических нервов",
+        "desc": "Например, туннельный синдром запястья и синдром локтевой борозды, опухоли периферических нервов и т. д."
+      },
+      "id": "eGIUNm9aeMgeGzuYRptU"
+    },
+    {
+      "order": 8,
+      "de": {
+        "fullDesc": "",
+        "title": "Wirbelgelenksblockaden und Denervation",
+        "desc": "Gezielte Schmerzbehandlung der Wirbelgelenke."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Spinal joint blocks and denervation",
+        "desc": "Targeted pain treatment of the vertebral joints."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Spinal eklem blokları ve denervasyon",
+        "desc": "Vertebral eklemlerin hedefe yönelik ağrı tedavisi."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "كتل المفاصل في العمود الفقري وإزالة التعصيب",
+        "desc": "علاج الألم المستهدف للمفاصل الفقرية."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Блокады спинальных суставов и денервация",
+        "desc": "Целенаправленное лечение боли позвоночных суставов."
+      },
+      "id": "h2pmGWXGgOyt35hiv9lk"
+    },
+    {
+      "order": 9,
+      "de": {
+        "fullDesc": "",
+        "title": "Mikrochirurgische Dekompressionsoperation",
+        "desc": "Zur Entlastung von Nervenstrukturen."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Microsurgical decompression operation",
+        "desc": "To relieve pressure on nerve structures."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Mikrocerrahi dekompresyon operasyonu",
+        "desc": "Sinir yapıları üzerindeki baskıyı hafifletmek."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "عملية تخفيف الضغط المجهرية",
+        "desc": "لتخفيف الضغط على الهياكل العصبية."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Микрохирургическая декомпрессионная операция",
+        "desc": "Для снятия давления на нервные структуры."
+      },
+      "id": "sgoGFSgy6CNH7zfSTDFO"
+    },
+    {
+      "order": 2,
+      "de": {
+        "fullDesc": "",
+        "title": "Entfernung von intraspinalen Tumoren",
+        "desc": "Inklusive Gefäßanomalie-Symptomatik und Tethered-Cord-Symptomatik."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Removal of intraspinal tumors",
+        "desc": "Including vascular anomaly symptoms and tethered cord symptoms."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "İntraspinal tümörlerin çıkarılması",
+        "desc": "Vasküler anomali semptomları ve bağlı kordon semptomları dahil."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "إزالة الأورام داخل النخاع",
+        "desc": "بما في ذلك أعراض الشذوذ الوعائي وأعراض الحبل المربوط."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Удаление внутриспинальных опухолей",
+        "desc": "Включая симптомы сосудистых аномалий и симптомы привязанного пуповины."
+      },
+      "id": "x6pMrWfDoaIh2GFx5NrY"
+    },
+    {
+      "order": 10,
+      "de": {
+        "fullDesc": "",
+        "title": "Arthroplastie und Arthrodes",
+        "desc": "Mit minimalinvasiven Operationen an Kreuzbein, Darmbein und Gelenken."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Arthroplasty and Arthrodes",
+        "desc": "With minimally invasive operations on the sacrum, ilium and joints."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "Artroplasti ve Artrodlar",
+        "desc": "Sakrum, ilium ve eklemlerde minimal invazif operasyonlar ile."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "تقويم المفاصل والمفاصل",
+        "desc": "مع عمليات جراحية طفيفة التوغل على العجز والحرقفة والمفاصل."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Артропластика и артроды",
+        "desc": "При малоинвазивных операциях на крестце, подвздошной кости и суставах."
+      },
+      "id": "xk8VANsxvDMnnh0VsMzt"
+    },
+    {
+      "order": 7,
+      "de": {
+        "fullDesc": "",
+        "title": "Bandscheibenprothetik",
+        "desc": "Behandlung an der HWS (Halswirbelsäule) und LWS (Lendenwirbelsäule)."
+      },
+      "en": {
+        "fullDesc": "",
+        "title": "Intervertebral disc prosthetics",
+        "desc": "Treatment of the cervical spine (cervical spine) and lumbar spine (lumbar spine)."
+      },
+      "tr": {
+        "fullDesc": "",
+        "title": "İntervertebral disk protezleri",
+        "desc": "Servikal omurganın (servikal omurga) ve lomber omurganın (lomber omurga) tedavisi."
+      },
+      "ar": {
+        "fullDesc": "",
+        "title": "الأطراف الاصطناعية للقرص الفقري",
+        "desc": "علاج العمود الفقري العنقي (العمود الفقري العنقي) والعمود الفقري القطني (العمود الفقري القطني)."
+      },
+      "ru": {
+        "fullDesc": "",
+        "title": "Протезирование межпозвоночных дисков",
+        "desc": "Лечение шейного отдела позвоночника (шейного отдела позвоночника) и поясничного отдела позвоночника (поясничного отдела позвоночника)."
+      },
+      "id": "zYhYpyujFAFy9x06EKNV"
+    }
+  ],
+  "team": [
+    {
+      "order": 1,
+      "de": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Nese Kirak"
+      },
+      "en": {
+        "role": "Medical Assistant",
+        "name": "Nese Kirak"
+      },
+      "tr": {
+        "role": "Tıbbi Asistan",
+        "name": "Nese Kirak"
+      },
+      "ar": {
+        "role": "مساعد طبي",
+        "name": "Nese Kirak"
+      },
+      "image": "img/surgeon4.jpg",
+      "ru": {
+        "role": "Медицинский ассистент",
+        "name": "Nese Kirak"
+      },
+      "id": "2Bfkwj2Owz9yT7zVnAAv"
+    },
+    {
+      "order": 0,
+      "de": {
+        "role": "Facharzt für Neurochirurgie",
+        "name": "Dr. Kasim Fischer"
+      },
+      "en": {
+        "role": "Specialist in Neurosurgery",
+        "name": "Dr. Kasim Fischer"
+      },
+      "tr": {
+        "role": "Beyin Cerrahisi Uzmanı",
+        "name": "Dr. Kasim Fischer"
+      },
+      "ar": {
+        "role": "أخصائي جراحة المخ والأعصاب",
+        "name": "Dr. Kasim Fischer"
+      },
+      "image": "img/surgeon1.jpg",
+      "ru": {
+        "role": "Специалист по нейрохирургии",
+        "name": "Dr. Kasim Fischer"
+      },
+      "id": "2ufBhXDMmOpyYaLTQPvU"
+    },
+    {
+      "order": 3,
+      "de": {
+        "role": "Termin Koordinatorin",
+        "name": "Elif Sayin"
+      },
+      "en": {
+        "role": "Appointment Coordinator",
+        "name": "Elif Sayin"
+      },
+      "tr": {
+        "role": "Randevu Koordinatörü",
+        "name": "Elif Sayin"
+      },
+      "ar": {
+        "role": "منسق المواعيد",
+        "name": "Elif Sayin"
+      },
+      "image": "img/surgeon3.jpg",
+      "ru": {
+        "role": "Координатор приемов",
+        "name": "Elif Sayin"
+      },
+      "id": "3B7Ih2517xcucGZKxTsu"
+    },
+    {
+      "order": 4,
+      "de": {
+        "role": "Auszubildende zur medizinischen Fachangestellten",
+        "name": "Tatjana Kuznezov"
+      },
+      "en": {
+        "role": "Trainee Medical Assistant",
+        "name": "Tatjana Kuznezov"
+      },
+      "tr": {
+        "role": "Stajyer Tıbbi Asistan",
+        "name": "Tatjana Kuznezov"
+      },
+      "ar": {
+        "role": "متدرب مساعد طبي",
+        "name": "Tatjana Kuznezov"
+      },
+      "image": "img/surgeon2.jpg",
+      "ru": {
+        "role": "Стажер",
+        "name": "Tatjana Kuznezov"
+      },
+      "id": "Wz5jNwnqURemNZxFGO7l"
+    },
+    {
+      "order": 2,
+      "de": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Iman Al Hussein"
+      },
+      "en": {
+        "role": "Medical Assistant",
+        "name": "Iman Al Hussein"
+      },
+      "tr": {
+        "role": "Tıbbi Asistan",
+        "name": "Iman Al Hussein"
+      },
+      "ar": {
+        "role": "مساعد طبي",
+        "name": "Iman Al Hussein"
+      },
+      "image": "img/surgeon5.jpg",
+      "ru": {
+        "role": "Медицинский ассистент",
+        "name": "Iman Al Hussein"
+      },
+      "id": "rsSOx7DrquWXtIY8D86U"
+    }
+  ],
+  "press": [
+    {
+      "category": "article",
+      "pdf": "pdfs/Wenn-das-Kreuz-streikt.pdf",
+      "image": "",
+      "date": "15 November 2023",
+      "title": "Wenn das Kreuz streikt",
+      "source": "Gesundheitsmagazin",
+      "desc": "Häufige Ursachen für Rückenschmerzen und erste Schritte zur Linderung.",
+      "id": "0r2BLWacxoo2dhfAtl0x"
+    },
+    {
+      "category": "interviews",
+      "pdf": "pdfs/Starke_Partner_September_2017.pdf",
+      "image": "img/Starke_Partner_September_2017_klein-150x150.jpg",
+      "date": "15 April 2024",
+      "title": "Minimaler Eingriff, maximale Wirkung",
+      "source": "Medical Tribune",
+      "desc": "Über die Vorteile der minimalinvasiven Wirbelsäulenchirurgie und schnelle Genesung.",
+      "id": "32v2QESoYFpYbS3Y0Cah"
+    },
+    {
+      "category": "article",
+      "pdf": "pdfs/Rueckenschmerz-Dagehtwas.pdf",
+      "image": "",
+      "date": "1 Oktober 2023",
+      "title": "Rückenschmerz? Da geht was!",
+      "source": "Gesund Leben",
+      "desc": "Neue Perspektiven in der modernen Schmerztherapie.",
+      "id": "CSsOr0nN1oDwjGUOwvg5"
+    },
+    {
+      "category": "science",
+      "pdf": "pdfs/Kleiner-Eingriff-mit-grosser-Wirkung.pdf",
+      "image": "",
+      "date": "10 Dezember 2023",
+      "title": "Kleiner Eingriff mit großer Wirkung",
+      "source": "Kurier Gesundheit",
+      "desc": "Geschichten von Patienten und ihr Weg zu einem Leben ohne Schmerzen.",
+      "id": "CiPJBQIh6CkNBQfS4shc"
+    },
+    {
+      "category": "interviews",
+      "pdf": "pdfs/A6595623-1.1.pdf.pdf",
+      "image": "",
+      "date": "10 Oktober 2023",
+      "title": "Schmerzfrei nach kurzer Zeit",
+      "source": "Orthopädie Nachrichten",
+      "desc": "Erfolgsgeschichten von Patienten nach der Behandlung.",
+      "id": "K9PXuOgmKRLK1QLdLUB4"
+    },
+    {
+      "category": "science",
+      "pdf": "pdfs/Starke-Partner-Marz-2018.compressed.pdf",
+      "image": "",
+      "date": "22 Februar 2024",
+      "title": "Künstliche Bandscheibe als bewegliche Wirbelsäule",
+      "source": "ÄrzteZeitung",
+      "desc": "Alternative zu traditionellen Methoden der chirurgischen Behandlung.",
+      "id": "Q2anqkICgLglsoQUyiqx"
+    },
+    {
+      "category": "science",
+      "pdf": "pdfs/A7331467-1.2.pdf",
+      "image": "",
+      "date": "20 Oktober 2023",
+      "title": "Schmerzquelle Iliosakralgelenk",
+      "source": "Ärzteblatt",
+      "desc": "Diagnostik und minimalinvasive Therapie bei ISG-Syndrom.",
+      "id": "R6o5f8c5jUZwLWNANAB0"
+    },
+    {
+      "category": "interviews",
+      "pdf": "pdfs/Patienten-als-Ganzes-sehen.pdf",
+      "image": "",
+      "date": "1 Dezember 2023",
+      "title": "Patienten als Ganzes sehen",
+      "source": "ORF Gesundheit",
+      "desc": "Was erwartet die Patienten im führenden Zentrum für Neurochirurgie.",
+      "id": "RQhO36CWnkI2l8xCQ4uR"
+    },
+    {
+      "category": "clinic-news",
+      "pdf": "pdfs/Der-Helfer-bei-Rueckenschmerz.pdf",
+      "image": "",
+      "date": "20 Dezember 2023",
+      "title": "Der Helfer bei Rückenschmerz",
+      "source": "Wiener Zeitung",
+      "desc": "Die Rolle der Navigation in der genauen Diagnose und Behandlung der Wirbelsäule.",
+      "id": "pGAovEztL2vyYzrlg0DX"
+    },
+    {
+      "category": "interviews",
+      "pdf": "pdfs/A6756051-1.1.pdf.pdf",
+      "image": "",
+      "date": "15 Januar 2024",
+      "title": "Wieder fit mit Bandscheibenprothese",
+      "source": "Health Österreich",
+      "desc": "In welchen Fällen eine Revisionsoperation möglich ist und welche Ergebnisse sie bringt.",
+      "id": "rMfHAva9GEumYKL6ig0q"
+    },
+    {
+      "category": "clinic-news",
+      "pdf": "pdfs/A7367086-2.1.pdf",
+      "image": "img/A7367086-2.1-150x150.jpg",
+      "date": "10 März 2024",
+      "title": "Rückenschmerz? Da gibt's Hilfe",
+      "source": "Die Presse",
+      "desc": "Wann Sie einen Spezialisten aufsuchen sollten und welche Methoden wirklich funktionieren.",
+      "id": "tEnyNXGNbTJXAAKT3lpj"
+    },
+    {
+      "category": "article",
+      "pdf": "pdfs/A6880993-1.1.pdf.pdf",
+      "image": "img/A6880993-1.1.pdf_klein-150x150.jpg",
+      "date": "28 März 2024",
+      "title": "Kleiner Schnitt mit großer Wirkung",
+      "source": "Gesundheit Heute",
+      "desc": "Wie moderne Technologien den Ansatz zur Behandlung von Bandscheibenvorfällen verändern.",
+      "id": "tGQYYr1S0MmrOFDgPTEt"
+    },
+    {
+      "category": "clinic-news",
+      "pdf": "",
+      "image": "",
+      "date": "1 November 2023",
+      "title": "Volkskrankheit Rücken",
+      "source": "Medical Tribune",
+      "desc": "Statistiken und neue Ansätze zur Prävention von Wirbelsäulenerkrankungen.",
+      "id": "vNuwEumHVwflS614NiTF"
+    },
+    {
+      "category": "article",
+      "pdf": "pdfs/Der-Experte-fuer-Rueckenleiden.pdf",
+      "image": "",
+      "date": "5 Januar 2024",
+      "title": "Der Experte für Rückenleiden",
+      "source": "Medizin & Forschung",
+      "desc": "Interview mit Kasim Fischer über Ansätze zur Behandlung komplexer Fälle.",
+      "id": "vVDzlV1gtDrD00Vdx2Uj"
+    }
+  ]
+}

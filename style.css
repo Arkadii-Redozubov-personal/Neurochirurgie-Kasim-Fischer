@@ -90,6 +90,7 @@
       padding: 32px max(40px, calc(50vw - 800px));
       z-index: 1000;
       background: transparent;
+      color: white;
       transition: all 0.3s ease;
       box-sizing: border-box;
       border-bottom: 1px solid transparent;

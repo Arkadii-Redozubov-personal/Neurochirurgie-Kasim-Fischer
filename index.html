@@ -16,6 +16,52 @@
 </head>
 <body>
 
+<!-- Navbar (must be OUTSIDE .hero-inner to avoid transform stacking context bug) -->
+<nav class="navbar" id="mainNavbar">
+  <div class="logo">
+    <div class="logo-icon">N</div>
+    NEUROCHIRURGIE FISCHER
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Startseite</a>
+    <a href="behandlungen.html">Behandlungen</a>
+    <a href="praxis-schwerpunkte.html">Schwerpunkte</a>
+    <a href="unser-team.html">Unser Team</a>
+    <a href="presseschau.html">Presseschau</a>
+    <a href="sprechzeiten.html">Kontakt</a>
+  </div>
+  <div class="lang-switcher hidden-mobile">
+    <div class="lang-current">DE <span>▼</span></div>
+    <div class="lang-dropdown">
+      <a href="index.html">Deutsch (DE)</a>
+      <a href="en/index.html">English (EN)</a>
+      <a href="ru/index.html">Русский (RU)</a>
+      <a href="tr/index.html">Türkçe (TR)</a>
+      <a href="ar/index.html">العربية (AR)</a>
+    </div>
+  </div>
+  <a href="sprechzeiten.html" class="btn-book hidden-mobile">Termin vereinbaren</a>
+  <div class="burger-menu" id="burgerMenu" style="display: none; font-size: 28px; cursor: pointer; color: white;">☰</div>
+</nav>
+
+<!-- Mobile Menu (also outside hero-inner) -->
+<div class="mobile-menu" id="mobileMenu" style="display: none;">
+  <a href="index.html">Startseite</a>
+  <a href="behandlungen.html">Behandlungen</a>
+  <a href="praxis-schwerpunkte.html">Schwerpunkte</a>
+  <a href="unser-team.html">Unser Team</a>
+  <a href="presseschau.html">Presseschau</a>
+  <a href="sprechzeiten.html">Kontakt</a>
+  <a href="sprechzeiten.html" style="color: var(--primary);">Termin vereinbaren</a>
+  <div class="mobile-lang-switcher">
+    <a href="index.html" class="active">DE</a>
+    <a href="en/index.html">EN</a>
+    <a href="ru/index.html">RU</a>
+    <a href="tr/index.html">TR</a>
+    <a href="ar/index.html">AR</a>
+  </div>
+</div>
+
 <div class="page-wrapper">
   
   <!-- Hero Section -->
@@ -28,58 +74,6 @@
   </div>
   <div class="hero-overlay"></div>
       <div class="container">
-        <nav class="navbar">
-          <div class="logo">
-            <div class="logo-icon">N</div>
-            NEUROCHIRURGIE FISCHER
-          </div>
-          <div class="nav-links">
-            <a href="index.html">Startseite</a>
-            <a href="behandlungen.html">Behandlungen</a>
-            <a href="praxis-schwerpunkte.html">Schwerpunkte</a>
-            <a href="unser-team.html">Unser Team</a>
-            <a href="presseschau.html">Presseschau</a>
-            <a href="sprechzeiten.html">Kontakt</a>
-          </div>
-
-          
-
-                    
-          
-          
-          
-          <div class="lang-switcher hidden-mobile">
-            <div class="lang-current">DE <span>▼</span></div>
-            <div class="lang-dropdown">
-              <a href="index.html">Deutsch (DE)</a>
-              <a href="en/index.html">English (EN)</a>
-              <a href="ru/index.html">Русский (RU)</a>
-              <a href="tr/index.html">Türkçe (TR)</a>
-              <a href="ar/index.html">العربية (AR)</a>
-            </div>
-          </div>
-          <a href="sprechzeiten.html" class="btn-book hidden-mobile">Termin vereinbaren</a>
-          <div class="burger-menu" id="burgerMenu" style="display: none; font-size: 28px; cursor: pointer; color: white;">☰</div>
-        </nav>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu" style="display: none;">
-          <a href="index.html">Startseite</a>
-          <a href="behandlungen.html">Behandlungen</a>
-          <a href="praxis-schwerpunkte.html">Schwerpunkte</a>
-          <a href="unser-team.html">Unser Team</a>
-          <a href="presseschau.html">Presseschau</a>
-          <a href="sprechzeiten.html">Kontakt</a>
-          <a href="sprechzeiten.html" style="color: var(--primary);">Termin vereinbaren</a>
-        
-        <div class="mobile-lang-switcher">
-            <a href="index.html" class="active">DE</a>
-            <a href="en/index.html" >EN</a>
-            <a href="ru/index.html" >RU</a>
-            <a href="tr/index.html" >TR</a>
-            <a href="ar/index.html" >AR</a>
-          </div>
-        </div>
 
                 <div class="hero-main fade-in" style="margin-top: 180px;">
           <div class="hero-overline">SPEZIALISIERTE NEUROCHIRURGISCHE VERSORGUNG</div>

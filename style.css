@@ -102,6 +102,8 @@
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255,255,255,0.05);
+      -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
     }
     .logo {
       font-weight: 800;
@@ -346,7 +348,7 @@
 
     @media (max-width: 1550px) {
       .nav-links, .btn-book.hidden-mobile, .lang-switcher { display: none; }
-      .burger-menu { display: block !important; position: relative; z-index: 100; }
+      .burger-menu { display: block !important; position: relative; z-index: 100; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); }
       .mobile-menu {
         display: none; /* toggled via js */
         flex-direction: column;
@@ -404,9 +406,15 @@
       .about-stats { flex-direction: column; align-items: flex-start; gap: 32px; }
       .about-bottom { flex-direction: column; align-items: flex-start; gap: 40px; }
       .about-img-small { margin-top: 0; width: 100%; }
+      .about-stats-row { flex-wrap: nowrap !important; gap: 8px !important; justify-content: space-between !important; width: 100%; margin-bottom: 32px !important; }
+      .about-stats-row .stat-value { font-size: 1.8rem !important; }
+      .about-stats-row .stat-value span { font-size: 1.1rem !important; margin-left: 2px !important; }
+      .about-stats-row .stat-label { font-size: 0.75rem !important; line-height: 1.2; }
+      .about-praxis-img { width: 100% !important; height: 240px !important; margin-top: 32px !important; margin-bottom: 32px !important; }
       .steps-grid { grid-template-columns: 1fr !important; }
       .team-grid { grid-template-columns: 1fr !important; }
-      .how-it-works { padding-top: 60px; padding-bottom: 0; }
+      .how-it-works { padding-top: 60px; padding-bottom: 60px; }
+      .how-it-works form { margin-bottom: 0 !important; }
       
       .service-card, .treatment-card, .step-card, .process-timeline, .contact-card, .testimonial-card, .service-card-new { padding: 20px !important; }
       .cta-card { padding: 40px 20px !important; }

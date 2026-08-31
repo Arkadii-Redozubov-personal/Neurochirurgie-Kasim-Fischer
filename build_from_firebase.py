@@ -21,7 +21,8 @@ def download_data():
             'schwerpunkte': [],
             'treatments': [],
             'team': [],
-            'press': []
+            'press': [],
+            'branches': []
         }
         
         for collection_name in data.keys():
@@ -44,3 +45,5 @@ if __name__ == "__main__":
     if download_data():
         print("Running sync_cms.py...")
         subprocess.run(['python', 'sync_cms.py'], check=True)
+        print("Running build_sprechzeiten.py...")
+        subprocess.run(['python', 'build_sprechzeiten.py'], check=True)

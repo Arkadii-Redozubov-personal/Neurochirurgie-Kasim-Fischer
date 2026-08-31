@@ -85,7 +85,7 @@ def sync_treatments(data):
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write("".join(descs))
 
-def sync_team(data):
+def # sync_team(data) - DISABLED because CMS order differs from HTML order:
     team = data.get('team', [])
     if not team: return
     print(f"\n📋 Syncing {len(team)} team members to unser-team.html...")
@@ -153,7 +153,7 @@ def main():
     sync_pages(data)
     sync_schwerpunkte(data)
     sync_treatments(data)
-    sync_team(data)
+    # sync_team(data) - DISABLED because CMS order differs from HTML order
     print("\n✅ All synchronization tasks completed successfully!")
 
 if __name__ == '__main__':

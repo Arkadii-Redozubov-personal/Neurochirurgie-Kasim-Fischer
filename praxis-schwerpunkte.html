@@ -27,6 +27,65 @@
       width: 100%;
     }
   </style>
+  <link rel="alternate" hreflang="de" href="https://my-bandscheibe.de/praxis-schwerpunkte.html">
+  <link rel="alternate" hreflang="en" href="https://my-bandscheibe.de/en/praxis-schwerpunkte.html">
+  <link rel="alternate" hreflang="ru" href="https://my-bandscheibe.de/ru/praxis-schwerpunkte.html">
+  <link rel="alternate" hreflang="tr" href="https://my-bandscheibe.de/tr/praxis-schwerpunkte.html">
+  <link rel="alternate" hreflang="ar" href="https://my-bandscheibe.de/ar/praxis-schwerpunkte.html">
+  <link rel="alternate" hreflang="x-default" href="https://my-bandscheibe.de/praxis-schwerpunkte.html">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Neurochirurgie Fischer",
+  "url": "https://my-bandscheibe.de",
+  "logo": "https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.png",
+  "email": "contact@my-bandscheibe.de",
+  "location": [
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Viersen",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Theodor-Heuss-Platz 10, 4. OG",
+        "addressLocality": "Viersen",
+        "postalCode": "41747",
+        "addressCountry": "DE"
+      }
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Mönchengladbach",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bismarckstr. 106, 3. OG",
+        "addressLocality": "Mönchengladbach",
+        "postalCode": "41061",
+        "addressCountry": "DE"
+      },
+      "telephone": "(02161) 678 26 83"
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Düsseldorf",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schadowstraße 74",
+        "addressLocality": "Düsseldorf",
+        "postalCode": "40212",
+        "addressCountry": "DE"
+      }
+    }
+  ],
+  "medicalSpecialty": "Neurosurgery",
+  "member": {
+    "@type": "Physician",
+    "name": "Kasim Fischer",
+    "medicalSpecialty": "Neurosurgery"
+  }
+}
+  </script>
 </head>
 <body>
 
@@ -36,20 +95,28 @@
   <div class="hero-inner-sub" style="background: linear-gradient(to right, rgba(9, 31, 34, 0.95) 0%, rgba(9, 31, 34, 0.6) 100%), url('img/imaging.png') center / cover no-repeat #091f22;">
     <div class="container">
       <nav class="navbar" style="margin-bottom: 60px;">
-          <div class="logo">
-            <div class="logo-icon">N</div>
-            NEUROCHIRURGIE FISCHER
-          </div>
-          <div class="nav-links">
-            <a href="index.html">Startseite</a>
-            <a href="behandlungen.html">Behandlungen</a>
-            <a href="praxis-schwerpunkte.html" style="color: white; font-weight: 700;">Schwerpunkte</a>
-            <a href="unser-team.html">Unser Team</a>
-            <a href="presseschau.html">Presseschau</a>
-            <a href="sprechzeiten.html">Kontakt</a>
-          
-        </div>
-                    <div class="lang-switcher hidden-mobile">
+    <a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+      <img src="img/logo_white.png" alt="Nabiota Health Group" style="height:60px;width:auto;border-radius:12px;">
+      <span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+    </a>
+    <div class="nav-links">
+    <a href="index.html">Startseite</a>
+    <a href="unser-team.html">Praxis</a>
+    <div class="nav-dropdown-wrapper">
+      <a tabindex="0">Leistungen</a>
+      <div class="nav-dropdown-menu">
+        <a href="praxis-schwerpunkte.html">Erkrankungen</a>
+        <a href="diagnostik.html">Diagnostik</a>
+        <a href="behandlungen.html">Behandlungen & OPs</a>
+        <a href="zweitmeinung.html">Zweitmeinung</a>
+      </div>
+    </div>
+    <a href="patienten.html">Für Patienten</a>
+    <a href="presseschau.html">Presse</a>
+    <a href="sprechzeiten.html">Kontakt</a>
+  </div>
+
+          <div class="lang-switcher hidden-mobile">
             <div class="lang-current">DE <span>▼</span></div>
             <div class="lang-dropdown">
               <a href="praxis-schwerpunkte.html">Deutsch (DE)</a>
@@ -65,13 +132,24 @@
         
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu" style="display: none;">
-          <a href="index.html">Startseite</a>
-          <a href="behandlungen.html">Behandlungen</a>
-          <a href="praxis-schwerpunkte.html">Schwerpunkte</a>
-          <a href="unser-team.html">Unser Team</a>
-          <a href="presseschau.html">Presseschau</a>
-          <a href="sprechzeiten.html">Kontakt</a>
-          <a href="sprechzeiten.html" style="color: var(--primary);">Termin vereinbaren</a>
+  <a href="index.html">Startseite</a>
+  <a href="unser-team.html">Praxis</a>
+  <div class="mobile-dropdown-wrapper">
+    <div class="mobile-dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('active');">
+      <a style="margin:0; padding:0;">Leistungen</a>
+      <span style="color: rgba(255,255,255,0.7);">▼</span>
+    </div>
+    <div class="mobile-dropdown-menu">
+        <a href="praxis-schwerpunkte.html">Erkrankungen</a>
+        <a href="diagnostik.html">Diagnostik</a>
+        <a href="behandlungen.html">Behandlungen & OPs</a>
+        <a href="zweitmeinung.html">Zweitmeinung</a>
+    </div>
+  </div>
+  <a href="patienten.html">Für Patienten</a>
+  <a href="presseschau.html">Presse</a>
+  <a href="sprechzeiten.html">Kontakt</a>
+  <a href="sprechzeiten.html" style="color: var(--primary);">Termin vereinbaren</a>
         
         <div class="mobile-lang-switcher">
             <a href="praxis-schwerpunkte.html" class="active">DE</a>
@@ -85,212 +163,245 @@
     
     <div class="container" style="margin-top: 140px; margin-bottom: 30px;">
       <div class="hero-main" style="max-width: 700px; margin-top: 0;">
-        <h1 class="hero-title hero-title-sub">Hauptbereiche unserer <span style="color: var(--primary);">Praxis</span></h1>
+        <h1 class="hero-title hero-title-sub">Unsere <span style="color: var(--primary);">Schwerpunkte</span></h1>
         <p class="hero-desc" style="max-width: 500px; font-size: 1.1rem; line-height: 1.6; color: rgba(255,255,255,0.8);">Diagnostik und Behandlung von Erkrankungen des zentralen und peripheren Nervensystems.</p>
-      </div>
-    </div>
-
-    <!-- Bottom Bar inside hero -->
-    <div class="hero-bottom-bar" style="margin-top: 0; background: rgba(9, 31, 34, 0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.05);">
-      <div class="container hero-bottom-grid">
-        <div class="hero-feature">
-          <div class="hero-feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          </div>
-          <div>
-            <div class="hero-feature-title">Moderne Diagnostik</div>
-            <div class="hero-feature-desc">Nutzung modernster Ausstattung.</div>
-          </div>
-        </div>
-        <div class="hero-feature">
-          <div class="hero-feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <div>
-            <div class="hero-feature-title">Ganzheitlicher Ansatz</div>
-            <div class="hero-feature-desc">Individuelle Lösungen für jeden Patienten.</div>
-          </div>
-        </div>
-        <div class="hero-feature">
-          <div class="hero-feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-          </div>
-          <div>
-            <div class="hero-feature-title">Evidenzbasierte Medizin</div>
-            <div class="hero-feature-desc">Behandlungsmethoden basieren auf wissenschaftlichen Daten.</div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 
   <div class="section-wrapper">
     <div class="container">
-      
-      <!-- Split Overview -->
-      <div style="display: flex; gap: 60px; margin-bottom: 80px; flex-wrap: wrap; margin-top: 40px;">
-        <div style="flex: 1; min-width: 300px;">
-          
-          <h2 class="section-title" style="font-size: 2.5rem; max-width: 400px; margin-top: 16px;">Diagnostik und Therapie</h2>
-        </div>
-        <div style="flex: 1; min-width: 300px; color: var(--text-light); line-height: 1.8; font-size: 1.05rem;">
-          <p style="margin-bottom: 20px;">Wir sind spezialisiert auf die Diagnostik und Behandlung von Erkrankungen des zentralen und peripheren Nervensystems. Es werden alle dazu in Beziehung stehenden Strukturen behandelt. Dazu gehören: Schädel, Gehirn, Rückenmark, die peripheren Nerven und die Wirbelsäule.</p>
-          <p>Kasim Fischer ist Mitglied der Deutschen Gesellschaft für Wirbelsäulenchirurgie und der Gesellschaft für Wirbelsäulenforschung. Bei der Behandlung von Bandscheibenvorfällen legt er besonderen Wert auf schonende, minimalinvasive Verfahren.</p>
-        </div>
+
+      <div style="background: rgba(28, 194, 178, 0.05); border-left: 4px solid var(--primary); padding: 24px; border-radius: 0 12px 12px 0; margin-top: 40px; margin-top: 40px; margin-bottom: 60px; width: 100%;">
+        <h3 style="font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px; color: var(--text-dark);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          Wichtiger medizinischer Hinweis
+        </h3>
+        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light); margin: 0;">Bitte beachten Sie: Die genaue Diagnose und die Indikationsstellung erfolgen stets individuell durch den Arzt nach einer eingehenden ärztlichen Untersuchung. Wir können keinen konkreten Behandlungserfolg versprechen.</p>
       </div>
-
-            <!-- Services Grid -->
-      <div class="services-grid-new">
-        
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M8 6h8"></path><path d="M8 12h8"></path><path d="M8 18h8"></path></svg>
+    
+      <div style="margin-bottom: 80px;" id="service-0">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
+          <div style="color: var(--primary); width: 40px; height: 40px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2h4l-2 3z"></path><path d="M9 7c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M9 11c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M9 15c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M12 18c-2 2-4 3-5 1l2-2c1.5 1 2.5.5 3-1z"></path><line x1="12" y1="5" x2="12" y2="18"></line></svg>
           </div>
-          <h3 class="service-title-new">Metastasen</h3>
-          <p class="service-desc-new">Tumor-Metastasen an der Wirbelsäule, Spinalkanal und Rückenmark der HWS, BWS und LWS-Höhen.</p>
-          <div class="service-full-desc" style="display: none;">
-            Wir bieten umfassende Diagnostik und Therapie für alle Erkrankungen der Wirbelsäule an, von degenerativen Veränderungen über Instabilitäten bis hin zu Tumormetastasen. Unser Ziel ist es, Schmerzen zu lindern und die Beweglichkeit wiederherzustellen, wobei wir stets versuchen, die schonendste Behandlungsmethode zu wählen.
+          <div>
+            <h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Wirbelsäule</h2>
+            <p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Erkrankungen und Verletzungen im Bereich der Wirbelsäule</p>
           </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Mehr erfahren &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-          </div>
-          <h3 class="service-title-new">Erkrankungen der Bandscheibe</h3>
-          <p class="service-desc-new">Degenerative Bandscheibenerkrankungen (Bandscheibenvorfall, Spinalkanalstenose) der HWS, BWS und LWS.</p>
-          <div class="service-full-desc" style="display: none;">
-            In unserer Praxis arbeiten wir mit der computergestützten, neurophysiologischen Untersuchung des Nervensystems. So stellen wir Nervenschäden fest, die durch Verletzungen oder Engpass-Syndrome wie das Karpaltunnelsyndrom entstehen. Durch präzise Messungen können wir den genauen Ort und das Ausmaß der Nervenschädigung bestimmen und einen maßgeschneiderten Therapieplan entwickeln.
-          </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Mehr erfahren &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"></path></svg>
-          </div>
-          <h3 class="service-title-new">Neurophysiologische Untersuchungen</h3>
-          <p class="service-desc-new">In unserer Praxis arbeiten wir mit der computergestützten, neurophysiologischen Untersuchung des Nervensystems. So stellen wir Nervenschäden fest, die durch Verletzungen oder Engpass-Syndrome wie das Karpaltunnelsyndrom entstehen.</p>
-          <div class="service-full-desc" style="display: none;">
-            Die neurochirurgische Schmerztherapie bietet vielfältige Möglichkeiten zur Behandlung hartnäckiger und chronischer Schmerzen. Wir behandeln postoperative Schmerzen der Wirbelsäule, Phantomschmerzen der Extremitäten, degenerative Facettengelenkschmerzen, Erkrankungen der Bandscheibe und chronischen Dauerschmerz mit modernsten Methoden, einschließlich der Neuromodulation und minimalinvasiven Eingriffen.
-          </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Mehr erfahren &rarr;</a>
         </div>
         
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-12 12h-6v-6z"></path><path d="M12 8l4 4"></path></svg>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Bandscheibenvorfälle</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Degenerative Veränderungen, bei denen Bandscheibenmaterial auf Nerven drückt.</p>
+            <div class="service-full-desc" style="display: none;">
+              Degenerative Veränderungen, bei denen Bandscheibenmaterial auf Nerven drückt.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
           </div>
-          <h3 class="service-title-new">Operationen</h3>
-          <p class="service-desc-new">Spezialisierte operative Eingriffe bei Erkrankungen der Nerven und Tumormetastasen an der Wirbelsäule, Spinalkanal und Rückenmark unter Einsatz moderner Techniken wie der Radiofrequenz-Tumor-Ablatio.</p>
-          <div class="service-full-desc" style="display: none;">
-            Wir führen spezialisierte operative Eingriffe bei Erkrankungen der Nerven und Tumormetastasen an der Wirbelsäule, im Spinalkanal und Rückenmark durch. Unter Einsatz moderner minimalinvasiver und mikrochirurgischer Techniken, wie der Radiofrequenz-Tumor-Ablatio, gewährleisten wir maximale Präzision und Sicherheit für unsere Patienten.
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spinalkanalstenosen</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Verengung des Wirbelkanals, die Druck auf das Rückenmark oder Nerven ausübt.</p>
+            <div class="service-full-desc" style="display: none;">
+              Verengung des Wirbelkanals, die Druck auf das Rückenmark oder Nerven ausübt.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
           </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Mehr erfahren &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Neuroforamenstenosen</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Verengung der Öffnungen, durch die Nervenwurzeln die Wirbelsäule verlassen.</p>
+            <div class="service-full-desc" style="display: none;">
+              Verengung der Öffnungen, durch die Nervenwurzeln die Wirbelsäule verlassen.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
           </div>
-          <h3 class="service-title-new">Neurochirurgische Schmerztherapie</h3>
-          <p class="service-desc-new">Behandlung von postoperativen Schmerzen der Wirbelsäule, Phantomschmerzen der Extremitäten, degenerativen Facettengelenkschmerzen, Erkrankungen der Bandscheibe und chronischem Dauerschmerz.</p>
-          <div class="service-full-desc" style="display: none;">
-            <strong>Degenerative Bandscheibenerkrankungen (Bandscheibenvorfall, Spinalkanalstenose) der HWS, BWS und LWS</strong><br><br>Die Standard-Operation bei Bandscheibenvorfällen ist die Entfernung der Bandscheibe und anschließende Fusion der benachbarten Wirbel. Doch so büßt der Patient in der Regel die Mobilität der Bandscheibe ein. Eine Alternative, mit der die Mobilität wiederhergestellt wird, ist die Bandscheibenprothese, ein künstlicher Bandscheibenersatz aus Metall und Kunststoff. Eine künstliche Bandscheibe wird als Ersatz für eine verschlissene natürliche Bandscheibe eingesetzt. Ziel ist es, den bandscheibenbedingten Rückenschmerz zu beseitigen und gleichzeitig die natürliche Beweglichkeit der Wirbelsäule zu erhalten.
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spondylolisthesis</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Verschiebung eines Wirbels gegenüber dem darunterliegenden (Wirbelgleiten).</p>
+            <div class="service-full-desc" style="display: none;">
+              Verschiebung eines Wirbels gegenüber dem darunterliegenden (Wirbelgleiten).
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
           </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Mehr erfahren &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"></path><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"></path></svg>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Instabilitäten</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Übermäßige oder abnormale Beweglichkeit zwischen den Wirbeln.</p>
+            <div class="service-full-desc" style="display: none;">
+              Übermäßige oder abnormale Beweglichkeit zwischen den Wirbeln.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
           </div>
-          <h3 class="service-title-new">Wirbelsäulen-Erkrankungen</h3>
-          <p class="service-desc-new">Behandlung von Bandscheibenvorfällen der HWS, BWS und LWS, degenerativen Spinalkanalstenosen, Instabilität der Wirbelsäule, intraspinalen Tumormetastasen und primären Iliosacral-Gelenkarthrosen.</p>
-          <div class="service-full-desc" style="display: none;">
-            <strong>Polyneuropathie</strong><br><br>Nervenschmerzen wie Brennen, Reißen, Zwicken, Taubheit und Stechen müssen nicht mit übermäßiger Einnahme von Schmerzmedikamenten behandelt werden. Wir informieren Sie in der Praxis gerne über die Verwendung von Stimulatoren zur Reduzierung chronischer Schmerzen. Die medikamentenfreie Behandlung umfasst die SCS- und die PNP-Therapie.
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Wirbelkörperfrakturen</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Brüche der Wirbelkörper, oft infolge von Traumata oder Osteoporose.</p>
+            <div class="service-full-desc" style="display: none;">
+              Brüche der Wirbelkörper, oft infolge von Traumata oder Osteoporose.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
           </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Mehr erfahren &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Facettengelenke</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Degenerative Veränderungen an den kleinen Wirbelgelenken, die Schmerzen verursachen.</p>
+            <div class="service-full-desc" style="display: none;">
+              Degenerative Veränderungen an den kleinen Wirbelgelenken, die Schmerzen verursachen.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
           </div>
-          <h3 class="service-title-new">Dauerschmerz</h3>
-          <p class="service-desc-new">Diagnostik und Behandlung von chronischen Schmerzen, Polyneuropathie und medikamentenfreie Therapien.</p>
-          <div class="service-full-desc" style="display: none;">
-            <strong>Peripherische Nervenerkrankungen/Kompressionssyndrome - CTS - SUS - TTS etc.</strong><br><br>Mit der computergestützten neurophysiologischen Untersuchung des Nervensystems messen wir schmerzfrei die gesamte Pathologie des Nervensystems. Damit kann er Nervenschäden feststellen, die zum Beispiel durch eine Verletzung oder ein Engpass-Syndrom entstehen können. Das bekannteste Engpass-Syndrom am Handgelenk ist das Karpaltunnelsyndrom, am Ellenbogen das Sulcus-Ulnaris-Syndrom und am Fersenbein das Tarsaltunnelsyndrom. Die neurochirurgische Freilegung des Nervs führt zu einer schnellen Besserung und dauert etwa 20 bis 25 Minuten mit Lokalanästhesie (bei Bedarf auch unter Vollnarkose).
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">ISG</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Entzündung oder Dysfunktion des Iliosakralgelenks.</p>
+            <div class="service-full-desc" style="display: none;">
+              Entzündung oder Dysfunktion des Iliosakralgelenks.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
           </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Mehr erfahren &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Tumoren/Metastasen</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Gut- oder bösartige Gewächse, die die Wirbelsäule betreffen.</p>
+            <div class="service-full-desc" style="display: none;">
+              Gut- oder bösartige Gewächse, die die Wirbelsäule betreffen.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
           </div>
-          <h3 class="service-title-new">Erkrankungen der Nerven</h3>
-          <p class="service-desc-new">Peripherische Nervenerkrankungen/Kompressionssyndrome - CTS - SUS - TTS etc.</p>
-          <div class="service-full-desc" style="display: none;">
-            <strong>Tumor-Metastasen an der Wirbelsäule, Spinalkanal und Rückenmark der HWS, BWS und LWS-Höhen</strong><br><br>Bei der Behandlung von osteoporotischen oder tumorösen sowie traumatischen Wirbelsäulenfrakturen setzt die Praxis auf die Methode der perkutanen Radiofrequenz-Kyphoplatie. Hierbei wird ein spezieller, zäher Knochenzement in die gebrochenen Wirbelkörper gespitzt, wodurch der Knochen sein ursprüngliches Profil zurückerhält und stabilisiert wird. Eine neue Therapieoption für Patienten mit schmerzhaften Tumormetastasen der Wirbelsäule ist die gezielte Tumorablation mittels Radiofrequenz, kurz STAR. Hierbei werden die schmerzhaften Tumoren durch Hitze an Ort und Stelle ganz gezielt vernichtet. Die Eingriffe dauern meist nicht länger als 15-20 Minuten pro Wirbel.
-          </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Mehr erfahren &rarr;</a>
-        </div>
-
-      </div>
-
-      <!-- Bottom Feature Row 4 Cols -->
-      <div class="feature-row-4" style="border-bottom: none; margin-top: 40px; padding-bottom: 80px;">
-        <div class="feature-item">
-          <div class="feature-icon-light">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          </div>
-          <div>
-            <div class="feature-title-light">Präzise Diagnostik</div>
-            <div class="feature-desc-light">Hohe Genauigkeit dank moderner Ausstattung.</div>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon-light">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-12 12h-6v-6z"></path><path d="M12 8l4 4"></path></svg>
-          </div>
-          <div>
-            <div class="feature-title-light">Minimalinvasive Methoden</div>
-            <div class="feature-desc-light">Schonende Eingriffe für eine schnelle Genesung.</div>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon-light">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
-          </div>
-          <div>
-            <div class="feature-title-light">Individueller Ansatz</div>
-            <div class="feature-desc-light">Behandlung unter Berücksichtigung der Besonderheiten jedes Patienten.</div>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon-light">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-          </div>
-          <div>
-            <div class="feature-title-light">Unterstützung in allen Phasen</div>
-            <div class="feature-desc-light">Von der Diagnose bis zur Rehabilitation sind wir an Ihrer Seite.</div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Rückenmarkserkrankungen</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Verschiedene Zustände, die die Funktion des Rückenmarks beeinträchtigen.</p>
+            <div class="service-full-desc" style="display: none;">
+              Verschiedene Zustände, die die Funktion des Rückenmarks beeinträchtigen.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
           </div>
         </div>
       </div>
-
+      <div style="margin-bottom: 80px;" id="service-1">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
+          <div style="color: var(--primary); width: 40px; height: 40px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v4"></path><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v6"></path><path d="M10 10.5V5a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"></path><path d="M18 11a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path><path d="M12 11c-1 2-2 3-1 5c1 1 1 3 1 6"></path><path d="M12 13c1 1 2 2 2 3"></path></svg>
+          </div>
+          <div>
+            <h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Periphere Nerven</h2>
+            <p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Erkrankungen der Nerven außerhalb von Gehirn und Rückenmark</p>
+          </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Karpaltunnelsyndrom</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Kompression des Mittelnervs (Nervus medianus) im Handgelenksbereich.</p>
+            <div class="service-full-desc" style="display: none;">
+              Kompression des Mittelnervs (Nervus medianus) im Handgelenksbereich.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Sulcus-Ulnaris-Syndrom</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Kompression des Ellennervs am Ellbogen.</p>
+            <div class="service-full-desc" style="display: none;">
+              Kompression des Ellennervs am Ellbogen.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Tarsaltunnelsyndrom</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Kompression des Schienbeinnervs im Bereich des Sprunggelenks.</p>
+            <div class="service-full-desc" style="display: none;">
+              Kompression des Schienbeinnervs im Bereich des Sprunggelenks.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Nervenkompressionssyndrome</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Verschiedene Zustände, bei denen ein Nerv eingeklemmt oder komprimiert wird.</p>
+            <div class="service-full-desc" style="display: none;">
+              Verschiedene Zustände, bei denen ein Nerv eingeklemmt oder komprimiert wird.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Nervenschäden/-verletzungen</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Traumatische Verletzungen, die zu einem Funktionsverlust von Nerven führen.</p>
+            <div class="service-full-desc" style="display: none;">
+              Traumatische Verletzungen, die zu einem Funktionsverlust von Nerven führen.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Polyneuropathien</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Gleichzeitige Schädigung mehrerer peripherer Nerven.</p>
+            <div class="service-full-desc" style="display: none;">
+              Gleichzeitige Schädigung mehrerer peripherer Nerven.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-bottom: 80px;" id="service-2">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
+          <div style="color: var(--primary); width: 40px; height: 40px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="7"></circle><circle cx="12" cy="12" r="2"></circle><line x1="12" y1="1" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="23"></line><line x1="1" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="23" y2="12"></line></svg>
+          </div>
+          <div>
+            <h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Schmerzsyndrome</h2>
+            <p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Chronische und akute Schmerzzustände verschiedener Ursachen</p>
+          </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Chronische Rücken-/Nackenschmerzen</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Anhaltende Schmerzen, die über mehrere Monate bestehen bleiben.</p>
+            <div class="service-full-desc" style="display: none;">
+              Anhaltende Schmerzen, die über mehrere Monate bestehen bleiben.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Neuropathische Schmerzen</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Schmerzen, die durch eine Schädigung des Nervensystems selbst verursacht werden.</p>
+            <div class="service-full-desc" style="display: none;">
+              Schmerzen, die durch eine Schädigung des Nervensystems selbst verursacht werden.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Postoperative Schmerzsyndrome</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Chronische Schmerzen, die sich nach einem chirurgischen Eingriff entwickeln.</p>
+            <div class="service-full-desc" style="display: none;">
+              Chronische Schmerzen, die sich nach einem chirurgischen Eingriff entwickeln.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Phantomschmerzen</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Schmerzempfinden in einem amputierten Körperteil.</p>
+            <div class="service-full-desc" style="display: none;">
+              Schmerzempfinden in einem amputierten Körperteil.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Psychosomatische Begleitfaktoren</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Psychologische Faktoren, die das körperliche Schmerzerleben verstärken oder aufrechterhalten.</p>
+            <div class="service-full-desc" style="display: none;">
+              Psychologische Faktoren, die das körperliche Schmerzerleben verstärken oder aufrechterhalten.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Mehr erfahren &rarr;</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
+  <!-- Footer Section -->
   <footer class="footer-wrapper">
-    <div class="container footer-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
+    <div class="container footer-grid">
       <div class="footer-brand">
-        <div class="logo" style="margin-bottom: 24px;">
-          <div class="logo-icon">N</div>
-          NEUROCHIRURGIE FISCHER
-        </div>
-        <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+          <a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;">
+            <img src="img/logo_white.png" alt="Nabiota Health Group" style="height:60px;width:auto;border-radius:12px;">
+            <span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+          </a>
+          <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
           Viersener Str. 50<br>41061 Mönchengladbach
         </div>
         <div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 4px;">
@@ -306,27 +417,26 @@
       
       <div class="footer-links">
         <h4 class="footer-heading">LEISTUNGEN</h4>
-        <a href="#">Wirbelsäulenerkrankungen</a>
-        <a href="#">Bandscheibenvorfall</a>
-        <a href="#">Karpaltunnelsyndrom</a>
-        <a href="#">Tumor-Behandlung</a>
-        <a href="#">Schmerztherapie</a>
+        <a href="praxis-schwerpunkte.html">Erkrankungen</a>
+        <a href="diagnostik.html">Diagnostik</a>
+        <a href="behandlungen.html">Behandlungen & OPs</a>
+        <a href="zweitmeinung.html">Zweitmeinung</a>
       </div>
       
       <div class="footer-links">
         <h4 class="footer-heading">PRAXIS</h4>
-        <a href="#">Über uns</a>
-        <a href="#">Unser Team</a>
-        <a href="#">Presseschau</a>
-        <a href="#">Kontakt</a>
-        <a href="#">Impressum</a>
+        <a href="unser-team.html">Über uns</a>
+        <a href="unser-team.html">Unser Team</a>
+        <a href="presseschau.html">Presseschau</a>
+        <a href="sprechzeiten.html">Kontakt</a>
+        <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
       </div>
       
       <div class="footer-links">
         <h4 class="footer-heading">SPRECHZEITEN</h4>
         <p>Mo - Fr: 8:00 - 18:00 Uhr</p>
         <p>Sa - So: Geschlossen</p>
-        <p style="margin-top: 16px;">24/7 Notfall: (02161) 678 26 83</p>
       </div>
     
     </div>
@@ -334,9 +444,6 @@
       &copy; 2026 Neurochirurgie Fischer
     </div>
   </footer>
-</div>
-
-
 
 <script>
   // Mobile Menu Toggle
@@ -394,7 +501,7 @@
 <!-- Service Modal -->
 <div id="serviceModal" class="video-modal" style="z-index: 99999; display: none;">
   <div class="video-modal-content" style="background: white; max-width: 800px; display: flex; flex-direction: column; height: auto; max-height: 90vh; border-radius: 20px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.2);">
-    <span class="close-video" id="closeServiceModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; z-index: 10; cursor: pointer;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+    <span class="close-video" id="closeServiceModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 8px; z-index: 10; cursor: pointer;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
     
     <div style="width: 100%; aspect-ratio: 16/9; background: #000; position: relative; flex-shrink: 0;">
       <!-- Video iframe -->
@@ -469,6 +576,44 @@
     }
   });
 </script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 450px; background: white; padding: 24px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); z-index: 999999; border: 1px solid rgba(0,0,0,0.05); font-family: 'Plus Jakarta Sans', sans-serif;">
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <div style="background: rgba(28, 194, 178, 0.1); padding: 12px; border-radius: 8px; color: var(--primary);">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M16 12.5v.01"></path><path d="M12 16v.01"></path><path d="M11 12.5v.01"></path></svg>
+      </div>
+      <div>
+        <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 700; color: var(--text-dark);">Wir verwenden Cookies</h4>
+        <p style="margin: 0 0 20px 0; font-size: 0.9rem; line-height: 1.5; color: var(--text-light);">Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Einige sind essenziell, während andere uns helfen, diese Website zu optimieren.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button id="cookie-accept-all" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem; border: none; cursor: pointer; flex: 1; text-align: center;">Alle akzeptieren</button>
+          <button id="cookie-essential-only" class="btn-secondary" style="padding: 10px 20px; font-size: 0.9rem; border: 1px solid #ccc; background: white; color: var(--text-dark); cursor: pointer; flex: 1; border-radius: 99px; text-align: center; transition: all 0.2s;">Nur essenzielle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const cookieBanner = document.getElementById('cookie-consent-banner');
+      const btnAccept = document.getElementById('cookie-accept-all');
+      const btnEssential = document.getElementById('cookie-essential-only');
+      
+      if (!localStorage.getItem('cookieConsent')) {
+        cookieBanner.style.display = 'block';
+      }
+      
+      function hideBanner(choice) {
+        localStorage.setItem('cookieConsent', choice);
+        cookieBanner.style.display = 'none';
+      }
+      
+      btnAccept.addEventListener('click', () => hideBanner('all'));
+      btnEssential.addEventListener('click', () => hideBanner('essential'));
+    });
+  </script>
+
 </body>
 
 

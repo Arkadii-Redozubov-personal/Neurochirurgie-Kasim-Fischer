@@ -27,6 +27,65 @@
       width: 100%;
     }
   </style>
+  <link rel="alternate" hreflang="de" href="https://my-bandscheibe.de/behandlungen.html">
+  <link rel="alternate" hreflang="en" href="https://my-bandscheibe.de/en/behandlungen.html">
+  <link rel="alternate" hreflang="ru" href="https://my-bandscheibe.de/ru/behandlungen.html">
+  <link rel="alternate" hreflang="tr" href="https://my-bandscheibe.de/tr/behandlungen.html">
+  <link rel="alternate" hreflang="ar" href="https://my-bandscheibe.de/ar/behandlungen.html">
+  <link rel="alternate" hreflang="x-default" href="https://my-bandscheibe.de/behandlungen.html">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Neurochirurgie Fischer",
+  "url": "https://my-bandscheibe.de",
+  "logo": "https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.png",
+  "email": "contact@my-bandscheibe.de",
+  "location": [
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Viersen",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Theodor-Heuss-Platz 10, 4. OG",
+        "addressLocality": "Viersen",
+        "postalCode": "41747",
+        "addressCountry": "DE"
+      }
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Mönchengladbach",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bismarckstr. 106, 3. OG",
+        "addressLocality": "Mönchengladbach",
+        "postalCode": "41061",
+        "addressCountry": "DE"
+      },
+      "telephone": "(02161) 678 26 83"
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Düsseldorf",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schadowstraße 74",
+        "addressLocality": "Düsseldorf",
+        "postalCode": "40212",
+        "addressCountry": "DE"
+      }
+    }
+  ],
+  "medicalSpecialty": "Neurosurgery",
+  "member": {
+    "@type": "Physician",
+    "name": "Kasim Fischer",
+    "medicalSpecialty": "Neurosurgery"
+  }
+}
+  </script>
 </head>
 <body>
 
@@ -36,19 +95,28 @@
     <div class="hero-inner-sub">
       <div class="container">
         <nav class="navbar" style="margin-bottom: 60px;">
-          <div class="logo">
-            <div class="logo-icon">N</div>
-            NEUROSURGERY FISCHER
-          </div>
-          <div class="nav-links">
-            <a href="index.html">Home page</a>
-            <a href="behandlungen.html" style="color: white; font-weight: 700;">Treatments</a>
-            <a href="praxis-schwerpunkte.html">Focal points</a>
-            <a href="unser-team.html">Our team</a>
-            <a href="presseschau.html">Press review</a>
-            <a href="sprechzeiten.html">contact</a>
-          </div>
-                    <div class="lang-switcher hidden-mobile">
+    <a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+      <img src="../img/logo_white.png" alt="Nabiota Health Group" style="height:60px;width:auto;border-radius:12px;">
+      <span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+    </a>
+    <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="unser-team.html">Practice</a>
+    <div class="nav-dropdown-wrapper">
+      <a tabindex="0">Services</a>
+      <div class="nav-dropdown-menu">
+        <a href="praxis-schwerpunkte.html">Diseases</a>
+        <a href="diagnostik.html">Diagnostics</a>
+        <a href="behandlungen.html">Treatments & Surgeries</a>
+        <a href="zweitmeinung.html">Second Opinion</a>
+      </div>
+    </div>
+    <a href="patienten.html">For Patients</a>
+    <a href="presseschau.html">Press</a>
+    <a href="sprechzeiten.html">Contact</a>
+  </div>
+
+          <div class="lang-switcher hidden-mobile">
             <div class="lang-current">EN <span>▼</span></div>
             <div class="lang-dropdown">
               <a href="../behandlungen.html">Deutsch (DE)</a>
@@ -64,13 +132,24 @@
         
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu" style="display: none;">
-          <a href="index.html">Home page</a>
-          <a href="behandlungen.html">Treatments</a>
-          <a href="praxis-schwerpunkte.html">Focal points</a>
-          <a href="unser-team.html">Our team</a>
-          <a href="presseschau.html">Press review</a>
-          <a href="sprechzeiten.html">contact</a>
-          <a href="sprechzeiten.html" style="color: var(--primary);">make an appointment</a>
+  <a href="index.html">Home</a>
+  <a href="unser-team.html">Practice</a>
+  <div class="mobile-dropdown-wrapper">
+    <div class="mobile-dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('active');">
+      <a style="margin:0; padding:0;">Services</a>
+      <span style="color: rgba(255,255,255,0.7);">▼</span>
+    </div>
+    <div class="mobile-dropdown-menu">
+        <a href="praxis-schwerpunkte.html">Diseases</a>
+        <a href="diagnostik.html">Diagnostics</a>
+        <a href="behandlungen.html">Treatments & Surgeries</a>
+        <a href="zweitmeinung.html">Second Opinion</a>
+    </div>
+  </div>
+  <a href="patienten.html">For Patients</a>
+  <a href="presseschau.html">Press</a>
+  <a href="sprechzeiten.html">Contact</a>
+  <a href="sprechzeiten.html" style="color: var(--primary);">make an appointment</a>
         
         <div class="mobile-lang-switcher">
             <a href="../behandlungen.html">DE</a>
@@ -108,214 +187,164 @@
     <section class="section container">
             
       <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px; flex-wrap: wrap; gap: 24px;">
-        <h2 class="section-title" style="margin-bottom: 0; font-size: 2.5rem; max-width: 500px;">Effective solutions for your health</h2>
-        <p style="color: var(--text-light); max-width: 400px; text-align: left; font-size: 0.95rem; margin-bottom: 8px;">We use the most modern surgical and therapeutic methods to eliminate the causes and improve the quality of life of our patients.</p>
+        <h2 class="section-title" style="margin-bottom: 0; font-size: 2.5rem; max-width: 500px;">Treatments & Surgeries</h2>
+        <p style="margin-bottom: 20px;">Our range of services includes specialized conservative and surgical procedures. Each treatment is tailored individually to your medical indication after thorough diagnosis.</p>
       </div>
 <div class="treatment-grid">
+
         <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-12 12h-6v-6z"></path><path d="M12 8l4 4"></path></svg></div>
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></div>
           <div class="treatment-content">
-            <h3 class="treatment-title">Stabilization of vertebral body fractures</h3>
-            <p class="treatment-desc">Percutaneous minimally invasive radiofrequency kyphoplasty for osteoporotic or tumorous spinal fractures.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                We offer highly specialized outpatient surgical treatments for peripheral nerve compression syndromes such as carpal tunnel syndrome (CTS), ulnar sulcus syndrome (USS), or tarsal tunnel syndrome (TTS).<br><br>These minimally invasive procedures are usually performed under local anesthesia. By relieving the trapped nerve, numbness, pain, and limited mobility can be effectively and permanently eliminated with very short recovery times.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 0 7 4.5v1.23c-1.38.74-2.5 2.15-2.5 3.77a4 4 0 0 0 1.5 3.12 3.5 3.5 0 0 0 .5 6.38H9v-2H6.5a1.5 1.5 0 1 1 0-3h1V12h-2A2 2 0 0 1 7.5 8h2V4.5A.5.5 0 0 1 10 4h4a.5.5 0 0 1 .5.5V8h2a2 2 0 0 1 2 4h-2v2h1a1.5 1.5 0 1 1 0 3H15v2h2.5a3.5 3.5 0 0 0 .5-6.38A4 4 0 0 0 19.5 9.5c0-1.62-1.12-3.03-2.5-3.77V4.5A2.5 2.5 0 0 0 14.5 2h-5z"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Neuromodulation</h3>
-            <p class="treatment-desc">Spinal cord stimulation and sacral nerve stimulation for pain management.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Endoscopic and microsurgical disc surgery is an especially gentle procedure for treating herniated discs and spinal canal stenosis. Instruments and a high-resolution camera are introduced through a tiny incision.<br><br>Thanks to this technique, the surrounding musculature remains largely intact, leading to significantly faster recovery, less postoperative pain, and a quick return to everyday life.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M8 6h8"></path><path d="M8 12h8"></path><path d="M8 18h8"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Percutaneous minimally invasive tumor radiofrequency thermal ablation</h3>
-            <p class="treatment-desc">For bone tumor metastases and outpatient neuro-oncology, please consult your attending physician.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                The removal of intraspinal tumors requires the highest microsurgical precision to protect the sensitive spinal cord and nerve roots.<br><br>Using state-of-the-art surgical microscopes and neuromonitoring-guided procedures, we remove tumors in the spinal canal as safely as possible. The goal is to prevent neurological deficits and preserve the patient's quality of life optimally.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Endoscopic and microsurgical intervertebral disc surgery</h3>
-            <p class="treatment-desc">Gentle, minimally invasive procedures on the spine.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                For spinal instability caused by wear or injury, we offer minimally invasive stabilization procedures.<br><br>Instead of large incisions, special implants (like screw-rod systems) are inserted percutaneously through the skin. This reduces blood loss, preserves tissue, and allows the patient to mobilize much faster after surgery.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Neurosurgical assessment</h3>
-            <p class="treatment-desc">Professional medical reviews and opinions.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Percutaneous minimally invasive tumor radiofrequency thermoablation (RFA) is an innovative procedure for treating bone tumor metastases in the spine.<br><br>A special probe is precisely inserted into the tumor. The tumor tissue is heated and destroyed by high-frequency current. This often provides immediate and significant pain relief for the patient without the need for major surgery.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-12 12h-6v-6z"></path><path d="M12 8l4 4"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Muscle biopsy</h3>
-            <p class="treatment-desc">For nerve diseases and unclear muscle diseases.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Neuromodulation, particularly Spinal Cord Stimulation (SCS), is a highly effective therapy for chronic pain that no longer responds to medication.<br><br>Weak electrical impulses are used to block pain transmission to the brain. Patients receive a small, implanted device (similar to a pacemaker) that can be individually programmed and significantly improves quality of life.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 0 7 4.5v1.23c-1.38.74-2.5 2.15-2.5 3.77a4 4 0 0 0 1.5 3.12 3.5 3.5 0 0 0 .5 6.38H9v-2H6.5a1.5 1.5 0 1 1 0-3h1V12h-2A2 2 0 0 1 7.5 8h2V4.5A.5.5 0 0 1 10 4h4a.5.5 0 0 1 .5.5V8h2a2 2 0 0 1 2 4h-2v2h1a1.5 1.5 0 1 1 0 3H15v2h2.5a3.5 3.5 0 0 0 .5-6.38A4 4 0 0 0 19.5 9.5c0-1.62-1.12-3.03-2.5-3.77V4.5A2.5 2.5 0 0 0 14.5 2h-5z"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Minimally invasive stabilization</h3>
-            <p class="treatment-desc">Percutaneous stabilization operations and dynamic stabilization procedures.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                A muscle biopsy is an important diagnostic procedure for unclear neuromuscular diseases or muscle inflammation.<br><br>Under local anesthesia, a tiny tissue sample is taken through a small incision. This is then examined microscopically (histologically) to establish an exact diagnosis and initiate targeted therapy.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M8 6h8"></path><path d="M8 12h8"></path><path d="M8 18h8"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Outpatient surgical care of peripheral nerve compression syndromes</h3>
-            <p class="treatment-desc">For example, carpal tunnel syndrome and ulnar sulcus syndrome, tumors of peripheral nerves, etc.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Disc prosthetics is a modern alternative to fusion for worn discs in the cervical or lumbar spine.<br><br>The diseased disc is completely removed and replaced by an artificial joint prosthesis. The major advantage of this procedure is the preservation of natural mobility in this spinal segment and the protection of adjacent discs from premature wear.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Spinal joint blocks and denervation</h3>
-            <p class="treatment-desc">Targeted pain treatment of the vertebral joints.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Facet joint blocks and denervations are targeted procedures for treating chronic back pain caused by wear and tear of the small facet joints (spondylarthrosis).<br><br>First, the pain is blocked by a targeted injection (diagnosis). If the cause is confirmed, long-lasting pain relief can be achieved through thermo-denervation (obliteration of the small pain nerves).
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Microsurgical decompression operation</h3>
-            <p class="treatment-desc">To relieve pressure on nerve structures.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Microsurgical decompression surgery is used to free constricted nerve structures, for example, in spinal canal stenosis.<br><br>Under the surgical microscope, bony growths or thickened ligaments are gently removed. The microscopic view allows for millimeter-precise work, ensuring maximum safety for the spinal cord and nerve roots.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-12 12h-6v-6z"></path><path d="M12 8l4 4"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Removal of intraspinal tumors</h3>
-            <p class="treatment-desc">Including vascular anomaly symptoms and tethered cord symptoms.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Arthroplasty and arthrodesis (joint fusions) are used for severe joint wear or instability, particularly at the sacroiliac joint.<br><br>We use minimally invasive techniques to stabilize the affected joint with small implants. This leads to a significant reduction in load-dependent pain with rapid postoperative recovery.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 0 7 4.5v1.23c-1.38.74-2.5 2.15-2.5 3.77a4 4 0 0 0 1.5 3.12 3.5 3.5 0 0 0 .5 6.38H9v-2H6.5a1.5 1.5 0 1 1 0-3h1V12h-2A2 2 0 0 1 7.5 8h2V4.5A.5.5 0 0 1 10 4h4a.5.5 0 0 1 .5.5V8h2a2 2 0 0 1 2 4h-2v2h1a1.5 1.5 0 1 1 0 3H15v2h2.5a3.5 3.5 0 0 0 .5-6.38A4 4 0 0 0 19.5 9.5c0-1.62-1.12-3.03-2.5-3.77V4.5A2.5 2.5 0 0 0 14.5 2h-5z"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Arthroplasty and Arthrodes</h3>
-            <p class="treatment-desc">With minimally invasive operations on the sacrum, ilium and joints.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                The stabilization of vertebral fractures caused by osteoporosis, tumors, or trauma is preferably performed in our practice using balloon kyphoplasty.<br><br>A balloon is inserted into the fractured vertebra through two small skin incisions and inflated to straighten it. The cavity is then stabilized with bone cement. The procedure relieves pain almost immediately and permanently stabilizes the spine.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M8 6h8"></path><path d="M8 12h8"></path><path d="M8 18h8"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Intervertebral disc prosthetics</h3>
-            <p class="treatment-desc">Treatment of the cervical spine (cervical spine) and lumbar spine (lumbar spine).</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                As an experienced specialist in neurosurgery, Mr. Kasim Fischer provides professional neurosurgical assessments and second opinions.<br><br>Whether for insurance companies, employers' liability insurance associations, or to clarify the necessity of an operation: We offer well-founded, objective, and detailed medical assessments based on the latest scientific findings and extensive clinical experience.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
-          </div>
-        </div>
-      </div>
-      <div class="treatment-process-section">
-        <div class="process-timeline">
-          <h3 class="process-heading">How does the treatment work?</h3>
-          <div class="process-steps">
-            <div class="process-step">
-              <div class="step-icon">01</div>
-              <h4>Advice & Diagnostics</h4>
-              <p>Detailed examination and accurate diagnosis.</p>
+            <h3 class="treatment-title">Microsurgical Disc Operations</h3>
+            <p class="treatment-desc">Surgical decompression of nerve structures.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              The aim of the procedure is to remove herniated disc material using an operating microscope to relieve compressed nerve roots.
             </div>
-            <div class="process-arrow">&rarr;</div>
-            <div class="process-step">
-              <div class="step-icon">02</div>
-              <h4>Treatment plan</h4>
-              <p>Individually tailored plan for your situation.</p>
-            </div>
-            <div class="process-arrow">&rarr;</div>
-            <div class="process-step">
-              <div class="step-icon">03</div>
-              <h4>Treatment</h4>
-              <p>Implemented using the most modern medical methods.</p>
-            </div>
-            <div class="process-arrow">&rarr;</div>
-            <div class="process-step">
-              <div class="step-icon">04</div>
-              <h4>Aftercare</h4>
-              <p>Support at all stages of healing.</p>
-            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
           </div>
         </div>
-        <div class="process-cta">
-          <div class="cta-icon" style="background: rgba(255,255,255,0.2);"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: white;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
-          <h4 style="color: white; font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">make an appointment</h4>
-          <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; margin-bottom: 24px;">Our specialist will answer all your questions and find the best solution for you.</p>
-          <a href="sprechzeiten.html" class="btn-white-full">To make an appointment</a>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Endoscopic/Minimally Invasive Disc Surgery</h3>
+            <p class="treatment-desc">Tissue- and muscle-sparing procedures.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              Disc material is removed through small incisions using special endoscopes. This technique aims to minimize irritation to the surrounding musculature.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
+          </div>
         </div>
-      </div>
-      </div>
-    </section>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-12 12h-6v-6z"></path><path d="M12 8l4 4"></path></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Decompression Surgery for Spinal Canal Stenosis</h3>
+            <p class="treatment-desc">Widening of the narrowed spinal canal.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              In the case of spinal canal stenosis, more space is created for the spinal cord and nerve roots through the surgical removal of bone and ligament structures.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Surgeries for Neuroforaminal Stenosis</h3>
+            <p class="treatment-desc">Widening of the nerve exit holes.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              A targeted surgical widening of the neuroforamina (nerve exit holes) serves to relieve the mechanical pressure from the respective nerve root.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Stabilization Surgeries</h3>
+            <p class="treatment-desc">Restoration of spinal stability.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              In cases of instability (e.g., spondylolisthesis), adjacent vertebral bodies are connected to each other using special implant systems to prevent abnormal movements.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Disc Prosthetics</h3>
+            <p class="treatment-desc">Implantation of artificial discs.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              After removal of a degenerated disc, a prosthesis can be inserted under certain medical conditions with the aim of maintaining the mobility of the respective segment.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Kyphoplasty / Vertebroplasty</h3>
+            <p class="treatment-desc">Treatment of vertebral body fractures.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              By introducing medical bone cement into the fractured vertebral body, it aims to stabilize it and reduce fracture-related pain.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Surgeries for Carpal Tunnel / Cubital Tunnel</h3>
+            <p class="treatment-desc">Relief of peripheral nerve bottlenecks.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              For nerve compression syndromes in the hand or elbow, the pressure on the affected nerve is reduced by splitting the constricting ligament or tissue.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"></path></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Reconstruction of Peripheral Nerve Damage</h3>
+            <p class="treatment-desc">Microsurgical restoration of nerves.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              After traumatic lesions, peripheral nerves can be adapted using microsurgical sutures or nerve grafts to create the prerequisite for possible regeneration.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Interventional Pain Therapy</h3>
+            <p class="treatment-desc">Targeted injection treatments.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              Minimally invasive application of anti-inflammatory and pain-relieving medications directly to the affected nerve roots or vertebral joints under imaging control.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19c2.5-2 2.5-6 0-8M21.5 22c4.5-4 4.5-11 0-15M6.5 19c-2.5-2-2.5-6 0-8M2.5 22c-4.5-4-4.5-11 0-15M12 15v6"></path><circle cx="12" cy="11" r="4"></circle></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Radiofrequency Therapy</h3>
+            <p class="treatment-desc">Thermal denervation for pain treatment.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              By applying thermal energy to specific nerve fibers (e.g., at the facet joints), the transmission of pain is temporarily or longer-term interrupted.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Neuromodulation / Spinal Cord Stimulation</h3>
+            <p class="treatment-desc">Electrical stimulation of the spinal cord.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              In chronic, therapy-refractory pain syndromes, electrodes are placed in the epidural space. Mild electrical impulses overlay the pain signals on their way to the brain.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Tumor/Metastasis Surgery on the Spine and Nerves</h3>
+            <p class="treatment-desc">Surgical treatment of oncological findings.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              Microsurgical resection of tumors or metastases in the spine or peripheral nerves. Depending on the findings, this is done in combination with stabilizing measures.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Learn more &rarr;</a>
+          </div>
+        </div>
+      </div></section>
   </div>
   <footer class="footer-wrapper">
     <div class="container footer-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
       <div class="footer-brand">
-        <div class="logo" style="margin-bottom: 24px;">
-          <div class="logo-icon">N</div>
-          NEUROCHIRURGIE FISCHER
-        </div>
-        <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+          <a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;">
+            <img src="../img/logo_white.png" alt="Nabiota Health Group" style="height:60px;width:auto;border-radius:12px;">
+            <span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+          </a>
+          <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
           Viersener Str. 50<br>41061 Mönchengladbach
         </div>
         <div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 4px;">
@@ -331,27 +360,26 @@
       
       <div class="footer-links">
         <h4 class="footer-heading">SERVICES</h4>
-        <a href="#">Spinal diseases</a>
-        <a href="#">Herniated disc</a>
-        <a href="#">Carpal tunnel syndrome</a>
-        <a href="#">Tumor treatment</a>
-        <a href="#">Pain therapy</a>
+        <a href="praxis-schwerpunkte.html">Diseases</a>
+        <a href="diagnostik.html">Diagnostics</a>
+        <a href="behandlungen.html">Treatments & Surgeries</a>
+        <a href="zweitmeinung.html">Second Opinion</a>
       </div>
       
       <div class="footer-links">
         <h4 class="footer-heading">PRACTICE</h4>
-        <a href="#">About Us</a>
-        <a href="#">Our team</a>
-        <a href="#">Press review</a>
-        <a href="#">contact</a>
-        <a href="#">imprint</a>
+        <a href="unser-team.html">About us</a>
+        <a href="unser-team.html">Our Team</a>
+        <a href="presseschau.html">Press</a>
+        <a href="sprechzeiten.html">Contact</a>
+        <a href="impressum.html">Imprint</a>
+          <a href="../en/datenschutz.html">Privacy Policy</a>
       </div>
       
       <div class="footer-links">
         <h4 class="footer-heading">CONSULTATION HOURS</h4>
         <p>Mon - Fri: 8:00 a.m. - 6:00 p.m</p>
         <p>Sat - Sun: Closed</p>
-        <p style="margin-top: 16px;">24/7 emergency: (02161) 678 26 83</p>
       </div>
     
     </div>
@@ -416,7 +444,7 @@
 <!-- Treatment Modal -->
 <div id="treatmentModal" class="video-modal" style="z-index: 99999;">
   <div class="video-modal-content" style="background: white; max-width: 800px; display: flex; flex-direction: column; height: auto; max-height: 90vh; border-radius: 20px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.2);">
-    <span class="close-video" id="closeTreatmentModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; z-index: 10;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+    <span class="close-video" id="closeTreatmentModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 8px; z-index: 10;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
     
     <div style="width: 100%; aspect-ratio: 16/9; background: #000; position: relative; flex-shrink: 0;">
       <iframe id="tModalVideo" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0;"></iframe>
@@ -466,6 +494,44 @@
     });
   }
 </script>
+
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 450px; background: white; padding: 24px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); z-index: 999999; border: 1px solid rgba(0,0,0,0.05); font-family: 'Plus Jakarta Sans', sans-serif;">
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <div style="background: rgba(28, 194, 178, 0.1); padding: 12px; border-radius: 8px; color: var(--primary);">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M16 12.5v.01"></path><path d="M12 16v.01"></path><path d="M11 12.5v.01"></path></svg>
+      </div>
+      <div>
+        <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 700; color: var(--text-dark);">We use cookies</h4>
+        <p style="margin: 0 0 20px 0; font-size: 0.9rem; line-height: 1.5; color: var(--text-light);">We use cookies to improve your experience on our website. Some are essential, while others help us optimize this website.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button id="cookie-accept-all" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem; border: none; cursor: pointer; flex: 1; text-align: center;">Accept All</button>
+          <button id="cookie-essential-only" class="btn-secondary" style="padding: 10px 20px; font-size: 0.9rem; border: 1px solid #ccc; background: white; color: var(--text-dark); cursor: pointer; flex: 1; border-radius: 99px; text-align: center; transition: all 0.2s;">Essential Only</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const cookieBanner = document.getElementById('cookie-consent-banner');
+      const btnAccept = document.getElementById('cookie-accept-all');
+      const btnEssential = document.getElementById('cookie-essential-only');
+      
+      if (!localStorage.getItem('cookieConsent')) {
+        cookieBanner.style.display = 'block';
+      }
+      
+      function hideBanner(choice) {
+        localStorage.setItem('cookieConsent', choice);
+        cookieBanner.style.display = 'none';
+      }
+      
+      btnAccept.addEventListener('click', () => hideBanner('all'));
+      btnEssential.addEventListener('click', () => hideBanner('essential'));
+    });
+  </script>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +11,94 @@
   <meta property="og:url" content="https://my-bandscheibe.de/ar/index.html">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.png">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../fonts/fonts.css">
   <link rel="stylesheet" href="../style.css">
+  <link rel="alternate" hreflang="de" href="https://my-bandscheibe.de/index.html">
+  <link rel="alternate" hreflang="en" href="https://my-bandscheibe.de/en/index.html">
+  <link rel="alternate" hreflang="ru" href="https://my-bandscheibe.de/ru/index.html">
+  <link rel="alternate" hreflang="tr" href="https://my-bandscheibe.de/tr/index.html">
+  <link rel="alternate" hreflang="ar" href="https://my-bandscheibe.de/ar/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://my-bandscheibe.de/index.html">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Neurochirurgie Fischer",
+  "url": "https://my-bandscheibe.de",
+  "logo": "https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.png",
+  "email": "contact@my-bandscheibe.de",
+  "location": [
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Viersen",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Theodor-Heuss-Platz 10, 4. OG",
+        "addressLocality": "Viersen",
+        "postalCode": "41747",
+        "addressCountry": "DE"
+      }
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Mönchengladbach",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bismarckstr. 106, 3. OG",
+        "addressLocality": "Mönchengladbach",
+        "postalCode": "41061",
+        "addressCountry": "DE"
+      },
+      "telephone": "(02161) 678 26 83"
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Düsseldorf",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schadowstraße 74",
+        "addressLocality": "Düsseldorf",
+        "postalCode": "40212",
+        "addressCountry": "DE"
+      }
+    }
+  ],
+  "medicalSpecialty": "Neurosurgery",
+  "member": {
+    "@type": "Physician",
+    "name": "Kasim Fischer",
+    "medicalSpecialty": "Neurosurgery"
+  }
+}
+  </script>
 </head>
 <body>
 
 <nav class="navbar" id="mainNavbar">
-  <div class="logo">
-    <div class="logo-icon">N</div>
-    جراحة الأعصاب فيشر
+    <a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+      <img src="../img/logo_white.png" alt="Nabiota Health Group" style="height:60px;width:auto;border-radius:12px;">
+      <span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+    </a>
+    <div class="nav-links">
+    <a href="index.html">الرئيسية</a>
+    <a href="unser-team.html">العيادة</a>
+    <div class="nav-dropdown-wrapper">
+      <a tabindex="0">الخدمات</a>
+      <div class="nav-dropdown-menu">
+        <a href="praxis-schwerpunkte.html">الأمراض</a>
+        <a href="diagnostik.html">التشخيص</a>
+        <a href="behandlungen.html">العلاجات والعمليات</a>
+        <a href="zweitmeinung.html">الرأي الثاني</a>
+      </div>
+    </div>
+    <a href="patienten.html">للمرضى</a>
+    <a href="presseschau.html">الصحافة</a>
+    <a href="sprechzeiten.html">اتصل بنا</a>
   </div>
-  <div class="nav-links">
-    <a href="index.html">الصفحة الرئيسية</a>
-    <a href="behandlungen.html">العلاجات</a>
-    <a href="praxis-schwerpunkte.html">نقاط التركيز</a>
-    <a href="unser-team.html">فريقنا</a>
-    <a href="presseschau.html">مراجعة الصحافة</a>
-    <a href="sprechzeiten.html">اتصال</a>
-  </div>
-  <div class="lang-switcher hidden-mobile">
+
+          <div class="lang-switcher hidden-mobile">
     <div class="lang-current">AR <span>▼</span></div>
     <div class="lang-dropdown">
       <a href="../index.html">Deutsch (DE)</a>
@@ -44,12 +113,23 @@
 </nav>
 
 <div class="mobile-menu" id="mobileMenu" style="display: none;">
-  <a href="index.html">الصفحة الرئيسية</a>
-  <a href="behandlungen.html">العلاجات</a>
-  <a href="praxis-schwerpunkte.html">نقاط التركيز</a>
-  <a href="unser-team.html">فريقنا</a>
-  <a href="presseschau.html">مراجعة الصحافة</a>
-  <a href="sprechzeiten.html">اتصال</a>
+  <a href="index.html">الرئيسية</a>
+  <a href="unser-team.html">العيادة</a>
+  <div class="mobile-dropdown-wrapper">
+    <div class="mobile-dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('active');">
+      <a style="margin:0; padding:0;">الخدمات</a>
+      <span style="color: rgba(255,255,255,0.7);">▼</span>
+    </div>
+    <div class="mobile-dropdown-menu">
+        <a href="praxis-schwerpunkte.html">الأمراض</a>
+        <a href="diagnostik.html">التشخيص</a>
+        <a href="behandlungen.html">العلاجات والعمليات</a>
+        <a href="zweitmeinung.html">الرأي الثاني</a>
+    </div>
+  </div>
+  <a href="patienten.html">للمرضى</a>
+  <a href="presseschau.html">الصحافة</a>
+  <a href="sprechzeiten.html">اتصل بنا</a>
   <a href="sprechzeiten.html" style="color: var(--primary);">تحديد موعد</a>
   <div class="mobile-lang-switcher">
     <a href="../index.html">DE</a>
@@ -74,16 +154,16 @@
       <div class="container">
 
                 <div class="hero-main fade-in" style="margin-top: 180px;">
-          <div class="hero-overline">رعاية متخصصة في جراحة الأعصاب</div>
-          <h1 class="hero-title" >تشخيص وعلاج <br><span>أمراض الجهاز العصبي.</span></h1>
-          <p class="hero-desc" >نحن نقدم تشخيصات متقدمة وعلاجًا فعالًا لأمراض الجهاز العصبي المركزي والمحيطي. صحتك هي مهمتنا.</p>
+          <div class="hero-overline">عيادة متخصصة في جراحة المخ والأعصاب وأمراض العمود الفقري</div>
+          <h1 class="hero-title" >تشخيص وعلاج <br><span>أمراض الجهاز العصبي</span></h1>
+          <p class="hero-desc" >نحن متخصصون في تشخيص وعلاج أمراض الجهاز العصبي المركزي والمحيطي.</p>
           
           <div class="hero-actions">
             <a href="sprechzeiten.html" class="btn-primary">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> طلب موعد &larr;
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> طلب موعد &rarr;
             </a>
-            <a href="tel:021616782683" class="btn-outline">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> اتصل: 02161 / 678 26 83
+            <a href="sprechzeiten.html#locations" class="btn-outline">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> اختر الفرع
             </a>
           </div>
 
@@ -97,7 +177,7 @@
                 </div>
                 <div class="trusted-stat-text">
                   <span class="trusted-stat-number">15+</span>
-                  <span class="trusted-stat-label">سنوات من الخبرة</span>
+                  <span class="trusted-stat-label">سنوات من الخبرة السريرية</span>
                 </div>
               </div>
 
@@ -108,8 +188,8 @@
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
                 </div>
                 <div class="trusted-stat-text">
-                  <span class="trusted-stat-number">1,200+</span>
-                  <span class="trusted-stat-label">علاجات ناجحة</span>
+                  <span class="trusted-stat-number">3</span>
+                  <span class="trusted-stat-label">فروع في NRW</span>
                 </div>
               </div>
 
@@ -120,8 +200,8 @@
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                 </div>
                 <div class="trusted-stat-text">
-                  <span class="trusted-stat-number">98%</span>
-                  <span class="trusted-stat-label">رضا المرضى</span>
+                  <span class="trusted-stat-number">5</span>
+                  <span class="trusted-stat-label">لغات في الفريق</span>
                 </div>
               </div>
 
@@ -134,7 +214,7 @@
           <div class="expertise-container">
             <div class="expertise-title">مجالات الخبرة</div>
             <div class="expertise-grid">
-              <a href="../praxis-schwerpunkte.html#service-0" class="expertise-card">
+              <a href="../ar/praxis-schwerpunkte.html" class="expertise-card">
                 <div class="expertise-icon">
                   <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
   <path d="M10 2h4l-2 3z"></path>
@@ -146,25 +226,11 @@
 </svg>
                 </div>
                 <div class="expertise-text">
-                  <span class="expertise-card-title">أمراض العمود الفقري</span>
+                  <span class="expertise-card-title">العمود الفقري</span>
                   <span class="expertise-card-desc">التشخيص والعلاج</span>
                 </div>
               </a>
-              <a href="../praxis-schwerpunkte.html#service-4" class="expertise-card">
-                <div class="expertise-icon">
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="12" cy="12" r="9"></circle>
-  <circle cx="12" cy="12" r="3"></circle>
-  <line x1="3" y1="12" x2="9" y2="12"></line>
-  <line x1="15" y1="12" x2="21" y2="12"></line>
-</svg>
-                </div>
-                <div class="expertise-text">
-                  <span class="expertise-card-title">الانزلاق الغضروفي</span>
-                  <span class="expertise-card-desc">حلول طفيفة التوغل</span>
-                </div>
-              </a>
-              <a href="../praxis-schwerpunkte.html#service-6" class="expertise-card">
+              <a href="../ar/praxis-schwerpunkte.html" class="expertise-card">
                 <div class="expertise-icon">
                   <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
   <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v4"></path>
@@ -176,30 +242,11 @@
 </svg>
                 </div>
                 <div class="expertise-text">
-                  <span class="expertise-card-title">متلازمة النفق الرسغي</span>
-                  <span class="expertise-card-desc">العلاج بالمنظار</span>
+                  <span class="expertise-card-title">الأعصاب المحيطية</span>
+                  <span class="expertise-card-desc">الضغط والإصابات</span>
                 </div>
               </a>
-              <a href="../praxis-schwerpunkte.html#service-5" class="expertise-card">
-                <div class="expertise-icon">
-                  <svg width="36" height="36" viewBox="2 1 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M12 4c-3-3-8-1-8 3 0 1-1 1-1 3 0 2 1 2 1 3 0 3 3 5 8 5"></path>
-  <path d="M12 4c3-3 8-1 8 3 0 1 1 1 1 3 0 2-1 2-1 3 0 3-3 5-8 5"></path>
-  <line x1="12" y1="4" x2="12" y2="18"></line>
-  <path d="M8 8c1 1 2 0 2-1"></path>
-  <path d="M16 8c-1 1-2 0-2-1"></path>
-  <path d="M7 13c1.5 1 2.5 0 3-1"></path>
-  <path d="M17 13c-1.5 1-2.5 0-3-1"></path>
-  <path d="M9 16c1-1 2-1 2-2"></path>
-  <path d="M15 16c-1-1-2-1-2-2"></path>
-</svg>
-                </div>
-                <div class="expertise-text">
-                  <span class="expertise-card-title">علاج الأورام</span>
-                  <span class="expertise-card-desc">الطرق الحديثة</span>
-                </div>
-              </a>
-              <a href="../praxis-schwerpunkte.html" class="expertise-card">
+              <a href="../ar/praxis-schwerpunkte.html" class="expertise-card">
                 <div class="expertise-icon">
                   <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="12" cy="12" r="7"></circle>
@@ -213,7 +260,48 @@
                 </div>
                 <div class="expertise-text">
                   <span class="expertise-card-title">علاج الألم</span>
-                  <span class="expertise-card-desc">إدارة الألم الفردية</span>
+                  <span class="expertise-card-desc">علاج فردي</span>
+                </div>
+              </a>
+              <a href="../ar/diagnostik.html" class="expertise-card">
+                <div class="expertise-icon">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="11" cy="11" r="8"></circle>
+  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  <line x1="11" y1="8" x2="11" y2="14"></line>
+  <line x1="8" y1="11" x2="14" y2="11"></line>
+</svg>
+                </div>
+                <div class="expertise-text">
+                  <span class="expertise-card-title">التشخيص</span>
+                  <span class="expertise-card-desc">فحوصات دقيقة</span>
+                </div>
+              </a>
+              <a href="../ar/behandlungen.html" class="expertise-card">
+                <div class="expertise-icon">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14.5 3.5l6 6-12 12h-6v-6z"></path>
+  <path d="M12 8l4 4"></path>
+</svg>
+                </div>
+                <div class="expertise-text">
+                  <span class="expertise-card-title">العمليات</span>
+                  <span class="expertise-card-desc">إجراءات طفيفة التوغل</span>
+                </div>
+              </a>
+              <a href="../ar/zweitmeinung.html" class="expertise-card">
+                <div class="expertise-icon">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+  <polyline points="14 2 14 8 20 8"></polyline>
+  <line x1="16" y1="13" x2="8" y2="13"></line>
+  <line x1="16" y1="17" x2="8" y2="17"></line>
+  <polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+                </div>
+                <div class="expertise-text">
+                  <span class="expertise-card-title">رأي طبي ثانٍ</span>
+                  <span class="expertise-card-desc">خبرة مستقلة</span>
                 </div>
               </a>
             </div>
@@ -316,13 +404,14 @@
             </div>
           </div>
           
-          <div class="doctor-profile" style="display: flex; align-items: center; gap: 16px;">
+          <div class="doctor-profile" style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
             <div class="doc-info">
-              <h4 style="font-size: 1.15rem; font-weight: 700;">دكتور قاسم فيشر</h4>
-              <p style="font-size: 0.9rem; color: var(--text-light);">متخصص في جراحة الأعصاب</p>
+              <h4 style="font-size: 1.15rem; font-weight: 700;">د. ميد. قاسم فيشر-رحيموف</h4>
+              <p style="font-size: 0.9rem; color: var(--text-light); line-height: 1.5; max-width: 400px;">طبيب مختص في جراحة المخ والأعصاب (خبير معتمد في جراحة العمود الفقري)</p>
             </div>
           </div>
-        </div>
+          </div>
+        
         
         <img src="../img/Neurochirurgie_Fischer_Web_07-1024x684.png" alt="Praxisraum" class="about-praxis-img" style="width: 380px; height: 240px; object-fit: cover; border-radius: var(--radius-lg);">
       </div>
@@ -355,7 +444,8 @@
         <input type="text" placeholder="Ihr Name" required style="padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white; width: 100%; box-sizing: border-box; font-family: inherit; font-size: 1rem;">
         <input type="email" placeholder="Ihre E-Mail" required style="padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white; width: 100%; box-sizing: border-box; font-family: inherit; font-size: 1rem;">
         <textarea placeholder="Ihre Nachricht" required rows="4" style="padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white; width: 100%; box-sizing: border-box; font-family: inherit; font-size: 1rem; resize: vertical;"></textarea>
-        <button type="submit" class="btn-primary" style="border: none; cursor: pointer; width: 100%; padding: 16px; font-size: 1rem; margin-top: 8px; border-radius: 99px;">أرسل رسالة</button>
+        <p style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 16px; max-width: 600px;">*ملاحظة الخصوصية:* يرجى عدم إرسال بيانات طبية حساسة أو تقارير طبية أو فحوصات بالرنين المغناطيسي عبر هذا النموذج.</p>
+            <button type="submit" class="btn-primary" style="border: none; cursor: pointer; width: 100%; padding: 16px; font-size: 1rem; margin-top: 8px; border-radius: 99px;">أرسل رسالة</button>
       </form>
     </div>
   </div>
@@ -410,24 +500,8 @@
 
       <div class="faq-list">
         <div class="faq-item fade-in">
-          <div class="faq-question">هل تقبلون مرضى جدد؟ <span class="faq-icon">▼</span></div>
-          <div class="faq-answer">نعم - نرحب بالمرضى الجدد وعائلاتهم في أي وقت. ما عليك سوى الاتصال بنا أو مراسلتنا عبر البريد الإلكتروني خلال ساعات العمل. غالبًا ما تكون المواعيد في نفس اليوم ممكنة.</div>
-        </div>
-        <div class="faq-item fade-in">
-          <div class="faq-question">هل العلاج مؤلم؟ <span class="faq-icon">▼</span></div>
-          <div class="faq-answer">نحن نعلق أهمية كبيرة على العلاجات اللطيفة وغير المؤلمة. تضمن أساليبنا وإجراءات التخدير الحديثة أن تشعر بالراحة طوال العملية بأكملها.</div>
-        </div>
-        <div class="faq-item fade-in">
-          <div class="faq-question">كم مرة يجب أن آتي لإجراء الفحوصات؟ <span class="faq-icon">▼</span></div>
-          <div class="faq-answer">يعتمد تكرار الفحوصات على حالتك الفردية ونوع العلاج. كقاعدة عامة، نوصي بمواعيد متابعة منتظمة من أجل دعم عملية الشفاء على النحو الأمثل.</div>
-        </div>
-        <div class="faq-item fade-in">
-          <div class="faq-question">هل تقدمون الدفع بالتقسيط؟ <span class="faq-icon">▼</span></div>
-          <div class="faq-answer">نعم، نحن نقدم نماذج مرنة للدفع بالتقسيط لجعل تمويل علاجك سهلاً قدر الإمكان بالنسبة لك. لا تتردد في التحدث معنا حول هذا الموضوع.</div>
-        </div>
-        <div class="faq-item fade-in">
           <div class="faq-question">ماذا تفعل في حالة الطوارئ؟ <span class="faq-icon">▼</span></div>
-          <div class="faq-answer">في حالات الطوارئ العاجلة، نحن جاهزون لك على مدار الساعة. اتصل برقم الطوارئ الخاص بنا: (02161) 678 26 83. إذا كنت في شك، فلا تتردد في الاتصال بنا.</div>
+          <div class="faq-answer">في حالات الطوارئ التي تهدد الحياة، يرجى الاتصال برقم الطوارئ <strong>112</strong> على الفور. للخدمة الطبية المناوبة، اتصل بالرقم <strong>116117</strong>. يرجى ملاحظة أن عيادتنا ليست غرفة طوارئ للحالات الطارئة بدون موعد مسبق.</div>
         </div>
         <div class="faq-item fade-in">
           <div class="faq-question">كم من الوقت تستمر العلاجات؟ <span class="faq-icon">▼</span></div>
@@ -460,11 +534,11 @@
   <footer class="footer-wrapper">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <div class="logo" style="margin-bottom: 24px;">
-          <div class="logo-icon">N</div>
-          NEUROCHIRURGIE FISCHER
-        </div>
-        <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+          <a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;">
+            <img src="../img/logo_white.png" alt="Nabiota Health Group" style="height:60px;width:auto;border-radius:12px;">
+            <span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+          </a>
+          <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
           Viersener Str. 50<br>41061 Mönchengladbach
         </div>
         <div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 4px;">
@@ -479,28 +553,27 @@
       </div>
       
       <div class="footer-links">
-        <h4 class="footer-heading">خدمات</h4>
-        <a href="#">أمراض العمود الفقري</a>
-        <a href="#">القرص المنفتق</a>
-        <a href="#">متلازمة النفق الرسغي</a>
-        <a href="#">علاج الورم</a>
-        <a href="#">علاج الألم</a>
+        <h4 class="footer-heading">الخدمات</h4>
+        <a href="praxis-schwerpunkte.html">الأمراض</a>
+        <a href="diagnostik.html">التشخيص</a>
+        <a href="behandlungen.html">العلاجات والعمليات</a>
+        <a href="zweitmeinung.html">الرأي الثاني</a>
       </div>
       
       <div class="footer-links">
-        <h4 class="footer-heading">يمارس</h4>
-        <a href="#">معلومات عنا</a>
-        <a href="#">فريقنا</a>
-        <a href="#">مراجعة الصحافة</a>
-        <a href="#">اتصال</a>
-        <a href="#">بصمة</a>
+        <h4 class="footer-heading">العيادة</h4>
+        <a href="unser-team.html">من نحن</a>
+        <a href="unser-team.html">فريقنا</a>
+        <a href="presseschau.html">الصحافة</a>
+        <a href="sprechzeiten.html">اتصل بنا</a>
+        <a href="impressum.html">بصمة</a>
+          <a href="../ar/datenschutz.html">Datenschutz</a>
       </div>
       
       <div class="footer-links">
         <h4 class="footer-heading">ساعات الاستشارة</h4>
         <p>الإثنين - الجمعة: 8:00 صباحًا - 6:00 مساءً</p>
         <p>السبت - الأحد: مغلق</p>
-        <p style="margin-top: 16px;">طوارئ 24/7: (02161) 678 26 83</p>
       </div>
     
     </div>
@@ -642,6 +715,44 @@
           بياناتك آمنة وسرية.
         </div>
     </div>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 450px; background: white; padding: 24px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); z-index: 999999; border: 1px solid rgba(0,0,0,0.05); font-family: 'Plus Jakarta Sans', sans-serif;">
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <div style="background: rgba(28, 194, 178, 0.1); padding: 12px; border-radius: 8px; color: var(--primary);">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M16 12.5v.01"></path><path d="M12 16v.01"></path><path d="M11 12.5v.01"></path></svg>
+      </div>
+      <div>
+        <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 700; color: var(--text-dark);">نحن نستخدم ملفات تعريف الارتباط</h4>
+        <p style="margin: 0 0 20px 0; font-size: 0.9rem; line-height: 1.5; color: var(--text-light);">نحن نستخدم ملفات تعريف الارتباط لتحسين تجربتك على موقعنا. بعضها أساسي، بينما يساعدنا البعض الآخر في تحسين هذا الموقع.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button id="cookie-accept-all" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem; border: none; cursor: pointer; flex: 1; text-align: center;">قبول الكل</button>
+          <button id="cookie-essential-only" class="btn-secondary" style="padding: 10px 20px; font-size: 0.9rem; border: 1px solid #ccc; background: white; color: var(--text-dark); cursor: pointer; flex: 1; border-radius: 99px; text-align: center; transition: all 0.2s;">الأساسية فقط</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const cookieBanner = document.getElementById('cookie-consent-banner');
+      const btnAccept = document.getElementById('cookie-accept-all');
+      const btnEssential = document.getElementById('cookie-essential-only');
+      
+      if (!localStorage.getItem('cookieConsent')) {
+        cookieBanner.style.display = 'block';
+      }
+      
+      function hideBanner(choice) {
+        localStorage.setItem('cookieConsent', choice);
+        cookieBanner.style.display = 'none';
+      }
+      
+      btnAccept.addEventListener('click', () => hideBanner('all'));
+      btnEssential.addEventListener('click', () => hideBanner('essential'));
+    });
+  </script>
+
 </body>
 </html>
 

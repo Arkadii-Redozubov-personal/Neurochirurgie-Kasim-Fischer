@@ -11,7 +11,8 @@
   <meta property="og:url" content="https://my-bandscheibe.de/ru/presseschau.html">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.png">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../fonts/fonts.css">
   <link rel="stylesheet" href="../style.css">
   <style>
 
@@ -21,8 +22,67 @@
       text-align: center;
     }
     .press-card:hover { transform: translateY(-8px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
-    .press-img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 24px; border: 4px solid var(--bg-light); }
+    .press-img { width: 150px; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 24px; border: 4px solid var(--bg-light); }
   </style>
+  <link rel="alternate" hreflang="de" href="https://my-bandscheibe.de/presseschau.html">
+  <link rel="alternate" hreflang="en" href="https://my-bandscheibe.de/en/presseschau.html">
+  <link rel="alternate" hreflang="ru" href="https://my-bandscheibe.de/ru/presseschau.html">
+  <link rel="alternate" hreflang="tr" href="https://my-bandscheibe.de/tr/presseschau.html">
+  <link rel="alternate" hreflang="ar" href="https://my-bandscheibe.de/ar/presseschau.html">
+  <link rel="alternate" hreflang="x-default" href="https://my-bandscheibe.de/presseschau.html">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Neurochirurgie Fischer",
+  "url": "https://my-bandscheibe.de",
+  "logo": "https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.png",
+  "email": "contact@my-bandscheibe.de",
+  "location": [
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Viersen",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Theodor-Heuss-Platz 10, 4. OG",
+        "addressLocality": "Viersen",
+        "postalCode": "41747",
+        "addressCountry": "DE"
+      }
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Mönchengladbach",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bismarckstr. 106, 3. OG",
+        "addressLocality": "Mönchengladbach",
+        "postalCode": "41061",
+        "addressCountry": "DE"
+      },
+      "telephone": "(02161) 678 26 83"
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Düsseldorf",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schadowstraße 74",
+        "addressLocality": "Düsseldorf",
+        "postalCode": "40212",
+        "addressCountry": "DE"
+      }
+    }
+  ],
+  "medicalSpecialty": "Neurosurgery",
+  "member": {
+    "@type": "Physician",
+    "name": "Kasim Fischer",
+    "medicalSpecialty": "Neurosurgery"
+  }
+}
+  </script>
 </head>
 <body>
 
@@ -32,25 +92,27 @@
   <div class="hero-inner-sub" style="background: linear-gradient(to right, rgba(9, 31, 34, 0.95) 0%, rgba(9, 31, 34, 0.6) 100%), url('../img/tech.png') center / cover no-repeat #091f22;">
     <div class="container">
       <nav class="navbar" style="margin-bottom: 60px;">
-          <div class="logo">
-            <div class="logo-icon">N</div>
-            НЕЙРОХИРУРГИЯ ФИШЕР
-          </div>
-          <div class="nav-links">
-            <a href="index.html">Домашняя страница</a>
-            <a href="behandlungen.html">Лечение</a>
-            <a href="praxis-schwerpunkte.html">Координаторы</a>
-            <a href="unser-team.html">Наша команда</a>
-            <a href="presseschau.html" style="color: white; font-weight: 700;">Обзор прессы</a>
-            <a href="sprechzeiten.html">контакт</a>
-          </div>
+    <a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+      <img src="../img/logo_white.png" alt="Nabiota Health Group" style="height:60px;width:auto;border-radius:12px;">
+      <span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+    </a>
+    <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="unser-team.html">Практика</a>
+    <div class="nav-dropdown-wrapper">
+      <a tabindex="0">Услуги</a>
+      <div class="nav-dropdown-menu">
+        <a href="praxis-schwerpunkte.html">Заболевания</a>
+        <a href="diagnostik.html">Диагностика</a>
+        <a href="behandlungen.html">Лечение и операции</a>
+        <a href="zweitmeinung.html">Второе мнение</a>
+      </div>
+    </div>
+    <a href="patienten.html">Пациентам</a>
+    <a href="presseschau.html">Пресса</a>
+    <a href="sprechzeiten.html">Контакты</a>
+  </div>
 
-          
-
-                    
-          
-          
-          
           <div class="lang-switcher hidden-mobile">
             <div class="lang-current">RU <span>▼</span></div>
             <div class="lang-dropdown">
@@ -67,13 +129,24 @@
         
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu" style="display: none;">
-          <a href="index.html">Домашняя страница</a>
-          <a href="behandlungen.html">Лечение</a>
-          <a href="praxis-schwerpunkte.html">Координаторы</a>
-          <a href="unser-team.html">Наша команда</a>
-          <a href="presseschau.html">Обзор прессы</a>
-          <a href="sprechzeiten.html">контакт</a>
-          <a href="sprechzeiten.html" style="color: var(--primary);">назначить встречу</a>
+  <a href="index.html">Главная</a>
+  <a href="unser-team.html">Практика</a>
+  <div class="mobile-dropdown-wrapper">
+    <div class="mobile-dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('active');">
+      <a style="margin:0; padding:0;">Услуги</a>
+      <span style="color: rgba(255,255,255,0.7);">▼</span>
+    </div>
+    <div class="mobile-dropdown-menu">
+        <a href="praxis-schwerpunkte.html">Заболевания</a>
+        <a href="diagnostik.html">Диагностика</a>
+        <a href="behandlungen.html">Лечение и операции</a>
+        <a href="zweitmeinung.html">Второе мнение</a>
+    </div>
+  </div>
+  <a href="patienten.html">Пациентам</a>
+  <a href="presseschau.html">Пресса</a>
+  <a href="sprechzeiten.html">Контакты</a>
+  <a href="sprechzeiten.html" style="color: var(--primary);">назначить встречу</a>
         
         <div class="mobile-lang-switcher">
             <a href="../presseschau.html" >DE</a>
@@ -93,7 +166,7 @@
 
       <div style="display: flex; flex-direction: column; gap: 24px; max-width: 350px;">
         <div style="display: flex; gap: 16px; align-items: center;">
-          <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
+          <div style="width: 48px; height: 48px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
             <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
           </div>
           <div>
@@ -102,7 +175,7 @@
           </div>
         </div>
         <div style="display: flex; gap: 16px; align-items: center;">
-          <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
+          <div style="width: 48px; height: 48px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
             <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
           </div>
           <div>
@@ -111,7 +184,7 @@
           </div>
         </div>
         <div style="display: flex; gap: 16px; align-items: center;">
-          <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
+          <div style="width: 48px; height: 48px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
             <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
           </div>
           <div>
@@ -432,11 +505,11 @@
   <footer class="footer-wrapper">
     <div class="container footer-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
       <div class="footer-brand">
-        <div class="logo" style="margin-bottom: 24px;">
-          <div class="logo-icon">N</div>
-          NEUROCHIRURGIE FISCHER
-        </div>
-        <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+          <a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;">
+            <img src="../img/logo_white.png" alt="Nabiota Health Group" style="height:60px;width:auto;border-radius:12px;">
+            <span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+          </a>
+          <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
           Viersener Str. 50<br>41061 Mönchengladbach
         </div>
         <div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 4px;">
@@ -452,27 +525,26 @@
       
       <div class="footer-links">
         <h4 class="footer-heading">УСЛУГИ</h4>
-        <a href="#">Заболевания позвоночника</a>
-        <a href="#">Грыжа диска</a>
-        <a href="#">Синдром запястного канала</a>
-        <a href="#">Лечение опухолей</a>
-        <a href="#">Болевая терапия</a>
+        <a href="praxis-schwerpunkte.html">Заболевания</a>
+        <a href="diagnostik.html">Диагностика</a>
+        <a href="behandlungen.html">Лечение и операции</a>
+        <a href="zweitmeinung.html">Второе мнение</a>
       </div>
       
       <div class="footer-links">
-        <h4 class="footer-heading">УПРАЖНЯТЬСЯ</h4>
-        <a href="#">О нас</a>
-        <a href="#">Наша команда</a>
-        <a href="#">Обзор прессы</a>
-        <a href="#">контакт</a>
-        <a href="#">отпечаток</a>
+        <h4 class="footer-heading">ПРАКТИКА</h4>
+        <a href="unser-team.html">О нас</a>
+        <a href="unser-team.html">Наша команда</a>
+        <a href="presseschau.html">Пресса</a>
+        <a href="sprechzeiten.html">Контакты</a>
+        <a href="impressum.html">Выходные данные</a>
+          <a href="../ru/datenschutz.html">Datenschutz</a>
       </div>
       
       <div class="footer-links">
         <h4 class="footer-heading">ЧАСЫ КОНСУЛЬТАЦИИ</h4>
         <p>Пн – Пт: 8:00 – 18:00</p>
         <p>Сб-Вс: выходной</p>
-        <p style="margin-top: 16px;">Круглосуточная экстренная помощь: (02161) 678 26 83</p>
       </div>
     
     </div>
@@ -577,6 +649,44 @@ document.addEventListener('DOMContentLoaded', function() {
   initPressFilters();
 });
 </script>
+
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 450px; background: white; padding: 24px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); z-index: 999999; border: 1px solid rgba(0,0,0,0.05); font-family: 'Plus Jakarta Sans', sans-serif;">
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <div style="background: rgba(28, 194, 178, 0.1); padding: 12px; border-radius: 8px; color: var(--primary);">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M16 12.5v.01"></path><path d="M12 16v.01"></path><path d="M11 12.5v.01"></path></svg>
+      </div>
+      <div>
+        <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 700; color: var(--text-dark);">Мы используем файлы cookie</h4>
+        <p style="margin: 0 0 20px 0; font-size: 0.9rem; line-height: 1.5; color: var(--text-light);">Мы используем файлы cookie для улучшения работы сайта. Некоторые из них необходимы, а другие помогают нам оптимизировать этот сайт.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button id="cookie-accept-all" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem; border: none; cursor: pointer; flex: 1; text-align: center;">Принять все</button>
+          <button id="cookie-essential-only" class="btn-secondary" style="padding: 10px 20px; font-size: 0.9rem; border: 1px solid #ccc; background: white; color: var(--text-dark); cursor: pointer; flex: 1; border-radius: 99px; text-align: center; transition: all 0.2s;">Только необходимые</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const cookieBanner = document.getElementById('cookie-consent-banner');
+      const btnAccept = document.getElementById('cookie-accept-all');
+      const btnEssential = document.getElementById('cookie-essential-only');
+      
+      if (!localStorage.getItem('cookieConsent')) {
+        cookieBanner.style.display = 'block';
+      }
+      
+      function hideBanner(choice) {
+        localStorage.setItem('cookieConsent', choice);
+        cookieBanner.style.display = 'none';
+      }
+      
+      btnAccept.addEventListener('click', () => hideBanner('all'));
+      btnEssential.addEventListener('click', () => hideBanner('essential'));
+    });
+  </script>
 
 </body>
 

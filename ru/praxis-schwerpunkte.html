@@ -27,6 +27,65 @@
       width: 100%;
     }
   </style>
+  <link rel="alternate" hreflang="de" href="https://my-bandscheibe.de/praxis-schwerpunkte.html">
+  <link rel="alternate" hreflang="en" href="https://my-bandscheibe.de/en/praxis-schwerpunkte.html">
+  <link rel="alternate" hreflang="ru" href="https://my-bandscheibe.de/ru/praxis-schwerpunkte.html">
+  <link rel="alternate" hreflang="tr" href="https://my-bandscheibe.de/tr/praxis-schwerpunkte.html">
+  <link rel="alternate" hreflang="ar" href="https://my-bandscheibe.de/ar/praxis-schwerpunkte.html">
+  <link rel="alternate" hreflang="x-default" href="https://my-bandscheibe.de/praxis-schwerpunkte.html">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Neurochirurgie Fischer",
+  "url": "https://my-bandscheibe.de",
+  "logo": "https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.png",
+  "email": "contact@my-bandscheibe.de",
+  "location": [
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Viersen",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Theodor-Heuss-Platz 10, 4. OG",
+        "addressLocality": "Viersen",
+        "postalCode": "41747",
+        "addressCountry": "DE"
+      }
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Mönchengladbach",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bismarckstr. 106, 3. OG",
+        "addressLocality": "Mönchengladbach",
+        "postalCode": "41061",
+        "addressCountry": "DE"
+      },
+      "telephone": "(02161) 678 26 83"
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Düsseldorf",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schadowstraße 74",
+        "addressLocality": "Düsseldorf",
+        "postalCode": "40212",
+        "addressCountry": "DE"
+      }
+    }
+  ],
+  "medicalSpecialty": "Neurosurgery",
+  "member": {
+    "@type": "Physician",
+    "name": "Kasim Fischer",
+    "medicalSpecialty": "Neurosurgery"
+  }
+}
+  </script>
 </head>
 <body>
 
@@ -36,20 +95,28 @@
   <div class="hero-inner-sub" style="background: linear-gradient(to right, rgba(9, 31, 34, 0.95) 0%, rgba(9, 31, 34, 0.6) 100%), url('../img/imaging.png') center / cover no-repeat #091f22;">
     <div class="container">
       <nav class="navbar" style="margin-bottom: 60px;">
-          <div class="logo">
-            <div class="logo-icon">N</div>
-            НЕЙРОХИРУРГИЯ ФИШЕР
-          </div>
-          <div class="nav-links">
-            <a href="index.html">Домашняя страница</a>
-            <a href="behandlungen.html">Лечение</a>
-            <a href="praxis-schwerpunkte.html" style="color: white; font-weight: 700;">Координаторы</a>
-            <a href="unser-team.html">Наша команда</a>
-            <a href="presseschau.html">Обзор прессы</a>
-            <a href="sprechzeiten.html">контакт</a>
-          
-        </div>
-                    <div class="lang-switcher hidden-mobile">
+    <a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+      <img src="../img/logo_white.png" alt="Nabiota Health Group" style="height:60px;width:auto;border-radius:12px;">
+      <span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+    </a>
+    <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="unser-team.html">Практика</a>
+    <div class="nav-dropdown-wrapper">
+      <a tabindex="0">Услуги</a>
+      <div class="nav-dropdown-menu">
+        <a href="praxis-schwerpunkte.html">Заболевания</a>
+        <a href="diagnostik.html">Диагностика</a>
+        <a href="behandlungen.html">Лечение и операции</a>
+        <a href="zweitmeinung.html">Второе мнение</a>
+      </div>
+    </div>
+    <a href="patienten.html">Пациентам</a>
+    <a href="presseschau.html">Пресса</a>
+    <a href="sprechzeiten.html">Контакты</a>
+  </div>
+
+          <div class="lang-switcher hidden-mobile">
             <div class="lang-current">RU <span>▼</span></div>
             <div class="lang-dropdown">
               <a href="../praxis-schwerpunkte.html">Deutsch (DE)</a>
@@ -65,13 +132,24 @@
         
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu" style="display: none;">
-          <a href="index.html">Домашняя страница</a>
-          <a href="behandlungen.html">Лечение</a>
-          <a href="praxis-schwerpunkte.html">Координаторы</a>
-          <a href="unser-team.html">Наша команда</a>
-          <a href="presseschau.html">Обзор прессы</a>
-          <a href="sprechzeiten.html">контакт</a>
-          <a href="sprechzeiten.html" style="color: var(--primary);">назначить встречу</a>
+  <a href="index.html">Главная</a>
+  <a href="unser-team.html">Практика</a>
+  <div class="mobile-dropdown-wrapper">
+    <div class="mobile-dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('active');">
+      <a style="margin:0; padding:0;">Услуги</a>
+      <span style="color: rgba(255,255,255,0.7);">▼</span>
+    </div>
+    <div class="mobile-dropdown-menu">
+        <a href="praxis-schwerpunkte.html">Заболевания</a>
+        <a href="diagnostik.html">Диагностика</a>
+        <a href="behandlungen.html">Лечение и операции</a>
+        <a href="zweitmeinung.html">Второе мнение</a>
+    </div>
+  </div>
+  <a href="patienten.html">Пациентам</a>
+  <a href="presseschau.html">Пресса</a>
+  <a href="sprechzeiten.html">Контакты</a>
+  <a href="sprechzeiten.html" style="color: var(--primary);">назначить встречу</a>
         
         <div class="mobile-lang-switcher">
             <a href="../praxis-schwerpunkte.html">DE</a>
@@ -85,212 +163,245 @@
     
     <div class="container" style="margin-top: 140px; margin-bottom: 30px;">
       <div class="hero-main" style="max-width: 700px; margin-top: 0;">
-        <h1 class="hero-title hero-title-sub">Основные направления нашей <span style="color: var(--primary);">клиники</span></h1>
+        <h1 class="hero-title hero-title-sub">Наши <span style="color: var(--primary);">Специализации</span></h1>
         <p class="hero-desc" style="max-width: 500px; font-size: 1.1rem; line-height: 1.6; color: rgba(255,255,255,0.8);">Диагностика и лечение заболеваний центральной и периферической нервной системы.</p>
-      </div>
-    </div>
-
-    <!-- Bottom Bar inside hero -->
-    <div class="hero-bottom-bar" style="margin-top: 0; background: rgba(9, 31, 34, 0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.05);">
-      <div class="container hero-bottom-grid">
-        <div class="hero-feature">
-          <div class="hero-feature-icon">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          </div>
-          <div>
-            <div class="hero-feature-title">Современная диагностика</div>
-            <div class="hero-feature-desc">Использование самого современного оборудования.</div>
-          </div>
-        </div>
-        <div class="hero-feature">
-          <div class="hero-feature-icon">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <div>
-            <div class="hero-feature-title">Целостный подход</div>
-            <div class="hero-feature-desc">Индивидуальные решения для каждого пациента.</div>
-          </div>
-        </div>
-        <div class="hero-feature">
-          <div class="hero-feature-icon">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-          </div>
-          <div>
-            <div class="hero-feature-title">Доказательная медицина</div>
-            <div class="hero-feature-desc">Методы лечения основаны на научных данных.</div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 
   <div class="section-wrapper">
     <div class="container">
-      
-      <!-- Split Overview -->
-      <div style="display: flex; gap: 60px; margin-bottom: 80px; flex-wrap: wrap; margin-top: 40px;">
-        <div style="flex: 1; min-width: 300px;">
-          
-          <h2 class="section-title" style="font-size: 2.5rem; max-width: 400px; margin-top: 16px;">Диагностика и терапия</h2>
-        </div>
-        <div style="flex: 1; min-width: 300px; color: var(--text-light); line-height: 1.8; font-size: 1.05rem;">
-          <p style="margin-bottom: 20px;">Мы специализируемся на диагностике и лечении заболеваний центральной и периферической нервной системы. Охвачены все связанные структуры. К ним относятся: череп, головной мозг, спинной мозг, периферические нервы и позвоночник.</p>
-          <p>Касим Фишер — член Немецкого общества хирургии позвоночника и Общества исследований позвоночника. При лечении грыж межпозвоночных дисков он уделяет особое внимание щадящим, минимально инвазивным процедурам.</p>
-        </div>
+
+      <div style="background: rgba(28, 194, 178, 0.05); border-left: 4px solid var(--primary); padding: 24px; border-radius: 0 12px 12px 0; margin-top: 40px; margin-bottom: 60px; width: 100%;">
+        <h3 style="font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px; color: var(--text-dark);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          Важное медицинское уведомление
+        </h3>
+        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light); margin: 0;">Обратите внимание: точный диагноз и медицинские показания всегда определяются врачом индивидуально после тщательного медицинского осмотра. Мы не можем гарантировать конкретный результат лечения.</p>
       </div>
-
-            <!-- Services Grid -->
-      <div class="services-grid-new">
-        
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M8 6h8"></path><path d="M8 12h8"></path><path d="M8 18h8"></path></svg>
+    
+      <div style="margin-bottom: 80px;" id="service-0">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
+          <div style="color: var(--primary); width: 40px; height: 40px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2h4l-2 3z"></path><path d="M9 7c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M9 11c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M9 15c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M12 18c-2 2-4 3-5 1l2-2c1.5 1 2.5.5 3-1z"></path><line x1="12" y1="5" x2="12" y2="18"></line></svg>
           </div>
-          <h3 class="service-title-new">Метастазы</h3>
-          <p class="service-desc-new">Метастазы опухолей в позвоночнике, спинномозговом канале и спинном мозге шейного, грудного и поясничного отделов.</p>
-          <div class="service-full-desc" style="display: none;">
-            Мы предлагаем комплексную диагностику и лечение всех заболеваний позвоночника, от дегенеративных изменений и нестабильности до опухолевых метастазов. Наша цель — облегчить боль и восстановить подвижность, всегда стараясь выбрать наиболее щадящий метод лечения.
+          <div>
+            <h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Позвоночник</h2>
+            <p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Заболевания и травмы позвоночника</p>
           </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Узнать больше &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-          </div>
-          <h3 class="service-title-new">Заболевания межпозвоночного диска</h3>
-          <p class="service-desc-new">Дегенеративные заболевания дисков (грыжа, стеноз спинномозгового канала) шейного, грудного и поясничного отделов.</p>
-          <div class="service-full-desc" style="display: none;">
-            В нашей клинике мы проводим компьютерное нейрофизиологическое обследование нервной системы. Так мы выявляем повреждения нервов, вызванные травмами или компрессионными синдромами, такими как синдром запястного канала. Благодаря точным измерениям мы можем определить точное место и степень повреждения нерва и разработать индивидуальный план лечения.
-          </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Узнать больше &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"></path></svg>
-          </div>
-          <h3 class="service-title-new">Нейрофизиологические исследования</h3>
-          <p class="service-desc-new">В нашей клинике мы проводим компьютерное нейрофизиологическое обследование нервной системы. Так мы выявляем повреждения нервов, вызванные травмами или компрессионными синдромами, такими как синдром запястного канала.</p>
-          <div class="service-full-desc" style="display: none;">
-            Нейрохирургическая терапия боли предлагает различные варианты лечения упорных и хронических болей. Мы лечим послеоперационные боли в позвоночнике, фантомные боли в конечностях, дегенеративные боли в фасеточных суставах, заболевания межпозвоночных дисков и хроническую боль, используя новейшие методы, включая нейромодуляцию и малоинвазивные процедуры.
-          </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Узнать больше &rarr;</a>
         </div>
         
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-12 12h-6v-6z"></path><path d="M12 8l4 4"></path></svg>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Грыжи межпозвоночных дисков</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Дегенеративные изменения, при которых материал диска давит на нервы.</p>
+            <div class="service-full-desc" style="display: none;">
+              Дегенеративные изменения, при которых материал диска давит на нервы.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
           </div>
-          <h3 class="service-title-new">Операции</h3>
-          <p class="service-desc-new">Специализированные хирургические вмешательства при заболеваниях нервов и метастазах опухолей в позвоночник, спинномозговой канал и спинной мозг с использованием современных методов, таких как радиочастотная абляция опухолей.</p>
-          <div class="service-full-desc" style="display: none;">
-            Мы выполняем специализированные хирургические вмешательства при заболеваниях нервов и метастазах опухолей в позвоночник, спинномозговой канал и спинной мозг. Используя современные малоинвазивные и микрохирургические методы, такие как радиочастотная абляция опухолей, мы обеспечивает максимальную точность и безопасность для наших пациентов.
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Стеноз спинномозгового канала</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Сужение канала, вызывающее давление на спинной мозг или нервы.</p>
+            <div class="service-full-desc" style="display: none;">
+              Сужение канала, вызывающее давление на спинной мозг или нервы.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
           </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Узнать больше &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Нейрофораминальный стеноз</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Сужение отверстий, через которые нервные корешки выходят из позвоночника.</p>
+            <div class="service-full-desc" style="display: none;">
+              Сужение отверстий, через которые нервные корешки выходят из позвоночника.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
           </div>
-          <h3 class="service-title-new">Нейрохирургическая терапия боли</h3>
-          <p class="service-desc-new">Лечение послеоперационных болей в позвоночнике, фантомных болей в конечностях, дегенеративных болей в фасеточных суставах, заболеваний межпозвоночных дисков и хронической боли.</p>
-          <div class="service-full-desc" style="display: none;">
-            <strong>Дегенеративные заболевания дисков (грыжа, стеноз спинномозгового канала) шейного, грудного и поясничного отделов</strong><br><br>Стандартной операцией при грыжах диска является удаление диска и последующее сращение соседних позвонков. Однако в этом случае пациент, как правило, теряет подвижность позвоночника в этом сегменте. Альтернативой, восстанавливающей подвижность, является протезирование диска искусственным имплантатом из металла и пластика. Искусственный диск используется для замены изношенного естественного диска. Цель состоит в устранении болей в спине, связанных с диском, при сохранении естественной подвижности позвоночника.
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Спондилолистез</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Смещение одного позвонка относительно другого (соскальзывание).</p>
+            <div class="service-full-desc" style="display: none;">
+              Смещение одного позвонка относительно другого (соскальзывание).
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
           </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Узнать больше &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"></path><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"></path></svg>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Нестабильность позвоночника</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Избыточная или аномальная подвижность между позвонками.</p>
+            <div class="service-full-desc" style="display: none;">
+              Избыточная или аномальная подвижность между позвонками.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
           </div>
-          <h3 class="service-title-new">Заболевания позвоночника</h3>
-          <p class="service-desc-new">Лечение грыж межпозвоночных дисков шейного, грудного и поясничного отделов, дегенеративного стеноза спинномозгового канала, нестабильности позвоночника, внутриспинномозговых метастазов опухолей и первичного артроза крестцово-подвздошного сустава.</p>
-          <div class="service-full-desc" style="display: none;">
-            <strong>Полинейропатия</strong><br><br>Нервные боли, такие как жжение, рвущие и колющие боли, онемение, не обязательно лечить чрезмерным приемом обезболивающих. В нашей клинике мы с удовольствием проинформируем вас об использовании стимуляторов для уменьшения хронической боли. Немедикаментозное лечение включает SCS- и PNP-терапию.
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Переломы тел позвонков</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Переломы позвонков, часто вследствие травмы или остеопороза.</p>
+            <div class="service-full-desc" style="display: none;">
+              Переломы позвонков, часто вследствие травмы или остеопороза.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
           </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Узнать больше &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Заболевания фасеточных суставов</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Дегенеративные изменения мелких суставов позвоночника, вызывающие боль.</p>
+            <div class="service-full-desc" style="display: none;">
+              Дегенеративные изменения мелких суставов позвоночника, вызывающие боль.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
           </div>
-          <h3 class="service-title-new">Хроническая боль</h3>
-          <p class="service-desc-new">Диагностика и лечение хронической боли, полинейропатии и безмедикаментозная терапия.</p>
-          <div class="service-full-desc" style="display: none;">
-            <strong>Заболевания периферических нервов/компрессионные синдромы — CTS, SUS, TTS и др.</strong><br><br>С помощью компьютерного нейрофизиологического исследования нервной системы мы безболезненно измеряем всю патологию нервной системы. Это позволяет выявить повреждения нервов, которые могут возникнуть, например, в результате травмы или компрессионного синдрома. Самым известным компрессионным синдромом на запястье является синдром запястного канала, на локте — синдром кубитального канала, а на пятке — синдром тарзального канала. Нейрохирургическое высвобождение нерва приводит к быстрому улучшению и занимает около 20–25 минут под местной анестезией (при необходимости и под общим наркозом).
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Дисфункция КПС (ISG)</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Воспаление или нарушение функции крестцово-подвздошного сочленения.</p>
+            <div class="service-full-desc" style="display: none;">
+              Воспаление или нарушение функции крестцово-подвздошного сочленения.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
           </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Узнать больше &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Опухоли и метастазы</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Доброкачественные или злокачественные новообразования в позвоночнике.</p>
+            <div class="service-full-desc" style="display: none;">
+              Доброкачественные или злокачественные новообразования в позвоночнике.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
           </div>
-          <h3 class="service-title-new">Заболевания нервов</h3>
-          <p class="service-desc-new">Заболевания периферических нервов/компрессионные синдромы — CTS, SUS, TTS и др.</p>
-          <div class="service-full-desc" style="display: none;">
-            <strong>Метастазы опухолей в позвоночнике, спинномозговом канале и спинном мозге шейного, грудного и поясничного отделов</strong><br><br>При лечении остеопорозных, опухолевых и травматических переломов позвоночника мы используем метод чрескожной радиочастотной кифопластики. Специальный вязкий костный цемент вводится в сломанные тела позвонков, возвращая кости ее первоначальный профиль и стабилизируя её. Новой возможностью для пациентов с болезненными метастазами в позвоночнике является целенаправленная радиочастотная абляция опухоли (STAR). При этом болезненные опухоли уничтожаются теплом прямо на месте. Процедуры обычно занимают не более 15-20 минут на каждый позвонок.
-          </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Узнать больше &rarr;</a>
-        </div>
-
-      </div>
-
-      <!-- Bottom Feature Row 4 Cols -->
-      <div class="feature-row-4" style="border-bottom: none; margin-top: 40px; padding-bottom: 80px;">
-        <div class="feature-item">
-          <div class="feature-icon-light">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          </div>
-          <div>
-            <div class="feature-title-light">Точная диагностика</div>
-            <div class="feature-desc-light">Высокая точность благодаря современному оборудованию.</div>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon-light">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-12 12h-6v-6z"></path><path d="M12 8l4 4"></path></svg>
-          </div>
-          <div>
-            <div class="feature-title-light">Минимально инвазивные методы</div>
-            <div class="feature-desc-light">Щадящие процедуры для быстрого выздоровления.</div>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon-light">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
-          </div>
-          <div>
-            <div class="feature-title-light">Индивидуальный подход</div>
-            <div class="feature-desc-light">Лечение с учетом особенностей каждого пациента.</div>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon-light">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-          </div>
-          <div>
-            <div class="feature-title-light">Поддержка на всех этапах</div>
-            <div class="feature-desc-light">От диагностики до реабилитации мы на вашей стороне.</div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Заболевания спинного мозга</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Различные состояния, нарушающие функцию спинного мозга.</p>
+            <div class="service-full-desc" style="display: none;">
+              Различные состояния, нарушающие функцию спинного мозга.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
           </div>
         </div>
       </div>
-
+      <div style="margin-bottom: 80px;" id="service-1">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
+          <div style="color: var(--primary); width: 40px; height: 40px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v4"></path><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v6"></path><path d="M10 10.5V5a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"></path><path d="M18 11a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path><path d="M12 11c-1 2-2 3-1 5c1 1 1 3 1 6"></path><path d="M12 13c1 1 2 2 2 3"></path></svg>
+          </div>
+          <div>
+            <h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Периферические нервы</h2>
+            <p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Заболевания нервов за пределами головного и спинного мозга</p>
+          </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Синдром запястного канала</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Сдавление срединного нерва в области запястья.</p>
+            <div class="service-full-desc" style="display: none;">
+              Сдавление срединного нерва в области запястья.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Синдром кубитального канала</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Сдавление локтевого нерва в области локтя.</p>
+            <div class="service-full-desc" style="display: none;">
+              Сдавление локтевого нерва в области локтя.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Синдром тарзального канала</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Сдавление большеберцового нерва в области голеностопного сустава.</p>
+            <div class="service-full-desc" style="display: none;">
+              Сдавление большеберцового нерва в области голеностопного сустава.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Компрессионные синдромы нервов</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Различные состояния, при которых нерв защемляется или сдавливается.</p>
+            <div class="service-full-desc" style="display: none;">
+              Различные состояния, при которых нерв защемляется или сдавливается.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Повреждения и травмы нервов</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Травмы, приводящие к потере функции нерва.</p>
+            <div class="service-full-desc" style="display: none;">
+              Травмы, приводящие к потере функции нерва.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Полинейропатии</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Одновременное поражение множества периферических нервов.</p>
+            <div class="service-full-desc" style="display: none;">
+              Одновременное поражение множества периферических нервов.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-bottom: 80px;" id="service-2">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
+          <div style="color: var(--primary); width: 40px; height: 40px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="7"></circle><circle cx="12" cy="12" r="2"></circle><line x1="12" y1="1" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="23"></line><line x1="1" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="23" y2="12"></line></svg>
+          </div>
+          <div>
+            <h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Болевые синдромы</h2>
+            <p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Хронические и острые болевые состояния различного происхождения</p>
+          </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Хронические боли в спине/шее</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Постоянная боль, сохраняющаяся несколько месяцев.</p>
+            <div class="service-full-desc" style="display: none;">
+              Постоянная боль, сохраняющаяся несколько месяцев.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Нейропатическая боль</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Боль, вызванная повреждением самой нервной системы.</p>
+            <div class="service-full-desc" style="display: none;">
+              Боль, вызванная повреждением самой нервной системы.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Послеоперационные болевые синдромы</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Хроническая боль, возникающая после хирургического вмешательства.</p>
+            <div class="service-full-desc" style="display: none;">
+              Хроническая боль, возникающая после хирургического вмешательства.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Фантомные боли</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Ощущение боли в ампутированной части тела.</p>
+            <div class="service-full-desc" style="display: none;">
+              Ощущение боли в ампутированной части тела.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Психосоматические факторы</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Психологические факторы, усиливающие или поддерживающие физическую боль.</p>
+            <div class="service-full-desc" style="display: none;">
+              Психологические факторы, усиливающие или поддерживающие физическую боль.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Узнать больше &rarr;</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
+  <!-- Footer Section -->
   <footer class="footer-wrapper">
-    <div class="container footer-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
+    <div class="container footer-grid">
       <div class="footer-brand">
-        <div class="logo" style="margin-bottom: 24px;">
-          <div class="logo-icon">N</div>
-          NEUROCHIRURGIE FISCHER
-        </div>
-        <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+          <a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;">
+            <img src="../img/logo_white.png" alt="Nabiota Health Group" style="height:60px;width:auto;border-radius:12px;">
+            <span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+          </a>
+          <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
           Viersener Str. 50<br>41061 Mönchengladbach
         </div>
         <div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 4px;">
@@ -306,27 +417,26 @@
       
       <div class="footer-links">
         <h4 class="footer-heading">УСЛУГИ</h4>
-        <a href="#">Заболевания позвоночника</a>
-        <a href="#">Грыжа диска</a>
-        <a href="#">Синдром запястного канала</a>
-        <a href="#">Лечение опухолей</a>
-        <a href="#">Болевая терапия</a>
+        <a href="praxis-schwerpunkte.html">Заболевания</a>
+        <a href="diagnostik.html">Диагностика</a>
+        <a href="behandlungen.html">Лечение и операции</a>
+        <a href="zweitmeinung.html">Второе мнение</a>
       </div>
       
       <div class="footer-links">
-        <h4 class="footer-heading">УПРАЖНЯТЬСЯ</h4>
-        <a href="#">О нас</a>
-        <a href="#">Наша команда</a>
-        <a href="#">Обзор прессы</a>
-        <a href="#">контакт</a>
-        <a href="#">отпечаток</a>
+        <h4 class="footer-heading">ПРАКТИКА</h4>
+        <a href="unser-team.html">О нас</a>
+        <a href="unser-team.html">Наша команда</a>
+        <a href="presseschau.html">Пресса</a>
+        <a href="sprechzeiten.html">Контакты</a>
+        <a href="impressum.html">Выходные данные</a>
+          <a href="../ru/datenschutz.html">Datenschutz</a>
       </div>
       
       <div class="footer-links">
         <h4 class="footer-heading">ЧАСЫ КОНСУЛЬТАЦИИ</h4>
         <p>Пн – Пт: 8:00 – 18:00</p>
         <p>Сб-Вс: выходной</p>
-        <p style="margin-top: 16px;">Круглосуточная экстренная помощь: (02161) 678 26 83</p>
       </div>
     
     </div>
@@ -334,9 +444,6 @@
       &copy; 2026 Neurochirurgie Fischer
     </div>
   </footer>
-</div>
-
-
 
 <script>
   // Mobile Menu Toggle
@@ -388,45 +495,11 @@
           Ваши данные в безопасности и конфиденциальны.
         </div>
     </div>
-      </div>зная терапия.</p>
-          <div class="service-full-desc" style="display: none;">
-            <strong>Полинейропатия</strong><br><br>Нервные боли, такие как жжение, рвущие и колющие боли, онемение, не обязательно лечить чрезмерным приемом обезболивающих. В нашей клинике мы с удовольствием проинформируем вас об использовании стимуляторов для уменьшения хронической боли. Немедикаментозное лечение включает SCS- и PNP-терапию.
-          </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Узнать больше &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-          </div>
-          <h3 class="service-title-new">Заболевания нервов</h3>
-          <p class="service-desc-new">Заболевания периферических нервов/компрессионные синдромы — CTS, SUS, TTS и др.</p>
-          <div class="service-full-desc" style="display: none;">
-            <strong>Заболевания периферических нервов/компрессионные синдромы — CTS, SUS, TTS и др.</strong><br><br>С помощью компьютерного нейрофизиологического исследования нервной системы мы безболезненно измеряем всю патологию нервной системы. Это позволяет выявить повреждения нервов, которые могут возникнуть, например, в результате травмы или компрессионного синдрома. Самым известным компрессионным синдромом на запястье является синдром запястного канала, на локте — синдром кубитального канала, а на пятке — синдром тарзального канала. Нейрохирургическое высвобождение нерва приводит к быстрому улучшению и занимает около 20–25 минут под местной анестезией (при необходимости и под общим наркозом).
-          </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Узнать больше &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
-          </div>
-          <h3 class="service-title-new">Метастазы</h3>
-          <p class="service-desc-new">Метастазы опухолей в позвоночнике, спинномозговом канале и спинном мозге шейного, грудного и поясничного отделов.</p>
-          <div class="service-full-desc" style="display: none;">
-            <strong>Метастазы опухолей в позвоночнике, спинномозговом канале и спинном мозге шейного, грудного и поясничного отделов</strong><br><br>При лечении остеопорозных, опухолевых и травматических переломов позвоночника мы используем метод чрескожной радиочастотной кифопластики. Специальный вязкий костный цемент вводится в сломанные тела позвонков, возвращая кости ее первоначальный профиль и стабилизируя её. Новой возможностью для пациентов с болезненными метастазами в позвоночнике является целенаправленная радиочастотная абляция опухоли (STAR). При этом болезненные опухоли уничтожаются теплом прямо на месте. Процедуры обычно занимают не более 15-20 минут на каждый позвонок.
-          </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Узнать больше &rarr;</a>
-        </div>
-
-      </div>
-
-
 
 <!-- Service Modal -->
 <div id="serviceModal" class="video-modal" style="z-index: 99999; display: none;">
   <div class="video-modal-content" style="background: white; max-width: 800px; display: flex; flex-direction: column; height: auto; max-height: 90vh; border-radius: 20px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.2);">
-    <span class="close-video" id="closeServiceModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; z-index: 10; cursor: pointer;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+    <span class="close-video" id="closeServiceModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 8px; z-index: 10; cursor: pointer;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
     
     <div style="width: 100%; aspect-ratio: 16/9; background: #000; position: relative; flex-shrink: 0;">
       <!-- Video iframe -->

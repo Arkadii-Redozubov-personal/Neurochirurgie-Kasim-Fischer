@@ -27,6 +27,65 @@
       width: 100%;
     }
   </style>
+  <link rel="alternate" hreflang="de" href="https://my-bandscheibe.de/behandlungen.html">
+  <link rel="alternate" hreflang="en" href="https://my-bandscheibe.de/en/behandlungen.html">
+  <link rel="alternate" hreflang="ru" href="https://my-bandscheibe.de/ru/behandlungen.html">
+  <link rel="alternate" hreflang="tr" href="https://my-bandscheibe.de/tr/behandlungen.html">
+  <link rel="alternate" hreflang="ar" href="https://my-bandscheibe.de/ar/behandlungen.html">
+  <link rel="alternate" hreflang="x-default" href="https://my-bandscheibe.de/behandlungen.html">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Neurochirurgie Fischer",
+  "url": "https://my-bandscheibe.de",
+  "logo": "https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.png",
+  "email": "contact@my-bandscheibe.de",
+  "location": [
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Viersen",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Theodor-Heuss-Platz 10, 4. OG",
+        "addressLocality": "Viersen",
+        "postalCode": "41747",
+        "addressCountry": "DE"
+      }
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Mönchengladbach",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bismarckstr. 106, 3. OG",
+        "addressLocality": "Mönchengladbach",
+        "postalCode": "41061",
+        "addressCountry": "DE"
+      },
+      "telephone": "(02161) 678 26 83"
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Düsseldorf",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schadowstraße 74",
+        "addressLocality": "Düsseldorf",
+        "postalCode": "40212",
+        "addressCountry": "DE"
+      }
+    }
+  ],
+  "medicalSpecialty": "Neurosurgery",
+  "member": {
+    "@type": "Physician",
+    "name": "Kasim Fischer",
+    "medicalSpecialty": "Neurosurgery"
+  }
+}
+  </script>
 </head>
 <body>
 
@@ -36,19 +95,28 @@
     <div class="hero-inner-sub">
       <div class="container">
         <nav class="navbar" style="margin-bottom: 60px;">
-          <div class="logo">
-            <div class="logo-icon">N</div>
-            Beyin Cerrahisi FISCHER
-          </div>
-          <div class="nav-links">
-            <a href="index.html">Ana sayfa</a>
-            <a href="behandlungen.html" style="color: white; font-weight: 700;">Tedaviler</a>
-            <a href="praxis-schwerpunkte.html">Odak noktaları</a>
-            <a href="unser-team.html">Ekibimiz</a>
-            <a href="presseschau.html">Basın incelemesi</a>
-            <a href="sprechzeiten.html">temas etmek</a>
-          </div>
-                    <div class="lang-switcher hidden-mobile">
+    <a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+      <img src="../img/logo_white.png" alt="Nabiota Health Group" style="height:60px;width:auto;border-radius:12px;">
+      <span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+    </a>
+    <div class="nav-links">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="unser-team.html">Muayenehane</a>
+    <div class="nav-dropdown-wrapper">
+      <a tabindex="0">Hizmetler</a>
+      <div class="nav-dropdown-menu">
+        <a href="praxis-schwerpunkte.html">Hastalıklar</a>
+        <a href="diagnostik.html">Teşhis</a>
+        <a href="behandlungen.html">Tedaviler ve Ameliyatlar</a>
+        <a href="zweitmeinung.html">İkinci Görüş</a>
+      </div>
+    </div>
+    <a href="patienten.html">Hastalar İçin</a>
+    <a href="presseschau.html">Basın</a>
+    <a href="sprechzeiten.html">İletişim</a>
+  </div>
+
+          <div class="lang-switcher hidden-mobile">
             <div class="lang-current">TR <span>▼</span></div>
             <div class="lang-dropdown">
               <a href="../behandlungen.html">Deutsch (DE)</a>
@@ -64,13 +132,24 @@
         
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu" style="display: none;">
-          <a href="index.html">Ana sayfa</a>
-          <a href="behandlungen.html">Tedaviler</a>
-          <a href="praxis-schwerpunkte.html">Odak noktaları</a>
-          <a href="unser-team.html">Ekibimiz</a>
-          <a href="presseschau.html">Basın incelemesi</a>
-          <a href="sprechzeiten.html">temas etmek</a>
-          <a href="sprechzeiten.html" style="color: var(--primary);">randevu al</a>
+  <a href="index.html">Ana Sayfa</a>
+  <a href="unser-team.html">Muayenehane</a>
+  <div class="mobile-dropdown-wrapper">
+    <div class="mobile-dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('active');">
+      <a style="margin:0; padding:0;">Hizmetler</a>
+      <span style="color: rgba(255,255,255,0.7);">▼</span>
+    </div>
+    <div class="mobile-dropdown-menu">
+        <a href="praxis-schwerpunkte.html">Hastalıklar</a>
+        <a href="diagnostik.html">Teşhis</a>
+        <a href="behandlungen.html">Tedaviler ve Ameliyatlar</a>
+        <a href="zweitmeinung.html">İkinci Görüş</a>
+    </div>
+  </div>
+  <a href="patienten.html">Hastalar İçin</a>
+  <a href="presseschau.html">Basın</a>
+  <a href="sprechzeiten.html">İletişim</a>
+  <a href="sprechzeiten.html" style="color: var(--primary);">randevu al</a>
         
         <div class="mobile-lang-switcher">
             <a href="../behandlungen.html">DE</a>
@@ -108,214 +187,164 @@
     <section class="section container">
             
       <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px; flex-wrap: wrap; gap: 24px;">
-        <h2 class="section-title" style="margin-bottom: 0; font-size: 2.5rem; max-width: 500px;">Sağlığınız için etkili çözümler</h2>
-        <p style="color: var(--text-light); max-width: 400px; text-align: left; font-size: 0.95rem; margin-bottom: 8px;">Sebepleri ortadan kaldırmak ve hastalarımızın yaşam kalitesini artırmak için en modern cerrahi ve tedavi yöntemlerini kullanıyoruz.</p>
+        <h2 class="section-title" style="margin-bottom: 0; font-size: 2.5rem; max-width: 500px;">Tedaviler ve Ameliyatlar</h2>
+        <p style="margin-bottom: 20px;">Hizmet yelpazemiz özelleşmiş konservatif ve cerrahi prosedürleri içerir. Her tedavi, kapsamlı bir teşhis sonrasında tıbbi endikasyonunuza göre bireysel olarak uyarlanır.</p>
       </div>
 <div class="treatment-grid">
+
         <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-12 12h-6v-6z"></path><path d="M12 8l4 4"></path></svg></div>
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></div>
           <div class="treatment-content">
-            <h3 class="treatment-title">Omurga gövdesi kırıklarının stabilizasyonu</h3>
-            <p class="treatment-desc">Osteoporotik veya tümörlü omurga kırıkları için perkütan minimal invaziv radyofrekans kifoplasti.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Karpal tünel sendromu (KTS), ulnar sulkus sendromu (USS) veya tarsal tünel sendromu (TTS) gibi periferik sinir sıkışma sendromları için yüksek düzeyde uzmanlaşmış ayakta cerrahi tedaviler sunuyoruz.<br><br>Bu minimal invaziv prosedürler genellikle lokal anestezi altında gerçekleştirilir. Sıkışan sinirin rahatlatılmasıyla uyuşma, ağrı ve hareket kısıtlılığı çok kısa iyileşme süreleriyle etkili ve kalıcı olarak ortadan kaldırılabilir.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi edin &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 0 7 4.5v1.23c-1.38.74-2.5 2.15-2.5 3.77a4 4 0 0 0 1.5 3.12 3.5 3.5 0 0 0 .5 6.38H9v-2H6.5a1.5 1.5 0 1 1 0-3h1V12h-2A2 2 0 0 1 7.5 8h2V4.5A.5.5 0 0 1 10 4h4a.5.5 0 0 1 .5.5V8h2a2 2 0 0 1 2 4h-2v2h1a1.5 1.5 0 1 1 0 3H15v2h2.5a3.5 3.5 0 0 0 .5-6.38A4 4 0 0 0 19.5 9.5c0-1.62-1.12-3.03-2.5-3.77V4.5A2.5 2.5 0 0 0 14.5 2h-5z"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Nöromodülasyon</h3>
-            <p class="treatment-desc">Ağrı yönetimi için omurilik stimülasyonu ve sakral sinir stimülasyonu.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Endoskopik ve mikrocerrahi disk cerrahisi, fıtıklaşmış diskleri ve spinal kanal stenozunu tedavi etmek için özellikle nazik bir prosedürdür. Aletler ve yüksek çözünürlüklü bir kamera küçük bir kesiden içeri sokulur.<br><br>Bu teknik sayesinde çevredeki kaslar büyük ölçüde bozulmadan kalır. Bu da çok daha hızlı bir iyileşme, daha az ameliyat sonrası ağrı ve günlük hayata hızlı bir dönüş sağlar.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi edin &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M8 6h8"></path><path d="M8 12h8"></path><path d="M8 18h8"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Perkütan minimal invaziv tümör radyofrekans termal ablasyonu</h3>
-            <p class="treatment-desc">Kemik tümörü metastazları ve ayakta tedavi nöroonkolojisi için lütfen ilgili doktorunuza danışın.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                İntraspinal tümörlerin çıkarılması, hassas omurilik ve sinir köklerini korumak için en yüksek mikrocerrahi hassasiyeti gerektirir.<br><br>Son teknoloji ürünü cerrahi mikroskoplar ve nöromonitörizasyon kılavuzluğundaki prosedürleri kullanarak spinal kanaldaki tümörleri olabildiğince güvenli bir şekilde çıkarıyoruz. Amaç nörolojik açıklıkları önlemek ve hastanın yaşam kalitesini en iyi şekilde korumaktır.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi edin &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Endoskopik ve mikrocerrahi intervertebral disk cerrahisi</h3>
-            <p class="treatment-desc">Omurga üzerinde nazik, minimal invaziv prosedürler.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Aşınma veya yaralanmanın neden olduğu omurga dengesizlikleri için minimal invaziv stabilizasyon prosedürleri sunuyoruz.<br><br>Büyük kesiler yerine, özel implantlar (vida-çubuk sistemleri gibi) perkütan yolla, yani ciltten geçirilir. Bu kan kaybını azaltır, dokuyu korur ve hastanın ameliyattan sonra çok daha hızlı hareket etmesini sağlar.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi edin &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Nöroşirürji değerlendirmesi</h3>
-            <p class="treatment-desc">Profesyonel tıbbi incelemeler ve görüşler.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Perkütan minimal invaziv tümör radyofrekans termoablasyonu (RFA), omurgadaki kemik tümörü metastazlarının tedavisi için yenilikçi bir prosedürdür.<br><br>Özel bir prob tam olarak tümörün içine yerleştirilir. Tümör dokusu yüksek frekanslı akımla ısıtılır ve yok edilir. Bu genellikle büyük bir ameliyata gerek kalmadan hasta için acil ve önemli bir ağrı kesici etki sağlar.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi edin &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-12 12h-6v-6z"></path><path d="M12 8l4 4"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Kas biyopsisi</h3>
-            <p class="treatment-desc">Sinir hastalıkları ve belirsiz kas hastalıkları için.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Nöromodülasyon, özellikle Omurilik Stimülasyonu (SCS), artık ilaç tedavisine yanıt vermeyen kronik ağrılar için oldukça etkili bir terapidir.<br><br>Zayıf elektrik uyarıları, ağrının beyne iletilmesini engellemek için kullanılır. Hastalara, ayrı ayrı programlanabilen ve yaşam kalitesini önemli ölçüde artıran küçük, implante edilmiş bir cihaz (kalp piline benzer) verilir.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi edin &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 0 7 4.5v1.23c-1.38.74-2.5 2.15-2.5 3.77a4 4 0 0 0 1.5 3.12 3.5 3.5 0 0 0 .5 6.38H9v-2H6.5a1.5 1.5 0 1 1 0-3h1V12h-2A2 2 0 0 1 7.5 8h2V4.5A.5.5 0 0 1 10 4h4a.5.5 0 0 1 .5.5V8h2a2 2 0 0 1 2 4h-2v2h1a1.5 1.5 0 1 1 0 3H15v2h2.5a3.5 3.5 0 0 0 .5-6.38A4 4 0 0 0 19.5 9.5c0-1.62-1.12-3.03-2.5-3.77V4.5A2.5 2.5 0 0 0 14.5 2h-5z"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Minimal invazif stabilizasyon</h3>
-            <p class="treatment-desc">Perkütan stabilizasyon operasyonları ve dinamik stabilizasyon prosedürleri.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Kas biyopsisi, belirsiz nöromüsküler hastalıklar veya kas iltihabı için önemli bir teşhis prosedürüdür.<br><br>Lokal anestezi altında, küçük bir kesiden küçük bir doku örneği alınır. Bu daha sonra kesin bir teşhis koymak ve hedefe yönelik tedavi başlatmak için mikroskobik (histolojik) olarak incelenir.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi edin &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M8 6h8"></path><path d="M8 12h8"></path><path d="M8 18h8"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Periferik sinir sıkışma sendromlarının ayaktan cerrahi bakımı</h3>
-            <p class="treatment-desc">Örneğin karpal tünel sendromu ve ulnar sulkus sendromu, periferik sinir tümörleri vb.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Disk protezi, servikal veya lomber omurgadaki aşınmış diskler için füzyona modern bir alternatiftir.<br><br>Hastalıklı disk tamamen çıkarılır ve yerine yapay bir eklem protezi yerleştirilir. Bu prosedürün en büyük avantajı, bu omurga segmentindeki doğal hareketliliğin korunması ve bitişik disklerin erken aşınmadan korunmasıdır.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi edin &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Spinal eklem blokları ve denervasyon</h3>
-            <p class="treatment-desc">Vertebral eklemlerin hedefe yönelik ağrı tedavisi.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Faset eklem blokları ve denervasyonlar, küçük faset eklemlerinin aşınması ve yıpranmasından (spondilartroz) kaynaklanan kronik sırt ağrısını tedavi etmeye yönelik hedeflenmiş prosedürlerdir.<br><br>İlk olarak, ağrı hedeflenmiş bir enjeksiyonla engellenir (teşhis). Neden doğrulanırsa, termo-denervasyon (küçük ağrı sinirlerinin tahrip edilmesi) yoluyla uzun süreli ağrı kesici etki elde edilebilir.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi edin &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Mikrocerrahi dekompresyon operasyonu</h3>
-            <p class="treatment-desc">Sinir yapıları üzerindeki baskıyı hafifletmek.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Mikrocerrahi dekompresyon cerrahisi, örneğin spinal kanal stenozunda sıkışmış sinir yapılarını serbest bırakmak için kullanılır.<br><br>Cerrahi mikroskop altında, kemikli büyümeler veya kalınlaşmış bağlar nazikçe çıkarılır. Mikroskobik görünüm milimetre hassasiyetinde çalışmaya izin vererek omurilik ve sinir kökleri için maksimum güvenlik sağlar.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi edin &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-12 12h-6v-6z"></path><path d="M12 8l4 4"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">İntraspinal tümörlerin çıkarılması</h3>
-            <p class="treatment-desc">Vasküler anomali semptomları ve bağlı kordon semptomları dahil.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Artroplasti ve artrodez (eklem füzyonları), özellikle sakroiliak eklemde şiddetli eklem aşınması veya dengesizliği için kullanılır.<br><br>Etkilenen eklemi küçük implantlarla stabilize etmek için minimal invaziv teknikler kullanıyoruz. Bu, ameliyat sonrası hızlı iyileşme ile yüke bağlı ağrıda önemli bir azalmaya yol açar.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi edin &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 0 7 4.5v1.23c-1.38.74-2.5 2.15-2.5 3.77a4 4 0 0 0 1.5 3.12 3.5 3.5 0 0 0 .5 6.38H9v-2H6.5a1.5 1.5 0 1 1 0-3h1V12h-2A2 2 0 0 1 7.5 8h2V4.5A.5.5 0 0 1 10 4h4a.5.5 0 0 1 .5.5V8h2a2 2 0 0 1 2 4h-2v2h1a1.5 1.5 0 1 1 0 3H15v2h2.5a3.5 3.5 0 0 0 .5-6.38A4 4 0 0 0 19.5 9.5c0-1.62-1.12-3.03-2.5-3.77V4.5A2.5 2.5 0 0 0 14.5 2h-5z"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">Artroplasti ve Artrodlar</h3>
-            <p class="treatment-desc">Sakrum, ilium ve eklemlerde minimal invazif operasyonlar ile.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Osteoporoz, tümör veya travmanın neden olduğu vertebral kırıkların stabilizasyonu kliniğimizde tercihen balon kifoplasti kullanılarak gerçekleştirilir.<br><br>Kırık omura iki küçük cilt kesiğiyle bir balon yerleştirilir ve onu düzeltmek için şişirilir. Boşluk daha sonra kemik çimentosu ile stabilize edilir. Prosedür ağrıyı neredeyse anında hafifletir ve omurgayı kalıcı olarak stabilize eder.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi edin &rarr;</a>
-          </div>
-        </div>
-        <div class="treatment-card">
-          <div class="treatment-icon-wrap"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M8 6h8"></path><path d="M8 12h8"></path><path d="M8 18h8"></path></svg></div>
-          <div class="treatment-content">
-            <h3 class="treatment-title">İntervertebral disk protezleri</h3>
-            <p class="treatment-desc">Servikal omurganın (servikal omurga) ve lomber omurganın (lomber omurga) tedavisi.</p>
-            
-              <div class="treatment-full-desc" style="display: none;">
-                Deneyimli bir beyin cerrahisi uzmanı olarak Kasim Fischer, profesyonel beyin cerrahisi değerlendirmeleri ve ikinci görüşler sunmaktadır.<br><br>Sigorta şirketleri, işveren sorumluluk sigortası birlikleri için veya bir operasyonun gerekliliğini netleştirmek için olsun: En son bilimsel bulgulara ve kapsamlı klinik deneyime dayanarak sağlam temelli, objektif ve ayrıntılı tıbbi değerlendirmeler sunuyoruz.
-              </div>
-              <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi edin &rarr;</a>
-          </div>
-        </div>
-      </div>
-      <div class="treatment-process-section">
-        <div class="process-timeline">
-          <h3 class="process-heading">Tedavi nasıl çalışır?</h3>
-          <div class="process-steps">
-            <div class="process-step">
-              <div class="step-icon">01</div>
-              <h4>Tavsiye & Teşhis</h4>
-              <p>Detaylı muayene ve doğru teşhis.</p>
+            <h3 class="treatment-title">Mikrocerrahi Disk Operasyonları</h3>
+            <p class="treatment-desc">Sinir yapılarının cerrahi dekompresyonu.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              Prosedürün amacı, sıkışmış sinir köklerini rahatlatmak için bir ameliyat mikroskobu kullanarak fıtıklaşmış disk materyalini çıkarmaktır.
             </div>
-            <div class="process-arrow">&rarr;</div>
-            <div class="process-step">
-              <div class="step-icon">02</div>
-              <h4>Tedavi planı</h4>
-              <p>Durumunuza göre kişiye özel plan.</p>
-            </div>
-            <div class="process-arrow">&rarr;</div>
-            <div class="process-step">
-              <div class="step-icon">03</div>
-              <h4>Tedavi</h4>
-              <p>En modern tıbbi yöntemler kullanılarak uygulanır.</p>
-            </div>
-            <div class="process-arrow">&rarr;</div>
-            <div class="process-step">
-              <div class="step-icon">04</div>
-              <h4>Bakım sonrası</h4>
-              <p>İyileşmenin her aşamasında destek.</p>
-            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi &rarr;</a>
           </div>
         </div>
-        <div class="process-cta">
-          <div class="cta-icon" style="background: rgba(255,255,255,0.2);"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: white;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
-          <h4 style="color: white; font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">randevu al</h4>
-          <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; margin-bottom: 24px;">Uzmanımız tüm sorularınızı yanıtlayacak ve sizin için en iyi çözümü bulacaktır.</p>
-          <a href="sprechzeiten.html" class="btn-white-full">Randevu almak için</a>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Endoskopik/Minimal İnvaziv Disk Cerrahisi</h3>
+            <p class="treatment-desc">Doku ve kas koruyucu prosedürler.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              Disk materyali, özel endoskoplar kullanılarak küçük kesilerle çıkarılır. Bu teknik, çevredeki kasların tahrişini en aza indirmeyi amaçlar.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi &rarr;</a>
+          </div>
         </div>
-      </div>
-      </div>
-    </section>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-12 12h-6v-6z"></path><path d="M12 8l4 4"></path></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Spinal Kanal Stenozu için Dekompresyon Cerrahisi</h3>
+            <p class="treatment-desc">Daralan spinal kanalın genişletilmesi.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              Spinal kanal stenozu durumunda, kemik ve bağ yapılarının cerrahi olarak çıkarılmasıyla omurilik ve sinir kökleri için daha fazla alan yaratılır.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Nöroforaminal Stenoz Ameliyatları</h3>
+            <p class="treatment-desc">Sinir çıkış deliklerinin genişletilmesi.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              Nöroforaminanın (sinir çıkış delikleri) hedefe yönelik cerrahi olarak genişletilmesi, ilgili sinir kökü üzerindeki mekanik baskıyı hafifletmeye yarar.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Stabilizasyon Ameliyatları</h3>
+            <p class="treatment-desc">Omurga stabilitesinin restorasyonu.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              İnstabilite durumlarında (örn. spondilolistezis), anormal hareketleri önlemek için özel implant sistemleri kullanılarak komşu omur gövdeleri birbirine bağlanır.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Disk Protezleri</h3>
+            <p class="treatment-desc">Yapay disklerin implantasyonu.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              Dejenere olmuş bir diskin çıkarılmasından sonra, ilgili segmentin hareketliliğini korumak amacıyla belirli tıbbi koşullar altında bir protez yerleştirilebilir.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Kifoplasti / Vertebroplasti</h3>
+            <p class="treatment-desc">Omurga kırıklarının tedavisi.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              Kırık omur gövdesine tıbbi kemik çimentosu enjekte edilerek stabilize edilmesi ve kırığa bağlı ağrının azaltılması amaçlanır.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Karpal Tünel / Kübital Tünel Ameliyatları</h3>
+            <p class="treatment-desc">Periferik sinir sıkışmalarının rahatlatılması.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              El veya dirsekteki sinir sıkışması sendromlarında, daraltan bağ veya dokunun kesilmesiyle etkilenen sinir üzerindeki baskı azaltılır.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"></path></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Periferik Sinir Hasarının Rekonstrüksiyonu</h3>
+            <p class="treatment-desc">Sinirlerin mikrocerrahi restorasyonu.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              Travmatik lezyonlardan sonra periferik sinirler, olası yenilenme için ön koşulu oluşturmak üzere mikrocerrahi sütürler veya sinir greftleri kullanılarak adapte edilebilir.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Girişimsel Ağrı Tıbbı</h3>
+            <p class="treatment-desc">Hedefe yönelik enjeksiyon tedavileri.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              Görüntüleme kontrolü altında doğrudan etkilenen sinir köklerine veya omurga eklemlerine anti-enflamatuar ve ağrı kesici ilaçların minimal invaziv uygulaması.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19c2.5-2 2.5-6 0-8M21.5 22c4.5-4 4.5-11 0-15M6.5 19c-2.5-2-2.5-6 0-8M2.5 22c-4.5-4-4.5-11 0-15M12 15v6"></path><circle cx="12" cy="11" r="4"></circle></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Radyofrekans Terapisi</h3>
+            <p class="treatment-desc">Ağrı tedavisi için termal denervasyon.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              Belirli sinir liflerine (örneğin faset eklemlerdeki) termal enerji uygulanarak, ağrı iletimi geçici veya daha uzun süreli olarak kesilir.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Nöromodülasyon / Omurilik Stimülasyonu</h3>
+            <p class="treatment-desc">Omuriliğin elektriksel stimülasyonu.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              Kronik, tedaviye dirençli ağrı sendromlarında epidural boşluğa elektrotlar yerleştirilir. Hafif elektrik uyarıları, beyne giden ağrı sinyallerini baskılar.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi &rarr;</a>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div>
+          <div class="treatment-content">
+            <h3 class="treatment-title">Omurga ve Sinirlerde Tümör/Metastaz Cerrahisi</h3>
+            <p class="treatment-desc">Onkolojik bulguların cerrahi tedavisi.</p>
+            <div class="treatment-full-desc" style="display: none;">
+              Omurga veya periferik sinirlerdeki tümör veya metastazların mikrocerrahi rezeksiyonu. Bulgulara bağlı olarak bu işlem stabilize edici önlemlerle birlikte yapılır.
+            </div>
+            <a href="javascript:void(0)" class="treatment-link" onclick="openTreatmentModal(this)">Daha fazla bilgi &rarr;</a>
+          </div>
+        </div>
+      </div></section>
   </div>
   <footer class="footer-wrapper">
     <div class="container footer-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
       <div class="footer-brand">
-        <div class="logo" style="margin-bottom: 24px;">
-          <div class="logo-icon">N</div>
-          NEUROCHIRURGIE FISCHER
-        </div>
-        <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+          <a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;">
+            <img src="../img/logo_white.png" alt="Nabiota Health Group" style="height:60px;width:auto;border-radius:12px;">
+            <span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+          </a>
+          <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
           Viersener Str. 50<br>41061 Mönchengladbach
         </div>
         <div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 4px;">
@@ -331,27 +360,26 @@
       
       <div class="footer-links">
         <h4 class="footer-heading">HİZMETLER</h4>
-        <a href="#">Omurga hastalıkları</a>
-        <a href="#">Fıtıklaşmış disk</a>
-        <a href="#">Karpal tünel sendromu</a>
-        <a href="#">Tümör tedavisi</a>
-        <a href="#">Ağrı tedavisi</a>
+        <a href="praxis-schwerpunkte.html">Hastalıklar</a>
+        <a href="diagnostik.html">Teşhis</a>
+        <a href="behandlungen.html">Tedaviler ve Ameliyatlar</a>
+        <a href="zweitmeinung.html">İkinci Görüş</a>
       </div>
       
       <div class="footer-links">
-        <h4 class="footer-heading">PRATİK</h4>
-        <a href="#">Hakkımızda</a>
-        <a href="#">Ekibimiz</a>
-        <a href="#">Basın incelemesi</a>
-        <a href="#">temas etmek</a>
-        <a href="#">damga</a>
+        <h4 class="footer-heading">MUAYENEHANE</h4>
+        <a href="unser-team.html">Hakkımızda</a>
+        <a href="unser-team.html">Ekibimiz</a>
+        <a href="presseschau.html">Basın</a>
+        <a href="sprechzeiten.html">İletişim</a>
+        <a href="impressum.html">Künye</a>
+          <a href="../tr/datenschutz.html">Datenschutz</a>
       </div>
       
       <div class="footer-links">
         <h4 class="footer-heading">DANIŞMA SAATLERİ</h4>
         <p>Pazartesi - Cuma: 8:00 - 18:00</p>
         <p>Cmt - Paz: Kapalı</p>
-        <p style="margin-top: 16px;">7/24 acil: (02161) 678 26 83</p>
       </div>
     
     </div>
@@ -416,7 +444,7 @@
 <!-- Treatment Modal -->
 <div id="treatmentModal" class="video-modal" style="z-index: 99999;">
   <div class="video-modal-content" style="background: white; max-width: 800px; display: flex; flex-direction: column; height: auto; max-height: 90vh; border-radius: 20px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.2);">
-    <span class="close-video" id="closeTreatmentModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; z-index: 10;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+    <span class="close-video" id="closeTreatmentModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 8px; z-index: 10;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
     
     <div style="width: 100%; aspect-ratio: 16/9; background: #000; position: relative; flex-shrink: 0;">
       <iframe id="tModalVideo" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0;"></iframe>
@@ -466,6 +494,44 @@
     });
   }
 </script>
+
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 450px; background: white; padding: 24px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); z-index: 999999; border: 1px solid rgba(0,0,0,0.05); font-family: 'Plus Jakarta Sans', sans-serif;">
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <div style="background: rgba(28, 194, 178, 0.1); padding: 12px; border-radius: 8px; color: var(--primary);">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M16 12.5v.01"></path><path d="M12 16v.01"></path><path d="M11 12.5v.01"></path></svg>
+      </div>
+      <div>
+        <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 700; color: var(--text-dark);">Çerez kullanıyoruz</h4>
+        <p style="margin: 0 0 20px 0; font-size: 0.9rem; line-height: 1.5; color: var(--text-light);">Web sitemizdeki deneyiminizi geliştirmek için çerezler kullanıyoruz. Bazıları temeldir, diğerleri ise bu web sitesini optimize etmemize yardımcı olur.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button id="cookie-accept-all" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem; border: none; cursor: pointer; flex: 1; text-align: center;">Tümünü Kabul Et</button>
+          <button id="cookie-essential-only" class="btn-secondary" style="padding: 10px 20px; font-size: 0.9rem; border: 1px solid #ccc; background: white; color: var(--text-dark); cursor: pointer; flex: 1; border-radius: 99px; text-align: center; transition: all 0.2s;">Sadece Gerekli</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const cookieBanner = document.getElementById('cookie-consent-banner');
+      const btnAccept = document.getElementById('cookie-accept-all');
+      const btnEssential = document.getElementById('cookie-essential-only');
+      
+      if (!localStorage.getItem('cookieConsent')) {
+        cookieBanner.style.display = 'block';
+      }
+      
+      function hideBanner(choice) {
+        localStorage.setItem('cookieConsent', choice);
+        cookieBanner.style.display = 'none';
+      }
+      
+      btnAccept.addEventListener('click', () => hideBanner('all'));
+      btnEssential.addEventListener('click', () => hideBanner('essential'));
+    });
+  </script>
 
 </body>
 </html>

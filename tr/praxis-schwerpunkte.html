@@ -27,6 +27,65 @@
       width: 100%;
     }
   </style>
+  <link rel="alternate" hreflang="de" href="https://my-bandscheibe.de/praxis-schwerpunkte.html">
+  <link rel="alternate" hreflang="en" href="https://my-bandscheibe.de/en/praxis-schwerpunkte.html">
+  <link rel="alternate" hreflang="ru" href="https://my-bandscheibe.de/ru/praxis-schwerpunkte.html">
+  <link rel="alternate" hreflang="tr" href="https://my-bandscheibe.de/tr/praxis-schwerpunkte.html">
+  <link rel="alternate" hreflang="ar" href="https://my-bandscheibe.de/ar/praxis-schwerpunkte.html">
+  <link rel="alternate" hreflang="x-default" href="https://my-bandscheibe.de/praxis-schwerpunkte.html">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Neurochirurgie Fischer",
+  "url": "https://my-bandscheibe.de",
+  "logo": "https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.png",
+  "email": "contact@my-bandscheibe.de",
+  "location": [
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Viersen",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Theodor-Heuss-Platz 10, 4. OG",
+        "addressLocality": "Viersen",
+        "postalCode": "41747",
+        "addressCountry": "DE"
+      }
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Mönchengladbach",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bismarckstr. 106, 3. OG",
+        "addressLocality": "Mönchengladbach",
+        "postalCode": "41061",
+        "addressCountry": "DE"
+      },
+      "telephone": "(02161) 678 26 83"
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Düsseldorf",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schadowstraße 74",
+        "addressLocality": "Düsseldorf",
+        "postalCode": "40212",
+        "addressCountry": "DE"
+      }
+    }
+  ],
+  "medicalSpecialty": "Neurosurgery",
+  "member": {
+    "@type": "Physician",
+    "name": "Kasim Fischer",
+    "medicalSpecialty": "Neurosurgery"
+  }
+}
+  </script>
 </head>
 <body>
 
@@ -36,20 +95,28 @@
   <div class="hero-inner-sub" style="background: linear-gradient(to right, rgba(9, 31, 34, 0.95) 0%, rgba(9, 31, 34, 0.6) 100%), url('../img/imaging.png') center / cover no-repeat #091f22;">
     <div class="container">
       <nav class="navbar" style="margin-bottom: 60px;">
-          <div class="logo">
-            <div class="logo-icon">N</div>
-            Beyin Cerrahisi FISCHER
-          </div>
-          <div class="nav-links">
-            <a href="index.html">Ana sayfa</a>
-            <a href="behandlungen.html">Tedaviler</a>
-            <a href="praxis-schwerpunkte.html" style="color: white; font-weight: 700;">Odak noktaları</a>
-            <a href="unser-team.html">Ekibimiz</a>
-            <a href="presseschau.html">Basın incelemesi</a>
-            <a href="sprechzeiten.html">temas etmek</a>
-          
-        </div>
-                    <div class="lang-switcher hidden-mobile">
+    <a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+      <img src="../img/logo_white.png" alt="Nabiota Health Group" style="height:60px;width:auto;border-radius:12px;">
+      <span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+    </a>
+    <div class="nav-links">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="unser-team.html">Muayenehane</a>
+    <div class="nav-dropdown-wrapper">
+      <a tabindex="0">Hizmetler</a>
+      <div class="nav-dropdown-menu">
+        <a href="praxis-schwerpunkte.html">Hastalıklar</a>
+        <a href="diagnostik.html">Teşhis</a>
+        <a href="behandlungen.html">Tedaviler ve Ameliyatlar</a>
+        <a href="zweitmeinung.html">İkinci Görüş</a>
+      </div>
+    </div>
+    <a href="patienten.html">Hastalar İçin</a>
+    <a href="presseschau.html">Basın</a>
+    <a href="sprechzeiten.html">İletişim</a>
+  </div>
+
+          <div class="lang-switcher hidden-mobile">
             <div class="lang-current">TR <span>▼</span></div>
             <div class="lang-dropdown">
               <a href="../praxis-schwerpunkte.html">Deutsch (DE)</a>
@@ -65,13 +132,24 @@
         
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu" style="display: none;">
-          <a href="index.html">Ana sayfa</a>
-          <a href="behandlungen.html">Tedaviler</a>
-          <a href="praxis-schwerpunkte.html">Odak noktaları</a>
-          <a href="unser-team.html">Ekibimiz</a>
-          <a href="presseschau.html">Basın incelemesi</a>
-          <a href="sprechzeiten.html">temas etmek</a>
-          <a href="sprechzeiten.html" style="color: var(--primary);">randevu al</a>
+  <a href="index.html">Ana Sayfa</a>
+  <a href="unser-team.html">Muayenehane</a>
+  <div class="mobile-dropdown-wrapper">
+    <div class="mobile-dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('active');">
+      <a style="margin:0; padding:0;">Hizmetler</a>
+      <span style="color: rgba(255,255,255,0.7);">▼</span>
+    </div>
+    <div class="mobile-dropdown-menu">
+        <a href="praxis-schwerpunkte.html">Hastalıklar</a>
+        <a href="diagnostik.html">Teşhis</a>
+        <a href="behandlungen.html">Tedaviler ve Ameliyatlar</a>
+        <a href="zweitmeinung.html">İkinci Görüş</a>
+    </div>
+  </div>
+  <a href="patienten.html">Hastalar İçin</a>
+  <a href="presseschau.html">Basın</a>
+  <a href="sprechzeiten.html">İletişim</a>
+  <a href="sprechzeiten.html" style="color: var(--primary);">randevu al</a>
         
         <div class="mobile-lang-switcher">
             <a href="../praxis-schwerpunkte.html">DE</a>
@@ -85,212 +163,245 @@
     
     <div class="container" style="margin-top: 140px; margin-bottom: 30px;">
       <div class="hero-main" style="max-width: 700px; margin-top: 0;">
-        <h1 class="hero-title hero-title-sub">Başlıca faaliyet alanlarımız <span style="color: var(--primary);">Pratik</span></h1>
+        <h1 class="hero-title hero-title-sub"><span style="color: var(--primary);">Uzmanlık Alanlarımız</span></h1>
         <p class="hero-desc" style="max-width: 500px; font-size: 1.1rem; line-height: 1.6; color: rgba(255,255,255,0.8);">Merkezi ve periferik sinir sistemi hastalıklarının tanı ve tedavisi.</p>
-      </div>
-    </div>
-
-    <!-- Bottom Bar inside hero -->
-    <div class="hero-bottom-bar" style="margin-top: 0; background: rgba(9, 31, 34, 0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.05);">
-      <div class="container hero-bottom-grid">
-        <div class="hero-feature">
-          <div class="hero-feature-icon">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          </div>
-          <div>
-            <div class="hero-feature-title">Modern teşhis</div>
-            <div class="hero-feature-desc">En modern ekipmanların kullanılması.</div>
-          </div>
-        </div>
-        <div class="hero-feature">
-          <div class="hero-feature-icon">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <div>
-            <div class="hero-feature-title">Bütünsel yaklaşım</div>
-            <div class="hero-feature-desc">Her hastaya özel çözümler.</div>
-          </div>
-        </div>
-        <div class="hero-feature">
-          <div class="hero-feature-icon">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-          </div>
-          <div>
-            <div class="hero-feature-title">Kanıta dayalı tıp</div>
-            <div class="hero-feature-desc">Tedavi yöntemleri bilimsel verilere dayanmaktadır.</div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 
   <div class="section-wrapper">
     <div class="container">
-      
-      <!-- Split Overview -->
-      <div style="display: flex; gap: 60px; margin-bottom: 80px; flex-wrap: wrap; margin-top: 40px;">
-        <div style="flex: 1; min-width: 300px;">
-          
-          <h2 class="section-title" style="font-size: 2.5rem; max-width: 400px; margin-top: 16px;">Teşhis ve tedavi</h2>
-        </div>
-        <div style="flex: 1; min-width: 300px; color: var(--text-light); line-height: 1.8; font-size: 1.05rem;">
-          <p style="margin-bottom: 20px;">Merkezi ve periferik sinir sistemi hastalıklarının tanı ve tedavisinde uzmanız. İlgili tüm yapılar kapsanmaktadır. Bunlar şunları içerir: kafatası, beyin, omurilik, periferik sinirler ve omurga.</p>
-          <p>Kasim Fischer, Alman Omurga Cerrahisi Derneği ve Omurga Araştırmaları Derneği üyesidir. Fıtıklaşmış diskleri tedavi ederken nazik, minimal invaziv prosedürlere özellikle önem vermektedir.</p>
-        </div>
+
+      <div style="background: rgba(28, 194, 178, 0.05); border-left: 4px solid var(--primary); padding: 24px; border-radius: 0 12px 12px 0; margin-top: 40px; margin-bottom: 60px; width: 100%;">
+        <h3 style="font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px; color: var(--text-dark);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          Önemli Tıbbi Uyarı
+        </h3>
+        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light); margin: 0;">Lütfen dikkat: Kesin tanı ve endikasyon, her zaman kapsamlı bir tıbbi muayeneden sonra doktor tarafından bireysel olarak belirlenir. Belirli bir tedavi sonucunu garanti edemeyiz.</p>
       </div>
-
-            <!-- Services Grid -->
-      <div class="services-grid-new">
-        
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M8 6h8"></path><path d="M8 12h8"></path><path d="M8 18h8"></path></svg>
+    
+      <div style="margin-bottom: 80px;" id="service-0">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
+          <div style="color: var(--primary); width: 40px; height: 40px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2h4l-2 3z"></path><path d="M9 7c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M9 11c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M9 15c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M12 18c-2 2-4 3-5 1l2-2c1.5 1 2.5.5 3-1z"></path><line x1="12" y1="5" x2="12" y2="18"></line></svg>
           </div>
-          <h3 class="service-title-new">Metastazlar</h3>
-          <p class="service-desc-new">Servikal, torakal ve lomber seviyelerde omurga, spinal kanal ve omurilikte tümör metastazları.</p>
-          <div class="service-full-desc" style="display: none;">
-            Tüm omurga hastalıkları, dejeneratif değişiklikler ve instabiliteden tümör metastazlarına kadar kapsamlı teşhis ve tedavi seçenekleri sunuyoruz. Amacımız ağrıyı hafifletmek ve hareketliliği geri kazandırmaktır, daima en nazik tedavi yöntemini seçmeye çalışıyoruz.
+          <div>
+            <h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Omurga</h2>
+            <p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Omurga hastalıkları ve yaralanmaları</p>
           </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Daha fazla bilgi &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-          </div>
-          <h3 class="service-title-new">Disk Hastalıkları</h3>
-          <p class="service-desc-new">Servikal, torakal ve lomber omurganın dejeneratif disk hastalıkları (fıtıklaşmış disk, spinal kanal stenozu).</p>
-          <div class="service-full-desc" style="display: none;">
-            Uygulamamızda sinir sisteminin bilgisayar destekli, nörofizyolojik incelemesi ile çalışıyoruz. Karpal tünel sendromu gibi yaralanmaların veya daralma sendromlarının neden olduğu sinir hasarını bu şekilde teşhis ederiz. Hassas ölçümler ile sinir hasarının tam yerini ve boyutunu belirleyebilir ve kişiye özel bir tedavi planı geliştirebiliriz.
-          </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Daha fazla bilgi &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"></path></svg>
-          </div>
-          <h3 class="service-title-new">Nörofizyolojik çalışmalar</h3>
-          <p class="service-desc-new">Uygulamamızda sinir sisteminin bilgisayar destekli, nörofizyolojik incelemesi ile çalışıyoruz. Karpal tünel sendromu gibi yaralanmaların veya daralma sendromlarının neden olduğu sinir hasarını bu şekilde teşhis ederiz.</p>
-          <div class="service-full-desc" style="display: none;">
-            Nöroşirürji ağrı tedavisi, inatçı ve kronik ağrıların tedavisi için çeşitli seçenekler sunar. Nöromodülasyon ve minimal invaziv prosedürler dahil olmak üzere en son yöntemleri kullanarak ameliyat sonrası omurga ağrısı, hayalet ekstremite ağrısı, dejeneratif faset eklem ağrısı, intervertebral disk hastalığı ve kronik inatçı ağrıları tedavi ediyoruz.
-          </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Daha fazla bilgi &rarr;</a>
         </div>
         
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-12 12h-6v-6z"></path><path d="M12 8l4 4"></path></svg>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Bel/Boyun Fıtığı (Bandscheibenvorfälle)</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Disk materyalinin sinirlere baskı yaptığı dejeneratif değişiklikler.</p>
+            <div class="service-full-desc" style="display: none;">
+              Disk materyalinin sinirlere baskı yaptığı dejeneratif değişiklikler.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
           </div>
-          <h3 class="service-title-new">Operasyonlar</h3>
-          <p class="service-desc-new">Sinir hastalıkları ve omurga, omurilik kanalı ve omuriliğe tümör metastazları için radyofrekans tümör ablasyonu gibi modern teknikler kullanılarak özel cerrahi müdahaleler.</p>
-          <div class="service-full-desc" style="display: none;">
-            Sinir hastalıkları ve omurga, omurilik kanalı ve omuriliğe tümör metastazları için özel cerrahi müdahaleler gerçekleştiriyoruz. Radyofrekans tümör ablasyonu gibi modern minimal invaziv ve mikrocerrahi teknikleri kullanarak hastalarımız için maksimum hassasiyet ve güvenlik sağlıyoruz.
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spinal Kanal Stenozu</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Omurilik veya sinirlere baskı yapan omurilik kanalının daralması.</p>
+            <div class="service-full-desc" style="display: none;">
+              Omurilik veya sinirlere baskı yapan omurilik kanalının daralması.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
           </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Daha fazla bilgi &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Nöroforaminal Stenoz</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Sinir köklerinin omurgadan çıktığı açıklıkların daralması.</p>
+            <div class="service-full-desc" style="display: none;">
+              Sinir köklerinin omurgadan çıktığı açıklıkların daralması.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
           </div>
-          <h3 class="service-title-new">Nöroşirürji ağrı tedavisi</h3>
-          <p class="service-desc-new">Ameliyat sonrası omurga ağrısı, hayalet ekstremite ağrısı, dejeneratif faset eklem ağrısı, intervertebral disk hastalığı ve kronik inatçı ağrının tedavisi.</p>
-          <div class="service-full-desc" style="display: none;">
-            <strong>Servikal, torakal ve lomber omurganın dejeneratif disk hastalıkları (fıtıklaşmış disk, spinal kanal stenozu)</strong><br><br>Fıtıklaşmış diskler için standart operasyon diskin çıkarılması ve bitişik omurların birleştirilmesidir. Ancak bu durumda hasta diskin hareketliliğini kaybeder. Hareketliliği geri kazandıran bir alternatif, metal ve plastikten yapılmış yapay disk protezidir. Aşınmış doğal diskin yerine yapay disk yerleştirilir. Amaç, omurganın doğal hareketliliğini korurken disk kaynaklı sırt ağrısını ortadan kaldırmaktır.
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spondilolistezis</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Bir omurun altındaki omur üzerinde kayması.</p>
+            <div class="service-full-desc" style="display: none;">
+              Bir omurun altındaki omur üzerinde kayması.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
           </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Daha fazla bilgi &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"></path><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"></path></svg>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Omurga İnstabilitesi</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Omurlar arasında aşırı veya anormal hareketlilik.</p>
+            <div class="service-full-desc" style="display: none;">
+              Omurlar arasında aşırı veya anormal hareketlilik.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
           </div>
-          <h3 class="service-title-new">Omurga hastalıkları</h3>
-          <p class="service-desc-new">Servikal omurga, torasik omurga ve lomber omurganın fıtıklaşmış disklerinin tedavisi, dejeneratif omurga kanalı stenozu, omurganın instabilitesi, intraspinal tümör metastazları ve primer iliosakral eklem artrozunun tedavisi.</p>
-          <div class="service-full-desc" style="display: none;">
-            <strong>Polinöropati</strong><br><br>Yanma, yırtılma, batma ve uyuşma gibi sinir ağrıları aşırı ağrı kesici ilaç kullanılarak tedavi edilmek zorunda değildir. Kliniğimizde, kronik ağrıyı azaltmak için stimülatörlerin kullanımı hakkında sizi memnuniyetle bilgilendirebiliriz. İlaçsız tedavi, SCS ve PNP terapisini içerir.
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Omurga Kırıkları</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Genellikle travma veya osteoporoza bağlı omur cismi kırıkları.</p>
+            <div class="service-full-desc" style="display: none;">
+              Genellikle travma veya osteoporoza bağlı omur cismi kırıkları.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
           </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Daha fazla bilgi &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Faset Eklem Hastalıkları</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Küçük omurga eklemlerinde ağrıya neden olan dejeneratif değişiklikler.</p>
+            <div class="service-full-desc" style="display: none;">
+              Küçük omurga eklemlerinde ağrıya neden olan dejeneratif değişiklikler.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
           </div>
-          <h3 class="service-title-new">Kronik Ağrı</h3>
-          <p class="service-desc-new">Kronik ağrı, polinöropati teşhisi ve tedavisi ve ilaçsız tedaviler.</p>
-          <div class="service-full-desc" style="display: none;">
-            <strong>Periferik sinir hastalıkları / kompresyon sendromları - CTS - SUS - TTS vb.</strong><br><br>Sinir sisteminin bilgisayar destekli nörofizyolojik incelemesi ile tüm sinir sistemi patolojisini ağrısız bir şekilde ölçüyoruz. Bu sayede, örneğin bir yaralanma veya kompresyon sendromundan kaynaklanan sinir hasarını tespit edebiliriz. El bileğindeki en bilinen kompresyon sendromu karpal tünel sendromu, dirsekte kübital tünel sendromu ve topuk kemiğinde tarsal tünel sendromudur. Sinirin nöroşirürjik olarak serbest bırakılması hızlı bir iyileşme sağlar ve lokal anestezi (gerekirse genel anestezi) altında yaklaşık 20 ila 25 dakika sürer.
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Sakroiliak Eklem (ISG)</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Sakroiliak eklemin iltihaplanması veya disfonksiyonu.</p>
+            <div class="service-full-desc" style="display: none;">
+              Sakroiliak eklemin iltihaplanması veya disfonksiyonu.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
           </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Daha fazla bilgi &rarr;</a>
-        </div>
-
-        <div class="service-card-new">
-          <div class="service-icon-new">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Tümörler/Metastazlar</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Omurgayı etkileyen iyi veya kötü huylu büyümeler.</p>
+            <div class="service-full-desc" style="display: none;">
+              Omurgayı etkileyen iyi veya kötü huylu büyümeler.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
           </div>
-          <h3 class="service-title-new">Sinir Hastalıkları</h3>
-          <p class="service-desc-new">Periferik sinir hastalıkları / kompresyon sendromları - CTS - SUS - TTS vb.</p>
-          <div class="service-full-desc" style="display: none;">
-            <strong>Servikal, torakal ve lomber seviyelerde omurga, spinal kanal ve omurilikte tümör metastazları</strong><br><br>Osteoporotik, tümör kaynaklı ve travmatik omurga kırıklarının tedavisinde kliniğimiz perkütan radyofrekans kifoplasti yöntemine güvenmektedir. Kırık omur gövdelerine özel, viskoz bir kemik çimentosu enjekte edilerek kemiğin orijinal profili geri kazandırılır ve stabilize edilir. Omurgada ağrılı tümör metastazı olan hastalar için yeni bir tedavi seçeneği, STAR adı verilen radyofrekans ile hedefe yönelik tümör ablasyonudur. Ağrılı tümörler, yerinde ısı ile spesifik olarak yok edilir. Prosedürler genellikle omur başına 15-20 dakikadan fazla sürmez.
-          </div>
-          <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-block; margin-top: 16px;">Daha fazla bilgi &rarr;</a>
-        </div>
-
-      </div>
-
-      <!-- Bottom Feature Row 4 Cols -->
-      <div class="feature-row-4" style="border-bottom: none; margin-top: 40px; padding-bottom: 80px;">
-        <div class="feature-item">
-          <div class="feature-icon-light">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          </div>
-          <div>
-            <div class="feature-title-light">Hassas teşhis</div>
-            <div class="feature-desc-light">Modern ekipmanlar sayesinde yüksek doğruluk.</div>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon-light">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-12 12h-6v-6z"></path><path d="M12 8l4 4"></path></svg>
-          </div>
-          <div>
-            <div class="feature-title-light">Minimal invazif yöntemler</div>
-            <div class="feature-desc-light">Hızlı iyileşme için nazik prosedürler.</div>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon-light">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
-          </div>
-          <div>
-            <div class="feature-title-light">Bireysel yaklaşım</div>
-            <div class="feature-desc-light">Her hastanın özellikleri dikkate alınarak tedavi.</div>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon-light">
-            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-          </div>
-          <div>
-            <div class="feature-title-light">Her aşamada destek</div>
-            <div class="feature-desc-light">Teşhisten rehabilitasyona kadar yanınızdayız.</div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Omurilik Hastalıkları</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Omurilik fonksiyonunu etkileyen çeşitli durumlar.</p>
+            <div class="service-full-desc" style="display: none;">
+              Omurilik fonksiyonunu etkileyen çeşitli durumlar.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
           </div>
         </div>
       </div>
-
+      <div style="margin-bottom: 80px;" id="service-1">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
+          <div style="color: var(--primary); width: 40px; height: 40px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v4"></path><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v6"></path><path d="M10 10.5V5a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"></path><path d="M18 11a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path><path d="M12 11c-1 2-2 3-1 5c1 1 1 3 1 6"></path><path d="M12 13c1 1 2 2 2 3"></path></svg>
+          </div>
+          <div>
+            <h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Periferik Sinirler</h2>
+            <p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Beyin ve omurilik dışındaki sinirlerin hastalıkları</p>
+          </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Karpal Tünel Sendromu</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">El bileği bölgesinde medyan sinirin sıkışması.</p>
+            <div class="service-full-desc" style="display: none;">
+              El bileği bölgesinde medyan sinirin sıkışması.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Kubital Tünel Sendromu</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Dirsekte ulnar sinirin sıkışması.</p>
+            <div class="service-full-desc" style="display: none;">
+              Dirsekte ulnar sinirin sıkışması.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Tarsal Tünel Sendromu</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Ayak bileğinde tibial sinirin sıkışması.</p>
+            <div class="service-full-desc" style="display: none;">
+              Ayak bileğinde tibial sinirin sıkışması.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Sinir Sıkışması Sendromları</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Bir sinirin sıkıştığı çeşitli durumlar.</p>
+            <div class="service-full-desc" style="display: none;">
+              Bir sinirin sıkıştığı çeşitli durumlar.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Sinir Hasarları/Yaralanmaları</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Sinir fonksiyonu kaybına yol açan travmatik yaralanmalar.</p>
+            <div class="service-full-desc" style="display: none;">
+              Sinir fonksiyonu kaybına yol açan travmatik yaralanmalar.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Polinöropatiler</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Birden fazla periferik sinirin aynı anda hasar görmesi.</p>
+            <div class="service-full-desc" style="display: none;">
+              Birden fazla periferik sinirin aynı anda hasar görmesi.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-bottom: 80px;" id="service-2">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
+          <div style="color: var(--primary); width: 40px; height: 40px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="7"></circle><circle cx="12" cy="12" r="2"></circle><line x1="12" y1="1" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="23"></line><line x1="1" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="23" y2="12"></line></svg>
+          </div>
+          <div>
+            <h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Ağrı Sendromları</h2>
+            <p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Çeşitli kökenlere sahip kronik ve akut ağrı durumları</p>
+          </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Kronik Sırt/Boyun Ağrısı</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Birkaç ay devam eden inatçı ağrı.</p>
+            <div class="service-full-desc" style="display: none;">
+              Birkaç ay devam eden inatçı ağrı.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Nöropatik Ağrı</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Sinir sisteminin kendisindeki hasarın neden olduğu ağrı.</p>
+            <div class="service-full-desc" style="display: none;">
+              Sinir sisteminin kendisindeki hasarın neden olduğu ağrı.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Ameliyat Sonrası Ağrı Sendromları</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Cerrahi bir prosedürden sonra gelişen kronik ağrı.</p>
+            <div class="service-full-desc" style="display: none;">
+              Cerrahi bir prosedürden sonra gelişen kronik ağrı.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Fantom Ağrısı</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Ampute edilmiş bir vücut parçasında hissedilen ağrı.</p>
+            <div class="service-full-desc" style="display: none;">
+              Ampute edilmiş bir vücut parçasında hissedilen ağrı.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
+          </div>
+          <div class="service-card-new" style="margin-bottom: 0;">
+            <h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Psikosomatik Faktörler</h3>
+            <p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Fiziksel ağrı deneyimini yoğunlaştıran psikolojik faktörler.</p>
+            <div class="service-full-desc" style="display: none;">
+              Fiziksel ağrı deneyimini yoğunlaştıran psikolojik faktörler.
+            </div>
+            <a href="javascript:void(0)" class="service-link-new" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Daha fazla bilgi &rarr;</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
+  <!-- Footer Section -->
   <footer class="footer-wrapper">
-    <div class="container footer-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
+    <div class="container footer-grid">
       <div class="footer-brand">
-        <div class="logo" style="margin-bottom: 24px;">
-          <div class="logo-icon">N</div>
-          NEUROCHIRURGIE FISCHER
-        </div>
-        <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+          <a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;">
+            <img src="../img/logo_white.png" alt="Nabiota Health Group" style="height:60px;width:auto;border-radius:12px;">
+            <span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+          </a>
+          <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
           Viersener Str. 50<br>41061 Mönchengladbach
         </div>
         <div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 4px;">
@@ -306,27 +417,26 @@
       
       <div class="footer-links">
         <h4 class="footer-heading">HİZMETLER</h4>
-        <a href="#">Omurga hastalıkları</a>
-        <a href="#">Fıtıklaşmış disk</a>
-        <a href="#">Karpal tünel sendromu</a>
-        <a href="#">Tümör tedavisi</a>
-        <a href="#">Ağrı tedavisi</a>
+        <a href="praxis-schwerpunkte.html">Hastalıklar</a>
+        <a href="diagnostik.html">Teşhis</a>
+        <a href="behandlungen.html">Tedaviler ve Ameliyatlar</a>
+        <a href="zweitmeinung.html">İkinci Görüş</a>
       </div>
       
       <div class="footer-links">
-        <h4 class="footer-heading">PRATİK</h4>
-        <a href="#">Hakkımızda</a>
-        <a href="#">Ekibimiz</a>
-        <a href="#">Basın incelemesi</a>
-        <a href="#">temas etmek</a>
-        <a href="#">damga</a>
+        <h4 class="footer-heading">MUAYENEHANE</h4>
+        <a href="unser-team.html">Hakkımızda</a>
+        <a href="unser-team.html">Ekibimiz</a>
+        <a href="presseschau.html">Basın</a>
+        <a href="sprechzeiten.html">İletişim</a>
+        <a href="impressum.html">Künye</a>
+          <a href="../tr/datenschutz.html">Datenschutz</a>
       </div>
       
       <div class="footer-links">
         <h4 class="footer-heading">DANIŞMA SAATLERİ</h4>
         <p>Pazartesi - Cuma: 8:00 - 18:00</p>
         <p>Cmt - Paz: Kapalı</p>
-        <p style="margin-top: 16px;">7/24 acil: (02161) 678 26 83</p>
       </div>
     
     </div>
@@ -334,9 +444,6 @@
       &copy; 2026 Neurochirurgie Fischer
     </div>
   </footer>
-</div>
-
-
 
 <script>
   // Mobile Menu Toggle
@@ -390,7 +497,7 @@
     </div>
 <div id="serviceModal" class="video-modal" style="z-index: 99999; display: none;">
   <div class="video-modal-content" style="background: white; max-width: 800px; display: flex; flex-direction: column; height: auto; max-height: 90vh; border-radius: 20px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.2);">
-    <span class="close-video" id="closeServiceModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; z-index: 10; cursor: pointer;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+    <span class="close-video" id="closeServiceModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 8px; z-index: 10; cursor: pointer;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
     <div style="width: 100%; aspect-ratio: 16/9; background: #000; position: relative; flex-shrink: 0;">
       <iframe id="sModalVideo" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0;"></iframe>
     </div>

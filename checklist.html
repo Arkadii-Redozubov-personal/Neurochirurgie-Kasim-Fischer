@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>План разработки и Чек-лист | my-bandscheibe.de</title>
+  
+  
+  
+  <style>
+    :root {
+      --bg: #0b1319;
+      --card-bg: #13212b;
+      --card-border: #1e3343;
+      --primary: #00a896;
+      --primary-light: #02c39a;
+      --primary-glow: rgba(0, 168, 150, 0.25);
+      --accent: #f4a261;
+      --danger: #e76f51;
+      --danger-bg: rgba(231, 111, 81, 0.12);
+      --warning: #e9c46a;
+      --warning-bg: rgba(233, 196, 106, 0.12);
+      --success: #2a9d8f;
+      --success-bg: rgba(42, 157, 143, 0.15);
+      --text: #e2e8f0;
+      --text-muted: #8e9fad;
+      --text-dim: #5c6f80;
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+
+    /* Top Navigation / Header */
+    header {
+      background: rgba(19, 33, 43, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 24px;
+    }
+    .header-content {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .logo-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #041417;
+      font-weight: 800;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    .logo-text h1 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.01em;
+    }
+    .logo-text p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .header-actions {
+      display: flex;
+      gap: 10px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      font-family: inherit;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #041417;
+    }
+    .btn-primary:hover { background: var(--primary-light); }
+    .btn-outline {
+      background: transparent;
+      border-color: var(--card-border);
+      color: var(--text);
+    }
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary-light);
+      background: var(--primary-glow);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1300px;
+      margin: 32px auto 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Tabs Navigation */
+    .tabs-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .tab-btn {
+      padding: 10px 18px;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tab-btn:hover {
+      color: var(--text);
+      background: rgba(255,255,255,0.03);
+    }
+    .tab-btn.active {
+      background: var(--card-bg);
+      color: var(--primary-light);
+      border-color: var(--card-border);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .tab-badge {
+      background: rgba(255,255,255,0.1);
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+    }
+    .tab-btn.active .tab-badge {
+      background: var(--primary);
+      color: #041417;
+      font-weight: 700;
+    }
+
+    /* Tab Content Panels */
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.25s ease;
+    }
+    .tab-panel.active { display: block; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Cards & Grids */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Stats Ribbon */
+    .stats-ribbon {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .stat-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .stat-val { font-size: 1.4rem; font-weight: 800; color: #fff; line-height: 1.1; }
+    .stat-label { font-size: 0.8rem; color: var(--text-muted); }
+
+    /* Interactive Checklist */
+    .checklist-group {
+      margin-bottom: 24px;
+    }
+    .checklist-group-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: var(--radius-sm);
+      margin-bottom: 8px;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .check-item:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    .check-item.completed {
+      background: rgba(42, 157, 143, 0.08);
+      border-color: rgba(42, 157, 143, 0.25);
+    }
+    .check-item.completed .check-label {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+    .check-box-custom {
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--text-dim);
+      border-radius: 6px;
+      margin-top: 2px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .check-item.completed .check-box-custom {
+      background: var(--success);
+      border-color: var(--success);
+      color: #041417;
+    }
+    .check-box-custom svg {
+      width: 12px;
+      height: 12px;
+      display: none;
+    }
+    .check-item.completed .check-box-custom svg { display: block; }
+    .check-content { flex: 1; }
+    .check-label { font-size: 0.95rem; font-weight: 600; color: #fff; }
+    .check-desc { font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-top: 4px;
+    }
+    .tag-danger { background: var(--danger-bg); color: var(--danger); }
+    .tag-warning { background: var(--warning-bg); color: var(--warning); }
+    .tag-success { background: var(--success-bg); color: var(--primary-light); }
+    .tag-info { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+
+    /* Tables */
+    .table-responsive {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+    th {
+      background: rgba(255,255,255,0.03);
+      padding: 12px 16px;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--card-border);
+    }
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      color: var(--text);
+      vertical-align: top;
+    }
+    tr:hover td {
+      background: rgba(255,255,255,0.015);
+    }
+    .code-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      background: rgba(0,0,0,0.3);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--primary-light);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* Warning Banner */
+    .alert-box {
+      background: var(--danger-bg);
+      border: 1px solid rgba(231, 111, 81, 0.3);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .alert-icon { font-size: 24px; color: var(--danger); }
+    .alert-title { font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .alert-text { font-size: 0.85rem; color: #fca5a5; }
+
+    /* Copy toast */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--primary);
+      color: #041417;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      display: none;
+      z-index: 9999;
+      animation: popIn 0.2s ease;
+    }
+    @keyframes popIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    /* Progress bar */
+    .progress-bar-wrap {
+      width: 100%;
+      height: 8px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+  </style>
+  <link rel="alternate" hreflang="de" href="https://my-bandscheibe.de/checklist.html">
+  <link rel="alternate" hreflang="en" href="https://my-bandscheibe.de/en/checklist.html">
+  <link rel="alternate" hreflang="ru" href="https://my-bandscheibe.de/ru/checklist.html">
+  <link rel="alternate" hreflang="tr" href="https://my-bandscheibe.de/tr/checklist.html">
+  <link rel="alternate" hreflang="ar" href="https://my-bandscheibe.de/ar/checklist.html">
+  <link rel="alternate" hreflang="x-default" href="https://my-bandscheibe.de/checklist.html">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Neurochirurgie Fischer",
+  "url": "https://my-bandscheibe.de",
+  "logo": "https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.png",
+  "email": "contact@my-bandscheibe.de",
+  "location": [
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Viersen",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Theodor-Heuss-Platz 10, 4. OG",
+        "addressLocality": "Viersen",
+        "postalCode": "41747",
+        "addressCountry": "DE"
+      }
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Mönchengladbach",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bismarckstr. 106, 3. OG",
+        "addressLocality": "Mönchengladbach",
+        "postalCode": "41061",
+        "addressCountry": "DE"
+      },
+      "telephone": "(02161) 678 26 83"
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Neurochirurgie Fischer - Düsseldorf",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schadowstraße 74",
+        "addressLocality": "Düsseldorf",
+        "postalCode": "40212",
+        "addressCountry": "DE"
+      }
+    }
+  ],
+  "medicalSpecialty": "Neurosurgery",
+  "member": {
+    "@type": "Physician",
+    "name": "Kasim Fischer",
+    "medicalSpecialty": "Neurosurgery"
+  }
+}
+  </script>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header>
+    <div class="header-content">
+      <div class="logo-badge">
+        <div class="logo-icon">N</div>
+        <div class="logo-text">
+          <h1>my-bandscheibe.de &bull; План разработки и Чек-лист</h1>
+          <p>Интерактивная панель задач по Master-Dokument от 29.08.2026</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-outline" onclick="copyClientList()">📋 Скопировать список для заказчика</button>
+        <button class="btn btn-primary" onclick="window.print()">🖨️ Печать / PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Key Metrics Ribbon -->
+    <div class="stats-ribbon">
+      <div class="stat-box">
+        <div class="stat-icon" style="background: rgba(0,168,150,0.15); color: var(--primary-light);">📂</div>
+        <div>
+          <div class="stat-val">24+</div>
+          <div class="stat-label">Целевых страниц (Sitemap)</div>
+        </div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-icon" style="background: rgba(244,162,97,0.15); color: var(--accent);">📍</div>
+        <div>
+          <div class="stat-val">3 филиала</div>
+          <div class="stat-label">Viersen, Mönchengladbach, DUS</div>
+        </div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-icon" style="background: rgba(231,111,81,0.15); color: var(--danger);">⚖️</div>
+        <div>
+          <div class="stat-val">HWG / DDG</div>
+          <div class="stat-label">Строгие нормы законодательства Германии</div>
+        </div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-icon" style="background: rgba(42,157,143,0.15); color: var(--primary-light);">🌐</div>
+        <div>
+          <div class="stat-val">5 языков</div>
+          <div class="stat-label">DE, RU, TR, AR (RTL), EN</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Tabs -->
+    <div class="tabs-bar">
+      <button class="tab-btn active" onclick="openTab(event, 'tab-status')">
+        <span>📊 Статус проекта (ТЗ п. 2)</span>
+        <span class="tab-badge">7 разделов</span>
+      </button>
+      <button class="tab-btn" onclick="openTab(event, 'tab-client')">
+        <span>📩 Запросы к заказчику</span>
+        <span class="tab-badge" id="clientCount">0/14</span>
+      </button>
+      <button class="tab-btn" onclick="openTab(event, 'tab-blockers')">
+        <span>⛔ Blockers</span>
+        <span class="tab-badge">7 запретов</span>
+      </button>
+      <button class="tab-btn" onclick="openTab(event, 'tab-sprints')">
+        <span>🚀 Спринты (Roadmap)</span>
+        <span class="tab-badge" id="sprintsCount">0/21</span>
+      </button>
+      <button class="tab-btn" onclick="openTab(event, 'tab-sitemap')">
+        <span>🗺️ Матрица страниц</span>
+        <span class="tab-badge">24 URL</span>
+      </button>
+      <button class="tab-btn" onclick="openTab(event, 'tab-hwg')">
+        <span>⚖️ Замены по HWG</span>
+        <span class="tab-badge">8 правок</span>
+      </button>
+      <button class="tab-btn" onclick="openTab(event, 'tab-golive')">
+        <span>✅ Go-Live</span>
+        <span class="tab-badge" id="goliveCount">0/13</span>
+      </button>
+    </div>
+
+    <!-- ================= TAB 0: СТАТУС ПРОЕКТА (ТЗ П. 2) ================= -->
+    <div id="tab-status" class="tab-panel active">
+
+      <!-- PDF Quote Banner -->
+      <div style="background: rgba(0,168,150,0.07); border: 1px solid rgba(0,168,150,0.2); border-radius: var(--radius); padding: 18px 22px; margin-bottom: 24px; display: flex; gap: 14px; align-items: flex-start;">
+        <div style="font-size: 22px;">📄</div>
+        <div>
+          <div style="font-weight: 700; color: #fff; margin-bottom: 4px;">Источник: Master-Dokument, Раздел 2 — «Главный вывод повторной проверки»</div>
+          <div style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Архитектура сайта и большая часть контентной структуры уже пригодны для дизайна. Однако Anlage 2 нельзя использовать как полностью готовый публичный текст без дополнительной медицинской, фактической и правовой редакции. В одном документе сейчас смешаны готовые публичные тексты, внутренние инструкции, placeholder-данные и формулировки, требующие подтверждения.</div>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; align-items: center;">
+        <div style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Легенда:</div>
+        <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#22c55e;"></span> Готово</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--warning);"></span> Проверить</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--danger);"></span> Не готово</span>
+      </div>
+
+      <!-- Status Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 16px;">
+
+        <!-- ГОТОВО: Архитектура -->
+        <div style="background: var(--card-bg); border: 1px solid #1e4a31; border-left: 4px solid #22c55e; border-radius: var(--radius); padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#22c55e;flex-shrink:0;"></span>
+              <span style="font-weight: 700; font-size: 1rem; color: #fff;">Архитектура / Sitemap</span>
+            </div>
+            <span style="background: rgba(34,197,94,0.15); color: #22c55e; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 20px;">ГОТОВО</span>
+          </div>
+          <div style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">Логичная структура по пути пациента:<br><span style="color: var(--primary-light);">Заболевание → Диагностика → Лечение → Врач → Филиал → Запись</span></div>
+          <div style="display: flex; align-items: flex-start; gap: 8px;">
+            <span style="font-size: 1rem;">✅</span>
+            <div style="font-size: 0.85rem; color: var(--text);"><strong>Действие:</strong> Можно передавать в Figma / начинать верстку по шаблонам.</div>
+          </div>
+        </div>
+
+        <!-- ГОТОВО: UX-концепция -->
+        <div style="background: var(--card-bg); border: 1px solid #1e4a31; border-left: 4px solid #22c55e; border-radius: var(--radius); padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#22c55e;flex-shrink:0;"></span>
+              <span style="font-weight: 700; font-size: 1rem; color: #fff;">UX-концепция</span>
+            </div>
+            <span style="background: rgba(34,197,94,0.15); color: #22c55e; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 20px;">ГОТОВО</span>
+          </div>
+          <div style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">Путь пациента чётко выстроен: заболевание → диагностика → лечение → врач → филиал → запись.</div>
+          <div style="display: flex; align-items: flex-start; gap: 8px;">
+            <span style="font-size: 1rem;">✅</span>
+            <div style="font-size: 0.85rem; color: var(--text);"><strong>Действие:</strong> Использовать как базовый UX. Переносить в реальные страницы.</div>
+          </div>
+        </div>
+
+        <!-- ПРОВЕРИТЬ: Медицинские тексты -->
+        <div style="background: var(--card-bg); border: 1px solid #4a3d1e; border-left: 4px solid var(--warning); border-radius: var(--radius); padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--warning);flex-shrink:0;"></span>
+              <span style="font-weight: 700; font-size: 1rem; color: #fff;">Медицинские тексты</span>
+            </div>
+            <span style="background: rgba(233,196,106,0.15); color: var(--warning); font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 20px;">ПРОВЕРИТЬ</span>
+          </div>
+          <div style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">Содержание сильное, но есть <span style="color: var(--warning);">рекламно сильные формулировки</span>, которые нарушают § 3 HWG.</div>
+          <div style="display: flex; align-items: flex-start; gap: 8px;">
+            <span style="font-size: 1rem;">⚠️</span>
+            <div style="font-size: 0.85rem; color: var(--text);"><strong>Действие:</strong> Финальная врачебная редакция текстов. Применить таблицу замен (вкладка ⚖️ HWG).</div>
+          </div>
+        </div>
+
+        <!-- ПРОВЕРИТЬ: Перечень процедур -->
+        <div style="background: var(--card-bg); border: 1px solid #4a3d1e; border-left: 4px solid var(--warning); border-radius: var(--radius); padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--warning);flex-shrink:0;"></span>
+              <span style="font-weight: 700; font-size: 1rem; color: #fff;">Перечень процедур</span>
+            </div>
+            <span style="background: rgba(233,196,106,0.15); color: var(--warning); font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 20px;">ПРОВЕРИТЬ</span>
+          </div>
+          <div style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">Есть расширенный список операций и методов лечения, но <span style="color: var(--warning);">фактический scope требует подтверждения</span> от доктора.</div>
+          <div style="display: flex; align-items: flex-start; gap: 8px;">
+            <span style="font-size: 1rem;">⚠️</span>
+            <div style="font-size: 0.85rem; color: var(--text);"><strong>Действие:</strong> Доктор подтверждает, что реально выполняется → убрать неактуальные позиции со страницы.</div>
+          </div>
+        </div>
+
+        <!-- ПРОВЕРИТЬ: Команда / квалификации -->
+        <div style="background: var(--card-bg); border: 1px solid #4a3d1e; border-left: 4px solid var(--warning); border-radius: var(--radius); padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--warning);flex-shrink:0;"></span>
+              <span style="font-weight: 700; font-size: 1rem; color: #fff;">Команда / Квалификации</span>
+            </div>
+            <span style="background: rgba(233,196,106,0.15); color: var(--warning); font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 20px;">ПРОВЕРИТЬ</span>
+          </div>
+          <div style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">Нужно подтвердить состав, точные титулы и <span style="color: var(--warning);">Zusatzbezeichnungen</span> каждого сотрудника.</div>
+          <div style="display: flex; align-items: flex-start; gap: 8px;">
+            <span style="font-size: 1rem;">⚠️</span>
+            <div style="font-size: 0.85rem; color: var(--text);"><strong>Действие:</strong> Публиковать только подтвержденное. Критическая ошибка с биографией врача — исправить в Спринте 1.</div>
+          </div>
+        </div>
+
+        <!-- НЕ ГОТОВО: Düsseldorf -->
+        <div style="background: var(--card-bg); border: 1px solid #4a2020; border-left: 4px solid var(--danger); border-radius: var(--radius); padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--danger);flex-shrink:0;"></span>
+              <span style="font-weight: 700; font-size: 1rem; color: #fff;">Филиал Düsseldorf</span>
+            </div>
+            <span style="background: rgba(231,111,81,0.15); color: var(--danger); font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 20px;">НЕ ГОТОВО</span>
+          </div>
+          <div style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">В текущем коде присутствуют <span style="color: var(--danger); font-family: 'JetBrains Mono', monospace;">0211-xxxx / xxxxx</span> — placeholder-контакты. Нарушает доверие и запрещено к публикации.</div>
+          <div style="display: flex; align-items: flex-start; gap: 8px;">
+            <span style="font-size: 1rem;">🚫</span>
+            <div style="font-size: 0.85rem; color: var(--text);"><strong>Действие:</strong> Скрыть раздел Düsseldorf до получения реальных контактов. Не публиковать в таком виде.</div>
+          </div>
+        </div>
+
+        <!-- НЕ ГОТОВО: Datenschutz -->
+        <div style="background: var(--card-bg); border: 1px solid #4a2020; border-left: 4px solid var(--danger); border-radius: var(--radius); padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--danger);flex-shrink:0;"></span>
+              <span style="font-weight: 700; font-size: 1rem; color: #fff;">Datenschutz (Политика конф.)</span>
+            </div>
+            <span style="background: rgba(231,111,81,0.15); color: var(--danger); font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 20px;">НЕ ГОТОВО</span>
+          </div>
+          <div style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">Текущий текст общий, <span style="color: var(--danger);">без описания фактического tech stack</span> (Doctolib, хостинг, Google Maps, шрифты).</div>
+          <div style="display: flex; align-items: flex-start; gap: 8px;">
+            <span style="font-size: 1rem;">🚫</span>
+            <div style="font-size: 0.85rem; color: var(--text);"><strong>Действие:</strong> Сделать финальную Datenschutzerklärung после выбора хостинга и всех сервисов (Спринт 3).</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Summary Bar -->
+      <div style="margin-top: 28px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 20px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center;">
+        <div style="font-weight: 700; color: #fff;">Итог по проекту:</div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#22c55e;"></span>
+          <span style="font-size: 0.9rem;"><strong style="color:#22c55e;">2 раздела</strong> — готово к работе</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--warning);"></span>
+          <span style="font-size: 0.9rem;"><strong style="color:var(--warning);">3 раздела</strong> — требуют проверки и редакции</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--danger);"></span>
+          <span style="font-size: 0.9rem;"><strong style="color:var(--danger);">2 раздела</strong> — не готовы, блокируют публикацию</span>
+        </div>
+        <div style="margin-left: auto; font-size: 0.82rem; color: var(--text-muted);">Следующий шаг: <span style="color: var(--primary-light); font-weight: 600;">Спринт 1 → Юридическая чистка и исправление Команды</span></div>
+      </div>
+
+    </div>
+
+    <!-- ================= TAB 1: ЧЕК-ЛИСТ ДЛЯ ЗАКАЗЧИКА ================= -->
+    <div id="tab-client" class="tab-panel">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Опросный чек-лист для заказчика (п. 20 Master-Dokument)</div>
+            <div class="card-subtitle">Отметьте полученные пункты. Можно скопировать этот список одной кнопкой для отправки клиенту в мессенджер/email.</div>
+          </div>
+          <div style="text-align: right; min-width: 160px;">
+            <span id="clientPercent" style="font-weight: 700; color: var(--primary-light);">0% выполнено</span>
+            <div class="progress-bar-wrap"><div class="progress-bar-fill" id="clientBar"></div></div>
+          </div>
+        </div>
+
+        <div class="checklist-group">
+          <div class="checklist-group-title">1. Врач и официальные квалификации</div>
+          
+          <div class="check-item" onclick="toggleCheck(this, 'c_fzb')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Официальная Facharztbezeichnung по дипломам и Ärztekammer</div>
+              <div class="check-desc">Точное наименование специальности (например: Facharzt für Neurochirurgie). Не придумывать несуществующие титулы вроде «Facharzt für Wirbelsäulenmedizin».</div>
+              <span class="tag tag-danger">Юридический риск</span>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'c_zb')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Подтвержденные Zusatzbezeichnungen (дополнительные квалификации)</div>
+              <div class="check-desc">Например: Spezielle Schmerztherapie, Spezielle Neurochirurgie и т.п., только официально подтвержденные.</div>
+              <span class="tag tag-warning">Обязательно</span>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'c_photo')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Актуальные профессиональные фотографии доктора и практики</div>
+              <div class="check-desc">Качественные фото высокого разрешения для Hero-блока и страницы профиля врача. Запрещено использовать абстрактные AI-лица.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'c_memberships')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Список членств в ассоциациях (DGNC, DWG, BDNC, BDNR) и публикации</div>
+              <div class="check-desc">Подтверждение членства и права на использование логотипов обществ на сайте. Список реальных научных статей.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-group">
+          <div class="checklist-group-title">2. Команда практики (Praxisteam)</div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'c_team_list')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Актуальный поименный список сотрудников и их должности (MFA, Koordinatoren)</div>
+              <div class="check-desc">Фактический состав (MFA, Auszubildende, Koordinatorin). Проверить, есть ли другие врачи (Ärztinnen und Ärzte).</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'c_team_consent')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Письменные согласия (Einwilligung) сотрудников на публикацию фото и ФИО</div>
+              <div class="check-desc">Требование немецкого закона о защите персональных данных (DSGVO).</div>
+              <span class="tag tag-danger">DSGVO</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-group">
+          <div class="checklist-group-title">3. Филиалы (Standorte) и график работы</div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'c_viersen')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Филиал Viersen (Theodor-Heuss-Platz 10, 4. OG) — телефон и часы</div>
+              <div class="check-desc">Подтвердить публичный телефон для записи и точный график приёма.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'c_mg')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Филиал Mönchengladbach (Bismarckstr. 106, 3. OG) — телефон и часы</div>
+              <div class="check-desc">Проверить актуальный адрес (в текущем коде был ошибочно указан Viersener Str. 50).</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'c_dus')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Филиал Düsseldorf (Schadowstraße 74, 40212) — решение по запуску</div>
+              <div class="check-desc">Предоставить реальный городской номер (вместо плейсхолдеров 0211-xxxx). Если филиал еще не открыт — скрыть до готовности.</div>
+              <span class="tag tag-danger">Blocker</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-group">
+          <div class="checklist-group-title">4. Медицинские услуги и операции (Scope)</div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'c_scope_ops')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Финальный перечень выполняемых операций по каждому филиалу</div>
+              <div class="check-desc">Подтвердить: микрохирургия, эндоскопия, протезирование, кифопластика, операция карпального канала, нейростимуляция.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'c_op_location')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Формат операционной (собственный OP-Bereich или клиники-партнеры)</div>
+              <div class="check-desc">Указать конкретные клиники-партнеры для стационарных операций (Belegbetten/Kooperationsklinik).</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-group">
+          <div class="checklist-group-title">5. Технические и сервисные решения</div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'c_doctolib')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Решение по онлайн-записи: Doctolib / Jameda / форма</div>
+              <div class="check-desc">Подтвердить активные виджеты или ссылки на профили записи по каждому филиалу.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'c_safe_channel')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Решение по передаче медицинских документов (МРТ/КТ) для «Второго мнения»</div>
+              <div class="check-desc">Определить регламент: защищенный медицинский портал загрузки или предоставление снимков лично на CD-диске при визите.</div>
+              <span class="tag tag-danger">DSGVO Art. 9</span>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'c_logo')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Официальный логотип клиники в векторном формате (SVG / high-res PNG)</div>
+              <div class="check-desc">Для шапки, футера, мобильного меню и favicon.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= TAB 2: БЛОКИРУЮЩИЙ СПИСОК ================= -->
+    <div id="tab-blockers" class="tab-panel">
+      <div class="alert-box">
+        <div class="alert-icon">⚠️</div>
+        <div>
+          <div class="alert-title">КРИТИЧЕСКИЙ ЗАПРЕТ НА ПУБЛИКАЦИЮ (Раздел 19 Master-Dokument)</div>
+          <div class="alert-text">Сайт нельзя выкатывать в публичный доступ и индексацию Google, если присутствует хотя бы один из нижеперечисленных пунктов. Это влечет за собой штрафы от Ärztekammer и юридические претензии (Abmahnung).</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="checklist-group">
+          
+          <div class="check-item">
+            <div class="check-box-custom" style="background: var(--danger); border-color: var(--danger); color: #fff; display: flex;"><svg style="display:block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
+            <div class="check-content">
+              <div class="check-label" style="color: var(--danger);">1. Номера-заглушки и плейсхолдеры (0211-xxxx / xxxxx)</div>
+              <div class="check-desc">Любые фейковые контакты для Дюссельдорфа или других филиалов должны быть либо заменены реальными номерами, либо блок филиала должен быть временно скрыт.</div>
+            </div>
+          </div>
+
+          <div class="check-item">
+            <div class="check-box-custom" style="background: var(--danger); border-color: var(--danger); color: #fff; display: flex;"><svg style="display:block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
+            <div class="check-content">
+              <div class="check-label" style="color: var(--danger);">2. Внутренние служебные номера Praxiszentrale</div>
+              <div class="check-desc">Внутренние телефонные линии для связи между врачами и клиниками должны быть строго помечены: «INTERN – NICHT VERÖFFENTLICHEN» и исключены из кода.</div>
+            </div>
+          </div>
+
+          <div class="check-item">
+            <div class="check-box-custom" style="background: var(--danger); border-color: var(--danger); color: #fff; display: flex;"><svg style="display:block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
+            <div class="check-content">
+              <div class="check-label" style="color: var(--danger);">3. Неподтвержденные врачебные титулы и звания</div>
+              <div class="check-desc">Запрещено превращать маркетинговые понятия вроде «Wirbelsäulenmedizin» в официальный титул врача, если его нет в документах Палаты врачей (Ärztekammer).</div>
+            </div>
+          </div>
+
+          <div class="check-item">
+            <div class="check-box-custom" style="background: var(--danger); border-color: var(--danger); color: #fff; display: flex;"><svg style="display:block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
+            <div class="check-content">
+              <div class="check-label" style="color: var(--danger);">4. AI-персонал под видом реальных сотрудников клиники</div>
+              <div class="check-desc">Фотогенерации не должны имитировать конкретных работников. Использовать только реальные согласованные фотографии персонала.</div>
+            </div>
+          </div>
+
+          <div class="check-item">
+            <div class="check-box-custom" style="background: var(--danger); border-color: var(--danger); color: #fff; display: flex;"><svg style="display:block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
+            <div class="check-content">
+              <div class="check-label" style="color: var(--danger);">5. Рекламные суперлативы и обещания исцеления (§ 3 HWG)</div>
+              <div class="check-desc">Запрещены фразы «100% успех», «98% удовлетворенность», «1200+ успешных операций», «самый лучший», «гарантированное избавление от боли».</div>
+            </div>
+          </div>
+
+          <div class="check-item">
+            <div class="check-box-custom" style="background: var(--danger); border-color: var(--danger); color: #fff; display: flex;"><svg style="display:block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
+            <div class="check-content">
+              <div class="check-label" style="color: var(--danger);">6. Незащищенный сбор данных о здоровье (Art. 9 DSGVO)</div>
+              <div class="check-desc">Запрещено просить пациентов загружать снимки МРТ/КТ, Arztbrief или Medikamentenplan через обычные открытые формы без сквозного шифрования и согласия.</div>
+            </div>
+          </div>
+
+          <div class="check-item">
+            <div class="check-box-custom" style="background: var(--danger); border-color: var(--danger); color: #fff; display: flex;"><svg style="display:block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
+            <div class="check-content">
+              <div class="check-label" style="color: var(--danger);">7. Устаревшие юридические ссылки (TMG, RStV, EU-ODR)</div>
+              <div class="check-desc">Запрещено ссылаться на недействующий § 5 TMG (теперь § 5 DDG) и недействующую платформу европейского арбитража EU-ODR.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= TAB 3: СПРИНТЫ РАЗРАБОТКИ ================= -->
+    <div id="tab-sprints" class="tab-panel">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Дорожная карта разработки (Спринты 1–5)</div>
+            <div class="card-subtitle">Поэтапный план технических и дизайнерских работ для команды разработки.</div>
+          </div>
+          <div style="text-align: right; min-width: 160px;">
+            <span id="sprintsPercent" style="font-weight: 700; color: var(--primary-light);">0% завершено</span>
+            <div class="progress-bar-wrap"><div class="progress-bar-fill" id="sprintsBar"></div></div>
+          </div>
+        </div>
+
+        <div class="checklist-group">
+          <div class="checklist-group-title">Спринт 1: Юридическая и контентная чистка текущего кода</div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's1_hwg')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Удалить запрещенную статистику («98%», «1200+ Behandlungen») из index.html</div>
+              <div class="check-desc">Заменить на фактическое описание опыта врача без суперлативов.</div>
+              <span class="tag tag-danger">Срочно</span>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's1_notfall')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Исправить блок экстренной помощи (Notfall) в шапке и футере</div>
+              <div class="check-desc">Убрать обещание круглосуточного приёма практикой. Разместить стандартные 112 (Notruf) и 116 117 (Bereitschaftsdienst).</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's1_team_fix')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Исправить путаницу профилей в unser-team.html</div>
+              <div class="check-desc">Выделить доктора Kasim Fischer-Rahimov как Ärztliche Leitung, отвязать его биографию от чужого имени, оформить отдельный блок Praxisteam.</div>
+              <span class="tag tag-danger">Баг контента</span>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's1_address_fix')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Актуализировать адреса и контакты в футере</div>
+              <div class="check-desc">Заменить ошибочный адрес Mönchengladbach (Viersener Str. 50) на корректный (Bismarckstr. 106).</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-group">
+          <div class="checklist-group-title">Спринт 2: Новая структура каталогов и шаблоны страниц (DE)</div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's2_dirs')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Создать структуру разделов: /praxis/, /erkrankungen/, /diagnostik/, /behandlungen/, /standorte/</div>
+              <div class="check-desc">Развернуть логическую структуру каталогов и базовые HTML-шаблоны.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's2_erkrankungen')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Сверстать раздел Заболевания (/erkrankungen/): 3 группы + посадочные страниц</div>
+              <div class="check-desc">Грыжи (Bandscheibenvorfall), стеноз (Spinalkanalstenose), карпальный канал (Karpaltunnelsyndrom), болевые синдромы.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's2_diagnostik')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Сверстать раздел Диагностика (/diagnostik/): EMG/ENG/NLG, SEP, MRT/CT/Röntgen</div>
+              <div class="check-desc">Описать методики нейрофизиологии и формат сотрудничества с радиологией.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's2_zweitmeinung')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Сверстать страницу «Второе мнение» (zweitmeinung.html)</div>
+              <div class="check-desc">4-шаговая схема для пациента: Документы -> Консультация -> Оценка -> Рекомендации.</div>
+              <span class="tag tag-success">Ключевой UX</span>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's2_standorte')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Сверстать карточки 3 филиалов (/standorte/): Viersen, MG, Düsseldorf</div>
+              <div class="check-desc">Для каждого филиала: адрес, телефон, часы, интерактивная карта, ÖPNV, парковка, кнопка записи.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-group">
+          <div class="checklist-group-title">Спринт 3: Правовой стек, Приватность и Безопасность</div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's3_impressum')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Создать актуальный impressum.html по нормам § 5 DDG</div>
+              <div class="check-desc">Указать Ärztekammer Nordrhein, Kassenärztliche Vereinigung, Berufsordnung, убрать ссылку EU-ODR.</div>
+              <span class="tag tag-danger">DDG Compliance</span>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's3_datenschutz')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Создать datenschutz.html под реальный стек технологий</div>
+              <div class="check-desc">Хостинг, логи сервера, Doctolib, отсутствие внешних счетчиков без согласия, права субъектов данных.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's3_consent_maps')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Внедрить двухкликовую блокировку Google Maps (2-Click Consent)</div>
+              <div class="check-desc">Карта загружается только после явного клика «Загрузить карту и принять условия Google Maps».</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's3_local_fonts')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Локализовать шрифты (Self-hosted Google Fonts)</div>
+              <div class="check-desc">Скачать шрифты Plus Jakarta Sans в папку `/fonts/` для исключения штрафов за передачу IP в США.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-group">
+          <div class="checklist-group-title">Спринт 4: Мультиязычность и арабский RTL</div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's4_trans')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Заменить машинный перевод на качественный текст (RU, TR, EN)</div>
+              <div class="check-desc">Устранить кривые автопереводы («Контакт нас», «Наше лечение методы»). Вычитать медицинскую терминологию.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's4_rtl')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Реализовать полноценный RTL-режим для /ar/</div>
+              <div class="check-desc">Добавить `dir="rtl"`, инвертировать CSS-отступы, позиционирование стрелок, выравнивание карточек и бургер-меню.</div>
+              <span class="tag tag-info">Frontend RTL</span>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's4_hreflang')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Настроить взаимные теги hreflang и canonical для всех языков</div>
+              <div class="check-desc">Каждая страница должна ссылаться на альтернативные версии (de, ru, tr, ar, en, x-default).</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-group">
+          <div class="checklist-group-title">Спринт 5: CMS, Доступность (BFSG) и Go-Live</div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's5_cms')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Доработать панель CMS для быстрого изменения часов филиалов</div>
+              <div class="check-desc">Администратор должен иметь возможность быстро оповещать о закрытии филиала по болезни/каникулам.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's5_wcag')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Аудит доступности (WCAG 2.1 AA / BFSG)</div>
+              <div class="check-desc">Проверить клавиатурную навигацию (Tab), видимый фокус, aria-labels, достаточный контраст текста.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's5_schema')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Внедрить микроразметку Schema.org (Physician & MedicalClinic)</div>
+              <div class="check-desc">Структурированные данные по 3 филиалам, доктору, часам работы и специализации.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 's5_sitemap_301')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">Сгенерировать финальный sitemap.xml и 301 редиректы со старых URL</div>
+              <div class="check-desc">Настроить страницу ошибки 404.html, проверить отсутствие битых ссылок.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= TAB 4: МАТРИЦА СТРАНИЦ SITEMAP ================= -->
+    <div id="tab-sitemap" class="tab-panel">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Рекомендуемая Master-матрица страниц (п. 11 и 22 Master-Dokument)</div>
+            <div class="card-subtitle">Полный перечень целевых URL с H1, назначением и правовым статусом.</div>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>URL</th>
+                <th>Главный H1</th>
+                <th>Назначение / Цель страницы</th>
+                <th>Ключевые блоки</th>
+                <th>CTA</th>
+                <th>Статус</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="code-badge">/index.html</span></td>
+                <td>Facharztpraxis für Neurochirurgie und Wirbelsäulenerkrankungen</td>
+                <td>Понять профиль клиники, выбрать филиал и записаться</td>
+                <td>Hero, направления, доктор, 3 филиала, экстренные службы</td>
+                <td>Termin buchen</td>
+                <td><span class="tag tag-warning">В работе</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-badge">/praxis/ueber-uns.html</span></td>
+                <td>Über unsere Facharztpraxis</td>
+                <td>Философия лечения, стандарты, комфорт пациента</td>
+                <td>Подход, консервативное vs оперативное, языки</td>
+                <td>Termin buchen</td>
+                <td><span class="tag tag-info">Новая</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-badge">/praxis/dr-fischer-rahimov.html</span></td>
+                <td>Dr. med. Kasim Fischer-Rahimov</td>
+                <td>Доверие к квалификации и клиническому опыту главврача</td>
+                <td>Опыт, биография, специализация, членства, наука</td>
+                <td>Termin vereinbaren</td>
+                <td><span class="tag tag-warning">Исправить</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-badge">/praxis/team.html</span></td>
+                <td>Unser Praxisteam</td>
+                <td>Знакомство с ассистентами и координаторами</td>
+                <td>Фото персонала, роли, языки общения, вакансии</td>
+                <td>Kontakt</td>
+                <td><span class="tag tag-warning">Исправить</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-badge">/erkrankungen/bandscheibenvorfall.html</span></td>
+                <td>Bandscheibenvorfall (HWS & LWS)</td>
+                <td>Понимание симптомов грыжи и современных методов помощи</td>
+                <td>Симптомы, когда нужна операция, малоинвазивные методы</td>
+                <td>Beratung anfragen</td>
+                <td><span class="tag tag-info">Новая</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-badge">/erkrankungen/spinalkanalstenose.html</span></td>
+                <td>Spinalkanalstenose</td>
+                <td>Объяснение сужения позвоночного канала</td>
+                <td>Диагностика, декомпрессия, сохранение подвижности</td>
+                <td>Termin anfragen</td>
+                <td><span class="tag tag-info">Новая</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-badge">/erkrankungen/karpaltunnelsyndrom.html</span></td>
+                <td>Karpaltunnelsyndrom & Nervenkompression</td>
+                <td>Лечение онемения пальцев и защемления нерва</td>
+                <td>Нейрофизиология (EMG/ENG), малоинвазивный релиз</td>
+                <td>Termin anfragen</td>
+                <td><span class="tag tag-info">Новая</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-badge">/diagnostik/emg-eng-nlg.html</span></td>
+                <td>Neurophysiologische Diagnostik (EMG / ENG)</td>
+                <td>Высокоточная диагностика проводимости нервов</td>
+                <td>Электромиография, измерение скорости нервного импульса</td>
+                <td>Diagnostik buchen</td>
+                <td><span class="tag tag-info">Новая</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-badge">/diagnostik/bildgebung.html</span></td>
+                <td>MRT-, CT- & Röntgen-Beurteilung</td>
+                <td>Нейрохирургическая оценка снимков МРТ/КТ</td>
+                <td>Сотрудничество с радиологией, второе мнение по снимкам</td>
+                <td>Zweitmeinung</td>
+                <td><span class="tag tag-info">Новая</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-badge">/zweitmeinung.html</span></td>
+                <td>Ärztliche Zweitmeinung vor Operationen</td>
+                <td>Независимая врачебная оценка перед операцией на спине</td>
+                <td>4 шага процесса, подготовка документов, консультация</td>
+                <td>Zweitmeinung buchen</td>
+                <td><span class="tag tag-success">Приоритет</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-badge">/patienteninformationen.html</span></td>
+                <td>Patienteninformationen & FAQ</td>
+                <td>Снятие тревоги: памятка перед визитом и операцией</td>
+                <td>Что взять с собой, послеоперационный период, FAQ</td>
+                <td>Termin vereinbaren</td>
+                <td><span class="tag tag-info">Новая</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-badge">/standorte/viersen.html</span></td>
+                <td>Praxis Viersen</td>
+                <td>Контакты, маршрут и запись в филиале Фирзен</td>
+                <td>Theodor-Heuss-Platz 10, 4. OG, телефон, часы, парковка</td>
+                <td>In Viersen buchen</td>
+                <td><span class="tag tag-info">Новая</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-badge">/standorte/moenchengladbach.html</span></td>
+                <td>Praxis Mönchengladbach</td>
+                <td>Контакты и запись в филиале Менхенгладбах</td>
+                <td>Bismarckstr. 106, 3. OG, телефон, часы, карта</td>
+                <td>In MG buchen</td>
+                <td><span class="tag tag-info">Новая</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-badge">/standorte/duesseldorf.html</span></td>
+                <td>Praxis Düsseldorf</td>
+                <td>Контакты филиала Дюссельдорф (после подтверждения)</td>
+                <td>Schadowstraße 74, 40212 Düsseldorf</td>
+                <td>Termin anfragen</td>
+                <td><span class="tag tag-danger">Ждет контактов</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-badge">/impressum.html</span></td>
+                <td>Impressum (§ 5 DDG)</td>
+                <td>Юридическая прозрачность по законам Германии</td>
+                <td>Ärztekammer Nordrhein, Aufsichtsbehörde, профессиональное право</td>
+                <td>—</td>
+                <td><span class="tag tag-warning">Обновить</span></td>
+              </tr>
+              <tr>
+                <td><span class="code-badge">/datenschutz.html</span></td>
+                <td>Datenschutzerklärung</td>
+                <td>Защита персональных данных по DSGVO</td>
+                <td>Doctolib, Cookies, Hosting Logs, права пользователей</td>
+                <td>—</td>
+                <td><span class="tag tag-warning">Обновить</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= TAB 5: HWG ЗАМЕНЫ ================= -->
+    <div id="tab-hwg" class="tab-panel">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Таблица безопасных замен медицинских формулировок (§ 3 HWG)</div>
+            <div class="card-subtitle">Используйте правый столбец для немецких текстов и переводов на RU, TR, AR, EN.</div>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Рискованная формулировка (Было)</th>
+                <th>В чем правовой риск</th>
+                <th>Рекомендуемая безопасная замена (Стало)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="color: var(--danger); font-weight: 600;">bestmögliche Behandlung</td>
+                <td>Обещание наилучшего исхода (Superlativ)</td>
+                <td style="color: var(--primary-light); font-weight: 600;">eine individuell medizinisch geeignete Behandlung</td>
+              </tr>
+              <tr>
+                <td style="color: var(--danger); font-weight: 600;">bestmögliche Lösung</td>
+                <td>Сильный рекламный суперлатив</td>
+                <td style="color: var(--primary-light); font-weight: 600;">eine medizinisch geeignete Lösung</td>
+              </tr>
+              <tr>
+                <td style="color: var(--danger); font-weight: 600;">Behandlung auf höchstem fachlichem Niveau</td>
+                <td>Рекламное превосходство без доказательств</td>
+                <td style="color: var(--primary-light); font-weight: 600;">Behandlung nach anerkannten medizinischen Standards</td>
+              </tr>
+              <tr>
+                <td style="color: var(--danger); font-weight: 600;">beste Erfolgsaussichten</td>
+                <td>Формирование гарантии выздоровления</td>
+                <td style="color: var(--primary-light); font-weight: 600;">wenn der Eingriff nach ärztlicher Abwägung medizinisch angezeigt ist</td>
+              </tr>
+              <tr>
+                <td style="color: var(--danger); font-weight: 600;">schnellere Mobilisation / zügigere Rückkehr</td>
+                <td>Обещание скорости реабилитации</td>
+                <td style="color: var(--primary-light); font-weight: 600;">Нейтральное описание метода с оговоркой об индивидуальности сроков</td>
+              </tr>
+              <tr>
+                <td style="color: var(--danger); font-weight: 600;">1,200+ erfolgreiche Behandlungen</td>
+                <td>Запрещенная самооценка эффективности</td>
+                <td style="color: var(--primary-light); font-weight: 600;">Langjährige klinische und operative Erfahrung</td>
+              </tr>
+              <tr>
+                <td style="color: var(--danger); font-weight: 600;">98% Patientenzufriedenheit</td>
+                <td>Запрещенная в Германии статистика в рекламе врача</td>
+                <td style="color: var(--primary-light); font-weight: 600;">Ссылка на независимые отзывы (Jameda / Doctolib)</td>
+              </tr>
+              <tr>
+                <td style="color: var(--danger); font-weight: 600;">24/7 Notfall</td>
+                <td>Введение в заблуждение (практика не является стационаром скорой помощи)</td>
+                <td style="color: var(--primary-light); font-weight: 600;">Im Notfall: 112 (Rettungsdienst) / 116 117 (Terminservice)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= TAB 6: GOLIVE ЧЕК-ЛИСТ ================= -->
+    <div id="tab-golive" class="tab-panel">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Финальный чек-лист готовности к релизу (Go-Live Checklist)</div>
+            <div class="card-subtitle">Проверка всех критических пунктов перед публикацией сайта на боевом домене.</div>
+          </div>
+          <div style="text-align: right; min-width: 160px;">
+            <span id="golivePercent" style="font-weight: 700; color: var(--primary-light);">0% готово</span>
+            <div class="progress-bar-wrap"><div class="progress-bar-fill" id="goliveBar"></div></div>
+          </div>
+        </div>
+
+        <div class="checklist-group">
+          
+          <div class="check-item" onclick="toggleCheck(this, 'g_titles')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">1. Все врачебные титулы и квалификации документально подтверждены</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'g_texts')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">2. Медицинские описания и показания к операциям согласованы доктором</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'g_no_super')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">3. На сайте нет гарантий исцеления, суперлативов и рекламы успеха (§ 3 HWG)</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'g_phones')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">4. Публичные номера отделены от внутренних служебных линий Praxiszentrale</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'g_dus_clean')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">5. Филиал Düsseldorf не содержит плейсхолдеров (xxxx)</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'g_impressum')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">6. Impressum проверен и соответствует требованиям § 5 DDG</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'g_datenschutz')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">7. Datenschutzerklärung описывает фактический тех-стек и хостинг</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'g_maps_consent')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">8. Google Карты и внешние сервисы блокируются до согласия пользователя</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'g_bfsg')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">9. Проверена доступность для слабовидящих и навигация с клавиатуры (WCAG / BFSG)</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'g_rtl')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">10. Языки DE, RU, TR, AR протестированы; арабская версия работает в полноценном RTL</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'g_media_rights')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">11. У всех изображений и фото подтверждены лицензии и права на использование</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'g_seo')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">12. Настроены Title, Description, hreflang, Canonical и микроразметка Schema.org</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this, 'g_redirects')">
+            <div class="check-box-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="check-content">
+              <div class="check-label">13. 301 редиректы со старого сайта, sitemap.xml и страница 404 работают корректно</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast">📋 Скопировано в буфер обмена!</div>
+
+  <script>
+    // Tab switching logic
+    function openTab(evt, tabName) {
+      const tabPanels = document.querySelectorAll('.tab-panel');
+      tabPanels.forEach(panel => panel.classList.remove('active'));
+
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      tabBtns.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabName).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+
+    // Interactive Checkboxes with LocalStorage
+    const savedState = JSON.parse(localStorage.getItem('my_bandscheibe_checklist') || '{}');
+
+    function initChecklist() {
+      document.querySelectorAll('.check-item').forEach(item => {
+        const id = item.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
+        if (id && savedState[id]) {
+          item.classList.add('completed');
+        }
+      });
+      updateMetrics();
+    }
+
+    function toggleCheck(el, id) {
+      el.classList.toggle('completed');
+      savedState[id] = el.classList.contains('completed');
+      localStorage.setItem('my_bandscheibe_checklist', JSON.stringify(savedState));
+      updateMetrics();
+    }
+
+    function updateMetrics() {
+      // Client Tab
+      const clientItems = document.querySelectorAll('#tab-client .check-item');
+      const clientDone = document.querySelectorAll('#tab-client .check-item.completed').length;
+      const clientPct = clientItems.length ? Math.round((clientDone / clientItems.length) * 100) : 0;
+      document.getElementById('clientCount').textContent = `${clientDone}/${clientItems.length}`;
+      document.getElementById('clientPercent').textContent = `${clientPct}% выполнено`;
+      document.getElementById('clientBar').style.width = `${clientPct}%`;
+
+      // Sprints Tab
+      const sprintItems = document.querySelectorAll('#tab-sprints .check-item');
+      const sprintDone = document.querySelectorAll('#tab-sprints .check-item.completed').length;
+      const sprintPct = sprintItems.length ? Math.round((sprintDone / sprintItems.length) * 100) : 0;
+      document.getElementById('sprintsCount').textContent = `${sprintDone}/${sprintItems.length}`;
+      document.getElementById('sprintsPercent').textContent = `${sprintPct}% выполнено`;
+      document.getElementById('sprintsBar').style.width = `${sprintPct}%`;
+
+      // Go-Live Tab
+      const goliveItems = document.querySelectorAll('#tab-golive .check-item');
+      const goliveDone = document.querySelectorAll('#tab-golive .check-item.completed').length;
+      const golivePct = goliveItems.length ? Math.round((goliveDone / goliveItems.length) * 100) : 0;
+      document.getElementById('goliveCount').textContent = `${goliveDone}/${goliveItems.length}`;
+      document.getElementById('golivePercent').textContent = `${golivePct}% готово`;
+      document.getElementById('goliveBar').style.width = `${golivePct}%`;
+    }
+
+    function copyClientList() {
+      const text = `📋 ОПРОСНЫЙ ЧЕК-ЛИСТ ДЛЯ ЗАКАЗЧИКА (my-bandscheibe.de):
+
+1. ВРАЧ И КВАЛИФИКАЦИЯ:
+- Точная Facharztbezeichnung по документам Ärztekammer.
+- Подтвержденные Zusatzbezeichnungen (Schmerztherapie и др.).
+- Список реальных членств (DGNC, DWG, BDNC, BDNR) и право на логотипы.
+- Список научных публикаций.
+- Профессиональные фото доктора и практики в высоком разрешении.
+
+2. КОМАНДА ПРАКТИКИ:
+- Актуальный список сотрудников с точными должностями (MFA, Koordinatoren).
+- Письменные согласия сотрудников на публикацию фото/имен (DSGVO).
+
+3. ФИЛИАЛЫ И ГРАФИК РАБОТЫ:
+- Viersen (Theodor-Heuss-Platz 10): телефон для записи и часы работы.
+- Mönchengladbach (Bismarckstr. 106): подтверждение адреса, телефон и часы.
+- Düsseldorf (Schadowstraße 74): статус филиала, реальный городской номер и часы (или решение скрыть до открытия).
+
+4. МЕДИЦИНСКИЕ УСЛУГИ И ОПЕРАЦИИ:
+- Подтверждение фактического списка операций (микрохирургия, эндоскопия, стеноз, карпальный канал).
+- Формат операционной (собственный OP-Bereich или клиники-партнеры/Belegbetten).
+
+5. ТЕХНИЧЕСКИЕ ВОПРОСЫ:
+- Ссылки на онлайн-запись (Doctolib / Jameda).
+- Решение по безопасной передаче снимков МРТ/КТ (спецпортал или на диске при визите).
+- Векторный логотип клиники (SVG / PNG).`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        setTimeout(() => { toast.style.display = 'none'; }, 2500);
+      });
+    }
+
+    // Run on load
+    document.addEventListener('DOMContentLoaded', initChecklist);
+  </script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 450px; background: white; padding: 24px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); z-index: 999999; border: 1px solid rgba(0,0,0,0.05); font-family: 'Plus Jakarta Sans', sans-serif;">
+    <div style="display: flex; align-items: flex-start; gap: 16px;">
+      <div style="background: rgba(28, 194, 178, 0.1); padding: 12px; border-radius: 8px; color: var(--primary);">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M16 12.5v.01"></path><path d="M12 16v.01"></path><path d="M11 12.5v.01"></path></svg>
+      </div>
+      <div>
+        <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 700; color: var(--text-dark);">Wir verwenden Cookies</h4>
+        <p style="margin: 0 0 20px 0; font-size: 0.9rem; line-height: 1.5; color: var(--text-light);">Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Einige sind essenziell, während andere uns helfen, diese Website zu optimieren.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button id="cookie-accept-all" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem; border: none; cursor: pointer; flex: 1; text-align: center;">Alle akzeptieren</button>
+          <button id="cookie-essential-only" class="btn-secondary" style="padding: 10px 20px; font-size: 0.9rem; border: 1px solid #ccc; background: white; color: var(--text-dark); cursor: pointer; flex: 1; border-radius: 99px; text-align: center; transition: all 0.2s;">Nur essenzielle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const cookieBanner = document.getElementById('cookie-consent-banner');
+      const btnAccept = document.getElementById('cookie-accept-all');
+      const btnEssential = document.getElementById('cookie-essential-only');
+      
+      if (!localStorage.getItem('cookieConsent')) {
+        cookieBanner.style.display = 'block';
+      }
+      
+      function hideBanner(choice) {
+        localStorage.setItem('cookieConsent', choice);
+        cookieBanner.style.display = 'none';
+      }
+      
+      btnAccept.addEventListener('click', () => hideBanner('all'));
+      btnEssential.addEventListener('click', () => hideBanner('essential'));
+    });
+  </script>
+
+</body>
+</html>

@@ -1291,7 +1291,7 @@
     .navbar > a > span { display: none !important; }
     
     /* Contact Form Fixes */
-    form { padding: 0 !important; }
+    .contact-form { padding: 0 !important; }
     .contact-form-container { padding: 24px 16px !important; }
     .form-input, .form-textarea { padding: 12px 16px !important; }
   

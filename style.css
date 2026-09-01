@@ -381,7 +381,7 @@
       .hero-main { margin-top: 24px !important; }
       .hero-overline, .trusted-overline { font-size: 0.75rem !important; }
       .hero-inner .hero-title { font-size: min(2.25rem, 9vw) !important; word-break: break-word; hyphens: auto; line-height: 1.1; margin-bottom: 8px; }
-      .hero-inner-sub .hero-title { font-size: min(1.85rem, 7.5vw) !important; word-break: break-word; hyphens: auto; line-height: 1.1; margin-bottom: 12px; }
+      .hero-inner-sub .hero-title { font-size: min(2.5rem, 10vw) !important; word-break: break-word; hyphens: auto; line-height: 1.1; margin-bottom: 12px; }
       .hero-desc { font-size: 0.85rem !important; margin-bottom: 16px !important; line-height: 1.4; }
       .hero-actions { flex-direction: column; align-items: stretch !important; gap: 12px !important; margin-top: 16px !important; }
       .hero-actions .btn-primary, .hero-actions .btn-outline { width: 100%; justify-content: center; padding: 14px; font-size: 1.05rem !important; }
@@ -416,7 +416,7 @@
       
       .btn-dark, .btn-primary, .btn-white, .btn-outline-white { width: 100% !important; display: block !important; text-align: center !important; box-sizing: border-box; }
       .contact-grid, .services-grid, .steps-grid, .treatment-grid, .team-grid { gap: 12px !important; }
-      .hero-inner-sub { padding-bottom: 80px !important; }
+      .hero-inner-sub { padding-bottom: 32px !important; }
       .hero-bottom-bar { position: static !important; margin-top: 32px !important; margin-bottom: -80px !important; }
       .hero-bottom-grid { grid-template-columns: 1fr !important; gap: 16px !important; padding: 24px 16px !important; }
     } /* Closing the max-width: 768px media query */
@@ -699,8 +699,10 @@
 @media (max-width: 768px) {
   .hero-inner-sub {
     min-height: 500px !important;
-    padding-bottom: 80px !important;
+    padding-bottom: 32px !important;
   }
+  .hero-inner-sub .container { display: flex; flex-direction: column; flex-grow: 1; }
+  .hero-inner-sub .container > div:last-child { margin-top: auto !important; width: 100%; padding-bottom: 0 !important; }
   .hero-inner-sub > .container:nth-of-type(2) {
     margin-top: 0 !important;
   }
@@ -2158,3 +2160,6 @@
     font-weight: 500 !important;
     color: rgba(255,255,255,0.85);
 }
+
+
+

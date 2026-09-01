@@ -1284,12 +1284,16 @@
   
   /* Feature items */
   .feature-item { align-items: flex-start; }
-  
-  /* CTA Banner text */
-  .cta-title { font-size: 1.8rem !important; word-wrap: break-word; }
-  
-  /* Contact Form */
-  form { padding: 24px !important; }
+    /* CTA Banner text */
+    .cta-title { font-size: 1.8rem !important; word-wrap: break-word; }
+    
+    /* Mobile Header Fixes */
+    .navbar > a > span { display: none !important; }
+    
+    /* Contact Form Fixes */
+    form { padding: 0 !important; }
+    .contact-form-container { padding: 24px 16px !important; }
+    .form-input, .form-textarea { padding: 12px 16px !important; }
   
   /* Footer */
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }

@@ -997,7 +997,7 @@
 
   // ========= TREATMENTS TABLE =========
   function renderTreatmentsTable() {
-    const tbody = document.getElementById('treatmentsTableBody');
+    const tbody = document.getElementById('treatmentsTableBody'); if(!tbody) return;
     if (!treatmentsData.length) {
       tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 40px; color: var(--text-dim);">Keine Behandlungen gefunden. Klicken Sie auf "Hinzufügen".</td></tr>';
       return;
@@ -1119,7 +1119,7 @@
 
   // ========= TEAM TABLE =========
   function renderTeamTable() {
-    const tbody = document.getElementById('teamTableBody');
+    const tbody = document.getElementById('teamTableBody'); if(!tbody) return;
     if (!teamData.length) {
       tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 40px; color: var(--text-dim);">Keine Teammitglieder gefunden. Klicken Sie auf "Hinzufügen".</td></tr>';
       return;
@@ -1208,7 +1208,7 @@
   };
 
   function renderTextsEditor() {
-    const area = document.getElementById('textsEditorArea');
+    const area = document.getElementById('textsEditorArea'); if(!area) return;
     const langData = (textsData[currentTextLang] || {});
     area.innerHTML = Object.entries(TEXT_FIELDS).map(([key, label]) => `
       <div class="form-group-row">
@@ -1561,7 +1561,7 @@ window.loadPress = async function(){const s=await getDocs(collection(window.db,'
       }
     } catch(e) { console.error(e); }
     
-    renderPagesTable();
+    // renderPagesTable();
   };
 
   function renderPagesTable() {
@@ -1650,7 +1650,7 @@ window.loadPress = async function(){const s=await getDocs(collection(window.db,'
             await setDoc(doc(window.db, 'pages', id), p);
             window.showToast('Seite gespeichert!');
             window.closeModal('pageModal');
-            renderPagesTable();
+            // renderPagesTable();
         } catch(e) {
             console.error(e);
             window.showToast('Fehler: ' + e.message, 'error');

@@ -895,6 +895,19 @@
   
   // ================= DIAGNOSTIK CRUD =================
   
+  window.switchLang = function(prefix, lang) {
+    ['de','en','ru','tr','ar'].forEach(l => {
+      const panel = document.getElementById(`${prefix}Panel_${l}`);
+      if(panel) panel.style.display = (l === lang) ? 'block' : 'none';
+    });
+    document.querySelectorAll(`#${prefix}Modal .lang-tab`).forEach(t => {
+      t.classList.remove('active');
+      if(t.getAttribute('onclick') === `switchLang('${prefix}', '${lang}')`) {
+        t.classList.add('active');
+      }
+    });
+  };
+
   let currentDiagnostikId = null;
   window.openAddDiagnostik = (id = null) => {
     currentDiagnostikId = id;

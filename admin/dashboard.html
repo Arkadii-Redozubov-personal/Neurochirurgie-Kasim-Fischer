@@ -1537,6 +1537,21 @@ window.loadPress = async function(){const s=await getDocs(collection(window.db,'
 
 
 
+  window.forceMigration = async () => {
+    if(localStorage.getItem('migrated_multilang_v3')) return;
+    try {
+      if(window.seedData.faq) await window.seedCollection('faq', window.seedData.faq);
+      if(window.seedData.diagnostik) await window.seedCollection('diagnostik', window.seedData.diagnostik);
+      if(window.seedData.press) await window.seedCollection('press', window.seedData.press);
+      if(window.seedData.schwerpunkte) await window.seedCollection('schwerpunkte', window.seedData.schwerpunkte);
+      if(window.seedData.treatments) await window.seedCollection('treatments', window.seedData.treatments);
+      localStorage.setItem('migrated_multilang_v3', 'true');
+      if(window.showToast) window.showToast('Sprach-Migration erfolgreich!');
+      setTimeout(()=>location.reload(), 1500);
+    } catch(e) { console.error(e); }
+  };
+  setTimeout(window.forceMigration, 3000);
+
 </script>
 
 <!-- DIAGNOSTIK MODAL -->

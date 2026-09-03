@@ -791,13 +791,32 @@
 }
 
 /* Team Card */
+
+/* Team Slider */
 .team-grid-new {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
   gap: 24px;
   margin-top: 40px;
+  padding-bottom: 24px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.2) transparent;
+}
+.team-grid-new::-webkit-scrollbar {
+  height: 8px;
+}
+.team-grid-new::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 99px;
+}
+.team-grid-new::-webkit-scrollbar-track {
+  background: transparent;
 }
 .team-card-new {
+  flex: 0 0 calc(25% - 18px);
+  scroll-snap-align: start;
   background: white;
   border-radius: var(--radius-lg);
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -806,6 +825,20 @@
   flex-direction: column;
   transition: transform 0.3s ease;
   border: 1px solid #f1f5f9;
+}
+.team-card-new:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+@media (max-width: 1024px) {
+  .team-card-new {
+    flex: 0 0 calc(50% - 12px);
+  }
+}
+@media (max-width: 768px) {
+  .team-card-new {
+    flex: 0 0 calc(85% - 12px);
+  }
 }
 .team-card-new:hover {
   transform: translateY(-5px);
@@ -940,7 +973,7 @@
 
 @media (max-width: 1024px) {
   .hero-split .container { flex-direction: column; }
-  .feature-row-4, .team-grid-new { grid-template-columns: repeat(2, 1fr); }
+  .feature-row-4 { grid-template-columns: repeat(2, 1fr); }
   .hero-bottom-grid { grid-template-columns: repeat(1, 1fr); }
   .cta-block {
     flex-direction: column;
@@ -955,7 +988,7 @@
   }
 }
 @media (max-width: 768px) {
-  .feature-row-4, .team-grid-new, .services-grid-new { grid-template-columns: 1fr; }
+  .feature-row-4, .services-grid-new { grid-template-columns: 1fr; }
   .services-grid-new { max-width: 100%; }
   .service-card-new { min-width: 0; word-break: break-word; }
   div[style*="min-width: 300px"] { min-width: 100% !important; }
@@ -1235,7 +1268,7 @@
 /* Comprehensive Mobile Responsiveness */
 @media (max-width: 992px) {
   .feature-row-4 { grid-template-columns: 1fr 1fr; }
-  .team-grid-new { grid-template-columns: 1fr 1fr; }
+  
   .steps-grid { grid-template-columns: 1fr !important; }
   .testimonials-grid { grid-template-columns: 1fr !important; padding-bottom: 32px !important; }
   .about-stats-container { flex-direction: column; }
@@ -1244,7 +1277,7 @@
 }
 @media (max-width: 768px) {
   .feature-row-4 { grid-template-columns: 1fr; }
-  .team-grid-new { grid-template-columns: 1fr; }
+  
   .hero-services { justify-content: center; }
   .cta-title { font-size: 2rem !important; }
   .process-steps { flex-direction: column; align-items: flex-start; }

@@ -1265,9 +1265,15 @@ window.loadPress = async function(){const s=await getDocs(collection(_db,'press'
   // ========= PAGES LOGIC =========
   window.loadPages = async function() {
     const { collection, getDocs, doc, setDoc } = window.firestoreOps;
-    const snap = await getDocs(collection(window.db, 'pages'));
     pagesData = [];
-    snap.forEach(d => pagesData.push({ id: d.id, ...d.data() }));
+    try {
+        const snap = await getDocs(collection(window.db, 'pages'));
+        snap.forEach(d => pagesData.push({ id: d.id, ...d.data() }));
+    } catch(err) {
+        console.error('Error loading pages (check Firebase Rules):', err);
+        if(window.showToast) window.showToast('Fehler beim Laden der Seiten (Berechtigungen fehlen in Firebase)', 'error');
+        return; // exit early to not break the rest
+    }
     
     // Auto-seed if empty
     try {

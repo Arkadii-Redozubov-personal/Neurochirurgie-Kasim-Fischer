@@ -110,30 +110,7 @@
 
       
       <!-- ===== PAGES SECTION ===== -->
-      <section id="section-pages" style="display:none;">
-        <div class="content-card">
-          <div class="content-card-header">
-            <div>
-              <div class="content-card-title">Seiteninhalte (Pages)</div>
-              <div class="content-card-sub">Inhalte für jede Seite bearbeiten (Hero-Titel, etc.)</div>
-            </div>
-            <!-- <button class="btn btn-primary" onclick="openPageModal()">+ Neue Seite (WIP)</button> -->
-          </div>
-          <table class="table" id="pagesTable">
-            <thead>
-              <tr>
-                <th>Seiten-ID</th>
-                <th>Name</th>
-                <th>Sektionen</th>
-                <th style="width:120px;">Aktion</th>
-              </tr>
-            </thead>
-            <tbody id="pagesTbody">
-              <tr><td colspan="4" class="text-center" style="padding: 20px; color: #94a3b8;">Lädt...</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+      
 
       <!-- ===== PAGES MODAL ===== -->
       <div class="modal-overlay" id="pageModal">
@@ -170,22 +147,7 @@
 
 
       <!-- ===== BRANCHES SECTION ===== -->
-      <section id="section-branches" style="display:none;">
-        <div class="content-card">
-          <div class="content-card-header">
-            <div>
-              <div class="content-card-title">Filialen & Öffnungszeiten</div>
-              <div class="content-card-sub">Verwalten Sie Kontaktinfos und Notfall-Meldungen (Krankheit/Schließung) für jede Filiale.</div>
-            </div>
-          </div>
-          <div id="branchesContainer" style="display:flex; flex-direction:column; gap:20px; padding:20px;">
-            Lädt Filialen...
-          </div>
-          <div class="modal-footer" style="border-top:1px solid rgba(0,0,0,0.05); padding: 20px;">
-            <button class="btn btn-primary" onclick="saveBranches()">Alle Änderungen speichern</button>
-          </div>
-        </div>
-      </section>
+      
 
       <!-- ===== DASHBOARD SECTION ===== -->
       <section id="section-dashboard">
@@ -261,39 +223,83 @@
       </section>
 
       <!-- ===== PRESS SECTION ===== -->
-      <section id="section-press" style="display:none;">
-        <div class="content-card">
-          <div class="content-card-header">
-            <div>
-              <div class="content-card-title">Presseschau</div>
-              <div class="content-card-sub">Presseartikel, Interviews und PDF-Downloads verwalten</div>
-            </div>
-            <button class="btn btn-primary btn-sm" onclick="openAddPress()">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              Hinzufügen
-            </button>
-          </div>
-          <div class="content-card-body" style="padding: 0;">
-            <table class="treatment-table">
-              <thead>
-                <tr>
-                  <th style="padding-left: 24px;">#</th>
-                  <th>Titel</th>
-                  <th>Quelle</th>
-                  <th>Kategorie</th>
-                  <th>Aktionen</th>
-                </tr>
-              </thead>
-              <tbody id="pressTableBody">
-                <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+      
 
       <!-- ===== COORDINATORS SECTION ===== -->
-      <section id="section-schwerpunkte" style="display:none;">
+      
+
+      <!-- ===== TREATMENTS SECTION ===== -->
+      
+
+      <!-- ===== TEAM SECTION ===== -->
+      
+
+      <!-- ===== TEXTS SECTION ===== -->
+      
+
+      <!-- ===== SYNC SECTION ===== -->
+      <section id="section-page-index" style="display:none;">
+
+  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
+    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
+      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
+    </h3>
+    <div id="hero-editor-index" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
+      <!-- Tabs -->
+      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-index">
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('index', '.')">Deutsch (DE)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('index', 'en')">English (EN)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('index', 'ru')">Русский (RU)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('index', 'tr')">Türkçe (TR)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('index', 'ar')">العربية (AR)</button>
+      </div>
+      <!-- Inputs -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <label class="form-label">Titel (<span id="hero-lbl-lang-index">DE</span>)</label>
+          <input type="text" class="form-input" id="hero-title-index" placeholder="Titel eingeben...">
+        </div>
+        <div>
+          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-index">DE</span>)</label>
+          <textarea class="form-textarea" id="hero-desc-index" rows="3" placeholder="Beschreibung eingeben..."></textarea>
+        </div>
+        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('index')">Speichern</button>
+      </div>
+    </div>
+  </div>
+
+
+</section><section id="section-page-praxis" style="display:none;">
+
+  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
+    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
+      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
+    </h3>
+    <div id="hero-editor-praxis" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
+      <!-- Tabs -->
+      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-praxis">
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('praxis', '.')">Deutsch (DE)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('praxis', 'en')">English (EN)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('praxis', 'ru')">Русский (RU)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('praxis', 'tr')">Türkçe (TR)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('praxis', 'ar')">العربية (AR)</button>
+      </div>
+      <!-- Inputs -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <label class="form-label">Titel (<span id="hero-lbl-lang-praxis">DE</span>)</label>
+          <input type="text" class="form-input" id="hero-title-praxis" placeholder="Titel eingeben...">
+        </div>
+        <div>
+          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-praxis">DE</span>)</label>
+          <textarea class="form-textarea" id="hero-desc-praxis" rows="3" placeholder="Beschreibung eingeben..."></textarea>
+        </div>
+        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('praxis')">Speichern</button>
+      </div>
+    </div>
+  </div>
+
+
         <div class="content-card">
           <div class="content-card-header">
             <div>
@@ -322,10 +328,38 @@
             </table>
           </div>
         </div>
-      </section>
+      
+</section><section id="section-page-behandlungen" style="display:none;">
 
-      <!-- ===== TREATMENTS SECTION ===== -->
-      <section id="section-treatments" style="display:none;">
+  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
+    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
+      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
+    </h3>
+    <div id="hero-editor-behandlungen" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
+      <!-- Tabs -->
+      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-behandlungen">
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('behandlungen', '.')">Deutsch (DE)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('behandlungen', 'en')">English (EN)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('behandlungen', 'ru')">Русский (RU)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('behandlungen', 'tr')">Türkçe (TR)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('behandlungen', 'ar')">العربية (AR)</button>
+      </div>
+      <!-- Inputs -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <label class="form-label">Titel (<span id="hero-lbl-lang-behandlungen">DE</span>)</label>
+          <input type="text" class="form-input" id="hero-title-behandlungen" placeholder="Titel eingeben...">
+        </div>
+        <div>
+          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-behandlungen">DE</span>)</label>
+          <textarea class="form-textarea" id="hero-desc-behandlungen" rows="3" placeholder="Beschreibung eingeben..."></textarea>
+        </div>
+        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('behandlungen')">Speichern</button>
+      </div>
+    </div>
+  </div>
+
+
         <div class="content-card">
           <div class="content-card-header">
             <div>
@@ -353,10 +387,100 @@
             </table>
           </div>
         </div>
-      </section>
+      
+</section><section id="section-page-diagnostik" style="display:none;">
 
-      <!-- ===== TEAM SECTION ===== -->
-      <section id="section-team" style="display:none;">
+  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
+    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
+      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
+    </h3>
+    <div id="hero-editor-diagnostik" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
+      <!-- Tabs -->
+      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-diagnostik">
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('diagnostik', '.')">Deutsch (DE)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('diagnostik', 'en')">English (EN)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('diagnostik', 'ru')">Русский (RU)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('diagnostik', 'tr')">Türkçe (TR)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('diagnostik', 'ar')">العربية (AR)</button>
+      </div>
+      <!-- Inputs -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <label class="form-label">Titel (<span id="hero-lbl-lang-diagnostik">DE</span>)</label>
+          <input type="text" class="form-input" id="hero-title-diagnostik" placeholder="Titel eingeben...">
+        </div>
+        <div>
+          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-diagnostik">DE</span>)</label>
+          <textarea class="form-textarea" id="hero-desc-diagnostik" rows="3" placeholder="Beschreibung eingeben..."></textarea>
+        </div>
+        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('diagnostik')">Speichern</button>
+      </div>
+    </div>
+  </div>
+
+
+</section><section id="section-page-patienten" style="display:none;">
+
+  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
+    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
+      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
+    </h3>
+    <div id="hero-editor-patienten" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
+      <!-- Tabs -->
+      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-patienten">
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('patienten', '.')">Deutsch (DE)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('patienten', 'en')">English (EN)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('patienten', 'ru')">Русский (RU)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('patienten', 'tr')">Türkçe (TR)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('patienten', 'ar')">العربية (AR)</button>
+      </div>
+      <!-- Inputs -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <label class="form-label">Titel (<span id="hero-lbl-lang-patienten">DE</span>)</label>
+          <input type="text" class="form-input" id="hero-title-patienten" placeholder="Titel eingeben...">
+        </div>
+        <div>
+          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-patienten">DE</span>)</label>
+          <textarea class="form-textarea" id="hero-desc-patienten" rows="3" placeholder="Beschreibung eingeben..."></textarea>
+        </div>
+        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('patienten')">Speichern</button>
+      </div>
+    </div>
+  </div>
+
+
+</section><section id="section-page-team" style="display:none;">
+
+  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
+    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
+      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
+    </h3>
+    <div id="hero-editor-team" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
+      <!-- Tabs -->
+      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-team">
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('team', '.')">Deutsch (DE)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('team', 'en')">English (EN)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('team', 'ru')">Русский (RU)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('team', 'tr')">Türkçe (TR)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('team', 'ar')">العربية (AR)</button>
+      </div>
+      <!-- Inputs -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <label class="form-label">Titel (<span id="hero-lbl-lang-team">DE</span>)</label>
+          <input type="text" class="form-input" id="hero-title-team" placeholder="Titel eingeben...">
+        </div>
+        <div>
+          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-team">DE</span>)</label>
+          <textarea class="form-textarea" id="hero-desc-team" rows="3" placeholder="Beschreibung eingeben..."></textarea>
+        </div>
+        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('team')">Speichern</button>
+      </div>
+    </div>
+  </div>
+
+
         <div class="content-card">
           <div class="content-card-header">
             <div>
@@ -384,38 +508,178 @@
             </table>
           </div>
         </div>
-      </section>
+      
+</section><section id="section-page-zweitmeinung" style="display:none;">
 
-      <!-- ===== TEXTS SECTION ===== -->
-      <section id="section-texts" style="display:none;">
+  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
+    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
+      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
+    </h3>
+    <div id="hero-editor-zweitmeinung" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
+      <!-- Tabs -->
+      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-zweitmeinung">
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('zweitmeinung', '.')">Deutsch (DE)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('zweitmeinung', 'en')">English (EN)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('zweitmeinung', 'ru')">Русский (RU)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('zweitmeinung', 'tr')">Türkçe (TR)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('zweitmeinung', 'ar')">العربية (AR)</button>
+      </div>
+      <!-- Inputs -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <label class="form-label">Titel (<span id="hero-lbl-lang-zweitmeinung">DE</span>)</label>
+          <input type="text" class="form-input" id="hero-title-zweitmeinung" placeholder="Titel eingeben...">
+        </div>
+        <div>
+          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-zweitmeinung">DE</span>)</label>
+          <textarea class="form-textarea" id="hero-desc-zweitmeinung" rows="3" placeholder="Beschreibung eingeben..."></textarea>
+        </div>
+        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('zweitmeinung')">Speichern</button>
+      </div>
+    </div>
+  </div>
+
+
+</section><section id="section-page-sprechzeiten" style="display:none;">
+
+  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
+    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
+      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
+    </h3>
+    <div id="hero-editor-sprechzeiten" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
+      <!-- Tabs -->
+      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-sprechzeiten">
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('sprechzeiten', '.')">Deutsch (DE)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('sprechzeiten', 'en')">English (EN)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('sprechzeiten', 'ru')">Русский (RU)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('sprechzeiten', 'tr')">Türkçe (TR)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('sprechzeiten', 'ar')">العربية (AR)</button>
+      </div>
+      <!-- Inputs -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <label class="form-label">Titel (<span id="hero-lbl-lang-sprechzeiten">DE</span>)</label>
+          <input type="text" class="form-input" id="hero-title-sprechzeiten" placeholder="Titel eingeben...">
+        </div>
+        <div>
+          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-sprechzeiten">DE</span>)</label>
+          <textarea class="form-textarea" id="hero-desc-sprechzeiten" rows="3" placeholder="Beschreibung eingeben..."></textarea>
+        </div>
+        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('sprechzeiten')">Speichern</button>
+      </div>
+    </div>
+  </div>
+
+
         <div class="content-card">
           <div class="content-card-header">
             <div>
-              <div class="content-card-title">Texte & Slogans</div>
-              <div class="content-card-sub">Allgemeine Seitenüberschriften und globale Texte</div>
+              <div class="content-card-title">Filialen & Öffnungszeiten</div>
+              <div class="content-card-sub">Verwalten Sie Kontaktinfos und Notfall-Meldungen (Krankheit/Schließung) für jede Filiale.</div>
             </div>
           </div>
-          <div class="content-card-body">
-            <div class="lang-tabs">
-              <button class="lang-tab active" onclick="switchTextLang('de')">🇩🇪 DE</button>
-              <button class="lang-tab" onclick="switchTextLang('en')">🇬🇧 EN</button>
-              <button class="lang-tab" onclick="switchTextLang('ru')">🇷🇺 RU</button>
-              <button class="lang-tab" onclick="switchTextLang('tr')">🇹🇷 TR</button>
-              <button class="lang-tab" onclick="switchTextLang('ar')">🇸🇦 AR</button>
-            </div>
-            <div id="textsEditorArea">
-              <!-- Populated by JS -->
-            </div>
-            <button class="btn btn-primary" onclick="saveTexts()" style="margin-top: 16px;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
-              Speichern
-            </button>
+          <div id="branchesContainer" style="display:flex; flex-direction:column; gap:20px; padding:20px;">
+            Lädt Filialen...
+          </div>
+          <div class="modal-footer" style="border-top:1px solid rgba(0,0,0,0.05); padding: 20px;">
+            <button class="btn btn-primary" onclick="saveBranches()">Alle Änderungen speichern</button>
           </div>
         </div>
-      </section>
+      
+</section><section id="section-page-press" style="display:none;">
 
-      <!-- ===== SYNC SECTION ===== -->
-      <section id="section-sync" style="display:none;">
+  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
+    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
+      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
+    </h3>
+    <div id="hero-editor-press" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
+      <!-- Tabs -->
+      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-press">
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('press', '.')">Deutsch (DE)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('press', 'en')">English (EN)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('press', 'ru')">Русский (RU)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('press', 'tr')">Türkçe (TR)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('press', 'ar')">العربية (AR)</button>
+      </div>
+      <!-- Inputs -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <label class="form-label">Titel (<span id="hero-lbl-lang-press">DE</span>)</label>
+          <input type="text" class="form-input" id="hero-title-press" placeholder="Titel eingeben...">
+        </div>
+        <div>
+          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-press">DE</span>)</label>
+          <textarea class="form-textarea" id="hero-desc-press" rows="3" placeholder="Beschreibung eingeben..."></textarea>
+        </div>
+        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('press')">Speichern</button>
+      </div>
+    </div>
+  </div>
+
+
+        <div class="content-card">
+          <div class="content-card-header">
+            <div>
+              <div class="content-card-title">Presseschau</div>
+              <div class="content-card-sub">Presseartikel, Interviews und PDF-Downloads verwalten</div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openAddPress()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Hinzufügen
+            </button>
+          </div>
+          <div class="content-card-body" style="padding: 0;">
+            <table class="treatment-table">
+              <thead>
+                <tr>
+                  <th style="padding-left: 24px;">#</th>
+                  <th>Titel</th>
+                  <th>Quelle</th>
+                  <th>Kategorie</th>
+                  <th>Aktionen</th>
+                </tr>
+              </thead>
+              <tbody id="pressTableBody">
+                <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      
+</section><section id="section-page-legal" style="display:none;">
+
+  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
+    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
+      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
+    </h3>
+    <div id="hero-editor-legal" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
+      <!-- Tabs -->
+      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-legal">
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('legal', '.')">Deutsch (DE)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('legal', 'en')">English (EN)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('legal', 'ru')">Русский (RU)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('legal', 'tr')">Türkçe (TR)</button>
+        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('legal', 'ar')">العربية (AR)</button>
+      </div>
+      <!-- Inputs -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <label class="form-label">Titel (<span id="hero-lbl-lang-legal">DE</span>)</label>
+          <input type="text" class="form-input" id="hero-title-legal" placeholder="Titel eingeben...">
+        </div>
+        <div>
+          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-legal">DE</span>)</label>
+          <textarea class="form-textarea" id="hero-desc-legal" rows="3" placeholder="Beschreibung eingeben..."></textarea>
+        </div>
+        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('legal')">Speichern</button>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<section id="section-sync" style="display:none;">
         <div class="content-card">
           <div class="content-card-header">
             <div>
@@ -633,15 +897,20 @@
   };
 
   // ========= SECTION NAVIGATION =========
-  const sections = ['dashboard', 'treatments', 'team', 'texts', 'sync', 'press', 'schwerpunkte'];
+  const sections = ['dashboard', 'page-index', 'page-praxis', 'page-behandlungen', 'page-diagnostik', 'page-patienten', 'page-team', 'page-zweitmeinung', 'page-sprechzeiten', 'page-press', 'page-legal', 'sync'];
   const titles = {
     dashboard: ['Dashboard', 'Willkommen im Admin-Bereich'],
-    treatments: ['Behandlungen', 'Inhalte bearbeiten'],
-    team: ['Team', 'Ärzte und Mitarbeiter'],
-    texts: ['Texte & Slogans', 'Globale Texte bearbeiten'],
-    sync: ['Website Sync', 'Änderungen exportieren und anwenden'],
-    press: ['Presseschau', 'Artikel und PDFs verwalten'],
-    schwerpunkte: ['Schwerpunkte', 'Koordinatorenprofile verwalten']
+    'page-index': ['Startseite', 'Startseite Inhalte bearbeiten'],
+    'page-praxis': ['Praxis & Schwerpunkte', 'Praxisinhalte bearbeiten'],
+    'page-behandlungen': ['Behandlungen', 'Behandlungen verwalten'],
+    'page-diagnostik': ['Diagnostik & Therapie', 'Diagnostik bearbeiten'],
+    'page-patienten': ['Internationale Patienten', 'Patienteninfos bearbeiten'],
+    'page-team': ['Unser Team', 'Ärzte und Team verwalten'],
+    'page-zweitmeinung': ['Zweitmeinung', 'Zweitmeinung bearbeiten'],
+    'page-sprechzeiten': ['Filialen & Sprechzeiten', 'Standorte bearbeiten'],
+    'page-press': ['Presseschau', 'Artikel und PDFs verwalten'],
+    'page-legal': ['Rechtliches', 'Impressum & Datenschutz bearbeiten'],
+    sync: ['Website Sync', 'Änderungen exportieren und anwenden']
   };
 
   window.showSection = (name) => {
@@ -1389,6 +1658,73 @@ window.loadPress = async function(){const s=await getDocs(collection(window.db,'
     } else {
         window.closeModal('pageModal');
     }
+  };
+
+
+  window.currentHeroLang = {};
+  
+  window.switchHeroLang = (pageId, lang) => {
+    window.currentHeroLang[pageId] = lang;
+    document.querySelectorAll(`#hero-tabs-${pageId} button`).forEach(b => b.classList.replace('btn-primary', 'btn-secondary'));
+    // Find the button with matching onclick
+    const btn = Array.from(document.querySelectorAll(`#hero-tabs-${pageId} button`)).find(b => b.getAttribute('onclick').includes(`'${lang}'`));
+    if (btn) btn.classList.replace('btn-secondary', 'btn-primary');
+    
+    document.getElementById(`hero-lbl-lang-${pageId}`).innerText = lang.toUpperCase();
+    document.getElementById(`hero-lbl-lang2-${pageId}`).innerText = lang.toUpperCase();
+    
+    // Load data
+    const pageData = window.pagesData.find(p => p.id === pageId);
+    let title = '', desc = '';
+    if (pageData && pageData.sections) {
+      const heroSec = pageData.sections.find(s => s.type === 'hero');
+      if (heroSec && heroSec.content && heroSec.content[lang]) {
+         title = heroSec.content[lang].title || '';
+         desc = heroSec.content[lang].desc || '';
+      }
+    }
+    document.getElementById(`hero-title-${pageId}`).value = title;
+    document.getElementById(`hero-desc-${pageId}`).value = desc;
+  };
+
+  window.saveHero = async (pageId) => {
+    const lang = window.currentHeroLang[pageId] || '.';
+    const title = document.getElementById(`hero-title-${pageId}`).value.trim();
+    const desc = document.getElementById(`hero-desc-${pageId}`).value.trim();
+    
+    let pageData = window.pagesData.find(p => p.id === pageId);
+    if (!pageData) {
+      pageData = { id: pageId, sections: [{ type: 'hero', content: {} }] };
+      window.pagesData.push(pageData);
+    }
+    
+    let heroSec = pageData.sections.find(s => s.type === 'hero');
+    if (!heroSec) {
+      heroSec = { type: 'hero', content: {} };
+      pageData.sections.push(heroSec);
+    }
+    
+    if (!heroSec.content[lang]) heroSec.content[lang] = {};
+    heroSec.content[lang].title = title;
+    heroSec.content[lang].desc = desc;
+    
+    try {
+      await window.firestoreOps.setDoc(window.firestoreOps.doc(window.db, 'pages', pageId), pageData);
+      if(window.showToast) window.showToast('Erfolgreich gespeichert!', 'success');
+    } catch (e) {
+      console.error(e);
+      if(window.showToast) window.showToast('Fehler beim Speichern', 'error');
+    }
+  };
+
+  // Initialize hero views on load
+  const originalLoadPages = window.loadPages;
+  window.loadPages = async () => {
+    if (originalLoadPages) await originalLoadPages();
+    // After pages are loaded, init the hero views for each page
+    ['index','praxis','behandlungen','diagnostik','patienten','team','zweitmeinung','sprechzeiten','press','legal'].forEach(pageId => {
+      window.switchHeroLang(pageId, '.');
+    });
   };
 
 </script>

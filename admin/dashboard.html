@@ -602,8 +602,10 @@
   };
 
   const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
   const db = getFirestore(app);
+  const auth = getAuth(app);
+  window.mainDb = db;
+  window.mainAuth = auth;
 
   // Expose globals
   window.db = db;
@@ -1060,16 +1062,14 @@
 </script>
 
 <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-  import { getFirestore, collection, getDocs, doc, setDoc, addDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-  const _cfg = {apiKey:"AIzaSyBNcdljYigWs6nlFKy5VAVo3VPicHRQn9M",authDomain:"vertex-clinic.firebaseapp.com",projectId:"vertex-clinic",storageBucket:"vertex-clinic.firebasestorage.app",messagingSenderId:"385329227649",appId:"1:385329227649:web:5f1b4244ac3990b4a26a80"};
-  const _app = initializeApp(_cfg,'app2');
-  const _db = getFirestore(_app);
+  import { getFirestore, collection, getDocs, doc, setDoc, addDoc, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+  window.firestoreOps = { collection, getDocs, doc, setDoc, addDoc, deleteDoc, updateDoc };
+  window.db = window.mainDb;
   let pressData=[],editingPressId=null,schwerpunkteData=[],editingSchwerpunktId=null;
   
     let branchesData = [];
     window.loadBranches = async function() {
-        const s = await getDocs(collection(_db, 'branches'));
+        const s = await getDocs(collection(window.db, 'branches'));
         branchesData = [];
         s.forEach(d => branchesData.push({id: d.id, ...d.data()}));
         if(branchesData.length === 0) {
@@ -1128,7 +1128,7 @@
                 b.notice_tr = document.getElementById(`br_notice_tr_${i}`).value;
                 b.notice_ar = document.getElementById(`br_notice_ar_${i}`).value;
                 
-                await setDoc(doc(_db, 'branches', b.id), b);
+                await setDoc(doc(window.db, 'branches', b.id), b);
             }
             alert('Filialen erfolgreich gespeichert!');
         } catch(e) {
@@ -1137,7 +1137,7 @@
         }
     };
 
-window.loadPress = async function(){const s=await getDocs(collection(_db,'press'));pressData=[];s.forEach(d=>pressData.push({id:d.id,...d.data()}));renderPress();updStats();}
+window.loadPress = async function(){const s=await getDocs(collection(window.db,'press'));pressData=[];s.forEach(d=>pressData.push({id:d.id,...d.data()}));renderPress();updStats();}
   
   function updStats(){const e=document.getElementById('statPress');if(e)e.textContent=pressData.length;const c=document.getElementById('statSchwerpunkte');if(c)c.textContent=schwerpunkteData.length;}
   const CAT={interviews:'Interview',article:'Artikel','clinic-news':'Klinik-News',science:'Wissenschaft'};
@@ -1184,10 +1184,10 @@ window.loadPress = async function(){const s=await getDocs(collection(_db,'press'
     }
 ;
   
-  window.deletePress=async(id)=>{if(!confirm('Löschen?'))return;try{await deleteDoc(doc(_db,'press',id));window.showToast('Gelöscht.');await window.loadPress();}catch(e){window.showToast('Fehler: '+e.message,'error');}};
+  window.deletePress=async(id)=>{if(!confirm('Löschen?'))return;try{await deleteDoc(doc(window.db,'press',id));window.showToast('Gelöscht.');await window.loadPress();}catch(e){window.showToast('Fehler: '+e.message,'error');}};
 
   window.loadSchwerpunkte = async function(){
-    const s = await getDocs(collection(_db,'schwerpunkte'));
+    const s = await getDocs(collection(window.db,'schwerpunkte'));
     schwerpunkteData=[];
     s.forEach(d=>schwerpunkteData.push({id:d.id,...d.data()}));
     schwerpunkteData.sort((a,b)=>(a.order||0)-(b.order||0));
@@ -1229,12 +1229,12 @@ window.loadPress = async function(){const s=await getDocs(collection(_db,'press'
         s['de'].title = sData.title;
         s['de'].desc = sData.desc;
         s['de'].fullDesc = sData.fullDesc;
-        await setDoc(doc(_db,'schwerpunkte',editingSchwerpunktId), s);
+        await setDoc(doc(window.db,'schwerpunkte',editingSchwerpunktId), s);
         window.showToast('Gespeichert!');
       }else{
         const newS = { order: schwerpunkteData.length };
         newS['de'] = sData;
-        await addDoc(collection(_db,'schwerpunkte'), newS);
+        await addDoc(collection(window.db,'schwerpunkte'), newS);
         window.showToast('Hinzugefügt!');
       }
       document.getElementById('spModal').classList.remove('open');
@@ -1248,7 +1248,7 @@ window.loadPress = async function(){const s=await getDocs(collection(_db,'press'
   window.deleteSchwerpunkt=async(id)=>{
     if(!confirm('Diesen Schwerpunkt wirklich löschen?'))return;
     try{
-      await deleteDoc(doc(_db,'schwerpunkte',id));
+      await deleteDoc(doc(window.db,'schwerpunkte',id));
       window.showToast('Gelöscht.');
       await window.loadSchwerpunkte();
     }catch(e){

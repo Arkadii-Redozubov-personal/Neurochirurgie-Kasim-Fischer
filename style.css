@@ -2171,3 +2171,10 @@
 
 
 
+
+/* Splide Overrides for Team Slider */
+.team-splide { padding: 0 50px 50px !important; }
+.team-splide .splide__arrow--prev { left: 0; }
+.team-splide .splide__arrow--next { right: 0; }
+.team-splide .splide__pagination { bottom: 0; }
+@media (max-width: 768px) { .team-splide { padding: 0 10px 40px !important; } .team-splide .splide__arrow { display: none; } }

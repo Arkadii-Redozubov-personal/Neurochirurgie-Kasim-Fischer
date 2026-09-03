@@ -39,46 +39,34 @@
         Dashboard
       </button>
 
-      <span class="nav-section-label">Seiten</span>
-      <button class="nav-item" onclick="showSection('page-index')">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        Startseite
-      </button>
-      <button class="nav-item" onclick="showSection('page-praxis')">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-        Praxis & Schwerpunkte
-      </button>
-      <button class="nav-item" onclick="showSection('page-behandlungen')">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        Behandlungen
-      </button>
-      <button class="nav-item" onclick="showSection('page-diagnostik')">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        Diagnostik & Therapie
-      </button>
-      <button class="nav-item" onclick="showSection('page-patienten')">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        Internationale Patienten
-      </button>
-      <button class="nav-item" onclick="showSection('page-team')">
+      <span class="nav-section-label">Seiten & Inhalte</span>
+      <button class="nav-item" onclick="showSection('team')">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        Unser Team
+        Practice
       </button>
-      <button class="nav-item" onclick="showSection('page-zweitmeinung')">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        Zweitmeinung
+      <button class="nav-item" onclick="showSection('schwerpunkte')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Diseases
       </button>
-      <button class="nav-item" onclick="showSection('page-sprechzeiten')">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-        Filialen & Zeiten
+      <button class="nav-item" onclick="showSection('diagnostik')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Diagnostics
       </button>
-      <button class="nav-item" onclick="showSection('page-press')">
+      <button class="nav-item" onclick="showSection('treatments')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Treatments and Surgeries
+      </button>
+      <button class="nav-item" onclick="showSection('faq')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        For Patients
+      </button>
+      <button class="nav-item" onclick="showSection('press')">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-        Presseschau
+        Press
       </button>
-      <button class="nav-item" onclick="showSection('page-legal')">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Rechtliches
+      <button class="nav-item" onclick="showSection('branches')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        Contact
       </button>
 
       <span class="nav-section-label">System</span>
@@ -157,8 +145,7 @@
       </div>
 
 
-      <!-- ===== BRANCHES SECTION ===== -->
-      
+
 
       <!-- ===== DASHBOARD SECTION ===== -->
       <section id="section-dashboard">
@@ -234,88 +221,31 @@
       </section>
 
       <!-- ===== PRESS SECTION ===== -->
-      
-
-      <!-- ===== COORDINATORS SECTION ===== -->
-      
-
-      <!-- ===== TREATMENTS SECTION ===== -->
-      
-
-      <!-- ===== TEAM SECTION ===== -->
-      
-
-      <!-- ===== TEXTS SECTION ===== -->
-      
-
-      <!-- ===== SYNC SECTION ===== -->
-      <section id="section-page-index" style="display:none;">
-
-  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
-    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
-      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
-    </h3>
-    <div id="hero-editor-index" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
-      <!-- Tabs -->
-      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-index">
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('index', '.')">Deutsch (DE)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('index', 'en')">English (EN)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('index', 'ru')">Русский (RU)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('index', 'tr')">Türkçe (TR)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('index', 'ar')">العربية (AR)</button>
-      </div>
-      <!-- Inputs -->
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div>
-          <label class="form-label">Titel (<span id="hero-lbl-lang-index">DE</span>)</label>
-          <input type="text" class="form-input" id="hero-title-index" placeholder="Titel eingeben...">
-        </div>
-        <div>
-          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-index">DE</span>)</label>
-          <textarea class="form-textarea" id="hero-desc-index" rows="3" placeholder="Beschreibung eingeben..."></textarea>
-        </div>
-        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('index')">Speichern</button>
-      </div>
-    </div>
-  </div>
-
-
-</section><section id="section-page-praxis" style="display:none;">
-
-  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
-    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
-      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
-    </h3>
-    <div id="hero-editor-praxis" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
-      <!-- Tabs -->
-      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-praxis">
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('praxis', '.')">Deutsch (DE)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('praxis', 'en')">English (EN)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('praxis', 'ru')">Русский (RU)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('praxis', 'tr')">Türkçe (TR)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('praxis', 'ar')">العربية (AR)</button>
-      </div>
-      <!-- Inputs -->
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div>
-          <label class="form-label">Titel (<span id="hero-lbl-lang-praxis">DE</span>)</label>
-          <input type="text" class="form-input" id="hero-title-praxis" placeholder="Titel eingeben...">
-        </div>
-        <div>
-          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-praxis">DE</span>)</label>
-          <textarea class="form-textarea" id="hero-desc-praxis" rows="3" placeholder="Beschreibung eingeben..."></textarea>
-        </div>
-        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('praxis')">Speichern</button>
-      </div>
-    </div>
-  </div>
-
-
+      <section id="section-press" style="display:none;">
         <div class="content-card">
           <div class="content-card-header">
             <div>
-              <div class="content-card-title">Koordinatoren</div>
-              <div class="content-card-sub">Koordinatorenprofile und Kontaktdaten verwalten</div>
+              <div class="content-card-title">Presseschau</div>
+              <div class="content-card-sub">Presseartikel, Interviews und PDF-Downloads verwalten</div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openAddPress()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Hinzufügen
+            </button>
+          </div>
+          <div class="content-card-body" style="padding: 0;">
+            <div id="pressContainer"><table class="treatment-table"><thead><tr><th style="padding-left:24px;">#</th><th>Titel</th><th>Datum</th><th>Aktionen</th></tr></thead><tbody id="pressTableBody"><tr><td colspan="4" style="text-align:center; padding:40px; color:var(--text-dim);">Lade Daten...</td></tr></tbody></table></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== DISEASES SECTION ===== -->
+      <section id="section-schwerpunkte" style="display:none;">
+        <div class="content-card">
+          <div class="content-card-header">
+            <div>
+              <div class="content-card-title">Diseases</div>
+              <div class="content-card-sub">Behandelte Krankheiten und Schwerpunkte verwalten</div>
             </div>
             <button class="btn btn-primary btn-sm" onclick="openAddSchwerpunkt()">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
@@ -327,50 +257,21 @@
               <thead>
                 <tr>
                   <th style="padding-left: 24px;">#</th>
-                  <th>Name</th>
-                  <th>Sprachen</th>
-                  <th>Telefon</th>
+                  <th>Titel</th>
+                  <th>Beschreibung</th>
                   <th>Aktionen</th>
                 </tr>
               </thead>
               <tbody id="schwerpunkteTableBody">
-                <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
+                <tr><td colspan="4" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
               </tbody>
             </table>
           </div>
         </div>
-      
-</section><section id="section-page-behandlungen" style="display:none;">
+      </section>
 
-  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
-    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
-      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
-    </h3>
-    <div id="hero-editor-behandlungen" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
-      <!-- Tabs -->
-      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-behandlungen">
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('behandlungen', '.')">Deutsch (DE)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('behandlungen', 'en')">English (EN)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('behandlungen', 'ru')">Русский (RU)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('behandlungen', 'tr')">Türkçe (TR)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('behandlungen', 'ar')">العربية (AR)</button>
-      </div>
-      <!-- Inputs -->
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div>
-          <label class="form-label">Titel (<span id="hero-lbl-lang-behandlungen">DE</span>)</label>
-          <input type="text" class="form-input" id="hero-title-behandlungen" placeholder="Titel eingeben...">
-        </div>
-        <div>
-          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-behandlungen">DE</span>)</label>
-          <textarea class="form-textarea" id="hero-desc-behandlungen" rows="3" placeholder="Beschreibung eingeben..."></textarea>
-        </div>
-        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('behandlungen')">Speichern</button>
-      </div>
-    </div>
-  </div>
-
-
+      <!-- ===== TREATMENTS SECTION ===== -->
+      <section id="section-treatments" style="display:none;">
         <div class="content-card">
           <div class="content-card-header">
             <div>
@@ -398,100 +299,10 @@
             </table>
           </div>
         </div>
-      
-</section><section id="section-page-diagnostik" style="display:none;">
+      </section>
 
-  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
-    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
-      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
-    </h3>
-    <div id="hero-editor-diagnostik" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
-      <!-- Tabs -->
-      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-diagnostik">
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('diagnostik', '.')">Deutsch (DE)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('diagnostik', 'en')">English (EN)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('diagnostik', 'ru')">Русский (RU)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('diagnostik', 'tr')">Türkçe (TR)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('diagnostik', 'ar')">العربية (AR)</button>
-      </div>
-      <!-- Inputs -->
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div>
-          <label class="form-label">Titel (<span id="hero-lbl-lang-diagnostik">DE</span>)</label>
-          <input type="text" class="form-input" id="hero-title-diagnostik" placeholder="Titel eingeben...">
-        </div>
-        <div>
-          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-diagnostik">DE</span>)</label>
-          <textarea class="form-textarea" id="hero-desc-diagnostik" rows="3" placeholder="Beschreibung eingeben..."></textarea>
-        </div>
-        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('diagnostik')">Speichern</button>
-      </div>
-    </div>
-  </div>
-
-
-</section><section id="section-page-patienten" style="display:none;">
-
-  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
-    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
-      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
-    </h3>
-    <div id="hero-editor-patienten" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
-      <!-- Tabs -->
-      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-patienten">
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('patienten', '.')">Deutsch (DE)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('patienten', 'en')">English (EN)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('patienten', 'ru')">Русский (RU)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('patienten', 'tr')">Türkçe (TR)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('patienten', 'ar')">العربية (AR)</button>
-      </div>
-      <!-- Inputs -->
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div>
-          <label class="form-label">Titel (<span id="hero-lbl-lang-patienten">DE</span>)</label>
-          <input type="text" class="form-input" id="hero-title-patienten" placeholder="Titel eingeben...">
-        </div>
-        <div>
-          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-patienten">DE</span>)</label>
-          <textarea class="form-textarea" id="hero-desc-patienten" rows="3" placeholder="Beschreibung eingeben..."></textarea>
-        </div>
-        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('patienten')">Speichern</button>
-      </div>
-    </div>
-  </div>
-
-
-</section><section id="section-page-team" style="display:none;">
-
-  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
-    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
-      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
-    </h3>
-    <div id="hero-editor-team" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
-      <!-- Tabs -->
-      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-team">
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('team', '.')">Deutsch (DE)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('team', 'en')">English (EN)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('team', 'ru')">Русский (RU)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('team', 'tr')">Türkçe (TR)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('team', 'ar')">العربية (AR)</button>
-      </div>
-      <!-- Inputs -->
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div>
-          <label class="form-label">Titel (<span id="hero-lbl-lang-team">DE</span>)</label>
-          <input type="text" class="form-input" id="hero-title-team" placeholder="Titel eingeben...">
-        </div>
-        <div>
-          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-team">DE</span>)</label>
-          <textarea class="form-textarea" id="hero-desc-team" rows="3" placeholder="Beschreibung eingeben..."></textarea>
-        </div>
-        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('team')">Speichern</button>
-      </div>
-    </div>
-  </div>
-
-
+      <!-- ===== TEAM SECTION ===== -->
+      <section id="section-team" style="display:none;">
         <div class="content-card">
           <div class="content-card-header">
             <div>
@@ -519,122 +330,21 @@
             </table>
           </div>
         </div>
+      </section>
+
+      <!-- ===== TEXTS SECTION ===== -->
       
-</section><section id="section-page-zweitmeinung" style="display:none;">
 
-  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
-    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
-      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
-    </h3>
-    <div id="hero-editor-zweitmeinung" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
-      <!-- Tabs -->
-      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-zweitmeinung">
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('zweitmeinung', '.')">Deutsch (DE)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('zweitmeinung', 'en')">English (EN)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('zweitmeinung', 'ru')">Русский (RU)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('zweitmeinung', 'tr')">Türkçe (TR)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('zweitmeinung', 'ar')">العربية (AR)</button>
-      </div>
-      <!-- Inputs -->
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div>
-          <label class="form-label">Titel (<span id="hero-lbl-lang-zweitmeinung">DE</span>)</label>
-          <input type="text" class="form-input" id="hero-title-zweitmeinung" placeholder="Titel eingeben...">
-        </div>
-        <div>
-          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-zweitmeinung">DE</span>)</label>
-          <textarea class="form-textarea" id="hero-desc-zweitmeinung" rows="3" placeholder="Beschreibung eingeben..."></textarea>
-        </div>
-        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('zweitmeinung')">Speichern</button>
-      </div>
-    </div>
-  </div>
-
-
-</section><section id="section-page-sprechzeiten" style="display:none;">
-
-  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
-    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
-      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
-    </h3>
-    <div id="hero-editor-sprechzeiten" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
-      <!-- Tabs -->
-      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-sprechzeiten">
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('sprechzeiten', '.')">Deutsch (DE)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('sprechzeiten', 'en')">English (EN)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('sprechzeiten', 'ru')">Русский (RU)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('sprechzeiten', 'tr')">Türkçe (TR)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('sprechzeiten', 'ar')">العربية (AR)</button>
-      </div>
-      <!-- Inputs -->
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div>
-          <label class="form-label">Titel (<span id="hero-lbl-lang-sprechzeiten">DE</span>)</label>
-          <input type="text" class="form-input" id="hero-title-sprechzeiten" placeholder="Titel eingeben...">
-        </div>
-        <div>
-          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-sprechzeiten">DE</span>)</label>
-          <textarea class="form-textarea" id="hero-desc-sprechzeiten" rows="3" placeholder="Beschreibung eingeben..."></textarea>
-        </div>
-        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('sprechzeiten')">Speichern</button>
-      </div>
-    </div>
-  </div>
-
-
+      
+      <!-- ===== DIAGNOSTIK SECTION ===== -->
+      <section id="section-diagnostik" style="display:none;">
         <div class="content-card">
           <div class="content-card-header">
             <div>
-              <div class="content-card-title">Filialen & Öffnungszeiten</div>
-              <div class="content-card-sub">Verwalten Sie Kontaktinfos und Notfall-Meldungen (Krankheit/Schließung) für jede Filiale.</div>
+              <h2 class="content-card-title">Diagnostics</h2>
+              <p class="content-card-subtitle">Methoden bearbeiten</p>
             </div>
-          </div>
-          <div id="branchesContainer" style="display:flex; flex-direction:column; gap:20px; padding:20px;">
-            Lädt Filialen...
-          </div>
-          <div class="modal-footer" style="border-top:1px solid rgba(0,0,0,0.05); padding: 20px;">
-            <button class="btn btn-primary" onclick="saveBranches()">Alle Änderungen speichern</button>
-          </div>
-        </div>
-      
-</section><section id="section-page-press" style="display:none;">
-
-  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
-    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
-      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
-    </h3>
-    <div id="hero-editor-press" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
-      <!-- Tabs -->
-      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-press">
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('press', '.')">Deutsch (DE)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('press', 'en')">English (EN)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('press', 'ru')">Русский (RU)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('press', 'tr')">Türkçe (TR)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('press', 'ar')">العربية (AR)</button>
-      </div>
-      <!-- Inputs -->
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div>
-          <label class="form-label">Titel (<span id="hero-lbl-lang-press">DE</span>)</label>
-          <input type="text" class="form-input" id="hero-title-press" placeholder="Titel eingeben...">
-        </div>
-        <div>
-          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-press">DE</span>)</label>
-          <textarea class="form-textarea" id="hero-desc-press" rows="3" placeholder="Beschreibung eingeben..."></textarea>
-        </div>
-        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('press')">Speichern</button>
-      </div>
-    </div>
-  </div>
-
-
-        <div class="content-card">
-          <div class="content-card-header">
-            <div>
-              <div class="content-card-title">Presseschau</div>
-              <div class="content-card-sub">Presseartikel, Interviews und PDF-Downloads verwalten</div>
-            </div>
-            <button class="btn btn-primary btn-sm" onclick="openAddPress()">
+            <button class="btn btn-primary btn-sm" onclick="openAddDiagnostik()">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               Hinzufügen
             </button>
@@ -645,52 +355,51 @@
                 <tr>
                   <th style="padding-left: 24px;">#</th>
                   <th>Titel</th>
-                  <th>Quelle</th>
-                  <th>Kategorie</th>
+                  <th>Kurzbeschreibung</th>
                   <th>Aktionen</th>
                 </tr>
               </thead>
-              <tbody id="pressTableBody">
-                <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
+              <tbody id="diagnostikTableBody">
+                <tr><td colspan="4" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
               </tbody>
             </table>
           </div>
         </div>
-      
-</section><section id="section-page-legal" style="display:none;">
+      </section>
 
-  <div style="background:var(--card-bg);border-radius:12px;border:1px solid rgba(255,255,255,0.05);padding:24px;margin-bottom:32px;">
-    <h3 style="margin-bottom:16px;font-size:1.1rem;display:flex;align-items:center;gap:8px;">
-      <i class="fas fa-heading" style="color:var(--primary);"></i> Seiten-Titel & Beschreibung (Hero)
-    </h3>
-    <div id="hero-editor-legal" style="display:grid;grid-template-columns:200px 1fr;gap:24px;">
-      <!-- Tabs -->
-      <div style="display:flex;flex-direction:column;gap:8px;border-right:1px solid rgba(255,255,255,0.1);padding-right:16px;" id="hero-tabs-legal">
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('legal', '.')">Deutsch (DE)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('legal', 'en')">English (EN)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('legal', 'ru')">Русский (RU)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('legal', 'tr')">Türkçe (TR)</button>
-        <button class="btn-secondary" style="text-align:left;" onclick="switchHeroLang('legal', 'ar')">العربية (AR)</button>
-      </div>
-      <!-- Inputs -->
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div>
-          <label class="form-label">Titel (<span id="hero-lbl-lang-legal">DE</span>)</label>
-          <input type="text" class="form-input" id="hero-title-legal" placeholder="Titel eingeben...">
+      <!-- ===== ZWEITMEINUNG SECTION ===== -->
+      <section id="section-faq" style="display:none;">
+        <div class="content-card">
+          <div class="content-card-header">
+            <div>
+              <h2 class="content-card-title">For Patients</h2>
+              <p class="content-card-subtitle">FAQ bearbeiten</p>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openAddFaq()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Hinzufügen
+            </button>
+          </div>
+          <div class="content-card-body" style="padding: 0;">
+            <table class="treatment-table">
+              <thead>
+                <tr>
+                  <th style="padding-left: 24px;">#</th>
+                  <th>Frage</th>
+                  <th>Titel</th>
+                  <th>Aktionen</th>
+                </tr>
+              </thead>
+              <tbody id="faqTableBody">
+                <tr><td colspan="4" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div>
-          <label class="form-label">Beschreibung (<span id="hero-lbl-lang2-legal">DE</span>)</label>
-          <textarea class="form-textarea" id="hero-desc-legal" rows="3" placeholder="Beschreibung eingeben..."></textarea>
-        </div>
-        <button class="btn-primary" style="align-self:flex-start;" onclick="saveHero('legal')">Speichern</button>
-      </div>
-    </div>
-  </div>
+      </section>
 
-
-</section>
-
-<section id="section-sync" style="display:none;">
+      <!-- ===== SYNC SECTION ===== -->
+      <section id="section-sync" style="display:none;">
         <div class="content-card">
           <div class="content-card-header">
             <div>
@@ -728,6 +437,27 @@
               <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 8px; padding: 16px; max-height: 400px; overflow-y: auto;">
                 <pre id="previewContent" style="font-size: 0.78rem; color: var(--text-muted); white-space: pre-wrap; word-break: break-all;"></pre>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== BRANCHES / CONTACT SECTION ===== -->
+      <section id="section-branches" style="display:none;">
+        <div class="content-card">
+          <div class="content-card-header">
+            <div>
+              <div class="content-card-title">Contact</div>
+              <div class="content-card-sub">Filialen, Adressen und Öffnungszeiten verwalten</div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openAddBranches()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Hinzufügen
+            </button>
+          </div>
+          <div class="content-card-body" style="padding: 0;">
+            <div id="branchesContainer">
+              <table class="treatment-table"><thead><tr><th style="padding-left:24px;">#</th><th>Name</th><th>Adresse</th><th>Telefon</th><th>Aktionen</th></tr></thead><tbody id="branchesTableBody"><tr><td colspan="5" style="text-align:center; padding:40px; color:var(--text-dim);">Lade Daten...</td></tr></tbody></table>
             </div>
           </div>
         </div>
@@ -803,59 +533,8 @@
   </div>
 </div>
 
-<!-- Press Article Modal -->
-<div class="modal-overlay" id="pressModal">
-  <div class="modal">
-    <div class="modal-header">
-      <div class="modal-title" id="pressModalTitle">Presseartikel bearbeiten</div>
-      <button class="modal-close" onclick="closeModal('pressModal')">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </div>
-    <div class="modal-body">
-      <div class="form-group-row">
-        <label class="form-label-dark">Titel (Deutsch)</label>
-        <input type="text" id="pressTitle" class="form-input-dark" placeholder="Minimaler Eingriff, maximale Wirkung">
-      </div>
-      <div class="form-group-row">
-        <label class="form-label-dark">Kurzbeschreibung</label>
-        <textarea id="pressDesc" class="form-input-dark" placeholder="Kurze Zusammenfassung des Artikels..."></textarea>
-      </div>
-      <div class="form-group-row">
-        <label class="form-label-dark">Quelle (z.B. Medical Tribune)</label>
-        <input type="text" id="pressSource" class="form-input-dark" placeholder="Medical Tribune">
-      </div>
-      <div class="form-group-row">
-        <label class="form-label-dark">Datum</label>
-        <input type="text" id="pressDate" class="form-input-dark" placeholder="15 April 2024">
-      </div>
-      <div class="form-group-row">
-        <label class="form-label-dark">Kategorie</label>
-        <select id="pressCategory" class="form-input-dark">
-          <option value="interviews">Interview</option>
-          <option value="article">Artikel</option>
-          <option value="clinic-news">Klinik-News</option>
-          <option value="science">Wissenschaft</option>
-        </select>
-      </div>
-      <div class="form-group-row">
-        <label class="form-label-dark">Bild-URL (Vorschaubild)</label>
-        <input type="text" id="pressImage" class="form-input-dark" placeholder="img/article_thumbnail.png">
-      </div>
-      <div class="form-group-row">
-        <label class="form-label-dark">PDF-Datei URL (z.B. pdfs/artikel.pdf)</label>
-        <input type="text" id="pressPdf" class="form-input-dark" placeholder="pdfs/artikel.pdf">
-      </div>
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-ghost" onclick="closeModal('pressModal')">Abbrechen</button>
-      <button class="btn btn-primary" onclick="savePress()">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
-        Speichern
-      </button>
-    </div>
-  </div>
-</div>
+
+
 
 
 
@@ -908,19 +587,16 @@
   };
 
   // ========= SECTION NAVIGATION =========
-  const sections = ['dashboard', 'page-index', 'page-praxis', 'page-behandlungen', 'page-diagnostik', 'page-patienten', 'page-team', 'page-zweitmeinung', 'page-sprechzeiten', 'page-press', 'page-legal', 'sync'];
+  const sections = ['dashboard', 'team', 'schwerpunkte', 'diagnostik', 'treatments', 'faq', 'press', 'branches', 'sync'];
   const titles = {
     dashboard: ['Dashboard', 'Willkommen im Admin-Bereich'],
-    'page-index': ['Startseite', 'Startseite Inhalte bearbeiten'],
-    'page-praxis': ['Praxis & Schwerpunkte', 'Praxisinhalte bearbeiten'],
-    'page-behandlungen': ['Behandlungen', 'Behandlungen verwalten'],
-    'page-diagnostik': ['Diagnostik & Therapie', 'Diagnostik bearbeiten'],
-    'page-patienten': ['Internationale Patienten', 'Patienteninfos bearbeiten'],
-    'page-team': ['Unser Team', 'Ärzte und Team verwalten'],
-    'page-zweitmeinung': ['Zweitmeinung', 'Zweitmeinung bearbeiten'],
-    'page-sprechzeiten': ['Filialen & Sprechzeiten', 'Standorte bearbeiten'],
-    'page-press': ['Presseschau', 'Artikel und PDFs verwalten'],
-    'page-legal': ['Rechtliches', 'Impressum & Datenschutz bearbeiten'],
+    team: ['Practice', 'Ärzte und Mitarbeiter'],
+    schwerpunkte: ['Diseases', 'Schwerpunkte verwalten'],
+    diagnostik: ['Diagnostics', 'Diagnostik verwalten'],
+    treatments: ['Treatments and Surgeries', 'Behandlungen & OPs'],
+    faq: ['For Patients', 'FAQ bearbeiten'],
+    press: ['Press', 'Artikel und PDFs verwalten'],
+    branches: ['Contact', 'Filialen & Sprechzeiten'],
     sync: ['Website Sync', 'Änderungen exportieren und anwenden']
   };
 
@@ -952,6 +628,9 @@
   window.closeModal = (id) => {
     document.getElementById(id).classList.remove('open');
   };
+  window.openModal = (id) => {
+    document.getElementById(id).classList.add('open');
+  };
 
   // ========= LOAD DATA =========
   window.pagesData = [];
@@ -966,13 +645,18 @@
   async function loadAll() {
     document.getElementById('loadingOverlay').classList.add('show');
     try {
-      await Promise.all([window.loadPages ? window.loadPages() : Promise.resolve(), loadTreatments(), loadTeam(), loadTexts(), (window.loadPress ? window.loadPress() : Promise.resolve()), (window.loadSchwerpunkte ? window.loadSchwerpunkte() : Promise.resolve())]);
-      updateStats();
-    } catch(e) {
-      showToast('Fehler beim Laden: ' + e.message, 'error');
-    } finally {
-      document.getElementById('loadingOverlay').classList.remove('show');
-    }
+      await Promise.all([ 
+        loadTreatments(), 
+        loadTeam(), 
+        loadDiagnostik(), 
+        loadFaq(),  
+        (window.loadPress ? window.loadPress() : Promise.resolve()), 
+        (window.loadSchwerpunkte ? window.loadSchwerpunkte() : Promise.resolve()),
+        (window.loadBranches ? window.loadBranches() : Promise.resolve())
+      ]);
+      if(typeof updateStats === 'function') updateStats();
+    } catch(e) { console.error(e); }
+    document.getElementById('loadingOverlay').classList.remove('show');
   }
 
   async function loadTreatments() {
@@ -1008,7 +692,7 @@
 
   // ========= TREATMENTS TABLE =========
   function renderTreatmentsTable() {
-    const tbody = document.getElementById('treatmentsTableBody'); if(!tbody) return;
+    const tbody = document.getElementById('treatmentsTableBody');
     if (!treatmentsData.length) {
       tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 40px; color: var(--text-dim);">Keine Behandlungen gefunden. Klicken Sie auf "Hinzufügen".</td></tr>';
       return;
@@ -1128,9 +812,170 @@
     }
   };
 
+  
+  let diagnostikData = [];
+  let faqData = [];
+  
+  
+  window.loadDiagnostik = async function() {
+    try {
+      const snap = await getDocs(collection(window.db, 'diagnostik'));
+      diagnostikData = [];
+      snap.forEach(d => diagnostikData.push({id: d.id, ...d.data()}));
+      
+      if(diagnostikData.length === 0 && window.seedData && window.seedData.diagnostik) {
+        if(window.showToast) window.showToast('Seeding Diagnostik data...');
+        await window.seedCollection('diagnostik', window.seedData.diagnostik);
+        return window.loadDiagnostik();
+      }
+      
+      renderDiagnostikTable();
+    } catch(e) { console.error(e); }
+  };
+
+  
+  
+  window.loadFaq = async function() {
+    try {
+      const snap = await getDocs(collection(window.db, 'faq'));
+      faqData = [];
+      snap.forEach(d => faqData.push({id: d.id, ...d.data()}));
+      
+      if(faqData.length === 0 && window.seedData && window.seedData.faq) {
+        if(window.showToast) window.showToast('Seeding FAQ data...');
+        await window.seedCollection('faq', window.seedData.faq);
+        return window.loadFaq();
+      }
+      
+      renderFaqTable();
+    } catch(e) { console.error(e); }
+  };
+
+  
+  
+    function renderDiagnostikTable() {
+    const tbody = document.getElementById('diagnostikTableBody'); if(!tbody) return;
+    if(!diagnostikData || !diagnostikData.length) { tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 40px; color:var(--text-dim);">Keine Daten.</td></tr>'; return; }
+    tbody.innerHTML = diagnostikData.map((d, i) => `<tr>
+      <td style="padding-left:24px;">${i+1}</td>
+      <td>${d.title?.de || ''}</td>
+      <td>${d.desc?.de || ''}</td>
+      <td><div class="btn-actions">
+        <button class="btn-icon" onclick="openAddDiagnostik('${d.id}')" title="Bearbeiten">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </button>
+        <button class="btn-icon delete" onclick="deleteDiagnostik('${d.id}')" title="Löschen">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+        </button>
+      </div></td>
+    </tr>`).join('');
+  }
+
+  
+  
+  function renderFaqTable() {
+    const tbody = document.getElementById('faqTableBody'); if(!tbody) return;
+    if(!faqData || !faqData.length) { tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 40px; color:var(--text-dim);">Keine Daten.</td></tr>'; return; }
+    tbody.innerHTML = faqData.map((d, i) => `<tr>
+      <td style="padding-left:24px;">${i+1}</td>
+      <td>${d.title?.de || ''}</td>
+      <td>${d.desc?.de || ''}</td>
+      <td><div class="btn-actions">
+        <button class="btn-icon" onclick="openAddFaq('${d.id}')" title="Bearbeiten">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </button>
+        <button class="btn-icon delete" onclick="deleteFaq('${d.id}')" title="Löschen">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+        </button>
+      </div></td>
+    </tr>`).join('');
+  }
+
+  
+  
+  // ================= DIAGNOSTIK CRUD =================
+  
+  let currentDiagnostikId = null;
+  window.openAddDiagnostik = (id = null) => {
+    currentDiagnostikId = id;
+    document.getElementById('diagModalTitle').textContent = id ? 'Diagnostik bearbeiten' : 'Neue Diagnostik';
+    const s = diagnostikData.find(x=>x.id===id) || {title:{}, desc:{}};
+    ['de','en','ru','tr','ar'].forEach(lang => {
+      const t = document.getElementById(`diag_title_${lang}`); if(t) t.value = s.title?.[lang] || (lang === 'de' ? s.title : '') || '';
+      const d = document.getElementById(`diag_desc_${lang}`); if(d) d.value = s.desc?.[lang] || (lang === 'de' ? s.desc : '') || '';
+    });
+    if(window.switchLang) window.switchLang('diag', 'de');
+    window.openModal('diagModal');
+  };
+  window.saveDiag = async () => {
+    const data = { title:{}, desc:{} };
+    ['de','en','ru','tr','ar'].forEach(lang => {
+      data.title[lang] = document.getElementById(`diag_title_${lang}`)?.value || '';
+      data.desc[lang] = document.getElementById(`diag_desc_${lang}`)?.value || '';
+    });
+    try {
+      if(currentDiagnostikId) await window.firestoreOps.updateDoc(window.firestoreOps.doc(window.db, 'diagnostik', currentDiagnostikId), data);
+      else await window.firestoreOps.addDoc(window.firestoreOps.collection(window.db, 'diagnostik'), data);
+      window.showToast('Gespeichert!');
+      window.closeModal('diagModal');
+      await window.loadDiagnostik();
+    } catch(e) { window.showToast('Fehler: '+e.message, 'error'); }
+  };
+
+
+  window.deleteDiagnostik = async (id) => {
+    if(!confirm('Wirklich löschen?')) return;
+    try {
+      await window.firestoreOps.deleteDoc(window.firestoreOps.doc(window.db, 'diagnostik', id));
+      window.showToast('Gelöscht!');
+      window.loadDiagnostik();
+    } catch(e) { window.showToast('Fehler', 'error'); }
+  };
+
+  // ================= FAQ CRUD =================
+  
+  let currentFaqId = null;
+  window.openAddFaq = (id = null) => {
+    currentFaqId = id;
+    document.getElementById('faqModalTitle').textContent = id ? 'FAQ bearbeiten' : 'Neues FAQ';
+    const s = faqData.find(x=>x.id===id) || {title:{}, desc:{}};
+    ['de','en','ru','tr','ar'].forEach(lang => {
+      const t = document.getElementById(`faq_title_${lang}`); if(t) t.value = s.title?.[lang] || (lang === 'de' ? s.title : '') || '';
+      const d = document.getElementById(`faq_desc_${lang}`); if(d) d.value = s.desc?.[lang] || (lang === 'de' ? s.desc : '') || '';
+    });
+    if(window.switchLang) window.switchLang('faq', 'de');
+    window.openModal('faqModal');
+  };
+  window.saveFaq = async () => {
+    const data = { title:{}, desc:{} };
+    ['de','en','ru','tr','ar'].forEach(lang => {
+      data.title[lang] = document.getElementById(`faq_title_${lang}`)?.value || '';
+      data.desc[lang] = document.getElementById(`faq_desc_${lang}`)?.value || '';
+    });
+    try {
+      if(currentFaqId) await window.firestoreOps.updateDoc(window.firestoreOps.doc(window.db, 'faq', currentFaqId), data);
+      else await window.firestoreOps.addDoc(window.firestoreOps.collection(window.db, 'faq'), data);
+      window.showToast('Gespeichert!');
+      window.closeModal('faqModal');
+      await window.loadFaq();
+    } catch(e) { window.showToast('Fehler: '+e.message, 'error'); }
+  };
+
+
+  window.deleteFaq = async (id) => {
+    if(!confirm('Wirklich löschen?')) return;
+    try {
+      await window.firestoreOps.deleteDoc(window.firestoreOps.doc(window.db, 'faq', id));
+      window.showToast('Gelöscht!');
+      window.loadFaq();
+    } catch(e) { window.showToast('Fehler', 'error'); }
+  };
+
+  
+
   // ========= TEAM TABLE =========
   function renderTeamTable() {
-    const tbody = document.getElementById('teamTableBody'); if(!tbody) return;
+    const tbody = document.getElementById('teamTableBody');
     if (!teamData.length) {
       tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 40px; color: var(--text-dim);">Keine Teammitglieder gefunden. Klicken Sie auf "Hinzufügen".</td></tr>';
       return;
@@ -1219,7 +1064,7 @@
   };
 
   function renderTextsEditor() {
-    const area = document.getElementById('textsEditorArea'); if(!area) return;
+    const area = document.getElementById('textsEditorArea');
     const langData = (textsData[currentTextLang] || {});
     area.innerHTML = Object.entries(TEXT_FIELDS).map(([key, label]) => `
       <div class="form-group-row">
@@ -1339,10 +1184,8 @@
       if (e.target === overlay) overlay.classList.remove('open');
     });
   });
-</script>
 
-<script type="module">
-  import { getFirestore, collection, getDocs, doc, setDoc, addDoc, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+// ==== Merged from second module ====
   window.firestoreOps = { collection, getDocs, doc, setDoc, addDoc, deleteDoc, updateDoc };
   window.db = window.mainDb;
   let pressData=[],editingPressId=null,schwerpunkteData=[],editingSchwerpunktId=null;
@@ -1352,49 +1195,26 @@
         const s = await getDocs(collection(window.db, 'branches'));
         branchesData = [];
         s.forEach(d => branchesData.push({id: d.id, ...d.data()}));
-        if(branchesData.length === 0) {
-            // Seed defaults
-            branchesData = [
-                {id: 'viersen', name: 'Viersen', phone: '', hours: '', notice_de: '', notice_en: '', notice_ru: '', notice_tr: '', notice_ar: ''},
-                {id: 'moenchengladbach', name: 'Mönchengladbach', phone: '(02161) 678 26 83', hours: 'Mo - Fr: 8:00 - 18:00 Uhr', notice_de: '', notice_en: '', notice_ru: '', notice_tr: '', notice_ar: ''},
-                {id: 'duesseldorf', name: 'Düsseldorf', phone: '', hours: '', notice_de: '', notice_en: '', notice_ru: '', notice_tr: '', notice_ar: ''}
-            ];
-        }
-        renderBranches();
+        window.renderBranches();
+    };
+    window.renderBranches = function() {
+        const tbody = document.getElementById('branchesTableBody'); if(!tbody) return;
+        if(!branchesData.length) { tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding:40px; color:var(--text-dim);">Keine Filialen.</td></tr>'; return; }
+        const editSVG = '<svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7\"/><path d=\"M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z\"/></svg>';
+        const delSVG = '<svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polyline points=\"3 6 5 6 21 6\"/><path d=\"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2\"/></svg>';
+        tbody.innerHTML = branchesData.map((d, i) => `<tr>
+          <td style="padding-left:24px;">${i+1}</td>
+          <td>${d.name || ''}</td>
+          <td>${d.address || ''}</td>
+          <td>${d.phone || ''}</td>
+          <td><div class="btn-actions">
+            <button class="btn-icon" onclick="openAddBranches('${d.id}')" title="Bearbeiten">${editSVG}</button>
+            <button class="btn-icon delete" onclick="deleteBranches('${d.id}')" title="L\u00f6schen">${delSVG}</button>
+          </div></td>
+        </tr>`).join('');
     };
     
-    function renderBranches() {
-        const c = document.getElementById('branchesContainer');
-        if(!c) return;
-        c.innerHTML = '';
-        branchesData.forEach((b, i) => {
-            c.innerHTML += `
-            <div style="background: #f8f9fa; padding:20px; border-radius:12px; border:1px solid #e2e8f0;">
-                <h3 style="margin-top:0; color:var(--primary);">${b.name}</h3>
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
-                    <div>
-                        <label style="display:block; font-size:0.9rem; margin-bottom:4px; font-weight:600;">Telefon</label>
-                        <input type="text" class="form-input" id="br_phone_${i}" value="${b.phone || ''}" style="width:100%">
-                    </div>
-                    <div>
-                        <label style="display:block; font-size:0.9rem; margin-bottom:4px; font-weight:600;">Öffnungszeiten (Universal)</label>
-                        <input type="text" class="form-input" id="br_hours_${i}" value="${b.hours || ''}" style="width:100%">
-                    </div>
-                </div>
-                <div style="background: rgba(220,53,69,0.05); padding:16px; border-radius:8px; border: 1px solid rgba(220,53,69,0.2);">
-                    <h4 style="margin-top:0; color:#dc3545; font-size:0.95rem; margin-bottom:12px;">Notfall-Hinweis (z.B. "Heute wegen Krankheit geschlossen")</h4>
-                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
-                        <input type="text" class="form-input" id="br_notice_de_${i}" placeholder="DE Hinweis..." value="${b.notice_de || ''}">
-                        <input type="text" class="form-input" id="br_notice_en_${i}" placeholder="EN Hinweis..." value="${b.notice_en || ''}">
-                        <input type="text" class="form-input" id="br_notice_ru_${i}" placeholder="RU Hinweis..." value="${b.notice_ru || ''}">
-                        <input type="text" class="form-input" id="br_notice_tr_${i}" placeholder="TR Hinweis..." value="${b.notice_tr || ''}">
-                        <input type="text" class="form-input" id="br_notice_ar_${i}" placeholder="AR Hinweis..." value="${b.notice_ar || ''}">
-                    </div>
-                    <div style="font-size:0.8rem; color:#666; margin-top:8px;">Wenn dieses Feld ausgefüllt ist, wird auf der Webseite ein rotes Banner bei dieser Filiale angezeigt. (Die Felder unterstützen einfaches HTML).</div>
-                </div>
-            </div>`;
-        });
-    }
+    
 
     window.saveBranches = async function() {
         try {
@@ -1421,109 +1241,139 @@ window.loadPress = async function(){const s=await getDocs(collection(window.db,'
   
   function updStats(){const e=document.getElementById('statPress');if(e)e.textContent=pressData.length;const c=document.getElementById('statSchwerpunkte');if(c)c.textContent=schwerpunkteData.length;}
   const CAT={interviews:'Interview',article:'Artikel','clinic-news':'Klinik-News',science:'Wissenschaft'};
-  function renderPress(){
-    const t=document.getElementById('pressTableBody');
-    if(!t)return;
-    if(!pressData.length){t.innerHTML='<tr><td colspan="5" style="text-align:center;padding:40px;color:var(--text-dim)">Keine Artikel. Klicken Sie auf Hinzuf\u00fcgen.</td></tr>';return;}
-    t.innerHTML=pressData.map((p,i)=>`<tr>
-      <td style="padding-left:24px"><div class="treatment-index">${i+1}</div></td>
-      <td><div class="treatment-name">${p.title||'\u2013'}</div><div class="treatment-desc-preview">${p.desc||''}</div></td>
-      <td><span style="color:var(--text-muted);font-size:.88rem">${p.source||''}</span></td>
-      <td><span class="lang-badge">${CAT[p.category]||p.category||''}</span></td>
-      <td><div style="display:flex;gap:8px">
-        <button class="btn btn-ghost btn-sm btn-icon" onclick="openEditPress('${p.id}')">&#9998;</button>
-        <button class="btn btn-danger btn-sm btn-icon" onclick="deletePress('${p.id}')">&#128465;</button>
-      </div></td></tr>`).join('');
-  }
   
-    function renderSchwerpunkte(){
-      const t=document.getElementById('schwerpunkteTableBody');
-      if(!t)return;
-      if(!schwerpunkteData.length){t.innerHTML='<tr><td colspan="4" style="text-align:center;padding:40px;color:var(--text-dim)">Keine Schwerpunkte gefunden.</td></tr>';return;}
-      const L = ['de', 'en', 'ru', 'tr', 'ar'];
-      const LF = { de: '🇩🇪', en: '🇬🇧', ru: '🇷🇺', tr: '🇹🇷', ar: '🇸🇦' };
-      t.innerHTML=schwerpunkteData.map((s,i)=>`<tr>
-        <td style="padding-left:24px"><div class="treatment-index">${i+1}</div></td>
-        <td>
-            <div class="treatment-title-cell">
-              <div>
-                <div class="treatment-name">${(s.de && s.de.title)||s.title||'Ohne Titel'}</div>
-                <div class="treatment-desc-preview">${(s.de && s.de.desc)||s.desc||''}</div>
-              </div>
-            </div>
-        </td>
-        <td>
-            <div style="display: flex; gap: 4px; flex-wrap: wrap;">
-              ${L.map(l => `<span class="lang-badge">${LF[l]} ${l.toUpperCase()}</span>`).join('')}
-            </div>
-        </td>
-        <td><div style="display:flex;gap:8px">
-          <button class="btn btn-ghost btn-sm btn-icon" onclick="openEditSchwerpunkt('${s.id}')">&#9998;</button>
-          <button class="btn btn-danger btn-sm btn-icon" onclick="deleteSchwerpunkt('${s.id}')">&#128465;</button>
-        </div></td></tr>`).join('');
-    }
-;
   
+    window.renderPress = function() {
+    const tbody = document.getElementById('pressTableBody'); if(!tbody) return;
+    if(!pressData.length) { tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding:40px; color:var(--text-dim);">Keine Presseartikel.</td></tr>'; return; }
+    tbody.innerHTML = pressData.map((d, i) => `<tr>
+      <td style="padding-left:24px;">${i+1}</td>
+      <td>${d.title?.de || d.title || ''}</td>
+      <td>${d.date?.de || d.date || ''}</td>
+      <td><div class="btn-actions">
+        <button class="btn-icon" onclick="openEditPress('${d.id}')" title="Bearbeiten">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </button>
+        <button class="btn-icon delete" onclick="deletePress('${d.id}')" title="Löschen">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+        </button>
+      </div></td>
+    </tr>`).join('');
+  };
   window.deletePress=async(id)=>{if(!confirm('Löschen?'))return;try{await deleteDoc(doc(window.db,'press',id));window.showToast('Gelöscht.');await window.loadPress();}catch(e){window.showToast('Fehler: '+e.message,'error');}};
+
+  
+  let currentPressId = null;
+  window.openEditPress = (id) => {
+    currentPressId = id;
+    document.getElementById('pressModalTitle').textContent=id ? 'Presseartikel bearbeiten' : 'Neuer Presseartikel';
+    const s = pressData.find(x=>x.id===id) || {title:{}, date:{}, source:{}, link:{}};
+    
+    ['de','en','ru','tr','ar'].forEach(lang => {
+      const t = document.getElementById(`press_title_${lang}`); if(t) t.value = s.title?.[lang] || (lang === 'de' ? s.title : '') || '';
+      const d = document.getElementById(`press_date_${lang}`); if(d) d.value = s.date?.[lang] || (lang === 'de' ? s.date : '') || '';
+      const src = document.getElementById(`press_source_${lang}`); if(src) src.value = s.source?.[lang] || (lang === 'de' ? s.source : '') || '';
+      const l = document.getElementById(`press_link_${lang}`); if(l) l.value = s.link?.[lang] || (lang === 'de' ? s.link : '') || '';
+    });
+    
+    // reset to DE tab
+    const firstTab = document.querySelector(`#pressModal .lang-tab`);
+    if(firstTab) firstTab.click();
+    window.openModal('pressModal');
+  };
+  window.openAddPress = () => window.openEditPress(null);
+
+  window.savePress = async()=>{
+    const data = { title:{}, date:{}, source:{}, link:{} };
+    ['de','en','ru','tr','ar'].forEach(lang => {
+      data.title[lang] = document.getElementById(`press_title_${lang}`)?.value || '';
+      data.date[lang] = document.getElementById(`press_date_${lang}`)?.value || '';
+      data.source[lang] = document.getElementById(`press_source_${lang}`)?.value || '';
+      data.link[lang] = document.getElementById(`press_link_${lang}`)?.value || '';
+    });
+    try{
+      if(currentPressId) await window.firestoreOps.updateDoc(window.firestoreOps.doc(window.db, 'press', currentPressId), data);
+      else await window.firestoreOps.addDoc(window.firestoreOps.collection(window.db, 'press'), data);
+      window.showToast('Gespeichert!');
+      window.closeModal('pressModal');
+      await window.loadPress();
+    }catch(e){ window.showToast('Fehler: '+e.message,'error'); }
+  };
 
   window.loadSchwerpunkte = async function(){
     const s = await getDocs(collection(window.db,'schwerpunkte'));
     schwerpunkteData=[];
     s.forEach(d=>schwerpunkteData.push({id:d.id,...d.data()}));
     schwerpunkteData.sort((a,b)=>(a.order||0)-(b.order||0));
-    renderSchwerpunkte();
+    window.renderSchwerpunkte();
     if(typeof updStats==='function') updStats();
   };
-
-  window.openAddSchwerpunkt=()=>{
-    editingSchwerpunktId=null;
-    document.getElementById('spModalTitle').textContent='Neuen Schwerpunkt';
-    ['spTitle','spDesc','spFullDesc'].forEach(id=>{
-      const el = document.getElementById(id);
-      if (el) el.value='';
-    });
-    document.getElementById('spModal').classList.add('open');
+    window.renderSchwerpunkte = function() {
+    const tbody = document.getElementById('schwerpunkteTableBody'); if(!tbody) return;
+    if(!schwerpunkteData.length) { tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding:40px; color:var(--text-dim);">Keine Daten.</td></tr>'; return; }
+    tbody.innerHTML = schwerpunkteData.map((d, i) => {
+      const de = d.de || d;
+      return `<tr>
+        <td style="padding-left:24px;">${i+1}</td>
+        <td>${de.title || ''}</td>
+        <td>${de.desc || ''}</td>
+        <td><div class="btn-actions">
+          <button class="btn-icon" onclick="openEditSchwerpunkt('${d.id}')" title="Bearbeiten">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </button>
+          <button class="btn-icon delete" onclick="deleteSchwerpunkt('${d.id}')" title="Löschen">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+          </button>
+        </div></td>
+      </tr>`;
+    }).join('');
   };
 
+  
   window.openEditSchwerpunkt=(id)=>{
     editingSchwerpunktId=id;
-    const s=schwerpunkteData.find(x=>x.id===id);
-    document.getElementById('spModalTitle').textContent='Schwerpunkt bearbeiten';
-    const langData = s['de'] || s;
-    const t = document.getElementById('spTitle'); if (t) t.value = langData.title||'';
-    const d = document.getElementById('spDesc'); if (d) d.value = langData.desc||'';
-    const fd = document.getElementById('spFullDesc'); if (fd) fd.value = langData.fullDesc||'';
-    document.getElementById('spModal').classList.add('open');
+    document.getElementById('spModalTitle').textContent=id ? 'Schwerpunkt bearbeiten' : 'Neuen Schwerpunkt';
+    const s = schwerpunkteData.find(x=>x.id===id) || {};
+    
+    ['de','en','ru','tr','ar'].forEach(lang => {
+      const langData = s[lang] || {};
+      const t = document.getElementById(`sp_title_${lang}`); if (t) t.value = langData.title||'';
+      const d = document.getElementById(`sp_desc_${lang}`); if (d) d.value = langData.desc||'';
+      const fd = document.getElementById(`sp_fullDesc_${lang}`); if (fd) fd.value = langData.fullDesc||'';
+    });
+    
+    // reset to DE tab
+    if(window.switchLang) window.switchLang('sp', 'de');
+    window.openModal('spModal');
   };
+  window.openAddSchwerpunkt = () => window.openEditSchwerpunkt(null);
 
-  window.saveSchwerpunkt=async()=>{
-    const sData = {
-      title: document.getElementById('spTitle').value,
-      desc: document.getElementById('spDesc').value,
-      fullDesc: document.getElementById('spFullDesc').value
-    };
+  window.saveSp = async()=>{
+    const data = {};
+    ['de','en','ru','tr','ar'].forEach(lang => {
+      data[lang] = {
+        title: document.getElementById(`sp_title_${lang}`)?.value || '',
+        desc: document.getElementById(`sp_desc_${lang}`)?.value || '',
+        fullDesc: document.getElementById(`sp_fullDesc_${lang}`)?.value || ''
+      };
+    });
     try{
       if(editingSchwerpunktId){
-        const s = schwerpunkteData.find(x=>x.id===editingSchwerpunktId);
-        if(!s['de']) s['de'] = {};
-        s['de'].title = sData.title;
-        s['de'].desc = sData.desc;
-        s['de'].fullDesc = sData.fullDesc;
-        await setDoc(doc(window.db,'schwerpunkte',editingSchwerpunktId), s);
-        window.showToast('Gespeichert!');
+        const s = schwerpunkteData.find(x=>x.id===editingSchwerpunktId) || {};
+        ['de','en','ru','tr','ar'].forEach(lang => s[lang] = data[lang]);
+        await window.firestoreOps.updateDoc(window.firestoreOps.doc(window.db,'schwerpunkte',editingSchwerpunktId), s);
       }else{
-        const newS = { order: schwerpunkteData.length };
-        newS['de'] = sData;
-        await addDoc(collection(window.db,'schwerpunkte'), newS);
-        window.showToast('Hinzugefügt!');
+        const newS = { order: schwerpunkteData.length, ...data };
+        await window.firestoreOps.addDoc(window.firestoreOps.collection(window.db,'schwerpunkte'), newS);
       }
-      document.getElementById('spModal').classList.remove('open');
+      window.showToast('Gespeichert!');
+      window.closeModal('spModal');
       await window.loadSchwerpunkte();
-    }catch(e){
-      console.error(e);
-      window.showToast('Fehler: '+e.message,'error');
-    }
+    }catch(e){ window.showToast('Fehler: '+e.message,'error'); }
   };
+  window.saveSchwerpunkt = window.saveSp;
+
+
 
   window.deleteSchwerpunkt=async(id)=>{
     if(!confirm('Diesen Schwerpunkt wirklich löschen?'))return;
@@ -1540,6 +1390,7 @@ window.loadPress = async function(){const s=await getDocs(collection(window.db,'
   setTimeout(()=>{
     if(window.loadPress) window.loadPress();
     if(window.loadSchwerpunkte) window.loadSchwerpunkte();
+    if(window.loadBranches) window.loadBranches();
   }, 1500);
 
   // ========= PAGES LOGIC =========
@@ -1572,7 +1423,7 @@ window.loadPress = async function(){const s=await getDocs(collection(window.db,'
       }
     } catch(e) { console.error(e); }
     
-    // renderPagesTable();
+    renderPagesTable();
   };
 
   function renderPagesTable() {
@@ -1661,7 +1512,7 @@ window.loadPress = async function(){const s=await getDocs(collection(window.db,'
             await setDoc(doc(window.db, 'pages', id), p);
             window.showToast('Seite gespeichert!');
             window.closeModal('pageModal');
-            // renderPagesTable();
+            renderPagesTable();
         } catch(e) {
             console.error(e);
             window.showToast('Fehler: ' + e.message, 'error');
@@ -1672,73 +1523,560 @@ window.loadPress = async function(){const s=await getDocs(collection(window.db,'
   };
 
 
-  window.currentHeroLang = {};
-  
-  window.switchHeroLang = (pageId, lang) => {
-    window.currentHeroLang[pageId] = lang;
-    document.querySelectorAll(`#hero-tabs-${pageId} button`).forEach(b => b.classList.replace('btn-primary', 'btn-secondary'));
-    // Find the button with matching onclick
-    const btn = Array.from(document.querySelectorAll(`#hero-tabs-${pageId} button`)).find(b => b.getAttribute('onclick').includes(`'${lang}'`));
-    if (btn) btn.classList.replace('btn-secondary', 'btn-primary');
-    
-    document.getElementById(`hero-lbl-lang-${pageId}`).innerText = lang.toUpperCase();
-    document.getElementById(`hero-lbl-lang2-${pageId}`).innerText = lang.toUpperCase();
-    
-    // Load data
-    const pageData = window.pagesData.find(p => p.id === pageId);
-    let title = '', desc = '';
-    if (pageData && pageData.sections) {
-      const heroSec = pageData.sections.find(s => s.type === 'hero');
-      if (heroSec && heroSec.content && heroSec.content[lang]) {
-         title = heroSec.content[lang].title || '';
-         desc = heroSec.content[lang].desc || '';
-      }
-    }
-    document.getElementById(`hero-title-${pageId}`).value = title;
-    document.getElementById(`hero-desc-${pageId}`).value = desc;
-  };
-
-  window.saveHero = async (pageId) => {
-    const lang = window.currentHeroLang[pageId] || '.';
-    const title = document.getElementById(`hero-title-${pageId}`).value.trim();
-    const desc = document.getElementById(`hero-desc-${pageId}`).value.trim();
-    
-    let pageData = window.pagesData.find(p => p.id === pageId);
-    if (!pageData) {
-      pageData = { id: pageId, sections: [{ type: 'hero', content: {} }] };
-      window.pagesData.push(pageData);
-    }
-    
-    let heroSec = pageData.sections.find(s => s.type === 'hero');
-    if (!heroSec) {
-      heroSec = { type: 'hero', content: {} };
-      pageData.sections.push(heroSec);
-    }
-    
-    if (!heroSec.content[lang]) heroSec.content[lang] = {};
-    heroSec.content[lang].title = title;
-    heroSec.content[lang].desc = desc;
-    
-    try {
-      await window.firestoreOps.setDoc(window.firestoreOps.doc(window.db, 'pages', pageId), pageData);
-      if(window.showToast) window.showToast('Erfolgreich gespeichert!', 'success');
-    } catch (e) {
-      console.error(e);
-      if(window.showToast) window.showToast('Fehler beim Speichern', 'error');
-    }
-  };
-
-  // Initialize hero views on load
-  const originalLoadPages = window.loadPages;
-  window.loadPages = async () => {
-    if (originalLoadPages) await originalLoadPages();
-    // After pages are loaded, init the hero views for each page
-    ['index','praxis','behandlungen','diagnostik','patienten','team','zweitmeinung','sprechzeiten','press','legal'].forEach(pageId => {
-      window.switchHeroLang(pageId, '.');
-    });
-  };
 
 </script>
+
+<!-- DIAGNOSTIK MODAL -->
+
+
+<!-- FAQ MODAL -->
+
+
+
+<!-- SCHWERPUNKTE MODAL -->
+
+
+<!-- PRESS MODAL -->
+
+
+<!-- BRANCHES MODAL -->
+
+
+
+
+
+
+
+
+<!-- Schwerpunkt / Disease bearbeiten Modal -->
+<div class="modal-overlay" id="spModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="spModalTitle">Schwerpunkt / Disease bearbeiten</div>
+      <button class="modal-close" onclick="closeModal('spModal')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="lang-tabs">
+        <button class="lang-tab active" onclick="switchLang('sp', 'de')">🇩🇪 DE</button>
+        <button class="lang-tab" onclick="switchLang('sp', 'en')">🇬🇧 EN</button>
+        <button class="lang-tab" onclick="switchLang('sp', 'ru')">🇷🇺 RU</button>
+        <button class="lang-tab" onclick="switchLang('sp', 'tr')">🇹🇷 TR</button>
+        <button class="lang-tab" onclick="switchLang('sp', 'ar')">🇸🇦 AR</button>
+      </div>
+      <div id="spLangPanels">
+      <div id="spPanel_de" style="display: block; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Titel (DE)</label>
+<input type="text" id="sp_title_de" class="form-input-dark" placeholder="Krankheitsbezeichnung">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Kurzbeschreibung (DE)</label>
+<textarea id="sp_desc_de" class="form-input-dark" style="min-height:80px;" placeholder="Kurze Beschreibung..."></textarea>
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Vollständige Beschreibung (DE)</label>
+<textarea id="sp_fullDesc_de" class="form-input-dark" style="min-height:80px;" placeholder="Ausführliche Beschreibung..."></textarea>
+</div>
+</div>
+<div id="spPanel_en" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Titel (EN)</label>
+<input type="text" id="sp_title_en" class="form-input-dark" placeholder="Krankheitsbezeichnung">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Kurzbeschreibung (EN)</label>
+<textarea id="sp_desc_en" class="form-input-dark" style="min-height:80px;" placeholder="Kurze Beschreibung..."></textarea>
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Vollständige Beschreibung (EN)</label>
+<textarea id="sp_fullDesc_en" class="form-input-dark" style="min-height:80px;" placeholder="Ausführliche Beschreibung..."></textarea>
+</div>
+</div>
+<div id="spPanel_ru" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Titel (RU)</label>
+<input type="text" id="sp_title_ru" class="form-input-dark" placeholder="Krankheitsbezeichnung">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Kurzbeschreibung (RU)</label>
+<textarea id="sp_desc_ru" class="form-input-dark" style="min-height:80px;" placeholder="Kurze Beschreibung..."></textarea>
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Vollständige Beschreibung (RU)</label>
+<textarea id="sp_fullDesc_ru" class="form-input-dark" style="min-height:80px;" placeholder="Ausführliche Beschreibung..."></textarea>
+</div>
+</div>
+<div id="spPanel_tr" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Titel (TR)</label>
+<input type="text" id="sp_title_tr" class="form-input-dark" placeholder="Krankheitsbezeichnung">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Kurzbeschreibung (TR)</label>
+<textarea id="sp_desc_tr" class="form-input-dark" style="min-height:80px;" placeholder="Kurze Beschreibung..."></textarea>
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Vollständige Beschreibung (TR)</label>
+<textarea id="sp_fullDesc_tr" class="form-input-dark" style="min-height:80px;" placeholder="Ausführliche Beschreibung..."></textarea>
+</div>
+</div>
+<div id="spPanel_ar" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Titel (AR)</label>
+<input type="text" id="sp_title_ar" class="form-input-dark" placeholder="Krankheitsbezeichnung">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Kurzbeschreibung (AR)</label>
+<textarea id="sp_desc_ar" class="form-input-dark" style="min-height:80px;" placeholder="Kurze Beschreibung..."></textarea>
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Vollständige Beschreibung (AR)</label>
+<textarea id="sp_fullDesc_ar" class="form-input-dark" style="min-height:80px;" placeholder="Ausführliche Beschreibung..."></textarea>
+</div>
+</div>
+
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('spModal')">Abbrechen</button>
+      <button class="btn btn-primary" onclick="saveSp()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Speichern
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Presseartikel bearbeiten Modal -->
+<div class="modal-overlay" id="pressModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="pressModalTitle">Presseartikel bearbeiten</div>
+      <button class="modal-close" onclick="closeModal('pressModal')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="lang-tabs">
+        <button class="lang-tab active" onclick="switchLang('press', 'de')">🇩🇪 DE</button>
+        <button class="lang-tab" onclick="switchLang('press', 'en')">🇬🇧 EN</button>
+        <button class="lang-tab" onclick="switchLang('press', 'ru')">🇷🇺 RU</button>
+        <button class="lang-tab" onclick="switchLang('press', 'tr')">🇹🇷 TR</button>
+        <button class="lang-tab" onclick="switchLang('press', 'ar')">🇸🇦 AR</button>
+      </div>
+      <div id="pressLangPanels">
+      <div id="pressPanel_de" style="display: block; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Titel (DE)</label>
+<input type="text" id="press_title_de" class="form-input-dark" placeholder="Artikeltitel">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Datum (DE)</label>
+<input type="text" id="press_date_de" class="form-input-dark" placeholder="z.B. 12. März 2025">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Quelle (DE)</label>
+<input type="text" id="press_source_de" class="form-input-dark" placeholder="z.B. Rheinische Post">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Link (optional) (DE)</label>
+<input type="text" id="press_link_de" class="form-input-dark" placeholder="https://...">
+</div>
+</div>
+<div id="pressPanel_en" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Titel (EN)</label>
+<input type="text" id="press_title_en" class="form-input-dark" placeholder="Artikeltitel">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Datum (EN)</label>
+<input type="text" id="press_date_en" class="form-input-dark" placeholder="z.B. 12. März 2025">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Quelle (EN)</label>
+<input type="text" id="press_source_en" class="form-input-dark" placeholder="z.B. Rheinische Post">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Link (optional) (EN)</label>
+<input type="text" id="press_link_en" class="form-input-dark" placeholder="https://...">
+</div>
+</div>
+<div id="pressPanel_ru" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Titel (RU)</label>
+<input type="text" id="press_title_ru" class="form-input-dark" placeholder="Artikeltitel">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Datum (RU)</label>
+<input type="text" id="press_date_ru" class="form-input-dark" placeholder="z.B. 12. März 2025">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Quelle (RU)</label>
+<input type="text" id="press_source_ru" class="form-input-dark" placeholder="z.B. Rheinische Post">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Link (optional) (RU)</label>
+<input type="text" id="press_link_ru" class="form-input-dark" placeholder="https://...">
+</div>
+</div>
+<div id="pressPanel_tr" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Titel (TR)</label>
+<input type="text" id="press_title_tr" class="form-input-dark" placeholder="Artikeltitel">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Datum (TR)</label>
+<input type="text" id="press_date_tr" class="form-input-dark" placeholder="z.B. 12. März 2025">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Quelle (TR)</label>
+<input type="text" id="press_source_tr" class="form-input-dark" placeholder="z.B. Rheinische Post">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Link (optional) (TR)</label>
+<input type="text" id="press_link_tr" class="form-input-dark" placeholder="https://...">
+</div>
+</div>
+<div id="pressPanel_ar" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Titel (AR)</label>
+<input type="text" id="press_title_ar" class="form-input-dark" placeholder="Artikeltitel">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Datum (AR)</label>
+<input type="text" id="press_date_ar" class="form-input-dark" placeholder="z.B. 12. März 2025">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Quelle (AR)</label>
+<input type="text" id="press_source_ar" class="form-input-dark" placeholder="z.B. Rheinische Post">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Link (optional) (AR)</label>
+<input type="text" id="press_link_ar" class="form-input-dark" placeholder="https://...">
+</div>
+</div>
+
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('pressModal')">Abbrechen</button>
+      <button class="btn btn-primary" onclick="savePress()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Speichern
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Diagnostik bearbeiten Modal -->
+<div class="modal-overlay" id="diagModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="diagModalTitle">Diagnostik bearbeiten</div>
+      <button class="modal-close" onclick="closeModal('diagModal')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="lang-tabs">
+        <button class="lang-tab active" onclick="switchLang('diag', 'de')">🇩🇪 DE</button>
+        <button class="lang-tab" onclick="switchLang('diag', 'en')">🇬🇧 EN</button>
+        <button class="lang-tab" onclick="switchLang('diag', 'ru')">🇷🇺 RU</button>
+        <button class="lang-tab" onclick="switchLang('diag', 'tr')">🇹🇷 TR</button>
+        <button class="lang-tab" onclick="switchLang('diag', 'ar')">🇸🇦 AR</button>
+      </div>
+      <div id="diagLangPanels">
+      <div id="diagPanel_de" style="display: block; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Titel (DE)</label>
+<input type="text" id="diag_title_de" class="form-input-dark" placeholder="Name der Methode">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Kurzbeschreibung (DE)</label>
+<textarea id="diag_desc_de" class="form-input-dark" style="min-height:80px;" placeholder="Kurze Beschreibung..."></textarea>
+</div>
+</div>
+<div id="diagPanel_en" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Titel (EN)</label>
+<input type="text" id="diag_title_en" class="form-input-dark" placeholder="Name der Methode">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Kurzbeschreibung (EN)</label>
+<textarea id="diag_desc_en" class="form-input-dark" style="min-height:80px;" placeholder="Kurze Beschreibung..."></textarea>
+</div>
+</div>
+<div id="diagPanel_ru" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Titel (RU)</label>
+<input type="text" id="diag_title_ru" class="form-input-dark" placeholder="Name der Methode">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Kurzbeschreibung (RU)</label>
+<textarea id="diag_desc_ru" class="form-input-dark" style="min-height:80px;" placeholder="Kurze Beschreibung..."></textarea>
+</div>
+</div>
+<div id="diagPanel_tr" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Titel (TR)</label>
+<input type="text" id="diag_title_tr" class="form-input-dark" placeholder="Name der Methode">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Kurzbeschreibung (TR)</label>
+<textarea id="diag_desc_tr" class="form-input-dark" style="min-height:80px;" placeholder="Kurze Beschreibung..."></textarea>
+</div>
+</div>
+<div id="diagPanel_ar" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Titel (AR)</label>
+<input type="text" id="diag_title_ar" class="form-input-dark" placeholder="Name der Methode">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Kurzbeschreibung (AR)</label>
+<textarea id="diag_desc_ar" class="form-input-dark" style="min-height:80px;" placeholder="Kurze Beschreibung..."></textarea>
+</div>
+</div>
+
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('diagModal')">Abbrechen</button>
+      <button class="btn btn-primary" onclick="saveDiag()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Speichern
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- FAQ bearbeiten Modal -->
+<div class="modal-overlay" id="faqModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="faqModalTitle">FAQ bearbeiten</div>
+      <button class="modal-close" onclick="closeModal('faqModal')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="lang-tabs">
+        <button class="lang-tab active" onclick="switchLang('faq', 'de')">🇩🇪 DE</button>
+        <button class="lang-tab" onclick="switchLang('faq', 'en')">🇬🇧 EN</button>
+        <button class="lang-tab" onclick="switchLang('faq', 'ru')">🇷🇺 RU</button>
+        <button class="lang-tab" onclick="switchLang('faq', 'tr')">🇹🇷 TR</button>
+        <button class="lang-tab" onclick="switchLang('faq', 'ar')">🇸🇦 AR</button>
+      </div>
+      <div id="faqLangPanels">
+      <div id="faqPanel_de" style="display: block; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Frage (DE)</label>
+<input type="text" id="faq_title_de" class="form-input-dark" placeholder="Frage eingeben...">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Antwort (DE)</label>
+<textarea id="faq_desc_de" class="form-input-dark" style="min-height:80px;" placeholder="Antwort eingeben..."></textarea>
+</div>
+</div>
+<div id="faqPanel_en" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Frage (EN)</label>
+<input type="text" id="faq_title_en" class="form-input-dark" placeholder="Frage eingeben...">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Antwort (EN)</label>
+<textarea id="faq_desc_en" class="form-input-dark" style="min-height:80px;" placeholder="Antwort eingeben..."></textarea>
+</div>
+</div>
+<div id="faqPanel_ru" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Frage (RU)</label>
+<input type="text" id="faq_title_ru" class="form-input-dark" placeholder="Frage eingeben...">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Antwort (RU)</label>
+<textarea id="faq_desc_ru" class="form-input-dark" style="min-height:80px;" placeholder="Antwort eingeben..."></textarea>
+</div>
+</div>
+<div id="faqPanel_tr" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Frage (TR)</label>
+<input type="text" id="faq_title_tr" class="form-input-dark" placeholder="Frage eingeben...">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Antwort (TR)</label>
+<textarea id="faq_desc_tr" class="form-input-dark" style="min-height:80px;" placeholder="Antwort eingeben..."></textarea>
+</div>
+</div>
+<div id="faqPanel_ar" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Frage (AR)</label>
+<input type="text" id="faq_title_ar" class="form-input-dark" placeholder="Frage eingeben...">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Antwort (AR)</label>
+<textarea id="faq_desc_ar" class="form-input-dark" style="min-height:80px;" placeholder="Antwort eingeben..."></textarea>
+</div>
+</div>
+
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('faqModal')">Abbrechen</button>
+      <button class="btn btn-primary" onclick="saveFaq()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Speichern
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Filiale bearbeiten Modal -->
+<div class="modal-overlay" id="branchModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="branchModalTitle">Filiale bearbeiten</div>
+      <button class="modal-close" onclick="closeModal('branchModal')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="lang-tabs">
+        <button class="lang-tab active" onclick="switchLang('branch', 'de')">🇩🇪 DE</button>
+        <button class="lang-tab" onclick="switchLang('branch', 'en')">🇬🇧 EN</button>
+        <button class="lang-tab" onclick="switchLang('branch', 'ru')">🇷🇺 RU</button>
+        <button class="lang-tab" onclick="switchLang('branch', 'tr')">🇹🇷 TR</button>
+        <button class="lang-tab" onclick="switchLang('branch', 'ar')">🇸🇦 AR</button>
+      </div>
+      <div id="branchLangPanels">
+      <div id="branchPanel_de" style="display: block; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Name (DE)</label>
+<input type="text" id="branch_name_de" class="form-input-dark" placeholder="z.B. Düsseldorf">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Adresse (DE)</label>
+<input type="text" id="branch_address_de" class="form-input-dark" placeholder="Straße, PLZ, Ort">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Telefon (DE)</label>
+<input type="text" id="branch_phone_de" class="form-input-dark" placeholder="Telefonnummer">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Öffnungszeiten (DE)</label>
+<textarea id="branch_hours_de" class="form-input-dark" style="min-height:80px;" placeholder="Mo-Fr 8:00 - 18:00..."></textarea>
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Wichtiger Hinweis (optional) (DE)</label>
+<input type="text" id="branch_notice_de" class="form-input-dark" placeholder="">
+</div>
+</div>
+<div id="branchPanel_en" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Name (EN)</label>
+<input type="text" id="branch_name_en" class="form-input-dark" placeholder="z.B. Düsseldorf">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Adresse (EN)</label>
+<input type="text" id="branch_address_en" class="form-input-dark" placeholder="Straße, PLZ, Ort">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Telefon (EN)</label>
+<input type="text" id="branch_phone_en" class="form-input-dark" placeholder="Telefonnummer">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Öffnungszeiten (EN)</label>
+<textarea id="branch_hours_en" class="form-input-dark" style="min-height:80px;" placeholder="Mo-Fr 8:00 - 18:00..."></textarea>
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Wichtiger Hinweis (optional) (EN)</label>
+<input type="text" id="branch_notice_en" class="form-input-dark" placeholder="">
+</div>
+</div>
+<div id="branchPanel_ru" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Name (RU)</label>
+<input type="text" id="branch_name_ru" class="form-input-dark" placeholder="z.B. Düsseldorf">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Adresse (RU)</label>
+<input type="text" id="branch_address_ru" class="form-input-dark" placeholder="Straße, PLZ, Ort">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Telefon (RU)</label>
+<input type="text" id="branch_phone_ru" class="form-input-dark" placeholder="Telefonnummer">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Öffnungszeiten (RU)</label>
+<textarea id="branch_hours_ru" class="form-input-dark" style="min-height:80px;" placeholder="Mo-Fr 8:00 - 18:00..."></textarea>
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Wichtiger Hinweis (optional) (RU)</label>
+<input type="text" id="branch_notice_ru" class="form-input-dark" placeholder="">
+</div>
+</div>
+<div id="branchPanel_tr" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Name (TR)</label>
+<input type="text" id="branch_name_tr" class="form-input-dark" placeholder="z.B. Düsseldorf">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Adresse (TR)</label>
+<input type="text" id="branch_address_tr" class="form-input-dark" placeholder="Straße, PLZ, Ort">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Telefon (TR)</label>
+<input type="text" id="branch_phone_tr" class="form-input-dark" placeholder="Telefonnummer">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Öffnungszeiten (TR)</label>
+<textarea id="branch_hours_tr" class="form-input-dark" style="min-height:80px;" placeholder="Mo-Fr 8:00 - 18:00..."></textarea>
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Wichtiger Hinweis (optional) (TR)</label>
+<input type="text" id="branch_notice_tr" class="form-input-dark" placeholder="">
+</div>
+</div>
+<div id="branchPanel_ar" style="display: none; padding-top: 16px;">
+<div class="form-group-row">
+<label class="form-label-dark">Name (AR)</label>
+<input type="text" id="branch_name_ar" class="form-input-dark" placeholder="z.B. Düsseldorf">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Adresse (AR)</label>
+<input type="text" id="branch_address_ar" class="form-input-dark" placeholder="Straße, PLZ, Ort">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Telefon (AR)</label>
+<input type="text" id="branch_phone_ar" class="form-input-dark" placeholder="Telefonnummer">
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Öffnungszeiten (AR)</label>
+<textarea id="branch_hours_ar" class="form-input-dark" style="min-height:80px;" placeholder="Mo-Fr 8:00 - 18:00..."></textarea>
+</div>
+<div class="form-group-row">
+<label class="form-label-dark">Wichtiger Hinweis (optional) (AR)</label>
+<input type="text" id="branch_notice_ar" class="form-input-dark" placeholder="">
+</div>
+</div>
+
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('branchModal')">Abbrechen</button>
+      <button class="btn btn-primary" onclick="saveBranch()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Speichern
+      </button>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
 

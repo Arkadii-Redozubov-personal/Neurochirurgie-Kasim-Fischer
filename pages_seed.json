@@ -190,5 +190,165 @@
         }
       }
     ]
+  },
+  "diagnostik": {
+    "id": "diagnostik",
+    "name": "Diagnostik",
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "content": {
+          "de": {
+            "title": "Diagnostik",
+            "desc": "Moderne und präzise Diagnoseverfahren für Ihre Gesundheit."
+          },
+          "en": {
+            "title": "Diagnostics",
+            "desc": "Modern and precise diagnostic procedures for your health."
+          },
+          "ru": {
+            "title": "Диагностика",
+            "desc": "Современные и точные методы диагностики для вашего здоровья."
+          },
+          "tr": {
+            "title": "Teşhis",
+            "desc": "Sağlığınız için modern ve hassas teşhis yöntemleri."
+          },
+          "ar": {
+            "title": "التشخيص",
+            "desc": "إجراءات تشخيصية حديثة ودقيقة لصحتك."
+          }
+        }
+      }
+    ]
+  },
+  "patienten": {
+    "id": "patienten",
+    "name": "Patienten",
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "content": {
+          "de": {
+            "title": "Für Patienten",
+            "desc": "Wichtige Informationen für Ihren Besuch, Ihre Operation und die Zeit danach."
+          },
+          "en": {
+            "title": "For Patients",
+            "desc": "Important information for your visit, your surgery, and the time after."
+          },
+          "ru": {
+            "title": "Пациентам",
+            "desc": "Важная информация для вашего визита, операции и периода после нее."
+          },
+          "tr": {
+            "title": "Hastalar İçin",
+            "desc": "Ziyaretiniz, ameliyatınız ve sonrası için önemli bilgiler."
+          },
+          "ar": {
+            "title": "للمرضى",
+            "desc": "معلومات هامة لزيارتك، لعمليتك الجراحية وللفترة التي تليها."
+          }
+        }
+      }
+    ]
+  },
+  "zweitmeinung": {
+    "id": "zweitmeinung",
+    "name": "Zweitmeinung",
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "content": {
+          "de": {
+            "title": "Zweitmeinung",
+            "desc": "Unabhängige ärztliche Expertise für Ihre Sicherheit und Gesundheit."
+          },
+          "en": {
+            "title": "Second Opinion",
+            "desc": "Independent medical expertise for your safety and health."
+          },
+          "ru": {
+            "title": "Второе мнение",
+            "desc": "Независимая медицинская экспертиза для вашей безопасности и здоровья."
+          },
+          "tr": {
+            "title": "İkinci Görüş",
+            "desc": "Güvenliğiniz ve sağlığınız için bağımsız tıbbi uzmanlık."
+          },
+          "ar": {
+            "title": "الرأي الثاني",
+            "desc": "خبرة طبية مستقلة من أجل سلامتك وصحتك."
+          }
+        }
+      }
+    ]
+  },
+  "impressum": {
+    "id": "impressum",
+    "name": "Impressum",
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "content": {
+          "de": {
+            "title": "Impressum",
+            "desc": ""
+          },
+          "en": {
+            "title": "Imprint",
+            "desc": ""
+          },
+          "ru": {
+            "title": "Выходные данные (Impressum)",
+            "desc": ""
+          },
+          "tr": {
+            "title": "Künye",
+            "desc": ""
+          },
+          "ar": {
+            "title": "بيانات النشر",
+            "desc": ""
+          }
+        }
+      }
+    ]
+  },
+  "datenschutz": {
+    "id": "datenschutz",
+    "name": "Datenschutz",
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "content": {
+          "de": {
+            "title": "Datenschutz",
+            "desc": ""
+          },
+          "en": {
+            "title": "Privacy Policy",
+            "desc": ""
+          },
+          "ru": {
+            "title": "Политика конфиденциальности",
+            "desc": ""
+          },
+          "tr": {
+            "title": "Gizlilik Politikası",
+            "desc": ""
+          },
+          "ar": {
+            "title": "سياسة الخصوصية",
+            "desc": ""
+          }
+        }
+      }
+    ]
   }
 }

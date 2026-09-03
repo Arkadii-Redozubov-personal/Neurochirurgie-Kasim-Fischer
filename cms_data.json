@@ -1,136 +1,11 @@
 {
   "pages": [
     {
+      "id": "index",
+      "name": "Index",
       "sections": [
         {
-          "type": "hero",
-          "content": {
-            "de": {
-              "title": "Kontaktieren Sie <span style=\"color: var(--primary);\">uns</span>",
-              "desc": "Wir sind bereit, Ihre Fragen zu beantworten und Ihnen zu helfen, die beste Lösung für Ihre Gesundheit zu finden."
-            },
-            "en": {
-              "title": "Contact <span style=\"color: var(--primary);\">us</span>",
-              "desc": "We are ready to answer your questions and help you find the best solution for your health."
-            },
-            "tr": {
-              "title": "Temas etmek <span style=\"color: var(--primary);\">biz</span>",
-              "desc": "Sorularınızı yanıtlamaya ve sağlığınız için en iyi çözümü bulmanıza yardımcı olmaya hazırız."
-            },
-            "ar": {
-              "title": "اتصال <span style=\"color: var(--primary);\">نحن</span>",
-              "desc": "نحن على استعداد للإجابة على أسئلتك ومساعدتك في العثور على الحل الأفضل لصحتك."
-            },
-            "ru": {
-              "title": "Контакт <span style=\"color: var(--primary);\">нас</span>",
-              "desc": "Мы готовы ответить на ваши вопросы и помочь найти лучшее решение для вашего здоровья."
-            }
-          },
-          "id": "hero"
-        }
-      ],
-      "name": "Sprechzeiten",
-      "id": "63ElTBk6ZNfZ6KUWDDSC"
-    },
-    {
-      "sections": [
-        {
-          "type": "hero",
-          "content": {
-            "de": {
-              "title": "Unsere Behandlungs-<br><span style=\"color: var(--primary);\">methoden</span>",
-              "desc": "Wir nutzen moderne und erprobte Verfahren zur präzisen Diagnose und effektiven Behandlung."
-            },
-            "en": {
-              "title": "Our treatment<br><span style=\"color: var(--primary);\">methods</span>",
-              "desc": "We use modern and proven procedures for precise diagnosis and effective treatment."
-            },
-            "tr": {
-              "title": "Tedavimiz<br><span style=\"color: var(--primary);\">yöntemler</span>",
-              "desc": "Kesin teşhis ve etkili tedavi için modern ve kanıtlanmış prosedürleri kullanıyoruz."
-            },
-            "ar": {
-              "title": "علاجنا<br><span style=\"color: var(--primary);\">طُرق</span>",
-              "desc": "نحن نستخدم إجراءات حديثة ومثبتة للتشخيص الدقيق والعلاج الفعال."
-            },
-            "ru": {
-              "title": "Наше лечение<br><span style=\"color: var(--primary);\">методы</span>",
-              "desc": "Мы используем современные и проверенные методы для точной диагностики и эффективного лечения."
-            }
-          },
-          "id": "hero"
-        }
-      ],
-      "name": "Behandlungen",
-      "id": "QwCUSv29xVMLToav7vRY"
-    },
-    {
-      "sections": [
-        {
-          "type": "hero",
-          "content": {
-            "de": {
-              "title": "Presseschau",
-              "desc": "Unsere Artikel und Interviews in führenden medizinischen Publikationen und auf Nachrichtenportalen."
-            },
-            "en": {
-              "title": "Press review",
-              "desc": "Our articles and interviews in leading medical publications and news portals."
-            },
-            "tr": {
-              "title": "Basın incelemesi",
-              "desc": "Önde gelen tıbbi yayınlarda ve haber portallarında yer alan makalelerimiz ve röportajlarımız."
-            },
-            "ar": {
-              "title": "مراجعة الصحافة",
-              "desc": "مقالاتنا ومقابلاتنا في المنشورات الطبية الرائدة والبوابات الإخبارية."
-            },
-            "ru": {
-              "title": "Обзор прессы",
-              "desc": "Наши статьи и интервью в ведущих медицинских изданиях и новостных порталах."
-            }
-          },
-          "id": "hero"
-        }
-      ],
-      "name": "Presseschau",
-      "id": "Zsj1Ov70ZpYNxhh4ewcF"
-    },
-    {
-      "sections": [
-        {
-          "type": "hero",
-          "content": {
-            "de": {
-              "title": "Hauptbereiche unserer <span style=\"color: var(--primary);\">Praxis</span>",
-              "desc": "Diagnostik und Behandlung von Erkrankungen des zentralen und peripheren Nervensystems."
-            },
-            "en": {
-              "title": "Main areas of our <span style=\"color: var(--primary);\">Practice</span>",
-              "desc": "Diagnosis and treatment of diseases of the central and peripheral nervous system."
-            },
-            "tr": {
-              "title": "Başlıca faaliyet alanlarımız <span style=\"color: var(--primary);\">Pratik</span>",
-              "desc": "Merkezi ve periferik sinir sistemi hastalıklarının tanı ve tedavisi."
-            },
-            "ar": {
-              "title": "المجالات الرئيسية لدينا <span style=\"color: var(--primary);\">يمارس</span>",
-              "desc": "تشخيص وعلاج أمراض الجهاز العصبي المركزي والمحيطي."
-            },
-            "ru": {
-              "title": "Основные направления нашей <span style=\"color: var(--primary);\">клиники</span>",
-              "desc": "Диагностика и лечение заболеваний центральной и периферической нервной системы."
-            }
-          },
-          "id": "hero"
-        }
-      ],
-      "name": "Praxis-schwerpunkte",
-      "id": "gJAvvxNPe9EV2XBdfOVW"
-    },
-    {
-      "sections": [
-        {
+          "id": "hero",
           "type": "hero",
           "content": {
             "de": {
@@ -141,6 +16,10 @@
               "title": "Diagnosis and treatment of <br><span>nervous system diseases.</span>",
               "desc": "We provide advanced diagnostics and effective treatment for diseases of the central and peripheral nervous system. Your health is our mission."
             },
+            "ru": {
+              "title": "Диагностика и лечение <br><span>заболеваний нервной системы.</span>",
+              "desc": "Мы предоставляем передовую диагностику и эффективное лечение заболеваний центральной и периферической нервной системы. Ваше здоровье — наша миссия."
+            },
             "tr": {
               "title": "Sinir sistemi hastalıklarının <br><span>teşhisi ve tedavisi.</span>",
               "desc": "Merkezi ve periferik sinir sistemi hastalıkları için ileri teşhis ve etkili tedavi sağlıyoruz. Sağlığınız bizim misyonumuzdur."
@@ -148,21 +27,145 @@
             "ar": {
               "title": "تشخيص وعلاج <br><span>أمراض الجهاز العصبي.</span>",
               "desc": "نحن نقدم تشخيصات متقدمة وعلاجًا فعالًا لأمراض الجهاز العصبي المركزي والمحيطي. صحتك هي مهمتنا."
-            },
-            "ru": {
-              "title": "Диагностика и лечение <br><span>заболеваний нервной системы.</span>",
-              "desc": "Мы предоставляем передовую диагностику и эффективное лечение заболеваний центральной и периферической нервной системы. Ваше здоровье — наша миссия."
             }
-          },
-          "id": "hero"
+          }
         }
-      ],
-      "name": "Index",
-      "id": "o8yOYyqFWF83Kslz6koL"
+      ]
     },
     {
+      "id": "behandlungen",
+      "name": "Behandlungen",
       "sections": [
         {
+          "id": "hero",
+          "type": "hero",
+          "content": {
+            "de": {
+              "title": "Unsere Behandlungs-<br><span style=\"color: var(--primary);\">methoden</span>",
+              "desc": "Wir nutzen moderne und erprobte Verfahren zur präzisen Diagnose und effektiven Behandlung."
+            },
+            "en": {
+              "title": "Our treatment<br><span style=\"color: var(--primary);\">methods</span>",
+              "desc": "We use modern and proven procedures for precise diagnosis and effective treatment."
+            },
+            "ru": {
+              "title": "Наше лечение<br><span style=\"color: var(--primary);\">методы</span>",
+              "desc": "Мы используем современные и проверенные методы для точной диагностики и эффективного лечения."
+            },
+            "tr": {
+              "title": "Tedavimiz<br><span style=\"color: var(--primary);\">yöntemler</span>",
+              "desc": "Kesin teşhis ve etkili tedavi için modern ve kanıtlanmış prosedürleri kullanıyoruz."
+            },
+            "ar": {
+              "title": "علاجنا<br><span style=\"color: var(--primary);\">طُرق</span>",
+              "desc": "نحن نستخدم إجراءات حديثة ومثبتة للتشخيص الدقيق والعلاج الفعال."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "praxis-schwerpunkte",
+      "name": "Praxis-schwerpunkte",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero",
+          "content": {
+            "de": {
+              "title": "Hauptbereiche unserer <span style=\"color: var(--primary);\">Praxis</span>",
+              "desc": "Diagnostik und Behandlung von Erkrankungen des zentralen und peripheren Nervensystems."
+            },
+            "en": {
+              "title": "Main areas of our <span style=\"color: var(--primary);\">Practice</span>",
+              "desc": "Diagnosis and treatment of diseases of the central and peripheral nervous system."
+            },
+            "ru": {
+              "title": "Основные направления нашей <span style=\"color: var(--primary);\">клиники</span>",
+              "desc": "Диагностика и лечение заболеваний центральной и периферической нервной системы."
+            },
+            "tr": {
+              "title": "Başlıca faaliyet alanlarımız <span style=\"color: var(--primary);\">Pratik</span>",
+              "desc": "Merkezi ve periferik sinir sistemi hastalıklarının tanı ve tedavisi."
+            },
+            "ar": {
+              "title": "المجالات الرئيسية لدينا <span style=\"color: var(--primary);\">يمارس</span>",
+              "desc": "تشخيص وعلاج أمراض الجهاز العصبي المركزي والمحيطي."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "presseschau",
+      "name": "Presseschau",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero",
+          "content": {
+            "de": {
+              "title": "Presseschau",
+              "desc": "Unsere Artikel und Interviews in führenden medizinischen Publikationen und auf Nachrichtenportalen."
+            },
+            "en": {
+              "title": "Press review",
+              "desc": "Our articles and interviews in leading medical publications and news portals."
+            },
+            "ru": {
+              "title": "Обзор прессы",
+              "desc": "Наши статьи и интервью в ведущих медицинских изданиях и новостных порталах."
+            },
+            "tr": {
+              "title": "Basın incelemesi",
+              "desc": "Önde gelen tıbbi yayınlarda ve haber portallarında yer alan makalelerimiz ve röportajlarımız."
+            },
+            "ar": {
+              "title": "مراجعة الصحافة",
+              "desc": "مقالاتنا ومقابلاتنا في المنشورات الطبية الرائدة والبوابات الإخبارية."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "sprechzeiten",
+      "name": "Sprechzeiten",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero",
+          "content": {
+            "de": {
+              "title": "Kontaktieren Sie <span style=\"color: var(--primary);\">uns</span>",
+              "desc": "Wir sind bereit, Ihre Fragen zu beantworten und Ihnen zu helfen, die beste Lösung für Ihre Gesundheit zu finden."
+            },
+            "en": {
+              "title": "Contact <span style=\"color: var(--primary);\">us</span>",
+              "desc": "We are ready to answer your questions and help you find the best solution for your health."
+            },
+            "ru": {
+              "title": "Контакт <span style=\"color: var(--primary);\">нас</span>",
+              "desc": "Мы готовы ответить на ваши вопросы и помочь найти лучшее решение для вашего здоровья."
+            },
+            "tr": {
+              "title": "Temas etmek <span style=\"color: var(--primary);\">biz</span>",
+              "desc": "Sorularınızı yanıtlamaya ve sağlığınız için en iyi çözümü bulmanıza yardımcı olmaya hazırız."
+            },
+            "ar": {
+              "title": "اتصال <span style=\"color: var(--primary);\">نحن</span>",
+              "desc": "نحن على استعداد للإجابة على أسئلتك ومساعدتك في العثور على الحل الأفضل لصحتك."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "unser-team",
+      "name": "Unser-team",
+      "sections": [
+        {
+          "id": "hero",
           "type": "hero",
           "content": {
             "de": {
@@ -173,6 +176,10 @@
               "title": "Our <span style=\"color: var(--primary);\">team</span>",
               "desc": "Motivated employees in a modern working environment, united by a common goal - caring for your health."
             },
+            "ru": {
+              "title": "Наш <span style=\"color: var(--primary);\">команда</span>",
+              "desc": "Мотивированные сотрудники в современной рабочей среде, объединенные общей целью – заботой о вашем здоровье."
+            },
             "tr": {
               "title": "Bizim <span style=\"color: var(--primary);\">takım</span>",
               "desc": "Modern bir çalışma ortamında, sağlığınızı önemsemek gibi ortak bir amaç etrafında birleşen motive çalışanlar."
@@ -180,17 +187,170 @@
             "ar": {
               "title": "ملكنا <span style=\"color: var(--primary);\">فريق</span>",
               "desc": "موظفون متحمسون في بيئة عمل حديثة، متحدون بهدف مشترك - العناية بصحتك."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "diagnostik",
+      "name": "Diagnostik",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero",
+          "content": {
+            "de": {
+              "title": "Diagnostik",
+              "desc": "Moderne und präzise Diagnoseverfahren für Ihre Gesundheit."
+            },
+            "en": {
+              "title": "Diagnostics",
+              "desc": "Modern and precise diagnostic procedures for your health."
             },
             "ru": {
-              "title": "Наш <span style=\"color: var(--primary);\">команда</span>",
-              "desc": "Мотивированные сотрудники в современной рабочей среде, объединенные общей целью – заботой о вашем здоровье."
+              "title": "Диагностика",
+              "desc": "Современные и точные методы диагностики для вашего здоровья."
+            },
+            "tr": {
+              "title": "Teşhis",
+              "desc": "Sağlığınız için modern ve hassas teşhis yöntemleri."
+            },
+            "ar": {
+              "title": "التشخيص",
+              "desc": "إجراءات تشخيصية حديثة ودقيقة لصحتك."
             }
-          },
-          "id": "hero"
+          }
         }
-      ],
-      "name": "Unser-team",
-      "id": "oQiolSi7hB20UXxW7IF9"
+      ]
+    },
+    {
+      "id": "patienten",
+      "name": "Patienten",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero",
+          "content": {
+            "de": {
+              "title": "Für Patienten",
+              "desc": "Wichtige Informationen für Ihren Besuch, Ihre Operation und die Zeit danach."
+            },
+            "en": {
+              "title": "For Patients",
+              "desc": "Important information for your visit, your surgery, and the time after."
+            },
+            "ru": {
+              "title": "Пациентам",
+              "desc": "Важная информация для вашего визита, операции и периода после нее."
+            },
+            "tr": {
+              "title": "Hastalar İçin",
+              "desc": "Ziyaretiniz, ameliyatınız ve sonrası için önemli bilgiler."
+            },
+            "ar": {
+              "title": "للمرضى",
+              "desc": "معلومات هامة لزيارتك، لعمليتك الجراحية وللفترة التي تليها."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "zweitmeinung",
+      "name": "Zweitmeinung",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero",
+          "content": {
+            "de": {
+              "title": "Zweitmeinung",
+              "desc": "Unabhängige ärztliche Expertise für Ihre Sicherheit und Gesundheit."
+            },
+            "en": {
+              "title": "Second Opinion",
+              "desc": "Independent medical expertise for your safety and health."
+            },
+            "ru": {
+              "title": "Второе мнение",
+              "desc": "Независимая медицинская экспертиза для вашей безопасности и здоровья."
+            },
+            "tr": {
+              "title": "İkinci Görüş",
+              "desc": "Güvenliğiniz ve sağlığınız için bağımsız tıbbi uzmanlık."
+            },
+            "ar": {
+              "title": "الرأي الثاني",
+              "desc": "خبرة طبية مستقلة من أجل سلامتك وصحتك."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "impressum",
+      "name": "Impressum",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero",
+          "content": {
+            "de": {
+              "title": "Impressum",
+              "desc": ""
+            },
+            "en": {
+              "title": "Imprint",
+              "desc": ""
+            },
+            "ru": {
+              "title": "Выходные данные (Impressum)",
+              "desc": ""
+            },
+            "tr": {
+              "title": "Künye",
+              "desc": ""
+            },
+            "ar": {
+              "title": "بيانات النشر",
+              "desc": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "datenschutz",
+      "name": "Datenschutz",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero",
+          "content": {
+            "de": {
+              "title": "Datenschutz",
+              "desc": ""
+            },
+            "en": {
+              "title": "Privacy Policy",
+              "desc": ""
+            },
+            "ru": {
+              "title": "Политика конфиденциальности",
+              "desc": ""
+            },
+            "tr": {
+              "title": "Gizlilik Politikası",
+              "desc": ""
+            },
+            "ar": {
+              "title": "سياسة الخصوصية",
+              "desc": ""
+            }
+          }
+        }
+      ]
     }
   ],
   "schwerpunkte": [

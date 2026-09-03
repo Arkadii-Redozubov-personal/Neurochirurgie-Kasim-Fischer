@@ -46,6 +46,7 @@ def generate_html(lang, lang_data, page_type):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title} | Neurochirurgie Fischer</title>
+  <meta name="description" content="Rechtliche Hinweise und Impressum bzw. Datenschutzerklärung der Neurochirurgie Fischer.">
   <link rel="stylesheet" href="{prefix}fonts/fonts.css">
   <link rel="stylesheet" href="{prefix}style.css">
   <link rel="canonical" href="{url}">

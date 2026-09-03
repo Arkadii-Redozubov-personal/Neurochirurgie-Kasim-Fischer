@@ -1,141 +1,111 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
+<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>
+    <loc>https://my-bandscheibe.de/ar\behandlungen.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ar\datenschutz.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ar\diagnostik.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ar\impressum.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ar\index.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ar\patienten.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ar\praxis-schwerpunkte.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ar\presseschau.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ar\sprechzeiten.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ar\unser-team.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ar\zweitmeinung.html</loc>
+  </url>\n  <url>
     <loc>https://my-bandscheibe.de/behandlungen.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/checklist.html</loc>
-  </url>
-  <url>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/datenschutz.html</loc>
+  </url>\n  <url>
     <loc>https://my-bandscheibe.de/diagnostik.html</loc>
-  </url>
-  <url>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/en\behandlungen.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/en\datenschutz.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/en\diagnostik.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/en\impressum.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/en\index.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/en\patienten.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/en\praxis-schwerpunkte.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/en\presseschau.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/en\sprechzeiten.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/en\unser-team.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/en\zweitmeinung.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/impressum.html</loc>
+  </url>\n  <url>
     <loc>https://my-bandscheibe.de/index.html</loc>
-  </url>
-  <url>
+  </url>\n  <url>
     <loc>https://my-bandscheibe.de/patienten.html</loc>
-  </url>
-  <url>
+  </url>\n  <url>
     <loc>https://my-bandscheibe.de/praxis-schwerpunkte.html</loc>
-  </url>
-  <url>
+  </url>\n  <url>
     <loc>https://my-bandscheibe.de/presseschau.html</loc>
-  </url>
-  <url>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ru\behandlungen.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ru\datenschutz.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ru\diagnostik.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ru\impressum.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ru\index.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ru\patienten.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ru\praxis-schwerpunkte.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ru\presseschau.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ru\sprechzeiten.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ru\unser-team.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/ru\zweitmeinung.html</loc>
+  </url>\n  <url>
     <loc>https://my-bandscheibe.de/sprechzeiten.html</loc>
-  </url>
-  <url>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/tr\behandlungen.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/tr\datenschutz.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/tr\diagnostik.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/tr\impressum.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/tr\index.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/tr\patienten.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/tr\praxis-schwerpunkte.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/tr\presseschau.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/tr\sprechzeiten.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/tr\unser-team.html</loc>
+  </url>\n  <url>
+    <loc>https://my-bandscheibe.de/tr\zweitmeinung.html</loc>
+  </url>\n  <url>
     <loc>https://my-bandscheibe.de/unser-team.html</loc>
-  </url>
-  <url>
+  </url>\n  <url>
     <loc>https://my-bandscheibe.de/zweitmeinung.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/en/behandlungen.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/en/diagnostik.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/en/index.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/en/patienten.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/en/praxis-schwerpunkte.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/en/presseschau.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/en/sprechzeiten.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/en/unser-team.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/en/zweitmeinung.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ru/behandlungen.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ru/diagnostik.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ru/index.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ru/patienten.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ru/praxis-schwerpunkte.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ru/presseschau.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ru/sprechzeiten.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ru/unser-team.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ru/zweitmeinung.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/tr/behandlungen.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/tr/diagnostik.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/tr/index.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/tr/patienten.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/tr/praxis-schwerpunkte.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/tr/presseschau.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/tr/sprechzeiten.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/tr/unser-team.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/tr/zweitmeinung.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ar/behandlungen.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ar/diagnostik.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ar/index.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ar/patienten.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ar/praxis-schwerpunkte.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ar/presseschau.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ar/sprechzeiten.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ar/unser-team.html</loc>
-  </url>
-  <url>
-    <loc>https://my-bandscheibe.de/ar/zweitmeinung.html</loc>
-  </url>
-</urlset>
+  </url>\n</urlset>

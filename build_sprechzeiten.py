@@ -32,10 +32,10 @@ data = {
             {
                 'city': 'Viersen',
                 'address': 'Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG',
-                'phone': '[Bitte Nummer prüfen]',
-                'hours': '[Bitte Zeiten prüfen]',
+                'phone': '',
+                'hours': '',
                 'services': 'Konsultationen, Diagnostik, Nachsorge',
-                'transport': '[Parken & ÖPNV Info einfügen]',
+                'transport': '',
                 'btn_link': 'https://www.doctolib.de/'
             },
             {
@@ -44,16 +44,16 @@ data = {
                 'phone': '(02161) 678 26 83',
                 'hours': 'Mo - Fr: 8:00 - 18:00 Uhr',
                 'services': 'Konsultationen, Diagnostik, Nachsorge',
-                'transport': '[Parken & ÖPNV Info einfügen]',
+                'transport': '',
                 'btn_link': 'https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer'
             },
             {
                 'city': 'Düsseldorf',
                 'address': 'Schadowstraße 74, 40212 Düsseldorf',
                 'phone': '',
-                'hours': '[Bitte Zeiten eintragen]',
-                'services': '[Bitte Leistungen eintragen]',
-                'transport': '[Parken & ÖPNV Info einfügen]',
+                'hours': '',
+                'services': '',
+                'transport': '',
                 'btn_link': '#',
                 'btn_disabled': True
             }
@@ -82,10 +82,10 @@ data = {
             {
                 'city': 'Viersen',
                 'address': 'Theodor-Heuss-Platz 10, 41747 Viersen, 4th Floor',
-                'phone': '[Please check number]',
-                'hours': '[Please check hours]',
+                'phone': '',
+                'hours': '',
                 'services': 'Consultations, Diagnostics, Aftercare',
-                'transport': '[Insert Parking/Transport info]',
+                'transport': '',
                 'btn_link': 'https://www.doctolib.de/'
             },
             {
@@ -94,16 +94,16 @@ data = {
                 'phone': '(02161) 678 26 83',
                 'hours': 'Mon - Fri: 8:00 AM - 6:00 PM',
                 'services': 'Consultations, Diagnostics, Aftercare',
-                'transport': '[Insert Parking/Transport info]',
+                'transport': '',
                 'btn_link': 'https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer'
             },
             {
                 'city': 'Düsseldorf',
                 'address': 'Schadowstraße 74, 40212 Düsseldorf',
                 'phone': '',
-                'hours': '[Please insert hours]',
-                'services': '[Please insert services]',
-                'transport': '[Insert Parking/Transport info]',
+                'hours': '',
+                'services': '',
+                'transport': '',
                 'btn_link': '#',
                 'btn_disabled': True
             }
@@ -132,10 +132,10 @@ data = {
             {
                 'city': 'Фирсен (Viersen)',
                 'address': 'Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG (4 этаж)',
-                'phone': '[Проверить номер]',
-                'hours': '[Проверить часы]',
+                'phone': '',
+                'hours': '',
                 'services': 'Консультации, диагностика, уход',
-                'transport': '[Вставить инфо о парковке]',
+                'transport': '',
                 'btn_link': 'https://www.doctolib.de/'
             },
             {
@@ -144,16 +144,16 @@ data = {
                 'phone': '(02161) 678 26 83',
                 'hours': 'Пн - Пт: 8:00 - 18:00',
                 'services': 'Консультации, диагностика, уход',
-                'transport': '[Вставить инфо о парковке]',
+                'transport': '',
                 'btn_link': 'https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer'
             },
             {
                 'city': 'Дюссельдорф (Düsseldorf)',
                 'address': 'Schadowstraße 74, 40212 Düsseldorf',
                 'phone': '',
-                'hours': '[Вставить часы]',
-                'services': '[Вставить услуги]',
-                'transport': '[Вставить инфо о парковке]',
+                'hours': '',
+                'services': '',
+                'transport': '',
                 'btn_link': '#',
                 'btn_disabled': True
             }
@@ -182,10 +182,10 @@ data = {
             {
                 'city': 'Viersen',
                 'address': 'Theodor-Heuss-Platz 10, 41747 Viersen, 4. Kat',
-                'phone': '[Numarayı kontrol et]',
-                'hours': '[Saatleri kontrol et]',
+                'phone': '',
+                'hours': '',
                 'services': 'Konsültasyonlar, Teşhis, Bakım',
-                'transport': '[Otopark/Ulaşım bilgisini girin]',
+                'transport': '',
                 'btn_link': 'https://www.doctolib.de/'
             },
             {
@@ -194,16 +194,16 @@ data = {
                 'phone': '(02161) 678 26 83',
                 'hours': 'Pzt - Cum: 8:00 - 18:00',
                 'services': 'Konsültasyonlar, Teşhis, Bakım',
-                'transport': '[Otopark/Ulaşım bilgisini girin]',
+                'transport': '',
                 'btn_link': 'https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer'
             },
             {
                 'city': 'Düsseldorf',
                 'address': 'Schadowstraße 74, 40212 Düsseldorf',
                 'phone': '',
-                'hours': '[Saatleri girin]',
-                'services': '[Hizmetleri girin]',
-                'transport': '[Otopark/Ulaşım bilgisini girin]',
+                'hours': '',
+                'services': '',
+                'transport': '',
                 'btn_link': '#',
                 'btn_disabled': True
             }
@@ -232,10 +232,10 @@ data = {
             {
                 'city': 'فيرسن (Viersen)',
                 'address': 'Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG',
-                'phone': '[يرجى التحقق من الرقم]',
-                'hours': '[يرجى التحقق من الساعات]',
+                'phone': '',
+                'hours': '',
                 'services': 'استشارات، تشخيص، رعاية',
-                'transport': '[أدخل معلومات وقوف السيارات]',
+                'transport': '',
                 'btn_link': 'https://www.doctolib.de/'
             },
             {
@@ -244,16 +244,16 @@ data = {
                 'phone': '(02161) 678 26 83',
                 'hours': 'الإثنين - الجمعة: 8:00 ص - 6:00 م',
                 'services': 'استشارات، تشخيص، رعاية',
-                'transport': '[أدخل معلومات وقوف السيارات]',
+                'transport': '',
                 'btn_link': 'https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer'
             },
             {
                 'city': 'دوسلدورف (Düsseldorf)',
                 'address': 'Schadowstraße 74, 40212 Düsseldorf',
                 'phone': '',
-                'hours': '[أدخل الساعات]',
-                'services': '[أدخل الخدمات]',
-                'transport': '[أدخل معلومات وقوف السيارات]',
+                'hours': '',
+                'services': '',
+                'transport': '',
                 'btn_link': '#',
                 'btn_disabled': True
             }

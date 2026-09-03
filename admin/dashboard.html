@@ -672,7 +672,7 @@
   };
 
   // ========= LOAD DATA =========
-  let pagesData = [];
+  window.pagesData = [];
   let treatmentsData = [];
   let teamData = [];
   let textsData = {};
@@ -1015,7 +1015,7 @@
     document.getElementById('loadingOverlay').classList.add('show');
     try {
       const exportObj = {
-        pages: pagesData,
+        pages: window.pagesData,
           treatments: treatmentsData,
         team: teamData,
         texts: textsData,
@@ -1042,7 +1042,7 @@
     const previewArea = document.getElementById('previewArea');
     const isHidden = previewArea.style.display === 'none';
     if (isHidden) {
-      const exportObj = { pages: pagesData,
+      const exportObj = { pages: window.pagesData,
           treatments: treatmentsData, team: teamData, texts: textsData };
       document.getElementById('previewContent').textContent = JSON.stringify(exportObj, null, 2);
       previewArea.style.display = 'block';
@@ -1265,10 +1265,10 @@ window.loadPress = async function(){const s=await getDocs(collection(_db,'press'
   // ========= PAGES LOGIC =========
   window.loadPages = async function() {
     const { collection, getDocs, doc, setDoc } = window.firestoreOps;
-    pagesData = [];
+    window.pagesData = [];
     try {
         const snap = await getDocs(collection(window.db, 'pages'));
-        snap.forEach(d => pagesData.push({ id: d.id, ...d.data() }));
+        snap.forEach(d => window.pagesData.push({ id: d.id, ...d.data() }));
     } catch(err) {
         console.error('Error loading pages (check Firebase Rules):', err);
         if(window.showToast) window.showToast('Fehler beim Laden der Seiten (Berechtigungen fehlen in Firebase)', 'error');
@@ -1282,9 +1282,9 @@ window.loadPress = async function(){const s=await getDocs(collection(_db,'press'
         const seedObj = await res.json();
         let added = 0;
         for (let key of Object.keys(seedObj)) {
-           if (!pagesData.find(p => p.id === key)) {
+           if (!window.pagesData.find(p => p.id === key)) {
                await setDoc(doc(window.db, 'pages', key), seedObj[key]);
-               pagesData.push(seedObj[key]);
+               window.pagesData.push(seedObj[key]);
                added++;
            }
         }
@@ -1298,11 +1298,11 @@ window.loadPress = async function(){const s=await getDocs(collection(_db,'press'
   function renderPagesTable() {
     const tbody = document.getElementById('pagesTbody');
     if (!tbody) return;
-    if (!pagesData.length) {
+    if (!window.pagesData.length) {
       tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 40px; color: var(--text-dim);">Keine Seiten gefunden.</td></tr>';
       return;
     }
-    tbody.innerHTML = pagesData.map(p => `
+    tbody.innerHTML = window.pagesData.map(p => `
       <tr>
         <td style="font-family: monospace; color: var(--primary);">${p.id}</td>
         <td style="font-weight: 600;">${p.name || p.id}</td>
@@ -1317,7 +1317,7 @@ window.loadPress = async function(){const s=await getDocs(collection(_db,'press'
   }
 
   window.openEditPage = (id) => {
-    const p = pagesData.find(x => x.id === id);
+    const p = window.pagesData.find(x => x.id === id);
     if (!p) return;
     document.getElementById('pageId').value = p.id;
     document.getElementById('pageName').value = p.name || p.id;
@@ -1361,7 +1361,7 @@ window.loadPress = async function(){const s=await getDocs(collection(_db,'press'
 
   window.savePage = async () => {
     const id = document.getElementById('pageId').value;
-    const p = pagesData.find(x => x.id === id);
+    const p = window.pagesData.find(x => x.id === id);
     if (!p) return;
     
     const heroSection = (p.sections || []).find(s => s.type === 'hero');

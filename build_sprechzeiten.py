@@ -518,10 +518,10 @@ for lang, lang_data in data.items():
         <div class="contact-form-container">
           <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 32px;">{lang_data["contact_title"]}</h2>
           
-          <form class="contact-form">
+          <form id="contact-form" onsubmit="sendEmail(event)" class="contact-form">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-              <input type="text" class="form-input" placeholder="{lang_data["name_ph"]}" style="padding: 16px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit;">
-              <input type="email" class="form-input" placeholder="{lang_data["email_ph"]}" style="padding: 16px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit;">
+              <input type="text" id="user_name" name="user_name" required class="form-input" placeholder="{lang_data["name_ph"]}" style="padding: 16px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit;">
+              <input type="email" id="user_email" name="user_email" required class="form-input" placeholder="{lang_data["email_ph"]}" style="padding: 16px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit;">
             </div>
             
             <select class="form-input" style="width: 100%; padding: 16px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit; background: white;">
@@ -531,7 +531,7 @@ for lang, lang_data in data.items():
               <option value="duesseldorf">{lang_data["branches"][2]["city"]}</option>
             </select>
             
-            <textarea class="form-textarea" placeholder="{lang_data["msg_ph"]}" style="flex: 1; min-height: 120px; padding: 16px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit; resize: vertical;"></textarea>
+            <textarea id="message" name="message" required class="form-textarea" placeholder="{lang_data["msg_ph"]}" style="flex: 1; min-height: 120px; padding: 16px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit; resize: vertical;"></textarea>
             
             <!-- SECURITY DISCLAIMER -->
             <div style="font-size: 0.9rem; color: #666; margin-top: 4px; margin-bottom: 8px; line-height: 1.5;">
@@ -684,6 +684,53 @@ for lang, lang_data in data.items():
     if 'class="floating-doctolib"' not in new_content:
         new_content = new_content.replace('</body>', doc_widget + '\n</body>')
     
+    
+    if "EmailJS Integration" not in new_content:
+        script_block = """
+<!-- EmailJS Integration -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "-dY76BrZbuYUmTruZ",
+      });
+   })();
+   
+   function sendEmail(e) {
+      e.preventDefault();
+      
+      const btn = document.getElementById('submit-btn');
+      const status = document.getElementById('form-status');
+      
+      const originalText = btn.innerHTML;
+      btn.innerText = 'Senden...';
+      btn.disabled = true;
+      status.style.display = 'none';
+
+      Promise.all([
+        emailjs.sendForm('service_ecu13bq', 'template_bfsngtg', '#contact-form'),
+        emailjs.sendForm('service_ecu13bq', 'template_uuk8onk', '#contact-form')
+      ])
+        .then(() => {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+            status.style.display = 'block';
+            status.style.color = '#2ecc71';
+            status.innerText = 'Nachricht erfolgreich gesendet!';
+            document.getElementById('contact-form').reset();
+        }, (err) => {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+            status.style.display = 'block';
+            status.style.color = '#e74c3c';
+            status.innerText = 'Fehler beim Senden. Bitte versuchen Sie es später noch einmal.';
+            console.error('EmailJS error:', err);
+        });
+   }
+</script>
+</body>"""
+        new_content = new_content.replace("</body>", script_block)
+
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(new_content)
         

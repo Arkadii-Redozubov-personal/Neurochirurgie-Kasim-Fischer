@@ -773,6 +773,50 @@
     });
   </script>
 
+<!-- EmailJS Integration -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "-dY76BrZbuYUmTruZ",
+      });
+   })();
+   
+   function sendEmail(e) {
+      e.preventDefault();
+      
+      const btn = document.getElementById('submit-btn');
+      const status = document.getElementById('form-status');
+      
+      btn.innerText = 'Senden...';
+      btn.disabled = true;
+      status.style.display = 'none';
+
+      // Promise.all([
+        emailjs.sendForm('service_ecu13bq', 'template_bfsngtg', '#contact-form'),
+        emailjs.sendForm('service_ecu13bq', 'template_uuk8onk', '#contact-form')
+      ])
+      Promise.all([
+        emailjs.sendForm('service_ecu13bq', 'template_bfsngtg', '#contact-form'),
+        emailjs.sendForm('service_ecu13bq', 'template_uuk8onk', '#contact-form')
+      ])
+        .then(() => {
+            btn.innerText = 'Nachricht Senden';
+            btn.disabled = false;
+            status.style.display = 'block';
+            status.style.color = '#2ecc71';
+            status.innerText = 'Nachricht erfolgreich gesendet!';
+            document.getElementById('contact-form').reset();
+        }, (err) => {
+            btn.innerText = 'Nachricht Senden';
+            btn.disabled = false;
+            status.style.display = 'block';
+            status.style.color = '#e74c3c';
+            status.innerText = 'Fehler beim Senden. Bitte versuchen Sie es später noch einmal.';
+            console.error('EmailJS error:', err);
+        });
+   }
+</script>
 </body>
 </html>
 

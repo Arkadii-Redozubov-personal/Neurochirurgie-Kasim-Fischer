@@ -273,19 +273,30 @@ if os.path.exists('cms_data.json'):
 
 for lang, lang_data in data.items():
     if cms_branches:
-        for i, branch_id in enumerate(['viersen', 'moenchengladbach', 'duesseldorf']):
-            cms_branch = next((b for b in cms_branches if b.get('id') == branch_id), None)
-            if cms_branch and i < len(lang_data['branches']):
-                if cms_branch.get('phone'):
-                    lang_data['branches'][i]['phone'] = cms_branch['phone']
-                if cms_branch.get('hours'):
-                    lang_data['branches'][i]['hours'] = cms_branch['hours']
-                
-                notice_key = 'notice_de' if lang == '.' else f'notice_{lang}'
-                notice = cms_branch.get(notice_key)
-                if notice:
-                    lang_data['branches'][i]['hours'] += f'<br><br><span style="color:#dc3545; font-weight:bold; background: rgba(220,53,69,0.1); padding: 4px 8px; border-radius:4px;">{notice}</span>'
-
+        new_branches = []
+        lang_code = lang if lang != '.' else 'de'
+        for b in sorted(cms_branches, key=lambda x: x.get('order', 0)):
+            c = b.get('city', {})
+            a = b.get('address', {})
+            h = b.get('hours', {})
+            s = b.get('services', {})
+            t = b.get('transport', {})
+            
+            new_branch = {}
+            new_branch['city'] = c.get(lang_code, c.get('de', ''))
+            new_branch['address'] = a.get(lang_code, a.get('de', ''))
+            new_branch['phone'] = b.get('phone', '') if type(b.get('phone')) == str else b.get('phone', {}).get('de', '')
+            new_branch['hours'] = h.get(lang_code, h.get('de', ''))
+            new_branch['services'] = s.get(lang_code, s.get('de', ''))
+            new_branch['transport'] = t.get(lang_code, t.get('de', ''))
+            
+            btn_link = b.get('btn_link', '') if type(b.get('btn_link')) == str else b.get('btn_link', {}).get('de', '')
+            new_branch['btn_link'] = btn_link if btn_link else '#'
+            new_branch['btn_disabled'] = not btn_link
+            
+            new_branches.append(new_branch)
+        lang_data['branches'] = new_branches
+        
     file_path = f"{lang}/sprechzeiten.html" if lang != '.' else "sprechzeiten.html"
     if not os.path.exists(file_path):
         continue

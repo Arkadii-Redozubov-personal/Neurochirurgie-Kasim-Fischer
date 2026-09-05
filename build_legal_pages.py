@@ -43,6 +43,10 @@ def generate_html(lang, lang_data, page_type):
     html = f'''<!DOCTYPE html>
 <html lang="{html_lang}" dir="{dir_attr}">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="preload" as="style">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title} | Neurochirurgie Fischer</title>

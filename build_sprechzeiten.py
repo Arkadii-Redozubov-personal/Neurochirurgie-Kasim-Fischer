@@ -20,6 +20,12 @@ data = {
         'qr_desc': 'Scannen Sie den QR-Code mit Ihrem Smartphone, um die Navigation direkt zu starten.',
         'btn_text': 'Termin auf Doctolib buchen',
         'contact_title': 'Kontakt',
+        'card1_title': 'Online-Terminbuchung',
+        'card1_desc': 'Über Doctolib in 2 Minuten',
+        'card2_title': '3 Standorte',
+        'card2_desc': 'Viersen, Mönchengladbach, Düsseldorf',
+        'card3_title': 'Termin am selben Tag',
+        'card3_desc': 'Oft sind kurzfristige Termine möglich',
         'name_ph': 'Ihr Name',
         'email_ph': 'Ihre E-Mail',
         'branch_ph': 'Standort auswählen',
@@ -70,6 +76,12 @@ data = {
         'qr_desc': 'Scan the QR code with your smartphone to start navigation directly.',
         'btn_text': 'Book on Doctolib',
         'contact_title': 'Contact',
+        'card1_title': 'Online Booking',
+        'card1_desc': 'Via Doctolib in 2 minutes',
+        'card2_title': '3 Locations',
+        'card2_desc': 'Viersen, Mönchengladbach, Düsseldorf',
+        'card3_title': 'Same Day Appointment',
+        'card3_desc': 'Short-term appointments often possible',
         'name_ph': 'Your Name',
         'email_ph': 'Your Email',
         'branch_ph': 'Select Location',
@@ -120,6 +132,12 @@ data = {
         'qr_desc': 'Отсканируйте QR-код смартфоном, чтобы сразу проложить маршрут в навигаторе.',
         'btn_text': 'Записаться через Doctolib',
         'contact_title': 'Контакт',
+        'card1_title': 'Онлайн-запись',
+        'card1_desc': 'Через Doctolib за 2 минуты',
+        'card2_title': '3 филиала',
+        'card2_desc': 'Фирсен, Мёнхенгладбах, Дюссельдорф',
+        'card3_title': 'Прием в тот же день',
+        'card3_desc': 'Часто возможна срочная запись',
         'name_ph': 'Ваше имя',
         'email_ph': 'Ваш Email',
         'branch_ph': 'Выберите филиал',
@@ -170,6 +188,12 @@ data = {
         'qr_desc': 'Navigasyonu doğrudan başlatmak için QR kodunu akıllı telefonunuzla tarayın.',
         'btn_text': 'Doctolib\'den Randevu Al',
         'contact_title': 'İletişim',
+        'card1_title': 'Çevrimiçi Randevu',
+        'card1_desc': '2 dakika içinde Doctolib üzerinden',
+        'card2_title': '3 Şube',
+        'card2_desc': 'Viersen, Mönchengladbach, Düsseldorf',
+        'card3_title': 'Aynı Gün Randevu',
+        'card3_desc': 'Kısa süreli randevular genellikle mümkündür',
         'name_ph': 'Adınız',
         'email_ph': 'E-posta adresiniz',
         'branch_ph': 'Şube Seçin',
@@ -220,6 +244,12 @@ data = {
         'qr_desc': 'قم بمسح رمز الاستجابة السريعة بهاتفك الذكي لبدء التنقل مباشرة.',
         'btn_text': 'حجز عبر Doctolib',
         'contact_title': 'اتصل بنا',
+        'card1_title': 'موعد عبر الإنترنت',
+        'card1_desc': 'عبر Doctolib في دقيقتين',
+        'card2_title': '3 فروع',
+        'card2_desc': 'فيرسن، مونشنغلادباخ، دوسلدورف',
+        'card3_title': 'موعد في نفس اليوم',
+        'card3_desc': 'غالبًا ما تكون المواعيد قصيرة الأجل ممكنة',
         'name_ph': 'الاسم',
         'email_ph': 'البريد الإلكتروني',
         'branch_ph': 'اختر الفرع',
@@ -304,11 +334,14 @@ for lang, lang_data in data.items():
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
         
-    match_hero = re.search(r'<div class="hero-main".*?>', content)
-    if not match_hero:
-        continue
-        
-    hero_start = match_hero.start()
+    match_hero = re.search(r'<div style="display: flex;[^>]*><div class="hero-main"', content)
+    if match_hero:
+        hero_start = match_hero.start()
+    else:
+        match_hero = re.search(r'<div class="hero-main"', content)
+        if not match_hero:
+            continue
+        hero_start = match_hero.start()
         
     hero_end = content.find('</div>\n  </div>\n\n  <div class="section-wrapper">', hero_start)
     if hero_end == -1:
@@ -328,10 +361,53 @@ for lang, lang_data in data.items():
     if hero_start == -1 or footer_start == -1:
         continue
 
-    new_hero = f'''<div class="hero-main">
-          <h1 class="hero-title" style="font-size: 4rem;">{lang_data["title"]}</h1>
-          <p class="hero-desc">{lang_data["desc"]}</p>
+    new_hero = f'''<div class="hero-main" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 40px; padding-bottom: 60px; max-width: 100%;">
+    
+    <!-- Left: Title and Desc -->
+    <div style="flex: 1; min-width: 300px;">
+      <div class="hero-overline" style="color: var(--primary); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; font-size: 0.9rem;">KONTAKT UND STANDORT</div>
+      <h1 class="hero-title" style="font-size: 3.5rem; color: white; margin-bottom: 24px; line-height: 1.1; font-weight: 800; white-space: nowrap;">{lang_data["title"]}</h1>
+      <p class="hero-desc" style="color: rgba(255,255,255,0.8); font-size: 1.15rem; line-height: 1.6; max-width: 600px;">{lang_data["desc"]}</p>
+    </div>
+
+    <!-- Right: Info Cards -->
+    <div style="flex: 0 0 400px; display: flex; flex-direction: column; gap: 16px;">
+      
+      <!-- Card 1 -->
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div style="width: 56px; height: 56px; border-radius: 12px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
         </div>
+        <div>
+          <h4 style="color: white; margin: 0 0 4px 0; font-size: 1rem; font-weight: 600;">{lang_data["card1_title"]}</h4>
+          <p style="color: rgba(255,255,255,0.6); margin: 0; font-size: 0.85rem;">{lang_data["card1_desc"]}</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div style="width: 56px; height: 56px; border-radius: 12px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        </div>
+        <div>
+          <h4 style="color: white; margin: 0 0 4px 0; font-size: 1rem; font-weight: 600;">{lang_data["card2_title"]}</h4>
+          <p style="color: rgba(255,255,255,0.6); margin: 0; font-size: 0.85rem;">{lang_data["card2_desc"]}</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div style="width: 56px; height: 56px; border-radius: 12px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        </div>
+        <div>
+          <h4 style="color: white; margin: 0 0 4px 0; font-size: 1rem; font-weight: 600;">{lang_data["card3_title"]}</h4>
+          <p style="color: rgba(255,255,255,0.6); margin: 0; font-size: 0.85rem;">{lang_data["card3_desc"]}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
       </div>
     </div>
   </div>'''
@@ -354,11 +430,6 @@ for lang, lang_data in data.items():
       align-items: stretch;
     }}
     .contact-form-container {{
-      background: white;
-      border: 1px solid rgba(0,0,0,0.05);
-      border-radius: 16px;
-      padding: 40px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.03);
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -512,6 +583,13 @@ for lang, lang_data in data.items():
   <div class="section-wrapper">
     <section class="container" style="padding-top: 80px; padding-bottom: 40px; max-width: 1400px;">
       
+
+      <!-- 116117 TERMINSERVICE BLOCK -->
+      <div style="background: rgba(28, 194, 178, 0.05); border-left: 4px solid var(--primary); padding: 24px; border-radius: 8px; margin-bottom: 24px;">
+        <h4 style="color: var(--primary); margin-bottom: 8px; font-weight: 700;">{lang_data["terminservice_title"]}</h4>
+        <p style="color: var(--text-dark); margin: 0; font-size: 1.05rem;">{lang_data["terminservice_text"]}</p>
+      </div>
+
       <!-- TOP SECTION: FORM + CONTACT INFO -->
       <div class="contact-top-grid">
         <!-- LEFT: FORM -->
@@ -539,7 +617,8 @@ for lang, lang_data in data.items():
               {secure_disclaimer_html}
             </div>
 
-            <button type="button" class="btn-primary" style="padding: 16px 32px; font-size: 1.1rem; border: none; cursor: pointer; width: 100%;">{lang_data["send_btn"]}</button>
+            <div id="form-status" style="display: none; margin-top: 16px; margin-bottom: 16px; font-weight: 600;"></div>
+            <button type="submit" id="submit-btn" class="btn-primary" style="padding: 16px 32px; font-size: 1.1rem; border: none; cursor: pointer; width: 100%;">{lang_data["send_btn"]}</button>
           </form>
         </div>
         
@@ -636,20 +715,14 @@ for lang, lang_data in data.items():
         <div class="branch-visuals">
           <iframe class="branch-map" src="{map_embed}" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           <div class="branch-qr-section">
-            <img src="{qr_url}" alt="QR Code Navigation" class="branch-qr-img">
+            <img loading="lazy" src="{qr_url}" alt="QR Code Navigation" class="branch-qr-img">
             <p style="color: var(--text-dark); font-size: 0.95rem; line-height: 1.5; margin: 0; max-width: 250px;">{lang_data["qr_desc"]}</p>
           </div>
         </div>
       </div>
         '''
 
-    new_body += f'''
-      <!-- 116117 TERMINSERVICE BLOCK -->
-      <div style="background: rgba(28, 194, 178, 0.05); border-left: 4px solid var(--primary); padding: 24px; border-radius: 8px; margin-bottom: 24px;">
-        <h4 style="color: var(--primary); margin-bottom: 8px; font-weight: 700;">{lang_data["terminservice_title"]}</h4>
-        <p style="color: var(--text-dark); margin: 0; font-size: 1.05rem;">{lang_data["terminservice_text"]}</p>
-      </div>
-      
+    new_body += f'''      
     </section>
   </div>
 \n\n'''

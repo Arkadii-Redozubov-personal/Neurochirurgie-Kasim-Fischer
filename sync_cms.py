@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import json
+import sys
+sys.stdout.reconfigure(encoding="utf-8")
 import os
 import re
 from datetime import datetime
@@ -203,6 +205,57 @@ def sync_faq(data):
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(content)
 
+
+def sync_reviews(data):
+    reviews = data.get('reviews', [])
+    print(f"
+⭐ Syncing {len(reviews)} reviews to index.html...")
+    
+    import os
+    pattern = re.compile(r'<!-- REVIEWS_START -->.*?<!-- REVIEWS_END -->', re.DOTALL)
+    
+    for lang, directory in DIRS.items():
+        filepath = os.path.join(directory, 'index.html')
+        if not os.path.exists(filepath): continue
+        
+        # Build HTML for this specific language
+        reviews_html = '      <!-- REVIEWS_START -->
+      <div class="testimonials-grid">
+'
+        for rev in reviews:
+            stars_html = '★' * rev.get('stars', 5)
+            
+            # Extract text for current language
+            text_val = ''
+            if isinstance(rev.get('text'), dict):
+                text_val = rev['text'].get(lang) or rev['text'].get('de', '')
+            else:
+                text_val = rev.get('text', '')
+                
+            author = rev.get('author_name', 'Anonym')
+            avatar = author[0].upper() if author else 'A'
+            reviews_html += f'        <div class="testimonial-card fade-in">
+          <div class="stars">{stars_html}</div>
+          <p class="testimonial-text">"{text_val}"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">{avatar}</div>
+            <span class="author-name">{author}</span>
+          </div>
+        </div>
+'
+        reviews_html += '      </div>
+      <!-- REVIEWS_END -->'
+
+        with open(filepath, 'r', encoding='utf-8') as f:
+            html = f.read()
+        if pattern.search(html):
+            new_html = pattern.sub(reviews_html, html)
+            if new_html != html:
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    f.write(new_html)
+                print(f"  ✅ Updated {filepath}")
+
+
 def main():
     print("=" * 55)
     print("  Neurochirurgie Fischer — CMS Sync Script")
@@ -216,6 +269,7 @@ def main():
     sync_treatments(data)
     sync_diagnostik(data)
     sync_faq(data)
+    sync_reviews(data)
     # sync_team(data) - DISABLED because CMS order differs from HTML order
     print("\n✅ All synchronization tasks completed successfully!")
 

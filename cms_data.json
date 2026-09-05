@@ -2259,5 +2259,43 @@
         "ar": ""
       }
     }
+  ],
+  "reviews": [
+    {
+      "id": "rev_1",
+      "stars": 5,
+      "text": {
+        "de": "Ich bin seit zwei Jahren bei Neurochirurgie Fischer in Behandlung und kann die Praxis nur wärmstens empfehlen. Herr Fischer und sein Team sind äußerst professionell, nehmen sich viel Zeit für die Patienten und erklären jeden Behandlungsschritt verständlich. Die Wartezeiten sind kurz und die Atmosphäre in der Praxis ist sehr angenehm.",
+        "en": "I have been undergoing treatment at Neurosurgery Fischer for two years and can highly recommend the practice. Mr. Fischer and his team are extremely professional, take a lot of time for their patients, and explain every step of the treatment clearly. Waiting times are short and the atmosphere in the practice is very pleasant.",
+        "ru": "Я лечусь в клинике нейрохирургии Фишера уже два года и могу смело ее рекомендовать. Господин Фишер и его команда крайне профессиональны, уделяют много времени пациентам и понятно объясняют каждый этап лечения. Время ожидания короткое, а атмосфера в клинике очень приятная.",
+        "tr": "İki yıldır Nöroşirürji Fischer'de tedavi görüyorum ve kliniği şiddetle tavsiye ederim. Sayın Fischer ve ekibi son derece profesyonel, hastalarına çok zaman ayırıyor ve her tedavi adımını anlaşılır bir şekilde açıklıyorlar. Bekleme süreleri kısa ve klinikteki atmosfer çok hoş.",
+        "ar": "أخضع للعلاج في عيادة جراحة المخ والأعصاب فيشر منذ عامين ولا يسعني إلا أن أوصي بشدة بهذه العيادة. السيد فيشر وفريقه محترفون للغاية، ويخصصون الكثير من الوقت للمرضى ويشرحون كل خطوة من خطوات العلاج بوضوح. أوقات الانتظار قصيرة والجو في العيادة لطيف للغاية."
+      },
+      "author_name": "Sabine K."
+    },
+    {
+      "id": "rev_2",
+      "stars": 5,
+      "text": {
+        "de": "Ein wunderbares Team! Nach meinem Bandscheibenvorfall war ich sehr verunsichert. Herr Fischer und sein Team haben mir mit ihrer Kompetenz und ruhigen Art sehr geholfen. Die OP verlief reibungslos und ich bin endlich wieder schmerzfrei.",
+        "en": "A wonderful team! After my herniated disc, I was very unsure. Mr. Fischer and his team helped me a lot with their expertise and calm manner. The surgery went smoothly and I am finally pain-free again.",
+        "ru": "Замечательная команда! После грыжи межпозвоночного диска я был очень не уверен в себе. Господин Фишер и его команда очень помогли мне своим профессионализмом и спокойствием. Операция прошла гладко, и я, наконец, снова живу без боли.",
+        "tr": "Harika bir ekip! Bel fıtığımdan sonra çok kararsızdım. Sayın Fischer ve ekibi uzmanlıkları ve sakin tavırlarıyla bana çok yardımcı oldular. Ameliyat sorunsuz geçti ve sonunda tekrar ağrısızım.",
+        "ar": "فريق رائع! بعد إصابتي بانزلاق غضروفي كنت متردداً جداً. ساعدني السيد فيشر وفريقه كثيراً بخبرتهم وهدوئهم. سارت العملية بسلاسة وأصبحت أخيراً خالياً من الألم مرة أخرى."
+      },
+      "author_name": "Thomas M."
+    },
+    {
+      "id": "rev_3",
+      "stars": 5,
+      "text": {
+        "de": "Ich fühlte mich von der ersten Minute an in der Praxis sehr gut aufgehoben. Herr Fischer ist ein hervorragender Diagnostiker und hat sofort die richtige Behandlungsmethode für mich gefunden. Die Aufklärung war top und die Nachsorge exzellent.",
+        "en": "I felt very well cared for in the practice from the very first minute. Mr. Fischer is an excellent diagnostician and immediately found the right treatment method for me. The explanation was top-notch and the aftercare excellent.",
+        "ru": "С первой же минуты я почувствовал, что нахожусь в надежных руках. Господин Фишер — превосходный диагност, он сразу подобрал для меня правильный метод лечения. Консультация была на высшем уровне, а последующий уход — превосходным.",
+        "tr": "İlk dakikadan itibaren klinikte çok iyi bakıldığımı hissettim. Sayın Fischer mükemmel bir teşhis uzmanı ve benim için doğru tedavi yöntemini hemen buldu. Bilgilendirme birinci sınıftı ve sonraki bakım mükemmeldi.",
+        "ar": "شعرت بأنني أحظى برعاية جيدة جداً في العيادة منذ الدقيقة الأولى. السيد فيشر مشخص ممتاز ووجد طريقة العلاج الصحيحة لي على الفور. كانت التوضيحات من الدرجة الأولى والرعاية اللاحقة ممتازة."
+      },
+      "author_name": "Anna L."
+    }
   ]
 }

@@ -208,8 +208,7 @@ def sync_faq(data):
 
 def sync_reviews(data):
     reviews = data.get('reviews', [])
-    print(f"
-⭐ Syncing {len(reviews)} reviews to index.html...")
+    print(f"\n⭐ Syncing {len(reviews)} reviews to index.html...")
     
     import os
     pattern = re.compile(r'<!-- REVIEWS_START -->.*?<!-- REVIEWS_END -->', re.DOTALL)
@@ -219,9 +218,9 @@ def sync_reviews(data):
         if not os.path.exists(filepath): continue
         
         # Build HTML for this specific language
-        reviews_html = '      <!-- REVIEWS_START -->
+        reviews_html = '''      <!-- REVIEWS_START -->
       <div class="testimonials-grid">
-'
+'''
         for rev in reviews:
             stars_html = '★' * rev.get('stars', 5)
             
@@ -234,17 +233,19 @@ def sync_reviews(data):
                 
             author = rev.get('author_name', 'Anonym')
             avatar = author[0].upper() if author else 'A'
-            reviews_html += f'        <div class="testimonial-card fade-in">
-          <div class="stars">{stars_html}</div>
+            reviews_html += f'''        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">{stars_html}</div>
           <p class="testimonial-text">"{text_val}"</p>
           <div class="testimonial-author">
             <div class="author-avatar">{avatar}</div>
-            <span class="author-name">{author}</span>
+            <div class="author-info">
+              <div class="author-name">{author}</div>
+            </div>
           </div>
         </div>
-'
-        reviews_html += '      </div>
-      <!-- REVIEWS_END -->'
+'''
+        reviews_html += '''      </div>
+      <!-- REVIEWS_END -->'''
 
         with open(filepath, 'r', encoding='utf-8') as f:
             html = f.read()

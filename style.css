@@ -1,5 +1,6 @@
     :root {
       --primary: #1cc2b2;
+  --primary-dark: #128277;
       --primary-hover: #17a99b;
       --bg-dark: #0f1618;
       --bg-light: #f8fafc;
@@ -253,9 +254,9 @@
       font-weight: 600;
       font-size: 0.9rem;
     }
-    .step-item.active { color: var(--primary); }
+    .step-item.active { color: var(--primary-dark); font-weight: 700; }
     .step-line { height: 3px; background: #f1f5f9; width: 100%; border-radius: 3px; }
-    .step-item.active .step-line { background: var(--primary); }
+    .step-item.active .step-line { background: var(--primary-dark); }
 
     /* Section Global */
     .section-wrapper {

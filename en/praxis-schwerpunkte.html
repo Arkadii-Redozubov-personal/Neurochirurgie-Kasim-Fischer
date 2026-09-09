@@ -1,507 +1,585 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Focal Points | Neurosurgery Fischer</title>
-<meta content="Our focus is on the microsurgical and endoscopic treatment of spinal diseases, nerve compression syndromes, and more." name="description"/>
+<title>Conditions &amp; Specialties | Neurochirurgie Fischer</title>
+<meta content="Our specialties include microsurgical and endoscopic treatment of spinal conditions, nerve compression syndromes, and chronic pain." name="description"/>
 <link href="https://my-bandscheibe.de/en/praxis-schwerpunkte.html" rel="canonical"/>
-<meta content="Focal Points | Neurosurgery Fischer" property="og:title"/>
-<meta content="Our focus is on the microsurgical and endoscopic treatment of spinal diseases, nerve compression syndromes, and more." property="og:description"/>
-<meta content="https://my-bandscheibe.de/en/praxis-schwerpunkte.html" property="og:url"/>
+<meta content="Praxis-Schwerpunkte | Neurochirurgie Fischer" property="og:title"/>
+<meta content="https://my-bandscheibe.de/praxis-schwerpunkte.html" property="og:url"/>
 <meta content="website" property="og:type"/>
-<meta content="https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.webp" property="og:image"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="../style.css" rel="stylesheet"/>
 <style>
-    
-  </style>
+/* Modal Layout */
+.modal-split-wrap{display:flex;flex-direction:row;background:white;max-width:calc(100vw - 80px);width:100%;height:85vh;max-height:85vh;border-radius:20px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.35);position:relative}
+.modal-video-panel{width:46%;flex-shrink:0;background:#091f22;position:relative;overflow:hidden}
+.modal-video-panel iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+.modal-content-panel{flex:1;overflow-y:auto;padding:36px 40px;display:flex;flex-direction:column}
+.modal-close-btn{position:absolute;top:14px;right:14px;z-index:30;background:rgba(0,0,0,0.45);border:none;color:white;width:40px;height:40px;border-radius:8px;cursor:pointer;font-size:22px;display:flex;align-items:center;justify-content:center;line-height:1}
+.modal-title{color:#091f22;font-size:1.65rem;font-weight:800;margin:0 0 6px;line-height:1.2}
+.modal-subtitle{color:#718096;margin:0;font-size:0.88rem;line-height:1.5}
+.modal-content-header{margin-bottom:22px;padding-bottom:18px;border-bottom:2px solid rgba(28,194,178,0.12)}
+@media(max-width:820px){
+  .modal-split-wrap{flex-direction:column!important;max-height:95vh!important;max-width:100%!important;border-radius:14px!important;height:95vh!important}
+  .modal-video-panel{width:100%!important;height:200px!important;flex-shrink:0!important}
+  .modal-content-panel{padding:22px 20px!important;flex:1!important;overflow-y:auto!important}
+  .modal-title{font-size:1.3rem!important}
+}
+/* Disease Video Cards */
+.disease-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.disease-card-wide{background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(9,31,34,0.08);border:1px solid rgba(9,31,34,0.06);display:flex;overflow:hidden;cursor:pointer;transition:box-shadow .22s,transform .22s;min-height:200px}
+.disease-card-wide:hover{box-shadow:0 12px 40px rgba(28,194,178,0.16);transform:translateY(-3px)}
+.disease-card-left{flex:1;padding:26px 26px 24px 28px;display:flex;flex-direction:column;min-width:0}
+.disease-card-right{width:200px;flex-shrink:0;position:relative;overflow:hidden;border-radius:0 14px 14px 0;background:#0d1e20}
+.disease-card-right img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.disease-card-wide:hover .disease-card-right img{transform:scale(1.06)}
+.disease-play-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;background:rgba(28,194,178,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.3);transition:background .2s,transform .2s}
+.disease-card-wide:hover .disease-play-icon{background:#1cc2b2;transform:translate(-50%,-50%) scale(1.1)}
+.disease-play-icon svg{margin-left:3px}
+.disease-video-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(28,194,178,0.10);color:#0d9488;font-size:0.72rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:4px 10px;border-radius:99px;margin-bottom:12px;width:fit-content}
+.disease-card-title{font-size:1.35rem;font-weight:800;color:#091f22;margin:0 0 10px;line-height:1.25}
+.disease-card-desc{font-size:0.9rem;line-height:1.6;color:#4a5568;margin:0 0 16px;flex:1}
+.disease-card-btn{display:inline-flex;align-items:center;gap:6px;background:#1cc2b2;color:white;font-size:0.88rem;font-weight:700;padding:10px 20px;border-radius:99px;text-decoration:none;border:none;cursor:pointer;font-family:inherit;transition:background .2s,transform .15s;width:fit-content;margin-top:auto}
+.disease-card-btn:hover{background:#17a99b;transform:translateY(-1px)}
+@media(max-width:900px){.disease-cards-grid{grid-template-columns:1fr}.disease-card-right{width:160px}}
+@media(max-width:600px){.disease-card-wide{flex-direction:column}.disease-card-right{width:100%;height:180px;border-radius:0 0 14px 14px}}
+/* Default small cards */
+.default-cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:24px}
+.default-card{background:#fff;border:1px solid rgba(9,31,34,0.08);border-radius:14px;padding:24px;display:flex;flex-direction:column;box-shadow:0 2px 12px rgba(0,0,0,0.05);transition:box-shadow .2s,transform .2s}
+.default-card:hover{box-shadow:0 8px 28px rgba(28,194,178,0.12);transform:translateY(-2px)}
+.default-card-title{font-size:1.05rem;font-weight:700;color:#091f22;margin:0 0 10px}
+.default-card-desc{font-size:0.88rem;line-height:1.6;color:#64748b;margin:0;flex:1}
+.default-card-btn{display:inline-flex;align-items:center;color:#1cc2b2;font-size:0.88rem;font-weight:700;text-decoration:none;margin-top:16px;border:none;background:none;cursor:pointer;font-family:inherit;padding:0}
+.default-card-btn:hover{color:#128277}
+/* Section styles */
+.section-wrapper{padding:60px 0}
+.section-heading-row{display:flex;align-items:center;gap:16px;margin-bottom:28px;border-bottom:1px solid rgba(0,0,0,0.08);padding-bottom:16px}
+.section-icon{color:#1cc2b2;width:40px;height:40px;flex-shrink:0}
+.section-heading-row h2{font-size:1.9rem;font-weight:800;margin:0;color:#091f22}
+.section-heading-row p{color:#64748b;margin:3px 0 0 0;font-size:0.92rem}
+.section-intro-box{background:rgba(28,194,178,0.04);border:1px solid rgba(28,194,178,0.12);border-radius:14px;padding:22px 26px;margin-bottom:28px}
+/* Modal content */
+.modal-section-h{font-size:1.08rem;font-weight:700;color:#091f22;margin:0 0 10px;padding-bottom:8px;border-bottom:2px solid rgba(28,194,178,0.2)}
+.modal-section-p{color:#4a5568;line-height:1.75;margin:0 0 10px}
+.modal-section-p:last-child{margin-bottom:0}
+.modal-steps{display:flex;flex-direction:column;gap:14px}
+.modal-step{display:flex;gap:14px;align-items:flex-start}
+.modal-step-num{min-width:34px;height:34px;border-radius:50%;background:#1cc2b2;color:white;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0}
+.modal-step-text strong{color:#091f22;display:block;margin-bottom:3px}
+.modal-step-text p{color:#4a5568;line-height:1.6;margin:0;font-size:0.9rem}
+.modal-alert{background:#fff5f5;border-left:4px solid #e53e3e;padding:16px 20px;border-radius:0 12px 12px 0;margin:20px 0}
+.modal-alert-title{color:#c53030;font-size:0.9rem;font-weight:700;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.modal-alert-body{color:#742a2a;margin:0;line-height:1.6;font-size:0.9rem}
+.modal-action-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:6px}
+.modal-action-row a.btn-termin{display:inline-block;background:#1cc2b2;color:white;padding:13px 28px;border-radius:99px;font-size:0.92rem;font-weight:700;text-decoration:none;font-family:inherit}
+.modal-action-row a.btn-termin:hover{background:#17a99b}
+.modal-action-row button.btn-close{padding:13px 26px;border:2px solid rgba(0,0,0,0.15);background:transparent;border-radius:99px;font-size:0.9rem;cursor:pointer;color:#4a5568;font-family:inherit}
+</style>
 <link href="https://my-bandscheibe.de/praxis-schwerpunkte.html" hreflang="de" rel="alternate"/>
 <link href="https://my-bandscheibe.de/en/praxis-schwerpunkte.html" hreflang="en" rel="alternate"/>
 <link href="https://my-bandscheibe.de/ru/praxis-schwerpunkte.html" hreflang="ru" rel="alternate"/>
 <link href="https://my-bandscheibe.de/tr/praxis-schwerpunkte.html" hreflang="tr" rel="alternate"/>
 <link href="https://my-bandscheibe.de/ar/praxis-schwerpunkte.html" hreflang="ar" rel="alternate"/>
 <link href="https://my-bandscheibe.de/praxis-schwerpunkte.html" hreflang="x-default" rel="alternate"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalOrganization",
-  "name": "Neurochirurgie Fischer",
-  "url": "https://my-bandscheibe.de",
-  "logo": "https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.webp",
-  "email": "contact@my-bandscheibe.de",
-  "location": [
-    {
-      "@type": "MedicalClinic",
-      "name": "Neurochirurgie Fischer - Viersen",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Theodor-Heuss-Platz 10, 4. OG",
-        "addressLocality": "Viersen",
-        "postalCode": "41747",
-        "addressCountry": "DE"
-      }
-    },
-    {
-      "@type": "MedicalClinic",
-      "name": "Neurochirurgie Fischer - Mönchengladbach",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Bismarckstr. 106, 3. OG",
-        "addressLocality": "Mönchengladbach",
-        "postalCode": "41061",
-        "addressCountry": "DE"
-      },
-      "telephone": "(02161) 678 26 83"
-    },
-    {
-      "@type": "MedicalClinic",
-      "name": "Neurochirurgie Fischer - Düsseldorf",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Schadowstraße 74",
-        "addressLocality": "Düsseldorf",
-        "postalCode": "40212",
-        "addressCountry": "DE"
-      }
-    }
-  ],
-  "medicalSpecialty": "Neurosurgery",
-  "member": {
-    "@type": "Physician",
-    "name": "Kasim Fischer",
-    "medicalSpecialty": "Neurosurgery"
-  }
-}
-  </script>
 </head>
 <body>
 <div class="page-wrapper">
-<div class="hero-inner-sub" style="background-image: linear-gradient(to right, rgba(9, 31, 34, 0.95) 0%, rgba(9, 31, 34, 0.8) 100%), url('../img/diseases.webp'); background: linear-gradient(to right, rgba(9, 31, 34, 0.95) 0%, rgba(9, 31, 34, 0.6) 100%), url('../img/diseases.webp') center / cover no-repeat #091f22;"><div class="container"><nav class="navbar" style="margin-bottom: 60px;">
-<a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
-<img alt="" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/>
-<span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
-</a>
+<div class="hero-inner-sub" style="background:linear-gradient(to right,rgba(9,31,34,0.95) 0%,rgba(9,31,34,0.6) 100%),url('img/diseases.webp') center/cover no-repeat #091f22;"><div class="container"><nav class="navbar" style="margin-bottom:60px;">
+<a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;"><img alt="" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/><span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span></a>
 <div class="nav-links">
-<a href="index.html">Home</a>
-<a href="unser-team.html">Practice</a>
-<div class="nav-dropdown-wrapper">
-<a tabindex="0">Services</a>
-<div class="nav-dropdown-menu">
-<a href="praxis-schwerpunkte.html">Diseases</a>
-<a href="diagnostik.html">Diagnostics</a>
-<a href="behandlungen.html">Treatments &amp; Surgeries</a>
-<a href="zweitmeinung.html">Second Opinion</a>
+<a href="../index.html">Home</a>
+<a href="../unser-team.html">Practice</a>
+<div class="nav-dropdown-wrapper"><a tabindex="0">Services</a><div class="nav-dropdown-menu"><a href="praxis-schwerpunkte.html">Conditions</a><a href="diagnostik.html">Diagnostics</a><a href="behandlungen.html">Treatments &amp; OPs</a><a href="zweitmeinung.html">Second Opinion</a></div></div>
+<a href="../patienten.html">For Patients</a><a href="../presseschau.html">Press</a><a href="sprechzeiten.html">Contact</a>
 </div>
+<div class="lang-switcher hidden-mobile"><div class="lang-current">EN <span>▼</span></div><div class="lang-dropdown"><a href="../praxis-schwerpunkte.html">Deutsch (DE)</a><a href="praxis-schwerpunkte.html">English (EN)</a><a href="../ru/praxis-schwerpunkte.html">Русский (RU)</a><a href="../tr/praxis-schwerpunkte.html">Türkçe (TR)</a><a href="../ar/praxis-schwerpunkte.html">العربية (AR)</a></div></div>
+<a class="btn-book hidden-mobile" href="sprechzeiten.html">Book Appointment</a>
+<div class="burger-menu" id="burgerMenu" style="display:none;font-size:28px;cursor:pointer;color:white;">☰</div>
+</nav>
+<div class="mobile-menu" id="mobileMenu" style="display:none;">
+<a href="../index.html">Home</a><a href="../unser-team.html">Practice</a>
+<div class="mobile-dropdown-wrapper"><div class="mobile-dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('active');"><a style="margin:0;padding:0;">Services</a><span style="color:rgba(255,255,255,0.7);">▼</span></div><div class="mobile-dropdown-menu"><a href="praxis-schwerpunkte.html">Conditions</a><a href="diagnostik.html">Diagnostics</a><a href="behandlungen.html">Treatments &amp; OPs</a><a href="zweitmeinung.html">Second Opinion</a></div></div>
+<a href="../patienten.html">For Patients</a><a href="../presseschau.html">Press</a><a href="sprechzeiten.html">Contact</a>
+<a href="sprechzeiten.html" style="color:var(--primary);">Book Appointment</a>
+<div class="mobile-lang-switcher"><a href="../praxis-schwerpunkte.html">DE</a><a class="active" href="praxis-schwerpunkte.html">EN</a><a href="../ru/praxis-schwerpunkte.html">RU</a><a href="../tr/praxis-schwerpunkte.html">TR</a><a href="../ar/praxis-schwerpunkte.html">AR</a></div>
 </div>
-<a href="patienten.html">For Patients</a>
-<a href="presseschau.html">Press</a>
-<a href="sprechzeiten.html">Contact</a>
-</div>
-<div class="lang-switcher hidden-mobile">
-<div class="lang-current">EN <span>▼</span></div>
-<div class="lang-dropdown">
-<a href="../praxis-schwerpunkte.html">Deutsch (DE)</a>
-<a href="../en/praxis-schwerpunkte.html">English (EN)</a>
-<a href="../ru/praxis-schwerpunkte.html">Русский (RU)</a>
-<a href="../tr/praxis-schwerpunkte.html">Türkçe (TR)</a>
-<a href="../ar/praxis-schwerpunkte.html">العربية (AR)</a>
-</div>
-</div>
-<a class="btn-book hidden-mobile" href="sprechzeiten.html">make an appointment</a>
-<div class="burger-menu" id="burgerMenu" style="display: none; font-size: 28px; cursor: pointer; color: white;">☰</div>
-</nav><div class="mobile-menu" id="mobileMenu" style="display: none;">
-<a href="index.html">Home</a>
-<a href="unser-team.html">Practice</a>
-<div class="mobile-dropdown-wrapper">
-<div class="mobile-dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('active');">
-<a style="margin:0; padding:0;">Services</a>
-<span style="color: rgba(255,255,255,0.7);">▼</span>
-</div>
-<div class="mobile-dropdown-menu">
-<a href="praxis-schwerpunkte.html">Diseases</a>
-<a href="diagnostik.html">Diagnostics</a>
-<a href="behandlungen.html">Treatments &amp; Surgeries</a>
-<a href="zweitmeinung.html">Second Opinion</a>
-</div>
-</div>
-<a href="patienten.html">For Patients</a>
-<a href="presseschau.html">Press</a>
-<a href="sprechzeiten.html">Contact</a>
-<a href="sprechzeiten.html" style="color: var(--primary);">make an appointment</a>
-<div class="mobile-lang-switcher">
-<a href="../praxis-schwerpunkte.html">DE</a>
-<a class="active" href="../en/praxis-schwerpunkte.html">EN</a>
-<a href="../ru/praxis-schwerpunkte.html">RU</a>
-<a href="../tr/praxis-schwerpunkte.html">TR</a>
-<a href="../ar/praxis-schwerpunkte.html">AR</a>
-</div>
-</div><div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 40px; margin-top: 40px; padding-bottom: 40px;"><div class="hero-main" style="max-width: 800px; margin-top: 0;"><h1 class="hero-title hero-title-sub" style="font-size: 4rem; color: white;">Our <span style="color: var(--primary);">Specialties</span></h1><p class="hero-desc" style="max-width: 500px; font-size: 1.1rem; line-height: 1.6; color: rgba(255,255,255,0.8);">Diagnosis and treatment of diseases of the central and peripheral nervous system.</p></div><div class="badges_marker" style="display: flex; flex-direction: column; gap: 24px; max-width: 350px; padding-bottom: 10px;"><div style="display: flex; gap: 16px; align-items: center;">
-<div style="width: 48px; height: 48px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-</div>
-<div>
-<div style="color: white; font-weight: 700; margin-bottom: 4px;">Proven Methods</div>
-<div style="color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.4;">Scientifically backed treatment protocols</div>
-</div>
-</div><div style="display: flex; gap: 16px; align-items: center;">
-<div style="width: 48px; height: 48px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-</div>
-<div>
-<div style="color: white; font-weight: 700; margin-bottom: 4px;">Individual Approach</div>
-<div style="color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.4;">Treatment tailored to each patient</div>
-</div>
-</div><div style="display: flex; gap: 16px; align-items: center;">
-<div style="width: 48px; height: 48px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
-</div>
-<div>
-<div style="color: white; font-weight: 700; margin-bottom: 4px;">Full Transparency</div>
-<div style="color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.4;">Clear explanation of diagnosis and options</div>
-</div>
-</div></div></div></div></div>
-<div class="section-wrapper">
-<div class="container">
-<div style="background: rgba(28, 194, 178, 0.05); border-left: 4px solid var(--primary); padding: 24px; border-radius: 0 12px 12px 0; margin-top: 40px; margin-bottom: 60px; width: 100%;">
-<h3 style="font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px; color: var(--text-dark);">
-<svg fill="none" height="20" stroke="var(--primary)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
-          Important Medical Notice
-        </h3>
-<p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light); margin: 0;">Please note: The exact diagnosis and indication are always determined individually by the doctor after a thorough medical examination. We cannot guarantee specific treatment results.</p>
-</div>
-<div id="service-0" style="margin-bottom: 80px;">
-<div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
-<div style="color: var(--primary); width: 40px; height: 40px;">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M10 2h4l-2 3z"></path><path d="M9 7c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M9 11c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M9 15c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M12 18c-2 2-4 3-5 1l2-2c1.5 1 2.5.5 3-1z"></path><line x1="12" x2="12" y1="5" y2="18"></line></svg>
-</div>
-<div>
-<h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Spine</h2>
-<p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Diseases and injuries of the spine</p>
-</div>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Herniated Discs</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Degenerative changes where disc material presses on nerves.</p>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:40px;margin-top:40px;padding-bottom:40px;">
+<div class="hero-main" style="max-width:800px;margin-top:0;"><h1 class="hero-title hero-title-sub" style="font-size:4rem;color:white;">Our <span style="color:var(--primary);">Specialties</span></h1><p class="hero-desc" style="max-width:500px;font-size:1.1rem;line-height:1.6;color:rgba(255,255,255,0.8);">Diagnosis and treatment of diseases of the central and peripheral nervous system.</p></div>
+<div class="badges_marker" style="display:flex;flex-direction:column;gap:24px;max-width:350px;padding-bottom:10px;">
+<div style="display:flex;gap:16px;align-items:center;"><div style="width:48px;height:48px;border-radius:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--primary);flex-shrink:0;"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div style="color:white;font-weight:700;margin-bottom:4px;">Proven Methods</div><div style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.4;">Scientifically based protocols</div></div></div>
+<div style="display:flex;gap:16px;align-items:center;"><div style="width:48px;height:48px;border-radius:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--primary);flex-shrink:0;"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div><div style="color:white;font-weight:700;margin-bottom:4px;">Individual Approach</div><div style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.4;">Tailored treatment</div></div></div>
+<div style="display:flex;gap:16px;align-items:center;"><div style="width:48px;height:48px;border-radius:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--primary);flex-shrink:0;"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg></div><div><div style="color:white;font-weight:700;margin-bottom:4px;">Full Transparency</div><div style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.4;">Clear explanation of options</div></div></div>
+</div></div></div></div>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
-</div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spinal Stenosis</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Narrowing of the spinal canal causing pressure on the spinal cord or nerves.</p>
+<div class="section-wrapper"><div class="container">
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+<div style="background:rgba(28,194,178,0.05);border-left:4px solid var(--primary);padding:24px;border-radius:0 12px 12px 0;margin-bottom:60px;">
+<h3 style="font-size:1.1rem;margin-bottom:8px;font-weight:600;color:var(--text-dark);">Important Medical Note</h3>
+<p style="font-size:0.95rem;line-height:1.6;color:var(--text-light);margin:0;">Please note: The exact diagnosis and indication are always determined individually by the physician after a thorough medical examination. We cannot promise any specific treatment outcome.</p>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Neuroforaminal Stenosis</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Narrowing of the openings where nerve roots exit the spine.</p>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+<!-- WIRBELSÄULE -->
+<div id="service-0" style="margin-bottom:80px;">
+<div class="section-heading-row">
+<div class="section-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="40" height="40"><path d="M10 2h4l-2 3z"/><path d="M9 7c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"/><path d="M9 11c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"/><path d="M9 15c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"/><path d="M12 18c-2 2-4 3-5 1l2-2c1.5 1 2.5.5 3-1z"/><line x1="12" x2="12" y1="5" y2="18"/></svg></div>
+<div><h2>Spine</h2><p>Spinal Conditions</p></div>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spondylolisthesis</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Slippage of one vertebra over the one below it.</p>
+<div class="section-intro-box">
+<p style="color:var(--text-dark);line-height:1.8;margin-bottom:12px;font-size:1rem;">Die Wirbelsäule schützt Rückenmark und Nerven und ermöglicht gleichzeitig Stabilität und Bewegung. Verschleiß, Bandscheibenveränderungen, Verengungen oder Spinal Instabilities können Schmerzen und neurologische Beschwerden verursachen.</p>
+<p style="color:var(--text-light);line-height:1.8;margin:0;font-size:0.95rem;">Wir untersuchen Erkrankungen der <strong>Halswirbelsäule (HWS)</strong>, <strong>Brustwirbelsäule (BWS)</strong> und <strong>Lendenwirbelsäule (LWS)</strong>. Entscheidend ist, ob die anatomische Veränderung tatsächlich zu den Beschwerden passt.</p>
+</div>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
-</div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spinal Instability</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Excessive or abnormal movement between vertebrae.</p>
+<div class="disease-cards-grid">
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+<div class="disease-card-wide" onclick="openModal('bsv')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> VIDEO</div>
+<h3 class="disease-card-title">Disc Herniation (Cervical/Lumbar)</h3>
+<p class="disease-card-desc">Vorwölbung oder Austritt von Bandscheibengewebe, das Nervenwurzeln oder das Rückenmark reizt. Betroffen sein kann die Hals- oder Lendenwirbelsäule.</p>
+<button class="disease-card-btn" onclick="openModal('bsv');event.stopPropagation();">Learn more →</button>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Vertebral Fractures</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Fractures of the vertebral body often due to trauma or osteoporosis.</p>
+<div class="disease-card-right"><img src="../img/spine_fracture.webp" alt="Disc Herniation (Cervical/Lumbar)"><div class="disease-play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
+</div>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+<div class="disease-card-wide" onclick="openModal('spinal')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> VIDEO</div>
+<h3 class="disease-card-title">Spinal Canal Stenosis</h3>
+<p class="disease-card-desc">Verengung des Wirbelkanals, die Druck auf das Rückenmark oder Nerven ausübt. Typisch sind Schmerzen beim Gehen, die sich beim Sitzen bessern.</p>
+<button class="disease-card-btn" onclick="openModal('spinal');event.stopPropagation();">Learn more →</button>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Facet Joint Disorders</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Degenerative changes in the small spinal joints causing pain.</p>
+<div class="disease-card-right"><img src="../img/spine_stenosis.webp" alt="Spinal Canal Stenosis"><div class="disease-play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
+</div>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+<div class="disease-card-wide" onclick="openModal('facetten')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> VIDEO</div>
+<h3 class="disease-card-title">Facet Joints</h3>
+<p class="disease-card-desc">Arthrose und Zysten der kleinen Wirbelgelenke. Verursacht lokale Rücken- oder Nackenschmerzen, die sich bei Bewegung verstärken können.</p>
+<button class="disease-card-btn" onclick="openModal('facetten');event.stopPropagation();">Learn more →</button>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Sacroiliac Joint (ISG)</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Inflammation or dysfunction of the sacroiliac joint.</p>
+<div class="disease-card-right"><img src="../img/Facet Joint Disorders.webp" alt="Facet Joints"><div class="disease-play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
+</div>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+<div class="disease-card-wide" onclick="openModal('hws')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> VIDEO</div>
+<h3 class="disease-card-title">Halswirbelsäule &amp; Bandscheibenprothese</h3>
+<p class="disease-card-desc">Veränderungen an der HWS können Nervenwurzeln und das Rückenmark beeinträchtigen. Je nach Befund: Dekompression, Fusion oder bewegungserhaltender Bandscheibenersatz.</p>
+<button class="disease-card-btn" onclick="openModal('hws');event.stopPropagation();">Learn more →</button>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Tumors/Metastases</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Benign or malignant growths affecting the spine.</p>
+<div class="disease-card-right"><img src="../img/Halswirbelsäule &amp; Bandscheibenprothese.webp" alt="HWS Bandscheibenprothese"><div class="disease-play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
+</div>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spinal Cord Diseases</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Various conditions affecting the function of the spinal cord.</p>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
-</div>
-</div>
-</div>
-<div id="service-1" style="margin-bottom: 80px;">
-<div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
-<div style="color: var(--primary); width: 40px; height: 40px;">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v4"></path><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v6"></path><path d="M10 10.5V5a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"></path><path d="M18 11a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path><path d="M12 11c-1 2-2 3-1 5c1 1 1 3 1 6"></path><path d="M12 13c1 1 2 2 2 3"></path></svg>
-</div>
-<div>
-<h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Peripheral Nerves</h2>
-<p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Diseases of the nerves outside the brain and spinal cord</p>
-</div>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Carpal Tunnel Syndrome</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Compression of the median nerve in the wrist area.</p>
+<div class="disease-cards-grid" style="margin-top:24px;">
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+<div class="disease-card-wide" onclick="openModal('isg')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> VIDEO</div>
+<h3 class="disease-card-title">SI Joint Syndrome</h3>
+<p class="disease-card-desc">Reizung oder Funktionsstörung des Iliosakralgelenks. Typisch sind Schmerzen im unteren Rücken und Beckenbereich, die ins Gesäß oder den Oberschenkel ausstrahlen können.</p>
+<button class="disease-card-btn" onclick="openModal('isg');event.stopPropagation();">Learn more →</button>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Cubital Tunnel Syndrome</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Compression of the ulnar nerve at the elbow.</p>
+<div class="disease-card-right"><img src="../img/SI Joint Syndrome.webp" alt="SI Joint Syndrome"><div class="disease-play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
+</div>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+<div class="disease-card-wide" onclick="openModal('wkf')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> VIDEO</div>
+<h3 class="disease-card-title">Vertebral Fractures &amp; Tumour-related Changes</h3>
+<p class="disease-card-desc">Bruch eines Wirbelkörpers nach Sturz, bei Osteoporose oder durch Tumorbefall. Kyphoplastie oder interdisziplinäre Therapie je nach Ursache und Stabilität.</p>
+<button class="disease-card-btn" onclick="openModal('wkf');event.stopPropagation();">Learn more →</button>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Tarsal Tunnel Syndrome</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Compression of the tibial nerve in the ankle area.</p>
+<div class="disease-card-right"><img src="../img/Wirbelkörperfrakturen.webp" alt="Wirbelkörperfrakturen"><div class="disease-play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
+</div>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Nerve Compression Syndromes</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Various conditions where a nerve is pinched or compressed.</p>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+<div class="default-cards-grid">
+<div class="default-card">
+<h3 class="default-card-title">Neuroforaminal Stenosis</h3>
+<p class="default-card-desc">Verengung der Austrittsstellen von Nervenwurzeln am Wirbel. Kann ausstrahlende Schmerzen, Kribbeln oder Kraftminderung in Arm oder Bein verursachen.</p>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Nerve Damage/Injuries</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Traumatic injuries leading to a loss of nerve function.</p>
+<div class="default-card">
+<h3 class="default-card-title">Spondylolisthesis</h3>
+<p class="default-card-desc">Verschiebung eines Wirbelkörpers gegenüber dem benachbarten Wirbel. Je nach Ausmaß können Rückenschmerzen und neurologische Beschwerden auftreten.</p>
+</div>
+<div class="default-card">
+<h3 class="default-card-title">Spinal Instabilities</h3>
+<p class="default-card-desc">Pathologische Beweglichkeit zwischen Wirbelkörpern, die Schmerzen und neurologische Beschwerden verursachen kann. Behandlung je nach Ausmaß konservativ oder operativ.</p>
+</div>
+</div>
+</div>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+<!-- PERIPHERE NERVEN -->
+<div id="service-1" style="margin-bottom:80px;">
+<div class="section-heading-row">
+<div class="section-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="40" height="40"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v4"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v6"/><path d="M10 10.5V5a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 11a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div>
+<div><h2>Peripheral Nerves</h2><p>Nerve conditions outside the brain and spinal cord</p></div>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Polyneuropathies</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Simultaneous damage to multiple peripheral nerves.</p>
+<div class="section-intro-box">
+<p style="color:var(--text-dark);line-height:1.8;margin-bottom:12px;">Periphere Nerven können an anatomisch engen Stellen unter Druck geraten. Typische Beschwerden sind Kribbeln, Taubheit, Schmerzen und – bei stärkerer oder länger bestehender Schädigung – Kraftverlust.</p>
+</div>
+<div class="disease-cards-grid">
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+<div class="disease-card-wide" onclick="openModal('kts')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> VIDEO</div>
+<h3 class="disease-card-title">Carpal Tunnel Syndrome</h3>
+<p class="disease-card-desc">Kompression des Nervus medianus am Handgelenk. Verursacht Kribbeln, Taubheit und Schwäche in Daumen, Zeige- und Mittelfinger – häufig nachts stärker.</p>
+<button class="disease-card-btn" onclick="openModal('kts');event.stopPropagation();">Learn more →</button>
 </div>
+<div class="disease-card-right"><img src="../img/Carpal Tunnel Syndrome.webp" alt="Carpal Tunnel Syndrome"><div class="disease-play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
 </div>
-</div>
-<div id="service-2" style="margin-bottom: 80px;">
-<div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
-<div style="color: var(--primary); width: 40px; height: 40px;">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="7"></circle><circle cx="12" cy="12" r="2"></circle><line x1="12" x2="12" y1="1" y2="4"></line><line x1="12" x2="12" y1="20" y2="23"></line><line x1="1" x2="4" y1="12" y2="12"></line><line x1="20" x2="23" y1="12" y2="12"></line></svg>
-</div>
-<div>
-<h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Pain Syndromes</h2>
-<p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Chronic and acute pain conditions of various origins</p>
-</div>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Chronic Back/Neck Pain</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Persistent pain that lasts for several months.</p>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+<div class="disease-card-wide" onclick="openModal('sulcus')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> VIDEO</div>
+<h3 class="disease-card-title">Cubital Tunnel Syndrome</h3>
+<p class="disease-card-desc">Kompression des Ulnarisnervs am Ellenbogen. Kribbeln und Taubheit im kleinen Finger und Ringfinger, Schmerzen am Ellenbogen – bei längerem Verlauf Kraftverlust in der Hand.</p>
+<button class="disease-card-btn" onclick="openModal('sulcus');event.stopPropagation();">Learn more →</button>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Neuropathic Pain</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Pain caused by damage to the nervous system itself.</p>
+<div class="disease-card-right"><img src="../img/Cubital Tunnel Syndrome.webp" alt="Cubital Tunnel Syndrome"><div class="disease-play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
+</div>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+<div class="disease-card-wide" onclick="openModal('nervkomp')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> VIDEO</div>
+<h3 class="disease-card-title">Nerve Compression Syndromes</h3>
+<p class="disease-card-desc">Weitere Engpasssyndrome an anatomischen Engstellen des Körpers. Kompression von Nerven mit Kribbeln, Taubheit, Schmerzen und – bei längerer Schädigung – Kraftminderung.</p>
+<button class="disease-card-btn" onclick="openModal('nervkomp');event.stopPropagation();">Learn more →</button>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Postoperative Pain Syndromes</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Chronic pain that develops after a surgical procedure.</p>
+<div class="disease-card-right"><img src="../img/Nerve Compression Syndromes.webp" alt="Nerve Compression Syndromes"><div class="disease-play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
+</div>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Phantom Pain</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Sensation of pain in an amputated body part.</p>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+<div class="default-cards-grid">
+<div class="default-card">
+<h3 class="default-card-title">Tarsal Tunnel Syndrome</h3>
+<p class="default-card-desc">Kompression des Nervus tibialis im Tarsalkanal am Innenknöchel. Typisch: Kribbeln, Taubheitsgefühl und Schmerzen an der Fußsohle und im Bereich der Zehen.</p>
 </div>
-<div class="service-card-new" style="margin-bottom: 0;">
-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Psychosomatic Accompanying Factors</h3>
-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Psychological factors that intensify or maintain physical pain experiences.</p>
+<div class="default-card">
+<h3 class="default-card-title">Nerve Damage/Injuries</h3>
+<p class="default-card-desc">Traumatische oder operative Schäden peripherer Nerven. Je nach Ausmaß: konservative Behandlung, Nervennaht oder Nerventransplantation zur Wiederherstellung der Funktion.</p>
+</div>
+<div class="default-card">
+<h3 class="default-card-title">Polyneuropathies</h3>
+<p class="default-card-desc">Erkrankungen vieler peripherer Nerven gleichzeitig, häufig bei Diabetes oder anderen Grunderkrankungen. Symptome: Kribbeln, Taubheit, Schwäche – oft beginnend an den Füßen.</p>
+</div>
+</div>
+</div>
 
-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+<!-- SCHMERZSYNDROME -->
+<div id="service-2" style="margin-bottom:80px;">
+<div class="section-heading-row">
+<div class="section-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="40" height="40"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><line x1="12" x2="12" y1="1" y2="4"/><line x1="12" x2="12" y1="20" y2="23"/><line x1="1" x2="4" y1="12" y2="12"/><line x1="20" x2="23" y1="12" y2="12"/></svg></div>
+<div><h2>Pain Syndromes</h2><p>Chronic and acute pain of various causes</p></div>
+</div>
+<div class="section-intro-box">
+<p style="color:var(--text-dark);line-height:1.8;margin-bottom:12px;">Chronische Schmerzen können unterschiedliche Ursachen haben. Deshalb ist häufig ein abgestuftes Behandlungskonzept sinnvoll.</p>
+</div>
+<div class="disease-cards-grid">
+
+<div class="disease-card-wide" onclick="openModal('chron')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> VIDEO</div>
+<h3 class="disease-card-title">Chronic Back/Neck Pain</h3>
+<p class="disease-card-desc">Anhaltende Schmerzen, die über mehrere Monate bestehen bleiben. Erfordern ein individuelles, multimodales Behandlungskonzept.</p>
+<button class="disease-card-btn" onclick="openModal('chron');event.stopPropagation();">Learn more →</button>
+</div>
+<div class="disease-card-right"><img src="../img/Chronische RückenNackenschmerzen.webp" alt="Chronische Schmerzen"><div class="disease-play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
+</div>
+
+<div class="disease-card-wide" onclick="openModal('neuro')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> VIDEO</div>
+<h3 class="disease-card-title">Neuromodulation</h3>
+<p class="disease-card-desc">Innovative Verfahren der minimalinvasiven Schmerztherapie durch gezielte elektrische Stimulation von Nervenbahnen, um chronische Schmerzen nachhaltig zu lindern.</p>
+<button class="disease-card-btn" onclick="openModal('neuro');event.stopPropagation();">Learn more →</button>
+</div>
+<div class="disease-card-right"><img src="../img/Neuromodulation.webp" alt="Neuromodulation"><div class="disease-play-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
+</div>
+
+</div>
+
+<div class="default-cards-grid">
+<div class="default-card">
+<h3 class="default-card-title">Neuropathic Pain</h3>
+<p class="default-card-desc">Schmerzen, die durch eine Schädigung oder Fehlfunktion des Nervensystems entstehen. Typisch: brennende, einschießende oder elektrischartige Beschwerden.</p>
+</div>
+<div class="default-card">
+<h3 class="default-card-title">Post-operative Pain Syndromes</h3>
+<p class="default-card-desc">Anhaltende Schmerzen nach operativen Eingriffen, z. B. Failed-Back-Surgery-Syndrom. Erfordern eine interdisziplinäre Ursachenklärung und ein individuell abgestimmtes Therapiekonzept.</p>
+</div>
+<div class="default-card">
+<h3 class="default-card-title">Phantom Pain</h3>
+<p class="default-card-desc">Schmerzwahrnehmung in einem amputierten oder nicht mehr innervieren Körperteil. Multimodale Therapieansätze helfen, die Schmerzverarbeitung im Nervensystem zu beeinflussen.</p>
+</div>
+<div class="default-card">
+<h3 class="default-card-title">Psychosomatic Factors</h3>
+<p class="default-card-desc">Chronische Schmerzen gehen häufig mit psychischen Begleiterkrankungen einher. Eine ganzheitliche Betrachtung unter Einbeziehung psychosomatischer Aspekte verbessert die Therapieergebnisse.</p>
 </div>
 </div>
 </div>
+
+</div></div>
+
+<footer class="footer-wrapper"><div class="container footer-grid">
+<div class="footer-brand"><a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;"><img alt="" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/><span style="font-weight:700;font-size:1.4rem;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span></a>
+<div style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.6;margin-bottom:16px;">Bismarckstr. 106<br/>41061 Mönchengladbach</div>
+<div style="color:rgba(255,255,255,0.9);font-weight:600;margin-bottom:4px;">(02161) 678 26 83</div>
+<a href="mailto:kontakt@my-bandscheibe.de" style="color:var(--primary);text-decoration:none;font-size:0.95rem;display:inline-block;margin-bottom:24px;">kontakt@my-bandscheibe.de</a>
+<div class="footer-socials"><a href="https://www.facebook.com/neurokaz/" style="color:white;opacity:0.7;transition:0.3s;" target="_blank"><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></div>
 </div>
+<div class="footer-links"><h3 class="footer-heading">SERVICES</h3><a href="praxis-schwerpunkte.html">Conditions</a><a href="diagnostik.html">Diagnostics</a><a href="behandlungen.html">Treatments &amp; OPs</a><a href="zweitmeinung.html">Second Opinion</a></div>
+<div class="footer-links"><h3 class="footer-heading">PRACTICE</h3><a href="../unser-team.html">About Us</a><a href="../unser-team.html">Our Team</a><a href="../presseschau.html">Press</a><a href="sprechzeiten.html">Contact</a><a href="../impressum.html">Imprint</a><a href="../datenschutz.html">Privacy Policy</a></div>
+<div class="footer-links"><h3 class="footer-heading">OPENING HOURS</h3><p style="margin:0;line-height:2;font-size:0.9rem;color:rgba(255,255,255,0.75);">Mo: 08:00&#8211;13:00 &amp; 14:00&#8211;18:00 Uhr<br>Di: 08:00&#8211;15:00 Uhr<br>Mi: 08:00&#8211;15:00 Uhr<br>Do: 08:00&#8211;13:00 &amp; 14:00&#8211;18:00 Uhr<br>Fr: 08:00&#8211;14:00 Uhr<br>Sa: nach Vereinbarung</p></div>
 </div>
-<!-- Footer Section -->
-<footer class="footer-wrapper">
-<div class="container footer-grid">
-<div class="footer-brand">
-<a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;">
-<img alt="" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/>
-<span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
-</a>
-<div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
-          Bismarckstr. 106<br/>41061 Mönchengladbach
-        </div>
-<div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 4px;">
-          (02161) 678 26 83
-        </div>
-<a href="mailto:kontakt@my-bandscheibe.de" style="color: var(--primary); text-decoration: none; font-size: 0.95rem; display: inline-block; margin-bottom: 24px;">kontakt@my-bandscheibe.de</a>
-<div class="footer-socials">
-<a href="https://www.facebook.com/neurokaz/" onmouseout="this.style.opacity='0.7'" onmouseover="this.style.opacity='1'" style="color: white; opacity: 0.7; transition: 0.3s;" target="_blank">
-<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-</a>
-</div>
-</div>
-<div class="footer-links">
-<h3 class="footer-heading">SERVICES</h4>
-<a href="praxis-schwerpunkte.html">Diseases</a>
-<a href="diagnostik.html">Diagnostics</a>
-<a href="behandlungen.html">Treatments &amp; Surgeries</a>
-<a href="zweitmeinung.html">Second Opinion</a>
-</div>
-<div class="footer-links">
-<h3 class="footer-heading">PRACTICE</h4>
-<a href="unser-team.html">About us</a>
-<a href="unser-team.html">Our Team</a>
-<a href="presseschau.html">Press</a>
-<a href="sprechzeiten.html">Contact</a>
-<a href="impressum.html">Imprint</a>
-<a href="../en/datenschutz.html">Privacy Policy</a>
-</div>
-<div class="footer-links">
-<h3 class="footer-heading">CONSULTATION HOURS</h4>
-<p>Mon - Fri: 8:00 a.m. - 6:00 p.m</p>
-<p>Sat - Sun: Closed</p>
-</div>
-</div>
-<div class="footer-bottom" style="text-align: center; padding-top: 32px; margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.85rem;">
-      © 2026 Neurochirurgie Fischer
-    </div>
+<div class="footer-bottom" style="text-align:center;padding-top:32px;margin-top:32px;border-top:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);font-size:0.85rem;">© 2026 Neurochirurgie Fischer</div>
 </footer>
-<script>
-  // Mobile Menu Toggle
-  const burgerMenu = document.getElementById('burgerMenu');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (burgerMenu && mobileMenu) {
-    burgerMenu.addEventListener('click', () => {
-      if (mobileMenu.style.display === 'flex') {
-        mobileMenu.style.display = 'none';
-        burgerMenu.textContent = '☰';
-      } else {
-        mobileMenu.style.display = 'flex';
-        burgerMenu.textContent = '✕';
-      }
-    });
-  }
-</script>
-<script>
-  // Sticky Navbar
-  const navbar = document.querySelector('.navbar');
-  if (navbar) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-  }
-</script>
+
+<!-- ══════ MODALS ══════ -->
+
+<!-- BSV Modal -->
+<div id="modal-overlay-bsv" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button onclick="closeModal('bsv')" class="modal-close-btn">&times;</button>
+<div class="modal-video-panel"><iframe id="iframe-bsv" src="" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Bandscheibenvorfall <span style="color:#1cc2b2;">HWS / LWS</span></h2><p class="modal-subtitle">Symptome, Verlauf, Behandlung und typischer Operationsablauf</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Was ist ein Bandscheibenvorfall?</h3>
+<p class="modal-section-p">Unsere Bandscheiben befinden sich zwischen den einzelnen Wirbelkörpern und dienen als elastische Puffer. Jede Bandscheibe besitzt einen festen äußeren Faserring (<em>Anulus fibrosus</em>) und einen weicheren, gallertartigen Kern (<em>Nucleus pulposus</em>).</p>
+<p class="modal-section-p">Im Laufe der Zeit kann die Bandscheibe an Elastizität verlieren. Dadurch kann sich der äußere Faserring zunächst vorwölben – man spricht von einer <strong>Bandscheibenprotrusion</strong>. Kommt es zu einem Einriss des Faserrings und tritt Bandscheibengewebe nach außen, liegt ein <strong>Bandscheibenvorfall</strong> (<em>Prolaps</em>) vor.</p>
+<p class="modal-section-p">Ein Bandscheibenvorfall muss nicht zwangsläufig Beschwerden verursachen. Drückt oder reizt das ausgetretene Bandscheibengewebe jedoch eine Nervenwurzel oder andere Nervenstrukturen, können Nacken- oder Rückenschmerzen sowie ausstrahlende Schmerzen in Arme oder Beine entstehen. Auch Kribbeln, Taubheitsgefühle oder eine verminderte Muskelkraft sind möglich.</p>
+<p class="modal-section-p">Welche Beschwerden auftreten und wie ausgeprägt sie sind, hängt unter anderem davon ab, wo sich der Bandscheibenvorfall befindet und welche Nervenstrukturen betroffen sind.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Muss ein Bandscheibenvorfall operiert werden?</h3>
+<p class="modal-section-p">Nein. Viele Bandscheibenvorfälle werden zunächst konservativ behandelt. Eine Operation kann notwendig oder sinnvoll sein, wenn erhebliche neurologische Ausfälle auftreten, Hinweise auf eine relevante Störung von Blasen- oder Darmfunktion bestehen oder starke, zum Befund passende Beschwerden trotz angemessener nichtoperativer Behandlung fortbestehen.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Wie wird entschieden?</h3>
+<p class="modal-section-p">Für die Entscheidung werden Beschwerdeverlauf, neurologische Untersuchung und Bildgebung gemeinsam bewertet. Ziel einer Operation ist in der Regel die Entlastung der betroffenen Nervenstruktur. Welche Technik eingesetzt wird, hängt von Lokalisation und Art des Befundes ab.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Typischer Ablauf einer Bandscheibenoperation</h3>
+<div class="modal-steps">
+<div class="modal-step"><div class="modal-step-num">1</div><div class="modal-step-text"><strong>Vorbereitung</strong><p>Diagnose und Operationsindikation werden nochmals geprüft. Vor dem Eingriff erfolgen die erforderliche ärztliche und – je nach Narkose – anästhesiologische Aufklärung.</p></div></div>
+<div class="modal-step"><div class="modal-step-num">2</div><div class="modal-step-text"><strong>Operation</strong><p>Der Zugang wird entsprechend der betroffenen Wirbelsäulenregion gewählt. Bei einer Dekompression wird die eingeengte Nervenstruktur entlastet; störendes Bandscheibengewebe kann gezielt entfernt werden.</p></div></div>
+<div class="modal-step"><div class="modal-step-num">3</div><div class="modal-step-text"><strong>Direkt danach</strong><p>Nach dem Eingriff werden Kreislauf, Schmerzen und neurologischer Befund kontrolliert. Die Mobilisation beginnt abhängig von Eingriff und individuellem Verlauf.</p></div></div>
+<div class="modal-step"><div class="modal-step-num">4</div><div class="modal-step-text"><strong>Entlassung und Nachsorge</strong><p>Wundkontrolle, Belastungsaufbau, gegebenenfalls Physiotherapie und weitere Kontrollen werden individuell geplant. Arbeitsfähigkeit, Sport und Autofahren werden abhängig vom Eingriff besprochen.</p></div></div>
+</div></div>
+<div class="modal-alert"><div class="modal-alert-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e53e3e" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Urgent Note</div><p class="modal-alert-body">Newly occurring significant paralysis or disturbances of bladder/bowel function must be clarified by a doctor immediately.</p></div>
+<div class="modal-action-row"><a href="sprechzeiten.html" class="btn-termin">Request Appointment</a><button onclick="closeModal('bsv')" class="btn-close">Close</button></div>
+</div></div></div>
+
+<!-- Spinal Canal Stenosis Modal -->
+<div id="modal-overlay-spinal" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button onclick="closeModal('spinal')" class="modal-close-btn">&times;</button>
+<div class="modal-video-panel"><iframe id="iframe-spinal" src="" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Spinalkanal<span style="color:#1cc2b2;">stenose</span></h2><p class="modal-subtitle">Wenn Nerven zu wenig Raum haben</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Was ist eine Spinal Canal Stenosis?</h3>
+<p class="modal-section-p">Bei einer Spinal Canal Stenosis kommt es zu einer Verengung des Wirbelkanals und damit zu einer Einengung der darin verlaufenden Nervenstrukturen. Häufig entsteht diese Veränderung im Rahmen eines zunehmenden Verschleißes der Wirbelsäule.</p>
+<p class="modal-section-p">Mit der Zeit können sich beispielsweise die kleinen Wirbelgelenke und Bänder verdicken. Gleichzeitig können sich die Bandscheiben vorwölben. Durch das Zusammenspiel dieser Veränderungen steht den Nerven im Wirbelkanal zunehmend weniger Platz zur Verfügung.</p>
+<p class="modal-section-p">Eine Spinal Canal Stenosis der Lendenwirbelsäule kann sich insbesondere durch Schmerzen in den Beinen bemerkbar machen, die beim längeren Stehen oder Gehen zunehmen. Zusätzlich können Kribbeln, Taubheitsgefühle oder eine Verminderung der Muskelkraft auftreten. Häufig bessern sich die Beschwerden beim Sitzen oder beim Vorbeugen des Oberkörpers. Die dadurch entstehende Einschränkung der Gehstrecke wird als <strong>Claudicatio spinalis</strong> bezeichnet.</p>
+<p class="modal-section-p">Ob und welche Behandlung erforderlich ist, richtet sich nach den Beschwerden, dem neurologischen Befund und dem Ausmaß der Veränderungen in der Bildgebung.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Behandlung</h3>
+<p class="modal-section-p">Die Behandlung richtet sich nach Ausmaß und Dauer der Beschwerden, neurologischem Befund, Bildgebung und persönlichen Zielen. Bei weniger ausgeprägten Beschwerden kommen zunächst konservative Maßnahmen infrage.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Operative Dekompression</h3>
+<p class="modal-section-p">Wenn die Beschwerden trotz geeigneter konservativer Behandlung erheblich bleiben oder relevante neurologische Probleme bestehen, kann eine operative Entlastung erwogen werden. Dabei werden einengende Strukturen so weit wie erforderlich entfernt. Ob zusätzlich eine Stabilisierung notwendig ist, wird individuell beurteilt.</p></div>
+<div class="modal-alert"><div class="modal-alert-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e53e3e" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Urgent Note</div><p class="modal-alert-body">Newly occurring significant paralysis or disturbances of bladder/bowel function must be clarified by a doctor immediately.</p></div>
+<div class="modal-action-row"><a href="sprechzeiten.html" class="btn-termin">Request Appointment</a><button onclick="closeModal('spinal')" class="btn-close">Close</button></div>
+</div></div></div>
+
+<!-- Facet Joints Modal -->
+<div id="modal-overlay-facetten" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button onclick="closeModal('facetten')" class="modal-close-btn">&times;</button>
+<div class="modal-video-panel"><iframe id="iframe-facetten" src="" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Facetten<span style="color:#1cc2b2;">gelenke</span></h2><p class="modal-subtitle">Arthrose und Zysten der kleinen Wirbelgelenke</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Was ist eine Facettengelenkarthrose?</h3>
+<p class="modal-section-p">Die kleinen Wirbelgelenke, auch Facet Joints genannt, verbinden benachbarte Wirbel miteinander und ermöglichen gemeinsam mit den Bandscheiben die Beweglichkeit der Wirbelsäule. Verschleißbedingte Veränderungen betreffen daher häufig sowohl die Bandscheiben als auch die Facet Joints.</p>
+<p class="modal-section-p">Bei einer Facettengelenkarthrose verändert sich das Gelenk zunehmend. Dabei können unter anderem eine Vergrößerung der Gelenkstrukturen, Gelenkergüsse oder Veränderungen der Gelenkstellung auftreten.</p>
+<p class="modal-section-p">Typisch sind lokale Rücken- oder Nackenschmerzen, die sich bei bestimmten Bewegungen oder Belastungen verstärken können. Die Schmerzen können auch in Arme oder Beine ausstrahlen. Im Unterschied zu einer direkten Reizung einer Nervenwurzel reichen diese Beschwerden häufig weniger weit in die Extremitäten und gehen meist nicht mit typischen neurologischen Ausfällen einher. Man spricht dann von <em>pseudoradikulären Beschwerden</em>.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Was ist eine Facettengelenkzyste?</h3>
+<p class="modal-section-p">Durch verschleißbedingte Veränderungen eines Facettengelenks kann sich eine mit Flüssigkeit gefüllte Gelenkzyste (Synovialzyste) bilden. Ragt eine solche Zyste in den Wirbelkanal hinein, kann sie eine Nervenwurzel einengen. Dadurch können – ähnlich wie bei einem Bandscheibenvorfall – ausstrahlende Schmerzen, Kribbeln, Taubheitsgefühle oder Kraftminderung auftreten.</p>
+<p class="modal-section-p">Welche Behandlung geeignet ist, hängt von der Größe und Lage der Zyste, den Beschwerden, dem neurologischen Befund und der Bildgebung ab.</p></div>
+<div class="modal-alert"><div class="modal-alert-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e53e3e" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Urgent Note</div><p class="modal-alert-body">Newly occurring significant paralysis or disturbances of bladder/bowel function must be clarified by a doctor immediately.</p></div>
+<div class="modal-action-row"><a href="sprechzeiten.html" class="btn-termin">Request Appointment</a><button onclick="closeModal('facetten')" class="btn-close">Close</button></div>
+</div></div></div>
+
+<!-- HWS Modal -->
+<div id="modal-overlay-hws" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button onclick="closeModal('hws')" class="modal-close-btn">&times;</button>
+<div class="modal-video-panel"><iframe id="iframe-hws" src="" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Halswirbelsäule <span style="color:#1cc2b2;">&amp; Bandscheibenprothese</span></h2><p class="modal-subtitle">Dekompression, Fusion und bewegungserhaltender Bandscheibenersatz</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Erkrankungen der Halswirbelsäule</h3>
+<p class="modal-section-p">Veränderungen an der Halswirbelsäule können Nervenwurzeln und bei bestimmten Befunden auch das Rückenmark beeinträchtigen. Mögliche Beschwerden reichen von Nacken- und Armschmerzen bis zu Taubheitsgefühlen, Kraftminderung oder Störungen der Feinmotorik.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Welche Operation kommt infrage?</h3>
+<p class="modal-section-p">Je nach Diagnose können unterschiedliche Verfahren sinnvoll sein, darunter Dekompression, Fusion oder in ausgewählten Fällen ein bewegungserhaltender Bandscheibenersatz.</p>
+<p class="modal-section-p">Eine Bandscheibenprothese ist nicht für jede Patientin und jeden Patienten geeignet. Ob eine Prothese sinnvoll ist, hängt unter anderem vom betroffenen Segment, dem Ausmaß degenerativer Veränderungen, der Stabilität, Knochenqualität und weiteren individuellen Faktoren ab. Die Empfehlung erfolgt erst nach Untersuchung und Bildauswertung.</p></div>
+<div class="modal-action-row"><a href="sprechzeiten.html" class="btn-termin">Request Appointment</a><button onclick="closeModal('hws')" class="btn-close">Close</button></div>
+</div></div></div>
+
+<!-- KTS Modal -->
+<div id="modal-overlay-kts" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button onclick="closeModal('kts')" class="modal-close-btn">&times;</button>
+<div class="modal-video-panel"><iframe id="iframe-kts" src="" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Karpaltunnel<span style="color:#1cc2b2;">syndrom</span></h2><p class="modal-subtitle">Kompression des Nervus medianus am Handgelenk</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Was ist das Carpal Tunnel Syndrome?</h3>
+<p class="modal-section-p">Beim Carpal Tunnel Syndrome wird der Medianusnerv am Handgelenk eingeengt. Typische Beschwerden sind Kribbeln, Taubheit und Schmerzen in Daumen, Zeige- und Mittelfinger – häufig nachts oder beim Halten von Gegenständen stärker ausgeprägt. Bei länger bestehender Schädigung kann es zu Kraftverlust kommen.</p>
+<p class="modal-section-p">Die Diagnose ergibt sich aus Beschwerden und klinischer Untersuchung und kann durch neurophysiologische Messungen ergänzt werden.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Operation des Karpaltunnels</h3>
+<p class="modal-section-p">Wenn Beschwerden anhalten oder eine relevante Nervenschädigung vorliegt, kann eine operative Entlastung sinnvoll sein. Dabei wird das Band über dem Karpaltunnel durchtrennt, um dem Nerv mehr Raum zu geben. Offene und endoskopische Verfahren sind etabliert; die geeignete Methode wird individuell ausgewählt.</p></div>
+<div class="modal-action-row"><a href="sprechzeiten.html" class="btn-termin">Request Appointment</a><button onclick="closeModal('kts')" class="btn-close">Close</button></div>
+</div></div></div>
+
+<!-- Sulcus Modal -->
+<div id="modal-overlay-sulcus" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button onclick="closeModal('sulcus')" class="modal-close-btn">&times;</button>
+<div class="modal-video-panel"><iframe id="iframe-sulcus" src="" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Nervenkompressions<span style="color:#1cc2b2;">syndrome</span></h2><p class="modal-subtitle">Sulcus-ulnaris-Syndrom und weitere Engpasssyndrome</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Sulcus-ulnaris-Syndrom</h3>
+<p class="modal-section-p">Beim Sulcus-ulnaris-Syndrom (Kubitaltunnelsyndrom) wird der Ulnarisnerv am Ellenbogen eingeengt. Typisch sind Kribbeln oder Taubheitsgefühl im kleinen Finger und Ringfinger sowie Schmerzen an der Innenseite des Ellenbogens. Bei fortgeschrittener Schädigung kann es zu Muskelschwund und Kraftverlust in der Hand kommen.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Weitere Engpasssyndrome</h3>
+<p class="modal-section-p">Auch am Ellenbogen und an anderen anatomischen Engstellen können Nerven komprimiert werden. Ob eine konservative oder operative Behandlung angezeigt ist, hängt von Beschwerden, klinischem Befund und gegebenenfalls neurophysiologischen Ergebnissen ab.</p></div>
+<div class="modal-action-row"><a href="sprechzeiten.html" class="btn-termin">Request Appointment</a><button onclick="closeModal('sulcus')" class="btn-close">Close</button></div>
+</div></div></div>
+
+<!-- Chronische Schmerzen Modal -->
+<div id="modal-overlay-chron" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button onclick="closeModal('chron')" class="modal-close-btn">&times;</button>
+<div class="modal-video-panel"><iframe id="iframe-chron" src="" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Chronische <span style="color:#1cc2b2;">Rücken-/Nackenschmerzen</span></h2><p class="modal-subtitle">Individuelle, multimodale Behandlungskonzepte</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Chronische Schmerzen individuell behandeln</h3>
+<p class="modal-section-p">Chronische Schmerzen können unterschiedliche Ursachen und Auswirkungen haben. Deshalb ist häufig ein abgestuftes Behandlungskonzept sinnvoll. Neben der Behandlung einer zugrunde liegenden Erkrankung können medikamentöse, physikalische, interventionelle und psychosomatisch orientierte Ansätze berücksichtigt werden.</p>
+<p class="modal-section-p">Anhaltende Rücken- oder Nackenschmerzen, die über drei Monate oder länger bestehen, werden als chronisch bezeichnet. Sie erfordern eine sorgfältige Ursachenabklärung und ein individuell abgestimmtes Therapiekonzept.</p></div>
+<div class="modal-action-row"><a href="sprechzeiten.html" class="btn-termin">Request Appointment</a><button onclick="closeModal('chron')" class="btn-close">Close</button></div>
+</div></div></div>
+
+<!-- Neuromodulation Modal -->
+<div id="modal-overlay-neuro" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button onclick="closeModal('neuro')" class="modal-close-btn">&times;</button>
+<div class="modal-video-panel"><iframe id="iframe-neuro" src="" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Neuro<span style="color:#1cc2b2;">modulation</span></h2><p class="modal-subtitle">Spezielle Schmerztherapie &amp; Rückenmarkstimulation</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Was ist Neuromodulation?</h3>
+<p class="modal-section-p">Bei ausgewählten chronischen Schmerzsyndromen kann nach sorgfältiger Prüfung eine Neuromodulation erwogen werden, beispielsweise eine Rückenmarkstimulation (Spinal Cord Stimulation, SCS). Ziel ist eine Beeinflussung der Schmerzverarbeitung durch gezielte elektrische Stimulation von Nervenbahnen. Eine vollständige Schmerzfreiheit kann nicht garantiert werden.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Vor einer Implantation</h3>
+<p class="modal-section-p">Vor einer Implantation werden Diagnose, bisherige Therapien, individuelle Risiken und realistische Therapieziele ausführlich geprüft und besprochen.</p></div>
+<div class="modal-steps">
+<div class="modal-step"><div class="modal-step-num">1</div><div class="modal-step-text"><strong>Indikationsprüfung</strong><p>Sorgfältige Auswahl geeigneter Patienten auf Basis von Diagnose, bisherigen Therapien und realistischen Therapiezielen.</p></div></div>
+<div class="modal-step"><div class="modal-step-num">2</div><div class="modal-step-text"><strong>Testphase</strong><p>Temporäre Implantation der Elektroden zur Überprüfung der Wirksamkeit, bevor ein permanentes System eingesetzt wird.</p></div></div>
+<div class="modal-step"><div class="modal-step-num">3</div><div class="modal-step-text"><strong>Dauerhafte Implantation</strong><p>Bei positiver Testphase wird das permanente Stimulationssystem implantiert und individuell programmiert.</p></div></div>
+</div>
+<div class="modal-action-row" style="margin-top:24px;"><a href="sprechzeiten.html" class="btn-termin">Request Appointment</a><button onclick="closeModal('neuro')" class="btn-close">Close</button></div>
+</div></div></div>
+
+<!-- ISG Modal -->
+<div id="modal-overlay-isg" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button onclick="closeModal('isg')" class="modal-close-btn">&times;</button>
+<div class="modal-video-panel"><iframe id="iframe-isg" src="" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">ISG-<span style="color:#1cc2b2;">Syndrom</span></h2><p class="modal-subtitle">Reizung oder Funktionsstörung des Iliosakralgelenks</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Was ist ein SI Joint Syndrome?</h3>
+<p class="modal-section-p">Das Iliosakralgelenk (ISG) verbindet das Kreuzbein als unteren Abschnitt der Wirbelsäule mit dem Becken. Es ist durch kräftige Bänder stabilisiert und besitzt nur eine geringe Beweglichkeit.</p>
+<p class="modal-section-p">Kommt es zu einer Reizung oder Funktionsstörung des ISG, können Schmerzen im unteren Rücken und im Bereich des Beckens entstehen. Als mögliche Auslöser kommen unter anderem Fehl- oder Überbelastungen, verschleißbedingte Veränderungen oder vorangegangene Verletzungen infrage.</p>
+<p class="modal-section-p">Typisch sind lokale Schmerzen über dem betroffenen Iliosakralgelenk. Die Beschwerden können auch in das Gesäß, die Hüftregion oder den Oberschenkel ausstrahlen.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Diagnostik und Therapie</h3>
+<p class="modal-section-p">Da ähnliche Beschwerden auch durch Erkrankungen der Lendenwirbelsäule, der Hüfte oder anderer Strukturen verursacht werden können, ist eine sorgfältige Untersuchung und Abgrenzung anderer Ursachen wichtig.</p>
+<p class="modal-section-p">Welche Behandlung geeignet ist, richtet sich nach der Ursache, der Dauer und Stärke der Beschwerden sowie dem individuellen Untersuchungsbefund. Konservative Schmerztherapie oder – bei entsprechender individueller Indikation – operative ISG-Arthrodese.</p></div>
+<div class="modal-action-row"><a href="sprechzeiten.html" class="btn-termin">Request Appointment</a><button onclick="closeModal('isg')" class="btn-close">Close</button></div>
+</div></div></div>
+
+<!-- Wirbelkörperfrakturen Modal -->
+<div id="modal-overlay-wkf" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button onclick="closeModal('wkf')" class="modal-close-btn">&times;</button>
+<div class="modal-video-panel"><iframe id="iframe-wkf" src="" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Wirbelkörper<span style="color:#1cc2b2;">frakturen</span></h2><p class="modal-subtitle">Kyphoplastie und tumorbedingte Veränderungen der Wirbelsäule</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Was ist eine Wirbelkörperfraktur?</h3>
+<p class="modal-section-p">Bei einer Wirbelkörperfraktur handelt es sich um einen Bruch eines Wirbelkörpers. Dabei wird grundsätzlich zwischen stabilen und instabilen Frakturen unterschieden. Für die Beurteilung ist außerdem entscheidend, wodurch der Bruch entstanden ist.</p>
+<p class="modal-section-p">Wirbelkörperfrakturen können beispielsweise nach Unfällen oder Stürzen, bei einer verminderten Knochenfestigkeit durch Osteoporose oder im Zusammenhang mit tumorbedingten Veränderungen auftreten.</p>
+<p class="modal-section-p">Typisch sind häufig deutliche, lokal begrenzte Rückenschmerzen, die über einen längeren Zeitraum bestehen können. Je nach Art und Ausmaß der Fraktur können auch Strukturen des Wirbelkanals betroffen sein. Dadurch sind ausstrahlende Nervenschmerzen, Taubheitsgefühle, Kribbeln oder eine Verminderung der Muskelkraft möglich.</p>
+<p class="modal-section-p">Welche Behandlung geeignet ist, hängt insbesondere von der Stabilität der Fraktur, ihrer Ursache, den Beschwerden, dem neurologischen Befund und der Bildgebung ab. Nicht jede Wirbelkörperfraktur muss operiert werden.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Minimalinvasive Stabilisierung / Kyphoplastie</h3>
+<p class="modal-section-p">In ausgewählten Fällen kann eine Zementaugmentation wie die Kyphoplastie zur Stabilisierung eines betroffenen Wirbelkörpers erwogen werden. Ob das Verfahren geeignet ist, muss individuell geprüft werden. Nicht jede Wirbelkörperfraktur muss operiert werden.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Tumoren und Metastasen der Wirbelsäule</h3>
+<p class="modal-section-p">Bei tumorbedingten Veränderungen ist eine interdisziplinäre Behandlungsplanung besonders wichtig. Je nach Situation können operative, strahlentherapeutische, medikamentöse und in ausgewählten Fällen ablative Verfahren kombiniert werden. Eine Radiofrequenzablation ist deshalb als mögliche Option für bestimmte Befunde zu verstehen, nicht als allgemeine Standardtherapie.</p></div>
+<div class="modal-action-row"><a href="sprechzeiten.html" class="btn-termin">Request Appointment</a><button onclick="closeModal('wkf')" class="btn-close">Close</button></div>
+</div></div></div>
+
+<!-- Nerve Compression Syndromes Modal -->
+<div id="modal-overlay-nervkomp" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button onclick="closeModal('nervkomp')" class="modal-close-btn">&times;</button>
+<div class="modal-video-panel"><iframe id="iframe-nervkomp" src="" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Nervenkompressions<span style="color:#1cc2b2;">syndrome</span></h2><p class="modal-subtitle">Engpasssyndrome an anatomischen Engstellen des Körpers</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Nervenkompression – was passiert?</h3>
+<p class="modal-section-p">Periphere Nerven können an verschiedenen anatomischen Engstellen unter Druck geraten. Dies führt zu einer Beeinträchtigung der Nervenfunktion, die sich als Kribbeln, Taubheitsgefühl, Schmerzen oder Kraftminderung äußern kann.</p>
+<p class="modal-section-p">Häufig sind die Beschwerden zunächst intermittierend und verstärken sich bei bestimmten Haltungen oder Belastungen. Bei längerer oder stärkerer Schädigung können Ausfälle dauerhaft werden.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Diagnose und Behandlung</h3>
+<p class="modal-section-p">Die Diagnose wird durch klinische Untersuchung und – bei Bedarf – durch elektrophysiologische Messungen (Nervenleitgeschwindigkeit, EMG) gesichert. Bildgebung kann ergänzend eingesetzt werden.</p>
+<p class="modal-section-p">Ob eine konservative oder operative Behandlung angezeigt ist, hängt von den Beschwerden, dem klinischen Befund, dem Ausmaß der Nervenschädigung und der Ursache der Kompression ab.</p></div>
+<div class="modal-action-row"><a href="sprechzeiten.html" class="btn-termin">Request Appointment</a><button onclick="closeModal('nervkomp')" class="btn-close">Close</button></div>
+</div></div></div>
+
 <!-- Floating Doctolib Widget -->
 <div class="floating-doctolib">
-<div class="fd-close" onclick="this.parentElement.style.display='none'">
-<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
-</div>
-<div class="fd-content">
-<div class="fd-icon">
-<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"><rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
-</div>
-<div class="fd-text">
-<div class="fd-title">Book an appointment</div>
-<div class="fd-desc">Book your appointment quickly and easily online.</div>
-</div>
-</div>
+<div class="fd-close" onclick="this.parentElement.style.display='none'"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg></div>
+<div class="fd-content"><div class="fd-icon"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><rect height="18" rx="2" ry="2" width="18" x="3" y="4"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></div>
+<div class="fd-text"><div class="fd-title">Book Appointment</div><div class="fd-desc">Book your appointment quickly and easily online.</div></div></div>
 <a class="fd-btn" href="https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer?utm_campaign=website-button&amp;utm_source=kasim-fischer-website-button&amp;utm_medium=referral&amp;utm_content=custom&amp;utm_term=kasim-fischer" target="_blank">Book on Doctolib →</a>
-<div class="fd-secure">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-          Your data is safe and confidential.
-        </div>
+<div class="fd-secure"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Your data is safe and confidential.</div>
 </div>
-<!-- Service Modal -->
-<div class="video-modal" id="serviceModal" style="z-index: 99999;">
-<div class="video-modal-content" style="background: white; max-width: 800px; display: flex; flex-direction: column; height: auto; max-height: 90vh; border-radius: 20px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.2);">
-<span class="close-video" id="closeServiceModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 8px; z-index: 10;"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg></span>
-<div style="width: 100%; aspect-ratio: 16/9; background: #000; position: relative; flex-shrink: 0;">
-<!-- Video iframe -->
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="100%" id="sModalVideo" src="" style="position: absolute; top: 0; left: 0;" width="100%"></iframe>
-</div>
-<div style="padding: 32px 40px; text-align: left; overflow-y: auto; background: white;">
-<h3 id="sModalTitle" style="font-size: 1.8rem; color: #091f22; margin-bottom: 16px; font-weight: 700; line-height: 1.3;"></h3>
-<p id="sModalDesc" style="color: #4a5568; font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;"></p>
-<a class="btn-primary" href="sprechzeiten.html" style="display: inline-block;">Request Appointment</a>
-</div>
-</div>
-</div>
+
 <script>
-  function openServiceModal(btn) {
-    const card = btn.closest('.service-card-new');
-    if(!card) return;
-    
-    const title = card.querySelector('.service-title-new').innerText;
-    const desc = card.querySelector('.service-desc-new').innerHTML;
-    
-    document.getElementById('sModalTitle').innerText = title;
-    document.getElementById('sModalDesc').innerHTML = desc;
-    
-    // Placeholder Video ID
-    document.getElementById('sModalVideo').src = "https://www.youtube.com/embed/Zo3enw-hWDk?enablejsapi=1&rel=0&autoplay=1";
-    
-    document.getElementById('serviceModal').classList.add('show');
-  }
-
-  const serviceModal = document.getElementById('serviceModal');
-  const closeServiceModalBtn = document.getElementById('closeServiceModalBtn');
-
-  if(closeServiceModalBtn && serviceModal) {
-    closeServiceModalBtn.addEventListener('click', () => {
-      serviceModal.classList.remove('show');
-      document.getElementById('sModalVideo').src = ""; 
-    });
-
-    window.addEventListener('click', (e) => {
-      if (e.target === serviceModal) {
-        serviceModal.classList.remove('show');
-        document.getElementById('sModalVideo').src = ""; 
-      }
-    });
-  }
+var burgerMenu=document.getElementById('burgerMenu');
+var mobileMenu=document.getElementById('mobileMenu');
+if(burgerMenu&&mobileMenu){burgerMenu.addEventListener('click',function(){if(mobileMenu.style.display==='flex'){mobileMenu.style.display='none';burgerMenu.textContent='☰';}else{mobileMenu.style.display='flex';burgerMenu.textContent='✕';}});}
+var navbar=document.querySelector('.navbar');
+if(navbar){window.addEventListener('scroll',function(){if(window.scrollY>10){navbar.classList.add('scrolled');}else{navbar.classList.remove('scrolled');}});}
+var VIDEO_SRC='https://www.youtube.com/embed/Zo3enw-hWDk?rel=0&autoplay=1';
+function openModal(id){
+  var el=document.getElementById('modal-overlay-'+id);
+  el.style.display='flex';
+  document.body.style.overflow='hidden';
+  var iframe=document.getElementById('iframe-'+id);
+  if(iframe)iframe.src=VIDEO_SRC;
+  el.onclick=function(e){if(e.target===el)closeModal(id);};
+}
+function closeModal(id){
+  var el=document.getElementById('modal-overlay-'+id);
+  el.style.display='none';
+  document.body.style.overflow='';
+  var iframe=document.getElementById('iframe-'+id);
+  if(iframe)iframe.src='';
+}
+function openBsvModal(){openModal('bsv');}
+function closeBsvModal(){closeModal('bsv');}
+function openFacettenModal(){openModal('facetten');}
+function closeFacettenModal(){closeModal('facetten');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){['bsv','spinal','facetten','hws','kts','sulcus','chron','neuro','isg','wkf','nervkomp'].forEach(function(id){var el=document.getElementById('modal-overlay-'+id);if(el&&el.style.display==='flex')closeModal(id);});}});
 </script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const hash = window.location.hash;
-    if (hash && hash.startsWith('#service-')) {
-      const serviceIndex = parseInt(hash.replace('#service-', ''), 10);
-      const cards = document.querySelectorAll('.service-card-new');
-      if (serviceIndex >= 0 && serviceIndex < cards.length) {
-        const card = cards[serviceIndex];
-        const link = card.querySelector('.service-link-new');
-        if (link) {
-          // Open the modal
-          link.click();
-          // Scroll to the card slightly delayed to ensure rendering
-          setTimeout(() => {
-            card.scrollIntoView({behavior: 'smooth', block: 'center'});
-          }, 300);
-        }
-      }
-    }
-  });
-</script>
+
+<div id="cookie-consent-banner" style="display:none;position:fixed;bottom:20px;left:20px;right:20px;max-width:450px;background:white;padding:24px;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,0.15);z-index:999999;border:1px solid rgba(0,0,0,0.05);font-family:'Plus Jakarta Sans',sans-serif;">
+<div style="display:flex;align-items:flex-start;gap:16px;"><div style="background:rgba(28,194,178,0.1);padding:12px;border-radius:8px;color:var(--primary);"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 12.5v.01"/><path d="M12 16v.01"/></svg></div>
+<div><h4 style="margin:0 0 8px 0;font-size:1.1rem;font-weight:700;color:var(--text-dark);">We use cookies</h4><p style="margin:0 0 20px 0;font-size:0.9rem;line-height:1.5;color:var(--text-light);">We use cookies, um Ihre Erfahrung auf unserer Website zu verbessern.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;"><button id="cookie-accept-all" style="padding:10px 20px;font-size:0.9rem;background:#1cc2b2;color:white;border:none;border-radius:99px;cursor:pointer;flex:1;font-family:inherit;font-weight:700;">Accept all</button><button id="cookie-essential-only" style="padding:10px 20px;font-size:0.9rem;border:1px solid #ccc;background:white;color:var(--text-dark);cursor:pointer;flex:1;border-radius:99px;font-family:inherit;">Essentials only</button></div>
+</div></div></div>
+<script>document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('cookie-consent-banner');if(!localStorage.getItem('cookieConsent'))b.style.display='block';function h(c){localStorage.setItem('cookieConsent',c);b.style.display='none';}document.getElementById('cookie-accept-all').addEventListener('click',function(){h('all');});document.getElementById('cookie-essential-only').addEventListener('click',function(){h('essential');});});</script>
 </div></body></html>

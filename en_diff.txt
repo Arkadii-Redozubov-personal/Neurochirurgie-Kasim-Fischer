@@ -1,0 +1,1082 @@
+diff --git a/en/praxis-schwerpunkte.html b/en/praxis-schwerpunkte.html
+index 5f51b76..bc9da71 100644
+--- a/en/praxis-schwerpunkte.html
++++ b/en/praxis-schwerpunkte.html
+@@ -1,507 +1,570 @@
+-<!DOCTYPE html>
+-
+-<html lang="en">
+-<head>
+-<meta charset="utf-8"/>
+-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+-<title>Focal Points | Neurosurgery Fischer</title>
+-<meta content="Our focus is on the microsurgical and endoscopic treatment of spinal diseases, nerve compression syndromes, and more." name="description"/>
+-<link href="https://my-bandscheibe.de/en/praxis-schwerpunkte.html" rel="canonical"/>
+-<meta content="Focal Points | Neurosurgery Fischer" property="og:title"/>
+-<meta content="Our focus is on the microsurgical and endoscopic treatment of spinal diseases, nerve compression syndromes, and more." property="og:description"/>
+-<meta content="https://my-bandscheibe.de/en/praxis-schwerpunkte.html" property="og:url"/>
+-<meta content="website" property="og:type"/>
+-<meta content="https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.webp" property="og:image"/>
+-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+-<link href="../style.css" rel="stylesheet"/>
+-<style>
+-    
+-  </style>
+-<link href="https://my-bandscheibe.de/praxis-schwerpunkte.html" hreflang="de" rel="alternate"/>
+-<link href="https://my-bandscheibe.de/en/praxis-schwerpunkte.html" hreflang="en" rel="alternate"/>
+-<link href="https://my-bandscheibe.de/ru/praxis-schwerpunkte.html" hreflang="ru" rel="alternate"/>
+-<link href="https://my-bandscheibe.de/tr/praxis-schwerpunkte.html" hreflang="tr" rel="alternate"/>
+-<link href="https://my-bandscheibe.de/ar/praxis-schwerpunkte.html" hreflang="ar" rel="alternate"/>
+-<link href="https://my-bandscheibe.de/praxis-schwerpunkte.html" hreflang="x-default" rel="alternate"/>
+-<script type="application/ld+json">
+-{
+-  "@context": "https://schema.org",
+-  "@type": "MedicalOrganization",
+-  "name": "Neurochirurgie Fischer",
+-  "url": "https://my-bandscheibe.de",
+-  "logo": "https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.webp",
+-  "email": "contact@my-bandscheibe.de",
+-  "location": [
+-    {
+-      "@type": "MedicalClinic",
+-      "name": "Neurochirurgie Fischer - Viersen",
+-      "address": {
+-        "@type": "PostalAddress",
+-        "streetAddress": "Theodor-Heuss-Platz 10, 4. OG",
+-        "addressLocality": "Viersen",
+-        "postalCode": "41747",
+-        "addressCountry": "DE"
+-      }
+-    },
+-    {
+-      "@type": "MedicalClinic",
+-      "name": "Neurochirurgie Fischer - Mönchengladbach",
+-      "address": {
+-        "@type": "PostalAddress",
+-        "streetAddress": "Bismarckstr. 106, 3. OG",
+-        "addressLocality": "Mönchengladbach",
+-        "postalCode": "41061",
+-        "addressCountry": "DE"
+-      },
+-      "telephone": "(02161) 678 26 83"
+-    },
+-    {
+-      "@type": "MedicalClinic",
+-      "name": "Neurochirurgie Fischer - Düsseldorf",
+-      "address": {
+-        "@type": "PostalAddress",
+-        "streetAddress": "Schadowstraße 74",
+-        "addressLocality": "Düsseldorf",
+-        "postalCode": "40212",
+-        "addressCountry": "DE"
+-      }
+-    }
+-  ],
+-  "medicalSpecialty": "Neurosurgery",
+-  "member": {
+-    "@type": "Physician",
+-    "name": "Kasim Fischer",
+-    "medicalSpecialty": "Neurosurgery"
+-  }
+-}
+-  </script>
+-</head>
+-<body>
+-<div class="page-wrapper">
+-<div class="hero-inner-sub" style="background-image: linear-gradient(to right, rgba(9, 31, 34, 0.95) 0%, rgba(9, 31, 34, 0.8) 100%), url('../img/diseases.webp'); background: linear-gradient(to right, rgba(9, 31, 34, 0.95) 0%, rgba(9, 31, 34, 0.6) 100%), url('../img/diseases.webp') center / cover no-repeat #091f22;"><div class="container"><nav class="navbar" style="margin-bottom: 60px;">
+-<a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+-<img alt="" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/>
+-<span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+-</a>
+-<div class="nav-links">
+-<a href="index.html">Home</a>
+-<a href="unser-team.html">Practice</a>
+-<div class="nav-dropdown-wrapper">
+-<a tabindex="0">Services</a>
+-<div class="nav-dropdown-menu">
+-<a href="praxis-schwerpunkte.html">Diseases</a>
+-<a href="diagnostik.html">Diagnostics</a>
+-<a href="behandlungen.html">Treatments &amp; Surgeries</a>
+-<a href="zweitmeinung.html">Second Opinion</a>
+-</div>
+-</div>
+-<a href="patienten.html">For Patients</a>
+-<a href="presseschau.html">Press</a>
+-<a href="sprechzeiten.html">Contact</a>
+-</div>
+-<div class="lang-switcher hidden-mobile">
+-<div class="lang-current">EN <span>▼</span></div>
+-<div class="lang-dropdown">
+-<a href="../praxis-schwerpunkte.html">Deutsch (DE)</a>
+-<a href="../en/praxis-schwerpunkte.html">English (EN)</a>
+-<a href="../ru/praxis-schwerpunkte.html">Русский (RU)</a>
+-<a href="../tr/praxis-schwerpunkte.html">Türkçe (TR)</a>
+-<a href="../ar/praxis-schwerpunkte.html">العربية (AR)</a>
+-</div>
+-</div>
+-<a class="btn-book hidden-mobile" href="sprechzeiten.html">make an appointment</a>
+-<div class="burger-menu" id="burgerMenu" style="display: none; font-size: 28px; cursor: pointer; color: white;">☰</div>
+-</nav><div class="mobile-menu" id="mobileMenu" style="display: none;">
+-<a href="index.html">Home</a>
+-<a href="unser-team.html">Practice</a>
+-<div class="mobile-dropdown-wrapper">
+-<div class="mobile-dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('active');">
+-<a style="margin:0; padding:0;">Services</a>
+-<span style="color: rgba(255,255,255,0.7);">▼</span>
+-</div>
+-<div class="mobile-dropdown-menu">
+-<a href="praxis-schwerpunkte.html">Diseases</a>
+-<a href="diagnostik.html">Diagnostics</a>
+-<a href="behandlungen.html">Treatments &amp; Surgeries</a>
+-<a href="zweitmeinung.html">Second Opinion</a>
+-</div>
+-</div>
+-<a href="patienten.html">For Patients</a>
+-<a href="presseschau.html">Press</a>
+-<a href="sprechzeiten.html">Contact</a>
+-<a href="sprechzeiten.html" style="color: var(--primary);">make an appointment</a>
+-<div class="mobile-lang-switcher">
+-<a href="../praxis-schwerpunkte.html">DE</a>
+-<a class="active" href="../en/praxis-schwerpunkte.html">EN</a>
+-<a href="../ru/praxis-schwerpunkte.html">RU</a>
+-<a href="../tr/praxis-schwerpunkte.html">TR</a>
+-<a href="../ar/praxis-schwerpunkte.html">AR</a>
+-</div>
+-</div><div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 40px; margin-top: 40px; padding-bottom: 40px;"><div class="hero-main" style="max-width: 800px; margin-top: 0;"><h1 class="hero-title hero-title-sub" style="font-size: 4rem; color: white;">Our <span style="color: var(--primary);">Specialties</span></h1><p class="hero-desc" style="max-width: 500px; font-size: 1.1rem; line-height: 1.6; color: rgba(255,255,255,0.8);">Diagnosis and treatment of diseases of the central and peripheral nervous system.</p></div><div class="badges_marker" style="display: flex; flex-direction: column; gap: 24px; max-width: 350px; padding-bottom: 10px;"><div style="display: flex; gap: 16px; align-items: center;">
+-<div style="width: 48px; height: 48px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
+-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+-</div>
+-<div>
+-<div style="color: white; font-weight: 700; margin-bottom: 4px;">Proven Methods</div>
+-<div style="color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.4;">Scientifically backed treatment protocols</div>
+-</div>
+-</div><div style="display: flex; gap: 16px; align-items: center;">
+-<div style="width: 48px; height: 48px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
+-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+-</div>
+-<div>
+-<div style="color: white; font-weight: 700; margin-bottom: 4px;">Individual Approach</div>
+-<div style="color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.4;">Treatment tailored to each patient</div>
+-</div>
+-</div><div style="display: flex; gap: 16px; align-items: center;">
+-<div style="width: 48px; height: 48px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
+-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+-</div>
+-<div>
+-<div style="color: white; font-weight: 700; margin-bottom: 4px;">Full Transparency</div>
+-<div style="color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.4;">Clear explanation of diagnosis and options</div>
+-</div>
+-</div></div></div></div></div>
+-<div class="section-wrapper">
+-<div class="container">
+-<div style="background: rgba(28, 194, 178, 0.05); border-left: 4px solid var(--primary); padding: 24px; border-radius: 0 12px 12px 0; margin-top: 40px; margin-bottom: 60px; width: 100%;">
+-<h3 style="font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px; color: var(--text-dark);">
+-<svg fill="none" height="20" stroke="var(--primary)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+-          Important Medical Notice
+-        </h3>
+-<p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light); margin: 0;">Please note: The exact diagnosis and indication are always determined individually by the doctor after a thorough medical examination. We cannot guarantee specific treatment results.</p>
+-</div>
+-<div id="service-0" style="margin-bottom: 80px;">
+-<div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
+-<div style="color: var(--primary); width: 40px; height: 40px;">
+-<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M10 2h4l-2 3z"></path><path d="M9 7c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M9 11c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M9 15c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M12 18c-2 2-4 3-5 1l2-2c1.5 1 2.5.5 3-1z"></path><line x1="12" x2="12" y1="5" y2="18"></line></svg>
+-</div>
+-<div>
+-<h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Spine</h2>
+-<p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Diseases and injuries of the spine</p>
+-</div>
+-</div>
+-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Herniated Discs</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Degenerative changes where disc material presses on nerves.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spinal Stenosis</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Narrowing of the spinal canal causing pressure on the spinal cord or nerves.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Neuroforaminal Stenosis</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Narrowing of the openings where nerve roots exit the spine.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spondylolisthesis</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Slippage of one vertebra over the one below it.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spinal Instability</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Excessive or abnormal movement between vertebrae.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Vertebral Fractures</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Fractures of the vertebral body often due to trauma or osteoporosis.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Facet Joint Disorders</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Degenerative changes in the small spinal joints causing pain.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Sacroiliac Joint (ISG)</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Inflammation or dysfunction of the sacroiliac joint.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Tumors/Metastases</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Benign or malignant growths affecting the spine.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spinal Cord Diseases</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Various conditions affecting the function of the spinal cord.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-</div>
+-</div>
+-<div id="service-1" style="margin-bottom: 80px;">
+-<div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
+-<div style="color: var(--primary); width: 40px; height: 40px;">
+-<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v4"></path><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v6"></path><path d="M10 10.5V5a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"></path><path d="M18 11a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path><path d="M12 11c-1 2-2 3-1 5c1 1 1 3 1 6"></path><path d="M12 13c1 1 2 2 2 3"></path></svg>
+-</div>
+-<div>
+-<h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Peripheral Nerves</h2>
+-<p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Diseases of the nerves outside the brain and spinal cord</p>
+-</div>
+-</div>
+-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Carpal Tunnel Syndrome</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Compression of the median nerve in the wrist area.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Cubital Tunnel Syndrome</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Compression of the ulnar nerve at the elbow.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Tarsal Tunnel Syndrome</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Compression of the tibial nerve in the ankle area.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Nerve Compression Syndromes</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Various conditions where a nerve is pinched or compressed.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Nerve Damage/Injuries</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Traumatic injuries leading to a loss of nerve function.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Polyneuropathies</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Simultaneous damage to multiple peripheral nerves.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-</div>
+-</div>
+-<div id="service-2" style="margin-bottom: 80px;">
+-<div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
+-<div style="color: var(--primary); width: 40px; height: 40px;">
+-<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="7"></circle><circle cx="12" cy="12" r="2"></circle><line x1="12" x2="12" y1="1" y2="4"></line><line x1="12" x2="12" y1="20" y2="23"></line><line x1="1" x2="4" y1="12" y2="12"></line><line x1="20" x2="23" y1="12" y2="12"></line></svg>
+-</div>
+-<div>
+-<h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Pain Syndromes</h2>
+-<p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Chronic and acute pain conditions of various origins</p>
+-</div>
+-</div>
+-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Chronic Back/Neck Pain</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Persistent pain that lasts for several months.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Neuropathic Pain</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Pain caused by damage to the nervous system itself.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Postoperative Pain Syndromes</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Chronic pain that develops after a surgical procedure.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Phantom Pain</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Sensation of pain in an amputated body part.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-<div class="service-card-new" style="margin-bottom: 0;">
+-<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Psychosomatic Accompanying Factors</h3>
+-<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Psychological factors that intensify or maintain physical pain experiences.</p>
+-
+-<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
+-</div>
+-</div>
+-</div>
+-</div>
+-</div>
+-<!-- Footer Section -->
+-<footer class="footer-wrapper">
+-<div class="container footer-grid">
+-<div class="footer-brand">
+-<a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;">
+-<img alt="" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/>
+-<span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
+-</a>
+-<div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+-          Bismarckstr. 106<br/>41061 Mönchengladbach
+-        </div>
+-<div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 4px;">
+-          (02161) 678 26 83
+-        </div>
+-<a href="mailto:kontakt@my-bandscheibe.de" style="color: var(--primary); text-decoration: none; font-size: 0.95rem; display: inline-block; margin-bottom: 24px;">kontakt@my-bandscheibe.de</a>
+-<div class="footer-socials">
+-<a href="https://www.facebook.com/neurokaz/" onmouseout="this.style.opacity='0.7'" onmouseover="this.style.opacity='1'" style="color: white; opacity: 0.7; transition: 0.3s;" target="_blank">
+-<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+-</a>
+-</div>
+-</div>
+-<div class="footer-links">
+-<h3 class="footer-heading">SERVICES</h4>
+-<a href="praxis-schwerpunkte.html">Diseases</a>
+-<a href="diagnostik.html">Diagnostics</a>
+-<a href="behandlungen.html">Treatments &amp; Surgeries</a>
+-<a href="zweitmeinung.html">Second Opinion</a>
+-</div>
+-<div class="footer-links">
+-<h3 class="footer-heading">PRACTICE</h4>
+-<a href="unser-team.html">About us</a>
+-<a href="unser-team.html">Our Team</a>
+-<a href="presseschau.html">Press</a>
+-<a href="sprechzeiten.html">Contact</a>
+-<a href="impressum.html">Imprint</a>
+-<a href="../en/datenschutz.html">Privacy Policy</a>
+-</div>
+-<div class="footer-links">
+-<h3 class="footer-heading">CONSULTATION HOURS</h4>
+-<p>Mon - Fri: 8:00 a.m. - 6:00 p.m</p>
+-<p>Sat - Sun: Closed</p>
+-</div>
+-</div>
+-<div class="footer-bottom" style="text-align: center; padding-top: 32px; margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.85rem;">
+-      © 2026 Neurochirurgie Fischer
+-    </div>
+-</footer>
+-<script>
+-  // Mobile Menu Toggle
+-  const burgerMenu = document.getElementById('burgerMenu');
+-  const mobileMenu = document.getElementById('mobileMenu');
+-  if (burgerMenu && mobileMenu) {
+-    burgerMenu.addEventListener('click', () => {
+-      if (mobileMenu.style.display === 'flex') {
+-        mobileMenu.style.display = 'none';
+-        burgerMenu.textContent = '☰';
+-      } else {
+-        mobileMenu.style.display = 'flex';
+-        burgerMenu.textContent = '✕';
+-      }
+-    });
+-  }
+-</script>
+-<script>
+-  // Sticky Navbar
+-  const navbar = document.querySelector('.navbar');
+-  if (navbar) {
+-    window.addEventListener('scroll', () => {
+-      if (window.scrollY > 10) {
+-        navbar.classList.add('scrolled');
+-      } else {
+-        navbar.classList.remove('scrolled');
+-      }
+-    });
+-  }
+-</script>
+-<!-- Floating Doctolib Widget -->
+-<div class="floating-doctolib">
+-<div class="fd-close" onclick="this.parentElement.style.display='none'">
+-<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+-</div>
+-<div class="fd-content">
+-<div class="fd-icon">
+-<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"><rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+-</div>
+-<div class="fd-text">
+-<div class="fd-title">Book an appointment</div>
+-<div class="fd-desc">Book your appointment quickly and easily online.</div>
+-</div>
+-</div>
+-<a class="fd-btn" href="https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer?utm_campaign=website-button&amp;utm_source=kasim-fischer-website-button&amp;utm_medium=referral&amp;utm_content=custom&amp;utm_term=kasim-fischer" target="_blank">Book on Doctolib →</a>
+-<div class="fd-secure">
+-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+-          Your data is safe and confidential.
+-        </div>
+-</div>
+-<!-- Service Modal -->
+-<div class="video-modal" id="serviceModal" style="z-index: 99999;">
+-<div class="video-modal-content" style="background: white; max-width: 800px; display: flex; flex-direction: column; height: auto; max-height: 90vh; border-radius: 20px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.2);">
+-<span class="close-video" id="closeServiceModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 8px; z-index: 10;"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg></span>
+-<div style="width: 100%; aspect-ratio: 16/9; background: #000; position: relative; flex-shrink: 0;">
+-<!-- Video iframe -->
+-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="100%" id="sModalVideo" src="" style="position: absolute; top: 0; left: 0;" width="100%"></iframe>
+-</div>
+-<div style="padding: 32px 40px; text-align: left; overflow-y: auto; background: white;">
+-<h3 id="sModalTitle" style="font-size: 1.8rem; color: #091f22; margin-bottom: 16px; font-weight: 700; line-height: 1.3;"></h3>
+-<p id="sModalDesc" style="color: #4a5568; font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;"></p>
+-<a class="btn-primary" href="sprechzeiten.html" style="display: inline-block;">Request Appointment</a>
+-</div>
+-</div>
+-</div>
+-<script>
+-  function openServiceModal(btn) {
+-    const card = btn.closest('.service-card-new');
+-    if(!card) return;
+-    
+-    const title = card.querySelector('.service-title-new').innerText;
+-    const desc = card.querySelector('.service-desc-new').innerHTML;
+-    
+-    document.getElementById('sModalTitle').innerText = title;
+-    document.getElementById('sModalDesc').innerHTML = desc;
+-    
+-    // Placeholder Video ID
+-    document.getElementById('sModalVideo').src = "https://www.youtube.com/embed/Zo3enw-hWDk?enablejsapi=1&rel=0&autoplay=1";
+-    
+-    document.getElementById('serviceModal').classList.add('show');
+-  }
+-
+-  const serviceModal = document.getElementById('serviceModal');
+-  const closeServiceModalBtn = document.getElementById('closeServiceModalBtn');
+-
+-  if(closeServiceModalBtn && serviceModal) {
+-    closeServiceModalBtn.addEventListener('click', () => {
+-      serviceModal.classList.remove('show');
+-      document.getElementById('sModalVideo').src = ""; 
+-    });
+-
+-    window.addEventListener('click', (e) => {
+-      if (e.target === serviceModal) {
+-        serviceModal.classList.remove('show');
+-        document.getElementById('sModalVideo').src = ""; 
+-      }
+-    });
+-  }
+-</script>
+-<script>
+-  document.addEventListener("DOMContentLoaded", function() {
+-    const hash = window.location.hash;
+-    if (hash && hash.startsWith('#service-')) {
+-      const serviceIndex = parseInt(hash.replace('#service-', ''), 10);
+-      const cards = document.querySelectorAll('.service-card-new');
+-      if (serviceIndex >= 0 && serviceIndex < cards.length) {
+-        const card = cards[serviceIndex];
+-        const link = card.querySelector('.service-link-new');
+-        if (link) {
+-          // Open the modal
+-          link.click();
+-          // Scroll to the card slightly delayed to ensure rendering
+-          setTimeout(() => {
+-            card.scrollIntoView({behavior: 'smooth', block: 'center'});
+-          }, 300);
+-        }
+-      }
+-    }
+-  });
+-</script>
++<!DOCTYPE html>
++
++<html lang="en">
++<head>
++<meta charset="utf-8"/>
++<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
++<title>Focal Points | Neurosurgery Fischer</title>
++<meta content="Our focus is on the microsurgical and endoscopic treatment of spinal diseases, nerve compression syndromes, and more." name="description"/>
++<link href="https://my-bandscheibe.de/en/praxis-schwerpunkte.html" rel="canonical"/>
++<meta content="Focal Points | Neurosurgery Fischer" property="og:title"/>
++<meta content="Our focus is on the microsurgical and endoscopic treatment of spinal diseases, nerve compression syndromes, and more." property="og:description"/>
++<meta content="https://my-bandscheibe.de/en/praxis-schwerpunkte.html" property="og:url"/>
++<meta content="website" property="og:type"/>
++<meta content="https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.webp" property="og:image"/>
++<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
++<link href="../style.css" rel="stylesheet"/>
++<style>
++    
++  </style>
++<link href="https://my-bandscheibe.de/praxis-schwerpunkte.html" hreflang="de" rel="alternate"/>
++<link href="https://my-bandscheibe.de/en/praxis-schwerpunkte.html" hreflang="en" rel="alternate"/>
++<link href="https://my-bandscheibe.de/ru/praxis-schwerpunkte.html" hreflang="ru" rel="alternate"/>
++<link href="https://my-bandscheibe.de/tr/praxis-schwerpunkte.html" hreflang="tr" rel="alternate"/>
++<link href="https://my-bandscheibe.de/ar/praxis-schwerpunkte.html" hreflang="ar" rel="alternate"/>
++<link href="https://my-bandscheibe.de/praxis-schwerpunkte.html" hreflang="x-default" rel="alternate"/>
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@type": "MedicalOrganization",
++  "name": "Neurochirurgie Fischer",
++  "url": "https://my-bandscheibe.de",
++  "logo": "https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.webp",
++  "email": "contact@my-bandscheibe.de",
++  "location": [
++    {
++      "@type": "MedicalClinic",
++      "name": "Neurochirurgie Fischer - Viersen",
++      "address": {
++        "@type": "PostalAddress",
++        "streetAddress": "Theodor-Heuss-Platz 10, 4. OG",
++        "addressLocality": "Viersen",
++        "postalCode": "41747",
++        "addressCountry": "DE"
++      }
++    },
++    {
++      "@type": "MedicalClinic",
++      "name": "Neurochirurgie Fischer - Mönchengladbach",
++      "address": {
++        "@type": "PostalAddress",
++        "streetAddress": "Bismarckstr. 106, 3. OG",
++        "addressLocality": "Mönchengladbach",
++        "postalCode": "41061",
++        "addressCountry": "DE"
++      },
++      "telephone": "(02161) 678 26 83"
++    },
++    {
++      "@type": "MedicalClinic",
++      "name": "Neurochirurgie Fischer - Düsseldorf",
++      "address": {
++        "@type": "PostalAddress",
++        "streetAddress": "Schadowstraße 74",
++        "addressLocality": "Düsseldorf",
++        "postalCode": "40212",
++        "addressCountry": "DE"
++      }
++    }
++  ],
++  "medicalSpecialty": "Neurosurgery",
++  "member": {
++    "@type": "Physician",
++    "name": "Kasim Fischer",
++    "medicalSpecialty": "Neurosurgery"
++  }
++}
++  </script>
++</head>
++<body>
++<div class="page-wrapper">
++<div class="hero-inner-sub" style="background-image: linear-gradient(to right, rgba(9, 31, 34, 0.95) 0%, rgba(9, 31, 34, 0.8) 100%), url('../img/diseases.webp'); background: linear-gradient(to right, rgba(9, 31, 34, 0.95) 0%, rgba(9, 31, 34, 0.6) 100%), url('../img/diseases.webp') center / cover no-repeat #091f22;"><div class="container"><nav class="navbar" style="margin-bottom: 60px;">
++<a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
++<img alt="" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/>
++<span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
++</a>
++<div class="nav-links">
++<a href="index.html">Home</a>
++<a href="unser-team.html">Practice</a>
++<div class="nav-dropdown-wrapper">
++<a tabindex="0">Services</a>
++<div class="nav-dropdown-menu">
++<a href="praxis-schwerpunkte.html">Diseases</a>
++<a href="diagnostik.html">Diagnostics</a>
++<a href="behandlungen.html">Treatments &amp; Surgeries</a>
++<a href="zweitmeinung.html">Second Opinion</a>
++</div>
++</div>
++<a href="patienten.html">For Patients</a>
++<a href="presseschau.html">Press</a>
++<a href="sprechzeiten.html">Contact</a>
++</div>
++<div class="lang-switcher hidden-mobile">
++<div class="lang-current">EN <span>▼</span></div>
++<div class="lang-dropdown">
++<a href="../praxis-schwerpunkte.html">Deutsch (DE)</a>
++<a href="../en/praxis-schwerpunkte.html">English (EN)</a>
++<a href="../ru/praxis-schwerpunkte.html">Русский (RU)</a>
++<a href="../tr/praxis-schwerpunkte.html">Türkçe (TR)</a>
++<a href="../ar/praxis-schwerpunkte.html">العربية (AR)</a>
++</div>
++</div>
++<a class="btn-book hidden-mobile" href="sprechzeiten.html">make an appointment</a>
++<div class="burger-menu" id="burgerMenu" style="display: none; font-size: 28px; cursor: pointer; color: white;">☰</div>
++</nav><div class="mobile-menu" id="mobileMenu" style="display: none;">
++<a href="index.html">Home</a>
++<a href="unser-team.html">Practice</a>
++<div class="mobile-dropdown-wrapper">
++<div class="mobile-dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('active');">
++<a style="margin:0; padding:0;">Services</a>
++<span style="color: rgba(255,255,255,0.7);">▼</span>
++</div>
++<div class="mobile-dropdown-menu">
++<a href="praxis-schwerpunkte.html">Diseases</a>
++<a href="diagnostik.html">Diagnostics</a>
++<a href="behandlungen.html">Treatments &amp; Surgeries</a>
++<a href="zweitmeinung.html">Second Opinion</a>
++</div>
++</div>
++<a href="patienten.html">For Patients</a>
++<a href="presseschau.html">Press</a>
++<a href="sprechzeiten.html">Contact</a>
++<a href="sprechzeiten.html" style="color: var(--primary);">make an appointment</a>
++<div class="mobile-lang-switcher">
++<a href="../praxis-schwerpunkte.html">DE</a>
++<a class="active" href="../en/praxis-schwerpunkte.html">EN</a>
++<a href="../ru/praxis-schwerpunkte.html">RU</a>
++<a href="../tr/praxis-schwerpunkte.html">TR</a>
++<a href="../ar/praxis-schwerpunkte.html">AR</a>
++</div>
++</div><div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 40px; margin-top: 40px; padding-bottom: 40px;"><div class="hero-main" style="max-width: 800px; margin-top: 0;"><h1 class="hero-title hero-title-sub" style="font-size: 4rem; color: white;">Our <span style="color: var(--primary);">Specialties</span></h1><p class="hero-desc" style="max-width: 500px; font-size: 1.1rem; line-height: 1.6; color: rgba(255,255,255,0.8);">Diagnosis and treatment of diseases of the central and peripheral nervous system.</p></div><div class="badges_marker" style="display: flex; flex-direction: column; gap: 24px; max-width: 350px; padding-bottom: 10px;"><div style="display: flex; gap: 16px; align-items: center;">
++<div style="width: 48px; height: 48px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
++<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
++</div>
++<div>
++<div style="color: white; font-weight: 700; margin-bottom: 4px;">Proven Methods</div>
++<div style="color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.4;">Scientifically backed treatment protocols</div>
++</div>
++</div><div style="display: flex; gap: 16px; align-items: center;">
++<div style="width: 48px; height: 48px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
++<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
++</div>
++<div>
++<div style="color: white; font-weight: 700; margin-bottom: 4px;">Individual Approach</div>
++<div style="color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.4;">Treatment tailored to each patient</div>
++</div>
++</div><div style="display: flex; gap: 16px; align-items: center;">
++<div style="width: 48px; height: 48px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
++<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
++</div>
++<div>
++<div style="color: white; font-weight: 700; margin-bottom: 4px;">Full Transparency</div>
++<div style="color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.4;">Clear explanation of diagnosis and options</div>
++</div>
++</div></div></div></div></div>
++<div class="section-wrapper">
++<div class="container">
++<div style="background: rgba(28, 194, 178, 0.05); border-left: 4px solid var(--primary); padding: 24px; border-radius: 0 12px 12px 0; margin-top: 40px; margin-bottom: 60px; width: 100%;">
++<h3 style="font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; display: flex; align-items: center; gap: 8px; color: var(--text-dark);">
++<svg fill="none" height="20" stroke="var(--primary)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
++          Important Medical Notice
++        </h3>
++<p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light); margin: 0;">Please note: The exact diagnosis and indication are always determined individually by the doctor after a thorough medical examination. We cannot guarantee specific treatment results.</p>
++</div>
++<div id="service-0" style="margin-bottom: 80px;">
++<div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
++<div style="color: var(--primary); width: 40px; height: 40px;">
++<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M10 2h4l-2 3z"></path><path d="M9 7c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M9 11c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M9 15c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M12 18c-2 2-4 3-5 1l2-2c1.5 1 2.5.5 3-1z"></path><line x1="12" x2="12" y1="5" y2="18"></line></svg>
++</div>
++<div>
++<h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Spine</h2>
++<p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Diseases of the Spine</p>
++</div>
++</div>
++<div style="background:rgba(28,194,178,0.04);border:1px solid rgba(28,194,178,0.12);border-radius:14px;padding:24px 28px;margin-bottom:28px;">
++  <p style="color:var(--text-dark);line-height:1.8;margin-bottom:12px;font-size:1rem;">The spine protects the spinal cord and nerves while enabling stability and movement. Wear, disc changes, narrowing or instabilities can cause pain and neurological symptoms.</p>
++  <p style="color:var(--text-light);line-height:1.8;margin:0;font-size:0.95rem;">We examine diseases of the <strong>cervical spine (C-Spine)</strong>, <strong>thoracic spine (T-Spine)</strong> and <strong>lumbar spine (L-Spine)</strong>. What matters is whether the anatomical change actually corresponds to the complaints.</p>
++</div>
++<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Herniated Disc C-Spine / L-Spine</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Degenerative changes where disc material presses on nerves.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openBsvModal()" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Detailed Information →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spinal Stenosis</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Narrowing of the spinal canal causing pressure on the spinal cord or nerves.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Neuroforaminal Stenosis</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Narrowing of the openings where nerve roots exit the spine.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spondylolisthesis</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Slippage of one vertebra over the one below it.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spinal Instability</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Excessive or abnormal movement between vertebrae.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Vertebral Fractures</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Fractures of the vertebral body often due to trauma or osteoporosis.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Facet Joint Disorders</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Degenerative changes in the small spinal joints causing pain.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Sacroiliac Joint (ISG)</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Inflammation or dysfunction of the sacroiliac joint.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Tumors/Metastases</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Benign or malignant growths affecting the spine.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Spinal Cord Diseases</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Various conditions affecting the function of the spinal cord.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++</div>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Degenerative Spinal Diseases</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Wear-related changes to discs, joints and bony spinal structures causing pain and functional impairment.</p>
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++</div>
++</div>
++<div id="service-1" style="margin-bottom: 80px;">
++<div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
++<div style="color: var(--primary); width: 40px; height: 40px;">
++<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v4"></path><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v6"></path><path d="M10 10.5V5a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"></path><path d="M18 11a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path><path d="M12 11c-1 2-2 3-1 5c1 1 1 3 1 6"></path><path d="M12 13c1 1 2 2 2 3"></path></svg>
++</div>
++<div>
++<h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Peripheral Nerves</h2>
++<p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Diseases of the nerves outside the brain and spinal cord</p>
++</div>
++</div>
++<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Carpal Tunnel Syndrome</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Compression of the median nerve in the wrist area.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Cubital Tunnel Syndrome</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Compression of the ulnar nerve at the elbow.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Tarsal Tunnel Syndrome</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Compression of the tibial nerve in the ankle area.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Nerve Compression Syndromes</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Various conditions where a nerve is pinched or compressed.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Nerve Damage/Injuries</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Traumatic injuries leading to a loss of nerve function.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Polyneuropathies</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Simultaneous damage to multiple peripheral nerves.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++</div>
++</div>
++<div id="service-2" style="margin-bottom: 80px;">
++<div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px;">
++<div style="color: var(--primary); width: 40px; height: 40px;">
++<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="7"></circle><circle cx="12" cy="12" r="2"></circle><line x1="12" x2="12" y1="1" y2="4"></line><line x1="12" x2="12" y1="20" y2="23"></line><line x1="1" x2="4" y1="12" y2="12"></line><line x1="20" x2="23" y1="12" y2="12"></line></svg>
++</div>
++<div>
++<h2 style="font-size: 2rem; font-weight: 800; margin: 0; color: var(--text-dark);">Pain Syndromes</h2>
++<p style="color: var(--text-light); margin: 4px 0 0 0; font-size: 0.95rem;">Chronic and acute pain conditions of various origins</p>
++</div>
++</div>
++<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Chronic Back/Neck Pain</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Persistent pain that lasts for several months.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Neuropathic Pain</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Pain caused by damage to the nervous system itself.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Postoperative Pain Syndromes</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Chronic pain that develops after a surgical procedure.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Phantom Pain</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Sensation of pain in an amputated body part.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++<div class="service-card-new" style="margin-bottom: 0;">
++<h3 class="service-title-new" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Psychosomatic Accompanying Factors</h3>
++<p class="service-desc-new" style="font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; flex: 1; color: var(--text-light);">Psychological factors that intensify or maintain physical pain experiences.</p>
++
++<a class="service-link-new" href="javascript:void(0)" onclick="openServiceModal(this)" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; margin-top: auto;">Learn more →</a>
++</div>
++</div>
++</div>
++</div>
++</div>
++<!-- Footer Section -->
++<footer class="footer-wrapper">
++<div class="container footer-grid">
++<div class="footer-brand">
++<a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;">
++<img alt="" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/>
++<span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span>
++</a>
++<div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
++          Bismarckstr. 106<br/>41061 Mönchengladbach
++        </div>
++<div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 4px;">
++          (02161) 678 26 83
++        </div>
++<a href="mailto:kontakt@my-bandscheibe.de" style="color: var(--primary); text-decoration: none; font-size: 0.95rem; display: inline-block; margin-bottom: 24px;">kontakt@my-bandscheibe.de</a>
++<div class="footer-socials">
++<a href="https://www.facebook.com/neurokaz/" onmouseout="this.style.opacity='0.7'" onmouseover="this.style.opacity='1'" style="color: white; opacity: 0.7; transition: 0.3s;" target="_blank">
++<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
++</a>
++</div>
++</div>
++<div class="footer-links">
++<h3 class="footer-heading">SERVICES</h4>
++<a href="praxis-schwerpunkte.html">Diseases</a>
++<a href="diagnostik.html">Diagnostics</a>
++<a href="behandlungen.html">Treatments &amp; Surgeries</a>
++<a href="zweitmeinung.html">Second Opinion</a>
++</div>
++<div class="footer-links">
++<h3 class="footer-heading">PRACTICE</h4>
++<a href="unser-team.html">About us</a>
++<a href="unser-team.html">Our Team</a>
++<a href="presseschau.html">Press</a>
++<a href="sprechzeiten.html">Contact</a>
++<a href="impressum.html">Imprint</a>
++<a href="../en/datenschutz.html">Privacy Policy</a>
++</div>
++<div class="footer-links">
++<h3 class="footer-heading">CONSULTATION HOURS</h4>
++<p style="margin:0;line-height:2;font-size:0.9rem;color:rgba(255,255,255,0.75);">Mon: 08:00&#8211;13:00 &amp; 14:00&#8211;18:00<br>Tue: 08:00&#8211;15:00<br>Wed: 08:00&#8211;15:00<br>Thu: 08:00&#8211;13:00 &amp; 14:00&#8211;18:00<br>Fri: 08:00&#8211;14:00<br>Sat: by appointment</p>
++<p>Sat - Sun: Closed</p>
++</div>
++</div>
++<div class="footer-bottom" style="text-align: center; padding-top: 32px; margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.85rem;">
++      © 2026 Neurochirurgie Fischer
++    </div>
++</footer>
++<script>
++  // Mobile Menu Toggle
++  const burgerMenu = document.getElementById('burgerMenu');
++  const mobileMenu = document.getElementById('mobileMenu');
++  if (burgerMenu && mobileMenu) {
++    burgerMenu.addEventListener('click', () => {
++      if (mobileMenu.style.display === 'flex') {
++        mobileMenu.style.display = 'none';
++        burgerMenu.textContent = '☰';
++      } else {
++        mobileMenu.style.display = 'flex';
++        burgerMenu.textContent = '✕';
++      }
++    });
++  }
++</script>
++<script>
++  // Sticky Navbar
++  const navbar = document.querySelector('.navbar');
++  if (navbar) {
++    window.addEventListener('scroll', () => {
++      if (window.scrollY > 10) {
++        navbar.classList.add('scrolled');
++      } else {
++        navbar.classList.remove('scrolled');
++      }
++    });
++  }
++</script>
++<!-- Floating Doctolib Widget -->
++<div class="floating-doctolib">
++<div class="fd-close" onclick="this.parentElement.style.display='none'">
++<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
++</div>
++<div class="fd-content">
++<div class="fd-icon">
++<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"><rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
++</div>
++<div class="fd-text">
++<div class="fd-title">Book an appointment</div>
++<div class="fd-desc">Book your appointment quickly and easily online.</div>
++</div>
++</div>
++<a class="fd-btn" href="https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer?utm_campaign=website-button&amp;utm_source=kasim-fischer-website-button&amp;utm_medium=referral&amp;utm_content=custom&amp;utm_term=kasim-fischer" target="_blank">Book on Doctolib →</a>
++<div class="fd-secure">
++<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
++          Your data is safe and confidential.
++        </div>
++</div>
++
++<!-- ═══ Bandscheibenvorfall Detail Modal ═══ -->
++<div id="bsv-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
++  <div style="background:white;max-width:1040px;width:100%;max-height:92vh;border-radius:20px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.35);display:flex;flex-direction:column;position:relative;">
++    <div style="background:linear-gradient(135deg,#091f22 0%,#1c3538 100%);padding:28px 40px 24px;position:relative;flex-shrink:0;">
++      <button onclick="closeBsvModal()" style="position:absolute;top:14px;right:14px;background:rgba(255,255,255,0.12);border:none;color:white;width:40px;height:40px;border-radius:8px;cursor:pointer;font-size:22px;display:flex;align-items:center;justify-content:center;">&times;</button>
++      <div style="display:inline-block;background:rgba(28,194,178,0.18);color:#1cc2b2;font-size:0.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:99px;margin-bottom:12px;">Spine</div>
++      <h2 style="color:white;font-size:1.85rem;font-weight:800;margin:0 0 6px;line-height:1.2;">Herniated Disc C-Spine / L-Spine</h2>
++      <p style="color:rgba(255,255,255,0.6);margin:0;font-size:0.9rem;">Symptoms, Course, Treatment and Typical Surgical Procedure</p>
++    </div>
++    <div style="width:100%;aspect-ratio:16/9;background:#000;flex-shrink:0;max-height:260px;overflow:hidden;">
++      <iframe src="https://www.youtube.com/embed/Zo3enw-hWDk?rel=0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen style="width:100%;height:100%;border:none;display:block;"></iframe>
++    </div>
++    <div style="overflow-y:auto;padding:32px 40px;flex:1;">
++      <div style="margin-bottom:22px;"><h3 style="font-size:1.15rem;font-weight:700;color:#091f22;margin:0 0 10px;padding-bottom:8px;border-bottom:2px solid rgba(28,194,178,0.2);">What is a Herniated Disc?</h3><p style="color:#4a5568;line-height:1.75;margin:0 0 10px;">Our intervertebral discs sit between the individual vertebrae and act as elastic buffers. Each disc has a firm outer fibrous ring (<em>annulus fibrosus</em>) and a softer, gelatinous core (<em>nucleus pulposus</em>).</p><p style="color:#4a5568;line-height:1.75;margin:0 0 10px;">Over time, the disc can lose elasticity. The outer ring may first bulge outward – known as a disc protrusion. If the ring tears and disc material protrudes outward, this is a <strong>herniated disc</strong> (<em>prolapse</em>).</p><p style="color:#4a5568;line-height:1.75;margin:0;">If the extruded tissue presses on a nerve root, neck or back pain as well as radiating pain into the arms or legs may occur. Tingling, numbness or reduced muscle strength are also possible.</p></div>
++      <div style="margin-bottom:22px;"><h3 style="font-size:1.15rem;font-weight:700;color:#091f22;margin:0 0 10px;padding-bottom:8px;border-bottom:2px solid rgba(28,194,178,0.2);">Does a Herniated Disc Always Require Surgery?</h3><p style="color:#4a5568;line-height:1.75;margin:0;">No. Many herniated discs are first treated conservatively. Surgery may be necessary when significant neurological deficits occur, signs of bladder or bowel dysfunction are present, or severe symptoms persist despite appropriate non-surgical treatment.</p></div>
++      <div style="margin-bottom:22px;"><h3 style="font-size:1.15rem;font-weight:700;color:#091f22;margin:0 0 10px;padding-bottom:8px;border-bottom:2px solid rgba(28,194,178,0.2);">How is the Decision Made?</h3><p style="color:#4a5568;line-height:1.75;margin:0;">The decision is based on the clinical course, neurological examination and imaging together. The goal of surgery is generally to decompress the affected nerve structure. The technique used depends on the location and nature of the findings.</p></div>
++      <div style="margin-bottom:22px;"><h3 style="font-size:1.15rem;font-weight:700;color:#091f22;margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid rgba(28,194,178,0.2);">Typical Course of Disc Surgery</h3><div style="display:flex;flex-direction:column;gap:14px;"><div style="display:flex;gap:14px;align-items:flex-start;"><div style="min-width:34px;height:34px;border-radius:50%;background:#1cc2b2;color:white;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;">1</div><div><strong style="color:#091f22;display:block;margin-bottom:3px;">Preparation</strong><p style="color:#4a5568;line-height:1.6;margin:0;font-size:0.9rem;">Diagnosis and surgical indication are reviewed again. The required medical and — depending on the anaesthetic — anaesthesiological consultation takes place before the procedure.</p></div></div><div style="display:flex;gap:14px;align-items:flex-start;"><div style="min-width:34px;height:34px;border-radius:50%;background:#1cc2b2;color:white;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;">2</div><div><strong style="color:#091f22;display:block;margin-bottom:3px;">Surgery</strong><p style="color:#4a5568;line-height:1.6;margin:0;font-size:0.9rem;">The approach is chosen according to the affected spinal region. During decompression, the compressed nerve structure is relieved; problematic disc tissue can be selectively removed.</p></div></div><div style="display:flex;gap:14px;align-items:flex-start;"><div style="min-width:34px;height:34px;border-radius:50%;background:#1cc2b2;color:white;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;">3</div><div><strong style="color:#091f22;display:block;margin-bottom:3px;">Immediately Afterwards</strong><p style="color:#4a5568;line-height:1.6;margin:0;font-size:0.9rem;">After the procedure, circulation, pain and neurological findings are monitored. Mobilisation begins depending on the procedure and individual course.</p></div></div><div style="display:flex;gap:14px;align-items:flex-start;"><div style="min-width:34px;height:34px;border-radius:50%;background:#1cc2b2;color:white;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;">4</div><div><strong style="color:#091f22;display:block;margin-bottom:3px;">Discharge & Follow-up</strong><p style="color:#4a5568;line-height:1.6;margin:0;font-size:0.9rem;">Wound check, gradual loading, physiotherapy if needed and further check-ups are planned individually. Return to work, sport and driving are discussed depending on the procedure.</p></div></div></div></div>
++      <div style="background:#fff5f5;border-left:4px solid #e53e3e;padding:18px 22px;border-radius:0 12px 12px 0;margin-bottom:22px;"><div style="display:flex;align-items:center;gap:9px;margin-bottom:6px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e53e3e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg><strong style="color:#c53030;font-size:0.9rem;">Urgent Notice</strong></div><p style="color:#742a2a;margin:0;line-height:1.65;font-size:0.9rem;">Newly occurring severe paralysis or disturbances of bladder/bowel function must be assessed medically without delay.</p></div>
++      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;"><a href="sprechzeiten.html" class="btn-primary" style="display:inline-block;">Request Appointment</a><button onclick="closeBsvModal()" style="padding:13px 26px;border:2px solid rgba(0,0,0,0.15);background:transparent;border-radius:99px;font-size:0.9rem;cursor:pointer;color:#4a5568;font-family:inherit;">Close</button></div>
++    </div>
++  </div>
++</div><!-- end bsv-modal -->
++
++<!-- ═══ Facettengelenke Detail Modal ═══ -->
++<div id="facetten-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
++  <div style="background:white;max-width:900px;width:100%;max-height:92vh;border-radius:20px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.35);display:flex;flex-direction:column;">
++    <div style="background:linear-gradient(135deg,#091f22 0%,#1c3538 100%);padding:28px 40px 24px;position:relative;flex-shrink:0;">
++      <button onclick="closeFacettenModal()" style="position:absolute;top:14px;right:14px;background:rgba(255,255,255,0.12);border:none;color:white;width:40px;height:40px;border-radius:8px;cursor:pointer;font-size:22px;display:flex;align-items:center;justify-content:center;">&times;</button>
++      <div style="display:inline-block;background:rgba(28,194,178,0.18);color:#1cc2b2;font-size:0.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:99px;margin-bottom:12px;">Spine</div>
++      <h2 style="color:white;font-size:1.85rem;font-weight:800;margin:0 0 6px;line-height:1.2;">Facet Joints</h2>
++      <p style="color:rgba(255,255,255,0.6);margin:0;font-size:0.9rem;">Arthrosis and cysts of the small vertebral joints</p>
++    </div>
++    <div style="overflow-y:auto;padding:32px 40px;flex:1;">
++      <div style="margin-bottom:22px;"><h3 style="font-size:1.15rem;font-weight:700;color:#091f22;margin:0 0 10px;padding-bottom:8px;border-bottom:2px solid rgba(28,194,178,0.2);">What is Facet Joint Arthrosis?</h3><p style="color:#4a5568;line-height:1.75;margin:0 0 10px;">The small vertebral joints (facet joints) connect adjacent vertebrae and, together with the discs, enable spinal mobility. Degenerative changes often affect both structures simultaneously.</p><p style="color:#4a5568;line-height:1.75;margin:0 0 10px;">With facet joint arthrosis, the joint changes progressively. This can include enlargement of joint structures, joint effusions or changes in joint position.</p><p style="color:#4a5568;line-height:1.75;margin:0;">Typical symptoms are local back or neck pain that may worsen with certain movements and radiate into the arms or legs — known as <em>pseudoradicular complaints</em>.</p></div>
++      <div style="margin-bottom:22px;"><h3 style="font-size:1.15rem;font-weight:700;color:#091f22;margin:0 0 10px;padding-bottom:8px;border-bottom:2px solid rgba(28,194,178,0.2);">What is a Facet Joint Cyst?</h3><p style="color:#4a5568;line-height:1.75;margin:0 0 10px;">Degenerative changes in a facet joint can lead to a fluid-filled joint cyst (synovial cyst).</p><p style="color:#4a5568;line-height:1.75;margin:0;">If such a cyst protrudes into the spinal canal, it can compress a nerve root — producing symptoms similar to a herniated disc: radiating pain, tingling, numbness or, in severe cases, reduced muscle strength. The appropriate treatment depends on the size and location of the cyst, symptoms, neurological findings and imaging.</p></div>
++      <div style="background:#fff5f5;border-left:4px solid #e53e3e;padding:18px 22px;border-radius:0 12px 12px 0;margin-bottom:22px;"><div style="display:flex;align-items:center;gap:9px;margin-bottom:6px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e53e3e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg><strong style="color:#c53030;font-size:0.9rem;">Urgent Notice</strong></div><p style="color:#742a2a;margin:0;line-height:1.65;font-size:0.9rem;">Newly occurring severe paralysis or disturbances of bladder/bowel function must be assessed medically without delay.</p></div>
++      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;"><a href="sprechzeiten.html" class="btn-primary" style="display:inline-block;">Request Appointment</a><button onclick="closeFacettenModal()" style="padding:13px 26px;border:2px solid rgba(0,0,0,0.15);background:transparent;border-radius:99px;font-size:0.9rem;cursor:pointer;color:#4a5568;font-family:inherit;">Close</button></div>
++    </div>
++  </div>
++</div><!-- end facetten-modal -->
++<!-- Service Modal -->
++<div class="video-modal" id="serviceModal" style="z-index: 99999;">
++<div class="video-modal-content" style="background: white; max-width: 800px; display: flex; flex-direction: column; height: auto; max-height: 90vh; border-radius: 20px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.2);">
++<span class="close-video" id="closeServiceModalBtn" style="color: white; top: 16px; right: 20px; background: rgba(0,0,0,0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 8px; z-index: 10;"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg></span>
++<div style="width: 100%; aspect-ratio: 16/9; background: #000; position: relative; flex-shrink: 0;">
++<!-- Video iframe -->
++<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="100%" id="sModalVideo" src="" style="position: absolute; top: 0; left: 0;" width="100%"></iframe>
++</div>
++<div style="padding: 32px 40px; text-align: left; overflow-y: auto; background: white;">
++<h3 id="sModalTitle" style="font-size: 1.8rem; color: #091f22; margin-bottom: 16px; font-weight: 700; line-height: 1.3;"></h3>
++<p id="sModalDesc" style="color: #4a5568; font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;"></p>
++<a class="btn-primary" href="sprechzeiten.html" style="display: inline-block;">Request Appointment</a>
++</div>
++</div>
++</div>
++<script>
++  function openServiceModal(btn) {
++    const card = btn.closest('.service-card-new');
++    if(!card) return;
++    
++    const title = card.querySelector('.service-title-new').innerText;
++    const desc = card.querySelector('.service-desc-new').innerHTML;
++    
++    document.getElementById('sModalTitle').innerText = title;
++    document.getElementById('sModalDesc').innerHTML = desc;
++    
++    // Placeholder Video ID
++    document.getElementById('sModalVideo').src = "https://www.youtube.com/embed/Zo3enw-hWDk?enablejsapi=1&rel=0&autoplay=1";
++    
++    document.getElementById('serviceModal').classList.add('show');
++  }
++
++
++  function openBsvModal() { document.getElementById('bsv-modal').style.display='flex'; document.body.style.overflow='hidden'; }
++  function closeBsvModal() { document.getElementById('bsv-modal').style.display='none'; document.body.style.overflow=''; }
++  function openFacettenModal() { document.getElementById('facetten-modal').style.display='flex'; document.body.style.overflow='hidden'; }
++  function closeFacettenModal() { document.getElementById('facetten-modal').style.display='none'; document.body.style.overflow=''; }
++  document.addEventListener('DOMContentLoaded', function() {
++    ['bsv-modal','facetten-modal'].forEach(function(id) {
++      var m = document.getElementById(id);
++      if (m) m.addEventListener('click', function(e){ if(e.target===m){ m.style.display='none'; document.body.style.overflow=''; } });
++    });
++  });
++  const serviceModal = document.getElementById('serviceModal');
++  const closeServiceModalBtn = document.getElementById('closeServiceModalBtn');
++
++  if(closeServiceModalBtn && serviceModal) {
++    closeServiceModalBtn.addEventListener('click', () => {
++      serviceModal.classList.remove('show');
++      document.getElementById('sModalVideo').src = ""; 
++    });
++
++    window.addEventListener('click', (e) => {
++      if (e.target === serviceModal) {
++        serviceModal.classList.remove('show');
++        document.getElementById('sModalVideo').src = ""; 
++      }
++    });
++  }
++</script>
++<script>
++  document.addEventListener("DOMContentLoaded", function() {
++    const hash = window.location.hash;
++    if (hash && hash.startsWith('#service-')) {
++      const serviceIndex = parseInt(hash.replace('#service-', ''), 10);
++      const cards = document.querySelectorAll('.service-card-new');
++      if (serviceIndex >= 0 && serviceIndex < cards.length) {
++        const card = cards[serviceIndex];
++        const link = card.querySelector('.service-link-new');
++        if (link) {
++          // Open the modal
++          link.click();
++          // Scroll to the card slightly delayed to ensure rendering
++          setTimeout(() => {
++            card.scrollIntoView({behavior: 'smooth', block: 'center'});
++          }, 300);
++        }
++      }
++    }
++  });
++</script>
+ </div></body></html>
+\ No newline at end of file

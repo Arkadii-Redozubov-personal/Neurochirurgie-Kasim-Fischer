@@ -136,7 +136,7 @@
 <p class="disease-card-desc">Vorwölbung oder Austritt von Bandscheibengewebe, das Nervenwurzeln oder das Rückenmark reizt. Betroffen sein kann die Hals- oder Lendenwirbelsäule.</p>
 <button class="disease-card-btn" onclick="openModal('bsv');event.stopPropagation();">Learn more →</button>
 </div>
-<div class="disease-card-right"><img alt="Disc Herniation (Cervical/Lumbar)" src="../img/Bandscheibenoperation (Mikro- &amp; Endoskopisch).png"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Disc Herniation (Cervical/Lumbar)" src="../img/Bandscheibenoperation (Mikro- &amp; Endoskopisch).webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 <div class="disease-card-wide" onclick="openModal('spinal')">
 <div class="disease-card-left">
@@ -519,7 +519,15 @@ function openModal(id){
   el.style.display='flex';
   document.body.style.overflow='hidden';
   var iframe=document.getElementById('iframe-'+id);
-  if(iframe)iframe.src=VIDEO_SRC;
+  if(iframe) {
+    if (id === 'bsv') iframe.src = '../video/Disc Herniation.mp4';
+    else if (id === 'spinal') iframe.src = '../video/Spinal Canal Stenosis.mp4';
+    else if (id === 'facetten') iframe.src = '../video/Фасеточные суставы.mp4';
+    else if (id === 'isg') iframe.src = '../video/ISG-Syndrom.mp4';
+    else if (id === 'kts') iframe.src = '../video/Karpaltunnelsyndrom.mp4';
+    else if (id === 'wkf') iframe.src = '../video/Vertebral Fractures & Tumour-related Changes.mp4';
+    else iframe.src = 'https://www.youtube.com/embed/Zo3enw-hWDk?rel=0&autoplay=1';
+  }
   el.onclick=function(e){if(e.target===el)closeModal(id);};
 }
 function closeModal(id){

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tedaviler &amp; Ameliyatlar | Neurochirurgie Fischer</title>
+<meta content="Tedavi yöntemlerimiz: disk ameliyatından spinal kanal darlığına, ağrı tedavisinden nöromodülasyona kadar." name="description"/>
+<link href="https://my-bandscheibe.de/tr/behandlungen.html" rel="canonical"/>
+<meta content="Behandlungen &amp; OPs | Neurochirurgie Fischer" property="og:title"/>
+<meta content="Erfahren Sie mehr über unsere Behandlungen: von der Bandscheiben-OP über Spinal Kanal Darlığı bis hin zur Schmerztherapie und Nöromodülasyon." property="og:description"/>
+<meta content="https://my-bandscheibe.de/behandlungen.html" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="https://my-bandscheibe.de/img/treatments.webp" property="og:image"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../style.css" rel="stylesheet"/>
+<style>
+/* Modal Layout */
+.modal-split-wrap{display:flex;flex-direction:row;background:white;max-width:calc(100vw - 80px);width:100%;height:85vh;max-height:85vh;border-radius:20px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.35);position:relative}
+.modal-video-panel{width:46%;flex-shrink:0;background:#091f22;position:relative;overflow:hidden}
+.modal-video-panel iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+.modal-content-panel{flex:1;overflow-y:auto;padding:36px 40px;display:flex;flex-direction:column}
+.modal-close-btn{position:absolute;top:14px;right:14px;z-index:30;background:rgba(0,0,0,0.45);border:none;color:white;width:40px;height:40px;border-radius:8px;cursor:pointer;font-size:22px;display:flex;align-items:center;justify-content:center;line-height:1}
+.modal-title{color:#091f22;font-size:1.65rem;font-weight:800;margin:0 0 6px;line-height:1.2}
+.modal-subtitle{color:#718096;margin:0;font-size:0.88rem;line-height:1.5}
+.modal-content-header{margin-bottom:22px;padding-bottom:18px;border-bottom:2px solid rgba(28,194,178,0.12)}
+@media(max-width:820px){
+  .modal-split-wrap{flex-direction:column!important;max-height:95vh!important;max-width:100%!important;border-radius:14px!important;height:95vh!important}
+  .modal-video-panel{width:100%!important;height:200px!important;flex-shrink:0!important}
+  .modal-content-panel{padding:22px 20px!important;flex:1!important;overflow-y:auto!important}
+  .modal-title{font-size:1.3rem!important}
+}
+/* Treatment Video Cards — same as disease cards */
+.disease-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.disease-card-wide{background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(9,31,34,0.08);border:1px solid rgba(9,31,34,0.06);display:flex;overflow:hidden;cursor:pointer;transition:box-shadow .22s,transform .22s;min-height:200px}
+.disease-card-wide:hover{box-shadow:0 12px 40px rgba(28,194,178,0.16);transform:translateY(-3px)}
+.disease-card-left{flex:1;padding:26px 26px 24px 28px;display:flex;flex-direction:column;min-width:0}
+.disease-card-right{width:200px;flex-shrink:0;position:relative;overflow:hidden;border-radius:0 14px 14px 0;background:#0d1e20}
+.disease-card-right img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.disease-card-wide:hover .disease-card-right img{transform:scale(1.06)}
+.disease-play-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;background:rgba(28,194,178,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.3);transition:background .2s,transform .2s}
+.disease-card-wide:hover .disease-play-icon{background:#1cc2b2;transform:translate(-50%,-50%) scale(1.1)}
+.disease-play-icon svg{margin-left:3px}
+.disease-video-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(28,194,178,0.10);color:#0d9488;font-size:0.72rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:4px 10px;border-radius:99px;margin-bottom:12px;width:fit-content}
+.disease-card-title{font-size:1.35rem;font-weight:800;color:#091f22;margin:0 0 10px;line-height:1.25}
+.disease-card-desc{font-size:0.9rem;line-height:1.6;color:#4a5568;margin:0 0 16px;flex:1}
+.disease-card-btn{display:inline-flex;align-items:center;gap:6px;background:#1cc2b2;color:white;font-size:0.88rem;font-weight:700;padding:10px 20px;border-radius:99px;text-decoration:none;border:none;cursor:pointer;font-family:inherit;transition:background .2s,transform .15s;width:fit-content;margin-top:auto}
+.disease-card-btn:hover{background:#17a99b;transform:translateY(-1px)}
+@media(max-width:900px){.disease-cards-grid{grid-template-columns:1fr}.disease-card-right{width:160px}}
+@media(max-width:600px){.disease-card-wide{flex-direction:column}.disease-card-right{width:100%;height:180px;border-radius:0 0 14px 14px}}
+/* Default small cards */
+.default-cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:24px}
+.default-card{background:#fff;border:1px solid rgba(9,31,34,0.08);border-radius:14px;padding:24px;display:flex;flex-direction:column;box-shadow:0 2px 12px rgba(0,0,0,0.05);transition:box-shadow .2s,transform .2s}
+.default-card:hover{box-shadow:0 8px 28px rgba(28,194,178,0.12);transform:translateY(-2px)}
+.default-card-title{font-size:1.05rem;font-weight:700;color:#091f22;margin:0 0 10px}
+.default-card-desc{font-size:0.88rem;line-height:1.6;color:#64748b;margin:0;flex:1}
+/* Section styles */
+.section-wrapper{padding:60px 0}
+.section-heading-row{display:flex;align-items:center;gap:16px;margin-bottom:28px;border-bottom:1px solid rgba(0,0,0,0.08);padding-bottom:16px}
+.section-icon{color:#1cc2b2;width:40px;height:40px;flex-shrink:0}
+.section-heading-row h2{font-size:1.9rem;font-weight:800;margin:0;color:#091f22}
+.section-heading-row p{color:#64748b;margin:3px 0 0 0;font-size:0.92rem}
+.section-intro-box{background:rgba(28,194,178,0.04);border:1px solid rgba(28,194,178,0.12);border-radius:14px;padding:22px 26px;margin-bottom:28px}
+/* Modal content */
+.modal-section-h{font-size:1.08rem;font-weight:700;color:#091f22;margin:0 0 10px;padding-bottom:8px;border-bottom:2px solid rgba(28,194,178,0.2)}
+.modal-section-p{color:#4a5568;line-height:1.75;margin:0 0 10px}
+.modal-section-p:last-child{margin-bottom:0}
+.modal-steps{display:flex;flex-direction:column;gap:14px}
+.modal-step{display:flex;gap:14px;align-items:flex-start}
+.modal-step-num{min-width:34px;height:34px;border-radius:50%;background:#1cc2b2;color:white;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0}
+.modal-step-text strong{color:#091f22;display:block;margin-bottom:3px}
+.modal-step-text p{color:#4a5568;line-height:1.6;margin:0;font-size:0.9rem}
+.modal-alert{background:#fff5f5;border-left:4px solid #e53e3e;padding:16px 20px;border-radius:0 12px 12px 0;margin:20px 0}
+.modal-alert-title{color:#c53030;font-size:0.9rem;font-weight:700;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.modal-alert-body{color:#742a2a;margin:0;line-height:1.6;font-size:0.9rem}
+.modal-action-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:6px}
+.modal-action-row a.btn-termin{display:inline-block;background:#1cc2b2;color:white;padding:13px 28px;border-radius:99px;font-size:0.92rem;font-weight:700;text-decoration:none;font-family:inherit}
+.modal-action-row a.btn-termin:hover{background:#17a99b}
+.modal-action-row button.btn-close{padding:13px 26px;border:2px solid rgba(0,0,0,0.15);background:transparent;border-radius:99px;font-size:0.9rem;cursor:pointer;color:#4a5568;font-family:inherit}
+/* Floating Doctolib */
+.floating-doctolib{position:fixed;bottom:24px;right:24px;background:white;border-radius:16px;padding:20px;box-shadow:0 8px 32px rgba(0,0,0,0.18);z-index:9999;max-width:280px;border:1px solid rgba(28,194,178,0.15)}
+.fd-close{position:absolute;top:10px;right:12px;cursor:pointer;color:#999;line-height:1}
+.fd-content{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px}
+.fd-icon{color:#1cc2b2;flex-shrink:0;margin-top:2px}
+.fd-title{font-weight:700;font-size:0.95rem;color:#091f22;margin-bottom:4px}
+.fd-desc{font-size:0.82rem;color:#64748b;line-height:1.4}
+.fd-btn{display:block;background:#1cc2b2;color:white;text-align:center;padding:11px 20px;border-radius:99px;font-size:0.88rem;font-weight:700;text-decoration:none;margin-bottom:8px}
+.fd-btn:hover{background:#17a99b}
+.fd-secure{display:flex;align-items:center;gap:6px;color:#94a3b8;font-size:0.78rem}
+</style>
+<link href="https://my-bandscheibe.de/behandlungen.html" hreflang="de" rel="alternate"/>
+<link href="https://my-bandscheibe.de/en/behandlungen.html" hreflang="en" rel="alternate"/>
+<link href="https://my-bandscheibe.de/ru/behandlungen.html" hreflang="ru" rel="alternate"/>
+<link href="https://my-bandscheibe.de/tr/behandlungen.html" hreflang="tr" rel="alternate"/>
+<link href="https://my-bandscheibe.de/ar/behandlungen.html" hreflang="ar" rel="alternate"/>
+<link href="https://my-bandscheibe.de/behandlungen.html" hreflang="x-default" rel="alternate"/>
+</head>
+<body>
+<div class="page-wrapper">
+<div class="hero-inner-sub" style="background:linear-gradient(to right,rgba(9,31,34,0.95) 0%,rgba(9,31,34,0.6) 100%),url('../img/treatments.webp') center/cover no-repeat #091f22;"><div class="container"><nav class="navbar" style="margin-bottom:60px;">
+<a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;"><img alt="" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/><span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span></a>
+<div class="nav-links">
+<a href="../index.html">Ana Sayfa</a>
+<a href="../unser-team.html">Klinik</a>
+<div class="nav-dropdown-wrapper"><a tabindex="0">Hizmetler</a><div class="nav-dropdown-menu"><a href="praxis-schwerpunkte.html">Hastalıklar</a><a href="diagnostik.html">Tanı</a><a href="behandlungen.html">Tedaviler &amp; Ameliyatlar</a><a href="zweitmeinung.html">İkinci Görüş</a></div></div>
+<a href="../patienten.html">Hastalar İçin</a><a href="../presseschau.html">Basın</a><a href="sprechzeiten.html">İletişim</a>
+</div>
+<div class="lang-switcher hidden-mobile"><div class="lang-current">TR <span>▼</span></div><div class="lang-dropdown"><a href="../behandlungen.html">Deutsch (DE)</a><a href="../en/behandlungen.html">English (EN)</a><a href="../ru/behandlungen.html">Русский (RU)</a><a href="behandlungen.html">Türkçe (TR)</a><a href="../ar/behandlungen.html">العربية (AR)</a></div></div>
+<a class="btn-book hidden-mobile" href="sprechzeiten.html">Randevu Al</a>
+<div class="burger-menu" id="burgerMenu" style="display:none;font-size:28px;cursor:pointer;color:white;">☰</div>
+</nav>
+<div class="mobile-menu" id="mobileMenu" style="display:none;">
+<a href="../index.html">Ana Sayfa</a><a href="../unser-team.html">Klinik</a>
+<div class="mobile-dropdown-wrapper"><div class="mobile-dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('active');"><a style="margin:0;padding:0;">Hizmetler</a><span style="color:rgba(255,255,255,0.7);">▼</span></div><div class="mobile-dropdown-menu"><a href="praxis-schwerpunkte.html">Hastalıklar</a><a href="diagnostik.html">Tanı</a><a href="behandlungen.html">Tedaviler &amp; Ameliyatlar</a><a href="zweitmeinung.html">İkinci Görüş</a></div></div>
+<a href="../patienten.html">Hastalar İçin</a><a href="../presseschau.html">Basın</a><a href="sprechzeiten.html">İletişim</a>
+<a href="sprechzeiten.html" style="color:var(--primary);">Randevu Al</a>
+<div class="mobile-lang-switcher"><a href="../behandlungen.html">DE</a><a href="../en/behandlungen.html">EN</a><a href="../ru/behandlungen.html">RU</a><a class="active" href="behandlungen.html">TR</a><a href="../ar/behandlungen.html">AR</a></div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:40px;margin-top:40px;padding-bottom:40px;">
+<div class="hero-main" style="max-width:800px;margin-top:0;"><h1 class="hero-title hero-title-sub" style="font-size:4rem;color:white;">Unsere <span style="color:var(--primary);">Behandlungen</span></h1><p class="hero-desc" style="max-width:500px;font-size:1.1rem;line-height:1.6;color:rgba(255,255,255,0.8);">Özel ameliyat ve koruyucu yöntemler – tıbbi endikasyonunuza bireysel olarak uyarlanmış.</p></div>
+<div class="badges_marker" style="display:flex;flex-direction:column;gap:24px;max-width:350px;padding-bottom:10px;">
+<div style="display:flex;gap:16px;align-items:center;"><div style="width:48px;height:48px;border-radius:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--primary);flex-shrink:0;"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div><div><div style="color:white;font-weight:700;margin-bottom:4px;">Modern Teknolojiler</div><div style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.4;">Minimal invaziv cerrahi yöntemler</div></div></div>
+<div style="display:flex;gap:16px;align-items:center;"><div style="width:48px;height:48px;border-radius:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--primary);flex-shrink:0;"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M19 8v6"></path><path d="M16 11h6"></path></svg></div><div><div style="color:white;font-weight:700;margin-bottom:4px;">Deneyimli Uzmanlar</div><div style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.4;">Yılda 500'den fazla başarılı ameliyat</div></div></div>
+<div style="display:flex;gap:16px;align-items:center;"><div style="width:48px;height:48px;border-radius:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--primary);flex-shrink:0;"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div><div><div style="color:white;font-weight:700;margin-bottom:4px;">Hızlı İyileşme</div><div style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.4;">En kısa sürede dolu dolu bir yaşama dönüş</div></div></div>
+</div></div></div></div>
+<div class="section-wrapper"><div class="container">
+<div style="background:rgba(28,194,178,0.05);border-left:4px solid var(--primary);padding:24px;border-radius:0 12px 12px 0;margin-bottom:60px;">
+<h3 style="font-size:1.1rem;margin-bottom:8px;font-weight:600;color:var(--text-dark);">Önemli Tıbbi Not</h3>
+<p style="font-size:0.95rem;line-height:1.6;color:var(--text-light);margin:0;">Kesin endikasyon ve uygun yöntemin seçimi her zaman kapsamlı muayene ve görüntülemeden sonra hekim tarafından bireysel olarak belirlenir.</p>
+</div>
+<!-- OPERATIVE EINGRIFFE -->
+<div id="op-section" style="margin-bottom:80px;">
+<div class="section-heading-row">
+<div class="section-icon"><svg fill="none" height="40" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="40"><path d="M14.5 3.5l6 6-12 12h-6v-6z"></path><path d="M12 8l4 4"></path></svg></div>
+<div><h2>Cerrahi Müdahaleler</h2><p>Mikrocerrahi, endoskopik ve minimal invaziv ameliyatlar</p></div>
+</div>
+<div class="section-intro-box">
+<p style="color:var(--text-dark);line-height:1.8;margin-bottom:12px;">Unser Leistungsspektrum umfasst spezialisierte operative Verfahren an der Wirbelsäule und den peripheren Nerven. Jede Operation wird nach ausführlicher Diagnostik individuell auf Ihre medizinische Indikation abgestimmt.</p>
+<p style="color:var(--text-light);line-height:1.8;margin:0;font-size:0.95rem;">Wir setzen auf <strong>minimalinvasive Techniken</strong>, die die umliegenden Strukturen schonen und eine schnelle Erholung ermöglichen.</p>
+</div>
+<div class="disease-cards-grid">
+<div class="disease-card-wide" onclick="openModal('bandscheibe')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M8 5v14l11-7z"></path></svg> VİDEO</div>
+<h3 class="disease-card-title">Disk Ameliyatı (Mikro &amp; Endoskopik)</h3>
+<p class="disease-card-desc">Mikrochirurgische oder endoskopische Entfernung von vorgefallenem Bandscheibenmaterial zur Entlastung komprimierter Nervenwurzeln – schonend und präzise.</p>
+<button class="disease-card-btn" onclick="openModal('bandscheibe');event.stopPropagation();">Daha fazla →</button>
+</div>
+<div class="disease-card-right"><img alt="Bandscheibenoperation" src="../img/Bandscheibenoperation (Mikro- &amp; Endoskopisch).webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+</div>
+<div class="disease-card-wide" onclick="openModal('dekompression')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M8 5v14l11-7z"></path></svg> VİDEO</div>
+<h3 class="disease-card-title">Mikrocerrahi Dekompresyon &amp; Stabilizasyon</h3>
+<p class="disease-card-desc">Operative Entlastung eingeengter Nervenstrukturen bei Spinal Kanal Darlığı. Bei Bedarf ergänzt durch minimalinvasive Stabilisierung der Wirbelsäule.</p>
+<button class="disease-card-btn" onclick="openModal('dekompression');event.stopPropagation();">Daha fazla →</button>
+</div>
+<div class="disease-card-right"><img alt="Dekompression Spinalkanal" src="../img/Microsurgical Decompression &amp; Stabilisation.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+</div>
+<div class="disease-card-wide" onclick="openModal('kyphoplastie')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M8 5v14l11-7z"></path></svg> VİDEO</div>
+<h3 class="disease-card-title">Kifoplasti &amp; Vertebra Gövdesi Stabilizasyonu</h3>
+<p class="disease-card-desc">Perkutane minimalinvasive Stabilisierung von Wirbelkörperbrüchen bei Osteoporose oder Tumorbefall. Zementaugmentation zur Schmerzreduktion und Stabilisierung.</p>
+<button class="disease-card-btn" onclick="openModal('kyphoplastie');event.stopPropagation();">Daha fazla →</button>
+</div>
+<div class="disease-card-right"><img alt="Kyphoplastie" src="../img/Kyphoplastie &amp; Wirbelkörperstabilisierung.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+</div>
+<div class="disease-card-wide" onclick="openModal('nervenop')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M8 5v14l11-7z"></path></svg> VİDEO</div>
+<h3 class="disease-card-title">Periferik Sinir Cerrahisi (Karpal, Kubital)</h3>
+<p class="disease-card-desc">Ambulante mikrochirurgische Dekompression bei Karpal Tünel Sendromu, Sulcus-ulnaris-Syndrom und weiteren Engpasssyndromen der peripheren Nerven.</p>
+<button class="disease-card-btn" onclick="openModal('nervenop');event.stopPropagation();">Daha fazla →</button>
+</div>
+<div class="disease-card-right"><img alt="Nerven OP" src="../img/Operative Versorgung peripherer Nerven.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+</div>
+<div class="disease-card-wide" onclick="openModal('neuromod')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M8 5v14l11-7z"></path></svg> VİDEO</div>
+<h3 class="disease-card-title">Nöromodülasyon &amp; Spinal Cord Stimulation</h3>
+<p class="disease-card-desc">Innovative elektrische Stimulation von Nervenbahnen bei chronischen Schmerzsyndromen. Rückenmarkstimulation (SCS) nach sorgfältiger Indikationsprüfung.</p>
+<button class="disease-card-btn" onclick="openModal('neuromod');event.stopPropagation();">Daha fazla →</button>
+</div>
+<div class="disease-card-right"><img alt="Nöromodülasyon SCS" src="../img/Neuromodulation.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+</div>
+<div class="disease-card-wide" onclick="openModal('hwsop')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M8 5v14l11-7z"></path></svg> VİDEO</div>
+<h3 class="disease-card-title">Servikal Omurga Cerrahisi &amp; Disk Artroplastisi</h3>
+<p class="disease-card-desc">Cerrahi Müdahaleler an der Halswirbelsäule: Dekompression, Fusion oder bewegungserhaltender Bandscheibenersatz (Arthroplastie) je nach individuellem Befund.</p>
+<button class="disease-card-btn" onclick="openModal('hwsop');event.stopPropagation();">Daha fazla →</button>
+</div>
+<div class="disease-card-right"><img alt="HWS Operation" src="../img/Cervical Spine Surgery &amp; Disc Arthroplasty.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+</div>
+</div>
+<div class="default-cards-grid">
+<div class="default-card">
+<h3 class="default-card-title">Perkütan Tümör Radyofrekans Termoablasyonu</h3>
+<p class="default-card-desc">Minimalinvasive Ablation bei Knochentumormetastasen durch gezielte Wärmeenergie. In Abstimmung mit dem betreuenden Onkologen und der interdisziplinären Behandlungsplanung.</p>
+</div>
+<div class="default-card">
+<h3 class="default-card-title">Faset Eklem Blokajları &amp; Denervasyon</h3>
+<p class="default-card-desc">Gezielte Infiltration oder Radiofrequenzdenervation der Faset Eklemler zur Schmerztherapie bei Facettengelenkarthrose und chronischen Rückenschmerzen.</p>
+</div>
+<div class="default-card">
+<h3 class="default-card-title">İntraspinal Tümörlerin Kaldırılması</h3>
+<p class="default-card-desc">Mikrochirurgische Resektion von Tumoren, Metastasen und Gefäßanomalien im Bereich der Wirbelsäule und des Rückenmarks, inklusive Tethered-Cord-Symptomatik.</p>
+</div>
+<div class="default-card">
+<h3 class="default-card-title">Artroplasti &amp; Artrodez (SI Eklem)</h3>
+<p class="default-card-desc">Operative Versorgung des Iliosakralgelenks: Gelenkerhalt oder Versteifung (Arthrodese) bei chronischem SI Eklem Sendromu, nach individueller Indikationsprüfung.</p>
+</div>
+<div class="default-card">
+<h3 class="default-card-title">Kas Biyopsisi</h3>
+<p class="default-card-desc">Diagnostische Entnahme von Muskelgewebe zur Abklärung unklarer Nerven- und Muskelerkrankungen (Myopathien, Neuropathien). Ambulant oder stationär möglich.</p>
+</div>
+<div class="default-card">
+<h3 class="default-card-title">Nörocerrahi Değlendirme</h3>
+<p class="default-card-desc">Professionelle medizinische Gutachten und Zweitmeinungen bei neurochirurgischen Fragestellungen – für Patienten, Versicherungen und Gerichte.</p>
+</div>
+</div>
+</div>
+</div></div>
+<footer class="footer-wrapper"><div class="container footer-grid">
+<div class="footer-brand"><a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;"><img alt="" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/><span style="font-weight:700;font-size:1.4rem;color:white;white-space:nowrap;">NABIOTA HEALTH GROUP</span></a>
+<div style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.6;margin-bottom:16px;">Bismarckstr. 106<br/>41061 Mönchengladbach</div>
+<div style="color:rgba(255,255,255,0.9);font-weight:600;margin-bottom:4px;">(02161) 678 26 83</div>
+<a href="mailto:kontakt@my-bandscheibe.de" style="color:var(--primary);text-decoration:none;font-size:0.95rem;display:inline-block;margin-bottom:24px;">kontakt@my-bandscheibe.de</a>
+<div class="footer-socials"><a href="https://www.facebook.com/neurokaz/" style="color:white;opacity:0.7;transition:0.3s;" target="_blank"><svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a></div>
+</div>
+<div class="footer-links"><h3 class="footer-heading">HİZMETLER</h3><a href="praxis-schwerpunkte.html">Hastalıklar</a><a href="diagnostik.html">Tanı</a><a href="behandlungen.html">Tedaviler &amp; Ameliyatlar</a><a href="zweitmeinung.html">İkinci Görüş</a></div>
+<div class="footer-links"><h3 class="footer-heading">KLİNİK</h3><a href="../unser-team.html">Hakkımızda</a><a href="../unser-team.html">Ekibimiz</a><a href="../presseschau.html">Basın</a><a href="sprechzeiten.html">İletişim</a><a href="../impressum.html">Künye</a><a href="../datenschutz.html">Gizlilik</a></div>
+<div class="footer-links"><h3 class="footer-heading">ÇALIŞMA SAATLErİ</h3><p style="margin:0;line-height:2;font-size:0.9rem;color:rgba(255,255,255,0.75);">Mo: 08:00–13:00 &amp; 14:00–18:00 Uhr<br/>Di: 08:00–15:00 Uhr<br/>Mi: 08:00–15:00 Uhr<br/>Do: 08:00–13:00 &amp; 14:00–18:00 Uhr<br/>Fr: 08:00–14:00 Uhr<br/>Sa: nach Vereinbarung</p></div>
+</div>
+<div class="footer-bottom" style="text-align:center;padding-top:32px;margin-top:32px;border-top:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);font-size:0.85rem;">© 2026 Neurochirurgie Fischer</div>
+</footer>
+<!-- ══════ MODALS ══════ -->
+<!-- Bandscheibenoperation Modal -->
+<div id="modal-overlay-bandscheibe" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button class="modal-close-btn" onclick="closeModal('bandscheibe')">×</button>
+<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-bandscheibe" src=""></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Omurlararası diskler<span style="color:#1cc2b2;">operasyon</span></h2><p class="modal-subtitle">Sinir kökü basıncını hafifletmek için mikrocerrahi ve endoskopik prosedürler</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Operasyonun amacı nedir?</h3>
+<p class="modal-section-p">İşlemin amacı, sıkıştırılmış sinir kökleri üzerindeki baskıyı hafifletmek için cerrahi mikroskop veya endoskop kullanarak fıtıklaşmış disk materyalini çıkarmaktır. Küçük girişlerden ve özel aletler yardımıyla intervertebral disk materyali uzaklaştırılır. Bu teknik, çevredeki kaslara mümkün olduğunca az baskı uygulamayı amaçlamaktadır.</p>
+<p class="modal-section-p">Ameliyatın gerekli olup olmadığı semptomların seyrine, nörolojik defisitlere ve görüntüleme sonuçlarına bağlıdır. Birçok fıtıklaşmış disk başlangıçta konservatif olarak tedavi edilir.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Disk işlemi için tipik prosedür</h3>
+<div class="modal-steps">
+<div class="modal-step"><div class="modal-step-num">1</div><div class="modal-step-text"><strong>Hazırlık</strong><p>Tanı ve ameliyat endikasyonu tekrar kontrol edilir. İşlem öncesinde gerekli tıbbi ve anesteziye bağlı olarak anestezi bilgileri verilmektedir.</p></div></div>
+<div class="modal-step"><div class="modal-step-num">2</div><div class="modal-step-text"><strong>operasyon</strong><p>Yaklaşım etkilenen omurga bölgesine göre seçilir. Dekompresyon sırasında daralmış sinir yapısı rahatlar; Müdahale eden intervertebral disk dokusu özel olarak çıkarılabilir.</p></div></div>
+<div class="modal-step"><div class="modal-step-num">3</div><div class="modal-step-text"><strong>Hemen ardından</strong><p>İşlem sonrasında dolaşım, ağrı ve nörolojik bulgular kontrol edilir. Prosedüre ve bireysel gidişata bağlı olarak mobilizasyon başlar.</p></div></div>
+<div class="modal-step"><div class="modal-step-num">4</div><div class="modal-step-text"><strong>Taburculuk ve takip bakımı</strong><p>Yara kontrolleri, stres oluşumu, gerekiyorsa fizik tedavi ve diğer kontroller kişiye özel planlanır. Prosedüre bağlı olarak çalışma, egzersiz yapma ve araç kullanma yeteneği tartışılacaktır.</p></div></div>
+</div></div>
+<div class="modal-alert"><div class="modal-alert-title"><svg fill="none" height="16" stroke="#e53e3e" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" x2="12" y1="9" y2="13"></line><line x1="12" x2="12.01" y1="17" y2="17"></line></svg> Dringender Hinweis</div><p class="modal-alert-body">Herhangi bir yeni şiddetli felç veya mesane/bağırsak fonksiyonunda bozulma derhal bir doktor tarafından açıklığa kavuşturulmalıdır.</p></div>
+<div class="modal-action-row"><a class="btn-termin" href="sprechzeiten.html">Randevu talep edin</a><button class="btn-close" onclick="closeModal('bandscheibe')">Kapalı</button></div>
+</div></div></div>
+<!-- Dekompression Modal -->
+<div id="modal-overlay-dekompression" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button class="modal-close-btn" onclick="closeModal('dekompression')">×</button>
+<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-dekompression" src=""></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Mikrocerrahi <span style="color:#1cc2b2;">dekompresyon</span></h2><p class="modal-subtitle">Spinal kanal stenozu ve sinir kökü basısında cerrahi rahatlama</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Dekompresyon ne zaman gereklidir?</h3>
+<p class="modal-section-p">Omurilik kanalının daralması durumunda (omurilik kanalı stenozu), daraltıcı kemik ve bağ yapılarının cerrahi olarak çıkarılmasıyla omurilik ve sinir kökleri için daha fazla yer oluşturulur. Uygun konservatif tedaviye rağmen semptomlar devam ediyorsa veya ilgili nörolojik problemler mevcutsa cerrahi müdahale düşünülebilir.</p>
+<p class="modal-section-p">Tedavi semptomların kapsamına ve süresine, nörolojik bulgulara, görüntülemeye ve kişisel hedeflere bağlıdır. Ek stabilizasyonun gerekli olup olmadığı ayrı ayrı değerlendirilir.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Minimal invazif stabilizasyon</h3>
+<p class="modal-section-p">İnstabilite durumunda (örn. spondilolistezis, spondilolistezis), anormal hareketleri önlemek ve sinir kökleri üzerindeki baskıyı kalıcı olarak azaltmak için bitişik omur gövdeleri, özel implant sistemleri kullanılarak minimal invazif bir şekilde birbirine bağlanabilir.</p>
+<p class="modal-section-p">Perkütan stabilizasyon ameliyatları ve dinamik stabilizasyon prosedürleri bulgulara göre ayrı ayrı kullanılan yerleşik tekniklerdir.</p></div>
+<div class="modal-alert"><div class="modal-alert-title"><svg fill="none" height="16" stroke="#e53e3e" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" x2="12" y1="9" y2="13"></line><line x1="12" x2="12.01" y1="17" y2="17"></line></svg> Dringender Hinweis</div><p class="modal-alert-body">Herhangi bir yeni şiddetli felç veya mesane/bağırsak fonksiyonunda bozulma derhal bir doktor tarafından açıklığa kavuşturulmalıdır.</p></div>
+<div class="modal-action-row"><a class="btn-termin" href="sprechzeiten.html">Randevu talep edin</a><button class="btn-close" onclick="closeModal('dekompression')">Kapalı</button></div>
+</div></div></div>
+<!-- Kyphoplastie Modal -->
+<div id="modal-overlay-kyphoplastie" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button class="modal-close-btn" onclick="closeModal('kyphoplastie')">×</button>
+<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-kyphoplastie" src=""></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Kifoplasti ve <span style="color:#1cc2b2;">Vertebral vücut stabilizasyonu</span></h2><p class="modal-subtitle">Vertebral gövde kırıklarının ve tümörle ilişkili değişikliklerin minimal invaziv tedavisi</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Kifoplasti Nedir?</h3>
+<p class="modal-section-p">Omurga gövdesinin kırılması durumunda (örneğin osteoporoz, düşme veya tümör enfeksiyonu nedeniyle), etkilenen omur gövdesini stabilize etmek için seçilen vakalarda kifoplasti gibi çimento takviyesi düşünülebilir. Tıbbi kemik çimentosu kırık vertebral cismi stabilize etmek ve kırılmaya bağlı ağrıyı azaltmak için yerleştirilir.</p>
+<p class="modal-section-p">İşlemin uygun olup olmadığı özellikle kırığın stabilitesine, nedenine, semptomlara, nörolojik bulgulara ve görüntülemeye bağlıdır. Her vertebra kırığı ameliyat gerektirmez.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Tümörle ilişkili değişiklikler ve radyofrekans ablasyonu</h3>
+<p class="modal-section-p">Omurgada tümöre bağlı değişiklikler olması durumunda disiplinler arası tedavi planlaması özellikle önemlidir. Duruma göre cerrahi, radyoterapi, ilaç tedavisi ve seçilmiş vakalarda ablatif işlemler birleştirilebilir.</p>
+<p class="modal-section-p">Perkütan radyofrekans termal ablasyonu genel bir standart tedavi olarak değil, belirli bulgular (örn. kemik tümörü metastazları) için olası bir seçenek olarak görülmelidir.</p></div>
+<div class="modal-action-row"><a class="btn-termin" href="sprechzeiten.html">Randevu talep edin</a><button class="btn-close" onclick="closeModal('kyphoplastie')">Kapalı</button></div>
+</div></div></div>
+<!-- Nerven OP Modal -->
+<div id="modal-overlay-nervenop" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button class="modal-close-btn" onclick="closeModal('nervenop')">×</button>
+<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-nervenop" src=""></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Cerrahi bakım <span style="color:#1cc2b2;">periferik sinirler</span></h2><p class="modal-subtitle">Karpal tünel sendromu, ulnar sulkus sendromu ve diğer darboğaz sendromları</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Karpal tünel sendromu ameliyatı</h3>
+<p class="modal-section-p">Karpal tünel sendromunda el bileğindeki median sinir daralır. Tanı şikayetler ve klinik muayene sonucu ortaya çıkar ve nörofizyolojik ölçümlerle desteklenebilir.</p>
+<p class="modal-section-p">Semptomlar devam ederse veya ciddi sinir hasarı varsa cerrahi müdahale mantıklı olabilir. Sinire daha fazla yer açmak için karpal tünel üzerindeki bağ kesilir. Açık ve endoskopik prosedürler oluşturulmuştur; uygun yöntem ayrı ayrı seçilir.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Sulcus ulnaris sendromu ve diğer darboğaz sendromları</h3>
+<p class="modal-section-p">Ulnar sulkus sendromunda (kübital tünel sendromu), ulnar sinir dirsekte daralır. Küçük parmak ve yüzük parmağında karıncalanma veya uyuşma ile dirseğin iç kısmındaki ağrı tipiktir. Hasar ileri düzeydeyse elde kas kaybı ve güç kaybı meydana gelebilir.</p>
+<p class="modal-section-p">Sinirler dirsekte ve diğer anatomik dar bölgelerde de sıkışabilir. Sıkıştırıcı bant veya dokuyu parçalayarak, etkilenen sinir üzerindeki baskı hafifletilir. Konservatif tedavinin mi yoksa cerrahi tedavinin mi endike olduğu semptomlara, klinik bulgulara ve gerekirse nörofizyolojik sonuçlara bağlıdır.</p></div>
+<div class="modal-action-row"><a class="btn-termin" href="sprechzeiten.html">Randevu talep edin</a><button class="btn-close" onclick="closeModal('nervenop')">Kapalı</button></div>
+</div></div></div>
+<!-- Neuromodulation Modal -->
+<div id="modal-overlay-neuromod" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button class="modal-close-btn" onclick="closeModal('neuromod')">×</button>
+<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-neuromod" src=""></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Nöro<span style="color:#1cc2b2;">modülasyon</span></h2><p class="modal-subtitle">Özel ağrı tedavisi ve omurilik stimülasyonu (SCS)</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Nöromodülasyon Nedir?</h3>
+<p class="modal-section-p">Seçilmiş kronik ağrı sendromları için, omurilik stimülasyonu (SCS) gibi nöromodülasyon, dikkatle değerlendirildikten sonra düşünülebilir. Amaç, sinir yollarının hedeflenen elektriksel uyarımı yoluyla ağrının işlenmesini etkilemektir. Acıdan tamamen arınma garanti edilemez.</p>
+<p class="modal-section-p">Kronik, tedaviye dirençli ağrı sendromlarında epidural boşluğa elektrotlar yerleştirilir. Işık elektriksel uyarıları beyne giderken ağrı sinyallerini üst üste bindirir.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Sekans</h3>
+<div class="modal-steps">
+<div class="modal-step"><div class="modal-step-num">1</div><div class="modal-step-text"><strong>Endikasyon testi</strong><p>Teşhise, önceki tedavilere ve gerçekçi tedavi hedeflerine dayanarak uygun hastaların dikkatli seçimi. Teşhis, önceki tedaviler, bireysel riskler ve gerçekçi tedavi hedefleri ayrıntılı olarak tartışılmaktadır.</p></div></div>
+<div class="modal-step"><div class="modal-step-num">2</div><div class="modal-step-text"><strong>Test aşaması</strong><p>Kalıcı bir sistem yerleştirilmeden önce etkinliğin kontrol edilmesi için elektrotların geçici olarak yerleştirilmesi.</p></div></div>
+<div class="modal-step"><div class="modal-step-num">3</div><div class="modal-step-text"><strong>Kalıcı implantasyon</strong><p>Test aşaması pozitifse kalıcı stimülasyon sistemi implante edilir ve ayrı ayrı programlanır.</p></div></div>
+</div></div>
+<div class="modal-action-row" style="margin-top:24px;"><a class="btn-termin" href="sprechzeiten.html">Randevu talep edin</a><button class="btn-close" onclick="closeModal('neuromod')">Kapalı</button></div>
+</div></div></div>
+<!-- HWS OP Modal -->
+<div id="modal-overlay-hwsop" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button class="modal-close-btn" onclick="closeModal('hwsop')">×</button>
+<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-hwsop" src=""></iframe></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Servikal omurga cerrahisi ve <span style="color:#1cc2b2;">İntervertebral disk protezleri</span></h2><p class="modal-subtitle">Dekompresyon, füzyon ve hareket koruyucu disk değişimi</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Servikal omurga hastalıkları</h3>
+<p class="modal-section-p">Servikal omurgadaki değişiklikler sinir köklerini ve bazı durumlarda omuriliği etkileyebilir. Olası şikayetler boyun ve kol ağrısından uyuşukluğa, güç azalmasına veya ince motor problemlerine kadar uzanır.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Hangi operasyon uygundur?</h3>
+<p class="modal-section-p">Teşhise bağlı olarak dekompresyon, füzyon veya seçilmiş vakalarda hareket koruyucu disk replasmanı dahil olmak üzere farklı prosedürler faydalı olabilir.</p>
+<p class="modal-section-p">Disk protezi her hastaya uygun değildir. Bir protezin anlamlı olup olmadığı, diğer şeylerin yanı sıra etkilenen segmente, dejeneratif değişikliklerin boyutuna, stabiliteye, kemik kalitesine ve diğer bireysel faktörlere bağlıdır. Öneri ancak muayene ve görüntü değerlendirmesi sonrasında yapılır.</p></div>
+<div style="margin-bottom:24px;"><h3 class="modal-section-h">Artroplasti ve Artrodez</h3>
+<p class="modal-section-p">Dejenere olmuş bir intervertebral diskin çıkarılmasından sonra, belirli tıbbi koşullar altında ilgili bölümün hareketliliğini korumak amacıyla bir protez yerleştirilebilir (artroplasti). Alternatif olarak komşu omur gövdeleri bir füzyon (artrodez) yoluyla kalıcı olarak stabilize edilir.</p></div>
+<div class="modal-action-row"><a class="btn-termin" href="sprechzeiten.html">Randevu talep edin</a><button class="btn-close" onclick="closeModal('hwsop')">Kapalı</button></div>
+</div></div></div>
+<!-- Floating Doctolib Widget -->
+<div class="floating-doctolib">
+<div class="fd-close" onclick="this.parentElement.style.display='none'"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg></div>
+<div class="fd-content"><div class="fd-icon"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"><rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg></div>
+<div class="fd-text"><div class="fd-title">Termin vereinbaren</div><div class="fd-desc">Buchen Sie Ihren Termin schnell und einfach online.</div></div></div>
+<a class="fd-btn" href="https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer?utm_campaign=website-button&amp;utm_source=kasim-fischer-website-button&amp;utm_medium=referral&amp;utm_content=custom&amp;utm_term=kasim-fischer" target="_blank">Doctolib hakkında rezervasyon yapın →</a>
+<div class="fd-secure"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Ihre Daten sind sicher und vertraulich.</div>
+</div>
+<script>
+var burgerMenu=document.getElementById('burgerMenu');
+var mobileMenu=document.getElementById('mobileMenu');
+if(burgerMenu&&mobileMenu){burgerMenu.addEventListener('click',function(){if(mobileMenu.style.display==='flex'){mobileMenu.style.display='none';burgerMenu.textContent='☰';}else{mobileMenu.style.display='flex';burgerMenu.textContent='✕';}});}
+var navbar=document.querySelector('.navbar');
+if(navbar){window.addEventListener('scroll',function(){if(window.scrollY>10){navbar.classList.add('scrolled');}else{navbar.classList.remove('scrolled');}});}
+var VİDEO_SRC='https://www.youtube.com/embed/Zo3enw-hWDk?rel=0&autoplay=1';
+function openModal(id){
+  var el=document.getElementById('modal-overlay-'+id);
+  el.style.display='flex';
+  document.body.style.overflow='hidden';
+  var iframe=document.getElementById('iframe-'+id);
+  if(iframe)iframe.src=VİDEO_SRC;
+  el.onclick=function(e){if(e.target===el)closeModal(id);};
+}
+function closeModal(id){
+  var el=document.getElementById('modal-overlay-'+id);
+  el.style.display='none';
+  document.body.style.overflow='';
+  var iframe=document.getElementById('iframe-'+id);
+  if(iframe)iframe.src='';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){['bandscheibe','dekompression','kyphoplastie','nervenop','neuromod','hwsop'].forEach(function(id){var el=document.getElementById('modal-overlay-'+id);if(el&&el.style.display==='flex')closeModal(id);});}});
+</script>
+<div id="cookie-consent-banner" style="display:none;position:fixed;bottom:20px;left:20px;right:20px;max-width:450px;background:white;padding:24px;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,0.15);z-index:999999;border:1px solid rgba(0,0,0,0.05);font-family:'Plus Jakarta Sans',sans-serif;">
+<div style="display:flex;align-items:flex-start;gap:16px;"><div style="background:rgba(28,194,178,0.1);padding:12px;border-radius:8px;color:var(--primary);"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M16 12.5v.01"></path><path d="M12 16v.01"></path></svg></div>
+<div><h4 style="margin:0 0 8px 0;font-size:1.1rem;font-weight:700;color:var(--text-dark);">Çerez Kullanıyoruz</h4><p style="margin:0 0 20px 0;font-size:0.9rem;line-height:1.5;color:var(--text-light);">Çerez Kullanıyoruz, um Ihre Erfahrung auf unserer Website zu verbessern.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;"><button id="cookie-accept-all" style="padding:10px 20px;font-size:0.9rem;background:#1cc2b2;color:white;border:none;border-radius:99px;cursor:pointer;flex:1;font-family:inherit;font-weight:700;">Tümünü kabul et</button><button id="cookie-essential-only" style="padding:10px 20px;font-size:0.9rem;border:1px solid #ccc;background:white;color:var(--text-dark);cursor:pointer;flex:1;border-radius:99px;font-family:inherit;">Yalnızca zorunlular</button></div>
+</div></div></div>
+<script>document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('cookie-consent-banner');if(!localStorage.getItem('cookieConsent'))b.style.display='block';function h(c){localStorage.setItem('cookieConsent',c);b.style.display='none';}document.getElementById('cookie-accept-all').addEventListener('click',function(){h('all');});document.getElementById('cookie-essential-only').addEventListener('click',function(){h('essential');});});</script>
+</div></body></html>

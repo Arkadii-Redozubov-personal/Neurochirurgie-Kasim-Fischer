@@ -1763,6 +1763,17 @@
 
 
 /* Cookie Consent Banner – mobile */
+#cookie-consent-banner {
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  max-width: 450px;
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  border: 1px solid rgba(0,0,0,0.05);
+}
 @media (max-width: 480px) {
   #cookie-consent-banner {
     padding: 14px !important;

@@ -15,7 +15,7 @@
 <style>
 /* Modal Layout */
 .modal-split-wrap{display:flex;flex-direction:row;background:white;max-width:calc(100vw - 80px);width:100%;height:85vh;max-height:85vh;border-radius:20px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.35);position:relative}
-.modal-video-panel{width:46%;flex-shrink:0;background:#091f22;position:relative;overflow:hidden}
+.modal-video-panel{width:46%;flex-shrink:0;background:#000;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
 .modal-video-panel iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
 .modal-content-panel{flex:1;overflow-y:auto;padding:36px 40px;display:flex;flex-direction:column}
 .modal-close-btn{position:absolute;top:14px;right:14px;z-index:30;background:rgba(0,0,0,0.45);border:none;color:white;width:40px;height:40px;border-radius:8px;cursor:pointer;font-size:22px;display:flex;align-items:center;justify-content:center;line-height:1}
@@ -321,7 +321,7 @@
 <div id="modal-overlay-bsv" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('bsv')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-bsv" src=""></iframe></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Disc Herniation_ru_dubbed.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Грыжа диска <span style="color:#1cc2b2;">Шейный отдел позвоночника/поясничный отдел позвоночника</span></h2><p class="modal-subtitle">Симптомы, течение, лечение и типичная хирургическая процедура.</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Что такое грыжа диска?</h3>
@@ -347,7 +347,7 @@
 <div id="modal-overlay-spinal" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('spinal')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-spinal" src=""></iframe></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Spinal Canal Stenosis.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Спинномозговой канал<span style="color:#1cc2b2;">стеноз</span></h2><p class="modal-subtitle">Когда нервам не хватает места</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Что такое стеноз позвоночного канала?</h3>
@@ -366,7 +366,7 @@
 <div id="modal-overlay-facetten" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('facetten')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-facetten" src=""></iframe></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Фасеточные суставы.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">грани<span style="color:#1cc2b2;">суставы</span></h2><p class="modal-subtitle">Остеоартроз и кисты мелких позвоночных суставов</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Что такое остеоартрит фасеточных суставов?</h3>
@@ -383,7 +383,7 @@
 <div id="modal-overlay-hws" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('hws')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-hws" src=""></iframe></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Halswirbelsäule & Bandscheibenprothese.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">шейный отдел позвоночника <span style="color:#1cc2b2;">и протез межпозвонкового диска</span></h2><p class="modal-subtitle">Декомпрессия, спондилодез и замена диска с сохранением движения</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Заболевания шейного отдела позвоночника</h3>
@@ -397,7 +397,7 @@
 <div id="modal-overlay-kts" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('kts')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-kts" src=""></iframe></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Karpaltunnelsyndrom.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Запястный туннель<span style="color:#1cc2b2;">синдром</span></h2><p class="modal-subtitle">Сдавление срединного нерва запястья.</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Что такое туннельный синдром запястья?</h3>
@@ -411,7 +411,7 @@
 <div id="modal-overlay-sulcus" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('sulcus')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-sulcus" src=""></iframe></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Sulcus-Ulnaris-Syndrom.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">компрессия нерва<span style="color:#1cc2b2;">синдром</span></h2><p class="modal-subtitle">Синдром локтевой борозды и другие синдромы узкого места</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Синдром локтевой борозды</h3>
@@ -424,7 +424,7 @@
 <div id="modal-overlay-chron" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('chron')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-chron" src=""></iframe></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Chronische Rücken.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Хронический <span style="color:#1cc2b2;">Боль в спине/шее</span></h2><p class="modal-subtitle">Индивидуальные, мультимодальные концепции лечения</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Лечите хроническую боль индивидуально</h3>
@@ -436,7 +436,7 @@
 <div id="modal-overlay-neuro" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('neuro')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-neuro" src=""></iframe></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Chronische Rücken.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Нейро<span style="color:#1cc2b2;">модуляция</span></h2><p class="modal-subtitle">Специальная обезболивающая терапия и стимуляция спинного мозга</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Что такое нейромодуляция?</h3>
@@ -454,7 +454,7 @@
 <div id="modal-overlay-isg" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('isg')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-isg" src=""></iframe></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/ISG-Syndrom_ru_dubbed.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">ИСГ<span style="color:#1cc2b2;">синдром</span></h2><p class="modal-subtitle">Раздражение или дисфункция крестцово-подвздошного сустава.</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Что такое синдром SIJ?</h3>
@@ -470,7 +470,7 @@
 <div id="modal-overlay-wkf" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('wkf')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-wkf" src=""></iframe></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Vertebral Fractures & Tumour-related Changes.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Тело позвонка<span style="color:#1cc2b2;">переломы</span></h2><p class="modal-subtitle">Кифопластика и опухолевые изменения позвоночника</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Что такое перелом позвонка?</h3>
@@ -488,7 +488,7 @@
 <div id="modal-overlay-nervkomp" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('nervkomp')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-nervkomp" src=""></iframe></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Karpaltunnelsyndrom.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">компрессия нерва<span style="color:#1cc2b2;">синдром</span></h2><p class="modal-subtitle">Констрикционные синдромы в анатомически узких участках тела.</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Сдавление нерва – что происходит?</h3>
@@ -518,24 +518,18 @@ function openModal(id){
   var el=document.getElementById('modal-overlay-'+id);
   el.style.display='flex';
   document.body.style.overflow='hidden';
-  var iframe=document.getElementById('iframe-'+id);
-  if(iframe) {
-    if (id === 'bsv') iframe.src = '../video/Disc Herniation_ru_dubbed.mp4';
-    else if (id === 'spinal') iframe.src = '../video/Spinal Canal Stenosis.mp4';
-    else if (id === 'facetten') iframe.src = '../video/Фасеточные суставы.mp4';
-    else if (id === 'isg') iframe.src = '../video/ISG-Syndrom.mp4';
-    else if (id === 'kts') iframe.src = '../video/Karpaltunnelsyndrom.mp4';
-    else if (id === 'wkf') iframe.src = '../video/Vertebral Fractures & Tumour-related Changes.mp4';
-    else iframe.src = 'https://www.youtube.com/embed/Zo3enw-hWDk?rel=0&autoplay=1';
-  }
+  // Play the <video> element inside this modal if present
+  var vid=el.querySelector('video');
+  if(vid){vid.currentTime=0;vid.play();}
   el.onclick=function(e){if(e.target===el)closeModal(id);};
 }
 function closeModal(id){
   var el=document.getElementById('modal-overlay-'+id);
   el.style.display='none';
   document.body.style.overflow='';
-  var iframe=document.getElementById('iframe-'+id);
-  if(iframe)iframe.src='';
+  // Pause and reset the <video> element inside this modal
+  var vid=el.querySelector('video');
+  if(vid){vid.pause();vid.currentTime=0;}
 }
 function openBsvModal(){openModal('bsv');}
 function closeBsvModal(){closeModal('bsv');}

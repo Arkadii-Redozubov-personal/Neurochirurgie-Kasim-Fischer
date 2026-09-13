@@ -285,19 +285,8 @@
       flex-direction: column;
       border-left: 1px solid rgba(0,0,0,0.05);
     }
-    .branch-map {
-      width: 100%;
-      height: 300px;
-      border: none;
-    }
-    .branch-qr-section {
-      padding: 32px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      background: rgba(28, 194, 178, 0.05);
-      flex: 1;
-    }
+    .branch-map { width: 100%; flex: 1; min-height: 450px; border: none; }
+    .branch-qr-section { padding: 24px 32px; display: flex; align-items: center; gap: 24px; background: #fff; flex: none; border-top: 1px solid rgba(0,0,0,0.05); }
     .branch-qr-img {
       width: 120px;
       height: 120px;
@@ -415,7 +404,7 @@
             </div>
             <div class="ci-content">
               <h4>Adresse (Viersen)</h4>
-              <p>Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG</p>
+              <p style="margin: 0; font-weight: 600; color: var(--text-dark);">Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG</p>
             </div>
           </div>
         
@@ -434,8 +423,8 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </div>
             <div class="ci-content">
-              <h4>Adresse (D&uuml;sseldorf)</h4>
-              <p>Schadowstra&szlig;e 74, 40212 D&uuml;sseldorf</p>
+              <h4>Adresse (Düsseldorf)</h4>
+              <p style="margin: 0; font-weight: 600; color: var(--text-dark);">Schadowstr. 74, 40212 Düsseldorf (5. OG)</p>
             </div>
           </div>
         
@@ -465,12 +454,6 @@
               <p>Bismarckstr. 106, 41061 M&ouml;nchengladbach, 3. OG</p>
             </div>
           </div>
-          <div class="info-row">
-            <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
-            <div class="info-content">
-              <p style="margin-bottom: 0;">Barrierefreier Zugang: Ja, Aufzug vorhanden.</p>
-            </div>
-          </div>
 
           <div class="info-row">
             <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
@@ -494,16 +477,16 @@
               <h4>&Ouml;ffnungszeiten</h4>
               <table style="width:100%;border-collapse:collapse;margin-top:4px;">
                 <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);white-space:nowrap;">Mo</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;13:00 &amp; 14:00&ndash;18:00 Uhr</td></tr>
-                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Di</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;15:00 Uhr <span style="font-size:0.8rem;color:#e6a817;">(wird best&auml;tigt)</span></td></tr>
+                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Di</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;15:00 Uhr</td></tr>
                 <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Mi</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;15:00 Uhr</td></tr>
                 <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Do</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;13:00 &amp; 14:00&ndash;18:00 Uhr</td></tr>
-                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Fr</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;14:00 Uhr <span style="font-size:0.8rem;color:#e6a817;">(wird best&auml;tigt)</span></td></tr>
+                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Fr</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;14:00 Uhr</td></tr>
                 <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Sa</td><td style="padding:5px 0;color:var(--text-dark);">nach Vereinbarung</td></tr>
               </table>
             </div>
           </div>
 
-          <div class="info-row" style="margin-bottom:40px;">
+          <div class="info-row" style="">
             <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>
             <div class="info-content">
               <h4>Leistungen vor Ort</h4>
@@ -511,11 +494,18 @@
             </div>
           </div>
 
+          <div class="info-row" style="margin-bottom: 40px;">
+            <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+            <div class="info-content">
+              <p style="margin-bottom: 0; color: var(--text-dark); font-weight: 500;">Barrierefreier Zugang: Ja, Aufzug vorhanden.</p>
+            </div>
+          </div>
+
           <a href="https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer" class="btn-primary" style="display:inline-block;padding:16px 32px;font-size:1.1rem;margin-top:auto;text-align:center;" target="_blank">Termin auf Doctolib buchen &rarr;</a>
         </div>
 
         <div class="branch-visuals">
-          <iframe class="branch-map" src="https://maps.google.com/maps?q=Bismarckstr.%20106%2C%2041061%20M%C3%B6nchengladbach%2C%203.%20OG&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe class="branch-map" src="https://maps.google.com/maps?q=Bismarckstr.%20106%2C%2041061%20M%C3%B6nchengladbach&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           <div class="branch-qr-section">
             <img loading="lazy" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A//maps.google.com/maps%3Fq%3DBismarckstr.%2520106%252C%252041061%2520M%25C3%25B6nchengladbach" alt="QR Code Navigation" class="branch-qr-img">
             <p style="color:var(--text-dark);font-size:0.95rem;line-height:1.5;margin:0;max-width:250px;">Scannen Sie den QR-Code mit Ihrem Smartphone, um die Navigation direkt zu starten.</p>
@@ -533,12 +523,6 @@
             <div class="info-content">
               <h4>Adresse</h4>
               <p>Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG</p>
-            </div>
-          </div>
-          <div class="info-row">
-            <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
-            <div class="info-content">
-              <p style="margin-bottom: 0;">Barrierefreier Zugang: Ja, Aufzug vorhanden.</p>
             </div>
           </div>
 
@@ -562,11 +546,18 @@
             <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
             <div class="info-content">
               <h4>&Ouml;ffnungszeiten</h4>
-              <p style="color:var(--text-light);font-style:italic;">auf Anfrage</p>
+              <table style="width:100%;border-collapse:collapse;margin-top:4px;">
+                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);white-space:nowrap;">Mo</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;13:00 &amp; 14:00&ndash;18:00 Uhr</td></tr>
+                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Di</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;15:00 Uhr</td></tr>
+                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Mi</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;15:00 Uhr</td></tr>
+                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Do</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;13:00 &amp; 14:00&ndash;18:00 Uhr</td></tr>
+                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Fr</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;14:00 Uhr</td></tr>
+                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Sa</td><td style="padding:5px 0;color:var(--text-dark);">nach Vereinbarung</td></tr>
+              </table>
             </div>
           </div>
 
-          <div class="info-row" style="margin-bottom:40px;">
+          <div class="info-row" style="">
             <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>
             <div class="info-content">
               <h4>Leistungen vor Ort</h4>
@@ -574,13 +565,20 @@
             </div>
           </div>
 
-          <a href="https://www.doctolib.de/" class="btn-primary" style="display:inline-block;padding:16px 32px;font-size:1.1rem;margin-top:auto;text-align:center;" target="_blank">Termin auf Doctolib buchen &rarr;</a>
+          <div class="info-row" style="margin-bottom: 40px;">
+            <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+            <div class="info-content">
+              <p style="margin-bottom: 0; color: var(--text-dark); font-weight: 500;">Barrierefreier Zugang: Ja, Aufzug vorhanden.</p>
+            </div>
+          </div>
+
+          <a href="https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer" class="btn-primary" style="display:inline-block;padding:16px 32px;font-size:1.1rem;margin-top:auto;text-align:center;" target="_blank">Termin auf Doctolib buchen &rarr;</a>
         </div>
 
         <div class="branch-visuals">
-          <iframe class="branch-map" src="https://maps.google.com/maps?q=Theodor-Heuss-Platz%2010%2C%2041747%20Viersen%2C%204.%20OG&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe class="branch-map" src="https://maps.google.com/maps?q=Theodor-Heuss-Platz%2010%2C%2041747%20Viersen&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           <div class="branch-qr-section">
-            <img loading="lazy" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A//maps.google.com/maps%3Fq%3DTheodor-Heuss-Platz%252010%252C%252041747%2520Viersen%252C%25204.%2520OG" alt="QR Code Navigation" class="branch-qr-img">
+            <img loading="lazy" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A//maps.google.com/maps%3Fq%3DTheodor-Heuss-Platz%252010%252C%252041747%2520Viersen" alt="QR Code Navigation" class="branch-qr-img">
             <p style="color:var(--text-dark);font-size:0.95rem;line-height:1.5;margin:0;max-width:250px;">Scannen Sie den QR-Code mit Ihrem Smartphone, um die Navigation direkt zu starten.</p>
           </div>
         </div>
@@ -595,13 +593,7 @@
             <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
             <div class="info-content">
               <h4>Adresse</h4>
-              <p>Schadowstra&szlig;e 74, 40212 D&uuml;sseldorf</p>
-            </div>
-          </div>
-          <div class="info-row">
-            <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
-            <div class="info-content">
-              <p style="margin-bottom: 0;">Barrierefreier Zugang: Ja, Aufzug vorhanden.</p>
+              <p>Schadowstr. 74, 40212 Düsseldorf (5. OG)</p>
             </div>
           </div>
 
@@ -617,19 +609,33 @@
             <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
             <div class="info-content">
               <h4>&Ouml;ffnungszeiten</h4>
-              <p style="color:var(--text-light);font-style:italic;">auf Anfrage</p>
+              <table style="width:100%;border-collapse:collapse;margin-top:4px;">
+                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);white-space:nowrap;">Mo</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;13:00 &amp; 14:00&ndash;18:00 Uhr</td></tr>
+                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Di</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;15:00 Uhr</td></tr>
+                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Mi</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;15:00 Uhr</td></tr>
+                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Do</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;13:00 &amp; 14:00&ndash;18:00 Uhr</td></tr>
+                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Fr</td><td style="padding:5px 0;color:var(--text-dark);">08:00&ndash;14:00 Uhr</td></tr>
+                <tr><td style="padding:5px 12px 5px 0;font-weight:600;color:var(--text-dark);">Sa</td><td style="padding:5px 0;color:var(--text-dark);">nach Vereinbarung</td></tr>
+              </table>
             </div>
           </div>
 
-          <div class="info-row" style="margin-bottom:40px;">
+          <div class="info-row" style="">
             <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>
             <div class="info-content">
               <h4>Leistungen vor Ort</h4>
-              <p style="color:var(--text-light);font-style:italic;">auf Anfrage</p>
+              <p>Konsultationen, Diagnostik, Nachsorge</p>
             </div>
           </div>
 
-          <a href="#" class="btn-primary" style="display:inline-block;padding:16px 32px;font-size:1.1rem;margin-top:auto;text-align:center;" target="_blank">Termin auf Doctolib buchen &rarr;</a>
+          <div class="info-row" style="margin-bottom: 40px;">
+            <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+            <div class="info-content">
+              <p style="margin-bottom: 0; color: var(--text-dark); font-weight: 500;">Barrierefreier Zugang: Ja, Aufzug vorhanden.</p>
+            </div>
+          </div>
+
+          <a href="https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer" class="btn-primary" style="display:inline-block;padding:16px 32px;font-size:1.1rem;margin-top:auto;text-align:center;" target="_blank">Termin auf Doctolib buchen &rarr;</a>
         </div>
 
         <div class="branch-visuals">

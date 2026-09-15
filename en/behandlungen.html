@@ -17,7 +17,7 @@
 <style>
 /* Modal Layout */
 .modal-split-wrap{display:flex;flex-direction:row;background:white;max-width:calc(100vw - 80px);width:100%;height:85vh;max-height:85vh;border-radius:20px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.35);position:relative}
-.modal-video-panel{width:46%;flex-shrink:0;background:#091f22;position:relative;overflow:hidden}
+.modal-video-panel{width:46%;flex-shrink:0;background:#000;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
 .modal-video-panel iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
 .modal-content-panel{flex:1;overflow-y:auto;padding:36px 40px;display:flex;flex-direction:column}
 .modal-close-btn{position:absolute;top:14px;right:14px;z-index:30;background:rgba(0,0,0,0.45);border:none;color:white;width:40px;height:40px;border-radius:8px;cursor:pointer;font-size:22px;display:flex;align-items:center;justify-content:center;line-height:1}
@@ -228,7 +228,7 @@
 <div id="modal-overlay-bandscheibe" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('bandscheibe')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-__ID__" src=""></iframe></div>
+<div class="modal-video-panel"><video id="video-bandscheibe" controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Bandscheibenoperation (Mikro- & Endoskopisch).mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Intervertebral discs<span style="color:#1cc2b2;">operation</span></h2><p class="modal-subtitle">Microsurgical and endoscopic procedures to relieve nerve root pressure</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">What is the goal of the operation?</h3>
@@ -248,7 +248,7 @@
 <div id="modal-overlay-dekompression" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('dekompression')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-__ID__" src=""></iframe></div>
+<div class="modal-video-panel"><video id="video-dekompression" controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Mikrochirurgische Dekompression & Stabilisierung.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Microsurgical <span style="color:#1cc2b2;">decompression</span></h2><p class="modal-subtitle">Surgical relief for spinal canal stenosis and nerve root compression</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">When is decompression necessary?</h3>
@@ -264,7 +264,7 @@
 <div id="modal-overlay-kyphoplastie" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('kyphoplastie')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-__ID__" src=""></iframe></div>
+<div class="modal-video-panel"><video id="video-kyphoplastie" controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Kyphoplastie & Wirbelkörperstabilisierung.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Kyphoplasty &amp; <span style="color:#1cc2b2;">Vertebral body stabilization</span></h2><p class="modal-subtitle">Minimally invasive treatment of vertebral body fractures and tumor-related changes</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">What is a Kyphoplasty?</h3>
@@ -279,7 +279,7 @@
 <div id="modal-overlay-nervenop" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('nervenop')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-__ID__" src=""></iframe></div>
+<div class="modal-video-panel"><video id="video-nervenop" controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Operative Versorgung peripherer Nerven (KTS, Sulcus).mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Surgical care <span style="color:#1cc2b2;">peripheral nerves</span></h2><p class="modal-subtitle">Carpal tunnel syndrome, ulnar sulcus syndrome and other bottleneck syndromes</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Carpal tunnel syndrome surgery</h3>
@@ -294,7 +294,7 @@
 <div id="modal-overlay-neuromod" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('neuromod')">×</button>
-<div class="modal-video-panel"></div>
+<div class="modal-video-panel"><video id="video-neuromod" controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/neuromodulation.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Neuro<span style="color:#1cc2b2;">modulation</span></h2><p class="modal-subtitle">Special pain therapy &amp; spinal cord stimulation (SCS)</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">What is Neuromodulation?</h3>
@@ -312,7 +312,7 @@
 <div id="modal-overlay-hwsop" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('hwsop')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-__ID__" src=""></iframe></div>
+<div class="modal-video-panel"><video id="video-hwsop" controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/HWS-Operation & Bandscheibenprothetik – Dekompression.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Cervical spine surgery &amp; <span style="color:#1cc2b2;">Intervertebral disc prosthetics</span></h2><p class="modal-subtitle">Decompression, fusion and motion-preserving disc replacement</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Diseases of the cervical spine</h3>
@@ -338,21 +338,20 @@ var mobileMenu=document.getElementById('mobileMenu');
 if(burgerMenu&&mobileMenu){burgerMenu.addEventListener('click',function(){if(mobileMenu.style.display==='flex'){mobileMenu.style.display='none';burgerMenu.textContent='☰';}else{mobileMenu.style.display='flex';burgerMenu.textContent='✕';}});}
 var navbar=document.querySelector('.navbar');
 if(navbar){window.addEventListener('scroll',function(){if(window.scrollY>10){navbar.classList.add('scrolled');}else{navbar.classList.remove('scrolled');}});}
-var VIDEO_SRC='https://www.youtube.com/embed/Zo3enw-hWDk?rel=0&autoplay=1';
 function openModal(id){
   var el=document.getElementById('modal-overlay-'+id);
   el.style.display='flex';
   document.body.style.overflow='hidden';
-  var iframe=document.getElementById('iframe-'+id);
-  if(iframe)iframe.src=VIDEO_SRC;
+  var video=document.getElementById('video-'+id);
+  if(video){video.currentTime=0;video.play();}
   el.onclick=function(e){if(e.target===el)closeModal(id);};
 }
 function closeModal(id){
   var el=document.getElementById('modal-overlay-'+id);
   el.style.display='none';
   document.body.style.overflow='';
-  var iframe=document.getElementById('iframe-'+id);
-  if(iframe)iframe.src='';
+  var video=document.getElementById('video-'+id);
+  if(video){video.pause();video.currentTime=0;}
 }
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){['bandscheibe','dekompression','kyphoplastie','nervenop','neuromod','hwsop'].forEach(function(id){var el=document.getElementById('modal-overlay-'+id);if(el&&el.style.display==='flex')closeModal(id);});}});
 </script>

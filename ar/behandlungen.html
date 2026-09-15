@@ -17,7 +17,7 @@
 <style>
 /* Modal Layout */
 .modal-split-wrap{display:flex;flex-direction:row;background:white;max-width:calc(100vw - 80px);width:100%;height:85vh;max-height:85vh;border-radius:20px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.35);position:relative}
-.modal-video-panel{width:46%;flex-shrink:0;background:#091f22;position:relative;overflow:hidden}
+.modal-video-panel{width:46%;flex-shrink:0;background:#000;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
 .modal-video-panel iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
 .modal-content-panel{flex:1;overflow-y:auto;padding:36px 40px;display:flex;flex-direction:column}
 .modal-close-btn{position:absolute;top:14px;right:14px;z-index:30;background:rgba(0,0,0,0.45);border:none;color:white;width:40px;height:40px;border-radius:8px;cursor:pointer;font-size:22px;display:flex;align-items:center;justify-content:center;line-height:1}
@@ -228,7 +228,7 @@
 <div id="modal-overlay-bandscheibe" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('bandscheibe')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-__ID__" src=""></iframe></div>
+<div class="modal-video-panel"><video id="video-bandscheibe" controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Bandscheibenoperation (Mikro- & Endoskopisch).mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">الأقراص الفقرية<span style="color:#1cc2b2;">عملية</span></h2><p class="modal-subtitle">الإجراءات الجراحية المجهرية والتنظيرية لتخفيف ضغط جذر العصب</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">ما هو الهدف من العملية؟</h3>
@@ -248,7 +248,7 @@
 <div id="modal-overlay-dekompression" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('dekompression')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-__ID__" src=""></iframe></div>
+<div class="modal-video-panel"><video id="video-dekompression" controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Mikrochirurgische Dekompression & Stabilisierung.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">الجراحة المجهرية <span style="color:#1cc2b2;">تخفيف الضغط</span></h2><p class="modal-subtitle">الإغاثة الجراحية لتضيق القناة الشوكية وضغط جذر العصب</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">متى يكون تخفيف الضغط ضروريا؟</h3>
@@ -264,7 +264,7 @@
 <div id="modal-overlay-kyphoplastie" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('kyphoplastie')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-__ID__" src=""></iframe></div>
+<div class="modal-video-panel"><video id="video-kyphoplastie" controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Kyphoplastie & Wirbelkörperstabilisierung.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">رأب الحدب &amp; <span style="color:#1cc2b2;">استقرار الجسم الفقري</span></h2><p class="modal-subtitle">العلاج الجراحي البسيط لكسور الجسم الفقري والتغيرات المرتبطة بالورم</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">ما هو Kyphoplasty؟</h3>
@@ -279,7 +279,7 @@
 <div id="modal-overlay-nervenop" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('nervenop')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-__ID__" src=""></iframe></div>
+<div class="modal-video-panel"><video id="video-nervenop" controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Operative Versorgung peripherer Nerven (KTS, Sulcus).mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">الرعاية الجراحية <span style="color:#1cc2b2;">الأعصاب الطرفية</span></h2><p class="modal-subtitle">متلازمة النفق الرسغي، ومتلازمة التلم الزندي ومتلازمات عنق الزجاجة الأخرى</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">جراحة متلازمة النفق الرسغي</h3>
@@ -294,7 +294,7 @@
 <div id="modal-overlay-neuromod" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('neuromod')">×</button>
-<div class="modal-video-panel"></div>
+<div class="modal-video-panel"><video id="video-neuromod" controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/neuromodulation.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">العصبية<span style="color:#1cc2b2;">تعديل</span></h2><p class="modal-subtitle">علاج الألم الخاص وتحفيز الحبل الشوكي (SCS)</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">ما هو التعديل العصبي؟</h3>
@@ -312,7 +312,7 @@
 <div id="modal-overlay-hwsop" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('hwsop')">×</button>
-<div class="modal-video-panel"><iframe allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" id="iframe-__ID__" src=""></iframe></div>
+<div class="modal-video-panel"><video id="video-hwsop" controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/HWS-Operation & Bandscheibenprothetik – Dekompression.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">جراحة العمود الفقري العنقي &amp; <span style="color:#1cc2b2;">الأطراف الاصطناعية للقرص الفقري</span></h2><p class="modal-subtitle">تخفيف الضغط والدمج واستبدال القرص الذي يحافظ على الحركة</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">أمراض العمود الفقري العنقي</h3>

@@ -312,7 +312,7 @@
 <div id="modal-overlay-hwsop" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('hwsop')">×</button>
-<div class="modal-video-panel"><video id="video-hwsop" controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/HWS-Operation & Bandscheibenprothetik – Dekompression.mp4" type="video/mp4"></video></div>
+<div class="modal-video-panel"><video id="video-hwsop" controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/HWS-Operation & Bandscheibenprothetik – Dekompression_ru_dubbed.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Хирургия шейного отдела позвоночника и <span style="color:#1cc2b2;">Протезирование межпозвоночных дисков</span></h2><p class="modal-subtitle">Декомпрессия, спондилодез и замена диска с сохранением движения</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Заболевания шейного отдела позвоночника</h3>
@@ -338,21 +338,24 @@ var mobileMenu=document.getElementById('mobileMenu');
 if(burgerMenu&&mobileMenu){burgerMenu.addEventListener('click',function(){if(mobileMenu.style.display==='flex'){mobileMenu.style.display='none';burgerMenu.textContent='☰';}else{mobileMenu.style.display='flex';burgerMenu.textContent='✕';}});}
 var navbar=document.querySelector('.navbar');
 if(navbar){window.addEventListener('scroll',function(){if(window.scrollY>10){navbar.classList.add('scrolled');}else{navbar.classList.remove('scrolled');}});}
-var ВИДЕО_SRC='https://www.youtube.com/embed/Zo3enw-hWDk?rel=0&autoplay=1';
 function openModal(id){
   var el=document.getElementById('modal-overlay-'+id);
   el.style.display='flex';
   document.body.style.overflow='hidden';
-  var iframe=document.getElementById('iframe-'+id);
-  if(iframe)iframe.src=ВИДЕО_SRC;
+  var video=document.getElementById('video-'+id);
+  if(video){
+    video.currentTime=0;
+    var p=video.play();
+    if(p!==undefined){p.catch(function(){});}
+  }
   el.onclick=function(e){if(e.target===el)closeModal(id);};
 }
 function closeModal(id){
   var el=document.getElementById('modal-overlay-'+id);
   el.style.display='none';
   document.body.style.overflow='';
-  var iframe=document.getElementById('iframe-'+id);
-  if(iframe)iframe.src='';
+  var video=document.getElementById('video-'+id);
+  if(video){video.pause();video.currentTime=0;}
 }
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){['bandscheibe','dekompression','kyphoplastie','nervenop','neuromod','hwsop'].forEach(function(id){var el=document.getElementById('modal-overlay-'+id);if(el&&el.style.display==='flex')closeModal(id);});}});
 </script>

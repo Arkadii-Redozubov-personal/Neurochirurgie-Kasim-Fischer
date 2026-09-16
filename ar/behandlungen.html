@@ -338,21 +338,24 @@ var mobileMenu=document.getElementById('mobileMenu');
 if(burgerMenu&&mobileMenu){burgerMenu.addEventListener('click',function(){if(mobileMenu.style.display==='flex'){mobileMenu.style.display='none';burgerMenu.textContent='☰';}else{mobileMenu.style.display='flex';burgerMenu.textContent='✕';}});}
 var navbar=document.querySelector('.navbar');
 if(navbar){window.addEventListener('scroll',function(){if(window.scrollY>10){navbar.classList.add('scrolled');}else{navbar.classList.remove('scrolled');}});}
-var فيديو_SRC='https://www.youtube.com/embed/Zo3enw-hWDk?rel=0&autoplay=1';
 function openModal(id){
   var el=document.getElementById('modal-overlay-'+id);
   el.style.display='flex';
   document.body.style.overflow='hidden';
-  var iframe=document.getElementById('iframe-'+id);
-  if(iframe)iframe.src=فيديو_SRC;
+  var video=document.getElementById('video-'+id);
+  if(video){
+    video.currentTime=0;
+    var p=video.play();
+    if(p!==undefined){p.catch(function(){});}
+  }
   el.onclick=function(e){if(e.target===el)closeModal(id);};
 }
 function closeModal(id){
   var el=document.getElementById('modal-overlay-'+id);
   el.style.display='none';
   document.body.style.overflow='';
-  var iframe=document.getElementById('iframe-'+id);
-  if(iframe)iframe.src='';
+  var video=document.getElementById('video-'+id);
+  if(video){video.pause();video.currentTime=0;}
 }
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){['bandscheibe','dekompression','kyphoplastie','nervenop','neuromod','hwsop'].forEach(function(id){var el=document.getElementById('modal-overlay-'+id);if(el&&el.style.display==='flex')closeModal(id);});}});
 </script>

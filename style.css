@@ -2542,7 +2542,4 @@
 }
 
 
-@media (max-height: 980px) and (min-width: 769px) {
-  .floating-doctolib { padding: 16px !important; width: 280px !important; bottom: 20px !important; right: 20px !important; }
-  .floating-doctolib .fd-btn { padding: 10px !important; font-size: 0.9rem !important; }
-}
+

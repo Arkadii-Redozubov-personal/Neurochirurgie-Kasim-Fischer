@@ -2,3 +2,19 @@ pdfs/*.json
 *.pyc
 __pycache__/
 .env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temp / dev artifacts
+*.log
+*.tmp
+*.bak
+*_diff.txt

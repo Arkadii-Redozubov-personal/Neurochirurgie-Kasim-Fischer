@@ -10,7 +10,10 @@
 <meta content="Praxis-Schwerpunkte | Neurochirurgie Fischer" property="og:title"/>
 <meta content="https://my-bandscheibe.de/praxis-schwerpunkte.html" property="og:url"/>
 <meta content="website" property="og:type"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 <link href="../style.css" rel="stylesheet"/>
 <style>
 /* Modal Layout */
@@ -88,7 +91,7 @@
 <body>
 <div class="page-wrapper">
 <div class="hero-inner-sub" style="background:linear-gradient(to right,rgba(9,31,34,0.95) 0%,rgba(9,31,34,0.6) 100%),url('../img/diseases.webp') center/cover no-repeat #091f22;"><div class="container"><nav class="navbar" style="margin-bottom:60px;">
-<a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;"><img alt="" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/><span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NabiOta Health Group Germany</span></a>
+<a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;"><img alt="NabiOta Health Group Germany" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/><span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NabiOta Health Group Germany</span></a>
 <div class="nav-links">
 <a href="../index.html">Ana Sayfa</a>
 <a href="../unser-team.html">Klinik</a>
@@ -136,7 +139,7 @@
 <p class="disease-card-desc">Sinir köklerini veya omuriliği tahriş eden disk dokusunun çıkması veya fıtıklaşması. Boyun veya bel omurgasını etkileyebilir.</p>
 <button class="disease-card-btn" onclick="openModal('bsv');event.stopPropagation();">Daha fazla →</button>
 </div>
-<div class="disease-card-right"><img alt="Disk Fıtığı (Servikal/Lumbar)" src="../img/Bandscheibenoperation (Mikro- &amp; Endoskopisch).webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Disk Fıtığı (Servikal/Lumbar)" src="../img/Bandscheibenoperation (Mikro- &amp; Endoskopisch).webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 <div class="disease-card-wide" onclick="openModal('spinal')">
 <div class="disease-card-left">
@@ -145,7 +148,7 @@
 <p class="disease-card-desc">Omurilik veya sinirlere baskı uygulayan omurga kanalının daralması. Tipik olarak yürürken ağrıya neden olur, oturmakla geçer.</p>
 <button class="disease-card-btn" onclick="openModal('spinal');event.stopPropagation();">Daha fazla →</button>
 </div>
-<div class="disease-card-right"><img alt="Spinal Kanal Darlığı" src="../img/spine_stenosis.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Spinal Kanal Darlığı" src="../img/spine_stenosis.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 <div class="disease-card-wide" onclick="openModal('facetten')">
 <div class="disease-card-left">
@@ -154,7 +157,7 @@
 <p class="disease-card-desc">Küçük omur eklemlerinin artroz ve kistleri. Hareketle şiddetlenebilen yerel sırt veya boyun ağrısına neden olur.</p>
 <button class="disease-card-btn" onclick="openModal('facetten');event.stopPropagation();">Daha fazla →</button>
 </div>
-<div class="disease-card-right"><img alt="Faset Eklemler" src="../img/Facet Joint Disorders.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Faset Eklemler" src="../img/Facet Joint Disorders.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 <div class="disease-card-wide" onclick="openModal('hws')">
 <div class="disease-card-left">
@@ -163,7 +166,7 @@
 <p class="disease-card-desc">Boyun omurgasındaki değişiklikler sinir köklerini ve omuriliği etkileyebilir. Bulgulara göre: dekompresyon, füzyon veya hareketliliği koruyan disk replasmanı.</p>
 <button class="disease-card-btn" onclick="openModal('hws');event.stopPropagation();">Daha fazla →</button>
 </div>
-<div class="disease-card-right"><img alt="HWS Bandscheibenprothese" src="../img/HalswirbelsäuleBandscheibenprothese.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="HWS Bandscheibenprothese" src="../img/HalswirbelsäuleBandscheibenprothese.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 </div>
 <div class="disease-cards-grid" style="margin-top:24px;">
@@ -174,7 +177,7 @@
 <p class="disease-card-desc">Sakroiliak eklemin tahrişi veya işlev bozukluğu. Tipik olarak alt sırtta ve pelvik bölgede kalçaya veya uylukta yayılan ağrıya neden olur.</p>
 <button class="disease-card-btn" onclick="openModal('isg');event.stopPropagation();">Daha fazla →</button>
 </div>
-<div class="disease-card-right"><img alt="SI Eklem Sendromu" src="../img/Sacroiliac Joint (ISG).webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="SI Eklem Sendromu" src="../img/Sacroiliac Joint (ISG).webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 <div class="disease-card-wide" onclick="openModal('wkf')">
 <div class="disease-card-left">
@@ -183,7 +186,7 @@
 <p class="disease-card-desc">Düşme sonrası, osteoporoz veya tümör tutulumu nedeniyle vertebra cismi kırığı. Nedene ve kararlılığa göre kifoplasti veya multidisipliner terapi.</p>
 <button class="disease-card-btn" onclick="openModal('wkf');event.stopPropagation();">Daha fazla →</button>
 </div>
-<div class="disease-card-right"><img alt="Wirbelkörperfrakturen" src="../img/spine_fracture.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Wirbelkörperfrakturen" src="../img/spine_fracture.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 </div>
 <div class="default-cards-grid">
@@ -218,7 +221,7 @@
 <p class="disease-card-desc">Bilekte median sinir sıkışması. Başparmak, işaret ve orta parmakta karıncalanma, uyuşma ve güçsüzlüğe neden olur – genellikle geceleri daha şiddetli.</p>
 <button class="disease-card-btn" onclick="openModal('kts');event.stopPropagation();">Daha fazla →</button>
 </div>
-<div class="disease-card-right"><img alt="Karpal Tünel Sendromu" src="../img/Karpaltunnelsyndrom.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Karpal Tünel Sendromu" src="../img/Karpaltunnelsyndrom.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 <div class="disease-card-wide" onclick="openModal('sulcus')">
 <div class="disease-card-left">
@@ -227,7 +230,7 @@
 <p class="disease-card-desc">Dirseğe ulnar sinir sıkışması. Serçe ve yüzük parmakta karıncalanma ve uyuşma, dirseğe ağrı – uzun süreli seyirde el güçsüzlüğü.</p>
 <button class="disease-card-btn" onclick="openModal('sulcus');event.stopPropagation();">Daha fazla →</button>
 </div>
-<div class="disease-card-right"><img alt="Kubital Tünel Sendromu" src="../img/Sulcus-Ulnaris-Syndrom.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Kubital Tünel Sendromu" src="../img/Sulcus-Ulnaris-Syndrom.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 <div class="disease-card-wide" onclick="openModal('nervkomp')">
 <div class="disease-card-left">
@@ -236,7 +239,7 @@
 <p class="disease-card-desc">Vücudun anatomik dar noktalarında başka tuzak sendromları. Sinir sıkışması ile karıncalanma, uyuşma, ağrı ve – uzun süreli hasarla – güçsüzlük.</p>
 <button class="disease-card-btn" onclick="openModal('nervkomp');event.stopPropagation();">Daha fazla →</button>
 </div>
-<div class="disease-card-right"><img alt="Sinir Sıkışma Sendromları" src="../img/Nervenkompressionssyndrome.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Sinir Sıkışma Sendromları" src="../img/Nervenkompressionssyndrome.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 </div>
 <div class="default-cards-grid">
@@ -271,7 +274,7 @@
 <p class="disease-card-desc">Birkaç aydan uzun süren kalıcı ağrı. Bireysel, multimodal bir tedavi konsepti gerektirir.</p>
 <button class="disease-card-btn" onclick="openModal('chron');event.stopPropagation();">Daha fazla →</button>
 </div>
-<div class="disease-card-right"><img alt="Chronische Schmerzen" src="../img/Chronische RückenNackenschmerzen.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Chronische Schmerzen" src="../img/Chronische RückenNackenschmerzen.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 <div class="disease-card-wide" onclick="openModal('neuro')">
 <div class="disease-card-left">
@@ -280,7 +283,7 @@
 <p class="disease-card-desc">Kronik ağrıyı kalıcı olarak hafifletmek için sinir yollarının hedefli elektriksel stimülasyonuyla yenilikçi minimal invaziv ağrı terapisi.</p>
 <button class="disease-card-btn" onclick="openModal('neuro');event.stopPropagation();">Daha fazla →</button>
 </div>
-<div class="disease-card-right"><img alt="Nöromodülasyon" src="../img/Neuromodulation.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Nöromodülasyon" src="../img/Neuromodulation.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 </div>
 <div class="default-cards-grid">
@@ -304,7 +307,7 @@
 </div>
 </div></div>
 <footer class="footer-wrapper"><div class="container footer-grid">
-<div class="footer-brand"><a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;"><img alt="" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/><span style="font-weight:700;font-size:1.4rem;color:white;white-space:nowrap;">NabiOta Health Group Germany</span></a>
+<div class="footer-brand"><a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;"><img alt="NabiOta Health Group Germany" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/><span style="font-weight:700;font-size:1.4rem;color:white;white-space:nowrap;">NabiOta Health Group Germany</span></a>
 <div style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.6;margin-bottom:16px;">Bismarckstr. 106<br/>41061 Mönchengladbach</div>
 <div style="color:rgba(255,255,255,0.9);font-weight:600;margin-bottom:4px;">(02161) 678 26 83</div>
 <a href="mailto:kontakt@my-bandscheibe.de" style="color:var(--primary);text-decoration:none;font-size:0.95rem;display:inline-block;margin-bottom:24px;">kontakt@my-bandscheibe.de</a>
@@ -347,7 +350,7 @@
 <div id="modal-overlay-spinal" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('spinal')">×</button>
-<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Spinalkanalstenose.mp4" type="video/mp4"></video></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/spinal_canal_en.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Spinal Kanal <span style="color:#1cc2b2;">Stenozu</span></h2><p class="modal-subtitle">Sinirlerin yeterli alana sahip olmadığı durumlar</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Omurilik kanalı stenozu nedir?</h3>
@@ -397,7 +400,7 @@
 <div id="modal-overlay-kts" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('kts')">×</button>
-<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Karpaltunnelsyndrom_new.mp4" type="video/mp4"></video></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Karpaltunnelsyndrom_new_en.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Karpal Tünel <span style="color:#1cc2b2;">Sendromu</span></h2><p class="modal-subtitle">Bilekte median sinir sıkışması</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Karpal tünel sendromu nedir?</h3>
@@ -488,7 +491,7 @@
 <div id="modal-overlay-nervkomp" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('nervkomp')">×</button>
-<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Nervenkompressionssyndrome.mp4" type="video/mp4"></video></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Nervenkompressionssyndrome_en.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Sinir Sıkışma <span style="color:#1cc2b2;">Sendromları</span></h2><p class="modal-subtitle">Kubital tünel sendromu ve diğer tuzak sendromları</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Sinir sıkışması – ne olur?</h3>

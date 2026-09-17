@@ -10,7 +10,10 @@
 <meta content="Praxis-Schwerpunkte | Neurochirurgie Fischer" property="og:title"/>
 <meta content="https://my-bandscheibe.de/praxis-schwerpunkte.html" property="og:url"/>
 <meta content="website" property="og:type"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 <link href="../style.css" rel="stylesheet"/>
 <style>
 /* Modal Layout */
@@ -88,7 +91,7 @@
 <body>
 <div class="page-wrapper">
 <div class="hero-inner-sub" style="background:linear-gradient(to right,rgba(9,31,34,0.95) 0%,rgba(9,31,34,0.6) 100%),url('../img/diseases.webp') center/cover no-repeat #091f22;"><div class="container"><nav class="navbar" style="margin-bottom:60px;">
-<a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;"><img alt="" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/><span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NabiOta Health Group Germany</span></a>
+<a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;"><img alt="NabiOta Health Group Germany" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/><span style="font-weight:700;font-size:1.4rem;letter-spacing:0.5px;color:white;white-space:nowrap;">NabiOta Health Group Germany</span></a>
 <div class="nav-links">
 <a href="../index.html">Главная</a>
 <a href="../unser-team.html">Клиника</a>
@@ -136,7 +139,7 @@
 <p class="disease-card-desc">Выпячивание или выпадение дискового материала, раздражающего нервные корешки или спинной мозг. Может поражать шейный или поясничный отдел позвоночника.</p>
 <button class="disease-card-btn" onclick="openModal('bsv');event.stopPropagation();">Подробнее →</button>
 </div>
-<div class="disease-card-right"><img alt="Межпозвоночная грыжа (ШОП/ПОП)" src="../img/Bandscheibenoperation (Mikro- &amp; Endoskopisch).webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Межпозвоночная грыжа (ШОП/ПОП)" src="../img/Bandscheibenoperation (Mikro- &amp; Endoskopisch).webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 <div class="disease-card-wide" onclick="openModal('spinal')">
 <div class="disease-card-left">
@@ -145,7 +148,7 @@
 <p class="disease-card-desc">Сужение позвоночного канала, создающее давление на спинной мозг или нервы. Типично — боль при ходьбе, которая уменьшается в сидячем положении.</p>
 <button class="disease-card-btn" onclick="openModal('spinal');event.stopPropagation();">Подробнее →</button>
 </div>
-<div class="disease-card-right"><img alt="Стеноз спинного канала" src="../img/spine_stenosis.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Стеноз спинного канала" src="../img/spine_stenosis.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 <div class="disease-card-wide" onclick="openModal('facetten')">
 <div class="disease-card-left">
@@ -154,7 +157,7 @@
 <p class="disease-card-desc">Артроз и кисты мелких межпозвонковых суставов. Вызывает локальную боль в спине или шее, которая может усиливаться при движении.</p>
 <button class="disease-card-btn" onclick="openModal('facetten');event.stopPropagation();">Подробнее →</button>
 </div>
-<div class="disease-card-right"><img alt="Фасеточные суставы" src="../img/Facet Joint Disorders.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Фасеточные суставы" src="../img/Facet Joint Disorders.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 <div class="disease-card-wide" onclick="openModal('hws')">
 <div class="disease-card-left">
@@ -163,7 +166,7 @@
 <p class="disease-card-desc">Изменения в шейном отделе позвоночника могут влиять на нервные корешки и спинной мозг. В зависимости от диагноза: декомпрессия, спондилодез или протезирование диска.</p>
 <button class="disease-card-btn" onclick="openModal('hws');event.stopPropagation();">Подробнее →</button>
 </div>
-<div class="disease-card-right"><img alt="HWS Bandscheibenprothese" src="../img/HalswirbelsäuleBandscheibenprothese.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="HWS Bandscheibenprothese" src="../img/HalswirbelsäuleBandscheibenprothese.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 </div>
 <div class="disease-cards-grid" style="margin-top:24px;">
@@ -174,7 +177,7 @@
 <p class="disease-card-desc">Раздражение или дисфункция крестцово-подвздошного сустава. Типично — боль в нижней части спины и тазовой области, которая может иррадиировать в ягодицу или бедро.</p>
 <button class="disease-card-btn" onclick="openModal('isg');event.stopPropagation();">Подробнее →</button>
 </div>
-<div class="disease-card-right"><img alt="Синдром КПС" src="../img/Sacroiliac Joint (ISG).webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Синдром КПС" src="../img/Sacroiliac Joint (ISG).webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 <div class="disease-card-wide" onclick="openModal('wkf')">
 <div class="disease-card-left">
@@ -183,7 +186,7 @@
 <p class="disease-card-desc">Перелом тела позвонка после падения, при остеопорозе или опухолевом поражении. Кифопластика или мультидисциплинарная терапия в зависимости от причины и стабильности.</p>
 <button class="disease-card-btn" onclick="openModal('wkf');event.stopPropagation();">Подробнее →</button>
 </div>
-<div class="disease-card-right"><img alt="Wirbelkörperfrakturen" src="../img/spine_fracture.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Wirbelkörperfrakturen" src="../img/spine_fracture.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 </div>
 <div class="default-cards-grid">
@@ -218,7 +221,7 @@
 <p class="disease-card-desc">Компрессия срединного нерва в запястье. Вызывает покалывание, онемение и слабость в большом, указательном и среднем пальцах — часто усиливается ночью.</p>
 <button class="disease-card-btn" onclick="openModal('kts');event.stopPropagation();">Подробнее →</button>
 </div>
-<div class="disease-card-right"><img alt="Синдром запястного канала" src="../img/Karpaltunnelsyndrom.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Синдром запястного канала" src="../img/Karpaltunnelsyndrom.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 <div class="disease-card-wide" onclick="openModal('sulcus')">
 <div class="disease-card-left">
@@ -227,7 +230,7 @@
 <p class="disease-card-desc">Компрессия локтевого нерва в области локтя. Покалывание и онемение в мизинце и безымянном пальце, боль в локте — при длительном течении снижение силы кисти.</p>
 <button class="disease-card-btn" onclick="openModal('sulcus');event.stopPropagation();">Подробнее →</button>
 </div>
-<div class="disease-card-right"><img alt="Синдром кубитального канала" src="../img/Sulcus-Ulnaris-Syndrom.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Синдром кубитального канала" src="../img/Sulcus-Ulnaris-Syndrom.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 <div class="disease-card-wide" onclick="openModal('nervkomp')">
 <div class="disease-card-left">
@@ -236,7 +239,7 @@
 <p class="disease-card-desc">Дополнительные туннельные синдромы в анатомически узких местах тела. Компрессия нервов с покалыванием, онемением, болью и — при длительном повреждении — слабостью.</p>
 <button class="disease-card-btn" onclick="openModal('nervkomp');event.stopPropagation();">Подробнее →</button>
 </div>
-<div class="disease-card-right"><img alt="Синдромы сдавления нерва" src="../img/Nervenkompressionssyndrome.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Синдромы сдавления нерва" src="../img/Nervenkompressionssyndrome.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 </div>
 <div class="default-cards-grid">
@@ -271,7 +274,7 @@
 <p class="disease-card-desc">Стойкая боль, продолжающаяся несколько месяцев. Требует индивидуальной мультимодальной концепции лечения.</p>
 <button class="disease-card-btn" onclick="openModal('chron');event.stopPropagation();">Подробнее →</button>
 </div>
-<div class="disease-card-right"><img alt="Chronische Schmerzen" src="../img/Chronische RückenNackenschmerzen.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Chronische Schmerzen" src="../img/Chronische RückenNackenschmerzen.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 <div class="disease-card-wide" onclick="openModal('neuro')">
 <div class="disease-card-left">
@@ -280,7 +283,7 @@
 <p class="disease-card-desc">Инновационные методы малоинвазивной терапии боли посредством целенаправленной электрической стимуляции нервных путей для устойчивого облегчения хронической боли.</p>
 <button class="disease-card-btn" onclick="openModal('neuro');event.stopPropagation();">Подробнее →</button>
 </div>
-<div class="disease-card-right"><img alt="Нейромодуляция" src="../img/Neuromodulation.webp"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Нейромодуляция" src="../img/Neuromodulation.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
 </div>
 <div class="default-cards-grid">
@@ -304,7 +307,7 @@
 </div>
 </div></div>
 <footer class="footer-wrapper"><div class="container footer-grid">
-<div class="footer-brand"><a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;"><img alt="" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/><span style="font-weight:700;font-size:1.4rem;color:white;white-space:nowrap;">NabiOta Health Group Germany</span></a>
+<div class="footer-brand"><a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;"><img alt="NabiOta Health Group Germany" src="../img/logo_white.webp" style="height:60px;width:auto;border-radius:12px;"/><span style="font-weight:700;font-size:1.4rem;color:white;white-space:nowrap;">NabiOta Health Group Germany</span></a>
 <div style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.6;margin-bottom:16px;">Bismarckstr. 106<br/>41061 Mönchengladbach</div>
 <div style="color:rgba(255,255,255,0.9);font-weight:600;margin-bottom:4px;">(02161) 678 26 83</div>
 <a href="mailto:kontakt@my-bandscheibe.de" style="color:var(--primary);text-decoration:none;font-size:0.95rem;display:inline-block;margin-bottom:24px;">kontakt@my-bandscheibe.de</a>
@@ -347,7 +350,7 @@
 <div id="modal-overlay-spinal" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('spinal')">×</button>
-<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Spinalkanalstenose_ru_dubbed.mp4" type="video/mp4"></video></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/spinal_canal_rus.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Стеноз <span style="color:#1cc2b2;">спинного канала</span></h2><p class="modal-subtitle">Когда нервам не хватает пространства</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Что такое стеноз позвоночного канала?</h3>
@@ -488,7 +491,7 @@
 <div id="modal-overlay-nervkomp" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('nervkomp')">×</button>
-<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Nervenkompressionssyndrome.mp4" type="video/mp4"></video></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Nervenkompressionssyndrome_ru.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Синдромы <span style="color:#1cc2b2;">сдавления нерва</span></h2><p class="modal-subtitle">Синдром кубитального канала и другие туннельные синдромы</p></div>
 <div style="margin-bottom:24px;"><h3 class="modal-section-h">Сдавление нерва – что происходит?</h3>

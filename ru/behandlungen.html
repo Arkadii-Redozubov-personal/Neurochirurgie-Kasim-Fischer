@@ -273,37 +273,15 @@
 <a class="fd-btn" href="https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer?utm_campaign=website-button&amp;utm_source=kasim-fischer-website-button&amp;utm_medium=referral&amp;utm_content=custom&amp;utm_term=kasim-fischer" target="_blank">Забронировать на Доктолибе →</a>
 <div class="fd-secure"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Ihre Daten sind sicher und vertraulich.</div>
 </div>
-<script>
-var burgerMenu=document.getElementById('burgerMenu');
-var mobileMenu=document.getElementById('mobileMenu');
-if(burgerMenu&&mobileMenu){burgerMenu.addEventListener('click',function(){if(mobileMenu.style.display==='flex'){mobileMenu.style.display='none';burgerMenu.textContent='☰';}else{mobileMenu.style.display='flex';burgerMenu.textContent='✕';}});}
-var navbar=document.querySelector('.navbar');
-if(navbar){window.addEventListener('scroll',function(){if(window.scrollY>10){navbar.classList.add('scrolled');}else{navbar.classList.remove('scrolled');}});}
-function openModal(id){
-  var el=document.getElementById('modal-overlay-'+id);
-  el.style.display='flex';
-  document.body.style.overflow='hidden';
-  var video=document.getElementById('video-'+id);
-  if(video){
-    video.currentTime=0;
-    var p=video.play();
-    if(p!==undefined){p.catch(function(){});}
-  }
-  el.onclick=function(e){if(e.target===el)closeModal(id);};
-}
-function closeModal(id){
-  var el=document.getElementById('modal-overlay-'+id);
-  el.style.display='none';
-  document.body.style.overflow='';
-  var video=document.getElementById('video-'+id);
-  if(video){video.pause();video.currentTime=0;}
-}
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){['bandscheibe','dekompression','kyphoplastie','nervenop','neuromod','hwsop'].forEach(function(id){var el=document.getElementById('modal-overlay-'+id);if(el&&el.style.display==='flex')closeModal(id);});}});
-</script>
+
 <div id="cookie-consent-banner" style="display:none;position:fixed;bottom:20px;left:20px;right:20px;max-width:450px;background:white;padding:24px;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,0.15);z-index:999999;border:1px solid rgba(0,0,0,0.05);font-family:'Plus Jakarta Sans',sans-serif;">
 <div style="display:flex;align-items:flex-start;gap:16px;"><div style="background:rgba(28,194,178,0.1);padding:12px;border-radius:8px;color:var(--primary);"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M16 12.5v.01"></path><path d="M12 16v.01"></path></svg></div>
 <div><h4 style="margin:0 0 8px 0;font-size:1.1rem;font-weight:700;color:var(--text-dark);">Мы используем файлы cookie</h4><p style="margin:0 0 20px 0;font-size:0.9rem;line-height:1.5;color:var(--text-light);">Мы используем файлы cookie, um Ihre Erfahrung auf unserer Website zu verbessern.</p>
 <div style="display:flex;gap:12px;flex-wrap:wrap;"><button id="cookie-accept-all" style="padding:10px 20px;font-size:0.9rem;background:#1cc2b2;color:white;border:none;border-radius:99px;cursor:pointer;flex:1;font-family:inherit;font-weight:700;">Принять все</button><button id="cookie-essential-only" style="padding:10px 20px;font-size:0.9rem;border:1px solid #ccc;background:white;color:var(--text-dark);cursor:pointer;flex:1;border-radius:99px;font-family:inherit;">Только основные</button></div>
 </div></div></div>
 <script>document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('cookie-consent-banner');if(!localStorage.getItem('cookieConsent'))b.style.display='block';function h(c){localStorage.setItem('cookieConsent',c);b.style.display='none';}document.getElementById('cookie-accept-all').addEventListener('click',function(){h('all');});document.getElementById('cookie-essential-only').addEventListener('click',function(){h('essential');});});</script>
-</div></body></html>
+</div>
+<script src="../js/navbar.js"></script>
+<script src="../js/cookies.js"></script>
+<script src="../js/modal.js"></script>
+</body></html>

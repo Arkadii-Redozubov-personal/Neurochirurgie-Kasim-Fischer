@@ -807,116 +807,9 @@
   
 </div>
 
-<script>
-  // Mobile Menu Toggle
-  const burgerMenu = document.getElementById('burgerMenu');
-  const mobileMenu = document.getElementById('mobileMenu');
-  burgerMenu.addEventListener('click', () => {
-    if (mobileMenu.style.display === 'flex') {
-      mobileMenu.style.display = 'none';
-      burgerMenu.textContent = '☰';
-    } else {
-      mobileMenu.style.display = 'flex';
-      burgerMenu.textContent = '✕';
-    }
-  });
 
-  // FAQ Accordion Toggle
-  const faqItems = document.querySelectorAll('.faq-question');
-  faqItems.forEach(item => {
-    item.addEventListener('click', () => {
-      // Close other items
-      faqItems.forEach(otherItem => {
-        if (otherItem !== item) {
-          otherItem.nextElementSibling.style.display = 'none';
-          otherItem.querySelector('.faq-icon').textContent = '▼';
-        }
-      });
-      
-      const answer = item.nextElementSibling;
-      const icon = item.querySelector('.faq-icon');
-      if (answer.style.display === 'block') {
-        answer.style.display = 'none';
-        icon.textContent = '▼';
-      } else {
-        answer.style.display = 'block';
-        icon.textContent = '▲';
-      }
-    });
-  });
 
-  // Counter Animation
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseFloat(el.getAttribute('data-target'));
-        const duration = 2000;
-        const stepTime = 30;
-        const steps = duration / stepTime;
-        const stepVal = target / steps;
-        let current = 0;
-        
-        const suffix = el.getAttribute('data-suffix') || '';
-        const isDecimal = target % 1 !== 0;
 
-        const timer = setInterval(() => {
-          current += stepVal;
-          if (current >= target) {
-            current = target;
-            clearInterval(timer);
-          }
-          
-          let displayVal = current;
-          let currentSuffix = suffix;
-          if (isDecimal) {
-            displayVal = current.toFixed(1);
-          } else {
-            displayVal = Math.floor(current);
-            if (target === 1000) {
-              if (current >= 1000) {
-                displayVal = "1";
-                currentSuffix = "k+";
-              } else {
-                currentSuffix = "+";
-              }
-            }
-          }
-          el.innerHTML = displayVal + currentSuffix;
-        }, stepTime);
-        counterObserver.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
-  
-  document.querySelectorAll('.counter-value').forEach(el => counterObserver.observe(el));
-
-  // Fade-in Animation
-  const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        fadeObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
-</script>
-
-<script>
-  // Sticky Navbar
-  const navbar = document.querySelector('.navbar');
-  if (navbar) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-  }
-</script>
 
     <!-- Floating Doctolib Widget -->
     <div class="floating-doctolib">
@@ -956,75 +849,16 @@
     </div>
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const cookieBanner = document.getElementById('cookie-consent-banner');
-      const btnAccept = document.getElementById('cookie-accept-all');
-      const btnEssential = document.getElementById('cookie-essential-only');
-      
-      if (!localStorage.getItem('cookieConsent')) {
-        cookieBanner.style.display = 'block';
-      }
-      
-      function hideBanner(choice) {
-        localStorage.setItem('cookieConsent', choice);
-        cookieBanner.style.display = 'none';
-      }
-      
-      btnAccept.addEventListener('click', () => hideBanner('all'));
-      btnEssential.addEventListener('click', () => hideBanner('essential'));
-    });
-  </script>
+  
 
 <!-- EmailJS Integration -->
 <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "-dY76BrZbuYUmTruZ",
-      });
-   })();
-   
-   function sendEmail(e) {
-      e.preventDefault();
-      
-      const emailInput = document.getElementById('user_email');
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(emailInput.value)) {
-          alert('Lütfen geçerli bir e-posta adresi girin.');
-          emailInput.focus();
-          return;
-      }
-      
-      const btn = document.getElementById('submit-btn');
-      const status = document.getElementById('form-status');
-      
-      const originalText = btn.innerHTML;
-      btn.innerText = 'Gönderiliyor...';
-      btn.disabled = true;
-      status.style.display = 'none';
 
-      Promise.all([
-        emailjs.sendForm('service_ecu13bq', 'template_bfsngtg', '#contact-form'),
-        emailjs.sendForm('service_ecu13bq', 'template_uuk8onk', '#contact-form')
-      ])
-        .then(() => {
-            btn.innerHTML = originalText;
-            btn.disabled = false;
-            status.style.display = 'block';
-            status.style.color = '#2ecc71';
-            status.innerText = 'Mesaj başarıyla gönderildi!';
-            document.getElementById('contact-form').reset();
-        }, (err) => {
-            btn.innerHTML = originalText;
-            btn.disabled = false;
-            status.style.display = 'block';
-            status.style.color = '#e74c3c';
-            status.innerText = 'Gönderme hatası. Lütfen daha sonra tekrar deneyin.';
-            console.error('EmailJS error:', err);
-        });
-   }
-</script>
+
+<script src="../js/navbar.js"></script>
+<script src="../js/cookies.js"></script>
+<script src="../js/form.js"></script>
+<script src="../js/slider.js"></script>
 </body>
 </html>
 

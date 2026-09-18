@@ -257,35 +257,8 @@
     </div>
 </footer>
 </div>
-<script>
-  // Mobile Menu Toggle
-  const burgerMenu = document.getElementById('burgerMenu');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (burgerMenu && mobileMenu) {
-    burgerMenu.addEventListener('click', () => {
-      if (mobileMenu.style.display === 'flex') {
-        mobileMenu.style.display = 'none';
-        burgerMenu.textContent = '☰';
-      } else {
-        mobileMenu.style.display = 'flex';
-        burgerMenu.textContent = '✕';
-      }
-    });
-  }
-</script>
-<script>
-  // Sticky Navbar
-  const navbar = document.querySelector('.navbar');
-  if (navbar) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-  }
-</script>
+
+
 <!-- Floating Doctolib Widget -->
 <div class="floating-doctolib">
 <div class="fd-close" onclick="this.parentElement.style.display='none'">
@@ -320,41 +293,7 @@
 </div>
 </div>
 </div>
-<script>
-  function openTreatmentModal(btn) {
-    const contentDiv = btn.closest('.treatment-content');
-    if(!contentDiv) return;
-    
-    const title = contentDiv.querySelector('.treatment-title').innerText;
-    const fullDesc = contentDiv.querySelector('.treatment-full-desc');
-      const desc = fullDesc ? fullDesc.innerHTML : contentDiv.querySelector('.treatment-desc').innerHTML;
-    
-    document.getElementById('tModalTitle').innerText = title;
-    document.getElementById('tModalDesc').innerHTML = desc;
-    
-    // Placeholder AI Video (using the YouTube ID for now)
-    document.getElementById('tModalVideo').src = "https://www.youtube.com/embed/Zo3enw-hWDk?enablejsapi=1&rel=0&autoplay=1";
-    
-    document.getElementById('treatmentModal').classList.add('show');
-  }
 
-  const treatmentModal = document.getElementById('treatmentModal');
-  const closeTreatmentModalBtn = document.getElementById('closeTreatmentModalBtn');
-
-  if(closeTreatmentModalBtn && treatmentModal) {
-    closeTreatmentModalBtn.addEventListener('click', () => {
-      treatmentModal.classList.remove('show');
-      document.getElementById('tModalVideo').src = ""; // Stop video
-    });
-
-    window.addEventListener('click', (e) => {
-      if (e.target === treatmentModal) {
-        treatmentModal.classList.remove('show');
-        document.getElementById('tModalVideo').src = ""; // Stop video
-      }
-    });
-  }
-</script>
 <!-- Cookie Consent Banner -->
 <div id="cookie-consent-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 450px; background: white; padding: 24px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); z-index: 999999; border: 1px solid rgba(0,0,0,0.05); font-family: 'Plus Jakarta Sans', sans-serif;">
 <div style="display: flex; align-items: flex-start; gap: 16px;">
@@ -371,24 +310,10 @@
 </div>
 </div>
 </div>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const cookieBanner = document.getElementById('cookie-consent-banner');
-      const btnAccept = document.getElementById('cookie-accept-all');
-      const btnEssential = document.getElementById('cookie-essential-only');
-      
-      if (!localStorage.getItem('cookieConsent')) {
-        cookieBanner.style.display = 'block';
-      }
-      
-      function hideBanner(choice) {
-        localStorage.setItem('cookieConsent', choice);
-        cookieBanner.style.display = 'none';
-      }
-      
-      btnAccept.addEventListener('click', () => hideBanner('all'));
-      btnEssential.addEventListener('click', () => hideBanner('essential'));
-    });
-  </script>
+
+
+<script src="../js/navbar.js"></script>
+<script src="../js/cookies.js"></script>
+<script src="../js/modal.js"></script>
 </body>
 </html>

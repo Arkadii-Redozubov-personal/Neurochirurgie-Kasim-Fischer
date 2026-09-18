@@ -2476,3 +2476,11 @@
   .expertise-card { padding: 10px 8px !important; }
   .expertise-icon { width: 36px !important; height: 36px !important; }
 }
+
+/* ── Utility Classes ─────────────────────────────────────── */
+.mb-6        { margin-bottom: 24px; }
+.text-primary { color: var(--primary); }
+.cursor-ptr  { cursor: pointer; }
+.d-none      { display: none; }
+.reset-mp    { margin: 0; padding: 0; }
+

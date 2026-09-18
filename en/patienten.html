@@ -13,9 +13,9 @@
 <meta content="website" property="og:type"/>
 <meta content="https://my-bandscheibe.de/img/Neurochirurgie_Fischer_Web_13-1024x684.webp" property="og:image"/>
 <link href="../fonts/fonts.css" rel="stylesheet"/>
-<link href="../style.css" rel="stylesheet"/>
-<style>
-</style>
+<link href="../css/main.css" rel="stylesheet"/>
+<link href="../css/pages/patients.css" rel="stylesheet"/>
+
 <link href="https://my-bandscheibe.de/patienten.html" hreflang="de" rel="alternate"/>
 <link href="https://my-bandscheibe.de/en/patienten.html" hreflang="en" rel="alternate"/>
 <link href="https://my-bandscheibe.de/ru/patienten.html" hreflang="ru" rel="alternate"/>
@@ -163,100 +163,7 @@
 </div>
 </div></div></div></div></div>
 </div>
-<style>
-    .phase-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 32px;
-      margin-bottom: 80px;
-    }
-    .phase-card {
-      background: white;
-      border: 1px solid rgba(0,0,0,0.05);
-      border-radius: 12px;
-      padding: 32px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-    }
-    .phase-icon {
-      margin-bottom: 24px;
-      background: rgba(28, 194, 178, 0.1);
-      width: 64px;
-      height: 64px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .phase-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 16px;
-    }
-    .phase-desc {
-      color: var(--text-light);
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-    .phase-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .phase-list li {
-      position: relative;
-      padding-left: 24px;
-      margin-bottom: 12px;
-      color: var(--text-dark);
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-    .phase-list li::before {
-      content: "•";
-      color: var(--primary);
-      font-weight: bold;
-      position: absolute;
-      left: 0;
-      font-size: 1.2rem;
-      top: -2px;
-    }
-    
-    /* FAQ styles */
-    .faq-container {
-      width: 100%;
-      margin: 0 auto;
-    }
-    .faq-item {
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-      padding: 24px 0;
-    }
-    .faq-q {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--text-dark);
-      margin-bottom: 12px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .faq-q::after {
-      content: "+";
-      font-size: 1.5rem;
-      color: var(--primary);
-    }
-    .faq-a {
-      color: var(--text-light);
-      line-height: 1.6;
-      display: none;
-    }
-    .faq-item.active .faq-a {
-      display: block;
-    }
-    .faq-item.active .faq-q::after {
-      content: "-";
-    }
-  </style>
+
 <div class="section-wrapper">
 <section class="container" style="padding-top: 60px; padding-bottom: 80px; max-width: 1400px;">
 <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 40px; color: var(--text-dark);">Your Treatment Path</h2>

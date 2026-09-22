@@ -127,20 +127,6 @@
 
 
 </div>
-<div class="default-cards-grid">
-<div class="default-card">
-<h3 class="default-card-title">Neuroforaminal Stenosis</h3>
-<p class="default-card-desc">Verengung der Austrittsstellen von Nervenwurzeln am Wirbel. Kann ausstrahlende Schmerzen, Kribbeln oder Kraftminderung in Arm oder Bein verursachen.</p>
-</div>
-<div class="default-card">
-<h3 class="default-card-title">Spondylolisthesis</h3>
-<p class="default-card-desc">Verschiebung eines Wirbelkörpers gegenüber dem benachbarten Wirbel. Je nach Ausmaß können Rückenschmerzen und neurologische Beschwerden auftreten.</p>
-</div>
-<div class="default-card">
-<h3 class="default-card-title">Spinal Instabilities</h3>
-<p class="default-card-desc">Pathologische Beweglichkeit zwischen Wirbelkörpern, die Schmerzen und neurologische Beschwerden verursachen kann. Behandlung je nach Ausmaß konservativ oder operativ.</p>
-</div>
-</div>
 </div>
 <!-- PERIPHERE NERVEN -->
 <div id="service-1" style="margin-bottom:80px;">
@@ -230,21 +216,23 @@
 <p class="disease-card-desc">Pain caused by nerve damage or arising after surgery. Typical: burning, stabbing sensations, tingling or skin hypersensitivity.</p>
 <button class="disease-card-btn" onclick="openModal('neuropath-post');event.stopPropagation();">Learn more →</button>
 </div>
-<div class="disease-card-right"><img alt="Neuropathic Pain and Postoperative Pain Syndromes" src="../img/Chronische Rückennackenschmerzen.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+<div class="disease-card-right"><img alt="Neuropathic Pain" src="../img/Chronische RückenNackenschmerzen.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+</div>
+<div class="disease-card-wide" onclick="openModal('psycho-schmerz')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M8 5v14l11-7z"></path></svg> VIDEO</div>
+<h3 class="disease-card-title">Psychosomatic Accompanying Factors</h3>
+<p class="disease-card-desc">Chronic pain is often accompanied by psychological comorbidities. A holistic approach including psychosomatic aspects improves therapy outcomes.</p>
+<button class="disease-card-btn" onclick="openModal('psycho-schmerz');event.stopPropagation();">Learn more →</button>
+</div>
+<div class="disease-card-right"><img alt="Psychosomatic Factors" src="../img/consultation.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+</div>
 
 </div>
-<div class="default-cards-grid">
+</div>
+</div>
+</div>
 
-</div>
-<div class="default-card">
-<h3 class="default-card-title">Phantom Pain</h3>
-<p class="default-card-desc">Pain perception in an amputated or denervated body part. Multimodal therapy approaches help to reduce pain processing in the nervous system.</p>
-</div>
-<div class="default-card">
-<h3 class="default-card-title">Psychosomatic Factors</h3>
-<p class="default-card-desc">Chronic pain is often accompanied by psychological comorbidities. A holistic approach that includes psychosomatic aspects improves therapy outcomes.</p>
-</div>
-</div>
 </div>
 </div></div>
 <footer class="footer-wrapper"><div class="container footer-grid">
@@ -471,6 +459,19 @@
 <div class="modal-content-header"><h2 class="modal-title">Neuropathic Pain and <span>Postoperative Pain Syndromes</span></h2><p class="modal-subtitle">Causes, presentations and treatment options</p></div>
 <div><h3 class="modal-section-h">What is neuropathic pain?</h3>
 <p class="modal-section-p">Neuropathic pain develops when nerves are damaged or persistently irritated. It differs from ordinary pain caused, for example, by an injury or inflammation.</p><p class="modal-section-p">Typical symptoms include burning, stabbing, or electric-like pain. Additionally, tingling, numbness, or an uncomfortable hypersensitivity of the skin may occur. Such complaints can also persist or newly arise after an operation. Depending on cause and duration, this is referred to as postoperative neuropathic or chronic postoperative pain syndrome. A special form is phantom pain, which can occur after the loss or amputation of a body part. Although the affected body part no longer exists, the nervous system continues to process pain signals that are perceived as very real.</p><p class="modal-section-p">Treatment of neuropathic pain is guided by the individual cause. In addition to specific medications, physiotherapy, psychological, and interventional procedures may be used. In selected patients, neuromodulation techniques – such as spinal cord stimulation – may also be considered. A thorough examination is essential to identify the cause of the symptoms and together develop an individually appropriate treatment strategy.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Psycho-Schmerz Modal -->
+<div id="modal-overlay-psycho-schmerz" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button class="modal-close-btn" onclick="closeModal('psycho-schmerz')">×</button>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Psychosomatische Schmerzen.mp4" type="video/mp4"></video></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Psychosomatic <span>Accompanying Factors</span></h2><p class="modal-subtitle">The connection between body, mind and chronic pain</p></div>
+<div><h3 class="modal-section-h">Chronic pain – more than a physical problem</h3>
+<p class="modal-section-p">Chronic pain affects not just the body. Long-lasting complaints can also impair sleep, mood, concentration, performance and quality of life. At the same time, stress, anxiety, depressive symptoms or persistent emotional strain can influence the perception and processing of pain.</p><p class="modal-section-p">This does not mean that the pain is "only psychological" or imagined. Rather, physical, psychological and social factors in chronic pain are often closely interrelated.</p><p class="modal-section-p">That is why we approach chronic pain as holistically as possible. In addition to physical and neurological diagnostics, we also take psychosomatic accompanying factors and individual life circumstances into account.</p><p class="modal-section-p">Depending on the findings, psychosomatic or psychotherapeutic treatment approaches may also be beneficial alongside medication, physiotherapy or interventional procedures.</p><p class="modal-section-p">Our goal is not only to treat the pain itself, but also to reduce its impact on daily life, improve physical and psychological resilience, and thus support quality of life in the long term.</p>
 </div>
 </div>
 </div>

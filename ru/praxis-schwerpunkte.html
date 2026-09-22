@@ -165,12 +165,17 @@
 </div>
 <div class="disease-card-right"><img alt="Синдромы сдавления нерва" src="../img/Nervenkompressionssyndrome.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
+<div class="disease-card-wide" onclick="openModal('tarsal')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M8 5v14l11-7z"></path></svg> ВИДЕО</div>
+<h3 class="disease-card-title">Синдром тарзального канала</h3>
+<p class="disease-card-desc">Компрессия большеберцового нерва в тарзальном канале у внутренней лодыжки. Типично: покалывание, онемение и боли в подошве и пальцах стопы.</p>
+<button class="disease-card-btn" onclick="openModal('tarsal');event.stopPropagation();">Подробнее →</button>
+</div>
+<div class="disease-card-right"><img alt="Синдром тарзального канала" src="../img/Tarsaltunnelsyndrom.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+</div>
 </div>
 <div class="default-cards-grid">
-<div class="default-card">
-<h3 class="default-card-title">Синдром тарзального канала</h3>
-<p class="default-card-desc">Kompression des Nervus tibialis im Tarsalkanal am Innenknöchel. Typisch: Kribbeln, Taubheitsgefühl und Schmerzen an der Fußsohle und im Bereich der Zehen.</p>
-</div>
 <div class="default-card">
 <h3 class="default-card-title">Повреждения нервов</h3>
 <p class="default-card-desc">Traumatische oder operative Schäden peripherer Nerven. Je nach Ausmaß: konservative Behandlung, Nervennaht oder Nerventransplantation zur Wiederherstellung der Funktion.</p>
@@ -476,4 +481,19 @@
 </div>
 </div>
 </div>
+<!-- Tarsaltunnelsyndrom Modal -->
+<div id="modal-overlay-tarsal" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button class="modal-close-btn" onclick="closeModal('tarsal')">×</button>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Tarsaltunnelsyndrom.mp4" type="video/mp4"></video></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Синдром <span>тарзального канала</span></h2><p class="modal-subtitle">Сдавление нерва в области внутренней лодыжки</p></div>
+<div><h3 class="modal-section-h">Что такое синдром тарзального канала?</h3>
+<p class="modal-section-p">Покалывание, жжение или онемение подошвы стопы могут возникать из-за сдавления нерва в области внутренней лодыжки. При синдроме тарзального канала большеберцовый нерв (Nervus tibialis) или его ветви ущемляются либо раздражаются в тарзальном канале, что нарушает нормальную работу нерва.</p>
+<p class="modal-section-p">Типичные проявления включают покалывание, жжение, онемение или боли в подошвенной части стопы и в пальцах. Эти симптомы могут проявляться или усиливаться при нагрузке, особенно после длительной ходьбы или стояния.</p></div>
+<div><h3 class="modal-section-h">Диагностика и лечение</h3>
+<p class="modal-section-p">Для точной диагностики необходимы подробный сбор анамнеза и неврологический осмотр. В зависимости от картины могут проводиться электрофизиологические исследования (ЭНМГ) и методы лучевой диагностики, чтобы определить точную причину и исключить другие заболевания с похожими проявлениями.</p>
+<p class="modal-section-p">Лечение зависит от причины и выраженности симптомов. В первую очередь рассматриваются консервативные методы. При выраженной компрессии нерва и стойких жалобах в ряде случаев может быть рекомендована хирургическая декомпрессия нерва. Мы подробно обсуждаем с вами наиболее подходящий индивидуальный план лечения.</p></div>
+<div class="modal-action-row"><a class="btn-termin" href="sprechzeiten.html">Запросить встречу</a><button class="btn-close" onclick="closeModal('tarsal')">Закрыть</button></div>
+</div></div></div>
 </body></html>

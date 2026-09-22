@@ -165,12 +165,17 @@
 </div>
 <div class="disease-card-right"><img alt="متلازمات الضغط على الأعصاب" src="../img/Nervenkompressionssyndrome.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
+<div class="disease-card-wide" onclick="openModal('tarsal')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M8 5v14l11-7z"></path></svg> فيديو</div>
+<h3 class="disease-card-title">متلازمة النفق الرسغي القدمي</h3>
+<p class="disease-card-desc">انضغاط العصب الظنبوبي في النفق الرصغي عند الكاحل الداخلي. الأعراض الشائعة: وخز، تنميل، وألم في باطن القدم والأصابع.</p>
+<button class="disease-card-btn" onclick="openModal('tarsal');event.stopPropagation();">المزيد →</button>
+</div>
+<div class="disease-card-right"><img alt="متلازمة النفق الرسغي القدمي" src="../img/Tarsaltunnelsyndrom.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+</div>
 </div>
 <div class="default-cards-grid">
-<div class="default-card">
-<h3 class="default-card-title">متلازمة النفق الرسغي القدمي</h3>
-<p class="default-card-desc">Kompression des Nervus tibialis im Tarsalkanal am Innenknöchel. Typisch: Kribbeln, Taubheitsgefühl und Schmerzen an der Fußsohle und im Bereich der Zehen.</p>
-</div>
 <div class="default-card">
 <h3 class="default-card-title">تلف الأعصاب/إصاباتها</h3>
 <p class="default-card-desc">Traumatische oder operative Schäden peripherer Nerven. Je nach Ausmaß: konservative Behandlung, Nervennaht oder Nerventransplantation zur Wiederherstellung der Funktion.</p>
@@ -476,4 +481,19 @@
 </div>
 </div>
 </div>
+<!-- Tarsaltunnelsyndrom Modal -->
+<div id="modal-overlay-tarsal" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button class="modal-close-btn" onclick="closeModal('tarsal')">×</button>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Tarsaltunnelsyndrom.mp4" type="video/mp4"></video></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">متلازمة <span>النفق الرسغي القدمي</span></h2><p class="modal-subtitle">عندما ينضغط العصب عند الكاحل الداخلي</p></div>
+<div><h3 class="modal-section-h">ما هي متلازمة النفق الرسغي القدمي؟</h3>
+<p class="modal-section-p">يمكن أن يكون الإحساس بالوخز أو الحرقان أو التنميل في باطن القدم ناتجاً عن انضغاط أحد الأعصاب عند الكاحل الداخلي. في متلازمة النفق الرصغي، يتعرض العصب الظنبوبي أو أحد فروعه للانضغاط أو التهيج في منطقة النفق الرصغي، مما يعيق أداء العصب لوظيفته الطبيعية.</p>
+<p class="modal-section-p">تشمل الأعراض الشائعة الوخز، الإحساس بالحرقان، التنميل، أو الألم في باطن القدم ومنطقة الأصابع. وغالباً ما تظهر هذه الأعراض أو تتفاقم أثناء بذل الجهد، أو بعد الوقوف والمشي لفترات طويلة.</p></div>
+<div><h3 class="modal-section-h">التشخيص والعلاج</h3>
+<p class="modal-section-p">يعتمد التشخيص الدقيق على السيرة المرضية والفحص العصبي السريري الشامل. وبناءً على النتائج، قد يتم اللجوء إلى فحوصات فسيولوجية عصبية (مثل تخطيط كهربية العضل والأعصاب) وفحوصات تصويرية لتحديد السبب الدقيق واستبعاد الحالات الأخرى المشابهة.</p>
+<p class="modal-section-p">يعتمد العلاج على سبب الأعراض ومدى حدتها. في البداية، عادة ما تُطبق التدابير التحفظية. وفي الحالات التي يكون فيها انضغاط العصب واضحاً مع استمرار الأعراض، يمكن اللجوء إلى التحرير الجراحي للعصب. نناقش معكم بشكل فردي خيارات العلاج الأنسب لحالتكم.</p></div>
+<div class="modal-action-row"><a class="btn-termin" href="sprechzeiten.html">طلب موعد</a><button class="btn-close" onclick="closeModal('tarsal')">إغلاق</button></div>
+</div></div></div>
 </body></html>

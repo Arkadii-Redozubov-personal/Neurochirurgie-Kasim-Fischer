@@ -165,12 +165,17 @@
 </div>
 <div class="disease-card-right"><img alt="Nervenkompressionssyndrome" src="img/Nervenkompressionssyndrome.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
+<div class="disease-card-wide" onclick="openModal('tarsal')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M8 5v14l11-7z"></path></svg> VIDEO</div>
+<h3 class="disease-card-title">Tarsaltunnelsyndrom</h3>
+<p class="disease-card-desc">Kompression des Nervus tibialis im Tarsalkanal am Innenknöchel. Typisch: Kribbeln, Taubheitsgefühl und Schmerzen an der Fußsohle und im Bereich der Zehen.</p>
+<button class="disease-card-btn" onclick="openModal('tarsal');event.stopPropagation();">Mehr erfahren →</button>
+</div>
+<div class="disease-card-right"><img alt="Tarsaltunnelsyndrom" src="img/Tarsaltunnelsyndrom.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+</div>
 </div>
 <div class="default-cards-grid">
-<div class="default-card">
-<h3 class="default-card-title">Tarsaltunnelsyndrom</h3>
-<p class="default-card-desc">Kompression des Nervus tibialis im Tarsalkanal am Innenknöchel. Typisch: Kribbeln, Taubheitsgefühl und Schmerzen an der Fußsohle und im Bereich der Zehen.</p>
-</div>
 <div class="default-card">
 <h3 class="default-card-title">Nervenschäden/-verletzungen</h3>
 <p class="default-card-desc">Traumatische oder operative Schäden peripherer Nerven. Je nach Ausmaß: konservative Behandlung, Nervennaht oder Nerventransplantation zur Wiederherstellung der Funktion.</p>
@@ -476,4 +481,19 @@
 </div>
 </div>
 </div>
+<!-- Tarsaltunnelsyndrom Modal -->
+<div id="modal-overlay-tarsal" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button class="modal-close-btn" onclick="closeModal('tarsal')">×</button>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="./video/Tarsaltunnelsyndrom.mp4" type="video/mp4"></video></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Tarsaltunnel<span>syndrom</span></h2><p class="modal-subtitle">Wenn ein Nerv am Innenknöchel eingeengt wird</p></div>
+<div><h3 class="modal-section-h">Was ist das Tarsaltunnelsyndrom?</h3>
+<p class="modal-section-p">Kribbeln, Brennen oder Taubheitsgefühle an der Fußsohle können durch eine Einengung eines Nervs am Innenknöchel verursacht werden. Beim Tarsaltunnelsyndrom wird der Nervus tibialis beziehungsweise einer seiner Äste im Bereich des Tarsalkanals eingeengt oder gereizt. Dadurch kann die normale Funktion des Nervs beeinträchtigt werden.</p>
+<p class="modal-section-p">Typische Beschwerden sind Kribbeln, Brennen, Taubheitsgefühle oder Schmerzen an der Fußsohle und im Bereich der Zehen. Die Beschwerden können insbesondere bei Belastung auftreten oder nach längerem Gehen und Stehen zunehmen.</p></div>
+<div><h3 class="modal-section-h">Diagnostik und Behandlung</h3>
+<p class="modal-section-p">Für die präzise Diagnose sind eine genaue Anamnese und eine sorgfältige neurologische Untersuchung wichtig. Je nach Befund können zusätzlich elektrophysiologische Untersuchungen (z. B. Nervenleitgeschwindigkeitsmessung) und bildgebende Verfahren eingesetzt werden, um die Ursache exakt zu bestimmen und andere Erkrankungen mit ähnlichen Symptomen sicher auszuschließen.</p>
+<p class="modal-section-p">Die Behandlung richtet sich nach Ursache und Ausprägung der Beschwerden. Zunächst kommen häufig konservative Maßnahmen infrage. Bei ausgeprägter Nervenkompression und anhaltenden Beschwerden kann in ausgewählten Fällen eine operative Entlastung des Nervs erwogen werden. Gemeinsam besprechen wir mit Ihnen die individuell am besten geeigneten Therapiemöglichkeiten.</p></div>
+<div class="modal-action-row"><a class="btn-termin" href="sprechzeiten.html">Termin anfragen</a><button class="btn-close" onclick="closeModal('tarsal')">Schließen</button></div>
+</div></div></div>
 </body></html>

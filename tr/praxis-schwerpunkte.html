@@ -165,12 +165,17 @@
 </div>
 <div class="disease-card-right"><img alt="Sinir Sıkışma Sendromları" src="../img/Nervenkompressionssyndrome.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
+<div class="disease-card-wide" onclick="openModal('tarsal')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M8 5v14l11-7z"></path></svg> VİDEO</div>
+<h3 class="disease-card-title">Tarsal Tünel Sendromu</h3>
+<p class="disease-card-desc">İç ayak bileğindeki tarsal kanalda tibial sinir sıkışması. Tipik belirtiler: ayak tabanında ve parmaklarda karıncalanma, uyuşma ve ağrı.</p>
+<button class="disease-card-btn" onclick="openModal('tarsal');event.stopPropagation();">Daha fazla →</button>
+</div>
+<div class="disease-card-right"><img alt="Tarsal Tünel Sendromu" src="../img/Tarsaltunnelsyndrom.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+</div>
 </div>
 <div class="default-cards-grid">
-<div class="default-card">
-<h3 class="default-card-title">Tarsal Tünel Sendromu</h3>
-<p class="default-card-desc">Kompression des Nervus tibialis im Tarsalkanal am Innenknöchel. Typisch: Kribbeln, Taubheitsgefühl und Schmerzen an der Fußsohle und im Bereich der Zehen.</p>
-</div>
 <div class="default-card">
 <h3 class="default-card-title">Sinir Hasarları/Yaralanmaları</h3>
 <p class="default-card-desc">Traumatische oder operative Schäden peripherer Nerven. Je nach Ausmaß: konservative Behandlung, Nervennaht oder Nerventransplantation zur Wiederherstellung der Funktion.</p>
@@ -476,4 +481,19 @@
 </div>
 </div>
 </div>
+<!-- Tarsaltunnelsyndrom Modal -->
+<div id="modal-overlay-tarsal" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button class="modal-close-btn" onclick="closeModal('tarsal')">×</button>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Tarsaltunnelsyndrom.mp4" type="video/mp4"></video></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Tarsal Tünel <span>Sendromu</span></h2><p class="modal-subtitle">İç ayak bileğinde bir sinir sıkıştığında</p></div>
+<div><h3 class="modal-section-h">Tarsal Tünel Sendromu Nedir?</h3>
+<p class="modal-section-p">Ayak tabanında karıncalanma, yanma veya uyuşma hissi, iç ayak bileğindeki bir sinirin sıkışmasından kaynaklanabilir. Tarsal tünel sendromunda tibial sinir veya dalları tarsal kanal bölgesinde sıkışır veya tahriş olur ve bu durum sinirin normal işlevini bozar.</p>
+<p class="modal-section-p">Tipik şikayetler arasında ayak tabanında ve parmak bölgesinde karıncalanma, yanma, uyuşukluk veya ağrı yer alır. Bu şikayetler özellikle yük binmesiyle, uzun süre yürüme veya ayakta kalma durumlarında ortaya çıkabilir veya artabilir.</p></div>
+<div><h3 class="modal-section-h">Tanı ve Tedavi</h3>
+<p class="modal-section-p">Doğru tanı için kapsamlı bir öykü ve dikkatli bir nörolojik muayene şarttır. Bulgulara bağlı olarak elektrofizyolojik testler (EMG gibi) ve görüntüleme yöntemleri kullanılarak neden netleştirilir ve benzer belirtilere yol açan diğer durumlar elenir.</p>
+<p class="modal-section-p">Tedavi, şikayetlerin nedenine ve derecesine göre şekillenir. İlk aşamada genellikle konservatif yaklaşımlar değerlendirilir. Belirgin sinir basısı ve devam eden şikayetlerin varlığında cerrahi dekompresyon düşünülebilir. Sizinle birlikte en uygun tedavi planını belirliyoruz.</p></div>
+<div class="modal-action-row"><a class="btn-termin" href="sprechzeiten.html">Randevu talep edin</a><button class="btn-close" onclick="closeModal('tarsal')">Kapat</button></div>
+</div></div></div>
 </body></html>

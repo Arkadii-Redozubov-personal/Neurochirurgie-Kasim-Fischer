@@ -124,6 +124,8 @@
 </div>
 <div class="disease-card-right"><img alt="Wirbelkörperfrakturen" src="../img/spine_fracture.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
+
+
 </div>
 <div class="default-cards-grid">
 <div class="default-card">
@@ -221,23 +223,26 @@
 </div>
 <div class="disease-card-right"><img alt="Neuromodulation" src="../img/Neuromodulation.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
+<div class="disease-card-wide" onclick="openModal('neuropath-post')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M8 5v14l11-7z"></path></svg> VIDEO</div>
+<h3 class="disease-card-title">Neuropathic Pain and Postoperative Pain Syndromes</h3>
+<p class="disease-card-desc">Pain caused by nerve damage or arising after surgery. Typical: burning, stabbing sensations, tingling or skin hypersensitivity.</p>
+<button class="disease-card-btn" onclick="openModal('neuropath-post');event.stopPropagation();">Learn more →</button>
+</div>
+<div class="disease-card-right"><img alt="Neuropathic Pain and Postoperative Pain Syndromes" src="../img/Chronische Rückennackenschmerzen.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+
 </div>
 <div class="default-cards-grid">
-<div class="default-card">
-<h3 class="default-card-title">Neuropathic Pain</h3>
-<p class="default-card-desc">Schmerzen, die durch eine Schädigung oder Fehlfunktion des Nervensystems entstehen. Typisch: brennende, einschießende oder elektrischartige Beschwerden.</p>
-</div>
-<div class="default-card">
-<h3 class="default-card-title">Post-operative Pain Syndromes</h3>
-<p class="default-card-desc">Anhaltende Schmerzen nach operativen Eingriffen, z. B. Failed-Back-Surgery-Syndrom. Erfordern eine interdisziplinäre Ursachenklärung und ein individuell abgestimmtes Therapiekonzept.</p>
+
 </div>
 <div class="default-card">
 <h3 class="default-card-title">Phantom Pain</h3>
-<p class="default-card-desc">Schmerzwahrnehmung in einem amputierten oder nicht mehr innervieren Körperteil. Multimodale Therapieansätze helfen, die Schmerzverarbeitung im Nervensystem zu beeinflussen.</p>
+<p class="default-card-desc">Pain perception in an amputated or denervated body part. Multimodal therapy approaches help to reduce pain processing in the nervous system.</p>
 </div>
 <div class="default-card">
 <h3 class="default-card-title">Psychosomatic Factors</h3>
-<p class="default-card-desc">Chronische Schmerzen gehen häufig mit psychischen Begleiterkrankungen einher. Eine ganzheitliche Betrachtung unter Einbeziehung psychosomatischer Aspekte verbessert die Therapieergebnisse.</p>
+<p class="default-card-desc">Chronic pain is often accompanied by psychological comorbidities. A holistic approach that includes psychosomatic aspects improves therapy outcomes.</p>
 </div>
 </div>
 </div>
@@ -457,4 +462,17 @@
 <script src="../js/navbar.js"></script>
 <script src="../js/cookies.js"></script>
 <script src="../js/modal.js"></script>
+<!-- Neuropath-Post Modal -->
+<div id="modal-overlay-neuropath-post" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button class="modal-close-btn" onclick="closeModal('neuropath-post')">×</button>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Neuropathische Schmerzen.mp4" type="video/mp4"></video></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Neuropathic Pain and <span>Postoperative Pain Syndromes</span></h2><p class="modal-subtitle">Causes, presentations and treatment options</p></div>
+<div><h3 class="modal-section-h">What is neuropathic pain?</h3>
+<p class="modal-section-p">Neuropathic pain develops when nerves are damaged or persistently irritated. It differs from ordinary pain caused, for example, by an injury or inflammation.</p><p class="modal-section-p">Typical symptoms include burning, stabbing, or electric-like pain. Additionally, tingling, numbness, or an uncomfortable hypersensitivity of the skin may occur. Such complaints can also persist or newly arise after an operation. Depending on cause and duration, this is referred to as postoperative neuropathic or chronic postoperative pain syndrome. A special form is phantom pain, which can occur after the loss or amputation of a body part. Although the affected body part no longer exists, the nervous system continues to process pain signals that are perceived as very real.</p><p class="modal-section-p">Treatment of neuropathic pain is guided by the individual cause. In addition to specific medications, physiotherapy, psychological, and interventional procedures may be used. In selected patients, neuromodulation techniques – such as spinal cord stimulation – may also be considered. A thorough examination is essential to identify the cause of the symptoms and together develop an individually appropriate treatment strategy.</p>
+</div>
+</div>
+</div>
+</div>
 </body></html>

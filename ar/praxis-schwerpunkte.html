@@ -124,6 +124,8 @@
 </div>
 <div class="disease-card-right"><img alt="Wirbelkörperfrakturen" src="../img/spine_fracture.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
+
+
 </div>
 <div class="default-cards-grid">
 <div class="default-card">
@@ -221,23 +223,26 @@
 </div>
 <div class="disease-card-right"><img alt="التعديل العصبي" src="../img/Neuromodulation.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
+<div class="disease-card-wide" onclick="openModal('neuropath-post')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M8 5v14l11-7z"></path></svg> VIDEO</div>
+<h3 class="disease-card-title">الآلام العصبية ومتلازمات الألم بعد الجراحة</h3>
+<p class="disease-card-desc">ألم ناجم عن تلف الأعصاب أو يظهر بعد الجراحة. أعراض نموذجية: حرقة، وخز، خدر أو فرط حساسية الجلد.</p>
+<button class="disease-card-btn" onclick="openModal('neuropath-post');event.stopPropagation();">اقرأ المزيد →</button>
+</div>
+<div class="disease-card-right"><img alt="الآلام العصبية ومتلازمات الألم بعد الجراحة" src="../img/Chronische Rückennackenschmerzen.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+
 </div>
 <div class="default-cards-grid">
-<div class="default-card">
-<h3 class="default-card-title">الألم العصبي</h3>
-<p class="default-card-desc">Schmerzen, die durch eine Schädigung oder Fehlfunktion des Nervensystems entstehen. Typisch: brennende, einschießende oder elektrischartige Beschwerden.</p>
-</div>
-<div class="default-card">
-<h3 class="default-card-title">متلازمات الألم بعد الجراحة</h3>
-<p class="default-card-desc">Anhaltende Schmerzen nach operativen Eingriffen, z. B. Failed-Back-Surgery-Syndrom. Erfordern eine interdisziplinäre Ursachenklärung und ein individuell abgestimmtes Therapiekonzept.</p>
+
 </div>
 <div class="default-card">
 <h3 class="default-card-title">آلام الإحساس الخادع</h3>
-<p class="default-card-desc">Schmerzwahrnehmung in einem amputierten oder nicht mehr innervieren Körperteil. Multimodale Therapieansätze helfen, die Schmerzverarbeitung im Nervensystem zu beeinflussen.</p>
+<p class="default-card-desc">إدراك الألم في جزء من الجسم تم بتره أو فقد توصيله العصبي. تساعد أساليب العلاج متعددة الوسائط على تقليل معالجة الألم في الجهاز العصبي.</p>
 </div>
 <div class="default-card">
 <h3 class="default-card-title">عوامل نفسجسدية مصاحبة</h3>
-<p class="default-card-desc">Chronische Schmerzen gehen häufig mit psychischen Begleiterkrankungen einher. Eine ganzheitliche Betrachtung unter Einbeziehung psychosomatischer Aspekte verbessert die Therapieergebnisse.</p>
+<p class="default-card-desc">كثيراً ما تترافق الآلام المزمنة مع أمراض نفسية مصاحبة. النهج الشامل الذي يراعي الجوانب النفسجسدية يُحسِّن نتائج العلاج.</p>
 </div>
 </div>
 </div>
@@ -457,4 +462,17 @@
 <script src="../js/navbar.js"></script>
 <script src="../js/cookies.js"></script>
 <script src="../js/modal.js"></script>
+<!-- Neuropath-Post Modal -->
+<div id="modal-overlay-neuropath-post" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button class="modal-close-btn" onclick="closeModal('neuropath-post')">×</button>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Neuropathische Schmerzen.mp4" type="video/mp4"></video></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">الآلام العصبية و<span>متلازمات الألم بعد الجراحة</span></h2><p class="modal-subtitle">الأسباب والأشكال وخيارات العلاج</p></div>
+<div><h3 class="modal-section-h">ما هي الآلام العصبية؟</h3>
+<p class="modal-section-p">تنشأ الآلام العصبية عندما تتعرض الأعصاب للتلف أو التهيج المستمر. وتختلف عن الآلام العادية الناجمة مثلاً عن إصابة أو التهاب.</p><p class="modal-section-p">من الأعراض النموذجية آلام حارقة أو طاعنة أو شبيهة بالصعقة الكهربائية. وقد يصاحب ذلك وخز أو خدر أو فرط حساسية مزعج في الجلد. وقد تظل هذه الشكاوى قائمة بعد الجراحة أو تظهر من جديد؛ ويُطلق عليها حينئذٍ – بحسب السبب والمدة – اسم متلازمة الألم العصبي التشغيلي أو متلازمة الألم التشغيلي المزمن. ومن أشكالها الخاصة آلام الأطراف الوهمية التي قد تحدث عقب فقدان جزء من الجسم أو بتره. وعلى الرغم من غياب الجزء المعني، يواصل الجهاز العصبي معالجة إشارات الألم التي تُحسّ بوضوح تام.</p><p class="modal-section-p">يعتمد علاج الآلام العصبية على السبب الفردي. إلى جانب الأدوية المتخصصة، يمكن استخدام إجراءات العلاج الطبيعي والنفسي والتدخلي. وفي المرضى المنتقَين قد يُلجأ أيضاً إلى تقنيات التعديل العصبي كتحفيز الحبل الشوكي. ويُعدّ الفحص الدقيق أمراً ضرورياً لتحديد سبب الشكاوى والاتفاق على استراتيجية علاجية ملائمة للفرد.</p>
+</div>
+</div>
+</div>
+</div>
 </body></html>

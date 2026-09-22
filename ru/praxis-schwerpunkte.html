@@ -124,6 +124,8 @@
 </div>
 <div class="disease-card-right"><img alt="Wirbelkörperfrakturen" src="../img/spine_fracture.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
+
+
 </div>
 <div class="default-cards-grid">
 <div class="default-card">
@@ -221,23 +223,26 @@
 </div>
 <div class="disease-card-right"><img alt="Нейромодуляция" src="../img/Neuromodulation.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
 </div>
+<div class="disease-card-wide" onclick="openModal('neuropath-post')">
+<div class="disease-card-left">
+<div class="disease-video-badge"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M8 5v14l11-7z"></path></svg> VIDEO</div>
+<h3 class="disease-card-title">Нейропатическая боль и постоперационные болевые синдромы</h3>
+<p class="disease-card-desc">Боль вследствие повреждения нервов или после операции. Типично: жгучие, колющие ощущения, онемение или гиперчувствительность кожи.</p>
+<button class="disease-card-btn" onclick="openModal('neuropath-post');event.stopPropagation();">Подробнее →</button>
+</div>
+<div class="disease-card-right"><img alt="Нейропатическая боль и постоперационные болевые синдромы" src="../img/Chronische Rückennackenschmerzen.webp" loading="lazy"/><div class="disease-play-icon"><svg fill="white" height="18" viewbox="0 0 24 24" width="18"><path d="M8 5v14l11-7z"></path></svg></div></div>
+
 </div>
 <div class="default-cards-grid">
-<div class="default-card">
-<h3 class="default-card-title">Нейропатическая боль</h3>
-<p class="default-card-desc">Schmerzen, die durch eine Schädigung oder Fehlfunktion des Nervensystems entstehen. Typisch: brennende, einschießende oder elektrischartige Beschwerden.</p>
-</div>
-<div class="default-card">
-<h3 class="default-card-title">Послеоперационные болевые синдромы</h3>
-<p class="default-card-desc">Anhaltende Schmerzen nach operativen Eingriffen, z. B. Failed-Back-Surgery-Syndrom. Erfordern eine interdisziplinäre Ursachenklärung und ein individuell abgestimmtes Therapiekonzept.</p>
+
 </div>
 <div class="default-card">
 <h3 class="default-card-title">Фантомные боли</h3>
-<p class="default-card-desc">Schmerzwahrnehmung in einem amputierten oder nicht mehr innervieren Körperteil. Multimodale Therapieansätze helfen, die Schmerzverarbeitung im Nervensystem zu beeinflussen.</p>
+<p class="default-card-desc">Болевое восприятие в ампутированной или денервированной части тела. Мультимодальные терапевтические подходы помогают снизить болевую обработку в нервной системе.</p>
 </div>
 <div class="default-card">
 <h3 class="default-card-title">Психосоматические факторы</h3>
-<p class="default-card-desc">Chronische Schmerzen gehen häufig mit psychischen Begleiterkrankungen einher. Eine ganzheitliche Betrachtung unter Einbeziehung psychosomatischer Aspekte verbessert die Therapieergebnisse.</p>
+<p class="default-card-desc">Хронические боли нередко сопровождаются психическими сопутствующими заболеваниями. Комплексный подход с учётом психосоматических аспектов улучшает результаты терапии.</p>
 </div>
 </div>
 </div>
@@ -457,4 +462,17 @@
 <script src="../js/navbar.js"></script>
 <script src="../js/cookies.js"></script>
 <script src="../js/modal.js"></script>
+<!-- Neuropath-Post Modal -->
+<div id="modal-overlay-neuropath-post" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+<div class="modal-split-wrap">
+<button class="modal-close-btn" onclick="closeModal('neuropath-post')">×</button>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Neuropathische Schmerzen.mp4" type="video/mp4"></video></div>
+<div class="modal-content-panel">
+<div class="modal-content-header"><h2 class="modal-title">Нейропатическая боль и <span>постоперационные болевые синдромы</span></h2><p class="modal-subtitle">Причины, проявления и варианты лечения</p></div>
+<div><h3 class="modal-section-h">Что такое нейропатическая боль?</h3>
+<p class="modal-section-p">Нейропатическая боль возникает, когда нервы повреждены или постоянно раздражены. Она отличается от обычной боли, возникающей, например, вследствие травмы или воспаления.</p><p class="modal-section-p">Типичными симптомами являются жгучая, колющая или напоминающая удар током боль. Дополнительно могут возникать покалывание, онемение или неприятная гиперчувствительность кожи. Такие жалобы могут сохраняться или впервые появляться после операции. В зависимости от причины и продолжительности это называется постоперационным нейропатическим или хроническим постоперационным болевым синдромом. Особой формой являются фантомные боли, которые могут возникать после утраты или ампутации части тела. Хотя соответствующей части тела уже нет, нервная система продолжает обрабатывать болевые сигналы, воспринимаемые как вполне реальные.</p><p class="modal-section-p">Лечение нейропатической боли зависит от индивидуальной причины. Помимо специальных медикаментов могут применяться физиотерапевтические, психологические и интервенционные методы. У отдельных пациентов рассматриваются также методы нейромодуляции, например стимуляция спинного мозга. Важно провести тщательное обследование, чтобы выявить причину жалоб и совместно разработать индивидуально подходящую стратегию лечения.</p>
+</div>
+</div>
+</div>
+</div>
 </body></html>

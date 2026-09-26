@@ -2633,3 +2633,80 @@
 .d-none      { display: none; }
 .reset-mp    { margin: 0; padding: 0; }
 
+
+
+/* ── Mobile Stability & Layout Optimization ───────────────── */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+@media (max-width: 1550px) {
+  .mobile-menu {
+    justify-content: flex-start !important;
+    padding: 80px 24px 40px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-inner-sub .navbar {
+    margin-bottom: 24px !important;
+  }
+  .floating-doctolib {
+    right: 16px !important;
+    bottom: 16px !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+  [dir="rtl"] .floating-doctolib {
+    left: 16px !important;
+    right: auto !important;
+  }
+  .fd-btn {
+    padding: 12px 20px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .press-card-horizontal {
+    flex-direction: column !important;
+    min-height: auto !important;
+  }
+  .press-card-img-wrapper {
+    width: 100% !important;
+    height: 150px !important;
+  }
+  .press-card-content {
+    padding: 16px 14px !important;
+  }
+  .press-card-title {
+    font-size: 1rem !important;
+  }
+  .press-filters {
+    gap: 8px !important;
+    margin-bottom: 20px !important;
+  }
+  .filter-btn {
+    padding: 8px 16px !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px !important;
+  }
+  .floating-doctolib {
+    right: 12px !important;
+    bottom: 12px !important;
+    max-width: calc(100vw - 24px) !important;
+  }
+  [dir="rtl"] .floating-doctolib {
+    left: 12px !important;
+    right: auto !important;
+  }
+  .fd-btn {
+    padding: 10px 16px !important;
+    font-size: 0.84rem !important;
+  }
+}

@@ -63,3 +63,37 @@
 .modal-action-row a.btn-termin{display:inline-block;background:#1cc2b2;color:white;padding:13px 28px;border-radius:99px;font-size:0.92rem;font-weight:700;text-decoration:none;font-family:inherit}
 .modal-action-row a.btn-termin:hover{background:#17a99b}
 .modal-action-row button.btn-close{padding:13px 26px;border:2px solid rgba(0,0,0,0.15);background:transparent;border-radius:99px;font-size:0.9rem;cursor:pointer;color:#4a5568;font-family:inherit}
+[dir="rtl"] .modal-close-btn { right: auto; left: 14px; }
+
+@media(max-width: 600px) {
+  .modal-split-wrap {
+    height: 90vh !important;
+    height: 90dvh !important;
+    max-height: 90dvh !important;
+    border-radius: 14px !important;
+  }
+  .modal-video-panel { height: 180px !important; }
+  .modal-content-panel { padding: 18px 14px !important; }
+  .modal-title { font-size: 1.2rem !important; }
+  .modal-subtitle { font-size: 0.82rem !important; }
+  .modal-action-row {
+    flex-direction: column !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .modal-action-row a.btn-termin,
+  .modal-action-row button.btn-close {
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    padding: 12px 18px !important;
+  }
+  .section-wrapper { padding: 36px 0 !important; }
+  .section-heading-row { margin-bottom: 20px !important; gap: 12px !important; }
+  .section-heading-row h2 { font-size: 1.4rem !important; }
+  .section-intro-box { padding: 16px 14px !important; margin-bottom: 20px !important; font-size: 0.9rem !important; }
+  .disease-card-left { padding: 18px 16px !important; }
+  .disease-card-title { font-size: 1.15rem !important; }
+  .disease-card-desc { font-size: 0.86rem !important; margin-bottom: 12px !important; }
+  .default-card { padding: 18px 16px !important; }
+}

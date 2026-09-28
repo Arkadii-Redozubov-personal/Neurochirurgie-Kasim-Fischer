@@ -67,9 +67,24 @@
 <div class="section-icon"><svg fill="none" height="40" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="40"><path d="M10 2h4l-2 3z"></path><path d="M9 7c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M9 11c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M9 15c1 1 3 1 4 0l1 1c-1.5 2-4.5 2-6 0z"></path><path d="M12 18c-2 2-4 3-5 1l2-2c1.5 1 2.5.5 3-1z"></path><line x1="12" x2="12" y1="5" y2="18"></line></svg></div>
 <div><h2>Omurga</h2><p>Omurga Hastalıkları</p></div>
 </div>
-<div class="section-intro-box">
-<p style="color:var(--text-dark);line-height:1.8;margin-bottom:12px;font-size:1rem;">Omurga, omurilik ve sinirleri korurken aynı zamanda stabilite ve hareketi sağlar. Aşınma, disk değişiklikleri, darlıklar veya instabiliteler ağrıya ve nörolojik şikayetlere yol açabilir.</p>
-<p style="color:var(--text-light);line-height:1.8;margin:0;font-size:0.95rem;"><strong>Servikal omurga (boyun)</strong>, <strong>torakal omurga (göğüs)</strong> ve <strong>lomber omurga (bel)</strong> hastalıklarını tedavi ediyoruz. Anatomik değişikliğin gerçekten şikayetlere karşılık gelip gelmediği belirleyicidir.</p>
+<div class="section-intro-box" style="display:flex;gap:32px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:26px 30px;">
+  <div style="flex:1 1 520px;min-width:280px;">
+    <p style="color:var(--text-dark);line-height:1.8;margin-bottom:12px;font-size:1rem;">Omurga, omurilik ve sinirleri korurken aynı zamanda stabilite ve hareketi sağlar. Aşınma, disk değişiklikleri, darlıklar veya instabiliteler ağrıya ve nörolojik şikayetlere yol açabilir.</p>
+    <p style="color:var(--text-light);line-height:1.8;margin:0 0 18px;font-size:0.95rem;"><strong>Boyun omurgası (HWS)</strong>, <strong>sırt omurgası (BWS)</strong>, <strong>bel omurgası (LWS)</strong> ve <strong>sakroiliak eklem (ISG)</strong> hastalıklarını teşhis ve tedavi ediyoruz. Önemli olan, anatomik değişikliğin şikayetlerle tam olarak uyuşmasıdır.</p>
+    <button class="btn-primary" onclick="openModal('wirbelsaeule-anatomie')" style="display:inline-flex;align-items:center;gap:10px;padding:10px 20px;font-size:0.92rem;font-weight:600;border-radius:10px;cursor:pointer;background:linear-gradient(135deg,var(--primary),#148a7f);color:#fff;border:none;box-shadow:0 4px 14px rgba(28,194,178,0.25);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='none'">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+      Anatomik Genel Bakışı Aç (Boyun · Sırt · Bel)
+    </button>
+  </div>
+  <div style="flex:0 1 320px;min-width:240px;text-align:center;cursor:pointer;" onclick="openModal('wirbelsaeule-anatomie')">
+    <div style="position:relative;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.08);border:2px solid rgba(28,194,178,0.2);background:#fff;transition:transform 0.25s,box-shadow 0.25s;" onmouseover="this.style.transform='scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)';">
+      <img src="../img/wirbelsaeule_anatomie.webp" alt="Omurga Anatomisi" style="width:100%;height:auto;display:block;" loading="lazy">
+      <div style="position:absolute;bottom:8px;right:8px;background:rgba(15,44,48,0.88);color:#fff;padding:5px 12px;border-radius:6px;font-size:0.75rem;font-weight:600;display:flex;align-items:center;gap:6px;backdrop-filter:blur(4px);">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+        Büyüt
+      </div>
+    </div>
+  </div>
 </div>
 <div class="disease-cards-grid">
 <div class="disease-card-wide" onclick="openModal('bsv')">
@@ -309,7 +324,7 @@
 <div id="modal-overlay-spinal" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('spinal')">×</button>
-<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/spinal_canal_en.mp4" type="video/mp4"></video></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/spinal_canal_tur.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Spinal Kanal <span >Stenozu</span></h2><p class="modal-subtitle">Sinirlerin yeterli alana sahip olmadığı durumlar</p></div>
 <div ><h3 class="modal-section-h">Omurilik kanalı stenozu nedir?</h3>
@@ -373,7 +388,7 @@
 <div id="modal-overlay-sulcus" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('sulcus')">×</button>
-<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Sulcus-Ulnaris-Syndrom_en-US_dubbed.mp4" type="video/mp4"></video></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Sulcus-Ulnaris-Syndrom_tur.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Kubital Tünel <span >Sendromu</span></h2><p class="modal-subtitle">Dirseğe ulnar sinir sıkışması</p></div>
 <div ><h3 class="modal-section-h">Ulnar sulkus sendromu</h3>
@@ -386,7 +401,7 @@
 <div id="modal-overlay-chron" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('chron')">×</button>
-<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Chronische Rücken_en.mp4" type="video/mp4"></video></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Chronische Rücken_tur.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Kronik <span >Sırt/Boyun Ağrısı</span></h2><p class="modal-subtitle">Bireysel, multimodal tedavi konseptleri</p></div>
 <div ><h3 class="modal-section-h">Kronik ağrıyı bireysel olarak tedavi edin</h3>
@@ -398,7 +413,7 @@
 <div id="modal-overlay-neuro" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('neuro')">×</button>
-<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/neuromodulation_en-US_dubbed.mp4" type="video/mp4"></video></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/neuromodulation_tur.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Nöro<span >modulasyon</span></h2><p class="modal-subtitle">Özel ağrı terapisi & omurilik stimülasyonu</p></div>
 <div ><h3 class="modal-section-h">Nöromodülasyon Nedir?</h3>
@@ -450,7 +465,7 @@
 <div id="modal-overlay-nervkomp" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('nervkomp')">×</button>
-<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Nervenkompressionssyndrome_en.mp4" type="video/mp4"></video></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Nervenkompressionssyndrome_tur.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Sinir Sıkışma <span >Sendromları</span></h2><p class="modal-subtitle">Kubital tünel sendromu ve diğer tuzak sendromları</p></div>
 <div ><h3 class="modal-section-h">Sinir sıkışması – ne olur?</h3>
@@ -484,7 +499,7 @@
 <div id="modal-overlay-neuropath-post" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('neuropath-post')">×</button>
-<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Neuropathische Schmerzen_en.mp4" type="video/mp4"></video></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Neuropathische Schmerzen_tur.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Nöropatik Ağrılar ve <span>Ameliyat Sonrası Ağrı Sendromları</span></h2><p class="modal-subtitle">Nedenler, belirtiler ve tedavi seçenekleri</p></div>
 <div><h3 class="modal-section-h">Nöropatik ağrı nedir?</h3>
@@ -497,7 +512,7 @@
 <div id="modal-overlay-psycho-schmerz" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('psycho-schmerz')">×</button>
-<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Psychosomatische Begleitfaktoren_en.mp4" type="video/mp4"></video></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Psychosomatische Begleitfaktoren_tur.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Psikosomatik <span>Eşlik Eden Faktörler</span></h2><p class="modal-subtitle">Beden, ruh ve kronik ağrı arasındaki ilişki</p></div>
 <div><h3 class="modal-section-h">Kronik ağrı – yalnızca fiziksel bir sorun değil</h3>
@@ -510,7 +525,7 @@
 <div id="modal-overlay-tarsal" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('tarsal')">×</button>
-<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Tarsaltunnelsyndrom_en.mp4" type="video/mp4"></video></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Tarsaltunnelsyndrom_tur.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Tarsal Tünel <span>Sendromu</span></h2><p class="modal-subtitle">İç ayak bileğinde bir sinir sıkıştığında</p></div>
 <div><h3 class="modal-section-h">Tarsal Tünel Sendromu Nedir?</h3>
@@ -526,7 +541,7 @@
 <div id="modal-overlay-schmerztherapie" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.78);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
 <div class="modal-split-wrap">
 <button class="modal-close-btn" onclick="closeModal('schmerztherapie')">×</button>
-<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Spezialisierte neurochirurgische Schmerztherapie_en.mp4" type="video/mp4"></video></div>
+<div class="modal-video-panel"><video controls preload="metadata" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;"><source src="../video/Spezialisierte neurochirurgische Schmerztherapie_tur.mp4" type="video/mp4"></video></div>
 <div class="modal-content-panel">
 <div class="modal-content-header"><h2 class="modal-title">Uzmanlaşmış Nöroşirürjikal <span>Ağrı Tedavisi</span></h2><p class="modal-subtitle">Bireysel, bütüncül ve multimodal tedavi konseptleri</p></div>
 <div><h3 class="modal-section-h">Karmaşık ve Kronik Ağrı Sendromları</h3>
@@ -539,4 +554,20 @@
 <p class="modal-section-p">Hedefimiz sadece tek tek semptomları hafifletmek değil, tüm bedensel, nörolojik ve psikosomatik faktörleri bir arada değerlendirerek en uygun tedaviyi sunmaktır.</p></div>
 <div class="modal-action-row"><a class="btn-termin" href="sprechzeiten.html">Randevu talep et</a><button class="btn-close" onclick="closeModal('schmerztherapie')">Kapat</button></div>
 </div></div></div>
+
+<!-- Wirbelsäule Anatomie Modal -->
+<div id="modal-overlay-wirbelsaeule-anatomie" style="display:none;position:fixed;inset:0;background:rgba(9,31,34,0.85);z-index:999999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;backdrop-filter:blur(6px);">
+  <div style="position:relative;max-width:1060px;width:100%;max-height:92vh;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.4);display:flex;flex-direction:column;" onclick="event.stopPropagation()">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-bottom:1px solid rgba(0,0,0,0.08);background:#fbfdfd;">
+      <div>
+        <h3 style="margin:0;font-size:1.25rem;font-weight:700;color:#0f2c30;">Omurga Anatomisi</h3>
+        <p style="margin:2px 0 0;font-size:0.85rem;color:var(--text-light);">Boyun (HWS) · Sırt (BWS) · Bel (LWS) · Sakrum ve Sakroiliak Eklem</p>
+      </div>
+      <button class="modal-close-btn" onclick="closeModal('wirbelsaeule-anatomie')" style="position:static;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:24px;background:rgba(0,0,0,0.05);border-radius:50%;border:none;cursor:pointer;color:#0f2c30;">×</button>
+    </div>
+    <div style="padding:16px;overflow-y:auto;text-align:center;background:#0f2c30;display:flex;align-items:center;justify-content:center;">
+      <img src="../img/wirbelsaeule_anatomie.webp" alt="Omurga Anatomisi" style="max-width:100%;max-height:78vh;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 6px 24px rgba(0,0,0,0.25);display:block;margin:0 auto;">
+    </div>
+  </div>
+</div>
 </body></html>

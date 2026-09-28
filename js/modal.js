@@ -29,7 +29,7 @@ function closeFacettenModal() { closeModal('facetten'); }
 document.addEventListener('keydown', function(e) {
   if (e.key !== 'Escape') return;
   ['bandscheibe','dekompression','kyphoplastie','nervenop','neuromod','hwsop',
-   'bsv','spinal','facetten','hws','kts','sulcus','chron','neuro','isg','wkf','nervkomp', 'neuropath-post', 'psycho-schmerz', 'tarsal', 'schmerztherapie']
+   'bsv','spinal','facetten','hws','kts','sulcus','chron','neuro','isg','wkf','nervkomp', 'neuropath-post', 'psycho-schmerz', 'tarsal', 'schmerztherapie', 'wirbelsaeule-anatomie']
   .forEach(function(id) {
     var el = document.getElementById('modal-overlay-' + id);
     if (el && el.style.display === 'flex') closeModal(id);

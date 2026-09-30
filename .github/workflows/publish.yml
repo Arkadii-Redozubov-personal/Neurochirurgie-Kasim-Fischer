@@ -1,9 +1,12 @@
-name: Publish CMS Updates
+name: Publish CMS Updates & Deploy
 
 on:
   repository_dispatch:
     types: [publish_cms]
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   build_and_publish:
@@ -14,26 +17,57 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - name: Setup Python
+        if: github.event_name == 'repository_dispatch' || github.event_name == 'workflow_dispatch'
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
       - name: Install Dependencies
+        if: github.event_name == 'repository_dispatch' || github.event_name == 'workflow_dispatch'
         run: |
           python -m pip install --upgrade pip
           pip install firebase-admin
 
       - name: Fetch Data and Update HTML
+        if: github.event_name == 'repository_dispatch' || github.event_name == 'workflow_dispatch'
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
         run: python build_from_firebase.py
 
       - name: Commit and Push Changes
+        if: github.event_name == 'repository_dispatch' || github.event_name == 'workflow_dispatch'
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Auto-publish CMS updates" || echo "No changes to commit"
+          git commit -m "Auto-publish CMS updates [skip ci]" || echo "No changes to commit"
           git push
+
+      - name: 🚀 Sync Files to ALL-INKL FTP
+        if: env.FTP_SERVER != '' && env.FTP_USERNAME != '' && env.FTP_PASSWORD != ''
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_TARGET_DIR || '/' }}
+          protocol: ftp
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            build_from_firebase.py
+            sync_cms.py
+            extract.py
+            pages_seed.json
+            cms_data.json
+            README.md

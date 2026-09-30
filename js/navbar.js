@@ -16,22 +16,31 @@
   const faqItems = document.querySelectorAll('.faq-question');
   faqItems.forEach(item => {
     item.addEventListener('click', () => {
-      // Close other items
+      const parent = item.closest('.faq-item') || item;
+      const answer = item.nextElementSibling;
+      const isAlreadyActive = parent.classList.contains('active');
+
+      // Close all other items
       faqItems.forEach(otherItem => {
         if (otherItem !== item) {
-          otherItem.nextElementSibling.style.display = 'none';
-          otherItem.querySelector('.faq-icon').textContent = '▼';
+          const otherParent = otherItem.closest('.faq-item') || otherItem;
+          otherParent.classList.remove('active');
+          otherItem.classList.remove('active');
+          if (otherItem.nextElementSibling) {
+            otherItem.nextElementSibling.style.display = 'none';
+          }
         }
       });
-      
-      const answer = item.nextElementSibling;
-      const icon = item.querySelector('.faq-icon');
-      if (answer.style.display === 'block') {
-        answer.style.display = 'none';
-        icon.textContent = '▼';
+
+      // Toggle current item
+      if (isAlreadyActive) {
+        parent.classList.remove('active');
+        item.classList.remove('active');
+        if (answer) answer.style.display = 'none';
       } else {
-        answer.style.display = 'block';
-        icon.textContent = '▲';
+        parent.classList.add('active');
+        item.classList.add('active');
+        if (answer) answer.style.display = 'block';
       }
     });
   });

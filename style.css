@@ -2622,3 +2622,47 @@ html, body {
     font-size: 0.84rem !important;
   }
 }
+
+
+/* FAQ Styling & Rotation */
+.faq-question {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  gap: 16px !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  word-break: normal !important;
+}
+.faq-icon {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  border-radius: 50% !important;
+  background: rgba(28, 194, 178, 0.14) !important;
+  color: var(--primary) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease !important;
+  flex-shrink: 0 !important;
+  margin-left: auto !important;
+}
+.faq-icon svg {
+  width: 18px !important;
+  height: 18px !important;
+  stroke: currentColor !important;
+  stroke-width: 2.5 !important;
+  display: block !important;
+}
+.faq-item.active .faq-icon,
+.faq-question.active .faq-icon {
+  transform: rotate(180deg) !important;
+  background: var(--primary) !important;
+  color: #fff !important;
+}
+.faq-item.active .faq-icon svg,
+.faq-question.active .faq-icon svg {
+  stroke: #fff !important;
+}

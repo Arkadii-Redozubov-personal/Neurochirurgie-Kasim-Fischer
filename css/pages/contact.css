@@ -175,3 +175,103 @@
   .branch-qr-section { padding: 18px 16px; gap: 14px; }
   .branch-qr-img { width: 90px; height: 90px; }
 }
+
+
+    /* Branch Map & Navigation enhancements */
+    .branch-map-wrapper {
+      position: relative;
+      width: 100%;
+      flex: 1;
+      min-height: 450px;
+      display: flex;
+    }
+    .branch-map-wrapper .branch-map {
+      width: 100%;
+      height: 100%;
+      flex: 1;
+      border: none;
+    }
+    .map-route-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 5;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 10px 18px;
+      border-radius: 50px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      border: 1px solid rgba(28, 194, 178, 0.35);
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+    .map-route-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(28, 194, 178, 0.45);
+    }
+    .branch-map-link-overlay {
+      display: none;
+    }
+    .branch-qr-link {
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    .branch-qr-link:hover {
+      transform: scale(1.05);
+    }
+    .qr-text-route-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .qr-text-route-link:hover {
+      text-decoration: underline;
+      color: #13897d;
+    }
+    .branch-address-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .branch-address-link:hover {
+      color: var(--primary) !important;
+      text-decoration: underline !important;
+    }
+
+    @media(max-width: 768px) {
+      .branch-map-wrapper {
+        min-height: 300px;
+      }
+      .branch-map-link-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 4;
+        display: block;
+        cursor: pointer;
+      }
+      .map-route-btn {
+        top: 10px;
+        right: 10px;
+        z-index: 6;
+        padding: 8px 14px;
+        font-size: 0.82rem;
+        pointer-events: auto;
+      }
+    }

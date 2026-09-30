@@ -2829,3 +2829,245 @@ html, body {
     margin-top: 0 !important;
   }
 }
+
+
+/* ==========================================================================
+   Mobile Fixes: Hero Stats, Steps, About, Form, FAQ
+   ========================================================================== */
+
+/* 1. FAQ Styling (Desktop & Mobile) */
+.faq-question {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  word-break: normal !important;
+  gap: 16px !important;
+  user-select: none !important;
+  padding: 8px 0 !important;
+  line-height: 1.4 !important;
+}
+.faq-question:hover {
+  color: #fff !important;
+}
+.faq-icon {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  border-radius: 50% !important;
+  background: rgba(28, 194, 178, 0.14) !important;
+  color: var(--primary) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, color 0.3s ease !important;
+  flex-shrink: 0 !important;
+  margin-left: auto !important;
+}
+.faq-icon svg {
+  width: 18px !important;
+  height: 18px !important;
+  stroke: currentColor !important;
+  stroke-width: 2.5 !important;
+  display: block !important;
+  transition: transform 0.3s ease !important;
+}
+.faq-question:hover .faq-icon {
+  background: rgba(28, 194, 178, 0.25) !important;
+}
+.faq-item.active .faq-icon,
+.faq-question.active .faq-icon {
+  transform: rotate(180deg) !important;
+  background: var(--primary) !important;
+  color: #fff !important;
+}
+.faq-item.active .faq-icon svg,
+.faq-question.active .faq-icon svg {
+  stroke: #fff !important;
+}
+.faq-answer {
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  word-break: normal !important;
+}
+
+/* 2. Direct Message Form */
+#contact-form,
+.direct-message-form {
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+#contact-form input,
+#contact-form textarea,
+.direct-message-form input,
+.direct-message-form textarea {
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  /* Photo 1: Hero Stats closer together, centered, bigger icons */
+  .trusted-stats {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 18px !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+  }
+  .trusted-stat {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+  }
+  .trusted-stat-icon svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+  .trusted-stat-number {
+    font-size: 1.35rem !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+  }
+  .trusted-divider {
+    height: 26px !important;
+    display: block !important;
+    margin: 0 !important;
+    opacity: 0.25 !important;
+  }
+
+  /* Photo 2: Hero steps padding and section margins */
+  .hero-steps {
+    flex-direction: column !important;
+    padding: 24px 20px !important;
+    gap: 18px !important;
+    margin: 0 auto 20px auto !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+  .step-item {
+    font-size: 1.05rem !important;
+    gap: 8px !important;
+    padding: 0 !important;
+  }
+  .step-line {
+    margin-top: 6px !important;
+  }
+  .section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+  }
+  .section.container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .section-header {
+    margin-bottom: 24px !important;
+    padding: 0 !important;
+  }
+  .section-title {
+    font-size: 2.1rem !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
+  }
+
+  /* Photo 3: About section & Doctor bio cleanly wrapped without awkward hyphens */
+  .about-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .about-section p,
+  .about-title,
+  .doc-info h3,
+  .doc-info h4,
+  .doc-info p {
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
+    word-break: normal !important;
+  }
+  .about-stats-row {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+  .about-stats-row .stat-item {
+    text-align: center !important;
+  }
+  .about-stats-row .stat-value {
+    font-size: 1.8rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 2px !important;
+  }
+  .about-stats-row .stat-label {
+    font-size: 0.78rem !important;
+    line-height: 1.25 !important;
+  }
+  .doctor-profile {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+  .doc-info {
+    width: 100% !important;
+  }
+  .doc-info h3, .doc-info h4 {
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 6px !important;
+  }
+  .doc-info p {
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+    color: var(--text-light) !important;
+    max-width: 100% !important;
+  }
+
+  /* Photo 4: Form fields wider */
+  #contact-form,
+  .direct-message-form {
+    padding: 24px 16px !important;
+    margin: 24px auto 44px !important;
+    border-radius: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  #contact-form input,
+  #contact-form textarea,
+  .direct-message-form input,
+  .direct-message-form textarea {
+    padding: 14px 14px !important;
+    font-size: 1rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Photo 5: FAQ mobile sizing */
+  .faq-question {
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+    gap: 12px !important;
+  }
+  .faq-icon {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+  }
+  .faq-icon svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .faq-answer {
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+  }
+}

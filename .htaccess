@@ -1,0 +1,43 @@
+# ----------------------------------------------------------------------
+# Neurochirurgie Dr. med. Kasim Fischer-Rahimov & Kollegen
+# Apache Configuration & Routing (.htaccess)
+# ----------------------------------------------------------------------
+
+# Prevent directory listings
+Options -Indexes
+
+# Custom 404 Error Document
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Security: Protect hidden files and sensitive project files
+    RewriteRule ^(\.git|\.env|publish-config\.php|cms_data\.json|clean_seed\.json) - [F,L]
+
+    # Clean 301 Redirects for Old WordPress URLs
+    RewriteRule ^ueber-uns/?$ /unser-team.html [R=301,L]
+    RewriteRule ^team/?$ /unser-team.html [R=301,L]
+    RewriteRule ^kontakt/?$ /sprechzeiten.html [R=301,L]
+    RewriteRule ^leistungen/?$ /behandlungen.html [R=301,L]
+    RewriteRule ^schwerpunkte/?$ /praxis-schwerpunkte.html [R=301,L]
+    RewriteRule ^behandlungen/?$ /behandlungen.html [R=301,L]
+    RewriteRule ^faq/?$ /patienten.html [R=301,L]
+    RewriteRule ^standorte/?$ /sprechzeiten.html [R=301,L]
+    RewriteRule ^termin/?$ /sprechzeiten.html [R=301,L]
+    RewriteRule ^datenschutz/?$ /datenschutz.html [R=301,L]
+    RewriteRule ^impressum/?$ /impressum.html [R=301,L]
+
+    # If the requested file or directory exists on disk, serve it directly
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # For any non-existent resource, serve /404.html
+    RewriteRule ^.*$ /404.html [L]
+</IfModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>

@@ -897,97 +897,229 @@ window.seedData = {
     {
       "id": "faq_1",
       "order": 0,
+      "title": {
+        "de": "Brauche ich für einen Bandscheibenvorfall immer eine Operation?",
+        "en": "Do I always need surgery for a herniated disc?",
+        "ru": "Всегда ли при грыже диска необходима операция?",
+        "tr": "Disk fıtığı için her zaman ameliyat gerekli midir?",
+        "ar": "هل أحتاج دائماً إلى جراحة لانزلاق الغضروف؟"
+      },
+      "desc": {
+        "de": "Nein. Viele Bandscheibenvorfälle können zunächst konservativ behandelt werden. Ob eine Operation sinnvoll oder notwendig ist, hängt von Beschwerden, neurologischem Befund, Bildgebung und Verlauf ab.",
+        "en": "Not necessarily. Many herniated discs can be treated conservatively at first. Whether surgery is appropriate depends on symptoms, neurological findings, imaging and the course of the condition.",
+        "ru": "Нет. Многие грыжи диска поначалу можно лечить консервативно. Необходимость операции зависит от симптомов, неврологических данных, результатов визуализации и течения заболевания.",
+        "tr": "Hayır. Birçok disk fıtığı başlangıçta konservatif olarak tedavi edilebilir. Ameliyatın gerekli olup olmadığı şikayetlere, nörolojik bulgulara, görüntüleme sonuçlarına ve hastalığın seyrine bağlıdır.",
+        "ar": "لا. يمكن في كثير من الحالات علاج الانزلاق الغضروفي بطرق غير جراحية في البداية. ضرورة التدخل الجراحي تعتمد على الأعراض والفحص العصبي والتصوير ومسار المرض."
+      },
       "de": {
-        "title": "Wie schnell bekomme ich einen Termin?",
-        "desc": "Akutfälle werden nach Möglichkeit priorisiert. Reguläre Termine können Sie am besten bequem über unser Doctolib-System buchen."
+        "title": "Brauche ich für einen Bandscheibenvorfall immer eine Operation?",
+        "desc": "Nein. Viele Bandscheibenvorfälle können zunächst konservativ behandelt werden. Ob eine Operation sinnvoll oder notwendig ist, hängt von Beschwerden, neurologischem Befund, Bildgebung und Verlauf ab."
       },
       "en": {
-        "title": "How quickly can I get an appointment?",
-        "desc": "Acute cases are prioritized whenever possible. Regular appointments are best booked conveniently via our Doctolib system."
+        "title": "Do I always need surgery for a herniated disc?",
+        "desc": "Not necessarily. Many herniated discs can be treated conservatively at first. Whether surgery is appropriate depends on symptoms, neurological findings, imaging and the course of the condition."
       },
       "ru": {
-        "title": "Как быстро я смогу попасть на прием?",
-        "desc": "Острые случаи по возможности рассматриваются в приоритетном порядке. Обычные приемы удобнее всего бронировать через нашу систему Doctolib."
+        "title": "Всегда ли при грыже диска необходима операция?",
+        "desc": "Нет. Многие грыжи диска поначалу можно лечить консервативно. Необходимость операции зависит от симптомов, неврологических данных, результатов визуализации и течения заболевания."
       },
       "tr": {
-        "title": "Ne kadar çabuk randevu alabilirim?",
-        "desc": "Acil vakalara mümkün olduğunca öncelik verilir. Düzenli randevular en rahat şekilde Doctolib sistemimiz üzerinden alınabilir."
+        "title": "Disk fıtığı için her zaman ameliyat gerekli midir?",
+        "desc": "Hayır. Birçok disk fıtığı başlangıçta konservatif olarak tedavi edilebilir. Ameliyatın gerekli olup olmadığı şikayetlere, nörolojik bulgulara, görüntüleme sonuçlarına ve hastalığın seyrine bağlıdır."
       },
       "ar": {
-        "title": "متى يمكنني الحصول على موعد؟",
-        "desc": "يتم إعطاء الأولوية للحالات الحادة كلما أمكن ذلك. من الأفضل حجز المواعيد العادية بسهولة عبر نظام Doctolib الخاص بنا."
+        "title": "هل أحتاج دائماً إلى جراحة لانزلاق الغضروف؟",
+        "desc": "لا. يمكن في كثير من الحالات علاج الانزلاق الغضروفي بطرق غير جراحية في البداية. ضرورة التدخل الجراحي تعتمد على الأعراض والفحص العصبي والتصوير ومسار المرض."
       }
     },
     {
       "id": "faq_2",
       "order": 1,
+      "title": {
+        "de": "Welche Unterlagen soll ich mitbringen?",
+        "en": "What documents should I bring?",
+        "ru": "Какие документы взять на приём?",
+        "tr": "Hangi belgeleri getirmeliyim?",
+        "ar": "ما المستندات التي يجب إحضارها؟"
+      },
+      "desc": {
+        "de": "Wenn vorhanden: MRT-/CT-Aufnahmen, radiologische Befunde, Arztbriefe, Operationsberichte und eine aktuelle Medikamentenliste.",
+        "en": "If available: MRI/CT scans, radiology reports, doctors' letters, surgical reports and a current medication list.",
+        "ru": "По возможности: снимки МРТ/КТ, заключения рентгенолога, выписки врача, операционные протоколы и актуальный список лекарств.",
+        "tr": "Mevcutsa: MRG/BT görüntüleri, radyoloji raporları, doktor mektupları, ameliyat raporları ve güncel ilaç listesi.",
+        "ar": "إن وُجدت: صور الرنين المغناطيسي/الأشعة المقطعية، تقارير الأشعة، رسائل الطبيب، تقارير العمليات، وقائمة الأدوية الحالية."
+      },
       "de": {
-        "title": "Benötige ich eine Überweisung?",
-        "desc": "Als gesetzlich Versicherter bringen Sie bitte Ihre Versichertenkarte mit. Eine Überweisung ist hilfreich, aber in der Regel nicht zwingend erforderlich. Privatpatienten und Selbstzahler benötigen keine Überweisung."
+        "title": "Welche Unterlagen soll ich mitbringen?",
+        "desc": "Wenn vorhanden: MRT-/CT-Aufnahmen, radiologische Befunde, Arztbriefe, Operationsberichte und eine aktuelle Medikamentenliste."
       },
       "en": {
-        "title": "Do I need a referral?",
-        "desc": "As a statutorily insured patient, please bring your insurance card. A referral is helpful but generally not mandatory. Private patients and self-payers do not need a referral."
+        "title": "What documents should I bring?",
+        "desc": "If available: MRI/CT scans, radiology reports, doctors' letters, surgical reports and a current medication list."
       },
       "ru": {
-        "title": "Нужно ли мне направление?",
-        "desc": "Пациентам по государственной страховке необходимо принести страховую карту. Направление желательно, но, как правило, не обязательно. Частным пациентам направление не требуется."
+        "title": "Какие документы взять на приём?",
+        "desc": "По возможности: снимки МРТ/КТ, заключения рентгенолога, выписки врача, операционные протоколы и актуальный список лекарств."
       },
       "tr": {
-        "title": "Sevk kağıdına ihtiyacım var mı?",
-        "desc": "Yasal sigortalı bir hasta olarak lütfen sigorta kartınızı getirin. Sevk kağıdı yardımcı olur ancak genellikle zorunlu değildir. Özel hastaların ve kendi ödeyenlerin sevke ihtiyacı yoktur."
+        "title": "Hangi belgeleri getirmeliyim?",
+        "desc": "Mevcutsa: MRG/BT görüntüleri, radyoloji raporları, doktor mektupları, ameliyat raporları ve güncel ilaç listesi."
       },
       "ar": {
-        "title": "هل أحتاج إلى تحويل طبي؟",
-        "desc": "كمريض مؤمن عليه قانونيًا، يرجى إحضار بطاقة التأمين الخاصة بك. التحويل مفيد ولكنه ليس إلزاميًا بشكل عام. المرضى الخصوصيون والذين يدفعون بأنفسهم لا يحتاجون إلى تحويل."
+        "title": "ما المستندات التي يجب إحضارها؟",
+        "desc": "إن وُجدت: صور الرنين المغناطيسي/الأشعة المقطعية، تقارير الأشعة، رسائل الطبيب، تقارير العمليات، وقائمة الأدوية الحالية."
       }
     },
     {
       "id": "faq_3",
       "order": 2,
+      "title": {
+        "de": "Kann ich eine Zweitmeinung erhalten?",
+        "en": "Can I get a second opinion?",
+        "ru": "Могу ли я получить второе мнение?",
+        "tr": "İkinci görüş alabilir miyim?",
+        "ar": "هل يمكنني الحصول على رأي ثانٍ؟"
+      },
+      "desc": {
+        "de": "Eine neurochirurgische Befundbesprechung kann auch dazu dienen, eine bereits ausgesprochene Therapie- oder Operationsempfehlung einzuordnen.",
+        "en": "A neurosurgical consultation can also help assess an already-recommended therapy or surgical plan.",
+        "ru": "Нейрохирургическая консультация также может помочь оценить уже рекомендованный план лечения или операции.",
+        "tr": "Nöroşirürji konsültasyonu, daha önce önerilen bir tedavi veya cerrahi planın değerlendirilmesine yardımcı olabilir.",
+        "ar": "يمكن للاستشارة الجراحية العصبية أن تساعد أيضاً في تقييم توصية علاجية أو جراحية صدرت مسبقاً."
+      },
       "de": {
-        "title": "Sind Begleitpersonen beim Termin erlaubt?",
-        "desc": "Selbstverständlich dürfen Sie eine Vertrauensperson zu Ihrem Gespräch mitbringen. Insbesondere bei Aufklärungsgesprächen ist dies oft hilfreich."
+        "title": "Kann ich eine Zweitmeinung erhalten?",
+        "desc": "Eine neurochirurgische Befundbesprechung kann auch dazu dienen, eine bereits ausgesprochene Therapie- oder Operationsempfehlung einzuordnen."
       },
       "en": {
-        "title": "Are accompanying persons allowed at the appointment?",
-        "desc": "Of course, you may bring a trusted person to your consultation. This is often particularly helpful during educational consultations."
+        "title": "Can I get a second opinion?",
+        "desc": "A neurosurgical consultation can also help assess an already-recommended therapy or surgical plan."
       },
       "ru": {
-        "title": "Можно ли прийти на прием с сопровождающим?",
-        "desc": "Конечно, вы можете взять с собой доверенное лицо. Это часто бывает полезно, особенно во время бесед перед операцией."
+        "title": "Могу ли я получить второе мнение?",
+        "desc": "Нейрохирургическая консультация также может помочь оценить уже рекомендованный план лечения или операции."
       },
       "tr": {
-        "title": "Randevuya refakatçi ile gelinebilir mi?",
-        "desc": "Elbette, görüşmenize güvendiğiniz bir kişiyi getirebilirsiniz. Bu, özellikle ameliyat öncesi bilgilendirme görüşmelerinde genellikle yardımcı olur."
+        "title": "İkinci görüş alabilir miyim?",
+        "desc": "Nöroşirürji konsültasyonu, daha önce önerilen bir tedavi veya cerrahi planın değerlendirilmesine yardımcı olabilir."
       },
       "ar": {
-        "title": "هل يُسمح بوجود مرافقين في الموعد؟",
-        "desc": "بالطبع، يمكنك إحضار شخص تثق به إلى استشارتك. غالبًا ما يكون هذا مفيدًا بشكل خاص أثناء الاستشارات التثقيفية."
+        "title": "هل يمكنني الحصول على رأي ثانٍ؟",
+        "desc": "يمكن للاستشارة الجراحية العصبية أن تساعد أيضاً في تقييم توصية علاجية أو جراحية صدرت مسبقاً."
       }
     },
     {
       "id": "faq_4",
       "order": 3,
+      "title": {
+        "de": "Wann muss ich dringend ärztliche Hilfe suchen?",
+        "en": "When should I seek urgent medical attention?",
+        "ru": "Когда нужно срочно обратиться за медицинской помощью?",
+        "tr": "Acil tıbbi yardım ne zaman gerekir?",
+        "ar": "متى يجب طلب المساعدة الطبية الطارئة؟"
+      },
+      "desc": {
+        "de": "Neu auftretende ausgeprägte Lähmungen oder Störungen der Blasen-/Darmfunktion müssen unverzüglich medizinisch abgeklärt werden.",
+        "en": "Newly occurring severe paralysis or disturbances of bladder/bowel function must be assessed medically without delay.",
+        "ru": "При внезапно появившихся выраженных парезах или нарушениях функции мочевого пузыря/кишечника необходимо немедленно обратиться к врачу.",
+        "tr": "Yeni gelişen belirgin felçler veya mesane/bağırsak fonksiyon bozuklukları derhal tıbbi olarak değerlendirilmelidir.",
+        "ar": "يجب تقييم الشلل الجديد الحاد أو اضطرابات وظيفة المثانة/الأمعاء طبياً على الفور دون تأخير."
+      },
       "de": {
-        "title": "Wie lange dauert die Krankschreibung nach einer OP?",
-        "desc": "Dies hängt stark von der Art des Eingriffs und Ihrer beruflichen Tätigkeit ab. Ihr behandelnder Arzt wird dies individuell mit Ihnen besprechen."
+        "title": "Wann muss ich dringend ärztliche Hilfe suchen?",
+        "desc": "Neu auftretende ausgeprägte Lähmungen oder Störungen der Blasen-/Darmfunktion müssen unverzüglich medizinisch abgeklärt werden."
       },
       "en": {
-        "title": "How long is the sick leave after surgery?",
-        "desc": "This depends heavily on the type of procedure and your professional activity. Your attending doctor will discuss this with you individually."
+        "title": "When should I seek urgent medical attention?",
+        "desc": "Newly occurring severe paralysis or disturbances of bladder/bowel function must be assessed medically without delay."
       },
       "ru": {
-        "title": "Как долго длится больничный после операции?",
-        "desc": "Это сильно зависит от типа вмешательства и вашей профессиональной деятельности. Лечащий врач обсудит это с вами индивидуально."
+        "title": "Когда нужно срочно обратиться за медицинской помощью?",
+        "desc": "При внезапно появившихся выраженных парезах или нарушениях функции мочевого пузыря/кишечника необходимо немедленно обратиться к врачу."
       },
       "tr": {
-        "title": "Ameliyattan sonra rapor süresi ne kadardır?",
-        "desc": "Bu büyük ölçüde prosedürün türüne ve mesleki faaliyetinize bağlıdır. Tedavi eden doktorunuz bunu sizinle bireysel olarak görüşecektir."
+        "title": "Acil tıbbi yardım ne zaman gerekir?",
+        "desc": "Yeni gelişen belirgin felçler veya mesane/bağırsak fonksiyon bozuklukları derhal tıbbi olarak değerlendirilmelidir."
       },
       "ar": {
-        "title": "ما هي مدة الإجازة المرضية بعد الجراحة؟",
-        "desc": "هذا يعتمد بشكل كبير على نوع الإجراء ونشاطك المهني. سيناقش طبيبك المعالج هذا معك بشكل فردي."
+        "title": "متى يجب طلب المساعدة الطبية الطارئة؟",
+        "desc": "يجب تقييم الشلل الجديد الحاد أو اضطرابات وظيفة المثانة/الأمعاء طبياً على الفور دون تأخير."
+      }
+    },
+    {
+      "id": "faq_5",
+      "order": 4,
+      "title": {
+        "de": "Sind alle Eingriffe minimalinvasiv?",
+        "en": "Are all procedures minimally invasive?",
+        "ru": "Все ли вмешательства малоинвазивные?",
+        "tr": "Tüm müdahaleler minimal invazif midir?",
+        "ar": "هل جميع التدخلات طفيفة التوغل؟"
+      },
+      "desc": {
+        "de": "Nein. Das geeignete Verfahren richtet sich nach Diagnose und individuellen anatomischen Voraussetzungen. Ein möglichst schonendes Vorgehen ist ein Ziel, darf aber nicht unabhängig vom Befund versprochen werden.",
+        "en": "No. The appropriate procedure depends on diagnosis and individual anatomical conditions. Minimal invasiveness is a goal, but cannot be promised independently of the findings.",
+        "ru": "Нет. Выбор метода определяется диагнозом и индивидуальными анатомическими условиями. Малоинвазивный подход — цель, но не может быть обещан независимо от результатов обследования.",
+        "tr": "Hayır. Uygun yöntem tanıya ve bireysel anatomik koşullara göre belirlenir. Minimal invazif yaklaşım bir hedeftir ancak bulgulardan bağımsız olarak vaat edilemez.",
+        "ar": "لا. يعتمد الإجراء المناسب على التشخيص والظروف التشريحية الفردية. النهج طفيف التوغل هدف لكن لا يمكن الوعد به بغض النظر عن النتائج."
+      },
+      "de": {
+        "title": "Sind alle Eingriffe minimalinvasiv?",
+        "desc": "Nein. Das geeignete Verfahren richtet sich nach Diagnose und individuellen anatomischen Voraussetzungen. Ein möglichst schonendes Vorgehen ist ein Ziel, darf aber nicht unabhängig vom Befund versprochen werden."
+      },
+      "en": {
+        "title": "Are all procedures minimally invasive?",
+        "desc": "No. The appropriate procedure depends on diagnosis and individual anatomical conditions. Minimal invasiveness is a goal, but cannot be promised independently of the findings."
+      },
+      "ru": {
+        "title": "Все ли вмешательства малоинвазивные?",
+        "desc": "Нет. Выбор метода определяется диагнозом и индивидуальными анатомическими условиями. Малоинвазивный подход — цель, но не может быть обещан независимо от результатов обследования."
+      },
+      "tr": {
+        "title": "Tüm müdahaleler minimal invazif midir?",
+        "desc": "Hayır. Uygun yöntem tanıya ve bireysel anatomik koşullara göre belirlenir. Minimal invazif yaklaşım bir hedeftir ancak bulgulardan bağımsız olarak vaat edilemez."
+      },
+      "ar": {
+        "title": "هل جميع التدخلات طفيفة التوغل؟",
+        "desc": "لا. يعتمد الإجراء المناسب على التشخيص والظروف التشريحية الفردية. النهج طفيف التوغل هدف لكن لا يمكن الوعد به بغض النظر عن النتائج."
+      }
+    },
+    {
+      "id": "faq_6",
+      "order": 5,
+      "title": {
+        "de": "Wie lange dauert die Erholung nach einer Operation?",
+        "en": "How long does recovery take after surgery?",
+        "ru": "Как долго длится восстановление после операции?",
+        "tr": "Ameliyat sonrası iyileşme ne kadar sürer?",
+        "ar": "كم تستغرق فترة التعافي بعد الجراحة؟"
+      },
+      "desc": {
+        "de": "Das hängt wesentlich von Art und Umfang des Eingriffs, Vorerkrankungen und individuellem Verlauf ab. Konkrete Empfehlungen erhalten Sie für Ihren Eingriff.",
+        "en": "This depends on the type and extent of the procedure, pre-existing conditions and individual recovery. Specific recommendations will be given for your procedure.",
+        "ru": "Это существенно зависит от вида и объема вмешательства, сопутствующих заболеваний и индивидуального течения. Конкретные рекомендации вы получите применительно к вашей операции.",
+        "tr": "Bu, operasyonun türüne ve kapsamına, önceden var olan hastalıklara ve bireysel iyileşme sürecine bağlıdır. Operasyonunuz için özel öneriler alacaksınız.",
+        "ar": "يعتمد ذلك على نوع العملية وحجمها والأمراض المصاحبة والمسار الفردي. ستتلقى توصيات محددة لعمليتك."
+      },
+      "de": {
+        "title": "Wie lange dauert die Erholung nach einer Operation?",
+        "desc": "Das hängt wesentlich von Art und Umfang des Eingriffs, Vorerkrankungen und individuellem Verlauf ab. Konkrete Empfehlungen erhalten Sie für Ihren Eingriff."
+      },
+      "en": {
+        "title": "How long does recovery take after surgery?",
+        "desc": "This depends on the type and extent of the procedure, pre-existing conditions and individual recovery. Specific recommendations will be given for your procedure."
+      },
+      "ru": {
+        "title": "Как долго длится восстановление после операции?",
+        "desc": "Это существенно зависит от вида и объема вмешательства, сопутствующих заболеваний и индивидуального течения. Конкретные рекомендации вы получите применительно к вашей операции."
+      },
+      "tr": {
+        "title": "Ameliyat sonrası iyileşme ne kadar sürer?",
+        "desc": "Bu, operasyonun türüne ve kapsamına, önceden var olan hastalıklara ve bireysel iyileşme sürecine bağlıdır. Operasyonunuz için özel öneriler alacaksınız."
+      },
+      "ar": {
+        "title": "كم تستغرق فترة التعافي بعد الجراحة؟",
+        "desc": "يعتمد ذلك على نوع العملية وحجمها والأمراض المصاحبة والمسار الفردي. ستتلقى توصيات محددة لعمليتك."
       }
     }
   ],
@@ -1399,9 +1531,256 @@ window.seedData = {
       }
     }
   ],
-  "branches": [],
-  "reviews": []
+  "branches": [
+    {
+      "id": "branch_1",
+      "order": 0,
+      "city": "Mönchengladbach",
+      "address": "Bismarckstr. 106, 41061 Mönchengladbach, 3. OG",
+      "phone": "02161 678 2683",
+      "btn_link": "https://app.arzt-direkt.de/neurochirurgiefischer/booking",
+      "de": {
+        "city": "Mönchengladbach",
+        "address": "Bismarckstr. 106, 41061 Mönchengladbach, 3. OG",
+        "phone": "02161 678 2683",
+        "hours": "Mo: 08:00–13:00 & 14:00–18:00 | Di: 08:00–15:00 | Mi: 08:00–15:00 | Do: 08:00–13:00 & 14:00–18:00 | Fr: 08:00–14:00",
+        "services": "Neurochirurgische Sprechstunde · Spezielle Schmerztherapie · Konservative & Operative Beratung",
+        "transport": "Hbf Mönchengladbach fußläufig (ca. 500m) · Parkhäuser in direkter Umgebung",
+        "btn_text": "Termin vereinbaren"
+      },
+      "en": {
+        "city": "Mönchengladbach",
+        "address": "Bismarckstr. 106, 41061 Mönchengladbach, 3. OG",
+        "phone": "02161 678 2683",
+        "hours": "Mo: 08:00–13:00 & 14:00–18:00 | Di: 08:00–15:00 | Mi: 08:00–15:00 | Do: 08:00–13:00 & 14:00–18:00 | Fr: 08:00–14:00",
+        "services": "Neurochirurgische Sprechstunde · Spezielle Schmerztherapie · Konservative & Operative Beratung",
+        "transport": "Hbf Mönchengladbach fußläufig (ca. 500m) · Parkhäuser in direkter Umgebung",
+        "btn_text": "Book appointment"
+      },
+      "ru": {
+        "city": "Mönchengladbach",
+        "address": "Bismarckstr. 106, 41061 Mönchengladbach, 3. OG",
+        "phone": "02161 678 2683",
+        "hours": "Mo: 08:00–13:00 & 14:00–18:00 | Di: 08:00–15:00 | Mi: 08:00–15:00 | Do: 08:00–13:00 & 14:00–18:00 | Fr: 08:00–14:00",
+        "services": "Neurochirurgische Sprechstunde · Spezielle Schmerztherapie · Konservative & Operative Beratung",
+        "transport": "Hbf Mönchengladbach fußläufig (ca. 500m) · Parkhäuser in direkter Umgebung",
+        "btn_text": "Записаться на прием"
+      },
+      "tr": {
+        "city": "Mönchengladbach",
+        "address": "Bismarckstr. 106, 41061 Mönchengladbach, 3. OG",
+        "phone": "02161 678 2683",
+        "hours": "Mo: 08:00–13:00 & 14:00–18:00 | Di: 08:00–15:00 | Mi: 08:00–15:00 | Do: 08:00–13:00 & 14:00–18:00 | Fr: 08:00–14:00",
+        "services": "Neurochirurgische Sprechstunde · Spezielle Schmerztherapie · Konservative & Operative Beratung",
+        "transport": "Hbf Mönchengladbach fußläufig (ca. 500m) · Parkhäuser in direkter Umgebung",
+        "btn_text": "Randevu al"
+      },
+      "ar": {
+        "city": "Mönchengladbach",
+        "address": "Bismarckstr. 106, 41061 Mönchengladbach, 3. OG",
+        "phone": "02161 678 2683",
+        "hours": "Mo: 08:00–13:00 & 14:00–18:00 | Di: 08:00–15:00 | Mi: 08:00–15:00 | Do: 08:00–13:00 & 14:00–18:00 | Fr: 08:00–14:00",
+        "services": "Neurochirurgische Sprechstunde · Spezielle Schmerztherapie · Konservative & Operative Beratung",
+        "transport": "Hbf Mönchengladbach fußläufig (ca. 500m) · Parkhäuser in direkter Umgebung",
+        "btn_text": "Randevu al"
+      }
+    },
+    {
+      "id": "branch_2",
+      "order": 1,
+      "city": "Viersen",
+      "address": "Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG",
+      "phone": "02161 678 2683",
+      "btn_link": "https://app.arzt-direkt.de/neurochirurgiefischer/booking",
+      "de": {
+        "city": "Viersen",
+        "address": "Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG",
+        "phone": "02161 678 2683",
+        "hours": "Sprechzeiten nach vorheriger telefonischer oder Online-Vereinbarung",
+        "services": "Facharztsprechstunde · Zweitmeinungen · Bildgebungsbesprechung (MRT/CT)",
+        "transport": "Zentral am Theodor-Heuss-Platz · Bushaltestellen direkt vor der Tür · Parkmöglichkeiten vorhanden",
+        "btn_text": "Termin vereinbaren"
+      },
+      "en": {
+        "city": "Viersen",
+        "address": "Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG",
+        "phone": "02161 678 2683",
+        "hours": "Sprechzeiten nach vorheriger telefonischer oder Online-Vereinbarung",
+        "services": "Facharztsprechstunde · Zweitmeinungen · Bildgebungsbesprechung (MRT/CT)",
+        "transport": "Zentral am Theodor-Heuss-Platz · Bushaltestellen direkt vor der Tür · Parkmöglichkeiten vorhanden",
+        "btn_text": "Book appointment"
+      },
+      "ru": {
+        "city": "Viersen",
+        "address": "Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG",
+        "phone": "02161 678 2683",
+        "hours": "Sprechzeiten nach vorheriger telefonischer oder Online-Vereinbarung",
+        "services": "Facharztsprechstunde · Zweitmeinungen · Bildgebungsbesprechung (MRT/CT)",
+        "transport": "Zentral am Theodor-Heuss-Platz · Bushaltestellen direkt vor der Tür · Parkmöglichkeiten vorhanden",
+        "btn_text": "Записаться на прием"
+      },
+      "tr": {
+        "city": "Viersen",
+        "address": "Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG",
+        "phone": "02161 678 2683",
+        "hours": "Sprechzeiten nach vorheriger telefonischer oder Online-Vereinbarung",
+        "services": "Facharztsprechstunde · Zweitmeinungen · Bildgebungsbesprechung (MRT/CT)",
+        "transport": "Zentral am Theodor-Heuss-Platz · Bushaltestellen direkt vor der Tür · Parkmöglichkeiten vorhanden",
+        "btn_text": "Randevu al"
+      },
+      "ar": {
+        "city": "Viersen",
+        "address": "Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG",
+        "phone": "02161 678 2683",
+        "hours": "Sprechzeiten nach vorheriger telefonischer oder Online-Vereinbarung",
+        "services": "Facharztsprechstunde · Zweitmeinungen · Bildgebungsbesprechung (MRT/CT)",
+        "transport": "Zentral am Theodor-Heuss-Platz · Bushaltestellen direkt vor der Tür · Parkmöglichkeiten vorhanden",
+        "btn_text": "Randevu al"
+      }
+    },
+    {
+      "id": "branch_3",
+      "order": 2,
+      "city": "Düsseldorf",
+      "address": "Schadowstraße 74, 40212 Düsseldorf",
+      "phone": "02161 678 2683",
+      "btn_link": "https://app.arzt-direkt.de/neurochirurgiefischer/booking",
+      "de": {
+        "city": "Düsseldorf",
+        "address": "Schadowstraße 74, 40212 Düsseldorf",
+        "phone": "02161 678 2683",
+        "hours": "Privatsprechstunde & Selbstzahler nach Vereinbarung",
+        "services": "Exklusive Beratung · Minimalinvasive Wirbelsäulentherapie · Zweitmeinungsverfahren",
+        "transport": "U-Bahn Schadowstraße / Heinrich-Heine-Allee · Parkhaus Schadow-Arkaden",
+        "btn_text": "Termin vereinbaren"
+      },
+      "en": {
+        "city": "Düsseldorf",
+        "address": "Schadowstraße 74, 40212 Düsseldorf",
+        "phone": "02161 678 2683",
+        "hours": "Privatsprechstunde & Selbstzahler nach Vereinbarung",
+        "services": "Exklusive Beratung · Minimalinvasive Wirbelsäulentherapie · Zweitmeinungsverfahren",
+        "transport": "U-Bahn Schadowstraße / Heinrich-Heine-Allee · Parkhaus Schadow-Arkaden",
+        "btn_text": "Book appointment"
+      },
+      "ru": {
+        "city": "Düsseldorf",
+        "address": "Schadowstraße 74, 40212 Düsseldorf",
+        "phone": "02161 678 2683",
+        "hours": "Privatsprechstunde & Selbstzahler nach Vereinbarung",
+        "services": "Exklusive Beratung · Minimalinvasive Wirbelsäulentherapie · Zweitmeinungsverfahren",
+        "transport": "U-Bahn Schadowstraße / Heinrich-Heine-Allee · Parkhaus Schadow-Arkaden",
+        "btn_text": "Записаться на прием"
+      },
+      "tr": {
+        "city": "Düsseldorf",
+        "address": "Schadowstraße 74, 40212 Düsseldorf",
+        "phone": "02161 678 2683",
+        "hours": "Privatsprechstunde & Selbstzahler nach Vereinbarung",
+        "services": "Exklusive Beratung · Minimalinvasive Wirbelsäulentherapie · Zweitmeinungsverfahren",
+        "transport": "U-Bahn Schadowstraße / Heinrich-Heine-Allee · Parkhaus Schadow-Arkaden",
+        "btn_text": "Randevu al"
+      },
+      "ar": {
+        "city": "Düsseldorf",
+        "address": "Schadowstraße 74, 40212 Düsseldorf",
+        "phone": "02161 678 2683",
+        "hours": "Privatsprechstunde & Selbstzahler nach Vereinbarung",
+        "services": "Exklusive Beratung · Minimalinvasive Wirbelsäulentherapie · Zweitmeinungsverfahren",
+        "transport": "U-Bahn Schadowstraße / Heinrich-Heine-Allee · Parkhaus Schadow-Arkaden",
+        "btn_text": "Randevu al"
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev_1",
+      "author_name": "Alexandra Bertho",
+      "stars": 5,
+      "order": 0,
+      "meta": "Local Guide · 29 Rezensionen",
+      "date": "vor 5 Monaten",
+      "text": {
+        "de": "Bin mit zwei Bandscheibenvorfällen und Spinalstenose hin, Symptome taubes Bein links. Dr. Fischer war sehr freundlich, hat mich untersucht, Spritzen unter bildgebendem Verfahren gesetzt. Das taube Bein ist weg! Für mich ein netter Arzt, der total kompetent ist.",
+        "en": "Went in with two herniated discs and spinal stenosis, numb left leg. Dr. Fischer was very friendly, examined me and administered injections under imaging guidance. The numbness is gone! A very competent doctor.",
+        "ru": "Обратилась с двумя грыжами дисков и стенозом, немела левая нога. Доктор Фишер был очень вежлив, провел обследование и сделал инъекции под контролем снимков. Онемение прошло! Прекрасный и компетентный врач.",
+        "tr": "İki bel fıtığı ve spinal stenoz ile başvurdum. Dr. Fischer çok ilgiliydi, görüntüleme eşliğinde iğne yaptı ve uyuşma tamamen geçti! Son derece yetkin bir hekim.",
+        "ar": "ذهبت مع انزلاقين غضروفيين وتضيق في القناة الشوكية. كان الدكتور فيشر لطيفًا للغاية وقام بالفحص والحقن بتوجيه التصوير. زال الخدر تمامًا!"
+      }
+    },
+    {
+      "id": "rev_2",
+      "author_name": "Gülay Bozkurt",
+      "stars": 5,
+      "order": 1,
+      "meta": "Google Rezension · 3 Bewertungen",
+      "date": "vor 9 Monaten",
+      "text": {
+        "de": "Dr. Kasem Rami hat mir geholfen, meine Schmerzen endlich loszuwerden. Ich habe mich bei niemandem so verstanden und gut aufgehoben gefühlt wie bei ihm. Er hört zu, nimmt sich Zeit. Dank seiner Hilfe kann ich mein Leben wieder genießen.",
+        "en": "Dr. Kasem Rami helped me finally get rid of my pain. I felt completely understood and well cared for. He listens and takes his time. Thanks to him I can enjoy life again.",
+        "ru": "Доктор Касем Рами помог мне наконец избавиться от болей. Я никогда не чувствовала себя в такой надежной заботе. Он выслушивает и уделяет время. Огромная благодарность!",
+        "tr": "Dr. Kasem Rami ağrılarımdan tamamen kurtulmama yardımcı oldu. Kendimi hiç bu kadar iyi ellerde hissetmemiştim. Dinliyor ve zaman ayırıyor. Teşekkürler!",
+        "ar": "ساعدني الدكتور قاسم رامي أخيرًا على التخلص من آلامي. شعرت بالاطمئنان التام والاستماع الجيد. بفضل مساعدته استعدت حياتي الطبيعية."
+      }
+    },
+    {
+      "id": "rev_3",
+      "author_name": "Michael K.",
+      "stars": 5,
+      "order": 2,
+      "meta": "Google Rezension · 12 Bewertungen",
+      "date": "vor 1 Jahr",
+      "text": {
+        "de": "Hervorragende Praxis! Schnelle Terminvergabe für MRT-Befundbesprechung. Dr. Fischer hat mich ausführlich und verständlich über alle Optionen aufgeklärt, ohne sofort zur OP zu drängen. Sehr empfehlenswert!",
+        "en": "Outstanding practice! Fast appointment for MRI review. Dr. Fischer explained all options in a clear and understandable manner without rushing into surgery.",
+        "ru": "Превосходная клиника! Быстро назначили прием для обсуждения МРТ. Доктор Фишер подробно и понятно объяснил все варианты лечения, не навязывая операцию.",
+        "tr": "Mükemmel bir muayenehane! MR sonuçları için hızlı randevu. Dr. Fischer ameliyata zorlamadan tüm seçenekleri detaylıca açıkladı.",
+        "ar": "عيادة متميزة للغاية! موعد سريع لمناقشة صور الرنين المغناطيسي. أوضح الدكتور فيشر جميع الخيارات بوضوح دون تسرع في اقتراح الجراحة."
+      }
+    },
+    {
+      "id": "rev_4",
+      "author_name": "Elena S.",
+      "stars": 5,
+      "order": 3,
+      "meta": "Google Rezension · 5 Bewertungen",
+      "date": "vor 7 Monaten",
+      "text": {
+        "de": "Sehr freundliches Praxisteam und top organisierter Ablauf. Keine langen Wartezeiten, moderne Praxisausstattung und mehrsprachige Betreuung. Vielen Dank an das gesamte Team!",
+        "en": "Very friendly practice team and excellently organized workflow. No long waiting times, modern facilities and multilingual care.",
+        "ru": "Очень приветливый персонал и отлично организованный прием. Никаких долгих очередей, современное оборудование и многоязычное обслуживание. Большое спасибо!",
+        "tr": "Çok güler yüzlü ekip ve son derece organize bir süreç. Uzun bekleme süresi yok, modern donanım ve çok dilli hizmet.",
+        "ar": "فريق عمل ودود للغاية وتنظيم ممتاز. لا يوجد وقت انتظار طويل ومعدات حديثة ورعاية متعددة اللغات. شكراً جزيلاً لجميع أفراد الفريق!"
+      }
+    }
+  ]
 };
 
-// Legacy compatibility
-window.seedCollection = window.seedData;
+window.seedCollection = async function(colName, dataList, clearFirst = true) {
+  if (!window.db || !window.firestoreOps) return;
+  const { doc, setDoc, deleteDoc, collection, getDocs } = window.firestoreOps;
+  console.log('Seeding collection:', colName, 'with', dataList.length, 'items (clearFirst=' + clearFirst + ')');
+  if (clearFirst) {
+    const snap = await getDocs(collection(window.db, colName));
+    for (const d of snap.docs) {
+      await deleteDoc(doc(window.db, colName, d.id));
+    }
+  }
+  for (let i = 0; i < dataList.length; i++) {
+    const item = dataList[i];
+    const docId = item.id || (colName + '_' + (i + 1));
+    await setDoc(doc(window.db, colName, docId), item);
+  }
+};
+
+window.seedAllCollections = async function(onProgress) {
+  if (!window.seedData) return;
+  const collections = ['team', 'schwerpunkte', 'treatments', 'diagnostik', 'faq', 'branches', 'press', 'reviews'];
+  for (let c = 0; c < collections.length; c++) {
+    const name = collections[c];
+    if (window.seedData[name]) {
+      if (onProgress) onProgress(name, c + 1, collections.length);
+      await window.seedCollection(name, window.seedData[name], true);
+    }
+  }
+};

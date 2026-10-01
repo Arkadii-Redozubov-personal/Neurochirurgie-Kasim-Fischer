@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 import json
 import sys
-sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding="utf-8")
 import os
 import re
-from datetime import datetime
 
 DIRS = {
     'de': '.',
@@ -24,6 +24,7 @@ def load_cms_data(path='cms_data.json'):
 def sync_schwerpunkte(data):
     schwerpunkte = data.get('schwerpunkte', [])
     if not schwerpunkte: return
+    schwerpunkte.sort(key=lambda x: x.get('order', 0))
     print(f"\n📋 Syncing {len(schwerpunkte)} schwerpunkte to praxis-schwerpunkte.html...")
     for lang, directory in DIRS.items():
         filepath = os.path.join(directory, 'praxis-schwerpunkte.html')
@@ -31,37 +32,31 @@ def sync_schwerpunkte(data):
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # we try to replace all <h3 class="service-title-new">...</h3> and <p class="service-desc-new">...</p>
-        # but regex replacing by index is safer.
-        titles = re.split(r'(<h3 class="service-title-new">)(.*?)(</h3>)', content, flags=re.DOTALL)
-        descs = re.split(r'(<p class="service-desc-new">)(.*?)(</p>)', content, flags=re.DOTALL)
-        
-        # For simplicity, if lengths roughly match, we replace.
+        # Replace titles
+        titles = re.split(r'(<h3 class="(?:disease|default)-card-title"[^>]*>)(.*?)(</h3>)', content, flags=re.DOTALL)
         for i, sp in enumerate(schwerpunkte):
-            lang_data = sp.get(lang, {})
-            title = lang_data.get('title', '')
-            desc = lang_data.get('desc', '')
-            
-            if title and (i*4 + 2) < len(titles):
-                titles[i*4 + 2] = title
-            if desc and (i*4 + 2) < len(descs):
-                descs[i*4 + 2] = desc
-        
+            title = sp.get(lang, {}).get('title', '') or sp.get('title', {}).get(lang, '')
+            idx = i * 4 + 2
+            if title and idx < len(titles):
+                titles[idx] = title
         content = "".join(titles)
-        # re-split for descs since content string changed
-        descs = re.split(r'(<p class="service-desc-new">)(.*?)(</p>)', content, flags=re.DOTALL)
+
+        # Replace descriptions
+        descs = re.split(r'(<p class="(?:disease|default)-card-desc"[^>]*>)(.*?)(</p>)', content, flags=re.DOTALL)
         for i, sp in enumerate(schwerpunkte):
-            lang_data = sp.get(lang, {})
-            desc = lang_data.get('desc', '')
-            if desc and (i*4 + 2) < len(descs):
-                descs[i*4 + 2] = desc
-                
+            desc = sp.get(lang, {}).get('desc', '') or sp.get('desc', {}).get(lang, '')
+            idx = i * 4 + 2
+            if desc and idx < len(descs):
+                descs[idx] = desc
+        content = "".join(descs)
+
         with open(filepath, 'w', encoding='utf-8') as f:
-            f.write("".join(descs))
+            f.write(content)
 
 def sync_treatments(data):
     treatments = data.get('treatments', [])
     if not treatments: return
+    treatments.sort(key=lambda x: x.get('order', 0))
     print(f"\n📋 Syncing {len(treatments)} treatments to behandlungen.html...")
     for lang, directory in DIRS.items():
         filepath = os.path.join(directory, 'behandlungen.html')
@@ -69,28 +64,30 @@ def sync_treatments(data):
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        titles = re.split(r'(<h3 class="treatment-title">)(.*?)(</h3>)', content, flags=re.DOTALL)
+        titles = re.split(r'(<h3 class="(?:disease|default)-card-title"[^>]*>)(.*?)(</h3>)', content, flags=re.DOTALL)
         for i, tr in enumerate(treatments):
-            lang_data = tr.get(lang, {})
-            title = lang_data.get('title', '')
-            if title and (i*4 + 2) < len(titles):
-                titles[i*4 + 2] = title
+            title = tr.get(lang, {}).get('title', '') or tr.get('title', {}).get(lang, '')
+            idx = i * 4 + 2
+            if title and idx < len(titles):
+                titles[idx] = title
         content = "".join(titles)
 
-        descs = re.split(r'(<p class="treatment-desc">)(.*?)(</p>)', content, flags=re.DOTALL)
+        descs = re.split(r'(<p class="(?:disease|default)-card-desc"[^>]*>)(.*?)(</p>)', content, flags=re.DOTALL)
         for i, tr in enumerate(treatments):
-            lang_data = tr.get(lang, {})
-            desc = lang_data.get('desc', '')
-            if desc and (i*4 + 2) < len(descs):
-                descs[i*4 + 2] = desc
-                
-        with open(filepath, 'w', encoding='utf-8') as f:
-            f.write("".join(descs))
+            desc = tr.get(lang, {}).get('desc', '') or tr.get('desc', {}).get(lang, '')
+            idx = i * 4 + 2
+            if desc and idx < len(descs):
+                descs[idx] = desc
+        content = "".join(descs)
 
-def sync_team(data): # DISABLED because CMS order differs from HTML order
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(content)
+
+def sync_team(data):
     team = data.get('team', [])
     if not team: return
-    print(f"\n📋 Syncing {len(team)} team members to unser-team.html...")
+    team.sort(key=lambda x: x.get('order', 0))
+    print(f"\n👥 Syncing {len(team)} team members to unser-team.html...")
     for lang, directory in DIRS.items():
         filepath = os.path.join(directory, 'unser-team.html')
         if not os.path.exists(filepath): continue
@@ -98,52 +95,29 @@ def sync_team(data): # DISABLED because CMS order differs from HTML order
             content = f.read()
         
         # Replace names
-        names = re.split(r'(class="team-name-new"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
+        names = re.split(r'(<div class="team-name-new"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
         for i, t in enumerate(team):
-            lang_data = t.get(lang, {})
-            name = lang_data.get('name', '')
-            if name and (i*4 + 2) < len(names):
-                names[i*4 + 2] = name
+            name = t.get(lang, {}).get('name', '') or t.get('name', {}).get(lang, '') or t.get('name', '')
+            idx = i * 4 + 2
+            if name and idx < len(names):
+                inner = names[idx]
+                if 'class="doc-name-text"' in inner:
+                    names[idx] = re.sub(r'(class="doc-name-text"[^>]*>)(.*?)(</span>)', rf'\g<1>{name}\g<3>', inner, flags=re.DOTALL)
+                else:
+                    names[idx] = name
         content = "".join(names)
 
         # Replace roles
-        roles = re.split(r'(class="team-role-pill"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
+        roles = re.split(r'(<div class="team-role-pill"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
         for i, t in enumerate(team):
-            lang_data = t.get(lang, {})
-            role = lang_data.get('role', '')
-            if role and (i*4 + 2) < len(roles):
-                roles[i*4 + 2] = role
-                
+            role = t.get(lang, {}).get('role', '') or t.get('role', {}).get(lang, '') or t.get('role', '')
+            idx = i * 4 + 2
+            if role and idx < len(roles):
+                roles[idx] = role
+        content = "".join(roles)
+
         with open(filepath, 'w', encoding='utf-8') as f:
-            f.write("".join(roles))
-
-def sync_pages(data):
-    # Left intact from original logic
-    pages = data.get('pages', [])
-    if not pages: return
-    print(f"\n📝 Syncing {len(pages)} pages across all languages...")
-    for page in pages:
-        page_id = page.get('id')
-        sections = page.get('sections', [])
-        if not page_id: continue
-        filename = f"{page_id}.html"
-        for lang, directory in DIRS.items():
-            filepath = os.path.join(directory, filename)
-            if not os.path.exists(filepath): continue
-            with open(filepath, 'r', encoding='utf-8') as f:
-                content = f.read()
-            for section in sections:
-                if section.get('type') == 'hero':
-                    lang_data = section.get('content', {}).get(lang, {})
-                    title = lang_data.get('title', '')
-                    desc = lang_data.get('desc', '')
-                    if title:
-                        content = re.sub(r'(<h1[^>]*class="[^"]*hero-title[^"]*"[^>]*>).*?(</h1>)', rf'\g<1>{title}\g<2>', content, flags=re.DOTALL|re.IGNORECASE)
-                    if desc:
-                        content = re.sub(r'(<p[^>]*class="[^"]*hero-desc[^"]*"[^>]*>).*?(</p>)', rf'\g<1>{desc}\g<2>', content, flags=re.DOTALL|re.IGNORECASE)
-            with open(filepath, 'w', encoding='utf-8') as f:
-                f.write(content)
-
+            f.write(content)
 
 def sync_diagnostik(data):
     items = data.get('diagnostik', [])
@@ -156,32 +130,28 @@ def sync_diagnostik(data):
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
             
-        parts = re.split(r'(<h3[^>]*class="[^"]*treatment-title[^"]*"[^>]*>)(.*?)(</h3>)', content, flags=re.DOTALL)
+        parts = re.split(r'(<h3[^>]*class="[^"]*treatment-title[^"]*"[^>]*>|<h3 style="font-size: 1\.15rem[^>]*>)(.*?)(</h3>)', content, flags=re.DOTALL)
         for i, tr in enumerate(items):
             title = tr.get(lang, {}).get('title', '') or tr.get('title', {}).get(lang, '')
-            if title and (i*4 + 2) < len(parts): parts[i*4 + 2] = title
+            idx = i * 4 + 2
+            if title and idx < len(parts): parts[idx] = title
         content = "".join(parts)
         
-        parts = re.split(r'(<p[^>]*class="[^"]*treatment-desc[^"]*"[^>]*>)(.*?)(</p>)', content, flags=re.DOTALL)
+        parts = re.split(r'(<p[^>]*class="[^"]*treatment-desc[^"]*"[^>]*>|<p style="font-size: 0\.95rem[^>]*>)(.*?)(</p>)', content, flags=re.DOTALL)
         for i, tr in enumerate(items):
             desc = tr.get(lang, {}).get('desc', '') or tr.get('desc', {}).get(lang, '')
-            if desc and (i*4 + 2) < len(parts): parts[i*4 + 2] = desc
-        content = "".join(parts)
-        
-        parts = re.split(r'(<div class="treatment-full-desc"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
-        for i, tr in enumerate(items):
-            fd = tr.get(lang, {}).get('full_desc', '') or tr.get('full_desc', {}).get(lang, '')
-            if fd and (i*4 + 2) < len(parts): parts[i*4 + 2] = fd
+            idx = i * 4 + 2
+            if desc and idx < len(parts): parts[idx] = desc
         content = "".join(parts)
         
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(content)
 
-
 def sync_faq(data):
     items = data.get('faq', [])
     if not items: return
-    print(f"\n⏳ Syncing {len(items)} faq items to patienten.html...")
+    items.sort(key=lambda x: x.get('order', 0))
+    print(f"\n❓ Syncing {len(items)} faq items to patienten.html...")
     for lang, directory in DIRS.items():
         filepath = os.path.join(directory, 'patienten.html')
         if not os.path.exists(filepath): continue
@@ -191,70 +161,85 @@ def sync_faq(data):
         parts = re.split(r'(<div class="faq-q"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
         for i, tr in enumerate(items):
             title = tr.get(lang, {}).get('title', '') or tr.get('title', {}).get(lang, '')
-            if title and (i*4 + 2) < len(parts):
-                parts[i*4 + 2] = title
+            idx = i * 4 + 2
+            if title and idx < len(parts):
+                parts[idx] = title
         content = "".join(parts)
         
         parts = re.split(r'(<div class="faq-a"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
         for i, tr in enumerate(items):
             desc = tr.get(lang, {}).get('desc', '') or tr.get('desc', {}).get(lang, '')
-            if desc and (i*4 + 2) < len(parts): parts[i*4 + 2] = desc
+            idx = i * 4 + 2
+            if desc and idx < len(parts): parts[idx] = desc
         content = "".join(parts)
         
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(content)
 
-
 def sync_reviews(data):
     reviews = data.get('reviews', [])
+    if not reviews: return
+    reviews.sort(key=lambda x: x.get('order', 0))
     print(f"\n⭐ Syncing {len(reviews)} reviews to index.html...")
-    
-    import os
-    pattern = re.compile(r'<!-- REVIEWS_START -->.*?<!-- REVIEWS_END -->', re.DOTALL)
-    
     for lang, directory in DIRS.items():
         filepath = os.path.join(directory, 'index.html')
         if not os.path.exists(filepath): continue
-        
-        # Build HTML for this specific language
-        reviews_html = '''      <!-- REVIEWS_START -->
-      <div class="testimonials-grid">
-'''
-        for rev in reviews:
-            stars_html = '★' * rev.get('stars', 5)
-            
-            # Extract text for current language
-            text_val = ''
-            if isinstance(rev.get('text'), dict):
-                text_val = rev['text'].get(lang) or rev['text'].get('de', '')
-            else:
-                text_val = rev.get('text', '')
-                
-            author = rev.get('author_name', 'Anonym')
-            avatar = author[0].upper() if author else 'A'
-            reviews_html += f'''        <div class="testimonial-card fade-in">
-          <div class="testimonial-stars">{stars_html}</div>
-          <p class="testimonial-text">"{text_val}"</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">{avatar}</div>
-            <div class="author-info">
-              <div class="author-name">{author}</div>
-            </div>
-          </div>
-        </div>
-'''
-        reviews_html += '''      </div>
-      <!-- REVIEWS_END -->'''
-
         with open(filepath, 'r', encoding='utf-8') as f:
-            html = f.read()
-        if pattern.search(html):
-            new_html = pattern.sub(reviews_html, html)
-            if new_html != html:
-                with open(filepath, 'w', encoding='utf-8') as f:
-                    f.write(new_html)
-                print(f"  ✅ Updated {filepath}")
+            content = f.read()
 
+        authors = re.split(r'(<div class="author-name-text"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
+        for i, rev in enumerate(reviews):
+            name = rev.get('author_name', '')
+            idx = i * 4 + 2
+            if name and idx < len(authors):
+                authors[idx] = name
+        content = "".join(authors)
+
+        texts = re.split(r'(<div class="testimonial-text-content"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
+        for i, rev in enumerate(reviews):
+            txt = ""
+            if isinstance(rev.get('text'), dict):
+                txt = rev['text'].get(lang) or rev['text'].get('de', '')
+            elif isinstance(rev.get(lang), dict):
+                txt = rev[lang].get('text', '')
+            else:
+                txt = rev.get('text', '')
+            idx = i * 4 + 2
+            if txt and idx < len(texts):
+                paragraphs = [p.strip() for p in txt.split('\n\n') if p.strip()]
+                if not paragraphs:
+                    paragraphs = [p.strip() for p in txt.split('\n') if p.strip()]
+                if paragraphs:
+                    formatted_p = "".join([f"<p>{p}</p>" for p in paragraphs])
+                else:
+                    formatted_p = f"<p>{txt}</p>"
+                texts[idx] = "\n            " + formatted_p + "\n          "
+        content = "".join(texts)
+
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(content)
+
+def sync_branches(data):
+    branches = data.get('branches', [])
+    if not branches: return
+    branches.sort(key=lambda x: x.get('order', 0))
+    print(f"\n📍 Syncing {len(branches)} branches to sprechzeiten.html...")
+    for lang, directory in DIRS.items():
+        filepath = os.path.join(directory, 'sprechzeiten.html')
+        if not os.path.exists(filepath): continue
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        titles = re.split(r'(<h2 class="branch-title"[^>]*>)(.*?)(</h2>)', content, flags=re.DOTALL)
+        for i, b in enumerate(branches):
+            city = b.get(lang, {}).get('city', '') or b.get('city', '')
+            idx = i * 4 + 2
+            if city and idx < len(titles):
+                titles[idx] = city
+        content = "".join(titles)
+
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(content)
 
 def main():
     print("=" * 55)
@@ -264,13 +249,13 @@ def main():
     data = load_cms_data()
     if not data: return
     
-    sync_pages(data)
     sync_schwerpunkte(data)
     sync_treatments(data)
+    sync_team(data)
     sync_diagnostik(data)
     sync_faq(data)
     sync_reviews(data)
-    # sync_team(data) - DISABLED because CMS order differs from HTML order
+    sync_branches(data)
     print("\n✅ All synchronization tasks completed successfully!")
 
 if __name__ == '__main__':

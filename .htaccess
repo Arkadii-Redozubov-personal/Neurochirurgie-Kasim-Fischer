@@ -35,7 +35,7 @@ ErrorDocument 404 /404.html
     RewriteRule ^ - [L]
 
     # For any non-existent resource, serve /404.html
-    RewriteRule ^.*$ /404.html [L]
+    RewriteRule ^ - [R=404,L]
 </IfModule>
 
 <IfModule mod_deflate.c>

@@ -172,20 +172,20 @@
           </div>
         </a>
         <div class="nav-links" id="navLinks">
-          <a href="/index.html">Startseite</a>
-          <a href="/unser-team.html">Praxis</a>
+          <a href="/index.html" id="navHome">Startseite</a>
+          <a href="/unser-team.html" id="navPraxis">Praxis</a>
           <div class="nav-dropdown-wrapper">
-            <a tabindex="0">Leistungen</a>
+            <a tabindex="0" id="navServices">Leistungen</a>
             <div class="nav-dropdown-menu">
-              <a href="/praxis-schwerpunkte.html">Erkrankungen</a>
-              <a href="/diagnostik.html">Diagnostik</a>
-              <a href="/behandlungen.html">Behandlungen &amp; OPs</a>
-              <a href="/zweitmeinung.html">Zweitmeinung</a>
+              <a href="/praxis-schwerpunkte.html" id="navDiseases">Erkrankungen</a>
+              <a href="/diagnostik.html" id="navDiagnostics">Diagnostik</a>
+              <a href="/behandlungen.html" id="navTreatments">Behandlungen &amp; OPs</a>
+              <a href="/zweitmeinung.html" id="navOpinion">Zweitmeinung</a>
             </div>
           </div>
-          <a href="/patienten.html">Für Patienten</a>
-          <a href="/presseschau.html">Presse</a>
-          <a href="/sprechzeiten.html">Kontakt</a>
+          <a href="/patienten.html" id="navPatients">Für Patienten</a>
+          <a href="/presseschau.html" id="navPress">Presse</a>
+          <a href="/sprechzeiten.html" id="navContact">Kontakt</a>
         </div>
         <div class="lang-switcher hidden-mobile">
           <div class="lang-current" id="langCurrent">DE <span>▼</span></div>
@@ -201,13 +201,14 @@
         <div class="burger-menu" id="burgerMenu" style="display: none; font-size: 28px; cursor: pointer; color: white;">☰</div>
       </nav>
       <div class="mobile-menu" id="mobileMenu" style="display:none">
-        <a href="/index.html">Startseite</a>
-        <a href="/unser-team.html">Praxis</a>
-        <a href="/praxis-schwerpunkte.html">Erkrankungen</a>
-        <a href="/behandlungen.html">Behandlungen</a>
-        <a href="/patienten.html">Für Patienten</a>
-        <a href="/sprechzeiten.html">Kontakt</a>
-        <a href="/sprechzeiten.html">Termin vereinbaren</a>
+        <a href="/index.html" id="mobHome">Startseite</a>
+        <a href="/unser-team.html" id="mobPraxis">Praxis</a>
+        <a href="/praxis-schwerpunkte.html" id="mobDiseases">Erkrankungen</a>
+        <a href="/behandlungen.html" id="mobTreatments">Behandlungen</a>
+        <a href="/patienten.html" id="mobPatients">Für Patienten</a>
+        <a href="/presseschau.html" id="mobPress">Presse</a>
+        <a href="/sprechzeiten.html" id="mobContact">Kontakt</a>
+        <a href="/sprechzeiten.html" id="mobBook" class="btn-book" style="margin-top: 15px; text-align: center;">Termin vereinbaren</a>
       </div>
     </div>
   </div>
@@ -301,28 +302,28 @@
 </div>
 </div>
 <div class="footer-links">
-<h3 class="footer-heading">LEISTUNGEN</h4>
-<a href="/praxis-schwerpunkte.html">Erkrankungen</a>
-<a href="/diagnostik.html">Diagnostik</a>
-<a href="/behandlungen.html">Behandlungen &amp; OPs</a>
-<a href="/zweitmeinung.html">Zweitmeinung</a>
+<h3 class="footer-heading" id="footHeadServices">LEISTUNGEN</h3>
+<a href="/praxis-schwerpunkte.html" id="footDiseases">Erkrankungen</a>
+<a href="/diagnostik.html" id="footDiagnostics">Diagnostik</a>
+<a href="/behandlungen.html" id="footTreatments">Behandlungen &amp; OPs</a>
+<a href="/zweitmeinung.html" id="footOpinion">Zweitmeinung</a>
 </div>
 <div class="footer-links">
-<h3 class="footer-heading">PRAXIS</h4>
-<a href="/unser-team.html">Über uns</a>
-<a href="/unser-team.html">Unser Team</a>
-<a href="/presseschau.html">Presseschau</a>
-<a href="/sprechzeiten.html">Kontakt</a>
-<a href="/impressum.html">Impressum</a>
-<a href="/datenschutz.html">Datenschutz</a>
+<h3 class="footer-heading" id="footHeadPraxis">PRAXIS</h3>
+<a href="/unser-team.html" id="footAbout">Über uns</a>
+<a href="/unser-team.html" id="footTeam">Unser Team</a>
+<a href="/presseschau.html" id="footPress">Presseschau</a>
+<a href="/sprechzeiten.html" id="footContact">Kontakt</a>
+<a href="/impressum.html" id="footImpressum">Impressum</a>
+<a href="/datenschutz.html" id="footPrivacy">Datenschutz</a>
 </div>
 <div class="footer-links">
-<h3 class="footer-heading">SPRECHZEITEN</h4>
-<p style="margin:0;line-height:2;font-size:0.9rem;color:rgba(255,255,255,0.75);">Mo: 08:00&#8211;13:00 &amp; 14:00&#8211;18:00 Uhr<br>Di: 08:00&#8211;15:00 Uhr<br>Mi: 08:00&#8211;15:00 Uhr<br>Do: 08:00&#8211;13:00 &amp; 14:00&#8211;18:00 Uhr<br>Fr: 08:00&#8211;14:00 Uhr<br>Sa: nach Vereinbarung</p>
-<p>Sa - So: Geschlossen</p>
+<h3 class="footer-heading" id="footHeadHours">SPRECHZEITEN</h3>
+<p id="footHours" style="margin:0;line-height:2;font-size:0.9rem;color:rgba(255,255,255,0.75);">Mo: 08:00&#8211;13:00 &amp; 14:00&#8211;18:00 Uhr<br>Di: 08:00&#8211;15:00 Uhr<br>Mi: 08:00&#8211;15:00 Uhr<br>Do: 08:00&#8211;13:00 &amp; 14:00&#8211;18:00 Uhr<br>Fr: 08:00&#8211;14:00 Uhr<br>Sa: nach Vereinbarung</p>
+<p id="footWeekend">Sa - So: Geschlossen</p>
 </div>
 </div>
-<div class="footer-bottom" style="text-align: center; padding-top: 32px; margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.85rem;">
+<div class="footer-bottom" id="footerBottom" style="text-align: center; padding-top: 32px; margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.85rem;">
       &copy; 2026 NabiOta Health Group Germany. Alle Rechte vorbehalten.
     </div>
 </footer>
@@ -358,6 +359,229 @@
     const langEl = document.getElementById('langCurrent');
     if (langEl) langEl.innerHTML = lang.toUpperCase() + ' <span>▼</span>';
 
+    const dict = {
+      en: {
+        pageTitle: '404 – Page Not Found | Neurochirurgie Fischer',
+        badge: 'Error 404 · Not Found',
+        title: 'This page does not exist',
+        desc: 'The page you requested could not be found. It may have been moved, renamed, or is temporarily unavailable.',
+        home: 'Back to Homepage',
+        contact: 'Office Hours & Locations',
+        book: 'Book Online Appointment',
+        teamT: 'Our Practice Team', teamS: 'Doctors, specialists, and medical staff',
+        spT: 'Focus Areas', spS: 'Spine and peripheral nerve conditions',
+        trT: 'Treatments & Surgery', trS: 'Conservative and surgical procedures',
+        faqT: 'Patients & FAQ', faqS: 'Key questions and appointment information',
+        // Navbar
+        navHome: 'Home',
+        navPraxis: 'Practice',
+        navServices: 'Services',
+        navDiseases: 'Diseases',
+        navDiagnostics: 'Diagnostics',
+        navTreatments: 'Treatments & Surgeries',
+        navTreatmentsMob: 'Treatments',
+        navOpinion: 'Second Opinion',
+        navPatients: 'For Patients',
+        navPress: 'Press',
+        navContact: 'Contact',
+        btnBook: 'Book Appointment',
+        // Footer
+        footHeadServices: 'SERVICES',
+        footHeadPraxis: 'PRACTICE',
+        footHeadHours: 'OFFICE HOURS',
+        footAbout: 'About Us',
+        footTeam: 'Our Team',
+        footPress: 'Press',
+        footImpressum: 'Legal Notice',
+        footPrivacy: 'Privacy Policy',
+        footWeekend: 'Sat - Sun: Closed',
+        footerCopy: '© 2026 NabiOta Health Group Germany. All rights reserved.'
+      },
+      ru: {
+        pageTitle: '404 – Страница не найдена | Neurochirurgie Fischer',
+        badge: 'Ошибка 404 · Страница не найдена',
+        title: 'Запрошенная страница не существует',
+        desc: 'Страница не найдена. Возможно, адрес изменился, ссылка устарела или страница была перемещена.',
+        home: 'На главную страницу',
+        contact: 'Часы приема и адреса',
+        book: 'Онлайн-запись на прием',
+        teamT: 'Наша команда', teamS: 'Врачи, специалисты и медицинский персонал',
+        spT: 'Основные направления', spS: 'Заболевания позвоночника и нервной системы',
+        trT: 'Лечение и операции', trS: 'Консервативные и хирургические методики',
+        faqT: 'Пациентам и FAQ', faqS: 'Часто задаваемые вопросы и подготовка к приему',
+        // Navbar
+        navHome: 'Главная',
+        navPraxis: 'Практика',
+        navServices: 'Услуги',
+        navDiseases: 'Заболевания',
+        navDiagnostics: 'Диагностика',
+        navTreatments: 'Лечение и операции',
+        navTreatmentsMob: 'Лечение',
+        navOpinion: 'Второе мнение',
+        navPatients: 'Пациентам',
+        navPress: 'Пресса',
+        navContact: 'Контакты',
+        btnBook: 'Записаться на прием',
+        // Footer
+        footHeadServices: 'УСЛУГИ',
+        footHeadPraxis: 'ПРАКТИКА',
+        footHeadHours: 'ЧАСЫ ПРИЕМА',
+        footAbout: 'О нас',
+        footTeam: 'Наша команда',
+        footPress: 'Пресса',
+        footImpressum: 'Выходные данные',
+        footPrivacy: 'Конфиденциальность',
+        footWeekend: 'Сб - Вс: Закрыто',
+        footerCopy: '© 2026 NabiOta Health Group Germany. Все права защищены.'
+      },
+      tr: {
+        pageTitle: '404 – Sayfa Bulunamadı | Neurochirurgie Fischer',
+        badge: 'Hata 404 · Sayfa Bulunamadı',
+        title: 'Bu sayfa mevcut değil',
+        desc: 'Aradığınız sayfa bulunamadı. Adres değişmiş, bağlantı eskimiş veya sayfa taşınmış olabilir.',
+        home: 'Ana Sayfaya Dön',
+        contact: 'Çalışma Saatleri & Konumlar',
+        book: 'Online Randevu Al',
+        teamT: 'Ekibimiz', teamS: 'Doktorlar, uzmanlar ve sağlık personeli',
+        spT: 'Uzmanlık Alanları', spS: 'Omurga ve periferik sinir hastalıkları',
+        trT: 'Tedaviler & Ameliyatlar', trS: 'Konservatif ve cerrahi yöntemler',
+        faqT: 'Hastalar & SSS', faqS: 'Önemli sorular ve randevu bilgileri',
+        // Navbar
+        navHome: 'Ana Sayfa',
+        navPraxis: 'Muayenehane',
+        navServices: 'Hizmetler',
+        navDiseases: 'Hastalıklar',
+        navDiagnostics: 'Teşhis',
+        navTreatments: 'Tedaviler ve Ameliyatlar',
+        navTreatmentsMob: 'Tedaviler',
+        navOpinion: 'İkinci Görüş',
+        navPatients: 'Hastalar İçin',
+        navPress: 'Basın',
+        navContact: 'İletişim',
+        btnBook: 'Randevu Al',
+        // Footer
+        footHeadServices: 'HİZMETLER',
+        footHeadPraxis: 'MUAYENEHANE',
+        footHeadHours: 'ÇALIŞMA SAATLERİ',
+        footAbout: 'Hakkımızda',
+        footTeam: 'Ekibimiz',
+        footPress: 'Basın',
+        footImpressum: 'Künye',
+        footPrivacy: 'Gizlilik',
+        footWeekend: 'Cmt - Paz: Kapalı',
+        footerCopy: '© 2026 NabiOta Health Group Germany. Tüm hakları saklıdır.'
+      },
+      ar: {
+        pageTitle: '404 – الصفحة غير موجودة | Neurochirurgie Fischer',
+        badge: 'خطأ 404 · الصفحة غير موجودة',
+        title: 'عذراً، هذه الصفحة غير موجودة',
+        desc: 'لم يتم العثور على الصفحة التي طلبتها. ربما تم تغيير العنوان أو نقل الصفحة.',
+        home: 'العودة للصفحة الرئيسية',
+        contact: 'أوقات العمل والمواقع',
+        book: 'حجز موعد عبر الإنترنت',
+        teamT: 'فريق العمل', teamS: 'الأطباء والمتخصصون والكوادر الطبية',
+        spT: 'مجالات التخصص', spS: 'أمراض العمود الفقري والأعصاب المحيطية',
+        trT: 'العلاجات والعمليات', trS: 'الإجراءات التحفظية والجراحية',
+        faqT: 'المرضى والأسئلة الشائعة', faqS: 'الأسئلة المتكررة ومعلومات الموعد',
+        // Navbar
+        navHome: 'الرئيسية',
+        navPraxis: 'العيادة',
+        navServices: 'الخدمات',
+        navDiseases: 'الأمراض',
+        navDiagnostics: 'التشخيص',
+        navTreatments: 'العلاجات والعمليات',
+        navTreatmentsMob: 'العلاجات',
+        navOpinion: 'الرأي الثاني',
+        navPatients: 'للمرضى',
+        navPress: 'الصحافة',
+        navContact: 'اتصل بنا',
+        btnBook: 'تحديد موعد',
+        // Footer
+        footHeadServices: 'الخدمات',
+        footHeadPraxis: 'العيادة',
+        footHeadHours: 'أوقات الدوام',
+        footAbout: 'من نحن',
+        footTeam: 'فريقنا',
+        footPress: 'الصحافة',
+        footImpressum: 'إشعار قانوني',
+        footPrivacy: 'سياسة الخصوصية',
+        footWeekend: 'السبت - الأحد: مغلق',
+        footerCopy: '© 2026 NabiOta Health Group Germany. جميع الحقوق محفوظة.'
+      }
+    };
+
+    const d = dict[lang];
+    if (!d) return;
+
+    if (d.pageTitle) document.title = d.pageTitle;
+
+    const setText = (id, text) => {
+      const el = document.getElementById(id);
+      if (el && text) el.textContent = text;
+    };
+
+    // Hero Section
+    setText('errorBadge', d.badge);
+    setText('errorTitle', d.title);
+    setText('errorDesc', d.desc);
+    setText('btnHomeText', d.home);
+    setText('btnContactText', d.contact);
+    setText('btnBookingText', d.book);
+
+    // Cards
+    const setCard = (id, t, s) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const titleEl = el.querySelector('.quick-card-title span:first-child');
+      const subEl = el.querySelector('.quick-card-sub');
+      if (titleEl) titleEl.textContent = t;
+      if (subEl) subEl.textContent = s;
+    };
+    setCard('cardTeam', d.teamT, d.teamS);
+    setCard('cardSchwerpunkte', d.spT, d.spS);
+    setCard('cardBehandlungen', d.trT, d.trS);
+    setCard('cardPatienten', d.faqT, d.faqS);
+
+    // Navbar Links & Button
+    setText('navHome', d.navHome);
+    setText('navPraxis', d.navPraxis);
+    setText('navServices', d.navServices);
+    setText('navDiseases', d.navDiseases);
+    setText('navDiagnostics', d.navDiagnostics);
+    setText('navTreatments', d.navTreatments);
+    setText('navOpinion', d.navOpinion);
+    setText('navPatients', d.navPatients);
+    setText('navPress', d.navPress);
+    setText('navContact', d.navContact);
+    setText('btnBook', d.btnBook);
+
+    // Mobile Menu
+    setText('mobHome', d.navHome);
+    setText('mobPraxis', d.navPraxis);
+    setText('mobDiseases', d.navDiseases);
+    setText('mobTreatments', d.navTreatmentsMob || d.navTreatments);
+    setText('mobPatients', d.navPatients);
+    setText('mobPress', d.navPress);
+    setText('mobContact', d.navContact);
+    setText('mobBook', d.btnBook);
+
+    // Footer
+    setText('footHeadServices', d.footHeadServices);
+    setText('footDiseases', d.navDiseases);
+    setText('footDiagnostics', d.navDiagnostics);
+    setText('footTreatments', d.navTreatments);
+    setText('footOpinion', d.navOpinion);
+    setText('footHeadPraxis', d.footHeadPraxis);
+    setText('footAbout', d.footAbout);
+    setText('footTeam', d.footTeam);
+    setText('footPress', d.footPress);
+    setText('footContact', d.navContact);
+    setText('footImpressum', d.footImpressum);
+    setText('footPrivacy', d.footPrivacy);
+    setText('footHeadHours', d.footHeadHours);
+    setText('footWeekend', d.footWeekend);
+    setText('footerBottom', d.footerCopy);
+
     // Route links to current language
     const updateLink = (id, file) => {
       const el = document.getElementById(id);
@@ -371,79 +595,39 @@
     updateLink('cardBehandlungen', 'behandlungen.html');
     updateLink('cardPatienten', 'patienten.html');
 
-    const dict = {
-      en: {
-        badge: 'Error 404 · Not Found',
-        title: 'This page does not exist',
-        desc: 'The page you requested could not be found. It may have been moved, renamed, or is temporarily unavailable.',
-        home: 'Back to Homepage',
-        contact: 'Office Hours & Locations',
-        book: 'Book Online Appointment',
-        teamT: 'Our Practice Team', teamS: 'Doctors, specialists, and medical staff',
-        spT: 'Focus Areas', spS: 'Spine and peripheral nerve conditions',
-        trT: 'Treatments & Surgery', trS: 'Conservative and surgical procedures',
-        faqT: 'Patients & FAQ', faqS: 'Key questions and appointment information'
-      },
-      ru: {
-        badge: 'Ошибка 404 · Страница не найдена',
-        title: 'Запрошенная страница не существует',
-        desc: 'Страница не найдена. Возможно, адрес изменился, ссылка устарела или страница была перемещена.',
-        home: 'На главную страницу',
-        contact: 'Часы приема и адреса',
-        book: 'Онлайн-запись на прием',
-        teamT: 'Наша команда', teamS: 'Врачи, специалисты и медицинский персонал',
-        spT: 'Основные направления', spS: 'Заболевания позвоночника и нервной системы',
-        trT: 'Лечение и операции', trS: 'Консервативные и хирургические методики',
-        faqT: 'Пациентам и FAQ', faqS: 'Часто задаваемые вопросы и подготовка к приему'
-      },
-      tr: {
-        badge: 'Hata 404 · Sayfa Bulunamadı',
-        title: 'Bu sayfa mevcut değil',
-        desc: 'Aradığınız sayfa bulunamadı. Adres değişmiş, bağlantı eskimiş veya sayfa taşınmış olabilir.',
-        home: 'Ana Sayfaya Dön',
-        contact: 'Çalışma Saatleri & Konumlar',
-        book: 'Online Randevu Al',
-        teamT: 'Ekibimiz', teamS: 'Doktorlar, uzmanlar ve sağlık personeli',
-        spT: 'Uzmanlık Alanları', spS: 'Omurga ve periferik sinir hastalıkları',
-        trT: 'Tedaviler & Ameliyatlar', trS: 'Konservatif ve cerrahi yöntemler',
-        faqT: 'Hastalar & SSS', faqS: 'Önemli sorular ve randevu bilgileri'
-      },
-      ar: {
-        badge: 'خطأ 404 · الصفحة غير موجودة',
-        title: 'عذراً، هذه الصفحة غير موجودة',
-        desc: 'لم يتم العثور على الصفحة التي طلبتها. ربما تم تغيير العنوان أو نقل الصفحة.',
-        home: 'العودة للصفحة الرئيسية',
-        contact: 'أوقات العمل والمواقع',
-        book: 'حجز موعد عبر الإنترنت',
-        teamT: 'فريق العمل', teamS: 'الأطباء والمتخصصون والكوادر الطبية',
-        spT: 'مجالات التخصص', spS: 'أمراض العمود الفقري والأعصاب المحيطية',
-        trT: 'العلاجات والعمليات', trS: 'الإجراءات التحفظية والجراحية',
-        faqT: 'المرضى والأسئلة الشائعة', faqS: 'الأسئلة المتكررة ومعلومات الموعد'
-      }
-    };
+    // Header Links
+    updateLink('navHome', 'index.html');
+    updateLink('navPraxis', 'unser-team.html');
+    updateLink('navDiseases', 'praxis-schwerpunkte.html');
+    updateLink('navDiagnostics', 'diagnostik.html');
+    updateLink('navTreatments', 'behandlungen.html');
+    updateLink('navOpinion', 'zweitmeinung.html');
+    updateLink('navPatients', 'patienten.html');
+    updateLink('navPress', 'presseschau.html');
+    updateLink('navContact', 'sprechzeiten.html');
+    updateLink('btnBook', 'sprechzeiten.html');
 
-    const d = dict[lang];
-    if (!d) return;
+    // Mobile Links
+    updateLink('mobHome', 'index.html');
+    updateLink('mobPraxis', 'unser-team.html');
+    updateLink('mobDiseases', 'praxis-schwerpunkte.html');
+    updateLink('mobTreatments', 'behandlungen.html');
+    updateLink('mobPatients', 'patienten.html');
+    updateLink('mobPress', 'presseschau.html');
+    updateLink('mobContact', 'sprechzeiten.html');
+    updateLink('mobBook', 'sprechzeiten.html');
 
-    if (document.getElementById('errorBadge')) document.getElementById('errorBadge').textContent = d.badge;
-    if (document.getElementById('errorTitle')) document.getElementById('errorTitle').textContent = d.title;
-    if (document.getElementById('errorDesc')) document.getElementById('errorDesc').textContent = d.desc;
-    if (document.getElementById('btnHomeText')) document.getElementById('btnHomeText').textContent = d.home;
-    if (document.getElementById('btnContactText')) document.getElementById('btnContactText').textContent = d.contact;
-    if (document.getElementById('btnBookingText')) document.getElementById('btnBookingText').textContent = d.book;
-
-    const setCard = (id, t, s) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      const titleEl = el.querySelector('.quick-card-title span:first-child');
-      const subEl = el.querySelector('.quick-card-sub');
-      if (titleEl) titleEl.textContent = t;
-      if (subEl) subEl.textContent = s;
-    };
-    setCard('cardTeam', d.teamT, d.teamS);
-    setCard('cardSchwerpunkte', d.spT, d.spS);
-    setCard('cardBehandlungen', d.trT, d.trS);
-    setCard('cardPatienten', d.faqT, d.faqS);
+    // Footer Links
+    updateLink('footDiseases', 'praxis-schwerpunkte.html');
+    updateLink('footDiagnostics', 'diagnostik.html');
+    updateLink('footTreatments', 'behandlungen.html');
+    updateLink('footOpinion', 'zweitmeinung.html');
+    updateLink('footAbout', 'unser-team.html');
+    updateLink('footTeam', 'unser-team.html');
+    updateLink('footPress', 'presseschau.html');
+    updateLink('footContact', 'sprechzeiten.html');
+    updateLink('footImpressum', 'impressum.html');
+    updateLink('footPrivacy', 'datenschutz.html');
   })();
 </script>
 </body>

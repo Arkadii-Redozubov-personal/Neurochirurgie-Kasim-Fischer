@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <base href="/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 – Seite nicht gefunden | Neurochirurgie Fischer</title>
   <meta name="robots" content="noindex, follow">
-  <link rel="icon" type="image/svg+xml" href="img/nLogo.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/img/nLogo.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/home.css">
 
   <style>
     .error-hero {
@@ -163,50 +164,50 @@
   <div style="background: #091f22; border-bottom: 1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <nav class="navbar" style="margin-bottom: 0; padding: 18px 0;">
-        <a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
-          <img src="img/nLogo.svg" alt="NabiOta Health Group Germany" style="height:52px;width:auto;border-radius:12px;"/>
+        <a id="logoLink" href="/index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+          <img src="/img/nLogo.svg" alt="NabiOta Health Group Germany" style="height:52px;width:auto;border-radius:12px;"/>
           <div class="brand-text-lockup" style="display:flex;flex-direction:column;line-height:1.1;justify-content:center;direction:ltr;text-align:left;">
             <span class="brand-title-gold" style="font-family:'Cinzel', 'Playfair Display', Georgia, serif;font-weight:800;font-size:1.4rem;letter-spacing:1.8px;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 30%, #c69c3a 60%, #f7e68a 85%, #b88d28 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#e8c170;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.45));white-space:nowrap;">NABIOTA</span>
             <span class="brand-sub-gold" style="font-family:'Plus Jakarta Sans', sans-serif;font-weight:700;font-size:0.6rem;letter-spacing:2.6px;text-transform:uppercase;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 45%, #c69c3a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#c69c3a;white-space:nowrap;margin-top:2px;">HEALTH GROUP GERMANY</span>
           </div>
         </a>
-        <div class="nav-links">
-          <a href="index.html">Startseite</a>
-          <a href="unser-team.html">Praxis</a>
+        <div class="nav-links" id="navLinks">
+          <a href="/index.html">Startseite</a>
+          <a href="/unser-team.html">Praxis</a>
           <div class="nav-dropdown-wrapper">
             <a tabindex="0">Leistungen</a>
             <div class="nav-dropdown-menu">
-              <a href="praxis-schwerpunkte.html">Erkrankungen</a>
-              <a href="diagnostik.html">Diagnostik</a>
-              <a href="behandlungen.html">Behandlungen &amp; OPs</a>
-              <a href="zweitmeinung.html">Zweitmeinung</a>
+              <a href="/praxis-schwerpunkte.html">Erkrankungen</a>
+              <a href="/diagnostik.html">Diagnostik</a>
+              <a href="/behandlungen.html">Behandlungen &amp; OPs</a>
+              <a href="/zweitmeinung.html">Zweitmeinung</a>
             </div>
           </div>
-          <a href="patienten.html">Für Patienten</a>
-          <a href="presseschau.html">Presse</a>
-          <a href="sprechzeiten.html">Kontakt</a>
+          <a href="/patienten.html">Für Patienten</a>
+          <a href="/presseschau.html">Presse</a>
+          <a href="/sprechzeiten.html">Kontakt</a>
         </div>
         <div class="lang-switcher hidden-mobile">
-          <div class="lang-current">DE <span>▼</span></div>
+          <div class="lang-current" id="langCurrent">DE <span>▼</span></div>
           <div class="lang-dropdown">
-            <a href="index.html">Deutsch (DE)</a>
-            <a href="en/index.html">English (EN)</a>
-            <a href="ru/index.html">Русский (RU)</a>
-            <a href="tr/index.html">Türkçe (TR)</a>
-            <a href="ar/index.html">العربية (AR)</a>
+            <a href="/index.html">Deutsch (DE)</a>
+            <a href="/en/index.html">English (EN)</a>
+            <a href="/ru/index.html">Русский (RU)</a>
+            <a href="/tr/index.html">Türkçe (TR)</a>
+            <a href="/ar/index.html">العربية (AR)</a>
           </div>
         </div>
-        <a class="btn-book hidden-mobile" href="sprechzeiten.html">Termin vereinbaren</a>
+        <a class="btn-book hidden-mobile" id="btnBook" href="/sprechzeiten.html">Termin vereinbaren</a>
         <div class="burger-menu" id="burgerMenu" style="display: none; font-size: 28px; cursor: pointer; color: white;">☰</div>
       </nav>
       <div class="mobile-menu" id="mobileMenu" style="display:none">
-        <a href="index.html">Startseite</a>
-        <a href="unser-team.html">Praxis</a>
-        <a href="praxis-schwerpunkte.html">Erkrankungen</a>
-        <a href="behandlungen.html">Behandlungen</a>
-        <a href="patienten.html">Für Patienten</a>
-        <a href="sprechzeiten.html">Kontakt</a>
-        <a href="sprechzeiten.html">Termin vereinbaren</a>
+        <a href="/index.html">Startseite</a>
+        <a href="/unser-team.html">Praxis</a>
+        <a href="/praxis-schwerpunkte.html">Erkrankungen</a>
+        <a href="/behandlungen.html">Behandlungen</a>
+        <a href="/patienten.html">Für Patienten</a>
+        <a href="/sprechzeiten.html">Kontakt</a>
+        <a href="/sprechzeiten.html">Termin vereinbaren</a>
       </div>
     </div>
   </div>
@@ -214,43 +215,43 @@
   <!-- 404 Hero Section -->
   <section class="error-hero">
     <div class="error-container">
-      <div class="error-badge">Fehler 404 · Nicht gefunden</div>
+      <div class="error-badge" id="errorBadge">Fehler 404 · Nicht gefunden</div>
       <div class="error-code">404</div>
-      <h1 class="error-title">Diese Seite existiert leider nicht</h1>
-      <p class="error-desc">
+      <h1 class="error-title" id="errorTitle">Diese Seite existiert leider nicht</h1>
+      <p class="error-desc" id="errorDesc">
         Die von Ihnen aufgerufene Seite konnte nicht gefunden werden. Möglicherweise wurde die Adresse geändert, der Link ist veraltet oder die Seite wurde verschoben.
       </p>
 
       <div class="error-actions">
-        <a href="index.html" class="btn-action-primary">
+        <a href="/index.html" class="btn-action-primary" id="btnHome">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-          Zur Startseite
+          <span id="btnHomeText">Zur Startseite</span>
         </a>
-        <a href="sprechzeiten.html" class="btn-action-secondary">
+        <a href="/sprechzeiten.html" class="btn-action-secondary" id="btnContact">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          Sprechzeiten &amp; Standorte
+          <span id="btnContactText">Sprechzeiten &amp; Standorte</span>
         </a>
         <a href="https://app.arzt-direkt.de/neurochirurgiefischer/booking" target="_blank" rel="noopener" class="btn-action-secondary" style="border-color: rgba(0, 201, 167, 0.4); color: #00c9a7 !important;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-          Online-Termin buchen
+          <span id="btnBookingText">Online-Termin buchen</span>
         </a>
       </div>
 
-      <div class="quick-links-grid">
-        <a href="unser-team.html" class="quick-card">
-          <div class="quick-card-title">Unser Praxisteam <span>&rarr;</span></div>
+      <div class="quick-links-grid" id="quickGrid">
+        <a href="/unser-team.html" class="quick-card" id="cardTeam">
+          <div class="quick-card-title"><span>Unser Praxisteam</span> <span>&rarr;</span></div>
           <div class="quick-card-sub">Ärzte, Spezialisten und Fachpersonal</div>
         </a>
-        <a href="praxis-schwerpunkte.html" class="quick-card">
-          <div class="quick-card-title">Schwerpunkte <span>&rarr;</span></div>
+        <a href="/praxis-schwerpunkte.html" class="quick-card" id="cardSchwerpunkte">
+          <div class="quick-card-title"><span>Schwerpunkte</span> <span>&rarr;</span></div>
           <div class="quick-card-sub">Wirbelsäulenerkrankungen &amp; Nerven</div>
         </a>
-        <a href="behandlungen.html" class="quick-card">
-          <div class="quick-card-title">Behandlungen <span>&rarr;</span></div>
+        <a href="/behandlungen.html" class="quick-card" id="cardBehandlungen">
+          <div class="quick-card-title"><span>Behandlungen</span> <span>&rarr;</span></div>
           <div class="quick-card-sub">Konservative &amp; operative Verfahren</div>
         </a>
-        <a href="patienten.html" class="quick-card">
-          <div class="quick-card-title">Patienten &amp; FAQ <span>&rarr;</span></div>
+        <a href="/patienten.html" class="quick-card" id="cardPatienten">
+          <div class="quick-card-title"><span>Patienten &amp; FAQ</span> <span>&rarr;</span></div>
           <div class="quick-card-sub">Wichtige Fragen &amp; Hinweise zum Termin</div>
         </a>
       </div>
@@ -261,8 +262,8 @@
 <footer class="footer-wrapper">
 <div class="container footer-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
 <div class="footer-brand">
-<a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;">
-<img src="img/nLogo.svg" alt="NabiOta Health Group Germany" style="height:56px;width:auto;border-radius:12px;"/>
+<a href="/index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;">
+<img src="/img/nLogo.svg" alt="NabiOta Health Group Germany" style="height:56px;width:auto;border-radius:12px;"/>
 <div class="brand-text-lockup" style="display:flex;flex-direction:column;line-height:1.1;justify-content:center;direction:ltr;text-align:left;">
   <span class="brand-title-gold" style="font-family:'Cinzel', 'Playfair Display', 'Times New Roman', Georgia, serif;font-weight:800;font-size:1.5rem;letter-spacing:1.8px;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 30%, #c69c3a 60%, #f7e68a 85%, #b88d28 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#e8c170;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.45));white-space:nowrap;">NABIOTA</span>
   <span class="brand-sub-gold" style="font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:2.6px;text-transform:uppercase;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 45%, #c69c3a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#c69c3a;white-space:nowrap;margin-top:2px;">HEALTH GROUP GERMANY</span>
@@ -301,19 +302,19 @@
 </div>
 <div class="footer-links">
 <h3 class="footer-heading">LEISTUNGEN</h4>
-<a href="praxis-schwerpunkte.html">Erkrankungen</a>
-<a href="diagnostik.html">Diagnostik</a>
-<a href="behandlungen.html">Behandlungen &amp; OPs</a>
-<a href="zweitmeinung.html">Zweitmeinung</a>
+<a href="/praxis-schwerpunkte.html">Erkrankungen</a>
+<a href="/diagnostik.html">Diagnostik</a>
+<a href="/behandlungen.html">Behandlungen &amp; OPs</a>
+<a href="/zweitmeinung.html">Zweitmeinung</a>
 </div>
 <div class="footer-links">
 <h3 class="footer-heading">PRAXIS</h4>
-<a href="unser-team.html">Über uns</a>
-<a href="unser-team.html">Unser Team</a>
-<a href="presseschau.html">Presseschau</a>
-<a href="sprechzeiten.html">Kontakt</a>
-<a href="impressum.html">Impressum</a>
-<a href="datenschutz.html">Datenschutz</a>
+<a href="/unser-team.html">Über uns</a>
+<a href="/unser-team.html">Unser Team</a>
+<a href="/presseschau.html">Presseschau</a>
+<a href="/sprechzeiten.html">Kontakt</a>
+<a href="/impressum.html">Impressum</a>
+<a href="/datenschutz.html">Datenschutz</a>
 </div>
 <div class="footer-links">
 <h3 class="footer-heading">SPRECHZEITEN</h4>
@@ -338,6 +339,112 @@
       burger.textContent = isBlock ? '☰' : '✕';
     });
   }
+
+  // Automatic Multilingual Translation based on URL prefix (/en/, /ru/, /tr/, /ar/)
+  (function() {
+    const path = window.location.pathname.toLowerCase();
+    let lang = 'de';
+    if (path.startsWith('/en/') || path === '/en') lang = 'en';
+    else if (path.startsWith('/ru/') || path === '/ru') lang = 'ru';
+    else if (path.startsWith('/tr/') || path === '/tr') lang = 'tr';
+    else if (path.startsWith('/ar/') || path === '/ar') lang = 'ar';
+
+    if (lang === 'de') return;
+
+    document.documentElement.lang = lang;
+    if (lang === 'ar') document.documentElement.dir = 'rtl';
+
+    const pfx = '/' + lang + '/';
+    const langEl = document.getElementById('langCurrent');
+    if (langEl) langEl.innerHTML = lang.toUpperCase() + ' <span>▼</span>';
+
+    // Route links to current language
+    const updateLink = (id, file) => {
+      const el = document.getElementById(id);
+      if (el) el.href = pfx + file;
+    };
+    updateLink('logoLink', 'index.html');
+    updateLink('btnHome', 'index.html');
+    updateLink('btnContact', 'sprechzeiten.html');
+    updateLink('cardTeam', 'unser-team.html');
+    updateLink('cardSchwerpunkte', 'praxis-schwerpunkte.html');
+    updateLink('cardBehandlungen', 'behandlungen.html');
+    updateLink('cardPatienten', 'patienten.html');
+
+    const dict = {
+      en: {
+        badge: 'Error 404 · Not Found',
+        title: 'This page does not exist',
+        desc: 'The page you requested could not be found. It may have been moved, renamed, or is temporarily unavailable.',
+        home: 'Back to Homepage',
+        contact: 'Office Hours & Locations',
+        book: 'Book Online Appointment',
+        teamT: 'Our Practice Team', teamS: 'Doctors, specialists, and medical staff',
+        spT: 'Focus Areas', spS: 'Spine and peripheral nerve conditions',
+        trT: 'Treatments & Surgery', trS: 'Conservative and surgical procedures',
+        faqT: 'Patients & FAQ', faqS: 'Key questions and appointment information'
+      },
+      ru: {
+        badge: 'Ошибка 404 · Страница не найдена',
+        title: 'Запрошенная страница не существует',
+        desc: 'Страница не найдена. Возможно, адрес изменился, ссылка устарела или страница была перемещена.',
+        home: 'На главную страницу',
+        contact: 'Часы приема и адреса',
+        book: 'Онлайн-запись на прием',
+        teamT: 'Наша команда', teamS: 'Врачи, специалисты и медицинский персонал',
+        spT: 'Основные направления', spS: 'Заболевания позвоночника и нервной системы',
+        trT: 'Лечение и операции', trS: 'Консервативные и хирургические методики',
+        faqT: 'Пациентам и FAQ', faqS: 'Часто задаваемые вопросы и подготовка к приему'
+      },
+      tr: {
+        badge: 'Hata 404 · Sayfa Bulunamadı',
+        title: 'Bu sayfa mevcut değil',
+        desc: 'Aradığınız sayfa bulunamadı. Adres değişmiş, bağlantı eskimiş veya sayfa taşınmış olabilir.',
+        home: 'Ana Sayfaya Dön',
+        contact: 'Çalışma Saatleri & Konumlar',
+        book: 'Online Randevu Al',
+        teamT: 'Ekibimiz', teamS: 'Doktorlar, uzmanlar ve sağlık personeli',
+        spT: 'Uzmanlık Alanları', spS: 'Omurga ve periferik sinir hastalıkları',
+        trT: 'Tedaviler & Ameliyatlar', trS: 'Konservatif ve cerrahi yöntemler',
+        faqT: 'Hastalar & SSS', faqS: 'Önemli sorular ve randevu bilgileri'
+      },
+      ar: {
+        badge: 'خطأ 404 · الصفحة غير موجودة',
+        title: 'عذراً، هذه الصفحة غير موجودة',
+        desc: 'لم يتم العثور على الصفحة التي طلبتها. ربما تم تغيير العنوان أو نقل الصفحة.',
+        home: 'العودة للصفحة الرئيسية',
+        contact: 'أوقات العمل والمواقع',
+        book: 'حجز موعد عبر الإنترنت',
+        teamT: 'فريق العمل', teamS: 'الأطباء والمتخصصون والكوادر الطبية',
+        spT: 'مجالات التخصص', spS: 'أمراض العمود الفقري والأعصاب المحيطية',
+        trT: 'العلاجات والعمليات', trS: 'الإجراءات التحفظية والجراحية',
+        faqT: 'المرضى والأسئلة الشائعة', faqS: 'الأسئلة المتكررة ومعلومات الموعد'
+      }
+    };
+
+    const d = dict[lang];
+    if (!d) return;
+
+    if (document.getElementById('errorBadge')) document.getElementById('errorBadge').textContent = d.badge;
+    if (document.getElementById('errorTitle')) document.getElementById('errorTitle').textContent = d.title;
+    if (document.getElementById('errorDesc')) document.getElementById('errorDesc').textContent = d.desc;
+    if (document.getElementById('btnHomeText')) document.getElementById('btnHomeText').textContent = d.home;
+    if (document.getElementById('btnContactText')) document.getElementById('btnContactText').textContent = d.contact;
+    if (document.getElementById('btnBookingText')) document.getElementById('btnBookingText').textContent = d.book;
+
+    const setCard = (id, t, s) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const titleEl = el.querySelector('.quick-card-title span:first-child');
+      const subEl = el.querySelector('.quick-card-sub');
+      if (titleEl) titleEl.textContent = t;
+      if (subEl) subEl.textContent = s;
+    };
+    setCard('cardTeam', d.teamT, d.teamS);
+    setCard('cardSchwerpunkte', d.spT, d.spS);
+    setCard('cardBehandlungen', d.trT, d.trS);
+    setCard('cardPatienten', d.faqT, d.faqS);
+  })();
 </script>
 </body>
 </html>

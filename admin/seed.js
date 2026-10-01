@@ -1917,10 +1917,16 @@ window.seedData = {
   ]
 };
 
-window.seedCollection = async function(colName, dataList) {
+window.seedCollection = async function(colName, dataList, clearFirst = true) {
   if (!window.db || !window.firestoreOps) return;
   const { doc, setDoc, deleteDoc, collection, getDocs } = window.firestoreOps;
-  console.log('Seeding collection:', colName, 'with', dataList.length, 'items');
+  console.log('Seeding collection:', colName, 'with', dataList.length, 'items (clearFirst=' + clearFirst + ')');
+  if (clearFirst) {
+    const snap = await getDocs(collection(window.db, colName));
+    for (const d of snap.docs) {
+      await deleteDoc(doc(window.db, colName, d.id));
+    }
+  }
   for (let i = 0; i < dataList.length; i++) {
     const item = dataList[i];
     const docId = item.id || (colName + '_' + (i + 1));
@@ -1935,7 +1941,7 @@ window.seedAllCollections = async function(onProgress) {
     const name = collections[c];
     if (window.seedData[name]) {
       if (onProgress) onProgress(name, c + 1, collections.length);
-      await window.seedCollection(name, window.seedData[name]);
+      await window.seedCollection(name, window.seedData[name], true);
     }
   }
 };

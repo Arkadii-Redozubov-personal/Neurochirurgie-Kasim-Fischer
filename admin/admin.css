@@ -1142,3 +1142,167 @@ textarea.form-input-dark {
   gap: 12px;
   background: rgba(0, 0, 0, 0.15);
 }
+
+/* ==================== CRITICAL FIXES FOR MODALS, TABLES & INPUTS ==================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.table-responsive {
+  width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.treatment-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  table-layout: auto !important;
+}
+
+.team-avatar-img {
+  width: 46px !important;
+  height: 46px !important;
+  min-width: 46px !important;
+  max-width: 46px !important;
+  min-height: 46px !important;
+  max-height: 46px !important;
+  object-fit: cover !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 15, 26, 0.85) !important;
+  backdrop-filter: blur(8px) !important;
+  z-index: 9999 !important;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.modal-overlay.open {
+  display: flex !important;
+}
+
+.modal {
+  background: #111827 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 16px !important;
+  width: 100% !important;
+  max-width: 680px !important;
+  height: auto !important;
+  max-height: 85vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6) !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  margin: auto !important;
+  position: relative !important;
+}
+
+.modal-header {
+  padding: 18px 24px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0 !important;
+  background: #111827 !important;
+  box-sizing: border-box;
+}
+
+.modal-lang-tabs {
+  display: flex;
+  gap: 6px;
+  padding: 10px 24px 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: rgba(0, 0, 0, 0.25) !important;
+  overflow-x: auto;
+  flex-shrink: 0 !important;
+  box-sizing: border-box;
+}
+
+.modal-lang-content {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  padding: 24px 28px !important;
+  box-sizing: border-box !important;
+}
+
+.modal-lang-panel {
+  display: none !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.modal-lang-panel.active {
+  display: block !important;
+}
+
+.modal-footer {
+  padding: 16px 24px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  background: #0d131f !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box;
+}
+
+.modal-lang-content .form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  margin-bottom: 16px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.modal-lang-content .form-label {
+  display: block !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  color: #94a3b8 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 2px !important;
+}
+
+.modal-lang-content .form-input,
+.modal-lang-content textarea.form-input,
+.modal-lang-content select.form-input {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 8px !important;
+  padding: 12px 14px !important;
+  color: #f1f5f9 !important;
+  font-size: 0.92rem !important;
+  line-height: 1.5 !important;
+  font-family: inherit !important;
+  outline: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.modal-lang-content .form-input:focus,
+.modal-lang-content textarea.form-input:focus,
+.modal-lang-content select.form-input:focus {
+  border-color: #00c9a7 !important;
+  background: rgba(0, 201, 167, 0.04) !important;
+  box-shadow: 0 0 0 3px rgba(0, 201, 167, 0.15) !important;
+}

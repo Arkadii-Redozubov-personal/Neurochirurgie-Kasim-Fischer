@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="notranslate" translate="no">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
   <title>Dashboard – Admin Panel | Neurochirurgie Fischer</title>
   <link rel="icon" type="image/svg+xml" href="../img/nLogo.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
@@ -10,8 +11,232 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
   <link rel="shortcut icon" href="../favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="admin.css">
-  <script src="seed.js"></script>
+  <link rel="stylesheet" href="admin.css?v=7">
+  <script src="seed.js?v=7"></script>
+
+  <!-- Inline critical fixes for modal scrolling, tab switching, and layout constraints -->
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    /* Prevent table blowup from images */
+    .table-responsive {
+      width: 100% !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+    }
+    .treatment-table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      table-layout: auto !important;
+    }
+    .team-avatar-img {
+      width: 46px !important;
+      height: 46px !important;
+      min-width: 46px !important;
+      max-width: 46px !important;
+      min-height: 46px !important;
+      max-height: 46px !important;
+      object-fit: cover !important;
+      border-radius: 10px !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      flex-shrink: 0 !important;
+      display: block !important;
+    }
+    .cell-avatar-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 220px;
+      max-width: 320px;
+    }
+
+    /* Modal Layout & Tabs */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 15, 26, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .modal-overlay.open {
+      display: flex !important;
+    }
+    .modal {
+      background: #111827;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 680px;
+      height: auto;
+      max-height: 85vh;
+      display: flex !important;
+      flex-direction: column !important;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+      overflow: hidden !important;
+      box-sizing: border-box;
+      margin: auto;
+      position: relative;
+    }
+    .modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      background: #111827;
+      box-sizing: border-box;
+    }
+    .modal-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #f1f5f9;
+    }
+    .modal-lang-tabs {
+      display: flex;
+      gap: 6px;
+      padding: 10px 24px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 0.25);
+      overflow-x: auto;
+      flex-shrink: 0;
+      box-sizing: border-box;
+    }
+    .modal-lang-tab {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 8px 8px 0 0;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #94a3b8;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid transparent;
+      border-bottom: none;
+      transition: all 0.2s;
+    }
+    .modal-lang-tab:hover {
+      color: #f1f5f9;
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .modal-lang-tab.active {
+      color: #00c9a7 !important;
+      background: #111827 !important;
+      border-color: rgba(255, 255, 255, 0.08) !important;
+      border-bottom: 2px solid #00c9a7 !important;
+    }
+    .modal-lang-content {
+      flex: 1 1 auto;
+      min-height: 0 !important;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch;
+      padding: 24px 28px !important;
+      box-sizing: border-box !important;
+    }
+    .modal-lang-content::-webkit-scrollbar {
+      width: 6px;
+    }
+    .modal-lang-content::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+    }
+    .modal-lang-panel {
+      display: none;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .modal-lang-panel.active {
+      display: block !important;
+    }
+    .modal-footer {
+      padding: 16px 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      background: #0d131f;
+      flex-shrink: 0;
+      box-sizing: border-box;
+    }
+
+    /* Modal Form Elements Spacing & Padding */
+    .modal-lang-content .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .modal-lang-content .form-label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #94a3b8;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .modal-lang-content .form-input,
+    .modal-lang-content textarea.form-input,
+    .modal-lang-content select.form-input {
+      width: 100% !important;
+      box-sizing: border-box !important;
+      background: rgba(255, 255, 255, 0.04) !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      border-radius: 8px !important;
+      padding: 12px 14px !important;
+      color: #f1f5f9 !important;
+      font-size: 0.92rem !important;
+      line-height: 1.5 !important;
+      font-family: inherit !important;
+      outline: none !important;
+      transition: all 0.2s ease !important;
+    }
+    .modal-lang-content .form-input:focus,
+    .modal-lang-content textarea.form-input:focus,
+    .modal-lang-content select.form-input:focus {
+      border-color: #00c9a7 !important;
+      background: rgba(0, 201, 167, 0.04) !important;
+      box-shadow: 0 0 0 3px rgba(0, 201, 167, 0.15) !important;
+    }
+
+    /* Page Layout Margins */
+    .dashboard-layout {
+      display: flex;
+      min-height: 100vh;
+      background: var(--bg);
+      overflow-x: hidden;
+    }
+    .main-content {
+      margin-left: 260px;
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .page-content {
+      padding: 32px 36px;
+      flex: 1;
+      width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+  </style>
 </head>
 <body>
 
@@ -106,7 +331,7 @@
     <header class="topbar">
       <div>
         <h1 class="topbar-title" id="topbarTitle">Dashboard</h1>
-        <div class="topbar-breadcrumb" id="topbarBreadcrumb">Willkommen im Admin-Bereich</div>
+        <div class="topbar-breadcrumb" id="topbarBreadcrumb">Übersicht & Schnellzugriff</div>
       </div>
       <div style="display: flex; align-items: center; gap: 12px;">
         <a href="https://my-bandscheibe.de" target="_blank" class="btn btn-ghost btn-sm" title="Live-Website in neuem Tab öffnen">
@@ -204,7 +429,7 @@
           <div>
             <h3 style="font-size: 1.1rem; font-weight: 700; color: #22c55e; margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Automatische 1-Klick-Veröffentlichung
+              Automatische 1-Klick-Veröffentlichung aktiv
             </h3>
             <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;">
               Alle Änderungen können jederzeit mit einem Klick auf den Praxisserver my-bandscheibe.de übertragen werden.
@@ -286,6 +511,10 @@
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 <input type="text" class="table-search-input" placeholder="Team durchsuchen..." oninput="filterTable(this, 'teamTableBody')">
               </div>
+              <button class="btn btn-secondary btn-sm" onclick="resetTeamData()" title="Teamdaten auf Website-Stand zurücksetzen" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: #cbd5e1; display: inline-flex; align-items: center; gap: 6px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                Team zurücksetzen
+              </button>
               <button class="btn btn-primary btn-sm" onclick="openAddTeam()">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                 Mitglied hinzufügen
@@ -293,20 +522,22 @@
             </div>
           </div>
           <div class="content-card-body" style="padding: 0;">
-            <table class="treatment-table">
-              <thead>
-                <tr>
-                  <th style="padding-left: 24px; width: 60px;">#</th>
-                  <th>Mitglied</th>
-                  <th>Rolle / Position</th>
-                  <th>Sprachen</th>
-                  <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
-                </tr>
-              </thead>
-              <tbody id="teamTableBody">
-                <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Team-Daten...</td></tr>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="treatment-table">
+                <thead>
+                  <tr>
+                    <th style="padding-left: 24px; width: 60px;">#</th>
+                    <th>Mitglied</th>
+                    <th>Rolle / Position</th>
+                    <th>Sprachen</th>
+                    <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
+                  </tr>
+                </thead>
+                <tbody id="teamTableBody">
+                  <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Team-Daten...</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
@@ -333,20 +564,22 @@
             </div>
           </div>
           <div class="content-card-body" style="padding: 0;">
-            <table class="treatment-table">
-              <thead>
-                <tr>
-                  <th style="padding-left: 24px; width: 60px;">#</th>
-                  <th>Schwerpunkt</th>
-                  <th>Kurzbeschreibung</th>
-                  <th>Sprachen</th>
-                  <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
-                </tr>
-              </thead>
-              <tbody id="schwerpunkteTableBody">
-                <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="treatment-table">
+                <thead>
+                  <tr>
+                    <th style="padding-left: 24px; width: 60px;">#</th>
+                    <th>Schwerpunkt</th>
+                    <th>Kurzbeschreibung</th>
+                    <th>Sprachen</th>
+                    <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
+                  </tr>
+                </thead>
+                <tbody id="schwerpunkteTableBody">
+                  <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
@@ -373,20 +606,22 @@
             </div>
           </div>
           <div class="content-card-body" style="padding: 0;">
-            <table class="treatment-table">
-              <thead>
-                <tr>
-                  <th style="padding-left: 24px; width: 60px;">#</th>
-                  <th>Verfahren</th>
-                  <th>Beschreibung</th>
-                  <th>Sprachen</th>
-                  <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
-                </tr>
-              </thead>
-              <tbody id="diagnostikTableBody">
-                <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="treatment-table">
+                <thead>
+                  <tr>
+                    <th style="padding-left: 24px; width: 60px;">#</th>
+                    <th>Verfahren</th>
+                    <th>Beschreibung</th>
+                    <th>Sprachen</th>
+                    <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
+                  </tr>
+                </thead>
+                <tbody id="diagnostikTableBody">
+                  <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
@@ -413,20 +648,22 @@
             </div>
           </div>
           <div class="content-card-body" style="padding: 0;">
-            <table class="treatment-table">
-              <thead>
-                <tr>
-                  <th style="padding-left: 24px; width: 60px;">#</th>
-                  <th>Behandlung</th>
-                  <th>Kurzbeschreibung</th>
-                  <th>Sprachen</th>
-                  <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
-                </tr>
-              </thead>
-              <tbody id="treatmentsTableBody">
-                <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="treatment-table">
+                <thead>
+                  <tr>
+                    <th style="padding-left: 24px; width: 60px;">#</th>
+                    <th>Behandlung</th>
+                    <th>Kurzbeschreibung</th>
+                    <th>Sprachen</th>
+                    <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
+                  </tr>
+                </thead>
+                <tbody id="treatmentsTableBody">
+                  <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
@@ -453,20 +690,22 @@
             </div>
           </div>
           <div class="content-card-body" style="padding: 0;">
-            <table class="treatment-table">
-              <thead>
-                <tr>
-                  <th style="padding-left: 24px; width: 60px;">#</th>
-                  <th>Frage</th>
-                  <th>Antwort</th>
-                  <th>Sprachen</th>
-                  <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
-                </tr>
-              </thead>
-              <tbody id="faqTableBody">
-                <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="treatment-table">
+                <thead>
+                  <tr>
+                    <th style="padding-left: 24px; width: 60px;">#</th>
+                    <th>Frage</th>
+                    <th>Antwort</th>
+                    <th>Sprachen</th>
+                    <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
+                  </tr>
+                </thead>
+                <tbody id="faqTableBody">
+                  <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
@@ -493,20 +732,22 @@
             </div>
           </div>
           <div class="content-card-body" style="padding: 0;">
-            <table class="treatment-table">
-              <thead>
-                <tr>
-                  <th style="padding-left: 24px; width: 60px;">#</th>
-                  <th>Artikel & Medium</th>
-                  <th>Datum</th>
-                  <th>PDF / Link</th>
-                  <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
-                </tr>
-              </thead>
-              <tbody id="pressTableBody">
-                <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="treatment-table">
+                <thead>
+                  <tr>
+                    <th style="padding-left: 24px; width: 60px;">#</th>
+                    <th>Artikel & Medium</th>
+                    <th>Datum</th>
+                    <th>PDF / Link</th>
+                    <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
+                  </tr>
+                </thead>
+                <tbody id="pressTableBody">
+                  <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
@@ -533,20 +774,22 @@
             </div>
           </div>
           <div class="content-card-body" style="padding: 0;">
-            <table class="treatment-table">
-              <thead>
-                <tr>
-                  <th style="padding-left: 24px; width: 60px;">#</th>
-                  <th>Patient / Autor</th>
-                  <th>Sterne</th>
-                  <th>Bewertungstext</th>
-                  <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
-                </tr>
-              </thead>
-              <tbody id="reviewsTableBody">
-                <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="treatment-table">
+                <thead>
+                  <tr>
+                    <th style="padding-left: 24px; width: 60px;">#</th>
+                    <th>Patient / Autor</th>
+                    <th>Sterne</th>
+                    <th>Bewertungstext</th>
+                    <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
+                  </tr>
+                </thead>
+                <tbody id="reviewsTableBody">
+                  <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
@@ -573,21 +816,23 @@
             </div>
           </div>
           <div class="content-card-body" style="padding: 0;">
-            <table class="treatment-table">
-              <thead>
-                <tr>
-                  <th style="padding-left: 24px; width: 60px;">#</th>
-                  <th>Filiale</th>
-                  <th>Adresse</th>
-                  <th>Telefon</th>
-                  <th>Sprachen</th>
-                  <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
-                </tr>
-              </thead>
-              <tbody id="branchesTableBody">
-                <tr><td colspan="6" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="treatment-table">
+                <thead>
+                  <tr>
+                    <th style="padding-left: 24px; width: 60px;">#</th>
+                    <th>Filiale</th>
+                    <th>Adresse</th>
+                    <th>Telefon</th>
+                    <th>Sprachen</th>
+                    <th style="width: 110px; text-align: right; padding-right: 24px;">Aktionen</th>
+                  </tr>
+                </thead>
+                <tbody id="branchesTableBody">
+                  <tr><td colspan="6" style="text-align:center; padding: 40px; color: var(--text-dim);">Lade Daten...</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
@@ -630,11 +875,11 @@
                 Aktuelle Website-Inhalte in Firebase einlesen (Initialer Import / Reset)
               </h3>
               <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px;">
-                Lädt alle echten, aktuellen Texte, Ärzte, Schwerpunkte, Behandlungen, Diagnostik, FAQ, Rezensionen und Standorte der Website in allen 5 Sprachen direkt in die Firebase-Datenbank ein.
+                Lädt alle echten, aktuellen Texte, Ärzte, Schwerpunkte, Behandlungen, Diagnostik, FAQ, Rezensionen und Standorte der Website in allen 5 Sprachen direkt in die Firebase-Datenbank ein und bereinigt alte Testdaten.
               </p>
               <button class="btn btn-ghost" onclick="seedAllToFirebase()" style="border-color: rgba(56, 189, 248, 0.4); color: #38bdf8;">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
-                Alle Website-Inhalte importieren
+                Alle Website-Inhalte importieren / zurücksetzen
               </button>
             </div>
 
@@ -664,11 +909,11 @@
       </button>
     </div>
     <div class="modal-lang-tabs">
-      <button class="modal-lang-tab active" onclick="switchModalLang('teamModal', 'de')">🇩🇪 DE</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('teamModal', 'en')">🇬🇧 EN</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('teamModal', 'ru')">🇷🇺 RU</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('teamModal', 'tr')">🇹🇷 TR</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('teamModal', 'ar')">🇸🇦 AR</button>
+      <button data-lang="de" class="modal-lang-tab active" onclick="switchModalLang('teamModal', 'de')">🇩🇪 DE</button>
+      <button data-lang="en" class="modal-lang-tab" onclick="switchModalLang('teamModal', 'en')">🇬🇧 EN</button>
+      <button data-lang="ru" class="modal-lang-tab" onclick="switchModalLang('teamModal', 'ru')">🇷🇺 RU</button>
+      <button data-lang="tr" class="modal-lang-tab" onclick="switchModalLang('teamModal', 'tr')">🇹🇷 TR</button>
+      <button data-lang="ar" class="modal-lang-tab" onclick="switchModalLang('teamModal', 'ar')">🇸🇦 AR</button>
     </div>
     <div class="modal-lang-content">
       <div class="form-group" style="margin-bottom: 20px;">
@@ -695,11 +940,11 @@
       </button>
     </div>
     <div class="modal-lang-tabs">
-      <button class="modal-lang-tab active" onclick="switchModalLang('spModal', 'de')">🇩🇪 DE</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('spModal', 'en')">🇬🇧 EN</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('spModal', 'ru')">🇷🇺 RU</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('spModal', 'tr')">🇹🇷 TR</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('spModal', 'ar')">🇸🇦 AR</button>
+      <button data-lang="de" class="modal-lang-tab active" onclick="switchModalLang('spModal', 'de')">🇩🇪 DE</button>
+      <button data-lang="en" class="modal-lang-tab" onclick="switchModalLang('spModal', 'en')">🇬🇧 EN</button>
+      <button data-lang="ru" class="modal-lang-tab" onclick="switchModalLang('spModal', 'ru')">🇷🇺 RU</button>
+      <button data-lang="tr" class="modal-lang-tab" onclick="switchModalLang('spModal', 'tr')">🇹🇷 TR</button>
+      <button data-lang="ar" class="modal-lang-tab" onclick="switchModalLang('spModal', 'ar')">🇸🇦 AR</button>
     </div>
     <div class="modal-lang-content">
       <div id="sp-lang-panels"></div>
@@ -721,11 +966,11 @@
       </button>
     </div>
     <div class="modal-lang-tabs">
-      <button class="modal-lang-tab active" onclick="switchModalLang('diagModal', 'de')">🇩🇪 DE</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('diagModal', 'en')">🇬🇧 EN</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('diagModal', 'ru')">🇷🇺 RU</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('diagModal', 'tr')">🇹🇷 TR</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('diagModal', 'ar')">🇸🇦 AR</button>
+      <button data-lang="de" class="modal-lang-tab active" onclick="switchModalLang('diagModal', 'de')">🇩🇪 DE</button>
+      <button data-lang="en" class="modal-lang-tab" onclick="switchModalLang('diagModal', 'en')">🇬🇧 EN</button>
+      <button data-lang="ru" class="modal-lang-tab" onclick="switchModalLang('diagModal', 'ru')">🇷🇺 RU</button>
+      <button data-lang="tr" class="modal-lang-tab" onclick="switchModalLang('diagModal', 'tr')">🇹🇷 TR</button>
+      <button data-lang="ar" class="modal-lang-tab" onclick="switchModalLang('diagModal', 'ar')">🇸🇦 AR</button>
     </div>
     <div class="modal-lang-content">
       <div id="diag-lang-panels"></div>
@@ -747,11 +992,11 @@
       </button>
     </div>
     <div class="modal-lang-tabs">
-      <button class="modal-lang-tab active" onclick="switchModalLang('treatmentModal', 'de')">🇩🇪 DE</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('treatmentModal', 'en')">🇬🇧 EN</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('treatmentModal', 'ru')">🇷🇺 RU</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('treatmentModal', 'tr')">🇹🇷 TR</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('treatmentModal', 'ar')">🇸🇦 AR</button>
+      <button data-lang="de" class="modal-lang-tab active" onclick="switchModalLang('treatmentModal', 'de')">🇩🇪 DE</button>
+      <button data-lang="en" class="modal-lang-tab" onclick="switchModalLang('treatmentModal', 'en')">🇬🇧 EN</button>
+      <button data-lang="ru" class="modal-lang-tab" onclick="switchModalLang('treatmentModal', 'ru')">🇷🇺 RU</button>
+      <button data-lang="tr" class="modal-lang-tab" onclick="switchModalLang('treatmentModal', 'tr')">🇹🇷 TR</button>
+      <button data-lang="ar" class="modal-lang-tab" onclick="switchModalLang('treatmentModal', 'ar')">🇸🇦 AR</button>
     </div>
     <div class="modal-lang-content">
       <div id="treatment-lang-panels"></div>
@@ -773,11 +1018,11 @@
       </button>
     </div>
     <div class="modal-lang-tabs">
-      <button class="modal-lang-tab active" onclick="switchModalLang('faqModal', 'de')">🇩🇪 DE</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('faqModal', 'en')">🇬🇧 EN</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('faqModal', 'ru')">🇷🇺 RU</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('faqModal', 'tr')">🇹🇷 TR</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('faqModal', 'ar')">🇸🇦 AR</button>
+      <button data-lang="de" class="modal-lang-tab active" onclick="switchModalLang('faqModal', 'de')">🇩🇪 DE</button>
+      <button data-lang="en" class="modal-lang-tab" onclick="switchModalLang('faqModal', 'en')">🇬🇧 EN</button>
+      <button data-lang="ru" class="modal-lang-tab" onclick="switchModalLang('faqModal', 'ru')">🇷🇺 RU</button>
+      <button data-lang="tr" class="modal-lang-tab" onclick="switchModalLang('faqModal', 'tr')">🇹🇷 TR</button>
+      <button data-lang="ar" class="modal-lang-tab" onclick="switchModalLang('faqModal', 'ar')">🇸🇦 AR</button>
     </div>
     <div class="modal-lang-content">
       <div id="faq-lang-panels"></div>
@@ -837,11 +1082,11 @@
       </button>
     </div>
     <div class="modal-lang-tabs">
-      <button class="modal-lang-tab active" onclick="switchModalLang('reviewsModal', 'de')">🇩🇪 DE</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('reviewsModal', 'en')">🇬🇧 EN</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('reviewsModal', 'ru')">🇷🇺 RU</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('reviewsModal', 'tr')">🇹🇷 TR</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('reviewsModal', 'ar')">🇸🇦 AR</button>
+      <button data-lang="de" class="modal-lang-tab active" onclick="switchModalLang('reviewsModal', 'de')">🇩🇪 DE</button>
+      <button data-lang="en" class="modal-lang-tab" onclick="switchModalLang('reviewsModal', 'en')">🇬🇧 EN</button>
+      <button data-lang="ru" class="modal-lang-tab" onclick="switchModalLang('reviewsModal', 'ru')">🇷🇺 RU</button>
+      <button data-lang="tr" class="modal-lang-tab" onclick="switchModalLang('reviewsModal', 'tr')">🇹🇷 TR</button>
+      <button data-lang="ar" class="modal-lang-tab" onclick="switchModalLang('reviewsModal', 'ar')">🇸🇦 AR</button>
     </div>
     <div class="modal-lang-content">
       <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 16px;">
@@ -877,11 +1122,11 @@
       </button>
     </div>
     <div class="modal-lang-tabs">
-      <button class="modal-lang-tab active" onclick="switchModalLang('branchesModal', 'de')">🇩🇪 DE</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('branchesModal', 'en')">🇬🇧 EN</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('branchesModal', 'ru')">🇷🇺 RU</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('branchesModal', 'tr')">🇹🇷 TR</button>
-      <button class="modal-lang-tab" onclick="switchModalLang('branchesModal', 'ar')">🇸🇦 AR</button>
+      <button data-lang="de" class="modal-lang-tab active" onclick="switchModalLang('branchesModal', 'de')">🇩🇪 DE</button>
+      <button data-lang="en" class="modal-lang-tab" onclick="switchModalLang('branchesModal', 'en')">🇬🇧 EN</button>
+      <button data-lang="ru" class="modal-lang-tab" onclick="switchModalLang('branchesModal', 'ru')">🇷🇺 RU</button>
+      <button data-lang="tr" class="modal-lang-tab" onclick="switchModalLang('branchesModal', 'tr')">🇹🇷 TR</button>
+      <button data-lang="ar" class="modal-lang-tab" onclick="switchModalLang('branchesModal', 'ar')">🇸🇦 AR</button>
     </div>
     <div class="modal-lang-content">
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
@@ -1022,15 +1267,19 @@
     document.getElementById(id).classList.add('open');
   };
 
-  // Unified Language Switcher in Modals
+  // Bulletproof Universal Language Switcher in Modals
   window.switchModalLang = (modalId, lang) => {
     const modal = document.getElementById(modalId);
     if (!modal) return;
     modal.querySelectorAll('.modal-lang-tab').forEach(t => {
-      t.classList.toggle('active', t.getAttribute('onclick').includes(`'${lang}'`));
+      const tLang = t.getAttribute('data-lang') || (t.getAttribute('onclick') || '').match(/['"]([a-z]{2})['"]/)?.[1];
+      const isMatch = (tLang === lang);
+      t.classList.toggle('active', isMatch);
     });
     modal.querySelectorAll('.modal-lang-panel').forEach(p => {
-      p.classList.toggle('active', p.getAttribute('data-lang') === lang);
+      const isMatch = (p.getAttribute('data-lang') === lang);
+      p.classList.toggle('active', isMatch);
+      p.style.display = isMatch ? 'block' : 'none';
     });
   };
 
@@ -1045,17 +1294,76 @@
     });
   };
 
+  // Robust Text Extractor that NEVER returns [object Object]
+  function extractText(val, lang = 'de') {
+    if (val === null || val === undefined) return '';
+    if (typeof val === 'string') {
+      const clean = val.trim();
+      if (clean === '[object Object]' || clean.toLowerCase() === 'object') return '';
+      return clean;
+    }
+    if (typeof val === 'number') return String(val);
+    if (typeof val === 'object') {
+      if (val[lang]) return extractText(val[lang], lang);
+      if (val['de']) return extractText(val['de'], 'de');
+      if (val['en']) return extractText(val['en'], 'en');
+      if (val['ru']) return extractText(val['ru'], 'ru');
+      if (val['tr']) return extractText(val['tr'], 'tr');
+      if (val['ar']) return extractText(val['ar'], 'ar');
+      const vals = Object.values(val);
+      for (const v of vals) {
+        const res = extractText(v, lang);
+        if (res && res !== '[object Object]' && res.toLowerCase() !== 'object') return res;
+      }
+      return '';
+    }
+    return String(val).trim();
+  }
+
+  function getField(item, field, lang = 'de') {
+    if (!item) return '';
+    if (item[lang] && item[lang][field] !== undefined) return extractText(item[lang][field], lang);
+    if (item.de && item.de[field] !== undefined) return extractText(item.de[field], 'de');
+    if (item[field] !== undefined) return extractText(item[field], lang);
+    return '';
+  }
+
+  // Safe Member Image Extractor
+  function getMemberImage(m) {
+    if (!m) return 'img/team_tanyo.webp';
+    // If Dr. Fischer himself
+    if (m.id === 'fischer' || (m.name && String(m.name).toLowerCase().includes('kasim'))) {
+      return (m.img && typeof m.img === 'string' && m.img.trim()) || 'img/surgeon1.webp';
+    }
+    // If member has their own non-Kasim image
+    if (m.img && typeof m.img === 'string' && m.img.trim() && !m.img.includes('surgeon1.webp')) {
+      return m.img.trim();
+    }
+    if (m.image && typeof m.image === 'string' && m.image.trim() && !m.image.includes('surgeon1.webp')) {
+      return m.image.trim();
+    }
+    // Lookup from seedData by ID or order
+    if (window.seedData && window.seedData.team) {
+      const match = window.seedData.team.find(t => 
+        (m.id && t.id === m.id) || 
+        (m.order !== undefined && t.order === m.order)
+      );
+      if (match && match.img) return match.img;
+    }
+    return 'img/team_tanyo.webp';
+  }
+
   // Helper: Lang Pills HTML
   function renderLangPills(item) {
     return `<div class="lang-pill-row">
       ${LANGS.map(l => {
-        const has = item[l] && (item[l].title || item[l].name || item[l].city || item[l].desc);
+        const has = getField(item, 'name', l) || getField(item, 'title', l) || getField(item, 'city', l);
         return `<span class="lang-pill ${has ? 'filled' : ''}">${LANG_FLAGS[l]} ${l.toUpperCase()}</span>`;
       }).join('')}
     </div>`;
   }
 
-  // Load All Collections with Auto-Seed if empty
+  // Load All Collections with Automatic Data Healing
   async function loadAll() {
     document.getElementById('loadingOverlay').classList.add('show');
     try {
@@ -1084,10 +1392,25 @@
       state[colName] = [];
       snap.forEach(d => state[colName].push({ id: d.id, ...d.data() }));
 
-      // Auto-seed if Firestore is completely empty for this collection
-      if (state[colName].length === 0 && window.seedData && window.seedData[colName]) {
-        console.log(`Auto-seeding empty collection: ${colName}`);
-        await window.seedCollection(colName, window.seedData[colName]);
+      // Data Healing: If collection is empty OR team has corrupted old data
+      let needsHealing = (state[colName].length === 0);
+      if (colName === 'team' && state.team.length > 0) {
+        const hasCorruptName = state.team.some(m => 
+          typeof m.name === 'object' || 
+          m.name === '[object Object]' || 
+          m.name === 'object' ||
+          (!m.img && !m.image)
+        );
+        const hasKasimEverywhere = (state.team.length > 1 && state.team.every(m => !m.img || m.img.includes('surgeon1.webp')));
+        if (hasCorruptName || hasKasimEverywhere) {
+          console.warn('Corrupt team data detected in Firestore! Healing with clean seed data...');
+          needsHealing = true;
+        }
+      }
+
+      if (needsHealing && window.seedData && window.seedData[colName]) {
+        console.log(`Healing / Seeding collection: ${colName}`);
+        await window.seedCollection(colName, window.seedData[colName], true);
         const freshSnap = await getDocs(collection(db, colName));
         state[colName] = [];
         freshSnap.forEach(d => state[colName].push({ id: d.id, ...d.data() }));
@@ -1127,21 +1450,39 @@
       tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-dim);">Keine Teammitglieder vorhanden. Klicken Sie auf "+ Mitglied hinzufügen".</td></tr>';
       return;
     }
-    tbody.innerHTML = state.team.map((m, i) => `
+    tbody.innerHTML = state.team.map((m, i) => {
+      let memberName = getField(m, 'name', 'de');
+      let memberRole = getField(m, 'role', 'de');
+      let memberBio = getField(m, 'bio', 'de');
+      
+      // Fallback from clean seedData if field is empty or corrupted
+      if ((!memberName || memberName === 'Unbenannt') && window.seedData && window.seedData.team) {
+        const fallback = window.seedData.team.find(t => t.id === m.id || (m.order !== undefined && t.order === m.order));
+        if (fallback) {
+          memberName = getField(fallback, 'name', 'de');
+          if (!memberRole || memberRole === 'Mitarbeiter') memberRole = getField(fallback, 'role', 'de');
+          if (!memberBio) memberBio = getField(fallback, 'bio', 'de');
+        }
+      }
+      memberName = memberName || 'Unbenannt';
+      memberRole = memberRole || 'Mitarbeiter';
+      const imgSrc = getMemberImage(m);
+
+      return `
       <tr>
-        <td style="padding-left: 24px;"><div class="treatment-index">${i + 1}</div></td>
-        <td>
-          <div class="cell-avatar-wrap">
-            <img src="../${m.img || 'img/surgeon1.webp'}" class="cell-avatar" onerror="this.src='../img/nLogo.svg'">
-            <div>
-              <div class="cell-title-main">${m.de?.name || m.name || 'Unbenannt'}</div>
-              <div class="cell-title-sub">${m.de?.bio ? m.de.bio.slice(0, 75) + '...' : ''}</div>
+        <td style="padding-left: 24px; width: 60px;"><div class="treatment-index">${i + 1}</div></td>
+        <td style="min-width: 240px; max-width: 320px;">
+          <div class="cell-avatar-wrap" style="display: flex; align-items: center; gap: 14px;">
+            <img src="../${imgSrc}" class="team-avatar-img" style="width: 46px !important; height: 46px !important; min-width: 46px !important; max-width: 46px !important; min-height: 46px !important; max-height: 46px !important; object-fit: cover !important; border-radius: 10px !important; display: block !important; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05);" onerror="this.src='../img/nLogo.svg'" alt="${memberName}">
+            <div style="min-width: 0; flex: 1;">
+              <div class="cell-title-main" style="font-weight: 700; color: #f1f5f9; font-size: 0.92rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${memberName}</div>
+              <div class="cell-title-sub" style="font-size: 0.78rem; color: #94a3b8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">${memberBio ? memberBio.slice(0, 70) + '...' : ''}</div>
             </div>
           </div>
         </td>
-        <td><span class="lang-pill filled">${m.de?.role || m.role || 'Mitarbeiter'}</span></td>
-        <td>${renderLangPills(m)}</td>
-        <td style="text-align: right; padding-right: 24px;">
+        <td style="max-width: 280px;"><span class="lang-pill filled" style="white-space: normal; line-height: 1.4; display: inline-block; max-width: 100%;">${memberRole}</span></td>
+        <td style="white-space: nowrap;">${renderLangPills(m)}</td>
+        <td style="text-align: right; padding-right: 24px; width: 110px;">
           <div class="btn-actions" style="justify-content: flex-end;">
             <button class="btn-icon-action" onclick="openEditTeam('${m.id}')" title="Bearbeiten">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
@@ -1151,25 +1492,25 @@
             </button>
           </div>
         </td>
-      </tr>
-    `).join('');
+      </tr>`;
+    }).join('');
   }
 
   function buildTeamPanels(item) {
     const c = document.getElementById('team-lang-panels');
     c.innerHTML = LANGS.map((lang, idx) => `
-      <div class="modal-lang-panel ${idx === 0 ? 'active' : ''}" data-lang="${lang}">
+      <div class="modal-lang-panel ${idx === 0 ? 'active' : ''}" data-lang="${lang}" style="display: ${idx === 0 ? 'block' : 'none'};">
         <div class="form-group" style="margin-bottom: 14px;">
           <label class="form-label">Name (${lang.toUpperCase()})</label>
-          <input type="text" id="team-name-${lang}" class="form-input" placeholder="Name..." value="${item?.[lang]?.name || ''}">
+          <input type="text" id="team-name-${lang}" class="form-input" placeholder="Name..." value="${getField(item, 'name', lang)}">
         </div>
         <div class="form-group" style="margin-bottom: 14px;">
           <label class="form-label">Position / Fachbereich (${lang.toUpperCase()})</label>
-          <input type="text" id="team-role-${lang}" class="form-input" placeholder="Rolle..." value="${item?.[lang]?.role || ''}">
+          <input type="text" id="team-role-${lang}" class="form-input" placeholder="Rolle..." value="${getField(item, 'role', lang)}">
         </div>
         <div class="form-group">
           <label class="form-label">Beschreibung / Werdegang (${lang.toUpperCase()})</label>
-          <textarea id="team-bio-${lang}" class="form-input" style="min-height: 90px;" placeholder="Werdegang und Tätigkeitsbereiche...">${item?.[lang]?.bio || ''}</textarea>
+          <textarea id="team-bio-${lang}" class="form-input" style="min-height: 90px;" placeholder="Werdegang und Tätigkeitsbereiche...">${getField(item, 'bio', lang)}</textarea>
         </div>
       </div>
     `).join('');
@@ -1188,7 +1529,7 @@
     editIds.team = id;
     const m = state.team.find(x => x.id === id);
     document.getElementById('teamModalTitle').textContent = 'Teammitglied bearbeiten';
-    document.getElementById('team-img').value = m?.img || '';
+    document.getElementById('team-img').value = getMemberImage(m);
     buildTeamPanels(m);
     switchModalLang('teamModal', 'de');
     openModal('teamModal');
@@ -1197,9 +1538,11 @@
   window.saveTeam = async () => {
     const img = document.getElementById('team-img').value.trim();
     const isNew = !editIds.team;
+    const existing = isNew ? null : state.team.find(t => t.id === editIds.team);
     const item = {
-      img: img || 'img/surgeon1.webp',
-      order: isNew ? state.team.length : (state.team.find(t => t.id === editIds.team)?.order || 0)
+      img: img || (existing ? getMemberImage(existing) : 'img/team_member.webp'),
+      image: img || (existing ? getMemberImage(existing) : 'img/team_member.webp'),
+      order: isNew ? state.team.length : (existing?.order || 0)
     };
     LANGS.forEach(l => {
       item[l] = {
@@ -1250,6 +1593,25 @@
     }
   };
 
+  window.resetTeamData = async () => {
+    if (!confirm('Möchten Sie alle Teammitglieder auf die aktuellen Daten der Website zurücksetzen? Vorhandene Daten werden überschrieben.')) return;
+    document.getElementById('loadingOverlay').classList.add('show');
+    try {
+      await window.seedCollection('team', window.seedData.team, true);
+      const freshSnap = await getDocs(collection(db, 'team'));
+      state.team = [];
+      freshSnap.forEach(d => state.team.push({ id: d.id, ...d.data() }));
+      state.team.sort((a, b) => (a.order || 0) - (b.order || 0));
+      renderTeamTable();
+      updateStats();
+      showToast('Team-Daten erfolgreich auf Website-Stand zurückgesetzt!');
+    } catch (e) {
+      showToast('Fehler beim Zurücksetzen: ' + e.message, 'error');
+    } finally {
+      document.getElementById('loadingOverlay').classList.remove('show');
+    }
+  };
+
   // ==================== 2. SCHWERPUNKTE ====================
   function renderSchwerpunkteTable() {
     const tbody = document.getElementById('schwerpunkteTableBody');
@@ -1262,9 +1624,9 @@
       <tr>
         <td style="padding-left: 24px;"><div class="treatment-index">${i + 1}</div></td>
         <td>
-          <div class="cell-title-main">${s.de?.title || s.title || 'Ohne Titel'}</div>
+          <div class="cell-title-main">${getField(s, 'title', 'de') || 'Ohne Titel'}</div>
         </td>
-        <td><div class="cell-title-sub">${s.de?.desc ? s.de.desc.slice(0, 90) + '...' : ''}</div></td>
+        <td><div class="cell-title-sub">${(getField(s, 'desc', 'de') || '').slice(0, 90)}...</div></td>
         <td>${renderLangPills(s)}</td>
         <td style="text-align: right; padding-right: 24px;">
           <div class="btn-actions" style="justify-content: flex-end;">
@@ -1283,14 +1645,14 @@
   function buildSchwerpunktePanels(item) {
     const c = document.getElementById('sp-lang-panels');
     c.innerHTML = LANGS.map((lang, idx) => `
-      <div class="modal-lang-panel ${idx === 0 ? 'active' : ''}" data-lang="${lang}">
+      <div class="modal-lang-panel ${idx === 0 ? 'active' : ''}" data-lang="${lang}" style="display: ${idx === 0 ? 'block' : 'none'};">
         <div class="form-group" style="margin-bottom: 14px;">
           <label class="form-label">Titel (${lang.toUpperCase()})</label>
-          <input type="text" id="sp-title-${lang}" class="form-input" placeholder="Schwerpunkt-Titel..." value="${item?.[lang]?.title || ''}">
+          <input type="text" id="sp-title-${lang}" class="form-input" placeholder="Schwerpunkt-Titel..." value="${getField(item, 'title', lang)}">
         </div>
         <div class="form-group">
           <label class="form-label">Beschreibung (${lang.toUpperCase()})</label>
-          <textarea id="sp-desc-${lang}" class="form-input" style="min-height: 110px;" placeholder="Beschreibung...">${item?.[lang]?.desc || ''}</textarea>
+          <textarea id="sp-desc-${lang}" class="form-input" style="min-height: 110px;" placeholder="Beschreibung...">${getField(item, 'desc', lang)}</textarea>
         </div>
       </div>
     `).join('');
@@ -1376,8 +1738,8 @@
     tbody.innerHTML = state.diagnostik.map((d, i) => `
       <tr>
         <td style="padding-left: 24px;"><div class="treatment-index">${i + 1}</div></td>
-        <td><div class="cell-title-main">${d.de?.title || d.title?.de || d.title || 'Diagnoseverfahren'}</div></td>
-        <td><div class="cell-title-sub">${(d.de?.desc || d.desc?.de || d.desc || '').slice(0, 90)}...</div></td>
+        <td><div class="cell-title-main">${getField(d, 'title', 'de') || 'Diagnoseverfahren'}</div></td>
+        <td><div class="cell-title-sub">${(getField(d, 'desc', 'de') || '').slice(0, 90)}...</div></td>
         <td>${renderLangPills(d)}</td>
         <td style="text-align: right; padding-right: 24px;">
           <div class="btn-actions" style="justify-content: flex-end;">
@@ -1396,14 +1758,14 @@
   function buildDiagPanels(item) {
     const c = document.getElementById('diag-lang-panels');
     c.innerHTML = LANGS.map((lang, idx) => `
-      <div class="modal-lang-panel ${idx === 0 ? 'active' : ''}" data-lang="${lang}">
+      <div class="modal-lang-panel ${idx === 0 ? 'active' : ''}" data-lang="${lang}" style="display: ${idx === 0 ? 'block' : 'none'};">
         <div class="form-group" style="margin-bottom: 14px;">
           <label class="form-label">Verfahren / Titel (${lang.toUpperCase()})</label>
-          <input type="text" id="diag-title-${lang}" class="form-input" placeholder="Verfahren..." value="${item?.[lang]?.title || item?.title?.[lang] || ''}">
+          <input type="text" id="diag-title-${lang}" class="form-input" placeholder="Verfahren..." value="${getField(item, 'title', lang)}">
         </div>
         <div class="form-group">
           <label class="form-label">Beschreibung (${lang.toUpperCase()})</label>
-          <textarea id="diag-desc-${lang}" class="form-input" style="min-height: 110px;" placeholder="Beschreibung...">${item?.[lang]?.desc || item?.desc?.[lang] || ''}</textarea>
+          <textarea id="diag-desc-${lang}" class="form-input" style="min-height: 110px;" placeholder="Beschreibung...">${getField(item, 'desc', lang)}</textarea>
         </div>
       </div>
     `).join('');
@@ -1490,8 +1852,8 @@
     tbody.innerHTML = state.treatments.map((t, i) => `
       <tr>
         <td style="padding-left: 24px;"><div class="treatment-index">${i + 1}</div></td>
-        <td><div class="cell-title-main">${t.de?.title || t.title || 'Behandlung'}</div></td>
-        <td><div class="cell-title-sub">${(t.de?.desc || t.desc || '').slice(0, 90)}...</div></td>
+        <td><div class="cell-title-main">${getField(t, 'title', 'de') || 'Behandlung'}</div></td>
+        <td><div class="cell-title-sub">${(getField(t, 'desc', 'de') || '').slice(0, 90)}...</div></td>
         <td>${renderLangPills(t)}</td>
         <td style="text-align: right; padding-right: 24px;">
           <div class="btn-actions" style="justify-content: flex-end;">
@@ -1510,18 +1872,18 @@
   function buildTreatmentPanels(item) {
     const c = document.getElementById('treatment-lang-panels');
     c.innerHTML = LANGS.map((lang, idx) => `
-      <div class="modal-lang-panel ${idx === 0 ? 'active' : ''}" data-lang="${lang}">
+      <div class="modal-lang-panel ${idx === 0 ? 'active' : ''}" data-lang="${lang}" style="display: ${idx === 0 ? 'block' : 'none'};">
         <div class="form-group" style="margin-bottom: 14px;">
           <label class="form-label">Titel (${lang.toUpperCase()})</label>
-          <input type="text" id="treat-title-${lang}" class="form-input" placeholder="Behandlungstitel..." value="${item?.[lang]?.title || ''}">
+          <input type="text" id="treat-title-${lang}" class="form-input" placeholder="Behandlungstitel..." value="${getField(item, 'title', lang)}">
         </div>
         <div class="form-group" style="margin-bottom: 14px;">
           <label class="form-label">Kurzbeschreibung (${lang.toUpperCase()})</label>
-          <textarea id="treat-desc-${lang}" class="form-input" style="min-height: 80px;" placeholder="Kurzbeschreibung für Kacheln...">${item?.[lang]?.desc || ''}</textarea>
+          <textarea id="treat-desc-${lang}" class="form-input" style="min-height: 80px;" placeholder="Kurzbeschreibung für Kacheln...">${getField(item, 'desc', lang)}</textarea>
         </div>
         <div class="form-group">
           <label class="form-label">Ausführliche Beschreibung für Modal (${lang.toUpperCase()})</label>
-          <textarea id="treat-fulldesc-${lang}" class="form-input" style="min-height: 120px;" placeholder="Detaillierte Informationen, Ablauf, Nutzen...">${item?.[lang]?.fullDesc || item?.[lang]?.desc || ''}</textarea>
+          <textarea id="treat-fulldesc-${lang}" class="form-input" style="min-height: 120px;" placeholder="Detaillierte Informationen, Ablauf, Nutzen...">${getField(item, 'fullDesc', lang) || getField(item, 'desc', lang)}</textarea>
         </div>
       </div>
     `).join('');
@@ -1608,8 +1970,8 @@
     tbody.innerHTML = state.faq.map((f, i) => `
       <tr>
         <td style="padding-left: 24px;"><div class="treatment-index">${i + 1}</div></td>
-        <td><div class="cell-title-main">${f.de?.title || f.title?.de || f.title || 'Frage'}</div></td>
-        <td><div class="cell-title-sub">${(f.de?.desc || f.desc?.de || f.desc || '').slice(0, 90)}...</div></td>
+        <td><div class="cell-title-main">${getField(f, 'title', 'de') || 'Frage'}</div></td>
+        <td><div class="cell-title-sub">${(getField(f, 'desc', 'de') || '').slice(0, 90)}...</div></td>
         <td>${renderLangPills(f)}</td>
         <td style="text-align: right; padding-right: 24px;">
           <div class="btn-actions" style="justify-content: flex-end;">
@@ -1628,14 +1990,14 @@
   function buildFaqPanels(item) {
     const c = document.getElementById('faq-lang-panels');
     c.innerHTML = LANGS.map((lang, idx) => `
-      <div class="modal-lang-panel ${idx === 0 ? 'active' : ''}" data-lang="${lang}">
+      <div class="modal-lang-panel ${idx === 0 ? 'active' : ''}" data-lang="${lang}" style="display: ${idx === 0 ? 'block' : 'none'};">
         <div class="form-group" style="margin-bottom: 14px;">
           <label class="form-label">Frage (${lang.toUpperCase()})</label>
-          <input type="text" id="faq-title-${lang}" class="form-input" placeholder="Frage..." value="${item?.[lang]?.title || item?.title?.[lang] || ''}">
+          <input type="text" id="faq-title-${lang}" class="form-input" placeholder="Frage..." value="${getField(item, 'title', lang)}">
         </div>
         <div class="form-group">
           <label class="form-label">Antwort (${lang.toUpperCase()})</label>
-          <textarea id="faq-desc-${lang}" class="form-input" style="min-height: 110px;" placeholder="Antwort...">${item?.[lang]?.desc || item?.desc?.[lang] || ''}</textarea>
+          <textarea id="faq-desc-${lang}" class="form-input" style="min-height: 110px;" placeholder="Antwort...">${getField(item, 'desc', lang)}</textarea>
         </div>
       </div>
     `).join('');
@@ -1723,13 +2085,13 @@
       <tr>
         <td style="padding-left: 24px;"><div class="treatment-index">${i + 1}</div></td>
         <td>
-          <div class="cell-title-main">${p.title || 'Artikel'}</div>
-          <div class="cell-title-sub">${p.desc ? p.desc.slice(0, 85) + '...' : (p.outlet || '')}</div>
+          <div class="cell-title-main">${getField(p, 'title', 'de') || 'Artikel'}</div>
+          <div class="cell-title-sub">${getField(p, 'desc', 'de') ? getField(p, 'desc', 'de').slice(0, 85) + '...' : (p.outlet || '')}</div>
         </td>
         <td><span class="lang-pill filled">${p.date || '2023'}</span></td>
         <td>
           <a href="../${p.pdf || p.link || '#'}" target="_blank" class="lang-pill" style="color: var(--primary); text-decoration: none;">
-            📄 ${p.pdf ? p.pdf.split('/').pop() : 'PDF öffnen'}
+            📄 ${(p.pdf || p.link || '').split('/').pop() || 'PDF öffnen'}
           </a>
         </td>
         <td style="text-align: right; padding-right: 24px;">
@@ -1761,11 +2123,11 @@
     editIds.press = id;
     const p = state.press.find(x => x.id === id);
     document.getElementById('pressModalTitle').textContent = 'Presseartikel bearbeiten';
-    document.getElementById('press-title').value = p?.title || '';
+    document.getElementById('press-title').value = getField(p, 'title', 'de');
     document.getElementById('press-outlet').value = p?.outlet || '';
     document.getElementById('press-date').value = p?.date || '';
     document.getElementById('press-pdf').value = p?.pdf || p?.link || '';
-    document.getElementById('press-desc').value = p?.desc || '';
+    document.getElementById('press-desc').value = getField(p, 'desc', 'de');
     openModal('pressModal');
   };
 
@@ -1778,7 +2140,11 @@
       pdf: document.getElementById('press-pdf').value.trim(),
       link: document.getElementById('press-pdf').value.trim(),
       desc: document.getElementById('press-desc').value.trim(),
-      order: isNew ? state.press.length : (state.press.find(p => p.id === editIds.press)?.order || 0)
+      order: isNew ? state.press.length : (state.press.find(p => p.id === editIds.press)?.order || 0),
+      de: {
+        title: document.getElementById('press-title').value.trim(),
+        desc: document.getElementById('press-desc').value.trim()
+      }
     };
 
     document.getElementById('loadingOverlay').classList.add('show');
@@ -1831,11 +2197,11 @@
       <tr>
         <td style="padding-left: 24px;"><div class="treatment-index">${i + 1}</div></td>
         <td>
-          <div class="cell-title-main">${r.author_name || 'Anonym'}</div>
+          <div class="cell-title-main">${getField(r, 'author_name', 'de') || r.author_name || 'Anonym'}</div>
           <div class="cell-title-sub">${r.meta || 'Google Rezension'}</div>
         </td>
         <td><span class="stars-gold">${'★'.repeat(r.stars || 5)}</span></td>
-        <td><div class="cell-title-sub">${typeof r.text === 'object' ? (r.text?.de || '') : (r.text || '')}</div></td>
+        <td><div class="cell-title-sub">${getField(r, 'text', 'de').slice(0, 95)}...</div></td>
         <td style="text-align: right; padding-right: 24px;">
           <div class="btn-actions" style="justify-content: flex-end;">
             <button class="btn-icon-action" onclick="openEditReview('${r.id}')" title="Bearbeiten">
@@ -1853,10 +2219,10 @@
   function buildReviewPanels(item) {
     const c = document.getElementById('review-lang-panels');
     c.innerHTML = LANGS.map((lang, idx) => `
-      <div class="modal-lang-panel ${idx === 0 ? 'active' : ''}" data-lang="${lang}">
+      <div class="modal-lang-panel ${idx === 0 ? 'active' : ''}" data-lang="${lang}" style="display: ${idx === 0 ? 'block' : 'none'};">
         <div class="form-group">
           <label class="form-label">Bewertungstext (${lang.toUpperCase()})</label>
-          <textarea id="review-text-${lang}" class="form-input" style="min-height: 100px;" placeholder="Erfahrungsbericht...">${typeof item?.text === 'object' ? (item?.text?.[lang] || '') : (lang === 'de' ? (item?.text || '') : '')}</textarea>
+          <textarea id="review-text-${lang}" class="form-input" style="min-height: 100px;" placeholder="Erfahrungsbericht...">${getField(item, 'text', lang)}</textarea>
         </div>
       </div>
     `).join('');
@@ -1876,7 +2242,7 @@
     editIds.reviews = id;
     const r = state.reviews.find(x => x.id === id);
     document.getElementById('reviewsModalTitle').textContent = 'Rezension bearbeiten';
-    document.getElementById('review-author').value = r?.author_name || '';
+    document.getElementById('review-author').value = getField(r, 'author_name', 'de');
     document.getElementById('review-stars').value = r?.stars || 5;
     buildReviewPanels(r);
     switchModalLang('reviewsModal', 'de');
@@ -1945,9 +2311,9 @@
     tbody.innerHTML = state.branches.map((b, i) => `
       <tr>
         <td style="padding-left: 24px;"><div class="treatment-index">${i + 1}</div></td>
-        <td><div class="cell-title-main">${b.de?.city || b.city || 'Standort'}</div></td>
-        <td><div class="cell-title-sub">${b.de?.address || b.address || ''}</div></td>
-        <td><span class="lang-pill filled">${b.de?.phone || b.phone || ''}</span></td>
+        <td><div class="cell-title-main">${getField(b, 'city', 'de') || 'Standort'}</div></td>
+        <td><div class="cell-title-sub">${getField(b, 'address', 'de')}</div></td>
+        <td><span class="lang-pill filled">${b.phone || getField(b, 'phone', 'de')}</span></td>
         <td>${renderLangPills(b)}</td>
         <td style="text-align: right; padding-right: 24px;">
           <div class="btn-actions" style="justify-content: flex-end;">
@@ -1966,28 +2332,28 @@
   function buildBranchPanels(item) {
     const c = document.getElementById('branch-lang-panels');
     c.innerHTML = LANGS.map((lang, idx) => `
-      <div class="modal-lang-panel ${idx === 0 ? 'active' : ''}" data-lang="${lang}">
+      <div class="modal-lang-panel ${idx === 0 ? 'active' : ''}" data-lang="${lang}" style="display: ${idx === 0 ? 'block' : 'none'};">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
           <div class="form-group">
             <label class="form-label">Stadt / Filiale (${lang.toUpperCase()})</label>
-            <input type="text" id="branch-city-${lang}" class="form-input" placeholder="z.B. Mönchengladbach" value="${item?.[lang]?.city || ''}">
+            <input type="text" id="branch-city-${lang}" class="form-input" placeholder="z.B. Mönchengladbach" value="${getField(item, 'city', lang)}">
           </div>
           <div class="form-group">
             <label class="form-label">Adresse (${lang.toUpperCase()})</label>
-            <input type="text" id="branch-addr-${lang}" class="form-input" placeholder="Straße, PLZ..." value="${item?.[lang]?.address || ''}">
+            <input type="text" id="branch-addr-${lang}" class="form-input" placeholder="Straße, PLZ..." value="${getField(item, 'address', lang)}">
           </div>
         </div>
         <div class="form-group" style="margin-bottom: 14px;">
           <label class="form-label">Sprechzeiten (${lang.toUpperCase()})</label>
-          <input type="text" id="branch-hours-${lang}" class="form-input" placeholder="Mo–Fr..." value="${item?.[lang]?.hours || ''}">
+          <input type="text" id="branch-hours-${lang}" class="form-input" placeholder="Mo–Fr..." value="${getField(item, 'hours', lang)}">
         </div>
         <div class="form-group" style="margin-bottom: 14px;">
           <label class="form-label">Leistungen am Standort (${lang.toUpperCase()})</label>
-          <textarea id="branch-services-${lang}" class="form-input" style="min-height: 70px;" placeholder="Leistungen...">${item?.[lang]?.services || ''}</textarea>
+          <textarea id="branch-services-${lang}" class="form-input" style="min-height: 70px;" placeholder="Leistungen...">${getField(item, 'services', lang)}</textarea>
         </div>
         <div class="form-group">
           <label class="form-label">Anfahrt & Parken (${lang.toUpperCase()})</label>
-          <input type="text" id="branch-trans-${lang}" class="form-input" placeholder="ÖPNV, Parkhaus..." value="${item?.[lang]?.transport || ''}">
+          <input type="text" id="branch-trans-${lang}" class="form-input" placeholder="ÖPNV, Parkhaus..." value="${getField(item, 'transport', lang)}">
         </div>
       </div>
     `).join('');
@@ -2007,7 +2373,7 @@
     editIds.branches = id;
     const b = state.branches.find(x => x.id === id);
     document.getElementById('branchesModalTitle').textContent = 'Standort bearbeiten';
-    document.getElementById('branch-phone').value = b?.phone || '';
+    document.getElementById('branch-phone').value = b?.phone || getField(b, 'phone', 'de') || '';
     document.getElementById('branch-btnlink').value = b?.btn_link || 'https://app.arzt-direkt.de/neurochirurgiefischer/booking';
     buildBranchPanels(b);
     switchModalLang('branchesModal', 'de');
@@ -2119,10 +2485,10 @@
 
   // One-Click Seeder to load all current site content to Firebase
   window.seedAllToFirebase = async () => {
-    if (!confirm('Möchten Sie alle aktuellen Inhalte der Website (Ärzte, Schwerpunkte, Behandlungen, Diagnostik, FAQ, Standorte, Presse, Rezensionen) in die Firebase-Datenbank einlesen?')) return;
+    if (!confirm('Möchten Sie alle aktuellen Inhalte der Website (Ärzte, Schwerpunkte, Behandlungen, Diagnostik, FAQ, Standorte, Presse, Rezensionen) in die Firebase-Datenbank einlesen? Veraltete Testdaten werden dabei bereinigt.')) return;
     document.getElementById('loadingOverlay').classList.add('show');
     try {
-      showToast('Lade Daten in Firebase hoch...');
+      showToast('Bereinige alte Daten und importiere Website-Inhalte in Firebase...');
       await window.seedAllCollections((colName, current, total) => {
         showToast(`Importiere ${colName} (${current}/${total})...`);
       });

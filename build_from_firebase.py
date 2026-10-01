@@ -45,5 +45,6 @@ if __name__ == "__main__":
     if download_data():
         print("Running sync_cms.py...")
         subprocess.run(['python', 'sync_cms.py'], check=True)
-        print("Running build_sprechzeiten.py...")
-        subprocess.run(['python', 'build_sprechzeiten.py'], check=True)
+        if os.path.exists('build_sprechzeiten.py'):
+            print("Running build_sprechzeiten.py...")
+            subprocess.run(['python', 'build_sprechzeiten.py'], check=True)

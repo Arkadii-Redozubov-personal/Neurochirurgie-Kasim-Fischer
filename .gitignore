@@ -18,3 +18,5 @@ Thumbs.db
 *.tmp
 *.bak
 *_diff.txt
+
+publish-config.php

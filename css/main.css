@@ -2694,7 +2694,8 @@ html, body {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 16px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
   .floating-doctolib {
     right: 12px !important;
@@ -2753,4 +2754,173 @@ html, body {
 .faq-item.active .faq-icon svg,
 .faq-question.active .faq-icon svg {
   stroke: #fff !important;
+}
+
+
+/* ── Mobile Layout & Centering Enhancements ──────────────── */
+
+/* Burger Menu Full Centering & Clean Alignment */
+@media (max-width: 1550px) {
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 50px 24px 30px !important;
+    box-sizing: border-box;
+  }
+  .mobile-menu a {
+    text-align: center !important;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    font-size: 1.35rem !important;
+    padding: 12px 0 !important;
+  }
+  .mobile-dropdown-wrapper {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .mobile-dropdown-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 0 !important;
+  }
+  .mobile-dropdown-toggle a {
+    font-size: 1.35rem !important;
+  }
+  .mobile-dropdown-menu {
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .mobile-dropdown-menu a {
+    text-align: center !important;
+    font-size: 1.15rem !important;
+    padding: 8px 0 !important;
+  }
+  .mobile-lang-switcher {
+    justify-content: center !important;
+    width: 100%;
+    max-width: 320px;
+    margin: 18px auto 0 !important;
+    gap: 8px !important;
+  }
+  .mobile-menu .btn-book {
+    display: none !important;
+  }
+}
+
+/* Photo 1: Stats Alignment & Symmetry */
+@media (max-width: 768px) {
+  .about-stats-row {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    align-items: start !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+  .about-stats-row .stat-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  .about-stats-row .stat-value {
+    font-size: 1.8rem !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    margin-bottom: 3px !important;
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  .about-stats-row .stat-value span {
+    font-size: 1.2rem !important;
+    margin-left: 2px !important;
+  }
+  .about-stats-row .stat-label {
+    font-size: clamp(0.68rem, 2.3vw, 0.78rem) !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    width: 100% !important;
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
+    word-break: normal !important;
+  }
+}
+
+/* Photo 2: Responsive How It Works Title */
+@media (max-width: 768px) {
+  .how-title {
+    font-size: 1.85rem !important;
+    margin-bottom: 24px !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.5px !important;
+  }
+}
+@media (max-width: 480px) {
+  .how-title {
+    font-size: 1.65rem !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+/* Photo 3: MRT Section Responsive Padding */
+.mrt-section-wrapper {
+  padding: 60px 0;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .mrt-section-wrapper {
+    padding: 36px 0 !important;
+  }
+}
+
+/* Photo 5: Zweitmeinung Doctolib Button Bottom Margin */
+.zweitmeinung-btn-wrap {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+@media (max-width: 768px) {
+  .zweitmeinung-btn-wrap {
+    margin-top: 36px !important;
+    margin-bottom: 50px !important;
+  }
+}
+
+/* Patient Path Section Top/Bottom Padding */
+.patient-path-wrapper {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+@media (max-width: 768px) {
+  .patient-path-wrapper {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+}
+
+/* Contact Page WhatsApp Emergency Card Margins */
+.contact-section-wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .contact-section-wrapper {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+  .whatsapp-emergency-card {
+    margin-top: 24px !important;
+  }
 }

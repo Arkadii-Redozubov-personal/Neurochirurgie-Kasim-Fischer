@@ -21,42 +21,29 @@
 
   <style>
     .error-hero {
-      min-height: 75vh;
+      min-height: calc(100vh - 120px);
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 100px 20px 80px;
+      padding: 150px 24px 80px;
       position: relative;
       background: radial-gradient(circle at 50% 30%, rgba(0, 201, 167, 0.08) 0%, rgba(9, 31, 34, 0.98) 70%), #091f22;
       color: #fff;
+      box-sizing: border-box;
     }
     .error-container {
       max-width: 820px;
+      width: 100%;
       margin: 0 auto;
       position: relative;
       z-index: 2;
     }
-    .error-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 16px;
-      border-radius: 999px;
-      background: rgba(0, 201, 167, 0.15);
-      border: 1px solid rgba(0, 201, 167, 0.35);
-      color: #00c9a7;
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
     .error-code {
-      font-size: clamp(5rem, 14vw, 9.5rem);
+      font-size: clamp(4.5rem, 16vw, 9rem);
       font-weight: 800;
       line-height: 1;
-      letter-spacing: -3px;
+      letter-spacing: -2px;
       margin-bottom: 16px;
       background: linear-gradient(135deg, #ffffff 20%, #00c9a7 65%, #0072ff 100%);
       -webkit-background-clip: text;
@@ -64,25 +51,27 @@
       filter: drop-shadow(0 10px 30px rgba(0, 201, 167, 0.25));
     }
     .error-title {
-      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-size: clamp(1.4rem, 4vw, 2.3rem);
       font-weight: 800;
       color: #ffffff;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       line-height: 1.25;
+      padding: 0 8px;
     }
     .error-desc {
-      font-size: 1.1rem;
-      line-height: 1.7;
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      line-height: 1.65;
       color: rgba(255, 255, 255, 0.72);
       max-width: 620px;
       margin: 0 auto 36px;
+      padding: 0 12px;
     }
     .error-actions {
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 50px;
+      margin-bottom: 48px;
     }
     .btn-action-primary {
       background: linear-gradient(135deg, #00c9a7, #009b82);
@@ -93,6 +82,7 @@
       text-decoration: none;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
       box-shadow: 0 4px 20px rgba(0, 201, 167, 0.35);
       transition: all 0.25s ease;
@@ -111,6 +101,7 @@
       text-decoration: none;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
       transition: all 0.25s ease;
     }
@@ -123,8 +114,10 @@
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 16px;
       max-width: 760px;
+      width: 100%;
       margin: 0 auto;
       text-align: left;
+      box-sizing: border-box;
     }
     .quick-card {
       background: rgba(255, 255, 255, 0.04);
@@ -156,67 +149,124 @@
       color: rgba(255, 255, 255, 0.6);
       line-height: 1.4;
     }
+
+    @media (max-width: 768px) {
+      .error-hero {
+        padding: 110px 16px 50px;
+        min-height: auto;
+      }
+      .error-code {
+        font-size: clamp(4rem, 22vw, 6rem);
+        margin-bottom: 8px;
+      }
+      .error-title {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+      }
+      .error-desc {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        margin-bottom: 24px;
+      }
+      .error-actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto 36px;
+        gap: 12px;
+      }
+      .btn-action-primary, .btn-action-secondary {
+        width: 100%;
+        padding: 13px 20px;
+        box-sizing: border-box;
+      }
+      .quick-links-grid {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+        margin: 0 auto;
+        gap: 12px;
+      }
+      .quick-card {
+        padding: 14px 16px;
+      }
+    }
   </style>
 </head>
 <body>
-<div class="page-wrapper">
-  <!-- Navigation Header -->
-  <div style="background: #091f22; border-bottom: 1px solid rgba(255,255,255,0.06);">
-    <div class="container">
-      <nav class="navbar" style="margin-bottom: 0; padding: 18px 0;">
-        <a id="logoLink" href="/index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
-          <img src="/img/nLogo.svg" alt="NabiOta Health Group Germany" style="height:52px;width:auto;border-radius:12px;"/>
-          <div class="brand-text-lockup" style="display:flex;flex-direction:column;line-height:1.1;justify-content:center;direction:ltr;text-align:left;">
-            <span class="brand-title-gold" style="font-family:'Cinzel', 'Playfair Display', Georgia, serif;font-weight:800;font-size:1.4rem;letter-spacing:1.8px;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 30%, #c69c3a 60%, #f7e68a 85%, #b88d28 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#e8c170;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.45));white-space:nowrap;">NABIOTA</span>
-            <span class="brand-sub-gold" style="font-family:'Plus Jakarta Sans', sans-serif;font-weight:700;font-size:0.6rem;letter-spacing:2.6px;text-transform:uppercase;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 45%, #c69c3a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#c69c3a;white-space:nowrap;margin-top:2px;">HEALTH GROUP GERMANY</span>
-          </div>
-        </a>
-        <div class="nav-links" id="navLinks">
-          <a href="/index.html" id="navHome">Startseite</a>
-          <a href="/unser-team.html" id="navPraxis">Praxis</a>
-          <div class="nav-dropdown-wrapper">
-            <a tabindex="0" id="navServices">Leistungen</a>
-            <div class="nav-dropdown-menu">
-              <a href="/praxis-schwerpunkte.html" id="navDiseases">Erkrankungen</a>
-              <a href="/diagnostik.html" id="navDiagnostics">Diagnostik</a>
-              <a href="/behandlungen.html" id="navTreatments">Behandlungen &amp; OPs</a>
-              <a href="/zweitmeinung.html" id="navOpinion">Zweitmeinung</a>
-            </div>
-          </div>
-          <a href="/patienten.html" id="navPatients">Für Patienten</a>
-          <a href="/presseschau.html" id="navPress">Presse</a>
-          <a href="/sprechzeiten.html" id="navContact">Kontakt</a>
-        </div>
-        <div class="lang-switcher hidden-mobile">
-          <div class="lang-current" id="langCurrent">DE <span>▼</span></div>
-          <div class="lang-dropdown">
-            <a href="/index.html">Deutsch (DE)</a>
-            <a href="/en/index.html">English (EN)</a>
-            <a href="/ru/index.html">Русский (RU)</a>
-            <a href="/tr/index.html">Türkçe (TR)</a>
-            <a href="/ar/index.html">العربية (AR)</a>
-          </div>
-        </div>
-        <a class="btn-book hidden-mobile" id="btnBook" href="/sprechzeiten.html">Termin vereinbaren</a>
-        <div class="burger-menu" id="burgerMenu" style="display: none; font-size: 28px; cursor: pointer; color: white;">☰</div>
-      </nav>
-      <div class="mobile-menu" id="mobileMenu" style="display:none">
-        <a href="/index.html" id="mobHome">Startseite</a>
-        <a href="/unser-team.html" id="mobPraxis">Praxis</a>
-        <a href="/praxis-schwerpunkte.html" id="mobDiseases">Erkrankungen</a>
-        <a href="/behandlungen.html" id="mobTreatments">Behandlungen</a>
-        <a href="/patienten.html" id="mobPatients">Für Patienten</a>
-        <a href="/presseschau.html" id="mobPress">Presse</a>
-        <a href="/sprechzeiten.html" id="mobContact">Kontakt</a>
-        <a href="/sprechzeiten.html" id="mobBook" class="btn-book" style="margin-top: 15px; text-align: center;">Termin vereinbaren</a>
+
+<!-- Standard Navbar (consistent with all site pages) -->
+<nav class="navbar scrolled" id="mainNavbar">
+  <a href="/index.html" id="logoLink" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+    <img src="/img/nLogo.svg" alt="NabiOta Health Group Germany" style="height:56px;width:auto;border-radius:12px;"/>
+    <div class="brand-text-lockup" style="display:flex;flex-direction:column;line-height:1.1;justify-content:center;direction:ltr;text-align:left;">
+      <span class="brand-title-gold" style="font-family:'Cinzel', 'Playfair Display', 'Times New Roman', Georgia, serif;font-weight:800;font-size:1.5rem;letter-spacing:1.8px;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 30%, #c69c3a 60%, #f7e68a 85%, #b88d28 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#e8c170;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.45));white-space:nowrap;">NABIOTA</span>
+      <span class="brand-sub-gold" style="font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:2.6px;text-transform:uppercase;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 45%, #c69c3a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#c69c3a;white-space:nowrap;margin-top:2px;">HEALTH GROUP GERMANY</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="/index.html" id="navHome">Startseite</a>
+    <a href="/unser-team.html" id="navPraxis">Praxis</a>
+    <div class="nav-dropdown-wrapper">
+      <a tabindex="0" id="navServices">Leistungen</a>
+      <div class="nav-dropdown-menu">
+        <a href="/praxis-schwerpunkte.html" id="navDiseases">Erkrankungen</a>
+        <a href="/diagnostik.html" id="navDiagnostics">Diagnostik</a>
+        <a href="/behandlungen.html" id="navTreatments">Behandlungen &amp; OPs</a>
+        <a href="/zweitmeinung.html" id="navOpinion">Zweitmeinung</a>
       </div>
     </div>
+    <a href="/patienten.html" id="navPatients">Für Patienten</a>
+    <a href="/presseschau.html" id="navPress">Presse</a>
+    <a href="/sprechzeiten.html" id="navContact">Kontakt</a>
   </div>
 
+  <div class="lang-switcher hidden-mobile">
+    <div class="lang-current" id="langCurrent">DE <span>▼</span></div>
+    <div class="lang-dropdown">
+      <a href="/index.html">Deutsch (DE)</a>
+      <a href="/en/index.html">English (EN)</a>
+      <a href="/ru/index.html">Русский (RU)</a>
+      <a href="/tr/index.html">Türkçe (TR)</a>
+      <a href="/ar/index.html">العربية (AR)</a>
+    </div>
+  </div>
+  <a href="/sprechzeiten.html" class="btn-book hidden-mobile" id="btnBook">Termin vereinbaren</a>
+  <div class="burger-menu" id="burgerMenu" style="display: none; font-size: 28px; cursor: pointer; color: white;">☰</div>
+</nav>
+
+<!-- Standard Mobile Menu (consistent with all site pages) -->
+<div class="mobile-menu" id="mobileMenu" style="display:none">
+  <a href="/index.html" id="mobHome">Startseite</a>
+  <a href="/unser-team.html" id="mobPraxis">Praxis</a>
+  <div class="mobile-dropdown-wrapper">
+    <div class="mobile-dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('active');">
+      <a style="margin:0; padding:0;" id="mobServices">Leistungen</a>
+      <span style="color: rgba(255,255,255,0.7);">▼</span>
+    </div>
+    <div class="mobile-dropdown-menu">
+      <a href="/praxis-schwerpunkte.html" id="mobDiseases">Erkrankungen</a>
+      <a href="/diagnostik.html" id="mobDiagnostics">Diagnostik</a>
+      <a href="/behandlungen.html" id="mobTreatments">Behandlungen &amp; OPs</a>
+      <a href="/zweitmeinung.html" id="mobOpinion">Zweitmeinung</a>
+    </div>
+  </div>
+  <a href="/patienten.html" id="mobPatients">Für Patienten</a>
+  <a href="/presseschau.html" id="mobPress">Presse</a>
+  <a href="/sprechzeiten.html" id="mobContact">Kontakt</a>
+  <a href="/sprechzeiten.html" id="mobBook" class="btn-book" style="margin-top: 15px; text-align: center;">Termin vereinbaren</a>
+  <div class="mobile-lang-switcher" id="mobLangSwitcher">
+    <a class="active" href="/index.html" id="mobLangDe">DE</a>
+    <a href="/en/index.html" id="mobLangEn">EN</a>
+    <a href="/ru/index.html" id="mobLangRu">RU</a>
+    <a href="/tr/index.html" id="mobLangTr">TR</a>
+    <a href="/ar/index.html" id="mobLangAr">AR</a>
+  </div>
+</div>
+
+<div class="page-wrapper">
   <!-- 404 Hero Section -->
   <section class="error-hero">
     <div class="error-container">
-      <div class="error-badge" id="errorBadge">Fehler 404 · Nicht gefunden</div>
       <div class="error-code">404</div>
       <h1 class="error-title" id="errorTitle">Diese Seite existiert leider nicht</h1>
       <p class="error-desc" id="errorDesc">
@@ -253,94 +303,84 @@
         </a>
         <a href="/patienten.html" class="quick-card" id="cardPatienten">
           <div class="quick-card-title"><span>Patienten &amp; FAQ</span> <span>&rarr;</span></div>
-          <div class="quick-card-sub">Wichtige Fragen &amp; Hinweise zum Termin</div>
+          <div class="quick-card-sub">Wichtige Fragen &amp; Terminablauf</div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-<footer class="footer-wrapper">
-<div class="container footer-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
-<div class="footer-brand">
-<a href="/index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;">
-<img src="/img/nLogo.svg" alt="NabiOta Health Group Germany" style="height:56px;width:auto;border-radius:12px;"/>
-<div class="brand-text-lockup" style="display:flex;flex-direction:column;line-height:1.1;justify-content:center;direction:ltr;text-align:left;">
-  <span class="brand-title-gold" style="font-family:'Cinzel', 'Playfair Display', 'Times New Roman', Georgia, serif;font-weight:800;font-size:1.5rem;letter-spacing:1.8px;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 30%, #c69c3a 60%, #f7e68a 85%, #b88d28 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#e8c170;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.45));white-space:nowrap;">NABIOTA</span>
-  <span class="brand-sub-gold" style="font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:2.6px;text-transform:uppercase;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 45%, #c69c3a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#c69c3a;white-space:nowrap;margin-top:2px;">HEALTH GROUP GERMANY</span>
-</div>
-</a>
-<div style="color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.5; margin-bottom: 6px;">
-            Aachener Str. 114, 41061 Mönchengladbach
+  <!-- Standard Footer (consistent with all site pages) -->
+  <footer class="footer-wrapper">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/index.html" id="footLogoLink" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:24px;">
+          <img src="/img/nLogo.svg" alt="NabiOta Health Group Germany" style="height:56px;width:auto;border-radius:12px;"/>
+          <div class="brand-text-lockup" style="display:flex;flex-direction:column;line-height:1.1;justify-content:center;direction:ltr;text-align:left;">
+            <span class="brand-title-gold" style="font-family:'Cinzel', 'Playfair Display', 'Times New Roman', Georgia, serif;font-weight:800;font-size:1.5rem;letter-spacing:1.8px;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 30%, #c69c3a 60%, #f7e68a 85%, #b88d28 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#e8c170;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.45));white-space:nowrap;">NABIOTA</span>
+            <span class="brand-sub-gold" style="font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:2.6px;text-transform:uppercase;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 45%, #c69c3a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#c69c3a;white-space:nowrap;margin-top:2px;">HEALTH GROUP GERMANY</span>
           </div>
-          <div style="margin-bottom: 14px;">
-            <a href="#" target="_blank" rel="noopener" class="footer-print-link" style="display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-size: 0.84rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-              <span>Druckversion öffnen / drucken</span>
-            </a>
-          </div>
-          <div style="color: white; font-weight: 700; font-size: 1rem; margin-bottom: 4px;">
-            Praxis für Neurochirurgie
-          </div>
-          <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
-            Bismarckstr. 106<br/>41061 Mönchengladbach
-          </div>
-<div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 4px;">
+        </a>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.5; margin-bottom: 6px;">
+          Aachener Str. 114, 41061 Mönchengladbach
+        </div>
+        <div style="margin-bottom: 14px;">
+          <a href="#" target="_blank" rel="noopener" class="footer-print-link" style="display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-size: 0.84rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span id="footPrint">Druckversion öffnen / drucken</span>
+          </a>
+        </div>
+        <div style="color: white; font-weight: 700; font-size: 1rem; margin-bottom: 4px;">
+          Praxis für Neurochirurgie
+        </div>
+        <div style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+          Bismarckstr. 106<br/>41061 Mönchengladbach
+        </div>
+        <div style="color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 4px;">
           (02161) 678 26 83
         </div>
-          <div style="margin-bottom: 6px;">
-            <a href="https://wa.me/4915254085568" target="_blank" rel="noopener" class="footer-whatsapp-link" style="display: inline-flex; align-items: center; gap: 6px; color: #25D366; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.82-.37-4.06-1.08l-.29-.17-3.12.82.83-3.04-.19-.3a8.163 8.163 0 0 1-1.26-4.47c0-4.54 3.7-8.24 8.24-8.24zm-3.6 3.63c-.2 0-.43.08-.66.32-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.74 2.67 4.25 3.74.6.25 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.48-.6 1.69-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29-.25-.13-1.48-.73-1.71-.81-.23-.08-.4-.13-.57.13-.17.25-.66.81-.81.98-.15.17-.3.19-.55.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.57-1.37-.78-1.88-.2-.49-.41-.43-.57-.43z"/></svg>
-              <span>WhatsApp (Notfall): +49 152 54085568</span>
-            </a>
-          </div>
-<a href="mailto:kontakt@my-bandscheibe.de" style="color: var(--primary); text-decoration: none; font-size: 0.95rem; display: inline-block; margin-bottom: 24px;">kontakt@my-bandscheibe.de</a>
-<div class="footer-socials">
-<a href="https://www.facebook.com/neurokaz/" onmouseout="this.style.opacity='0.7'" onmouseover="this.style.opacity='1'" style="color: white; opacity: 0.7; transition: 0.3s;" target="_blank">
-<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-</a>
-</div>
-</div>
-<div class="footer-links">
-<h3 class="footer-heading" id="footHeadServices">LEISTUNGEN</h3>
-<a href="/praxis-schwerpunkte.html" id="footDiseases">Erkrankungen</a>
-<a href="/diagnostik.html" id="footDiagnostics">Diagnostik</a>
-<a href="/behandlungen.html" id="footTreatments">Behandlungen &amp; OPs</a>
-<a href="/zweitmeinung.html" id="footOpinion">Zweitmeinung</a>
-</div>
-<div class="footer-links">
-<h3 class="footer-heading" id="footHeadPraxis">PRAXIS</h3>
-<a href="/unser-team.html" id="footAbout">Über uns</a>
-<a href="/unser-team.html" id="footTeam">Unser Team</a>
-<a href="/presseschau.html" id="footPress">Presseschau</a>
-<a href="/sprechzeiten.html" id="footContact">Kontakt</a>
-<a href="/impressum.html" id="footImpressum">Impressum</a>
-<a href="/datenschutz.html" id="footPrivacy">Datenschutz</a>
-</div>
-<div class="footer-links">
-<h3 class="footer-heading" id="footHeadHours">SPRECHZEITEN</h3>
-<p id="footHours" style="margin:0;line-height:2;font-size:0.9rem;color:rgba(255,255,255,0.75);">Mo: 08:00&#8211;13:00 &amp; 14:00&#8211;18:00 Uhr<br>Di: 08:00&#8211;15:00 Uhr<br>Mi: 08:00&#8211;15:00 Uhr<br>Do: 08:00&#8211;13:00 &amp; 14:00&#8211;18:00 Uhr<br>Fr: 08:00&#8211;14:00 Uhr<br>Sa: nach Vereinbarung</p>
-<p id="footWeekend">Sa - So: Geschlossen</p>
-</div>
-</div>
-<div class="footer-bottom" id="footerBottom" style="text-align: center; padding-top: 32px; margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.85rem;">
+        <div style="margin-bottom: 6px;">
+          <a href="https://wa.me/4915254085568" target="_blank" rel="noopener" class="footer-whatsapp-link" style="display: inline-flex; align-items: center; gap: 6px; color: #25D366; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.82-.37-4.06-1.08l-.29-.17-3.12.82.83-3.04-.19-.3a8.163 8.163 0 0 1-1.26-4.47c0-4.54 3.7-8.24 8.24-8.24zm-3.6 3.63c-.2 0-.43.08-.66.32-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.74 2.67 4.25 3.74.6.25 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.48-.6 1.69-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29-.25-.13-1.48-.73-1.71-.81-.23-.08-.4-.13-.57.13-.17.25-.66.81-.81.98-.15.17-.3.19-.55.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.57-1.37-.78-1.88-.2-.49-.41-.43-.57-.43z"/></svg>
+            <span>WhatsApp (Notfall): +49 152 54085568</span>
+          </a>
+        </div>
+        <a href="mailto:kontakt@my-bandscheibe.de" style="color: var(--primary); text-decoration: none; font-size: 0.95rem; display: inline-block; margin-bottom: 24px;">kontakt@my-bandscheibe.de</a>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/neurokaz/" onmouseout="this.style.opacity='0.7'" onmouseover="this.style.opacity='1'" style="color: white; opacity: 0.7; transition: 0.3s;" target="_blank">
+            <svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h3 class="footer-heading" id="footHeadServices">LEISTUNGEN</h3>
+        <a href="/praxis-schwerpunkte.html" id="footDiseases">Erkrankungen</a>
+        <a href="/diagnostik.html" id="footDiagnostics">Diagnostik</a>
+        <a href="/behandlungen.html" id="footTreatments">Behandlungen &amp; OPs</a>
+        <a href="/zweitmeinung.html" id="footOpinion">Zweitmeinung</a>
+      </div>
+      <div class="footer-links">
+        <h3 class="footer-heading" id="footHeadPraxis">PRAXIS</h3>
+        <a href="/unser-team.html" id="footAbout">Über uns</a>
+        <a href="/unser-team.html" id="footTeam">Unser Team</a>
+        <a href="/presseschau.html" id="footPress">Presseschau</a>
+        <a href="/sprechzeiten.html" id="footContact">Kontakt</a>
+        <a href="/impressum.html" id="footImpressum">Impressum</a>
+        <a href="/datenschutz.html" id="footPrivacy">Datenschutz</a>
+      </div>
+      <div class="footer-links">
+        <h3 class="footer-heading" id="footHeadHours">SPRECHZEITEN</h3>
+        <p style="margin:0;line-height:2;font-size:0.9rem;color:rgba(255,255,255,0.75);">Mo: 08:00&#8211;13:00 &amp; 14:00&#8211;18:00 Uhr<br>Di: 08:00&#8211;15:00 Uhr<br>Mi: 08:00&#8211;15:00 Uhr<br>Do: 08:00&#8211;13:00 &amp; 14:00&#8211;18:00 Uhr<br>Fr: 08:00&#8211;14:00 Uhr<br>Sa: nach Vereinbarung</p>
+        <p id="footWeekend">Sa - So: Geschlossen</p>
+      </div>
+    </div>
+    <div class="footer-bottom" id="footerBottom" style="text-align: center; padding-top: 32px; margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.85rem;">
       &copy; 2026 NabiOta Health Group Germany. Alle Rechte vorbehalten.
     </div>
-</footer>
+  </footer>
 </div>
 
+<script src="/js/navbar.js"></script>
 <script>
-  // Mobile Burger Menu Toggle
-  const burger = document.getElementById('burgerMenu');
-  const mobMenu = document.getElementById('mobileMenu');
-  if (burger && mobMenu) {
-    burger.addEventListener('click', () => {
-      const isBlock = mobMenu.style.display === 'block';
-      mobMenu.style.display = isBlock ? 'none' : 'block';
-      burger.textContent = isBlock ? '☰' : '✕';
-    });
-  }
-
   // Automatic Multilingual Translation based on URL prefix (/en/, /ru/, /tr/, /ar/)
   (function() {
     const path = window.location.pathname.toLowerCase();
@@ -359,10 +399,19 @@
     const langEl = document.getElementById('langCurrent');
     if (langEl) langEl.innerHTML = lang.toUpperCase() + ' <span>▼</span>';
 
+    // Mobile Language Switcher Active Class
+    const mobLangs = ['de', 'en', 'ru', 'tr', 'ar'];
+    mobLangs.forEach(l => {
+      const el = document.getElementById('mobLang' + l.charAt(0).toUpperCase() + l.slice(1));
+      if (el) {
+        if (l === lang) el.classList.add('active');
+        else el.classList.remove('active');
+      }
+    });
+
     const dict = {
       en: {
         pageTitle: '404 – Page Not Found | Neurochirurgie Fischer',
-        badge: 'Error 404 · Not Found',
         title: 'This page does not exist',
         desc: 'The page you requested could not be found. It may have been moved, renamed, or is temporarily unavailable.',
         home: 'Back to Homepage',
@@ -379,7 +428,6 @@
         navDiseases: 'Diseases',
         navDiagnostics: 'Diagnostics',
         navTreatments: 'Treatments & Surgeries',
-        navTreatmentsMob: 'Treatments',
         navOpinion: 'Second Opinion',
         navPatients: 'For Patients',
         navPress: 'Press',
@@ -399,7 +447,6 @@
       },
       ru: {
         pageTitle: '404 – Страница не найдена | Neurochirurgie Fischer',
-        badge: 'Ошибка 404 · Страница не найдена',
         title: 'Запрошенная страница не существует',
         desc: 'Страница не найдена. Возможно, адрес изменился, ссылка устарела или страница была перемещена.',
         home: 'На главную страницу',
@@ -416,7 +463,6 @@
         navDiseases: 'Заболевания',
         navDiagnostics: 'Диагностика',
         navTreatments: 'Лечение и операции',
-        navTreatmentsMob: 'Лечение',
         navOpinion: 'Второе мнение',
         navPatients: 'Пациентам',
         navPress: 'Пресса',
@@ -436,7 +482,6 @@
       },
       tr: {
         pageTitle: '404 – Sayfa Bulunamadı | Neurochirurgie Fischer',
-        badge: 'Hata 404 · Sayfa Bulunamadı',
         title: 'Bu sayfa mevcut değil',
         desc: 'Aradığınız sayfa bulunamadı. Adres değişmiş, bağlantı eskimiş veya sayfa taşınmış olabilir.',
         home: 'Ana Sayfaya Dön',
@@ -453,7 +498,6 @@
         navDiseases: 'Hastalıklar',
         navDiagnostics: 'Teşhis',
         navTreatments: 'Tedaviler ve Ameliyatlar',
-        navTreatmentsMob: 'Tedaviler',
         navOpinion: 'İkinci Görüş',
         navPatients: 'Hastalar İçin',
         navPress: 'Basın',
@@ -473,7 +517,6 @@
       },
       ar: {
         pageTitle: '404 – الصفحة غير موجودة | Neurochirurgie Fischer',
-        badge: 'خطأ 404 · الصفحة غير موجودة',
         title: 'عذراً، هذه الصفحة غير موجودة',
         desc: 'لم يتم العثور على الصفحة التي طلبتها. ربما تم تغيير العنوان أو نقل الصفحة.',
         home: 'العودة للصفحة الرئيسية',
@@ -490,7 +533,6 @@
         navDiseases: 'الأمراض',
         navDiagnostics: 'التشخيص',
         navTreatments: 'العلاجات والعمليات',
-        navTreatmentsMob: 'العلاجات',
         navOpinion: 'الرأي الثاني',
         navPatients: 'للمرضى',
         navPress: 'الصحافة',
@@ -521,7 +563,6 @@
     };
 
     // Hero Section
-    setText('errorBadge', d.badge);
     setText('errorTitle', d.title);
     setText('errorDesc', d.desc);
     setText('btnHomeText', d.home);
@@ -542,7 +583,7 @@
     setCard('cardBehandlungen', d.trT, d.trS);
     setCard('cardPatienten', d.faqT, d.faqS);
 
-    // Navbar Links & Button
+    // Navbar Links & Button (Desktop)
     setText('navHome', d.navHome);
     setText('navPraxis', d.navPraxis);
     setText('navServices', d.navServices);
@@ -555,11 +596,14 @@
     setText('navContact', d.navContact);
     setText('btnBook', d.btnBook);
 
-    // Mobile Menu
+    // Mobile Menu Links
     setText('mobHome', d.navHome);
     setText('mobPraxis', d.navPraxis);
+    setText('mobServices', d.navServices);
     setText('mobDiseases', d.navDiseases);
-    setText('mobTreatments', d.navTreatmentsMob || d.navTreatments);
+    setText('mobDiagnostics', d.navDiagnostics);
+    setText('mobTreatments', d.navTreatments);
+    setText('mobOpinion', d.navOpinion);
     setText('mobPatients', d.navPatients);
     setText('mobPress', d.navPress);
     setText('mobContact', d.navContact);
@@ -588,6 +632,7 @@
       if (el) el.href = pfx + file;
     };
     updateLink('logoLink', 'index.html');
+    updateLink('footLogoLink', 'index.html');
     updateLink('btnHome', 'index.html');
     updateLink('btnContact', 'sprechzeiten.html');
     updateLink('cardTeam', 'unser-team.html');
@@ -595,7 +640,7 @@
     updateLink('cardBehandlungen', 'behandlungen.html');
     updateLink('cardPatienten', 'patienten.html');
 
-    // Header Links
+    // Desktop Header Links
     updateLink('navHome', 'index.html');
     updateLink('navPraxis', 'unser-team.html');
     updateLink('navDiseases', 'praxis-schwerpunkte.html');
@@ -611,7 +656,9 @@
     updateLink('mobHome', 'index.html');
     updateLink('mobPraxis', 'unser-team.html');
     updateLink('mobDiseases', 'praxis-schwerpunkte.html');
+    updateLink('mobDiagnostics', 'diagnostik.html');
     updateLink('mobTreatments', 'behandlungen.html');
+    updateLink('mobOpinion', 'zweitmeinung.html');
     updateLink('mobPatients', 'patienten.html');
     updateLink('mobPress', 'presseschau.html');
     updateLink('mobContact', 'sprechzeiten.html');

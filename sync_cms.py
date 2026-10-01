@@ -21,6 +21,13 @@ def load_cms_data(path='cms_data.json'):
     with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
+def to_str(val, lang='de'):
+    if val is None:
+        return ''
+    if isinstance(val, dict):
+        return str(val.get(lang) or val.get('de') or '')
+    return str(val)
+
 def sync_schwerpunkte(data):
     schwerpunkte = data.get('schwerpunkte', [])
     if not schwerpunkte: return
@@ -35,7 +42,7 @@ def sync_schwerpunkte(data):
         # Replace titles
         titles = re.split(r'(<h3 class="(?:disease|default)-card-title"[^>]*>)(.*?)(</h3>)', content, flags=re.DOTALL)
         for i, sp in enumerate(schwerpunkte):
-            title = sp.get(lang, {}).get('title', '') or sp.get('title', {}).get(lang, '')
+            title = to_str(sp.get(lang, {}).get('title', '') or sp.get('title', {}).get(lang, '') or sp.get('title', ''), lang)
             idx = i * 4 + 2
             if title and idx < len(titles):
                 titles[idx] = title
@@ -44,7 +51,7 @@ def sync_schwerpunkte(data):
         # Replace descriptions
         descs = re.split(r'(<p class="(?:disease|default)-card-desc"[^>]*>)(.*?)(</p>)', content, flags=re.DOTALL)
         for i, sp in enumerate(schwerpunkte):
-            desc = sp.get(lang, {}).get('desc', '') or sp.get('desc', {}).get(lang, '')
+            desc = to_str(sp.get(lang, {}).get('desc', '') or sp.get('desc', {}).get(lang, '') or sp.get('desc', ''), lang)
             idx = i * 4 + 2
             if desc and idx < len(descs):
                 descs[idx] = desc
@@ -66,7 +73,7 @@ def sync_treatments(data):
         
         titles = re.split(r'(<h3 class="(?:disease|default)-card-title"[^>]*>)(.*?)(</h3>)', content, flags=re.DOTALL)
         for i, tr in enumerate(treatments):
-            title = tr.get(lang, {}).get('title', '') or tr.get('title', {}).get(lang, '')
+            title = to_str(tr.get(lang, {}).get('title', '') or tr.get('title', {}).get(lang, '') or tr.get('title', ''), lang)
             idx = i * 4 + 2
             if title and idx < len(titles):
                 titles[idx] = title
@@ -74,7 +81,7 @@ def sync_treatments(data):
 
         descs = re.split(r'(<p class="(?:disease|default)-card-desc"[^>]*>)(.*?)(</p>)', content, flags=re.DOTALL)
         for i, tr in enumerate(treatments):
-            desc = tr.get(lang, {}).get('desc', '') or tr.get('desc', {}).get(lang, '')
+            desc = to_str(tr.get(lang, {}).get('desc', '') or tr.get('desc', {}).get(lang, '') or tr.get('desc', ''), lang)
             idx = i * 4 + 2
             if desc and idx < len(descs):
                 descs[idx] = desc
@@ -97,7 +104,7 @@ def sync_team(data):
         # Replace names
         names = re.split(r'(<div class="team-name-new"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
         for i, t in enumerate(team):
-            name = t.get(lang, {}).get('name', '') or t.get('name', {}).get(lang, '') or t.get('name', '')
+            name = to_str(t.get(lang, {}).get('name', '') or t.get('name', {}).get(lang, '') or t.get('name', ''), lang)
             idx = i * 4 + 2
             if name and idx < len(names):
                 inner = names[idx]
@@ -110,7 +117,7 @@ def sync_team(data):
         # Replace roles
         roles = re.split(r'(<div class="team-role-pill"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
         for i, t in enumerate(team):
-            role = t.get(lang, {}).get('role', '') or t.get('role', {}).get(lang, '') or t.get('role', '')
+            role = to_str(t.get(lang, {}).get('role', '') or t.get('role', {}).get(lang, '') or t.get('role', ''), lang)
             idx = i * 4 + 2
             if role and idx < len(roles):
                 roles[idx] = role
@@ -132,14 +139,14 @@ def sync_diagnostik(data):
             
         parts = re.split(r'(<h3[^>]*class="[^"]*treatment-title[^"]*"[^>]*>|<h3 style="font-size: 1\.15rem[^>]*>)(.*?)(</h3>)', content, flags=re.DOTALL)
         for i, tr in enumerate(items):
-            title = tr.get(lang, {}).get('title', '') or tr.get('title', {}).get(lang, '')
+            title = to_str(tr.get(lang, {}).get('title', '') or tr.get('title', {}).get(lang, '') or tr.get('title', ''), lang)
             idx = i * 4 + 2
             if title and idx < len(parts): parts[idx] = title
         content = "".join(parts)
         
         parts = re.split(r'(<p[^>]*class="[^"]*treatment-desc[^"]*"[^>]*>|<p style="font-size: 0\.95rem[^>]*>)(.*?)(</p>)', content, flags=re.DOTALL)
         for i, tr in enumerate(items):
-            desc = tr.get(lang, {}).get('desc', '') or tr.get('desc', {}).get(lang, '')
+            desc = to_str(tr.get(lang, {}).get('desc', '') or tr.get('desc', {}).get(lang, '') or tr.get('desc', ''), lang)
             idx = i * 4 + 2
             if desc and idx < len(parts): parts[idx] = desc
         content = "".join(parts)
@@ -160,7 +167,7 @@ def sync_faq(data):
             
         parts = re.split(r'(<div class="faq-q"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
         for i, tr in enumerate(items):
-            title = tr.get(lang, {}).get('title', '') or tr.get('title', {}).get(lang, '')
+            title = to_str(tr.get(lang, {}).get('title', '') or tr.get('title', {}).get(lang, '') or tr.get('title', ''), lang)
             idx = i * 4 + 2
             if title and idx < len(parts):
                 parts[idx] = title
@@ -168,7 +175,7 @@ def sync_faq(data):
         
         parts = re.split(r'(<div class="faq-a"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
         for i, tr in enumerate(items):
-            desc = tr.get(lang, {}).get('desc', '') or tr.get('desc', {}).get(lang, '')
+            desc = to_str(tr.get(lang, {}).get('desc', '') or tr.get('desc', {}).get(lang, '') or tr.get('desc', ''), lang)
             idx = i * 4 + 2
             if desc and idx < len(parts): parts[idx] = desc
         content = "".join(parts)
@@ -189,7 +196,7 @@ def sync_reviews(data):
 
         authors = re.split(r'(<div class="author-name-text"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
         for i, rev in enumerate(reviews):
-            name = rev.get('author_name', '')
+            name = to_str(rev.get('author_name', ''), lang)
             idx = i * 4 + 2
             if name and idx < len(authors):
                 authors[idx] = name
@@ -204,6 +211,8 @@ def sync_reviews(data):
                 txt = rev[lang].get('text', '')
             else:
                 txt = rev.get('text', '')
+            txt = to_str(txt, lang)
+                
             idx = i * 4 + 2
             if txt and idx < len(texts):
                 paragraphs = [p.strip() for p in txt.split('\n\n') if p.strip()]
@@ -232,7 +241,7 @@ def sync_branches(data):
 
         titles = re.split(r'(<h2 class="branch-title"[^>]*>)(.*?)(</h2>)', content, flags=re.DOTALL)
         for i, b in enumerate(branches):
-            city = b.get(lang, {}).get('city', '') or b.get('city', '')
+            city = to_str(b.get(lang, {}).get('city', '') or b.get('city', ''), lang)
             idx = i * 4 + 2
             if city and idx < len(titles):
                 titles[idx] = city

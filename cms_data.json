@@ -1,25 +1,11 @@
 {
   "pages": [
     {
-      "id": "Q0D2EOv8HbgFiZ1GDug2",
       "name": "Behandlungen",
+      "id": "Q0D2EOv8HbgFiZ1GDug2",
       "sections": [
         {
-          "type": "hero",
-          "id": "hero",
           "content": {
-            "tr": {
-              "desc": "Kesin teşhis ve etkili tedavi için modern ve kanıtlanmış prosedürleri kullanıyoruz.",
-              "title": "Tedavimiz<br><span style=\"color: var(--primary);\">yöntemler</span>"
-            },
-            "ru": {
-              "desc": "Мы используем современные и проверенные методы для точной диагностики и эффективного лечения.",
-              "title": "Наше лечение<br><span style=\"color: var(--primary);\">методы</span>"
-            },
-            "ar": {
-              "desc": "نحن نستخدم إجراءات حديثة ومثبتة للتشخيص الدقيق والعلاج الفعال.",
-              "title": "علاجنا<br><span style=\"color: var(--primary);\">طُرق</span>"
-            },
             "de": {
               "desc": "Wir nutzen moderne und erprobte Verfahren zur präzisen Diagnose und effektiven Behandlung.",
               "title": "Unsere Behandlungs-<br><span style=\"color: var(--primary);\">methoden</span>"
@@ -27,31 +13,31 @@
             "en": {
               "desc": "We use modern and proven procedures for precise diagnosis and effective treatment.",
               "title": "Our treatment<br><span style=\"color: var(--primary);\">methods</span>"
+            },
+            "ar": {
+              "desc": "نحن نستخدم إجراءات حديثة ومثبتة للتشخيص الدقيق والعلاج الفعال.",
+              "title": "علاجنا<br><span style=\"color: var(--primary);\">طُرق</span>"
+            },
+            "tr": {
+              "desc": "Kesin teşhis ve etkili tedavi için modern ve kanıtlanmış prosedürleri kullanıyoruz.",
+              "title": "Tedavimiz<br><span style=\"color: var(--primary);\">yöntemler</span>"
+            },
+            "ru": {
+              "desc": "Мы используем современные и проверенные методы для точной диагностики и эффективного лечения.",
+              "title": "Наше лечение<br><span style=\"color: var(--primary);\">методы</span>"
             }
-          }
+          },
+          "id": "hero",
+          "type": "hero"
         }
       ]
     },
     {
-      "id": "SmJ5x4DglNhUTW9n1Nr6",
       "name": "Praxis-schwerpunkte",
+      "id": "SmJ5x4DglNhUTW9n1Nr6",
       "sections": [
         {
-          "type": "hero",
-          "id": "hero",
           "content": {
-            "tr": {
-              "desc": "Merkezi ve periferik sinir sistemi hastalıklarının tanı ve tedavisi.",
-              "title": "Başlıca faaliyet alanlarımız <span style=\"color: var(--primary);\">Pratik</span>"
-            },
-            "ru": {
-              "desc": "Диагностика и лечение заболеваний центральной и периферической нервной системы.",
-              "title": "Основные направления нашей <span style=\"color: var(--primary);\">клиники</span>"
-            },
-            "ar": {
-              "desc": "تشخيص وعلاج أمراض الجهاز العصبي المركزي والمحيطي.",
-              "title": "المجالات الرئيسية لدينا <span style=\"color: var(--primary);\">يمارس</span>"
-            },
             "de": {
               "desc": "Diagnostik und Behandlung von Erkrankungen des zentralen und peripheren Nervensystems.",
               "title": "Hauptbereiche unserer <span style=\"color: var(--primary);\">Praxis</span>"
@@ -59,31 +45,31 @@
             "en": {
               "desc": "Diagnosis and treatment of diseases of the central and peripheral nervous system.",
               "title": "Main areas of our <span style=\"color: var(--primary);\">Practice</span>"
+            },
+            "ar": {
+              "desc": "تشخيص وعلاج أمراض الجهاز العصبي المركزي والمحيطي.",
+              "title": "المجالات الرئيسية لدينا <span style=\"color: var(--primary);\">يمارس</span>"
+            },
+            "tr": {
+              "desc": "Merkezi ve periferik sinir sistemi hastalıklarının tanı ve tedavisi.",
+              "title": "Başlıca faaliyet alanlarımız <span style=\"color: var(--primary);\">Pratik</span>"
+            },
+            "ru": {
+              "desc": "Диагностика и лечение заболеваний центральной и периферической нервной системы.",
+              "title": "Основные направления нашей <span style=\"color: var(--primary);\">клиники</span>"
             }
-          }
+          },
+          "id": "hero",
+          "type": "hero"
         }
       ]
     },
     {
-      "id": "jyZQsoqDLdKRVNLwFm4t",
       "name": "Index",
+      "id": "jyZQsoqDLdKRVNLwFm4t",
       "sections": [
         {
-          "type": "hero",
-          "id": "hero",
           "content": {
-            "tr": {
-              "desc": "Merkezi ve periferik sinir sistemi hastalıkları için ileri teşhis ve etkili tedavi sağlıyoruz. Sağlığınız bizim misyonumuzdur.",
-              "title": "Sinir sistemi hastalıklarının <br><span>teşhisi ve tedavisi.</span>"
-            },
-            "ru": {
-              "desc": "Мы предоставляем передовую диагностику и эффективное лечение заболеваний центральной и периферической нервной системы. Ваше здоровье — наша миссия.",
-              "title": "Диагностика и лечение <br><span>заболеваний нервной системы.</span>"
-            },
-            "ar": {
-              "desc": "نحن نقدم تشخيصات متقدمة وعلاجًا فعالًا لأمراض الجهاز العصبي المركزي والمحيطي. صحتك هي مهمتنا.",
-              "title": "تشخيص وعلاج <br><span>أمراض الجهاز العصبي.</span>"
-            },
             "de": {
               "desc": "Wir befassen uns mit der Diagnostik und Behandlung von Erkrankungen des Zentralnervensystems (ZNS) und des peripheren Nervensystems (PNS). Ihre Gesundheit ist unsere Mission.",
               "title": "Diagnostik und Behandlung von <br><span>Nervenerkrankungen.</span>"
@@ -91,31 +77,31 @@
             "en": {
               "desc": "We provide advanced diagnostics and effective treatment for diseases of the central and peripheral nervous system. Your health is our mission.",
               "title": "Diagnosis and treatment of <br><span>nervous system diseases.</span>"
+            },
+            "ar": {
+              "desc": "نحن نقدم تشخيصات متقدمة وعلاجًا فعالًا لأمراض الجهاز العصبي المركزي والمحيطي. صحتك هي مهمتنا.",
+              "title": "تشخيص وعلاج <br><span>أمراض الجهاز العصبي.</span>"
+            },
+            "tr": {
+              "desc": "Merkezi ve periferik sinir sistemi hastalıkları için ileri teşhis ve etkili tedavi sağlıyoruz. Sağlığınız bizim misyonumuzdur.",
+              "title": "Sinir sistemi hastalıklarının <br><span>teşhisi ve tedavisi.</span>"
+            },
+            "ru": {
+              "desc": "Мы предоставляем передовую диагностику и эффективное лечение заболеваний центральной и периферической нервной системы. Ваше здоровье — наша миссия.",
+              "title": "Диагностика и лечение <br><span>заболеваний нервной системы.</span>"
             }
-          }
+          },
+          "id": "hero",
+          "type": "hero"
         }
       ]
     },
     {
-      "id": "l6tggvwI9dW9SyFLuLIb",
       "name": "Presseschau",
+      "id": "l6tggvwI9dW9SyFLuLIb",
       "sections": [
         {
-          "type": "hero",
-          "id": "hero",
           "content": {
-            "tr": {
-              "desc": "Önde gelen tıbbi yayınlarda ve haber portallarında yer alan makalelerimiz ve röportajlarımız.",
-              "title": "Basın incelemesi"
-            },
-            "ru": {
-              "desc": "Наши статьи и интервью в ведущих медицинских изданиях и новостных порталах.",
-              "title": "Обзор прессы"
-            },
-            "ar": {
-              "desc": "مقالاتنا ومقابلاتنا في المنشورات الطبية الرائدة والبوابات الإخبارية.",
-              "title": "مراجعة الصحافة"
-            },
             "de": {
               "desc": "Unsere Artikel und Interviews in führenden medizinischen Publikationen und auf Nachrichtenportalen.",
               "title": "Presseschau"
@@ -123,31 +109,31 @@
             "en": {
               "desc": "Our articles and interviews in leading medical publications and news portals.",
               "title": "Press review"
+            },
+            "ar": {
+              "desc": "مقالاتنا ومقابلاتنا في المنشورات الطبية الرائدة والبوابات الإخبارية.",
+              "title": "مراجعة الصحافة"
+            },
+            "tr": {
+              "desc": "Önde gelen tıbbi yayınlarda ve haber portallarında yer alan makalelerimiz ve röportajlarımız.",
+              "title": "Basın incelemesi"
+            },
+            "ru": {
+              "desc": "Наши статьи и интервью в ведущих медицинских изданиях и новостных порталах.",
+              "title": "Обзор прессы"
             }
-          }
+          },
+          "id": "hero",
+          "type": "hero"
         }
       ]
     },
     {
-      "id": "sVpb6puatSzRnNZXEpDj",
       "name": "Unser-team",
+      "id": "sVpb6puatSzRnNZXEpDj",
       "sections": [
         {
-          "type": "hero",
-          "id": "hero",
           "content": {
-            "tr": {
-              "desc": "Modern bir çalışma ortamında, sağlığınızı önemsemek gibi ortak bir amaç etrafında birleşen motive çalışanlar.",
-              "title": "Bizim <span style=\"color: var(--primary);\">takım</span>"
-            },
-            "ru": {
-              "desc": "Мотивированные сотрудники в современной рабочей среде, объединенные общей целью – заботой о вашем здоровье.",
-              "title": "Наш <span style=\"color: var(--primary);\">команда</span>"
-            },
-            "ar": {
-              "desc": "موظفون متحمسون في بيئة عمل حديثة، متحدون بهدف مشترك - العناية بصحتك.",
-              "title": "ملكنا <span style=\"color: var(--primary);\">فريق</span>"
-            },
             "de": {
               "desc": "Motivierte Mitarbeiter in einer modernen Arbeitsumgebung, vereint durch ein gemeinsames Ziel – die Sorge um Ihre Gesundheit.",
               "title": "Unser <span style=\"color: var(--primary);\">Team</span>"
@@ -155,31 +141,31 @@
             "en": {
               "desc": "Motivated employees in a modern working environment, united by a common goal - caring for your health.",
               "title": "Our <span style=\"color: var(--primary);\">team</span>"
+            },
+            "ar": {
+              "desc": "موظفون متحمسون في بيئة عمل حديثة، متحدون بهدف مشترك - العناية بصحتك.",
+              "title": "ملكنا <span style=\"color: var(--primary);\">فريق</span>"
+            },
+            "tr": {
+              "desc": "Modern bir çalışma ortamında, sağlığınızı önemsemek gibi ortak bir amaç etrafında birleşen motive çalışanlar.",
+              "title": "Bizim <span style=\"color: var(--primary);\">takım</span>"
+            },
+            "ru": {
+              "desc": "Мотивированные сотрудники в современной рабочей среде, объединенные общей целью – заботой о вашем здоровье.",
+              "title": "Наш <span style=\"color: var(--primary);\">команда</span>"
             }
-          }
+          },
+          "id": "hero",
+          "type": "hero"
         }
       ]
     },
     {
-      "id": "yv8k1mBAKcfkRMPuIjQa",
       "name": "Sprechzeiten",
+      "id": "yv8k1mBAKcfkRMPuIjQa",
       "sections": [
         {
-          "type": "hero",
-          "id": "hero",
           "content": {
-            "tr": {
-              "desc": "Sorularınızı yanıtlamaya ve sağlığınız için en iyi çözümü bulmanıza yardımcı olmaya hazırız.",
-              "title": "Temas etmek <span style=\"color: var(--primary);\">biz</span>"
-            },
-            "ru": {
-              "desc": "Мы готовы ответить на ваши вопросы и помочь найти лучшее решение для вашего здоровья.",
-              "title": "Контакт <span style=\"color: var(--primary);\">нас</span>"
-            },
-            "ar": {
-              "desc": "نحن على استعداد للإجابة على أسئلتك ومساعدتك في العثور على الحل الأفضل لصحتك.",
-              "title": "اتصال <span style=\"color: var(--primary);\">نحن</span>"
-            },
             "de": {
               "desc": "Wir sind bereit, Ihre Fragen zu beantworten und Ihnen zu helfen, die beste Lösung für Ihre Gesundheit zu finden.",
               "title": "Kontaktieren Sie <span style=\"color: var(--primary);\">uns</span>"
@@ -187,14 +173,41 @@
             "en": {
               "desc": "We are ready to answer your questions and help you find the best solution for your health.",
               "title": "Contact <span style=\"color: var(--primary);\">us</span>"
+            },
+            "ar": {
+              "desc": "نحن على استعداد للإجابة على أسئلتك ومساعدتك في العثور على الحل الأفضل لصحتك.",
+              "title": "اتصال <span style=\"color: var(--primary);\">نحن</span>"
+            },
+            "tr": {
+              "desc": "Sorularınızı yanıtlamaya ve sağlığınız için en iyi çözümü bulmanıza yardımcı olmaya hazırız.",
+              "title": "Temas etmek <span style=\"color: var(--primary);\">biz</span>"
+            },
+            "ru": {
+              "desc": "Мы готовы ответить на ваши вопросы и помочь найти лучшее решение для вашего здоровья.",
+              "title": "Контакт <span style=\"color: var(--primary);\">нас</span>"
             }
-          }
+          },
+          "id": "hero",
+          "type": "hero"
         }
       ]
     }
   ],
   "schwerpunkte": [
     {
+      "de": {
+        "desc": "Verengung der Öffnungen, durch die Nervenwurzeln die Wirbelsäule verlassen.",
+        "title": "Spinalkanalstenosen"
+      },
+      "en": {
+        "desc": "Narrowing of the spinal canal causing pressure on the spinal cord or nerves.",
+        "title": "Spinal Stenosis"
+      },
+      "ar": {
+        "desc": "تضيق في القناة الشوكية يسبب ضغطًا على الحبل الشوكي أو الأعصاب.",
+        "title": "تضيق القناة الشوكية"
+      },
+      "order": 1,
       "tr": {
         "desc": "Omurilik veya sinirlere baskı yapan omurilik kanalının daralması.",
         "title": "Spinal Kanal Stenozu"
@@ -203,22 +216,22 @@
       "ru": {
         "desc": "Сужение канала, вызывающее давление на спинной мозг или нервы.",
         "title": "Стеноз спинномозгового канала"
-      },
-      "order": 1,
-      "ar": {
-        "desc": "تضيق في القناة الشوكية يسبب ضغطًا على الحبل الشوكي أو الأعصاب.",
-        "title": "تضيق القناة الشوكية"
-      },
-      "de": {
-        "desc": "Verengung der Öffnungen, durch die Nervenwurzeln die Wirbelsäule verlassen.",
-        "title": "Spinalkanalstenosen"
-      },
-      "en": {
-        "desc": "Narrowing of the spinal canal causing pressure on the spinal cord or nerves.",
-        "title": "Spinal Stenosis"
       }
     },
     {
+      "de": {
+        "desc": "Traumatische Verletzungen, die zu einem Funktionsverlust von Nerven führen.",
+        "title": "Nervenschäden/-verletzungen"
+      },
+      "en": {
+        "desc": "Various conditions where a nerve is pinched or compressed.",
+        "title": "Nerve Compression Syndromes"
+      },
+      "ar": {
+        "desc": "حالات مختلفة ينضغط فيها العصب.",
+        "title": "متلازمات انضغاط العصب"
+      },
+      "order": 13,
       "tr": {
         "desc": "Bir sinirin sıkıştığı çeşitli durumlar.",
         "title": "Sinir Sıkışması Sendromları"
@@ -227,22 +240,22 @@
       "ru": {
         "desc": "Различные состояния, при которых нерв защемляется или сдавливается.",
         "title": "Компрессионные синдромы нервов"
-      },
-      "order": 13,
-      "ar": {
-        "desc": "حالات مختلفة ينضغط فيها العصب.",
-        "title": "متلازمات انضغاط العصب"
-      },
-      "de": {
-        "desc": "Traumatische Verletzungen, die zu einem Funktionsverlust von Nerven führen.",
-        "title": "Nervenschäden/-verletzungen"
-      },
-      "en": {
-        "desc": "Various conditions where a nerve is pinched or compressed.",
-        "title": "Nerve Compression Syndromes"
       }
     },
     {
+      "de": {
+        "desc": "Verschiebung eines Wirbels gegenüber dem darunterliegenden (Wirbelgleiten).",
+        "title": "Neuroforamenstenosen"
+      },
+      "en": {
+        "desc": "Narrowing of the openings where nerve roots exit the spine.",
+        "title": "Neuroforaminal Stenosis"
+      },
+      "ar": {
+        "desc": "تضيق الفتحات التي تخرج منها جذور الأعصاب من العمود الفقري.",
+        "title": "تضيق الثقبة العصبية"
+      },
+      "order": 2,
       "tr": {
         "desc": "Sinir köklerinin omurgadan çıktığı açıklıkların daralması.",
         "title": "Nöroforaminal Stenoz"
@@ -251,22 +264,22 @@
       "ru": {
         "desc": "Сужение отверстий, через которые нервные корешки выходят из позвоночника.",
         "title": "Нейрофораминальный стеноз"
-      },
-      "order": 2,
-      "ar": {
-        "desc": "تضيق الفتحات التي تخرج منها جذور الأعصاب من العمود الفقري.",
-        "title": "تضيق الثقبة العصبية"
-      },
-      "de": {
-        "desc": "Verschiebung eines Wirbels gegenüber dem darunterliegenden (Wirbelgleiten).",
-        "title": "Neuroforamenstenosen"
-      },
-      "en": {
-        "desc": "Narrowing of the openings where nerve roots exit the spine.",
-        "title": "Neuroforaminal Stenosis"
       }
     },
     {
+      "de": {
+        "desc": "Gleichzeitige Schädigung mehrerer peripherer Nerven.",
+        "title": "Polyneuropathien"
+      },
+      "en": {
+        "desc": "Traumatic injuries leading to a loss of nerve function.",
+        "title": "Nerve Damage/Injuries"
+      },
+      "ar": {
+        "desc": "إصابات رضية تؤدي إلى فقدان وظيفة العصب.",
+        "title": "تلف/إصابات الأعصاب"
+      },
+      "order": 14,
       "tr": {
         "desc": "Sinir fonksiyonu kaybına yol açan travmatik yaralanmalar.",
         "title": "Sinir Hasarları/Yaralanmaları"
@@ -275,22 +288,22 @@
       "ru": {
         "desc": "Травмы, приводящие к потере функции нерва.",
         "title": "Повреждения и травмы нервов"
-      },
-      "order": 14,
-      "ar": {
-        "desc": "إصابات رضية تؤدي إلى فقدان وظيفة العصب.",
-        "title": "تلف/إصابات الأعصاب"
-      },
-      "de": {
-        "desc": "Gleichzeitige Schädigung mehrerer peripherer Nerven.",
-        "title": "Polyneuropathien"
-      },
-      "en": {
-        "desc": "Traumatic injuries leading to a loss of nerve function.",
-        "title": "Nerve Damage/Injuries"
       }
     },
     {
+      "de": {
+        "desc": "Brüche der Wirbelkörper, oft infolge von Traumata oder Osteoporose.",
+        "title": "Instabilitäten"
+      },
+      "en": {
+        "desc": "Excessive or abnormal movement between vertebrae.",
+        "title": "Spinal Instability"
+      },
+      "ar": {
+        "desc": "حركة مفرطة أو غير طبيعية بين الفقرات.",
+        "title": "عدم استقرار العمود الفقري"
+      },
+      "order": 4,
       "tr": {
         "desc": "Omurlar arasında aşırı veya anormal hareketlilik.",
         "title": "Omurga İnstabilitesi"
@@ -299,22 +312,22 @@
       "ru": {
         "desc": "Избыточная или аномальная подвижность между позвонками.",
         "title": "Нестабильность позвоночника"
-      },
-      "order": 4,
-      "ar": {
-        "desc": "حركة مفرطة أو غير طبيعية بين الفقرات.",
-        "title": "عدم استقرار العمود الفقري"
-      },
-      "de": {
-        "desc": "Brüche der Wirbelkörper, oft infolge von Traumata oder Osteoporose.",
-        "title": "Instabilitäten"
-      },
-      "en": {
-        "desc": "Excessive or abnormal movement between vertebrae.",
-        "title": "Spinal Instability"
       }
     },
     {
+      "de": {
+        "desc": "Verschiedene Zustände, bei denen ein Nerv eingeklemmt oder komprimiert wird.",
+        "title": "Nervenkompressionssyndrome"
+      },
+      "en": {
+        "desc": "Compression of the tibial nerve in the ankle area.",
+        "title": "Tarsal Tunnel Syndrome"
+      },
+      "ar": {
+        "desc": "انضغاط العصب الظنبوبي في الكاحل.",
+        "title": "متلازمة النفق الرصغي"
+      },
+      "order": 12,
       "tr": {
         "desc": "Ayak bileğinde tibial sinirin sıkışması.",
         "title": "Tarsal Tünel Sendromu"
@@ -323,22 +336,22 @@
       "ru": {
         "desc": "Сдавление большеберцового нерва в области голеностопного сустава.",
         "title": "Синдром тарзального канала"
-      },
-      "order": 12,
-      "ar": {
-        "desc": "انضغاط العصب الظنبوبي في الكاحل.",
-        "title": "متلازمة النفق الرصغي"
-      },
-      "de": {
-        "desc": "Verschiedene Zustände, bei denen ein Nerv eingeklemmt oder komprimiert wird.",
-        "title": "Nervenkompressionssyndrome"
-      },
-      "en": {
-        "desc": "Compression of the tibial nerve in the ankle area.",
-        "title": "Tarsal Tunnel Syndrome"
       }
     },
     {
+      "de": {
+        "desc": "Kompression des Schienbeinnervs im Bereich des Sprunggelenks.",
+        "title": "Tarsaltunnelsyndrom"
+      },
+      "en": {
+        "desc": "Compression of the ulnar nerve at the elbow.",
+        "title": "Cubital Tunnel Syndrome"
+      },
+      "ar": {
+        "desc": "انضغاط العصب الزندي في الكوع.",
+        "title": "متلازمة النفق المرفقي"
+      },
+      "order": 11,
       "tr": {
         "desc": "Dirsekte ulnar sinirin sıkışması.",
         "title": "Kubital Tünel Sendromu"
@@ -347,22 +360,22 @@
       "ru": {
         "desc": "Сдавление локтевого нерва в области локтя.",
         "title": "Синдром кубитального канала"
-      },
-      "order": 11,
-      "ar": {
-        "desc": "انضغاط العصب الزندي في الكوع.",
-        "title": "متلازمة النفق المرفقي"
-      },
-      "de": {
-        "desc": "Kompression des Schienbeinnervs im Bereich des Sprunggelenks.",
-        "title": "Tarsaltunnelsyndrom"
-      },
-      "en": {
-        "desc": "Compression of the ulnar nerve at the elbow.",
-        "title": "Cubital Tunnel Syndrome"
       }
     },
     {
+      "de": {
+        "desc": "Anhaltende Schmerzen, die über mehrere Monate bestehen bleiben.",
+        "title": "Chronische Rücken-/Nackenschmerzen"
+      },
+      "en": {
+        "desc": "Simultaneous damage to multiple peripheral nerves.",
+        "title": "Polyneuropathies"
+      },
+      "ar": {
+        "desc": "تلف متزامن لعدة أعصاب محيطية.",
+        "title": "اعتلال الأعصاب المتعدد"
+      },
+      "order": 15,
       "tr": {
         "desc": "Birden fazla periferik sinirin aynı anda hasar görmesi.",
         "title": "Polinöropatiler"
@@ -371,22 +384,22 @@
       "ru": {
         "desc": "Одновременное поражение множества периферических нервов.",
         "title": "Полинейропатии"
-      },
-      "order": 15,
-      "ar": {
-        "desc": "تلف متزامن لعدة أعصاب محيطية.",
-        "title": "اعتلال الأعصاب المتعدد"
-      },
-      "de": {
-        "desc": "Anhaltende Schmerzen, die über mehrere Monate bestehen bleiben.",
-        "title": "Chronische Rücken-/Nackenschmerzen"
-      },
-      "en": {
-        "desc": "Simultaneous damage to multiple peripheral nerves.",
-        "title": "Polyneuropathies"
       }
     },
     {
+      "de": {
+        "desc": "Schmerzen, die durch eine Schädigung des Nervensystems selbst verursacht werden.",
+        "title": "Neuropathische Schmerzen"
+      },
+      "en": {
+        "desc": "Persistent pain that lasts for several months.",
+        "title": "Chronic Back/Neck Pain"
+      },
+      "ar": {
+        "desc": "ألم مستمر يستمر لعدة أشهر.",
+        "title": "آلام الظهر/الرقبة المزمنة"
+      },
+      "order": 16,
       "tr": {
         "desc": "Birkaç ay devam eden inatçı ağrı.",
         "title": "Kronik Sırt/Boyun Ağrısı"
@@ -395,22 +408,22 @@
       "ru": {
         "desc": "Постоянная боль, сохраняющаяся несколько месяцев.",
         "title": "Хронические боли в спине/шее"
-      },
-      "order": 16,
-      "ar": {
-        "desc": "ألم مستمر يستمر لعدة أشهر.",
-        "title": "آلام الظهر/الرقبة المزمنة"
-      },
-      "de": {
-        "desc": "Schmerzen, die durch eine Schädigung des Nervensystems selbst verursacht werden.",
-        "title": "Neuropathische Schmerzen"
-      },
-      "en": {
-        "desc": "Persistent pain that lasts for several months.",
-        "title": "Chronic Back/Neck Pain"
       }
     },
     {
+      "de": {
+        "desc": "Kompression des Ellennervs am Ellbogen.",
+        "title": "Sulcus-Ulnaris-Syndrom"
+      },
+      "en": {
+        "desc": "Compression of the median nerve in the wrist area.",
+        "title": "Carpal Tunnel Syndrome"
+      },
+      "ar": {
+        "desc": "انضغاط العصب المتوسط في منطقة المعصم.",
+        "title": "متلازمة النفق الرسغي"
+      },
+      "order": 10,
       "tr": {
         "desc": "El bileği bölgesinde medyan sinirin sıkışması.",
         "title": "Karpal Tünel Sendromu"
@@ -419,22 +432,22 @@
       "ru": {
         "desc": "Сдавление срединного нерва в области запястья.",
         "title": "Синдром запястного канала"
-      },
-      "order": 10,
-      "ar": {
-        "desc": "انضغاط العصب المتوسط في منطقة المعصم.",
-        "title": "متلازمة النفق الرسغي"
-      },
-      "de": {
-        "desc": "Kompression des Ellennervs am Ellbogen.",
-        "title": "Sulcus-Ulnaris-Syndrom"
-      },
-      "en": {
-        "desc": "Compression of the median nerve in the wrist area.",
-        "title": "Carpal Tunnel Syndrome"
       }
     },
     {
+      "de": {
+        "desc": "Degenerative Veränderungen an den kleinen Wirbelgelenken, die Schmerzen verursachen.",
+        "title": "Wirbelkörperfrakturen"
+      },
+      "en": {
+        "desc": "Fractures of the vertebral body often due to trauma or osteoporosis.",
+        "title": "Vertebral Fractures"
+      },
+      "ar": {
+        "desc": "كسور في جسم الفقرة غالبًا بسبب الصدمات أو هشاشة العظام.",
+        "title": "كسور الفقرات"
+      },
+      "order": 5,
       "tr": {
         "desc": "Genellikle travma veya osteoporoza bağlı omur cismi kırıkları.",
         "title": "Omurga Kırıkları"
@@ -443,22 +456,22 @@
       "ru": {
         "desc": "Переломы позвонков, часто вследствие травмы или остеопороза.",
         "title": "Переломы тел позвонков"
-      },
-      "order": 5,
-      "ar": {
-        "desc": "كسور في جسم الفقرة غالبًا بسبب الصدمات أو هشاشة العظام.",
-        "title": "كسور الفقرات"
-      },
-      "de": {
-        "desc": "Degenerative Veränderungen an den kleinen Wirbelgelenken, die Schmerzen verursachen.",
-        "title": "Wirbelkörperfrakturen"
-      },
-      "en": {
-        "desc": "Fractures of the vertebral body often due to trauma or osteoporosis.",
-        "title": "Vertebral Fractures"
       }
     },
     {
+      "de": {
+        "desc": "Übermäßige oder abnormale Beweglichkeit zwischen den Wirbeln.",
+        "title": "Spondylolisthesis"
+      },
+      "en": {
+        "desc": "Slippage of one vertebra over the one below it.",
+        "title": "Spondylolisthesis"
+      },
+      "ar": {
+        "desc": "انزلاق فقرة فوق الأخرى.",
+        "title": "انزلاق الفقار"
+      },
+      "order": 3,
       "tr": {
         "desc": "Bir omurun altındaki omur üzerinde kayması.",
         "title": "Spondilolistezis"
@@ -467,22 +480,22 @@
       "ru": {
         "desc": "Смещение одного позвонка относительно другого (соскальзывание).",
         "title": "Спондилолистез"
-      },
-      "order": 3,
-      "ar": {
-        "desc": "انزلاق فقرة فوق الأخرى.",
-        "title": "انزلاق الفقار"
-      },
-      "de": {
-        "desc": "Übermäßige oder abnormale Beweglichkeit zwischen den Wirbeln.",
-        "title": "Spondylolisthesis"
-      },
-      "en": {
-        "desc": "Slippage of one vertebra over the one below it.",
-        "title": "Spondylolisthesis"
       }
     },
     {
+      "de": {
+        "desc": "Verschiedene Zustände, die die Funktion des Rückenmarks beeinträchtigen.",
+        "title": "Rückenmarkserkrankungen"
+      },
+      "en": {
+        "desc": "Benign or malignant growths affecting the spine.",
+        "title": "Tumors/Metastases"
+      },
+      "ar": {
+        "desc": "نمو حميد أو خبيث يؤثر على العمود الفقري.",
+        "title": "الأورام/النقائل"
+      },
+      "order": 8,
       "tr": {
         "desc": "Omurgayı etkileyen iyi veya kötü huylu büyümeler.",
         "title": "Tümörler/Metastazlar"
@@ -491,22 +504,22 @@
       "ru": {
         "desc": "Доброкачественные или злокачественные новообразования в позвоночнике.",
         "title": "Опухоли и метастазы"
-      },
-      "order": 8,
-      "ar": {
-        "desc": "نمو حميد أو خبيث يؤثر على العمود الفقري.",
-        "title": "الأورام/النقائل"
-      },
-      "de": {
-        "desc": "Verschiedene Zustände, die die Funktion des Rückenmarks beeinträchtigen.",
-        "title": "Rückenmarkserkrankungen"
-      },
-      "en": {
-        "desc": "Benign or malignant growths affecting the spine.",
-        "title": "Tumors/Metastases"
       }
     },
     {
+      "de": {
+        "desc": "Schmerzempfinden in einem amputierten Körperteil.",
+        "title": "Phantomschmerzen"
+      },
+      "en": {
+        "desc": "Chronic pain that develops after a surgical procedure.",
+        "title": "Postoperative Pain Syndromes"
+      },
+      "ar": {
+        "desc": "ألم مزمن يتطور بعد إجراء جراحي.",
+        "title": "متلازمات ألم ما بعد الجراحة"
+      },
+      "order": 18,
       "tr": {
         "desc": "Cerrahi bir prosedürden sonra gelişen kronik ağrı.",
         "title": "Ameliyat Sonrası Ağrı Sendromları"
@@ -515,22 +528,22 @@
       "ru": {
         "desc": "Хроническая боль, возникающая после хирургического вмешательства.",
         "title": "Послеоперационные болевые синдромы"
-      },
-      "order": 18,
-      "ar": {
-        "desc": "ألم مزمن يتطور بعد إجراء جراحي.",
-        "title": "متلازمات ألم ما بعد الجراحة"
-      },
-      "de": {
-        "desc": "Schmerzempfinden in einem amputierten Körperteil.",
-        "title": "Phantomschmerzen"
-      },
-      "en": {
-        "desc": "Chronic pain that develops after a surgical procedure.",
-        "title": "Postoperative Pain Syndromes"
       }
     },
     {
+      "de": {
+        "desc": "Verengung des Wirbelkanals, die Druck auf das Rückenmark oder Nerven ausübt.",
+        "title": "Bandscheibenvorfälle"
+      },
+      "en": {
+        "desc": "Degenerative changes where disc material presses on nerves.",
+        "title": "Herniated Discs"
+      },
+      "ar": {
+        "desc": "تغيرات تنكسية يضغط فيها الغضروف على الأعصاب.",
+        "title": "الانزلاق الغضروفي"
+      },
+      "order": 0,
       "tr": {
         "desc": "Disk materyalinin sinirlere baskı yaptığı dejeneratif değişiklikler.",
         "title": "Bel/Boyun Fıtığı (Bandscheibenvorfälle)"
@@ -539,22 +552,22 @@
       "ru": {
         "desc": "Дегенеративные изменения, при которых материал диска давит на нервы.",
         "title": "Грыжи межпозвоночных дисков"
-      },
-      "order": 0,
-      "ar": {
-        "desc": "تغيرات تنكسية يضغط فيها الغضروف على الأعصاب.",
-        "title": "الانزلاق الغضروفي"
-      },
-      "de": {
-        "desc": "Verengung des Wirbelkanals, die Druck auf das Rückenmark oder Nerven ausübt.",
-        "title": "Bandscheibenvorfälle"
-      },
-      "en": {
-        "desc": "Degenerative changes where disc material presses on nerves.",
-        "title": "Herniated Discs"
       }
     },
     {
+      "de": {
+        "desc": "Kompression des Mittelnervs (Nervus medianus) im Handgelenksbereich.",
+        "title": "Karpaltunnelsyndrom"
+      },
+      "en": {
+        "desc": "Various conditions affecting the function of the spinal cord.",
+        "title": "Spinal Cord Diseases"
+      },
+      "ar": {
+        "desc": "حالات مختلفة تؤثر على وظيفة الحبل الشوكي.",
+        "title": "أمراض الحبل الشوكي"
+      },
+      "order": 9,
       "tr": {
         "desc": "Omurilik fonksiyonunu etkileyen çeşitli durumlar.",
         "title": "Omurilik Hastalıkları"
@@ -563,48 +576,48 @@
       "ru": {
         "desc": "Различные состояния, нарушающие функцию спинного мозга.",
         "title": "Заболевания спинного мозга"
-      },
-      "order": 9,
-      "ar": {
-        "desc": "حالات مختلفة تؤثر على وظيفة الحبل الشوكي.",
-        "title": "أمراض الحبل الشوكي"
-      },
-      "de": {
-        "desc": "Kompression des Mittelnervs (Nervus medianus) im Handgelenksbereich.",
-        "title": "Karpaltunnelsyndrom"
-      },
-      "en": {
-        "desc": "Various conditions affecting the function of the spinal cord.",
-        "title": "Spinal Cord Diseases"
       }
     },
     {
-      "desc": "Verengung der Öffnungen, durch die Nervenwurzeln die Wirbelsäule verlassen.",
-      "title": "Spinalkanalstenosen-test",
-      "tr": {
-        "desc": "Omurilik veya sinirlere baskı yapan omurilik kanalının daralması.",
-        "title": "Spinal Kanal Stenozu"
-      },
-      "de": {
-        "desc": "Verengung der Öffnungen, durch die Nervenwurzeln die Wirbelsäule verlassen.",
-        "title": "Spinalkanalstenosen-test"
-      },
-      "ru": {
-        "desc": "Сужение канала, вызывающее давление на спинной мозг или нервы.",
-        "title": "Стеноз спинномозгового канала"
-      },
       "ar": {
         "desc": "تضيق في القناة الشوكية يسبب ضغطًا على الحبل الشوكي أو الأعصاب.",
         "title": "تضيق القناة الشوكية"
+      },
+      "desc": "Verengung der Öffnungen, durch die Nervenwurzeln die Wirbelsäule verlassen.",
+      "de": {
+        "desc": "Verengung der Öffnungen, durch die Nervenwurzeln die Wirbelsäule verlassen.",
+        "title": "Spinalkanalstenosen-test"
       },
       "en": {
         "desc": "Narrowing of the spinal canal causing pressure on the spinal cord or nerves.",
         "title": "Spinal Stenosis"
       },
       "order": 1,
+      "tr": {
+        "desc": "Omurilik veya sinirlere baskı yapan omurilik kanalının daralması.",
+        "title": "Spinal Kanal Stenozu"
+      },
+      "title": "Spinalkanalstenosen-test",
+      "ru": {
+        "desc": "Сужение канала, вызывающее давление на спинной мозг или нервы.",
+        "title": "Стеноз спинномозгового канала"
+      },
       "id": "sp_2"
     },
     {
+      "de": {
+        "desc": "Chronische Schmerzen, die sich nach einem chirurgischen Eingriff entwickeln.",
+        "title": "Postoperative Schmerzsyndrome"
+      },
+      "en": {
+        "desc": "Pain caused by damage to the nervous system itself.",
+        "title": "Neuropathic Pain"
+      },
+      "ar": {
+        "desc": "ألم ناتج عن تلف في الجهاز العصبي نفسه.",
+        "title": "ألم الأعصاب"
+      },
+      "order": 17,
       "tr": {
         "desc": "Sinir sisteminin kendisindeki hasarın neden olduğu ağrı.",
         "title": "Nöropatik Ağrı"
@@ -613,22 +626,22 @@
       "ru": {
         "desc": "Боль, вызванная повреждением самой нервной системы.",
         "title": "Нейропатическая боль"
-      },
-      "order": 17,
-      "ar": {
-        "desc": "ألم ناتج عن تلف في الجهاز العصبي نفسه.",
-        "title": "ألم الأعصاب"
-      },
-      "de": {
-        "desc": "Chronische Schmerzen, die sich nach einem chirurgischen Eingriff entwickeln.",
-        "title": "Postoperative Schmerzsyndrome"
-      },
-      "en": {
-        "desc": "Pain caused by damage to the nervous system itself.",
-        "title": "Neuropathic Pain"
       }
     },
     {
+      "de": {
+        "desc": "Gut- oder bösartige Gewächse, die die Wirbelsäule betreffen.",
+        "title": "Tumoren/Metastasen"
+      },
+      "en": {
+        "desc": "Inflammation or dysfunction of the sacroiliac joint.",
+        "title": "Sacroiliac Joint (ISG)"
+      },
+      "ar": {
+        "desc": "التهاب أو خلل وظيفي في المفصل العجزي الحرقفي.",
+        "title": "المفصل العجزي الحرقفي (ISG)"
+      },
+      "order": 7,
       "tr": {
         "desc": "Sakroiliak eklemin iltihaplanması veya disfonksiyonu.",
         "title": "Sakroiliak Eklem (ISG)"
@@ -637,22 +650,22 @@
       "ru": {
         "desc": "Воспаление или нарушение функции крестцово-подвздошного сочленения.",
         "title": "Дисфункция КПС (ISG)"
-      },
-      "order": 7,
-      "ar": {
-        "desc": "التهاب أو خلل وظيفي في المفصل العجزي الحرقفي.",
-        "title": "المفصل العجزي الحرقفي (ISG)"
-      },
-      "de": {
-        "desc": "Gut- oder bösartige Gewächse, die die Wirbelsäule betreffen.",
-        "title": "Tumoren/Metastasen"
-      },
-      "en": {
-        "desc": "Inflammation or dysfunction of the sacroiliac joint.",
-        "title": "Sacroiliac Joint (ISG)"
       }
     },
     {
+      "de": {
+        "desc": "Psychologische Faktoren, die das körperliche Schmerzerleben verstärken oder aufrechterhalten.",
+        "title": "Psychosomatische Begleitfaktoren"
+      },
+      "en": {
+        "desc": "Sensation of pain in an amputated body part.",
+        "title": "Phantom Pain"
+      },
+      "ar": {
+        "desc": "الإحساس بالألم في جزء مبتور من الجسم.",
+        "title": "الألم الوهمي"
+      },
+      "order": 19,
       "tr": {
         "desc": "Ampute edilmiş bir vücut parçasında hissedilen ağrı.",
         "title": "Fantom Ağrısı"
@@ -661,22 +674,22 @@
       "ru": {
         "desc": "Ощущение боли в ампутированной части тела.",
         "title": "Фантомные боли"
-      },
-      "order": 19,
-      "ar": {
-        "desc": "الإحساس بالألم في جزء مبتور من الجسم.",
-        "title": "الألم الوهمي"
-      },
-      "de": {
-        "desc": "Psychologische Faktoren, die das körperliche Schmerzerleben verstärken oder aufrechterhalten.",
-        "title": "Psychosomatische Begleitfaktoren"
-      },
-      "en": {
-        "desc": "Sensation of pain in an amputated body part.",
-        "title": "Phantom Pain"
       }
     },
     {
+      "de": {
+        "desc": "Entzündung oder Dysfunktion des Iliosakralgelenks.",
+        "title": "Facettengelenke"
+      },
+      "en": {
+        "desc": "Degenerative changes in the small spinal joints causing pain.",
+        "title": "Facet Joint Disorders"
+      },
+      "ar": {
+        "desc": "تغيرات تنكسية في مفاصل العمود الفقري الصغيرة تسبب الألم.",
+        "title": "أمراض المفاصل الوجيهية"
+      },
+      "order": 6,
       "tr": {
         "desc": "Küçük omurga eklemlerinde ağrıya neden olan dejeneratif değişiklikler.",
         "title": "Faset Eklem Hastalıkları"
@@ -685,24 +698,24 @@
       "ru": {
         "desc": "Дегенеративные изменения мелких суставов позвоночника, вызывающие боль.",
         "title": "Заболевания фасеточных суставов"
-      },
-      "order": 6,
-      "ar": {
-        "desc": "تغيرات تنكسية في مفاصل العمود الفقري الصغيرة تسبب الألم.",
-        "title": "أمراض المفاصل الوجيهية"
-      },
-      "de": {
-        "desc": "Entzündung oder Dysfunktion des Iliosakralgelenks.",
-        "title": "Facettengelenke"
-      },
-      "en": {
-        "desc": "Degenerative changes in the small spinal joints causing pain.",
-        "title": "Facet Joint Disorders"
       }
     }
   ],
   "treatments": [
     {
+      "de": {
+        "desc": "Bei Knochentumormetastasen und ambulante Neuroonkologie in Rücksprache mit dem betreuenden Arzt.",
+        "title": "Perkutane minimalinvasive Tumor-Radiofrequenz-Thermoablation"
+      },
+      "en": {
+        "desc": "For bone tumor metastases and outpatient neuro-oncology, please consult your attending physician.",
+        "title": "Percutaneous minimally invasive tumor radiofrequency thermal ablation"
+      },
+      "ar": {
+        "desc": "بالنسبة لانتشار أورام العظام والأورام العصبية في العيادات الخارجية، يرجى استشارة الطبيب المعالج.",
+        "title": "الاستئصال الحراري للورم بالترددات الراديوية عن طريق الجلد"
+      },
+      "order": 2,
       "tr": {
         "desc": "Kemik tümörü metastazları ve ayakta tedavi nöroonkolojisi için lütfen ilgili doktorunuza danışın.",
         "title": "Perkütan minimal invaziv tümör radyofrekans termal ablasyonu"
@@ -711,22 +724,22 @@
       "ru": {
         "desc": "При метастазах опухоли в кости и амбулаторной нейроонкологии проконсультируйтесь со своим лечащим врачом.",
         "title": "Чрескожная минимально инвазивная радиочастотная термоабляция опухолей"
-      },
-      "order": 2,
-      "ar": {
-        "desc": "بالنسبة لانتشار أورام العظام والأورام العصبية في العيادات الخارجية، يرجى استشارة الطبيب المعالج.",
-        "title": "الاستئصال الحراري للورم بالترددات الراديوية عن طريق الجلد"
-      },
-      "de": {
-        "desc": "Bei Knochentumormetastasen und ambulante Neuroonkologie in Rücksprache mit dem betreuenden Arzt.",
-        "title": "Perkutane minimalinvasive Tumor-Radiofrequenz-Thermoablation"
-      },
-      "en": {
-        "desc": "For bone tumor metastases and outpatient neuro-oncology, please consult your attending physician.",
-        "title": "Percutaneous minimally invasive tumor radiofrequency thermal ablation"
       }
     },
     {
+      "de": {
+        "desc": "Rückenmarksstimulation und Stimulation der sakralen Nerven zur Schmerztherapie.",
+        "title": "Neuromodulation"
+      },
+      "en": {
+        "desc": "Spinal cord stimulation and sacral nerve stimulation for pain management.",
+        "title": "Neuromodulation"
+      },
+      "ar": {
+        "desc": "تحفيز الحبل الشوكي وتحفيز العصب العجزي لإدارة الألم.",
+        "title": "التعديل العصبي"
+      },
+      "order": 1,
       "tr": {
         "desc": "Ağrı yönetimi için omurilik stimülasyonu ve sakral sinir stimülasyonu.",
         "title": "Nöromodülasyon"
@@ -735,22 +748,22 @@
       "ru": {
         "desc": "Стимуляция спинного мозга и стимуляция крестцового нерва для снятия боли.",
         "title": "Нейромодуляция"
-      },
-      "order": 1,
-      "ar": {
-        "desc": "تحفيز الحبل الشوكي وتحفيز العصب العجزي لإدارة الألم.",
-        "title": "التعديل العصبي"
-      },
-      "de": {
-        "desc": "Rückenmarksstimulation und Stimulation der sakralen Nerven zur Schmerztherapie.",
-        "title": "Neuromodulation"
-      },
-      "en": {
-        "desc": "Spinal cord stimulation and sacral nerve stimulation for pain management.",
-        "title": "Neuromodulation"
       }
     },
     {
+      "de": {
+        "desc": "Schonende, minimalinvasive Eingriffe an der Wirbelsäule.",
+        "title": "Endoskopische und mikrochirurgische Bandscheibenoperation"
+      },
+      "en": {
+        "desc": "Gentle, minimally invasive procedures on the spine.",
+        "title": "Endoscopic and microsurgical intervertebral disc surgery"
+      },
+      "ar": {
+        "desc": "إجراءات لطيفة وبسيطة على العمود الفقري.",
+        "title": "جراحة القرص الفقري بالمنظار والجراحة المجهرية"
+      },
+      "order": 3,
       "tr": {
         "desc": "Omurga üzerinde nazik, minimal invaziv prosedürler.",
         "title": "Endoskopik ve mikrocerrahi intervertebral disk cerrahisi"
@@ -759,22 +772,22 @@
       "ru": {
         "desc": "Щадящие, малоинвазивные процедуры на позвоночнике.",
         "title": "Эндоскопическая и микрохирургическая хирургия межпозвоночных дисков"
-      },
-      "order": 3,
-      "ar": {
-        "desc": "إجراءات لطيفة وبسيطة على العمود الفقري.",
-        "title": "جراحة القرص الفقري بالمنظار والجراحة المجهرية"
-      },
-      "de": {
-        "desc": "Schonende, minimalinvasive Eingriffe an der Wirbelsäule.",
-        "title": "Endoskopische und mikrochirurgische Bandscheibenoperation"
-      },
-      "en": {
-        "desc": "Gentle, minimally invasive procedures on the spine.",
-        "title": "Endoscopic and microsurgical intervertebral disc surgery"
       }
     },
     {
+      "de": {
+        "desc": "Perkutane Stabilisierungsoperationen und dynamische Stabilisierungsverfahren.",
+        "title": "Minimalinvasive Stabilisierung"
+      },
+      "en": {
+        "desc": "Percutaneous stabilization operations and dynamic stabilization procedures.",
+        "title": "Minimally invasive stabilization"
+      },
+      "ar": {
+        "desc": "عمليات التثبيت عن طريق الجلد وإجراءات التثبيت الديناميكي.",
+        "title": "تحقيق الاستقرار طفيفة التوغل"
+      },
+      "order": 6,
       "tr": {
         "desc": "Perkütan stabilizasyon operasyonları ve dinamik stabilizasyon prosedürleri.",
         "title": "Minimal invazif stabilizasyon"
@@ -783,22 +796,22 @@
       "ru": {
         "desc": "Чрескожные операции по стабилизации и процедуры динамической стабилизации.",
         "title": "Минимально инвазивная стабилизация"
-      },
-      "order": 6,
-      "ar": {
-        "desc": "عمليات التثبيت عن طريق الجلد وإجراءات التثبيت الديناميكي.",
-        "title": "تحقيق الاستقرار طفيفة التوغل"
-      },
-      "de": {
-        "desc": "Perkutane Stabilisierungsoperationen und dynamische Stabilisierungsverfahren.",
-        "title": "Minimalinvasive Stabilisierung"
-      },
-      "en": {
-        "desc": "Percutaneous stabilization operations and dynamic stabilization procedures.",
-        "title": "Minimally invasive stabilization"
       }
     },
     {
+      "de": {
+        "desc": "Gezielte Schmerzbehandlung der Wirbelgelenke.",
+        "title": "Wirbelgelenksblockaden und Denervation"
+      },
+      "en": {
+        "desc": "Targeted pain treatment of the vertebral joints.",
+        "title": "Spinal joint blocks and denervation"
+      },
+      "ar": {
+        "desc": "علاج الألم المستهدف للمفاصل الفقرية.",
+        "title": "كتل المفاصل في العمود الفقري وإزالة التعصيب"
+      },
+      "order": 8,
       "tr": {
         "desc": "Vertebral eklemlerin hedefe yönelik ağrı tedavisi.",
         "title": "Spinal eklem blokları ve denervasyon"
@@ -807,22 +820,22 @@
       "ru": {
         "desc": "Целенаправленное лечение боли позвоночных суставов.",
         "title": "Блокады спинальных суставов и денервация"
-      },
-      "order": 8,
-      "ar": {
-        "desc": "علاج الألم المستهدف للمفاصل الفقرية.",
-        "title": "كتل المفاصل في العمود الفقري وإزالة التعصيب"
-      },
-      "de": {
-        "desc": "Gezielte Schmerzbehandlung der Wirbelgelenke.",
-        "title": "Wirbelgelenksblockaden und Denervation"
-      },
-      "en": {
-        "desc": "Targeted pain treatment of the vertebral joints.",
-        "title": "Spinal joint blocks and denervation"
       }
     },
     {
+      "de": {
+        "desc": "Mit minimalinvasiven Operationen an Kreuzbein, Darmbein und Gelenken.",
+        "title": "Arthroplastie und Arthrodes"
+      },
+      "en": {
+        "desc": "With minimally invasive operations on the sacrum, ilium and joints.",
+        "title": "Arthroplasty and Arthrodes"
+      },
+      "ar": {
+        "desc": "مع عمليات جراحية طفيفة التوغل على العجز والحرقفة والمفاصل.",
+        "title": "تقويم المفاصل والمفاصل"
+      },
+      "order": 11,
       "tr": {
         "desc": "Sakrum, ilium ve eklemlerde minimal invazif operasyonlar ile.",
         "title": "Artroplasti ve Artrodlar"
@@ -831,22 +844,22 @@
       "ru": {
         "desc": "При малоинвазивных операциях на крестце, подвздошной кости и суставах.",
         "title": "Артропластика и артроды"
-      },
-      "order": 11,
-      "ar": {
-        "desc": "مع عمليات جراحية طفيفة التوغل على العجز والحرقفة والمفاصل.",
-        "title": "تقويم المفاصل والمفاصل"
-      },
-      "de": {
-        "desc": "Mit minimalinvasiven Operationen an Kreuzbein, Darmbein und Gelenken.",
-        "title": "Arthroplastie und Arthrodes"
-      },
-      "en": {
-        "desc": "With minimally invasive operations on the sacrum, ilium and joints.",
-        "title": "Arthroplasty and Arthrodes"
       }
     },
     {
+      "de": {
+        "desc": "Behandlung an der HWS (Halswirbelsäule) und LWS (Lendenwirbelsäule).",
+        "title": "Bandscheibenprothetik"
+      },
+      "en": {
+        "desc": "Treatment of the cervical spine (cervical spine) and lumbar spine (lumbar spine).",
+        "title": "Intervertebral disc prosthetics"
+      },
+      "ar": {
+        "desc": "علاج العمود الفقري العنقي (العمود الفقري العنقي) والعمود الفقري القطني (العمود الفقري القطني).",
+        "title": "الأطراف الاصطناعية للقرص الفقري"
+      },
+      "order": 12,
       "tr": {
         "desc": "Servikal omurganın (servikal omurga) ve lomber omurganın (lomber omurga) tedavisi.",
         "title": "İntervertebral disk protezleri"
@@ -855,22 +868,22 @@
       "ru": {
         "desc": "Лечение шейного отдела позвоночника (шейного отдела позвоночника) и поясничного отдела позвоночника (поясничного отдела позвоночника).",
         "title": "Протезирование межпозвоночных дисков"
-      },
-      "order": 12,
-      "ar": {
-        "desc": "علاج العمود الفقري العنقي (العمود الفقري العنقي) والعمود الفقري القطني (العمود الفقري القطني).",
-        "title": "الأطراف الاصطناعية للقرص الفقري"
-      },
-      "de": {
-        "desc": "Behandlung an der HWS (Halswirbelsäule) und LWS (Lendenwirbelsäule).",
-        "title": "Bandscheibenprothetik"
-      },
-      "en": {
-        "desc": "Treatment of the cervical spine (cervical spine) and lumbar spine (lumbar spine).",
-        "title": "Intervertebral disc prosthetics"
       }
     },
     {
+      "de": {
+        "desc": "Bei Nervenerkrankungen und unklaren Muskelerkrankungen.",
+        "title": "Muskelbiopsie"
+      },
+      "en": {
+        "desc": "For nerve diseases and unclear muscle diseases.",
+        "title": "Muscle biopsy"
+      },
+      "ar": {
+        "desc": "لأمراض الأعصاب وأمراض العضلات غير الواضحة.",
+        "title": "خزعة العضلات"
+      },
+      "order": 5,
       "tr": {
         "desc": "Sinir hastalıkları ve belirsiz kas hastalıkları için.",
         "title": "Kas biyopsisi"
@@ -879,22 +892,22 @@
       "ru": {
         "desc": "При нервных заболеваниях и неясных мышечных заболеваниях.",
         "title": "Биопсия мышц"
-      },
-      "order": 5,
-      "ar": {
-        "desc": "لأمراض الأعصاب وأمراض العضلات غير الواضحة.",
-        "title": "خزعة العضلات"
-      },
-      "de": {
-        "desc": "Bei Nervenerkrankungen und unklaren Muskelerkrankungen.",
-        "title": "Muskelbiopsie"
-      },
-      "en": {
-        "desc": "For nerve diseases and unclear muscle diseases.",
-        "title": "Muscle biopsy"
       }
     },
     {
+      "de": {
+        "desc": "Inklusive Gefäßanomalie-Symptomatik und Tethered-Cord-Symptomatik.",
+        "title": "Entfernung von intraspinalen Tumoren"
+      },
+      "en": {
+        "desc": "Including vascular anomaly symptoms and tethered cord symptoms.",
+        "title": "Removal of intraspinal tumors"
+      },
+      "ar": {
+        "desc": "بما في ذلك أعراض الشذوذ الوعائي وأعراض الحبل المربوط.",
+        "title": "إزالة الأورام داخل النخاع"
+      },
+      "order": 10,
       "tr": {
         "desc": "Vasküler anomali semptomları ve bağlı kordon semptomları dahil.",
         "title": "İntraspinal tümörlerin çıkarılması"
@@ -903,22 +916,22 @@
       "ru": {
         "desc": "Включая симптомы сосудистых аномалий и симптомы привязанного пуповины.",
         "title": "Удаление внутриспинальных опухолей"
-      },
-      "order": 10,
-      "ar": {
-        "desc": "بما في ذلك أعراض الشذوذ الوعائي وأعراض الحبل المربوط.",
-        "title": "إزالة الأورام داخل النخاع"
-      },
-      "de": {
-        "desc": "Inklusive Gefäßanomalie-Symptomatik und Tethered-Cord-Symptomatik.",
-        "title": "Entfernung von intraspinalen Tumoren"
-      },
-      "en": {
-        "desc": "Including vascular anomaly symptoms and tethered cord symptoms.",
-        "title": "Removal of intraspinal tumors"
       }
     },
     {
+      "de": {
+        "desc": "Professionelle medizinische Bewertungen und Gutachten.",
+        "title": "Neurochirurgische Begutachtung"
+      },
+      "en": {
+        "desc": "Professional medical reviews and opinions.",
+        "title": "Neurosurgical assessment"
+      },
+      "ar": {
+        "desc": "التقييمات والآراء الطبية المهنية.",
+        "title": "تقييم جراحة الأعصاب"
+      },
+      "order": 4,
       "tr": {
         "desc": "Profesyonel tıbbi incelemeler ve görüşler.",
         "title": "Nöroşirürji değerlendirmesi"
@@ -927,22 +940,22 @@
       "ru": {
         "desc": "Профессиональные медицинские обзоры и мнения.",
         "title": "Нейрохириргическое обследование"
-      },
-      "order": 4,
-      "ar": {
-        "desc": "التقييمات والآراء الطبية المهنية.",
-        "title": "تقييم جراحة الأعصاب"
-      },
-      "de": {
-        "desc": "Professionelle medizinische Bewertungen und Gutachten.",
-        "title": "Neurochirurgische Begutachtung"
-      },
-      "en": {
-        "desc": "Professional medical reviews and opinions.",
-        "title": "Neurosurgical assessment"
       }
     },
     {
+      "de": {
+        "desc": "Perkutane minimalinvasive Radiofrequenz-Kyphoplastie bei osteoporotischen oder tumorösen Wirbelsäulenfrakturen.",
+        "title": "Stabilisierung von Wirbelkörperbrüchen"
+      },
+      "en": {
+        "desc": "Percutaneous minimally invasive radiofrequency kyphoplasty for osteoporotic or tumorous spinal fractures.",
+        "title": "Stabilization of vertebral body fractures"
+      },
+      "ar": {
+        "desc": "رأب الحدب بالترددات الراديوية عن طريق الجلد لعلاج كسور العمود الفقري الناتجة عن هشاشة العظام أو الورم.",
+        "title": "تثبيت كسور الجسم الفقري"
+      },
+      "order": 0,
       "tr": {
         "desc": "Osteoporotik veya tümörlü omurga kırıkları için perkütan minimal invaziv radyofrekans kifoplasti.",
         "title": "Omurga gövdesi kırıklarının stabilizasyonu"
@@ -951,22 +964,22 @@
       "ru": {
         "desc": "Чрескожная малоинвазивная радиочастотная кифопластика при остеопорозных или опухолевидных переломах позвоночника.",
         "title": "Стабилизация переломов тел позвонков"
-      },
-      "order": 0,
-      "ar": {
-        "desc": "رأب الحدب بالترددات الراديوية عن طريق الجلد لعلاج كسور العمود الفقري الناتجة عن هشاشة العظام أو الورم.",
-        "title": "تثبيت كسور الجسم الفقري"
-      },
-      "de": {
-        "desc": "Perkutane minimalinvasive Radiofrequenz-Kyphoplastie bei osteoporotischen oder tumorösen Wirbelsäulenfrakturen.",
-        "title": "Stabilisierung von Wirbelkörperbrüchen"
-      },
-      "en": {
-        "desc": "Percutaneous minimally invasive radiofrequency kyphoplasty for osteoporotic or tumorous spinal fractures.",
-        "title": "Stabilization of vertebral body fractures"
       }
     },
     {
+      "de": {
+        "desc": "Zum Beispiel Karpaltunnelsyndrom und Sulcus-Ulnaris-Syndrom, Tumore peripherer Nerven etc.",
+        "title": "Ambulante chirurgische Versorgung peripherer Nervenkompressionssyndrome"
+      },
+      "en": {
+        "desc": "For example, carpal tunnel syndrome and ulnar sulcus syndrome, tumors of peripheral nerves, etc.",
+        "title": "Outpatient surgical care of peripheral nerve compression syndromes"
+      },
+      "ar": {
+        "desc": "على سبيل المثال، متلازمة النفق الرسغي ومتلازمة التلم الزندي، وأورام الأعصاب الطرفية، وما إلى ذلك.",
+        "title": "الرعاية الجراحية للمرضى الخارجيين لمتلازمات ضغط العصب المحيطي"
+      },
+      "order": 7,
       "tr": {
         "desc": "Örneğin karpal tünel sendromu ve ulnar sulkus sendromu, periferik sinir tümörleri vb.",
         "title": "Periferik sinir sıkışma sendromlarının ayaktan cerrahi bakımı"
@@ -975,22 +988,22 @@
       "ru": {
         "desc": "Например, туннельный синдром запястья и синдром локтевой борозды, опухоли периферических нервов и т. д.",
         "title": "Амбулаторная Хирургическая помощь при синдромах компрессии периферических нервов"
-      },
-      "order": 7,
-      "ar": {
-        "desc": "على سبيل المثال، متلازمة النفق الرسغي ومتلازمة التلم الزندي، وأورام الأعصاب الطرفية، وما إلى ذلك.",
-        "title": "الرعاية الجراحية للمرضى الخارجيين لمتلازمات ضغط العصب المحيطي"
-      },
-      "de": {
-        "desc": "Zum Beispiel Karpaltunnelsyndrom und Sulcus-Ulnaris-Syndrom, Tumore peripherer Nerven etc.",
-        "title": "Ambulante chirurgische Versorgung peripherer Nervenkompressionssyndrome"
-      },
-      "en": {
-        "desc": "For example, carpal tunnel syndrome and ulnar sulcus syndrome, tumors of peripheral nerves, etc.",
-        "title": "Outpatient surgical care of peripheral nerve compression syndromes"
       }
     },
     {
+      "de": {
+        "desc": "Zur Entlastung von Nervenstrukturen.",
+        "title": "Mikrochirurgische Dekompressionsoperation"
+      },
+      "en": {
+        "desc": "To relieve pressure on nerve structures.",
+        "title": "Microsurgical decompression operation"
+      },
+      "ar": {
+        "desc": "لتخفيف الضغط على الهياكل العصبية.",
+        "title": "عملية تخفيف الضغط المجهرية"
+      },
+      "order": 9,
       "tr": {
         "desc": "Sinir yapıları üzerindeki baskıyı hafifletmek.",
         "title": "Mikrocerrahi dekompresyon operasyonu"
@@ -999,706 +1012,727 @@
       "ru": {
         "desc": "Для снятия давления на нервные структуры.",
         "title": "Микрохирургическая декомпрессионная операция"
-      },
-      "order": 9,
-      "ar": {
-        "desc": "لتخفيف الضغط على الهياكل العصبية.",
-        "title": "عملية تخفيف الضغط المجهرية"
-      },
-      "de": {
-        "desc": "Zur Entlastung von Nervenstrukturen.",
-        "title": "Mikrochirurgische Dekompressionsoperation"
-      },
-      "en": {
-        "desc": "To relieve pressure on nerve structures.",
-        "title": "Microsurgical decompression operation"
       }
     }
   ],
   "team": [
     {
       "ar": {
-        "name": "Nese Kirak",
-        "role": "Medizinische Fachangestellte"
-      },
-      "tr": {
-        "name": "Nese Kirak",
-        "role": "Medizinische Fachangestellte"
-      },
-      "de": {
-        "name": "Nese Kirak",
-        "role": "Medizinische Fachangestellte"
-      },
-      "id": "EChx8zDe55Y2NJ8zKKu6",
-      "ru": {
-        "name": "Nese Kirak",
-        "role": "Medizinische Fachangestellte"
+        "role": "Medizinische Fachangestellte",
+        "name": "Nese Kirak"
       },
       "img": "img/surgeon4.webp",
-      "en": {
-        "name": "Nese Kirak",
-        "role": "Medizinische Fachangestellte"
+      "id": "EChx8zDe55Y2NJ8zKKu6",
+      "de": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Nese Kirak"
       },
-      "order": 0
+      "en": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Nese Kirak"
+      },
+      "order": 0,
+      "tr": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Nese Kirak"
+      },
+      "ru": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Nese Kirak"
+      }
     },
     {
       "ar": {
-        "name": "Elena Meyer",
-        "role": "Krankenschwester"
-      },
-      "tr": {
-        "name": "Elena Meyer",
-        "role": "Krankenschwester"
-      },
-      "de": {
-        "name": "Elena Meyer",
-        "role": "Krankenschwester"
-      },
-      "id": "IAuhH5XV1EJyneJCUmnJ",
-      "ru": {
-        "name": "Elena Meyer",
-        "role": "Krankenschwester"
+        "role": "Krankenschwester",
+        "name": "Elena Meyer"
       },
       "img": "img/team_rural_nurse.webp",
-      "en": {
-        "name": "Elena Meyer",
-        "role": "Krankenschwester"
+      "id": "IAuhH5XV1EJyneJCUmnJ",
+      "de": {
+        "role": "Krankenschwester",
+        "name": "Elena Meyer"
       },
-      "order": 9
+      "en": {
+        "role": "Krankenschwester",
+        "name": "Elena Meyer"
+      },
+      "order": 9,
+      "tr": {
+        "role": "Krankenschwester",
+        "name": "Elena Meyer"
+      },
+      "ru": {
+        "role": "Krankenschwester",
+        "name": "Elena Meyer"
+      }
     },
     {
       "ar": {
-        "name": "Dr. Amira Khan",
-        "role": "Fachärztin für Neurologie"
-      },
-      "tr": {
-        "name": "Dr. Amira Khan",
-        "role": "Fachärztin für Neurologie"
-      },
-      "de": {
-        "name": "Dr. Amira Khan",
-        "role": "Fachärztin für Neurologie"
-      },
-      "id": "LO8vnyPb62Al4JvTesJm",
-      "ru": {
-        "name": "Dr. Amira Khan",
-        "role": "Fachärztin für Neurologie"
+        "role": "Fachärztin für Neurologie",
+        "name": "Dr. Amira Khan"
       },
       "img": "img/team_muslim_nurse.webp",
-      "en": {
-        "name": "Dr. Amira Khan",
-        "role": "Fachärztin für Neurologie"
+      "id": "LO8vnyPb62Al4JvTesJm",
+      "de": {
+        "role": "Fachärztin für Neurologie",
+        "name": "Dr. Amira Khan"
       },
-      "order": 3
+      "en": {
+        "role": "Fachärztin für Neurologie",
+        "name": "Dr. Amira Khan"
+      },
+      "order": 3,
+      "tr": {
+        "role": "Fachärztin für Neurologie",
+        "name": "Dr. Amira Khan"
+      },
+      "ru": {
+        "role": "Fachärztin für Neurologie",
+        "name": "Dr. Amira Khan"
+      }
     },
     {
       "ar": {
-        "name": "David Liu",
-        "role": "Terminkoordinator"
-      },
-      "tr": {
-        "name": "David Liu",
-        "role": "Terminkoordinator"
-      },
-      "de": {
-        "name": "David Liu",
-        "role": "Terminkoordinator"
-      },
-      "id": "MS7jkcreCcCLvsC0ESfs",
-      "ru": {
-        "name": "David Liu",
-        "role": "Terminkoordinator"
+        "role": "Terminkoordinator",
+        "name": "David Liu"
       },
       "img": "img/team_asian_coordinator.webp",
-      "en": {
-        "name": "David Liu",
-        "role": "Terminkoordinator"
+      "id": "MS7jkcreCcCLvsC0ESfs",
+      "de": {
+        "role": "Terminkoordinator",
+        "name": "David Liu"
       },
-      "order": 1
+      "en": {
+        "role": "Terminkoordinator",
+        "name": "David Liu"
+      },
+      "order": 1,
+      "tr": {
+        "role": "Terminkoordinator",
+        "name": "David Liu"
+      },
+      "ru": {
+        "role": "Terminkoordinator",
+        "name": "David Liu"
+      }
     },
     {
       "ar": {
-        "name": "Elif Sayin",
-        "role": "Termin-Koordinatorin"
-      },
-      "tr": {
-        "name": "Elif Sayin",
-        "role": "Termin-Koordinatorin"
-      },
-      "de": {
-        "name": "Elif Sayin",
-        "role": "Termin-Koordinatorin"
-      },
-      "id": "ZUnsUzqQDgTllu05eL4B",
-      "ru": {
-        "name": "Elif Sayin",
-        "role": "Termin-Koordinatorin"
+        "role": "Termin-Koordinatorin",
+        "name": "Elif Sayin"
       },
       "img": "img/surgeon3.webp",
-      "en": {
-        "name": "Elif Sayin",
-        "role": "Termin-Koordinatorin"
+      "id": "ZUnsUzqQDgTllu05eL4B",
+      "de": {
+        "role": "Termin-Koordinatorin",
+        "name": "Elif Sayin"
       },
-      "order": 4
+      "en": {
+        "role": "Termin-Koordinatorin",
+        "name": "Elif Sayin"
+      },
+      "order": 4,
+      "tr": {
+        "role": "Termin-Koordinatorin",
+        "name": "Elif Sayin"
+      },
+      "ru": {
+        "role": "Termin-Koordinatorin",
+        "name": "Elif Sayin"
+      }
     },
     {
       "ar": {
-        "name": "Abena Okafor",
-        "role": "Medizinische Fachangestellte"
-      },
-      "tr": {
-        "name": "Abena Okafor",
-        "role": "Medizinische Fachangestellte"
-      },
-      "de": {
-        "name": "Abena Okafor",
-        "role": "Medizinische Fachangestellte"
-      },
-      "id": "gIdegxx8WMU6TuB1qD9g",
-      "ru": {
-        "name": "Abena Okafor",
-        "role": "Medizinische Fachangestellte"
+        "role": "Medizinische Fachangestellte",
+        "name": "Abena Okafor"
       },
       "img": "img/team_african_assistant.webp",
-      "en": {
-        "name": "Abena Okafor",
-        "role": "Medizinische Fachangestellte"
+      "id": "gIdegxx8WMU6TuB1qD9g",
+      "de": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Abena Okafor"
       },
-      "order": 8
+      "en": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Abena Okafor"
+      },
+      "order": 8,
+      "tr": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Abena Okafor"
+      },
+      "ru": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Abena Okafor"
+      }
     },
     {
       "ar": {
-        "name": "Ravi Sharma",
-        "role": "Medizinischer Techniker"
-      },
-      "tr": {
-        "name": "Ravi Sharma",
-        "role": "Medizinischer Techniker"
-      },
-      "de": {
-        "name": "Ravi Sharma",
-        "role": "Medizinischer Techniker"
-      },
-      "id": "kuqyj6wokYEBBJDBrLqv",
-      "ru": {
-        "name": "Ravi Sharma",
-        "role": "Medizinischer Techniker"
+        "role": "Medizinischer Techniker",
+        "name": "Ravi Sharma"
       },
       "img": "img/team_indian_technician.webp",
-      "en": {
-        "name": "Ravi Sharma",
-        "role": "Medizinischer Techniker"
+      "id": "kuqyj6wokYEBBJDBrLqv",
+      "de": {
+        "role": "Medizinischer Techniker",
+        "name": "Ravi Sharma"
       },
-      "order": 7
+      "en": {
+        "role": "Medizinischer Techniker",
+        "name": "Ravi Sharma"
+      },
+      "order": 7,
+      "tr": {
+        "role": "Medizinischer Techniker",
+        "name": "Ravi Sharma"
+      },
+      "ru": {
+        "role": "Medizinischer Techniker",
+        "name": "Ravi Sharma"
+      }
     },
     {
       "ar": {
-        "name": "Prof. Dr. Andreas Fischer",
-        "role": "Leitender Facharzt"
-      },
-      "tr": {
-        "name": "Prof. Dr. Andreas Fischer",
-        "role": "Leitender Facharzt"
-      },
-      "de": {
-        "name": "Prof. Dr. Andreas Fischer",
-        "role": "Leitender Facharzt"
-      },
-      "id": "n32azE3GIpddwAYW7yqo",
-      "ru": {
-        "name": "Prof. Dr. Andreas Fischer",
-        "role": "Leitender Facharzt"
+        "role": "Leitender Facharzt",
+        "name": "Prof. Dr. Andreas Fischer"
       },
       "img": "img/team_experienced_specialist.webp",
-      "en": {
-        "name": "Prof. Dr. Andreas Fischer",
-        "role": "Leitender Facharzt"
+      "id": "n32azE3GIpddwAYW7yqo",
+      "de": {
+        "role": "Leitender Facharzt",
+        "name": "Prof. Dr. Andreas Fischer"
       },
-      "order": 5
+      "en": {
+        "role": "Leitender Facharzt",
+        "name": "Prof. Dr. Andreas Fischer"
+      },
+      "order": 5,
+      "tr": {
+        "role": "Leitender Facharzt",
+        "name": "Prof. Dr. Andreas Fischer"
+      },
+      "ru": {
+        "role": "Leitender Facharzt",
+        "name": "Prof. Dr. Andreas Fischer"
+      }
     },
     {
       "ar": {
-        "name": "Iman Al Hussein",
-        "role": "Medizinische Fachangestellte"
-      },
-      "tr": {
-        "name": "Iman Al Hussein",
-        "role": "Medizinische Fachangestellte"
-      },
-      "de": {
-        "name": "Iman Al Hussein",
-        "role": "Medizinische Fachangestellte"
-      },
-      "id": "nnJ7c6BVaLJf2X4neZkA",
-      "ru": {
-        "name": "Iman Al Hussein",
-        "role": "Medizinische Fachangestellte"
+        "role": "Medizinische Fachangestellte",
+        "name": "Iman Al Hussein"
       },
       "img": "img/surgeon5.webp",
-      "en": {
-        "name": "Iman Al Hussein",
-        "role": "Medizinische Fachangestellte"
+      "id": "nnJ7c6BVaLJf2X4neZkA",
+      "de": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Iman Al Hussein"
       },
-      "order": 6
+      "en": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Iman Al Hussein"
+      },
+      "order": 6,
+      "tr": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Iman Al Hussein"
+      },
+      "ru": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Iman Al Hussein"
+      }
     },
     {
       "ar": {
-        "name": "Tatjana Kuznezov",
-        "role": "Auszubildende zur MFA"
-      },
-      "tr": {
-        "name": "Tatjana Kuznezov",
-        "role": "Auszubildende zur MFA"
-      },
-      "de": {
-        "name": "Tatjana Kuznezov",
-        "role": "Auszubildende zur MFA"
-      },
-      "id": "r9a6uPSeNYiIm363zUZZ",
-      "ru": {
-        "name": "Tatjana Kuznezov",
-        "role": "Auszubildende zur MFA"
+        "role": "Auszubildende zur MFA",
+        "name": "Tatjana Kuznezov"
       },
       "img": "img/surgeon2.webp",
-      "en": {
-        "name": "Tatjana Kuznezov",
-        "role": "Auszubildende zur MFA"
+      "id": "r9a6uPSeNYiIm363zUZZ",
+      "de": {
+        "role": "Auszubildende zur MFA",
+        "name": "Tatjana Kuznezov"
       },
-      "order": 2
+      "en": {
+        "role": "Auszubildende zur MFA",
+        "name": "Tatjana Kuznezov"
+      },
+      "order": 2,
+      "tr": {
+        "role": "Auszubildende zur MFA",
+        "name": "Tatjana Kuznezov"
+      },
+      "ru": {
+        "role": "Auszubildende zur MFA",
+        "name": "Tatjana Kuznezov"
+      }
+    },
+    {
+      "image": "img/surgeon4.webp",
+      "ar": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Nese Kirak",
+        "bio": ""
+      },
+      "img": "img/surgeon4.webp",
+      "bio": "",
+      "role": "Medizinische Fachangestellte",
+      "de": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Nese Kirak-test",
+        "bio": ""
+      },
+      "en": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Nese Kirak",
+        "bio": ""
+      },
+      "order": 0,
+      "tr": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Nese Kirak",
+        "bio": ""
+      },
+      "name": "Nese Kirak-test",
+      "ru": {
+        "role": "Medizinische Fachangestellte",
+        "name": "Nese Kirak",
+        "bio": ""
+      },
+      "id": "team_1"
     }
   ],
   "press": [
     {
-      "source": "Gesundheit Heute",
       "desc": "Wie moderne Technologien den Ansatz zur Behandlung von Bandscheibenvorfällen verändern.",
-      "title": "Kleiner Schnitt mit großer Wirkung",
-      "pdf": "pdfs/A6880993-1.1.pdf.pdf",
-      "id": "IndJjGmZ7sDKr09qU3hA",
-      "order": 1,
       "img": "img/A6880993-1.1.pdf_klein-150x150.webp",
       "category": "article",
+      "id": "IndJjGmZ7sDKr09qU3hA",
+      "pdf": "pdfs/A6880993-1.1.pdf.pdf",
+      "source": "Gesundheit Heute",
+      "order": 1,
+      "title": "Kleiner Schnitt mit großer Wirkung",
       "date": "28 März 2024"
     },
     {
-      "source": "ÄrzteZeitung",
       "desc": "Alternative zu traditionellen Methoden der chirurgischen Behandlung.",
-      "title": "Künstliche Bandscheibe als bewegliche Wirbelsäule",
-      "pdf": "pdfs/Starke-Partner-Marz-2018.compressed.pdf",
-      "id": "NQHiHV3uRuNzt4qDkgQ9",
-      "order": 3,
       "img": "img/Starke-Partner-März-2018.compressed_klein-150x150.webp",
       "category": "science",
+      "id": "NQHiHV3uRuNzt4qDkgQ9",
+      "pdf": "pdfs/Starke-Partner-Marz-2018.compressed.pdf",
+      "source": "ÄrzteZeitung",
+      "order": 3,
+      "title": "Künstliche Bandscheibe als bewegliche Wirbelsäule",
       "date": "27 Februar 2024"
     },
     {
-      "source": "Medical Tribune",
       "desc": "Über die Vorteile der minimalinvasiven Wirbelsäulenchirurgie und schnelle Genesung.",
-      "title": "Minimaler Eingriff, maximale Wirkung",
-      "pdf": "pdfs/Starke_Partner_September_2017.pdf",
-      "id": "PcjgFMORI3LwySM8g6mN",
-      "order": 0,
       "img": "img/Starke_Partner_September_2017_klein-150x150.webp",
       "category": "interviews",
+      "id": "PcjgFMORI3LwySM8g6mN",
+      "pdf": "pdfs/Starke_Partner_September_2017.pdf",
+      "source": "Medical Tribune",
+      "order": 0,
+      "title": "Minimaler Eingriff, maximale Wirkung",
       "date": "15 April 2024"
     },
     {
-      "source": "ORF Gesundheit",
       "desc": "Was erwartet die Patienten im führenden Zentrum für Neurochirurgie.",
-      "title": "Patienten als Ganzes sehen",
-      "pdf": "pdfs/Patienten-als-Ganzes-sehen.pdf",
-      "id": "XWBu29RofSqxDAHCjbLe",
-      "order": 8,
       "img": "img/Patienten-als-Ganzes-sehen-150x150.webp",
       "category": "interviews",
+      "id": "XWBu29RofSqxDAHCjbLe",
+      "pdf": "pdfs/Patienten-als-Ganzes-sehen.pdf",
+      "source": "ORF Gesundheit",
+      "order": 8,
+      "title": "Patienten als Ganzes sehen",
       "date": "20 Dezember 2023"
     },
     {
-      "source": "Gesund Leben",
       "desc": "Neue Perspektiven in der modernen Schmerztherapie.",
-      "title": "Rückenschmerz? Da geht was!",
-      "pdf": "pdfs/Rueckenschmerz-Dagehtwas.pdf",
-      "id": "YBrBQLPsZhl1dEDmnunJ",
-      "order": 13,
       "img": "img/Rueckenschmerz-Dagehtwas-150x150.webp",
       "category": "article",
+      "id": "YBrBQLPsZhl1dEDmnunJ",
+      "pdf": "pdfs/Rueckenschmerz-Dagehtwas.pdf",
+      "source": "Gesund Leben",
+      "order": 13,
+      "title": "Rückenschmerz? Da geht was!",
       "date": "5 September 2023"
     },
     {
-      "source": "Medical Tribune",
       "desc": "Statistiken und neue Ansätze zur Prävention von Wirbelsäulenerkrankungen.",
-      "title": "Volkskrankheit Rücken",
-      "pdf": "",
-      "id": "ZFW7oB1EEMmIcYjeYtOA",
-      "order": 10,
       "img": "img/Volkskrankheit-Ruecken-150x150.webp",
       "category": "clinic-news",
+      "id": "ZFW7oB1EEMmIcYjeYtOA",
+      "pdf": "",
+      "source": "Medical Tribune",
+      "order": 10,
+      "title": "Volkskrankheit Rücken",
       "date": "2 November 2023"
     },
     {
-      "source": "Gesundheitsmagazin",
       "desc": "Häufige Ursachen für Rückenschmerzen und erste Schritte zur Linderung.",
-      "title": "Wenn das Kreuz streikt",
-      "pdf": "pdfs/Wenn-das-Kreuz-streikt.pdf",
-      "id": "dI6Bjd1hANl7qXB6QRoG",
-      "order": 9,
       "img": "img/Wenn-das-Kreuz-streikt-150x150.webp",
       "category": "article",
+      "id": "dI6Bjd1hANl7qXB6QRoG",
+      "pdf": "pdfs/Wenn-das-Kreuz-streikt.pdf",
+      "source": "Gesundheitsmagazin",
+      "order": 9,
+      "title": "Wenn das Kreuz streikt",
       "date": "15 November 2023"
     },
     {
-      "source": "Kurier Gesundheit",
       "desc": "Geschichten von Patienten und ihr Weg zu einem Leben ohne Schmerzen.",
-      "title": "Kleiner Eingriff mit großer Wirkung",
-      "pdf": "pdfs/Kleiner-Eingriff-mit-grosser-Wirkung.pdf",
-      "id": "eTkbdyZQnxBln5HrcwpJ",
-      "order": 7,
       "img": "img/Kleiner-Eingriff-mit-grosser-Wirkung-150x150.webp",
       "category": "science",
+      "id": "eTkbdyZQnxBln5HrcwpJ",
+      "pdf": "pdfs/Kleiner-Eingriff-mit-grosser-Wirkung.pdf",
+      "source": "Kurier Gesundheit",
+      "order": 7,
+      "title": "Kleiner Eingriff mit großer Wirkung",
       "date": "5 Januar 2024"
     },
     {
-      "source": "Die Presse",
       "desc": "Wann Sie einen Spezialisten aufsuchen sollten und welche Methoden wirklich funktionieren.",
-      "title": "Rückenschmerz? Da gibt's Hilfe",
-      "pdf": "pdfs/A7367086-2.1.pdf",
-      "id": "nISy25cw5jXHkTn18a2Q",
-      "order": 2,
       "img": "img/A7367086-2.1-150x150.webp",
       "category": "clinic-news",
+      "id": "nISy25cw5jXHkTn18a2Q",
+      "pdf": "pdfs/A7367086-2.1.pdf",
+      "source": "Die Presse",
+      "order": 2,
+      "title": "Rückenschmerz? Da gibt's Hilfe",
       "date": "10 März 2024"
     },
     {
-      "source": "Wiener Zeitung",
       "desc": "Die Rolle der Navigation in der genauen Diagnose und Behandlung der Wirbelsäule.",
-      "title": "Der Helfer bei Rückenschmerz",
-      "pdf": "pdfs/Der-Helfer-bei-Rueckenschmerz.pdf",
-      "id": "pfqxhSleNsuU1sf8D8eA",
-      "order": 6,
       "img": "img/Der-Helfer-bei-Rueckenschmerz-150x150.webp",
       "category": "clinic-news",
+      "id": "pfqxhSleNsuU1sf8D8eA",
+      "pdf": "pdfs/Der-Helfer-bei-Rueckenschmerz.pdf",
+      "source": "Wiener Zeitung",
+      "order": 6,
+      "title": "Der Helfer bei Rückenschmerz",
       "date": "18 Januar 2024"
     },
     {
-      "source": "Health Österreich",
       "desc": "In welchen Fällen eine Revisionsoperation möglich ist und welche Ergebnisse sie bringt.",
-      "title": "Wieder fit mit Bandscheibenprothese",
-      "pdf": "pdfs/A6756051-1.1.pdf.pdf",
-      "id": "uBcwMlAplmtsB2DK9rQk",
-      "order": 4,
       "img": "img/A6756051-1.1.pd_kleinf-150x150.webp",
       "category": "interviews",
+      "id": "uBcwMlAplmtsB2DK9rQk",
+      "pdf": "pdfs/A6756051-1.1.pdf.pdf",
+      "source": "Health Österreich",
+      "order": 4,
+      "title": "Wieder fit mit Bandscheibenprothese",
       "date": "12 Februar 2024"
     },
     {
-      "source": "Ärzteblatt",
       "desc": "Diagnostik und minimalinvasive Therapie bei ISG-Syndrom.",
-      "title": "Schmerzquelle Iliosakralgelenk",
-      "pdf": "pdfs/A7331467-1.2.pdf",
-      "id": "w104pFCI0XLx41CTz9V3",
-      "order": 11,
       "img": "img/A7331467-1.2-150x150.webp",
       "category": "science",
+      "id": "w104pFCI0XLx41CTz9V3",
+      "pdf": "pdfs/A7331467-1.2.pdf",
+      "source": "Ärzteblatt",
+      "order": 11,
+      "title": "Schmerzquelle Iliosakralgelenk",
       "date": "10 Oktober 2023"
     },
     {
-      "source": "Orthopädie Nachrichten",
       "desc": "Erfolgsgeschichten von Patienten nach der Behandlung.",
-      "title": "Schmerzfrei nach kurzer Zeit",
-      "pdf": "pdfs/A6595623-1.1.pdf.pdf",
-      "id": "yOndPtLBkJr8TpktzpLI",
-      "order": 12,
       "img": "img/A6595623-1.1.pdf_klein-150x150.webp",
       "category": "interviews",
+      "id": "yOndPtLBkJr8TpktzpLI",
+      "pdf": "pdfs/A6595623-1.1.pdf.pdf",
+      "source": "Orthopädie Nachrichten",
+      "order": 12,
+      "title": "Schmerzfrei nach kurzer Zeit",
       "date": "25 September 2023"
     },
     {
-      "source": "Medizin & Forschung",
       "desc": "Interview mit Kasim Fischer über Ansätze zur Behandlung komplexer Fälle.",
-      "title": "Der Experte für Rückenleiden",
-      "pdf": "pdfs/Der-Experte-fuer-Rueckenleiden.pdf",
-      "id": "zCIQHDTZPQfY3bsSNZbg",
-      "order": 5,
       "img": "img/Der-Experte-fuer-Rueckeleiden-150x150.webp",
       "category": "article",
+      "id": "zCIQHDTZPQfY3bsSNZbg",
+      "pdf": "pdfs/Der-Experte-fuer-Rueckenleiden.pdf",
+      "source": "Medizin & Forschung",
+      "order": 5,
+      "title": "Der Experte für Rückenleiden",
       "date": "30 Januar 2024"
     }
   ],
   "branches": [
     {
-      "phone": {
-        "de": "",
-        "ru": "",
-        "ar": "",
-        "tr": "",
-        "en": ""
-      },
-      "address": {
-        "en": "Theodor-Heuss-Platz 10, 41747 Viersen, 4th Floor",
-        "ru": "Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG (4 этаж)",
-        "ar": "Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG",
-        "de": "Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG",
-        "tr": "Theodor-Heuss-Platz 10, 41747 Viersen, 4. Kat"
-      },
-      "btn_link": {
-        "en": "https://www.doctolib.de/",
-        "ru": "https://www.doctolib.de/",
-        "ar": "https://www.doctolib.de/",
-        "de": "https://www.doctolib.de/",
-        "tr": "https://www.doctolib.de/"
-      },
-      "services": {
-        "tr": "Konsültasyonlar, Teşhis, Bakım",
-        "ru": "Консультации, диагностика, уход",
-        "ar": "استشارات، تشخيص، رعاية",
-        "de": "Konsultationen, Diagnostik, Nachsorge",
-        "en": "Consultations, Diagnostics, Aftercare"
-      },
-      "id": "branches_0",
-      "transport": {
-        "de": "",
-        "ru": "",
-        "ar": "",
-        "tr": "",
-        "en": ""
-      },
-      "hours": {
-        "en": "",
-        "ru": "",
-        "ar": "",
-        "de": "",
-        "tr": ""
-      },
-      "order": 0,
       "city": {
         "de": "Viersen",
-        "ru": "Фирсен (Viersen)",
-        "ar": "فيرسن (Viersen)",
         "en": "Viersen",
-        "tr": "Viersen"
+        "ar": "فيرسن (Viersen)",
+        "tr": "Viersen",
+        "ru": "Фирсен (Viersen)"
+      },
+      "btn_link": {
+        "de": "https://www.doctolib.de/",
+        "en": "https://www.doctolib.de/",
+        "ar": "https://www.doctolib.de/",
+        "tr": "https://www.doctolib.de/",
+        "ru": "https://www.doctolib.de/"
+      },
+      "phone": {
+        "de": "",
+        "en": "",
+        "ar": "",
+        "tr": "",
+        "ru": ""
+      },
+      "services": {
+        "de": "Konsultationen, Diagnostik, Nachsorge",
+        "en": "Consultations, Diagnostics, Aftercare",
+        "ar": "استشارات، تشخيص، رعاية",
+        "tr": "Konsültasyonlar, Teşhis, Bakım",
+        "ru": "Консультации, диагностика, уход"
+      },
+      "address": {
+        "de": "Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG",
+        "en": "Theodor-Heuss-Platz 10, 41747 Viersen, 4th Floor",
+        "ar": "Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG",
+        "tr": "Theodor-Heuss-Platz 10, 41747 Viersen, 4. Kat",
+        "ru": "Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG (4 этаж)"
+      },
+      "id": "branches_0",
+      "hours": {
+        "de": "",
+        "en": "",
+        "ar": "",
+        "tr": "",
+        "ru": ""
+      },
+      "order": 0,
+      "transport": {
+        "de": "",
+        "en": "",
+        "ar": "",
+        "tr": "",
+        "ru": ""
       }
     },
     {
-      "phone": {
-        "de": "(02161) 678 26 83",
-        "ru": "(02161) 678 26 83",
-        "ar": "(02161) 678 26 83",
-        "tr": "(02161) 678 26 83",
-        "en": "(02161) 678 26 83"
-      },
-      "address": {
-        "en": "Bismarckstr. 106, 41061 Mönchengladbach, 3rd Floor",
-        "ru": "Bismarckstr. 106, 41061 Mönchengladbach, 3. OG (3 этаж)",
-        "ar": "Bismarckstr. 106, 41061 Mönchengladbach, 3. OG",
-        "de": "Bismarckstr. 106, 41061 Mönchengladbach, 3. OG",
-        "tr": "Bismarckstr. 106, 41061 Mönchengladbach, 3. Kat"
-      },
-      "btn_link": {
-        "en": "https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer",
-        "ru": "https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer",
-        "ar": "https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer",
-        "de": "https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer",
-        "tr": "https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer"
-      },
-      "services": {
-        "en": "Consultations, Diagnostics, Aftercare",
-        "ru": "Консультации, диагностика, уход",
-        "ar": "استشارات، تشخيص، رعاية",
-        "de": "Konsultationen, Diagnostik, Nachsorge",
-        "tr": "Konsültasyonlar, Teşhis, Bakım"
-      },
-      "id": "branches_1",
-      "transport": {
-        "de": "",
-        "ru": "",
-        "ar": "",
-        "en": "",
-        "tr": ""
-      },
-      "order": 1,
-      "hours": {
-        "de": "Mo - Fr: 8:00 - 18:00 Uhr",
-        "ru": "Пн - Пт: 8:00 - 18:00",
-        "ar": "الإثنين - الجمعة: 8:00 ص - 6:00 م",
-        "en": "Mon - Fri: 8:00 AM - 6:00 PM",
-        "tr": "Pzt - Cum: 8:00 - 18:00"
-      },
       "city": {
         "de": "Mönchengladbach",
-        "ru": "Мёнхенгладбах (Mönchengladbach)",
-        "ar": "مونشنغلادباخ (Mönchengladbach)",
         "en": "Mönchengladbach",
-        "tr": "Mönchengladbach"
+        "ar": "مونشنغلادباخ (Mönchengladbach)",
+        "tr": "Mönchengladbach",
+        "ru": "Мёнхенгладбах (Mönchengladbach)"
+      },
+      "btn_link": {
+        "de": "https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer",
+        "en": "https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer",
+        "ar": "https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer",
+        "tr": "https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer",
+        "ru": "https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer"
+      },
+      "phone": {
+        "de": "(02161) 678 26 83",
+        "en": "(02161) 678 26 83",
+        "ar": "(02161) 678 26 83",
+        "tr": "(02161) 678 26 83",
+        "ru": "(02161) 678 26 83"
+      },
+      "services": {
+        "de": "Konsultationen, Diagnostik, Nachsorge",
+        "en": "Consultations, Diagnostics, Aftercare",
+        "ar": "استشارات، تشخيص، رعاية",
+        "tr": "Konsültasyonlar, Teşhis, Bakım",
+        "ru": "Консультации, диагностика, уход"
+      },
+      "address": {
+        "de": "Bismarckstr. 106, 41061 Mönchengladbach, 3. OG",
+        "en": "Bismarckstr. 106, 41061 Mönchengladbach, 3rd Floor",
+        "ar": "Bismarckstr. 106, 41061 Mönchengladbach, 3. OG",
+        "tr": "Bismarckstr. 106, 41061 Mönchengladbach, 3. Kat",
+        "ru": "Bismarckstr. 106, 41061 Mönchengladbach, 3. OG (3 этаж)"
+      },
+      "id": "branches_1",
+      "hours": {
+        "de": "Mo - Fr: 8:00 - 18:00 Uhr",
+        "en": "Mon - Fri: 8:00 AM - 6:00 PM",
+        "ar": "الإثنين - الجمعة: 8:00 ص - 6:00 م",
+        "tr": "Pzt - Cum: 8:00 - 18:00",
+        "ru": "Пн - Пт: 8:00 - 18:00"
+      },
+      "order": 1,
+      "transport": {
+        "de": "",
+        "en": "",
+        "ar": "",
+        "tr": "",
+        "ru": ""
       }
     },
     {
-      "phone": {
-        "de": "",
-        "ru": "",
-        "ar": "",
-        "en": "",
-        "tr": ""
-      },
-      "btn_disabled": {
-        "de": true,
-        "ru": true,
-        "ar": true,
-        "en": true,
-        "tr": true
-      },
-      "address": {
-        "tr": "Schadowstraße 74, 40212 Düsseldorf",
-        "ru": "Schadowstraße 74, 40212 Düsseldorf",
-        "ar": "Schadowstraße 74, 40212 Düsseldorf",
-        "de": "Schadowstraße 74, 40212 Düsseldorf",
-        "en": "Schadowstraße 74, 40212 Düsseldorf"
-      },
-      "btn_link": {
-        "tr": "#",
-        "ru": "#",
-        "ar": "#",
-        "de": "#",
-        "en": "#"
+      "city": {
+        "de": "Düsseldorf",
+        "en": "Düsseldorf",
+        "ar": "دوسلدورف (Düsseldorf)",
+        "tr": "Düsseldorf",
+        "ru": "Дюссельдорф (Düsseldorf)"
       },
       "services": {
         "de": "",
-        "ru": "",
+        "en": "",
         "ar": "",
         "tr": "",
-        "en": ""
+        "ru": ""
+      },
+      "phone": {
+        "de": "",
+        "en": "",
+        "ar": "",
+        "tr": "",
+        "ru": ""
+      },
+      "btn_link": {
+        "de": "#",
+        "en": "#",
+        "ar": "#",
+        "tr": "#",
+        "ru": "#"
+      },
+      "address": {
+        "de": "Schadowstraße 74, 40212 Düsseldorf",
+        "en": "Schadowstraße 74, 40212 Düsseldorf",
+        "ar": "Schadowstraße 74, 40212 Düsseldorf",
+        "tr": "Schadowstraße 74, 40212 Düsseldorf",
+        "ru": "Schadowstraße 74, 40212 Düsseldorf"
       },
       "id": "branches_2",
-      "transport": {
-        "tr": "",
-        "ru": "",
-        "ar": "",
-        "de": "",
-        "en": ""
-      },
-      "order": 2,
-      "city": {
-        "tr": "Düsseldorf",
-        "ru": "Дюссельдорф (Düsseldorf)",
-        "ar": "دوسلدورف (Düsseldorf)",
-        "de": "Düsseldorf",
-        "en": "Düsseldorf"
+      "btn_disabled": {
+        "de": true,
+        "en": true,
+        "ar": true,
+        "tr": true,
+        "ru": true
       },
       "hours": {
         "de": "",
-        "ru": "",
-        "ar": "",
         "en": "",
-        "tr": ""
+        "ar": "",
+        "tr": "",
+        "ru": ""
+      },
+      "order": 2,
+      "transport": {
+        "de": "",
+        "en": "",
+        "ar": "",
+        "tr": "",
+        "ru": ""
       }
     }
   ],
   "diagnostik": [
     {
       "desc": {
-        "tr": "Kapsamlı nöroşirürjik ve nörolojik muayene ve ağrı değerlendirmesi.",
-        "ru": "Комплексное нейрохирургическое и неврологическое обследование, оценка боли.",
-        "ar": "فحص جراحة الأعصاب والأعصاب الشامل وتقييم الألم.",
         "de": "Umfassende neurochirurgische und neurologische Untersuchung sowie Schmerzbeurteilung.",
-        "en": "Comprehensive neurosurgical and neurological examination and pain assessment."
-      },
-      "title": {
-        "tr": "Klinik Teşhis",
-        "ru": "Клиническая диагностика",
-        "ar": "التشخيص السريري",
-        "de": "Klinische Diagnostik",
-        "en": "Clinical Diagnostics"
-      },
-      "tr": {
-        "desc": "Kapsamlı nöroşirürjik ve nörolojik muayene ve ağrı değerlendirmesi.",
-        "title": "Klinik Teşhis"
-      },
-      "de": {
-        "desc": "Umfassende neurochirurgische und neurologische Untersuchung sowie Schmerzbeurteilung.",
-        "title": "Klinische Diagnostik"
-      },
-      "ru": {
-        "desc": "Комплексное нейрохирургическое и неврологическое обследование, оценка боли.",
-        "title": "Клиническая диагностика"
+        "en": "Comprehensive neurosurgical and neurological examination and pain assessment.",
+        "ar": "فحص جراحة الأعصاب والأعصاب الشامل وتقييم الألم.",
+        "tr": "Kapsamlı nöroşirürjik ve nörolojik muayene ve ağrı değerlendirmesi.",
+        "ru": "Комплексное нейрохирургическое и неврологическое обследование, оценка боли."
       },
       "ar": {
         "desc": "فحص جراحة الأعصاب والأعصاب الشامل وتقييم الألم.",
         "title": "التشخيص السريري"
+      },
+      "de": {
+        "desc": "Umfassende neurochirurgische und neurologische Untersuchung sowie Schmerzbeurteilung.",
+        "title": "Klinische Diagnostik"
       },
       "en": {
         "desc": "Comprehensive neurosurgical and neurological examination and pain assessment.",
         "title": "Clinical Diagnostics"
       },
       "order": 0,
+      "tr": {
+        "desc": "Kapsamlı nöroşirürjik ve nörolojik muayene ve ağrı değerlendirmesi.",
+        "title": "Klinik Teşhis"
+      },
+      "title": {
+        "de": "Klinische Diagnostik",
+        "en": "Clinical Diagnostics",
+        "ar": "التشخيص السريري",
+        "tr": "Klinik Teşhis",
+        "ru": "Клиническая диагностика"
+      },
+      "ru": {
+        "desc": "Комплексное нейрохирургическое и неврологическое обследование, оценка боли.",
+        "title": "Клиническая диагностика"
+      },
       "id": "diagnostik_0"
     },
     {
-      "desc": {
-        "tr": "Sinir ve kas fonksiyonunun hassas ölçümü (EMG, ENG, NLG, SEP).",
-        "ru": "Точное измерение функции нервов и мышц (ЭМГ, ЭНГ, СРВ, ССВП).",
-        "ar": "القياس الدقيق لوظيفة الأعصاب والعضلات (EMG, ENG, NLG, SEP).",
-        "de": "Präzise Messung der Nerven- und Muskelfunktion (EMG, ENG, NLG, SEP).",
-        "en": "Precise measurement of nerve and muscle function (EMG, ENG, NLG, SEP)."
-      },
       "full_desc": {
-        "tr": "Modern nörofizyolojik yöntemlerle (elektromiyografi - EMG, elektronörografi - ENG, sinir iletim hızı - NLG ve somatosensori uyarılmış potansiyeller - SEP gibi), sinirlerinizin ve kaslarınızın iletkenliğini ve işlevselliğini nesnel olarak ölçebiliriz. Bu, sinir hasarının tam olarak lokalize edilmesini sağlar.",
-        "ru": "С помощью современных нейрофизиологических методов (таких как электромиография - ЭМГ, электронейрография - ЭНГ, скорость распространения возбуждения - СРВ и соматосенсорные вызванные потенциалы - ССВП) мы можем объективно измерить проводимость и функциональность ваших нервов и мышц. Это позволяет точно локализовать повреждение нерва.",
-        "ar": "باستخدام الأساليب الفيزيولوجية العصبية الحديثة (مثل تخطيط كهربية العضل، وتخطيط كهربية الأعصاب، وسرعة التوصيل العصبي، والجهد المحرض الحسي الجسدي)، يمكننا قياس موصلية ووظيفة أعصابك وعضلاتك بشكل موضوعي. هذا يسمح بتحديد تلف الأعصاب بدقة.",
         "de": "Mit modernen neurophysiologischen Methoden (wie Elektromyografie - EMG, Elektroneurografie - ENG, Nervenleitgeschwindigkeit - NLG und somatosensibel evozierte Potenziale - SEP) können wir die Leitfähigkeit und Funktionsfähigkeit Ihrer Nerven und Muskeln objektiv messen. So lassen sich Nervenschädigungen exakt lokalisieren.",
-        "en": "With modern neurophysiological methods (such as electromyography - EMG, electroneurography - ENG, nerve conduction velocity - NLG, and somatosensory evoked potentials - SEP), we can objectively measure the conductivity and functionality of your nerves and muscles. This allows nerve damage to be localized precisely."
+        "en": "With modern neurophysiological methods (such as electromyography - EMG, electroneurography - ENG, nerve conduction velocity - NLG, and somatosensory evoked potentials - SEP), we can objectively measure the conductivity and functionality of your nerves and muscles. This allows nerve damage to be localized precisely.",
+        "ar": "باستخدام الأساليب الفيزيولوجية العصبية الحديثة (مثل تخطيط كهربية العضل، وتخطيط كهربية الأعصاب، وسرعة التوصيل العصبي، والجهد المحرض الحسي الجسدي)، يمكننا قياس موصلية ووظيفة أعصابك وعضلاتك بشكل موضوعي. هذا يسمح بتحديد تلف الأعصاب بدقة.",
+        "tr": "Modern nörofizyolojik yöntemlerle (elektromiyografi - EMG, elektronörografi - ENG, sinir iletim hızı - NLG ve somatosensori uyarılmış potansiyeller - SEP gibi), sinirlerinizin ve kaslarınızın iletkenliğini ve işlevselliğini nesnel olarak ölçebiliriz. Bu, sinir hasarının tam olarak lokalize edilmesini sağlar.",
+        "ru": "С помощью современных нейрофизиологических методов (таких как электромиография - ЭМГ, электронейрография - ЭНГ, скорость распространения возбуждения - СРВ и соматосенсорные вызванные потенциалы - ССВП) мы можем объективно измерить проводимость и функциональность ваших нервов и мышц. Это позволяет точно локализовать повреждение нерва."
+      },
+      "desc": {
+        "de": "Präzise Messung der Nerven- und Muskelfunktion (EMG, ENG, NLG, SEP).",
+        "en": "Precise measurement of nerve and muscle function (EMG, ENG, NLG, SEP).",
+        "ar": "القياس الدقيق لوظيفة الأعصاب والعضلات (EMG, ENG, NLG, SEP).",
+        "tr": "Sinir ve kas fonksiyonunun hassas ölçümü (EMG, ENG, NLG, SEP).",
+        "ru": "Точное измерение функции нервов и мышц (ЭМГ, ЭНГ, СРВ, ССВП)."
       },
       "title": {
-        "tr": "Nörofizyoloji",
-        "ru": "Нейрофизиология",
-        "ar": "الفيزيولوجيا العصبية",
         "de": "Neurophysiologie",
-        "en": "Neurophysiology"
+        "en": "Neurophysiology",
+        "ar": "الفيزيولوجيا العصبية",
+        "tr": "Nörofizyoloji",
+        "ru": "Нейрофизиология"
       },
       "id": "diagnostik_1"
     },
     {
-      "desc": {
-        "tr": "Radyoloji ile yakın işbirliği içinde MR, BT ve röntgen görüntülerinin uzman değerlendirmesi.",
-        "ru": "Специализированная оценка МРТ, КТ и рентгеновских снимков в сотрудничестве с радиологией.",
-        "ar": "التقييم المتخصص لصور الرنين المغناطيسي، والأشعة المقطعية، والأشعة السينية بالتعاون الوثيق مع قسم الأشعة.",
-        "de": "Spezialisierte Auswertung von MRT, CT und Röntgenbildern in enger radiologischer Kooperation.",
-        "en": "Specialized evaluation of MRI, CT, and X-ray images in close radiological cooperation."
-      },
       "full_desc": {
-        "tr": "Uzmanlaşmış radyoloji merkezleriyle yakın çalışıyoruz. MR, BT veya röntgen görüntülerinizi sizinle birlikte ayrıntılı olarak değerlendiriyoruz. Radyoloji ile bu kooperatif ağ sayesinde, görüntüleme prosedürleri için en yüksek tanısal kesinliği ve hızlı randevu planlamasını sağlıyoruz.",
-        "ru": "Мы тесно сотрудничаем со специализированными радиологическими центрами. Мы детально анализируем ваши снимки МРТ, КТ или рентген вместе с вами. Благодаря такому сотрудничеству с радиологией мы обеспечиваем высочайшую диагностическую точность и быстрое назначение времени для исследований.",
-        "ar": "نحن نعمل بشكل وثيق مع مراكز الأشعة المتخصصة. نقوم بتقييم صور الرنين المغناطيسي أو الأشعة المقطعية أو الأشعة السينية معًا بالتفصيل. من خلال هذه الشبكة التعاونية مع الأشعة، نضمن أعلى درجات الدقة التشخيصية وتحديد المواعيد السريعة لإجراءات التصوير.",
         "de": "Wir arbeiten eng mit spezialisierten radiologischen Zentren zusammen. Wir werten Ihre MRT-, CT- oder Röntgenbilder gemeinsam mit Ihnen detailliert aus. Durch diese kooperative Netzwerkarbeit mit der Radiologie gewährleisten wir höchste diagnostische Präzision und schnelle Terminvergaben für bildgebende Verfahren.",
-        "en": "We work closely with specialized radiological centers. We evaluate your MRI, CT, or X-ray images together with you in detail. Through this cooperative network with radiology, we ensure the highest diagnostic precision and fast appointment scheduling for imaging procedures."
+        "en": "We work closely with specialized radiological centers. We evaluate your MRI, CT, or X-ray images together with you in detail. Through this cooperative network with radiology, we ensure the highest diagnostic precision and fast appointment scheduling for imaging procedures.",
+        "ar": "نحن نعمل بشكل وثيق مع مراكز الأشعة المتخصصة. نقوم بتقييم صور الرنين المغناطيسي أو الأشعة المقطعية أو الأشعة السينية معًا بالتفصيل. من خلال هذه الشبكة التعاونية مع الأشعة، نضمن أعلى درجات الدقة التشخيصية وتحديد المواعيد السريعة لإجراءات التصوير.",
+        "tr": "Uzmanlaşmış radyoloji merkezleriyle yakın çalışıyoruz. MR, BT veya röntgen görüntülerinizi sizinle birlikte ayrıntılı olarak değerlendiriyoruz. Radyoloji ile bu kooperatif ağ sayesinde, görüntüleme prosedürleri için en yüksek tanısal kesinliği ve hızlı randevu planlamasını sağlıyoruz.",
+        "ru": "Мы тесно сотрудничаем со специализированными радиологическими центрами. Мы детально анализируем ваши снимки МРТ, КТ или рентген вместе с вами. Благодаря такому сотрудничеству с радиологией мы обеспечиваем высочайшую диагностическую точность и быстрое назначение времени для исследований."
+      },
+      "desc": {
+        "de": "Spezialisierte Auswertung von MRT, CT und Röntgenbildern in enger radiologischer Kooperation.",
+        "en": "Specialized evaluation of MRI, CT, and X-ray images in close radiological cooperation.",
+        "ar": "التقييم المتخصص لصور الرنين المغناطيسي، والأشعة المقطعية، والأشعة السينية بالتعاون الوثيق مع قسم الأشعة.",
+        "tr": "Radyoloji ile yakın işbirliği içinde MR, BT ve röntgen görüntülerinin uzman değerlendirmesi.",
+        "ru": "Специализированная оценка МРТ, КТ и рентгеновских снимков в сотрудничестве с радиологией."
       },
       "title": {
-        "tr": "Görüntüleme",
-        "ru": "Визуализация",
-        "ar": "التصوير",
         "de": "Bildgebung",
-        "en": "Imaging"
+        "en": "Imaging",
+        "ar": "التصوير",
+        "tr": "Görüntüleme",
+        "ru": "Визуализация"
       },
       "id": "diagnostik_2"
     },
     {
-      "desc": {
-        "tr": "Fıtıklar, stenozlar, sinir sıkışmaları ve ikinci görüşler için hedefe yönelik muayeneler.",
-        "ru": "Целенаправленные обследования позвоночника, стенозов, компрессии нервов и второе мнение.",
-        "ar": "فحوصات مستهدفة للأقراص الفقرية، والتضيق، وانضغاط الأعصاب، والآراء الثانية.",
-        "de": "Gezielte Untersuchungen für Bandscheibe, Stenosen, Nervenkompressionen und Zweitmeinungen.",
-        "en": "Targeted examinations for intervertebral discs, stenosis, nerve compressions, and second opinions."
-      },
       "full_desc": {
-        "tr": "Bel fıtığı, spinal kanal stenozu veya belirsiz sinir sıkışmaları gibi karmaşık durumlar için spesifik ağrı teşhisi yapıyoruz. Ek olarak, özellikle başka bir yerde ameliyat olmanız tavsiye edildiyse, sağlam temellere dayanan bir uzman ikinci görüşü sunuyoruz.",
-        "ru": "При сложных клинических картинах, таких как грыжа межпозвоночного диска, стеноз спинномозгового канала или неясная компрессия нервов, мы проводим специфическую диагностику боли. Кроме того, мы предлагаем обоснованное второе мнение специалиста, особенно если вам рекомендовали операцию в другом месте.",
-        "ar": "في الحالات المعقدة مثل الانزلاق الغضروفي، أو تضيق القناة الشوكية، أو انضغاط الأعصاب غير الواضح، نقوم بإجراء تشخيص محدد للألم. بالإضافة إلى ذلك، نقدم رأيًا ثانيًا متخصصًا ومبنيًا على أسس سليمة، خاصة إذا نُصحت بإجراء عملية جراحية في مكان آخر.",
         "de": "Bei komplexen Krankheitsbildern wie Bandscheibenvorfällen, Spinalkanalstenosen oder unklaren Nervenkompressionen führen wir eine spezifische Schmerzdiagnostik durch. Zudem bieten wir eine fundierte fachärztliche Zweitmeinung an, insbesondere wenn Ihnen andernorts zu einer Operation geraten wurde.",
-        "en": "For complex conditions such as herniated discs, spinal canal stenosis, or unclear nerve compressions, we perform specific pain diagnostics. In addition, we offer a well-founded specialist second opinion, especially if you have been advised to have surgery elsewhere."
+        "en": "For complex conditions such as herniated discs, spinal canal stenosis, or unclear nerve compressions, we perform specific pain diagnostics. In addition, we offer a well-founded specialist second opinion, especially if you have been advised to have surgery elsewhere.",
+        "ar": "في الحالات المعقدة مثل الانزلاق الغضروفي، أو تضيق القناة الشوكية، أو انضغاط الأعصاب غير الواضح، نقوم بإجراء تشخيص محدد للألم. بالإضافة إلى ذلك، نقدم رأيًا ثانيًا متخصصًا ومبنيًا على أسس سليمة، خاصة إذا نُصحت بإجراء عملية جراحية في مكان آخر.",
+        "tr": "Bel fıtığı, spinal kanal stenozu veya belirsiz sinir sıkışmaları gibi karmaşık durumlar için spesifik ağrı teşhisi yapıyoruz. Ek olarak, özellikle başka bir yerde ameliyat olmanız tavsiye edildiyse, sağlam temellere dayanan bir uzman ikinci görüşü sunuyoruz.",
+        "ru": "При сложных клинических картинах, таких как грыжа межпозвоночного диска, стеноз спинномозгового канала или неясная компрессия нервов, мы проводим специфическую диагностику боли. Кроме того, мы предлагаем обоснованное второе мнение специалиста, особенно если вам рекомендовали операцию в другом месте."
+      },
+      "desc": {
+        "de": "Gezielte Untersuchungen für Bandscheibe, Stenosen, Nervenkompressionen und Zweitmeinungen.",
+        "en": "Targeted examinations for intervertebral discs, stenosis, nerve compressions, and second opinions.",
+        "ar": "فحوصات مستهدفة للأقراص الفقرية، والتضيق، وانضغاط الأعصاب، والآراء الثانية.",
+        "tr": "Fıtıklar, stenozlar, sinir sıkışmaları ve ikinci görüşler için hedefe yönelik muayeneler.",
+        "ru": "Целенаправленные обследования позвоночника, стенозов, компрессии нервов и второе мнение."
       },
       "title": {
-        "tr": "Özel Teşhis",
-        "ru": "Специальная диагностика",
-        "ar": "التشخيص المتخصص",
         "de": "Spezielle Diagnostik",
-        "en": "Specialized Diagnostics"
+        "en": "Specialized Diagnostics",
+        "ar": "التشخيص المتخصص",
+        "tr": "Özel Teşhis",
+        "ru": "Специальная диагностика"
       },
       "id": "diagnostik_3"
     }
@@ -1706,109 +1740,109 @@
   "faq": [
     {
       "desc": {
-        "tr": "Acil vakalara mümkün olduğunca öncelik verilir. Düzenli randevular en rahat şekilde Doctolib sistemimiz üzerinden alınabilir.",
-        "ru": "Острые случаи по возможности рассматриваются в приоритетном порядке. Обычные приемы удобнее всего бронировать через нашу систему Doctolib.",
-        "ar": "يتم إعطاء الأولوية للحالات الحادة كلما أمكن ذلك. من الأفضل حجز المواعيد العادية بسهولة عبر نظام Doctolib الخاص بنا.",
         "de": "Akutfälle werden nach Möglichkeit priorisiert. Reguläre Termine können Sie am besten bequem über unser Doctolib-System buchen.",
-        "en": "Acute cases are prioritized whenever possible. Regular appointments are best booked conveniently via our Doctolib system."
+        "en": "Acute cases are prioritized whenever possible. Regular appointments are best booked conveniently via our Doctolib system.",
+        "ar": "يتم إعطاء الأولوية للحالات الحادة كلما أمكن ذلك. من الأفضل حجز المواعيد العادية بسهولة عبر نظام Doctolib الخاص بنا.",
+        "tr": "Acil vakalara mümkün olduğunca öncelik verilir. Düzenli randevular en rahat şekilde Doctolib sistemimiz üzerinden alınabilir.",
+        "ru": "Острые случаи по возможности рассматриваются в приоритетном порядке. Обычные приемы удобнее всего бронировать через нашу систему Doctolib."
       },
       "title": {
-        "tr": "Ne kadar çabuk randevu alabilirim?",
-        "ru": "Как быстро я смогу попасть на прием?",
-        "ar": "متى يمكنني الحصول على موعد؟",
         "de": "Wie schnell bekomme ich einen Termin?",
-        "en": "How quickly can I get an appointment?"
+        "en": "How quickly can I get an appointment?",
+        "ar": "متى يمكنني الحصول على موعد؟",
+        "tr": "Ne kadar çabuk randevu alabilirim?",
+        "ru": "Как быстро я смогу попасть на прием?"
       },
       "id": "faq_0"
     },
     {
       "desc": {
-        "tr": "Yasal sigortalı bir hasta olarak lütfen sigorta kartınızı getirin. Sevk kağıdı yardımcı olur ancak genellikle zorunlu değildir. Özel hastaların ve kendi ödeyenlerin sevke ihtiyacı yoktur.",
-        "ru": "Пациентам по государственной страховке необходимо принести страховую карту. Направление желательно, но, как правило, не обязательно. Частным пациентам направление не требуется.",
-        "ar": "كمريض مؤمن عليه قانونيًا، يرجى إحضار بطاقة التأمين الخاصة بك. التحويل مفيد ولكنه ليس إلزاميًا بشكل عام. المرضى الخصوصيون والذين يدفعون بأنفسهم لا يحتاجون إلى تحويل.",
         "de": "Als gesetzlich Versicherter bringen Sie bitte Ihre Versichertenkarte mit. Eine Überweisung ist hilfreich, aber in der Regel nicht zwingend erforderlich. Privatpatienten und Selbstzahler benötigen keine Überweisung.",
-        "en": "As a statutorily insured patient, please bring your insurance card. A referral is helpful but generally not mandatory. Private patients and self-payers do not need a referral."
+        "en": "As a statutorily insured patient, please bring your insurance card. A referral is helpful but generally not mandatory. Private patients and self-payers do not need a referral.",
+        "ar": "كمريض مؤمن عليه قانونيًا، يرجى إحضار بطاقة التأمين الخاصة بك. التحويل مفيد ولكنه ليس إلزاميًا بشكل عام. المرضى الخصوصيون والذين يدفعون بأنفسهم لا يحتاجون إلى تحويل.",
+        "tr": "Yasal sigortalı bir hasta olarak lütfen sigorta kartınızı getirin. Sevk kağıdı yardımcı olur ancak genellikle zorunlu değildir. Özel hastaların ve kendi ödeyenlerin sevke ihtiyacı yoktur.",
+        "ru": "Пациентам по государственной страховке необходимо принести страховую карту. Направление желательно, но, как правило, не обязательно. Частным пациентам направление не требуется."
       },
       "title": {
-        "tr": "Sevk kağıdına ihtiyacım var mı?",
-        "ru": "Нужно ли мне направление?",
-        "ar": "هل أحتاج إلى تحويل طبي؟",
         "de": "Benötige ich eine Überweisung?",
-        "en": "Do I need a referral?"
+        "en": "Do I need a referral?",
+        "ar": "هل أحتاج إلى تحويل طبي؟",
+        "tr": "Sevk kağıdına ihtiyacım var mı?",
+        "ru": "Нужно ли мне направление?"
       },
       "id": "faq_1"
     },
     {
       "desc": {
-        "tr": "Elbette, görüşmenize güvendiğiniz bir kişiyi getirebilirsiniz. Bu, özellikle ameliyat öncesi bilgilendirme görüşmelerinde genellikle yardımcı olur.",
-        "ru": "Конечно, вы можете взять с собой доверенное лицо. Это часто бывает полезно, особенно во время бесед перед операцией.",
-        "ar": "بالطبع، يمكنك إحضار شخص تثق به إلى استشارتك. غالبًا ما يكون هذا مفيدًا بشكل خاص أثناء الاستشارات التثقيفية.",
         "de": "Selbstverständlich dürfen Sie eine Vertrauensperson zu Ihrem Gespräch mitbringen. Insbesondere bei Aufklärungsgesprächen ist dies oft hilfreich.",
-        "en": "Of course, you may bring a trusted person to your consultation. This is often particularly helpful during educational consultations."
+        "en": "Of course, you may bring a trusted person to your consultation. This is often particularly helpful during educational consultations.",
+        "ar": "بالطبع، يمكنك إحضار شخص تثق به إلى استشارتك. غالبًا ما يكون هذا مفيدًا بشكل خاص أثناء الاستشارات التثقيفية.",
+        "tr": "Elbette, görüşmenize güvendiğiniz bir kişiyi getirebilirsiniz. Bu, özellikle ameliyat öncesi bilgilendirme görüşmelerinde genellikle yardımcı olur.",
+        "ru": "Конечно, вы можете взять с собой доверенное лицо. Это часто бывает полезно, особенно во время бесед перед операцией."
       },
       "title": {
-        "tr": "Randevuya refakatçi ile gelinebilir mi?",
-        "ru": "Можно ли прийти на прием с сопровождающим?",
-        "ar": "هل يُسمح بوجود مرافقين في الموعد؟",
         "de": "Sind Begleitpersonen beim Termin erlaubt?",
-        "en": "Are accompanying persons allowed at the appointment?"
+        "en": "Are accompanying persons allowed at the appointment?",
+        "ar": "هل يُسمح بوجود مرافقين في الموعد؟",
+        "tr": "Randevuya refakatçi ile gelinebilir mi?",
+        "ru": "Можно ли прийти на прием с сопровождающим?"
       },
       "id": "faq_2"
     },
     {
       "desc": {
-        "tr": "Bu büyük ölçüde prosedürün türüne ve mesleki faaliyetinize bağlıdır. Tedavi eden doktorunuz bunu sizinle bireysel olarak görüşecektir.",
-        "ru": "Это сильно зависит от типа вмешательства и вашей профессиональной деятельности. Лечащий врач обсудит это с вами индивидуально.",
-        "ar": "هذا يعتمد بشكل كبير على نوع الإجراء ونشاطك المهني. سيناقش طبيبك المعالج هذا معك بشكل فردي.",
         "de": "Dies hängt stark von der Art des Eingriffs und Ihrer beruflichen Tätigkeit ab. Ihr behandelnder Arzt wird dies individuell mit Ihnen besprechen.",
-        "en": "This depends heavily on the type of procedure and your professional activity. Your attending doctor will discuss this with you individually."
+        "en": "This depends heavily on the type of procedure and your professional activity. Your attending doctor will discuss this with you individually.",
+        "ar": "هذا يعتمد بشكل كبير على نوع الإجراء ونشاطك المهني. سيناقش طبيبك المعالج هذا معك بشكل فردي.",
+        "tr": "Bu büyük ölçüde prosedürün türüne ve mesleki faaliyetinize bağlıdır. Tedavi eden doktorunuz bunu sizinle bireysel olarak görüşecektir.",
+        "ru": "Это сильно зависит от типа вмешательства и вашей профессиональной деятельности. Лечащий врач обсудит это с вами индивидуально."
       },
       "title": {
-        "tr": "Ameliyattan sonra rapor süresi ne kadardır?",
-        "ru": "Как долго длится больничный после операции?",
-        "ar": "ما هي مدة الإجازة المرضية بعد الجراحة؟",
         "de": "Wie lange dauert die Krankschreibung nach einer OP?",
-        "en": "How long is the sick leave after surgery?"
+        "en": "How long is the sick leave after surgery?",
+        "ar": "ما هي مدة الإجازة المرضية بعد الجراحة؟",
+        "tr": "Ameliyattan sonra rapor süresi ne kadardır?",
+        "ru": "Как долго длится больничный после операции?"
       },
       "id": "faq_3"
     }
   ],
   "reviews": [
     {
+      "stars": 5,
+      "author_name": "Sabine K.",
       "id": "reviews_0",
       "text": {
-        "tr": "İki yıldır Nöroşirürji Fischer'de tedavi görüyorum ve kliniği şiddetle tavsiye ederim. Sayın Fischer ve ekibi son derece profesyonel, hastalarına çok zaman ayırıyor ve her tedavi adımını anlaşılır bir şekilde açıklıyorlar. Bekleme süreleri kısa ve klinikteki atmosfer çok hoş.",
-        "ru": "Я лечусь в клинике нейрохирургии Фишера уже два года и могу смело ее рекомендовать. Господин Фишер и его команда крайне профессиональны, уделяют много времени пациентам и понятно объясняют каждый этап лечения. Время ожидания короткое, а атмосфера в клинике очень приятная.",
-        "ar": "أخضع للعلاج في عيادة جراحة المخ والأعصاب فيشر منذ عامين ولا يسعني إلا أن أوصي بشدة بهذه العيادة. السيد فيشر وفريقه محترفون للغاية، ويخصصون الكثير من الوقت للمرضى ويشرحون كل خطوة من خطوات العلاج بوضوح. أوقات الانتظار قصيرة والجو في العيادة لطيف للغاية.",
         "de": "Ich bin seit zwei Jahren bei Neurochirurgie Fischer in Behandlung und kann die Praxis nur wärmstens empfehlen. Herr Fischer und sein Team sind äußerst professionell, nehmen sich viel Zeit für die Patienten und erklären jeden Behandlungsschritt verständlich. Die Wartezeiten sind kurz und die Atmosphäre in der Praxis ist sehr angenehm.",
-        "en": "I have been undergoing treatment at Neurosurgery Fischer for two years and can highly recommend the practice. Mr. Fischer and his team are extremely professional, take a lot of time for their patients, and explain every step of the treatment clearly. Waiting times are short and the atmosphere in the practice is very pleasant."
-      },
-      "stars": 5,
-      "author_name": "Sabine K."
+        "en": "I have been undergoing treatment at Neurosurgery Fischer for two years and can highly recommend the practice. Mr. Fischer and his team are extremely professional, take a lot of time for their patients, and explain every step of the treatment clearly. Waiting times are short and the atmosphere in the practice is very pleasant.",
+        "ar": "أخضع للعلاج في عيادة جراحة المخ والأعصاب فيشر منذ عامين ولا يسعني إلا أن أوصي بشدة بهذه العيادة. السيد فيشر وفريقه محترفون للغاية، ويخصصون الكثير من الوقت للمرضى ويشرحون كل خطوة من خطوات العلاج بوضوح. أوقات الانتظار قصيرة والجو في العيادة لطيف للغاية.",
+        "tr": "İki yıldır Nöroşirürji Fischer'de tedavi görüyorum ve kliniği şiddetle tavsiye ederim. Sayın Fischer ve ekibi son derece profesyonel, hastalarına çok zaman ayırıyor ve her tedavi adımını anlaşılır bir şekilde açıklıyorlar. Bekleme süreleri kısa ve klinikteki atmosfer çok hoş.",
+        "ru": "Я лечусь в клинике нейрохирургии Фишера уже два года и могу смело ее рекомендовать. Господин Фишер и его команда крайне профессиональны, уделяют много времени пациентам и понятно объясняют каждый этап лечения. Время ожидания короткое, а атмосфера в клинике очень приятная."
+      }
     },
     {
+      "stars": 5,
+      "author_name": "Thomas M.",
       "id": "reviews_1",
       "text": {
         "de": "Ein wunderbares Team! Nach meinem Bandscheibenvorfall war ich sehr verunsichert. Herr Fischer und sein Team haben mir mit ihrer Kompetenz und ruhigen Art sehr geholfen. Die OP verlief reibungslos und ich bin endlich wieder schmerzfrei.",
-        "ru": "Замечательная команда! После грыжи межпозвоночного диска я был очень не уверен в себе. Господин Фишер и его команда очень помогли мне своим профессионализмом и спокойствием. Операция прошла гладко, и я, наконец, снова живу без боли.",
+        "en": "A wonderful team! After my herniated disc, I was very unsure. Mr. Fischer and his team helped me a lot with their expertise and calm manner. The surgery went smoothly and I am finally pain-free again.",
         "ar": "فريق رائع! بعد إصابتي بانزلاق غضروفي كنت متردداً جداً. ساعدني السيد فيشر وفريقه كثيراً بخبرتهم وهدوئهم. سارت العملية بسلاسة وأصبحت أخيراً خالياً من الألم مرة أخرى.",
         "tr": "Harika bir ekip! Bel fıtığımdan sonra çok kararsızdım. Sayın Fischer ve ekibi uzmanlıkları ve sakin tavırlarıyla bana çok yardımcı oldular. Ameliyat sorunsuz geçti ve sonunda tekrar ağrısızım.",
-        "en": "A wonderful team! After my herniated disc, I was very unsure. Mr. Fischer and his team helped me a lot with their expertise and calm manner. The surgery went smoothly and I am finally pain-free again."
-      },
-      "stars": 5,
-      "author_name": "Thomas M."
+        "ru": "Замечательная команда! После грыжи межпозвоночного диска я был очень не уверен в себе. Господин Фишер и его команда очень помогли мне своим профессионализмом и спокойствием. Операция прошла гладко, и я, наконец, снова живу без боли."
+      }
     },
     {
+      "stars": 5,
+      "author_name": "Anna L.",
       "id": "reviews_2",
       "text": {
-        "tr": "İlk dakikadan itibaren klinikte çok iyi bakıldığımı hissettim. Sayın Fischer mükemmel bir teşhis uzmanı ve benim için doğru tedavi yöntemini hemen buldu. Bilgilendirme birinci sınıftı ve sonraki bakım mükemmeldi.",
-        "ru": "С первой же минуты я почувствовал, что нахожусь в надежных руках. Господин Фишер — превосходный диагност, он сразу подобрал для меня правильный метод лечения. Консультация была на высшем уровне, а последующий уход — превосходным.",
-        "ar": "شعرت بأنني أحظى برعاية جيدة جداً في العيادة منذ الدقيقة الأولى. السيد فيشر مشخص ممتاز ووجد طريقة العلاج الصحيحة لي على الفور. كانت التوضيحات من الدرجة الأولى والرعاية اللاحقة ممتازة.",
         "de": "Ich fühlte mich von der ersten Minute an in der Praxis sehr gut aufgehoben. Herr Fischer ist ein hervorragender Diagnostiker und hat sofort die richtige Behandlungsmethode für mich gefunden. Die Aufklärung war top und die Nachsorge exzellent.",
-        "en": "I felt very well cared for in the practice from the very first minute. Mr. Fischer is an excellent diagnostician and immediately found the right treatment method for me. The explanation was top-notch and the aftercare excellent."
-      },
-      "author_name": "Anna L.",
-      "stars": 5
+        "en": "I felt very well cared for in the practice from the very first minute. Mr. Fischer is an excellent diagnostician and immediately found the right treatment method for me. The explanation was top-notch and the aftercare excellent.",
+        "ar": "شعرت بأنني أحظى برعاية جيدة جداً في العيادة منذ الدقيقة الأولى. السيد فيشر مشخص ممتاز ووجد طريقة العلاج الصحيحة لي على الفور. كانت التوضيحات من الدرجة الأولى والرعاية اللاحقة ممتازة.",
+        "tr": "İlk dakikadan itibaren klinikte çok iyi bakıldığımı hissettim. Sayın Fischer mükemmel bir teşhis uzmanı ve benim için doğru tedavi yöntemini hemen buldu. Bilgilendirme birinci sınıftı ve sonraki bakım mükemmeldi.",
+        "ru": "С первой же минуты я почувствовал, что нахожусь в надежных руках. Господин Фишер — превосходный диагност, он сразу подобрал для меня правильный метод лечения. Консультация была на высшем уровне, а последующий уход — превосходным."
+      }
     }
   ]
 }

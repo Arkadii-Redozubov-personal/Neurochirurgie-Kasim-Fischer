@@ -148,6 +148,7 @@ def sync_pages(data):
 def sync_diagnostik(data):
     items = data.get('diagnostik', [])
     if not items: return
+    items.sort(key=lambda x: x.get('order', 0))
     print(f"\n⏳ Syncing {len(items)} diagnostik items to diagnostik.html...")
     for lang, directory in DIRS.items():
         filepath = os.path.join(directory, 'diagnostik.html')
@@ -155,21 +156,21 @@ def sync_diagnostik(data):
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
             
-        parts = re.split(r'(<h3 class="treatment-title">)(.*?)(</h3>)', content, flags=re.DOTALL)
+        parts = re.split(r'(<h3[^>]*class="[^"]*treatment-title[^"]*"[^>]*>)(.*?)(</h3>)', content, flags=re.DOTALL)
         for i, tr in enumerate(items):
-            title = tr.get(lang, {}).get('title', '')
+            title = tr.get(lang, {}).get('title', '') or tr.get('title', {}).get(lang, '')
             if title and (i*4 + 2) < len(parts): parts[i*4 + 2] = title
         content = "".join(parts)
         
-        parts = re.split(r'(<p class="treatment-desc">)(.*?)(</p>)', content, flags=re.DOTALL)
+        parts = re.split(r'(<p[^>]*class="[^"]*treatment-desc[^"]*"[^>]*>)(.*?)(</p>)', content, flags=re.DOTALL)
         for i, tr in enumerate(items):
-            desc = tr.get(lang, {}).get('desc', '')
+            desc = tr.get(lang, {}).get('desc', '') or tr.get('desc', {}).get(lang, '')
             if desc and (i*4 + 2) < len(parts): parts[i*4 + 2] = desc
         content = "".join(parts)
         
         parts = re.split(r'(<div class="treatment-full-desc"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
         for i, tr in enumerate(items):
-            fd = tr.get(lang, {}).get('full_desc', '')
+            fd = tr.get(lang, {}).get('full_desc', '') or tr.get('full_desc', {}).get(lang, '')
             if fd and (i*4 + 2) < len(parts): parts[i*4 + 2] = fd
         content = "".join(parts)
         
@@ -189,16 +190,14 @@ def sync_faq(data):
             
         parts = re.split(r'(<div class="faq-q"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
         for i, tr in enumerate(items):
-            title = tr.get(lang, {}).get('title', '')
+            title = tr.get(lang, {}).get('title', '') or tr.get('title', {}).get(lang, '')
             if title and (i*4 + 2) < len(parts):
-                # Ensure we don't strip internal HTML unless we are replacing it all. 
-                # Since we extract plain text for now, we'll just replace the whole content inside faq-q.
                 parts[i*4 + 2] = title
         content = "".join(parts)
         
         parts = re.split(r'(<div class="faq-a"[^>]*>)(.*?)(</div>)', content, flags=re.DOTALL)
         for i, tr in enumerate(items):
-            desc = tr.get(lang, {}).get('desc', '')
+            desc = tr.get(lang, {}).get('desc', '') or tr.get('desc', {}).get(lang, '')
             if desc and (i*4 + 2) < len(parts): parts[i*4 + 2] = desc
         content = "".join(parts)
         

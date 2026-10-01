@@ -22,7 +22,10 @@ def download_data():
             'treatments': [],
             'team': [],
             'press': [],
-            'branches': []
+            'branches': [],
+            'diagnostik': [],
+            'faq': [],
+            'reviews': []
         }
         
         for collection_name in data.keys():

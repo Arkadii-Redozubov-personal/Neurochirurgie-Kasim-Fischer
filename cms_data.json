@@ -1,4 +1,4 @@
-window.seedData = {
+{
   "team": [
     {
       "id": "fischer",
@@ -1915,27 +1915,4 @@ window.seedData = {
       }
     }
   ]
-};
-
-window.seedCollection = async function(colName, dataList) {
-  if (!window.db || !window.firestoreOps) return;
-  const { doc, setDoc, deleteDoc, collection, getDocs } = window.firestoreOps;
-  console.log('Seeding collection:', colName, 'with', dataList.length, 'items');
-  for (let i = 0; i < dataList.length; i++) {
-    const item = dataList[i];
-    const docId = item.id || (colName + '_' + (i + 1));
-    await setDoc(doc(window.db, colName, docId), item);
-  }
-};
-
-window.seedAllCollections = async function(onProgress) {
-  if (!window.seedData) return;
-  const collections = ['team', 'schwerpunkte', 'treatments', 'diagnostik', 'faq', 'branches', 'press', 'reviews'];
-  for (let c = 0; c < collections.length; c++) {
-    const name = collections[c];
-    if (window.seedData[name]) {
-      if (onProgress) onProgress(name, c + 1, collections.length);
-      await window.seedCollection(name, window.seedData[name]);
-    }
-  }
-};
+}

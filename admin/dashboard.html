@@ -11,8 +11,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
   <link rel="shortcut icon" href="../favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="admin.css?v=9">
-  <script src="seed.js?v=9"></script>
+  <link rel="stylesheet" href="admin.css?v=11">
+  <script src="seed.js?v=11"></script>
 
   <!-- Inline critical fixes for modal scrolling, tab switching, and layout constraints -->
   <style>
@@ -1527,14 +1527,20 @@
           (!m.img && !m.image)
         );
         const hasKasimEverywhere = (state.team.length > 1 && state.team.every(m => !m.img || m.img.includes('surgeon1.webp')));
-        const hasFakeNames = state.team.some(m => m.name === 'Nese Kirak' || (m.de && m.de.name === 'Nese Kirak'));
+        const hasFakeNames = state.team.some(m => 
+          (m.name && (m.name.includes('Nese') || m.name.includes('David Liu') || m.name.includes('Amira'))) || 
+          (m.de && m.de.name && (m.de.name.includes('Nese') || m.de.name.includes('David Liu') || m.de.name.includes('Amira')))
+        );
         if (hasCorruptName || hasKasimEverywhere || hasFakeNames || state.team.length !== 9) {
           console.warn('Stale/fake team data detected in Firestore! Healing with clean site data...');
           needsHealing = true;
         }
       }
       if (colName === 'schwerpunkte' && state.schwerpunkte.length > 0) {
-        const hasOldSp = state.schwerpunkte.some(sp => (sp.de && sp.de.title === 'Wirbelsäulen-Erkrankungen') || sp.title === 'Wirbelsäulen-Erkrankungen');
+        const hasOldSp = state.schwerpunkte.some(sp => 
+          (sp.de && (sp.de.title === 'Wirbelsäulen-Erkrankungen' || sp.de.title === 'Phantomschmerzen' || (typeof sp.de.title === 'string' && sp.de.title.includes('-test')))) ||
+          sp.title === 'Wirbelsäulen-Erkrankungen' || sp.title === 'Phantomschmerzen'
+        );
         if (hasOldSp || state.schwerpunkte.length !== 17) {
           console.warn('Outdated schwerpunkte detected in Firestore! Healing with clean site data...');
           needsHealing = true;
@@ -1553,14 +1559,17 @@
         }
       }
       if (colName === 'branches' && state.branches.length > 0) {
-        if (state.branches.length !== 3) {
-          console.warn('Outdated branches count detected in Firestore! Healing with clean site data...');
+        const sortedBr = [...state.branches].sort((a,b) => (a.order || 0) - (b.order || 0));
+        const city0 = getField(sortedBr[0], 'city', 'de');
+        if (state.branches.length !== 3 || city0 === 'Viersen') {
+          console.warn('Outdated branches detected in Firestore! Healing with clean site data...');
           needsHealing = true;
         }
       }
       if (colName === 'reviews' && state.reviews.length > 0) {
-        if (state.reviews.length !== 4) {
-          console.warn('Outdated reviews count detected in Firestore! Healing with clean site data...');
+        const hasFakeRev = state.reviews.some(r => r.author_name === 'Sabine K.' || (r.de && r.de.author_name === 'Sabine K.'));
+        if (hasFakeRev || state.reviews.length !== 4) {
+          console.warn('Outdated reviews detected in Firestore! Healing with clean site data...');
           needsHealing = true;
         }
       }

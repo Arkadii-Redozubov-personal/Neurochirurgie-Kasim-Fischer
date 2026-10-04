@@ -267,11 +267,11 @@
         cursor: pointer;
       }
       .map-route-btn {
-        top: 10px;
+        top: 52px;
         right: 10px;
         z-index: 6;
-        padding: 8px 14px;
-        font-size: 0.82rem;
+        padding: 7px 13px;
+        font-size: 0.8rem;
         pointer-events: auto;
       }
     }

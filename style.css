@@ -277,7 +277,11 @@
 
     /* Feature Treatment Section */
     .section-header {
-      display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: -30px;
+      margin-bottom: 32px;
     }
     .section-title { font-size: 3.5rem; font-weight: 800; max-width: 600px; line-height: 1.1; letter-spacing: -1px; }
     .btn-dark {
@@ -324,10 +328,10 @@
     }
     .how-it-works {
       color: white; 
-      padding-top: 100px; padding-bottom: 100px;
+      padding-top: 60px; padding-bottom: 80px;
       text-align: center;
     }
-    .how-title { font-size: 3.5rem; font-weight: 700; margin-bottom: 80px; letter-spacing: -1px; }
+    .how-title { font-size: 3.5rem; font-weight: 700; margin-bottom: 0; letter-spacing: -1px; }
     .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: left; }
     .step-card {
       background: rgba(255,255,255,0.02); border-radius: var(--radius-lg); padding: 32px 24px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s;
@@ -2665,4 +2669,16 @@ html, body {
 .faq-item.active .faq-icon svg,
 .faq-question.active .faq-icon svg {
   stroke: #fff !important;
+}
+
+/* About Section Paragraph Spacing */
+.about-text-content p {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--text-light);
+  margin-bottom: 14px;
+  max-width: 860px;
+}
+.about-text-content p:last-child {
+  margin-bottom: 40px;
 }

@@ -328,7 +328,7 @@
     }
     .how-it-works {
       color: white; 
-      padding-top: 60px; padding-bottom: 80px;
+      padding-top: 80px; padding-bottom: 90px;
       text-align: center;
     }
     .how-title { font-size: 3.5rem; font-weight: 700; margin-bottom: 0; letter-spacing: -1px; }
@@ -2199,11 +2199,13 @@
     grid-template-areas: 
       "title title"
       "form cards" !important;
-    gap: 40px !important;
+    column-gap: 40px !important;
+    row-gap: 60px !important;
     align-items: stretch !important;
   }
   .how-title {
     grid-area: title;
+    margin-bottom: 0 !important;
   }
   .how-it-works.container > form {
     grid-area: form;

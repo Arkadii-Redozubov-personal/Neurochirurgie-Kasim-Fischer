@@ -12,6 +12,7 @@ function sendEmail(e) {
                      document.documentElement.lang === 'en' ? 'Please enter a valid email address.' :
                      document.documentElement.lang === 'tr' ? 'Lütfen geçerli bir e-posta adresi girin.' :
                      document.documentElement.lang === 'ar' ? 'يرجى إدخال عنوان بريد إلكتروني صالح.' :
+                     document.documentElement.lang === 'uz' ? 'Iltimos, toʻgʻri elektron pochta manzilini kiriting.' :
                      'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
     alert(alertMsg);
     emailInput.focus();
@@ -30,7 +31,8 @@ function sendEmail(e) {
     ru: { sending: 'Отправка...', success: 'Сообщение успешно отправлено!', error: 'Ошибка отправки. Пожалуйста, попробуйте позже.' },
     en: { sending: 'Sending...', success: 'Message sent successfully!', error: 'Error sending message. Please try again later.' },
     tr: { sending: 'Gönderiliyor...', success: 'Mesaj başarıyla gönderildi!', error: 'Gönderme hatası. Lütfen daha sonra tekrar deneyin.' },
-    ar: { sending: 'جارٍ الإرسال...', success: 'تم إرسال الرسالة بنجاح!', error: 'حدث خطأ أثناء الإرسال. يرجى المحاولة لاحقاً.' }
+    ar: { sending: 'جارٍ الإرسال...', success: 'تم إرسال الرسالة بنجاح!', error: 'حدث خطأ أثناء الإرسال. يرجى المحاولة لاحقاً.' },
+    uz: { sending: 'Yuborilmoqda...', success: 'Xabar muvaffaqiyatli yuborildi!', error: 'Xatolik yuz berdi. Iltimos, keyinroq qayta urinib koʻring.' }
   };
   const t = texts[lang] || texts.de;
 
@@ -43,7 +45,7 @@ function sendEmail(e) {
   }
 
   // Determine correct endpoint path
-  const isSubdir = /\/(ru|en|tr|ar)\//.test(window.location.pathname);
+  const isSubdir = /\/(ru|en|tr|ar|uz)\//.test(window.location.pathname);
   const endpoint = isSubdir ? '../send-mail.php' : 'send-mail.php';
 
   const formData = new FormData(form);

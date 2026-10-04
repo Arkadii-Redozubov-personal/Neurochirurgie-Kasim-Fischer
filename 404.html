@@ -228,6 +228,7 @@
       <a href="/ru/index.html">Русский (RU)</a>
       <a href="/tr/index.html">Türkçe (TR)</a>
       <a href="/ar/index.html">العربية (AR)</a>
+      <a href="/uz/index.html">Oʻzbekcha (UZ)</a>
     </div>
   </div>
   <a href="/sprechzeiten.html" class="btn-book hidden-mobile" id="btnBook">Termin vereinbaren</a>
@@ -259,6 +260,7 @@
     <a href="/ru/index.html" id="mobLangRu">RU</a>
     <a href="/tr/index.html" id="mobLangTr">TR</a>
     <a href="/ar/index.html" id="mobLangAr">AR</a>
+    <a href="/uz/index.html" id="mobLangUz">UZ</a>
   </div>
 </div>
 
@@ -388,6 +390,7 @@
     else if (path.startsWith('/ru/') || path === '/ru') lang = 'ru';
     else if (path.startsWith('/tr/') || path === '/tr') lang = 'tr';
     else if (path.startsWith('/ar/') || path === '/ar') lang = 'ar';
+    else if (path.startsWith('/uz/') || path === '/uz') lang = 'uz';
 
     if (lang === 'de') return;
 
@@ -399,7 +402,7 @@
     if (langEl) langEl.innerHTML = lang.toUpperCase() + ' <span>▼</span>';
 
     // Mobile Language Switcher Active Class
-    const mobLangs = ['de', 'en', 'ru', 'tr', 'ar'];
+    const mobLangs = ['de', 'en', 'ru', 'tr', 'ar', 'uz'];
     mobLangs.forEach(l => {
       const el = document.getElementById('mobLang' + l.charAt(0).toUpperCase() + l.slice(1));
       if (el) {
@@ -548,6 +551,41 @@
         footPrivacy: 'سياسة الخصوصية',
         footWeekend: 'السبت - الأحد: مغلق',
         footerCopy: '© 2026 NabiOta Health Group Germany. جميع الحقوق محفوظة.'
+      },
+      uz: {
+        pageTitle: '404 – Sahifa topilmadi | Neurochirurgie Fischer',
+        title: 'Kechirasiz, ushbu sahifa topilmadi',
+        desc: 'Siz qidirayotgan sahifa topilmadi. Manzil oʻzgargan yoki sahifa koʻchirilgan boʻlishi mumkin.',
+        home: 'Bosh sahifaga qaytish',
+        contact: 'Qabul vaqtlari va manzillar',
+        book: 'Onlayn qabulga yozilish',
+        teamT: 'Bizning jamoa', teamS: 'Shifokorlar, mutaxassislar va tibbiy xodimlar',
+        spT: 'Klinik yoʻnalishlar', spS: 'Umurtqa pogʻonasi va periferik asab tizimi kasalliklari',
+        trT: 'Davolash va operatsiyalar', trS: 'Konservativ va jarrohlik usullari',
+        faqT: 'Bemorlar va Savol-Javob', faqS: 'Muhim savollar va qabulga yozilish maʼlumotlari',
+        // Navbar
+        navHome: 'Bosh sahifa',
+        navPraxis: 'Klinika',
+        navServices: 'Xizmatlar',
+        navDiseases: 'Kasalliklar',
+        navDiagnostics: 'Diagnostika',
+        navTreatments: 'Davolash va operatsiyalar',
+        navOpinion: 'Ikkinchi fikr',
+        navPatients: 'Bemorlarga',
+        navPress: 'Matbuot',
+        navContact: 'Aloqa',
+        btnBook: 'Qabulga yozilish',
+        // Footer
+        footHeadServices: 'XIZMATLAR',
+        footHeadPraxis: 'KLINIKA',
+        footHeadHours: 'QABUL VAQTLARI',
+        footAbout: 'Biz haqimizda',
+        footTeam: 'Bizning jamoa',
+        footPress: 'Matbuot',
+        footImpressum: 'Imprint',
+        footPrivacy: 'Maxfiylik siyosati',
+        footWeekend: 'Shan - Yak: Yopiq',
+        footerCopy: '© 2026 NabiOta Health Group Germany. Barcha huquqlar himoyalangan.'
       }
     };
 

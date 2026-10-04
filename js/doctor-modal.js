@@ -578,6 +578,105 @@
           ]
         }
       }
+    },
+    uz: {
+      labels: {
+        qual: 'Mutaxassislik va ilmiy daraja',
+        exp: 'Mehnat faoliyati va tajriba',
+        focus: 'Klinik yoʻnalishlar va malaka',
+        close: 'Yopish'
+      },
+      doctors: {
+        fischer: {
+          name: 'Dr. med. Kasim Fischer-Rahimov',
+          img: 'img/surgeon1.webp',
+          role: 'Neyroxirurg mutaxassisi · Klinika rahbari',
+          degree: 'Tibbiyot fanlari doktori (Dr. med.) · Shifokorlar murabbiyi',
+          qual: 'Neyroxirurgiya boʻyicha mutaxassis (2006) · Umurtqa jarrohligi boʻyicha sertifikatlangan ekspert · Qoʻshimcha malakalar: Maxsus ogʻriq terapiyasi (2015), Psixosomatik terapiya (2015), Akupunktura · Amaliyotchi shifokor va rasmiy murabbiy.',
+          experience: [
+            'Irkutsk Davlat Tibbiyot Universiteti va Shifokorlar malakasini oshirish institutida davolash ishi boʻyicha tahsil (1992–2000)',
+            'Yena Universiteti Klinikasi va Klinikum Meiningen GmbH da neyroxirurgiya mutaxassisligi boʻyicha rezidentura (2003–2008)',
+            'Neyroxirurgiya mutaxassisi diplomi (2006)',
+            'Köln Merheim klinikasida neyroxirurgiya boʻlimi katta shifokori (Oberarzt) (2009)',
+            'MHO Osnabrück klinikasida yetakchi katta shifokor (2011)',
+            'Mikroneurochirurgie mbH Gensingen bosh shifokori (2013)',
+            'Maxsus NCH-ogʻriq terapiyasi va psixosomatika boʻyicha qoʻshimcha malakalar (2015)',
+            'Mönchengladbach shahrida oʻzining shaxsiy neyroxirurgiya klinikasiga asos solishi (2015)',
+            'Doktorlik dissertatsiyasi (Dr. med.): Quduq-dumgʻaza boʻgʻimlarini fiksatsiyalashda minimal invaziv usullarni qiyosiy tahlili (2023)'
+          ],
+          focus: [
+            'Minimal invaziv umurtqa jarrohligi',
+            'Mikroxirurgik dekompressiya',
+            'Disk endoprotezlash (boʻyin va bel)',
+            'Ixtisoslashgan ogʻriq terapiyasi',
+            'ISG fiksatsiyasi va faset boʻgʻimlari',
+            'Psixosomatik yordam'
+          ]
+        },
+        hristov: {
+          name: 'Dr. med. Tanyo B. Hristov',
+          img: 'img/team_tanyo.webp',
+          role: 'Neyroxirurg mutaxassisi · Filial rahbari',
+          degree: 'Doktorlik unvoni (Dr. med., magna cum laude) · Neyroxirurg mutaxassisi',
+          qual: 'Neyroxirurgiya mutaxassisi (Shimoliy Reyn Tibbiyot Palatasi, 2016) · DWG Umurtqa jarrohligi asosiy sertifikati (2017) · Radiatsiyaviy xavfsizlik (2020) · Funksional tibbiyot sertifikatlangan terapevti (2026).',
+          experience: [
+            'Köln Universitetida davolash ishi boʻyicha tahsil (2003–2009), Tibbiy litsenziya (Approbation 2010)',
+            'Köln Universiteti Klinikasi Anatomiya institutida doktorlik dissertatsiyasi (Dr. med., magna cum laude, 2010)',
+            'Köln-Merheim kasalxonasida neyroxirurgiya rezidenti (2010–2016)',
+            'Prof. D. Debatisse rahbarligida neyrofiziologiya mentorligi, CHUV Lozanna (2010–2011)',
+            'Neyroxirurgiya mutaxassisi diplomi (2016)',
+            'Rhein-Maas-Klinikum Würselen da umurtqa jarrohligi va neyroxirurgiya boʻyicha katta shifokor (2018)',
+            'LVR Viersen ortopediya klinikasida umurtqa jarrohligi boʻlimi boshligʻi (2018–2023)',
+            'Bel Etage Düsseldorf klinikasida konsultatsiyachi neyroxirurg (2023–2025)',
+            'HRISTOV medical asoschisi / Kölnda shaxsiy amaliyot (2024-yildan)',
+            'Mönchengladbach neyroxirurgiya klinikasida filial rahbari va yetakchi neyroxirurg'
+          ],
+          focus: [
+            'Sunʼiy disk protezlash (boʻyin va bel)',
+            'Umurtqaning barcha qismlaridagi degenerativ kasalliklar',
+            'Murakkab va rekonstruktiv umurtqa operatsiyalari',
+            'Minimal invaziv usullar (PLIF, MIS TLIF, ALIF, OLIF, XLIF)',
+            'Degenerativ va travmatik deformatsiyalar hamda beqarorlik',
+            'Surunkali ogʻriqlarni davolash (SCS orqa miya stimulyatsiyasi)',
+            'ISG sintezi va tos suyagi fiksatsiyasi'
+          ]
+        },
+        pirmoradi: {
+          name: 'Janob Habib Pirmoradi',
+          img: 'img/team_habib.webp',
+          role: 'Neyroxirurgiya shifokor-rezidenti',
+          degree: 'Neyroxirurgiya shifokor-rezidenti',
+          qual: 'Neyroxirurgiya boʻyicha shifokor-rezident · Klinik koʻrik, ambulator operatsiyalar va operatsiyadan keyingi parvarishlashda koʻp yillik tajriba.',
+          experience: [
+            'Eron va Germaniyada umumiy tibbiyot boʻyicha tahsil',
+            'Neyroxirurgiya boʻyicha amaliyot va ixtisoslashuv',
+            'Operatsiyaga tayyorgarlik va operatsiyadan keyingi davolashda faol ishtirok'
+          ],
+          focus: [
+            'Klinik neyroxirurgik tekshiruvlar',
+            'Konservativ umurtqa davolash',
+            'Inyeksion terapiya va blokadalar',
+            'Bemorlarni operatsiyaga tayyorlash'
+          ]
+        },
+        khabibullin: {
+          name: 'Janob Timur Khabibullin',
+          img: 'img/team_timur.webp',
+          role: 'Assistent shifokor',
+          degree: 'Assistent shifokor',
+          qual: 'Assistent shifokor · Bemorlarning kundalik tibbiy nazorati va neyroxirurgik amaliyotlarda koʻmakchi shifokor.',
+          experience: [
+            'Tibbiyot oliy taʼlim muassasasida davolash ishi boʻyicha tahsil',
+            'Neyroxirurgik va ortopedik bemorlarni davolashda klinik tajriba',
+            'Neyroxirurgiya Fischer klinikasida bemorlar parvarishi va davolash jamoasi aʼzosi'
+          ],
+          focus: [
+            'Neyroxirurgik bemorlar nazorati',
+            'Umurtqa kasalliklarini konservativ davolash',
+            'Koʻp tillarda tibbiy xizmat (nemis, rus, ingliz, tojik, turk tillarida)'
+          ]
+        }
+      }
     }
   };
 
@@ -588,11 +687,13 @@
     if (htmlLang.startsWith('ru')) return 'ru';
     if (htmlLang.startsWith('tr')) return 'tr';
     if (htmlLang.startsWith('ar')) return 'ar';
+    if (htmlLang.startsWith('uz')) return 'uz';
     const path = window.location.pathname;
     if (path.includes('/en/')) return 'en';
     if (path.includes('/ru/')) return 'ru';
     if (path.includes('/tr/')) return 'tr';
     if (path.includes('/ar/')) return 'ar';
+    if (path.includes('/uz/')) return 'uz';
     return 'de';
   }
 

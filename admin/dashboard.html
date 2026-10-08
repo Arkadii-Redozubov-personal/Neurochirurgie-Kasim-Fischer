@@ -1542,6 +1542,35 @@
   }
 
   // Safe Member Image Extractor
+  
+  function getModalField(item, field, lang = 'de', col = 'schwerpunkte') {
+    if (!item) return '';
+    const itemDesc = (item[lang] && item[lang].desc) || item.desc || '';
+    // 1. Direct field on item[lang] (ensure it is NOT identical to card desc)
+    if (item[lang] && item[lang][field] !== undefined) {
+      const val = extractText(item[lang][field], lang);
+      if (val && val !== itemDesc) return val;
+    }
+    if (item[field] !== undefined && typeof item[field] === 'string') {
+      const val = extractText(item[field], lang);
+      if (val && val !== itemDesc) return val;
+    }
+    // 2. Lookup from seedData if missing or if it was identical to desc
+    if (window.seedData && window.seedData[col]) {
+      const match = window.seedData[col].find(x => 
+        (item.id && x.id === item.id) || 
+        (x.order !== undefined && item.order !== undefined && x.order === item.order) ||
+        (x.de && item.de && x.de.title === item.de.title)
+      );
+      if (match) {
+        if (match[lang] && match[lang][field] !== undefined) return extractText(match[lang][field], lang);
+        if (match.de && match.de[field] !== undefined) return extractText(match.de[field], 'de');
+        if (match[field] !== undefined) return extractText(match[field], lang);
+      }
+    }
+    return '';
+  }
+
   function getMemberImage(m) {
     if (!m) return 'img/team_tanyo.webp';
     // If Dr. Fischer himself
@@ -1623,6 +1652,28 @@
           console.warn('Stale/fake team data detected in Firestore! Healing with clean site data...');
           needsHealing = true;
         }
+      }
+      if (colName === 'schwerpunkte' || colName === 'treatments') {
+        state[colName].forEach(it => {
+          const match = window.seedData?.[colName]?.find(x => 
+            (it.id && x.id === it.id) || 
+            (x.order !== undefined && it.order !== undefined && x.order === it.order) ||
+            (x.de && it.de && x.de.title === it.de.title)
+          );
+          if (match) {
+            LANGS.forEach(l => {
+              if (!it[l]) it[l] = {};
+              const d = it[l].desc || it.desc || '';
+              if (!it[l].modalSubtitle && match[l]?.modalSubtitle) it[l].modalSubtitle = match[l].modalSubtitle;
+              if ((!it[l].modalContent || it[l].modalContent === d) && match[l]?.modalContent) it[l].modalContent = match[l].modalContent;
+              if (!it[l].modalSteps && match[l]?.modalSteps) it[l].modalSteps = match[l].modalSteps;
+              if (colName === 'treatments') {
+                if ((!it[l].fullDesc || it[l].fullDesc === d) && match[l]?.fullDesc) it[l].fullDesc = match[l].fullDesc;
+                if (!it[l].modalAlert && match[l]?.modalAlert) it[l].modalAlert = match[l].modalAlert;
+              }
+            });
+          }
+        });
       }
       if (colName === 'schwerpunkte' && state.schwerpunkte.length > 0) {
         const hasOldSp = state.schwerpunkte.some(sp => 
@@ -1920,7 +1971,7 @@
 
           <div class="form-group" style="margin-bottom: 14px;">
             <label class="form-label">Modal Untertitel (${lang.toUpperCase()})</label>
-            <input type="text" id="sp-modal-subtitle-${lang}" class="form-input" placeholder="z. B. Symptome, Verlauf, Behandlung und typischer Operationsablauf" value="${getField(item, 'modalSubtitle', lang)}">
+            <input type="text" id="sp-modal-subtitle-${lang}" class="form-input" placeholder="z. B. Symptome, Verlauf, Behandlung und typischer Operationsablauf" value="${getModalField(item, 'modalSubtitle', lang, 'schwerpunkte')}">
           </div>
 
           <div class="form-group" style="margin-bottom: 14px;">
@@ -1933,7 +1984,7 @@
                 <button type="button" class="btn-fmt" onclick="insertFormatting('sp-modal-content-${lang}', 'li')" title="Aufzählung">&lt;li&gt;</button>
               </div>
             </div>
-            <textarea id="sp-modal-content-${lang}" class="form-input" style="min-height: 130px; font-family: monospace; font-size: 0.88rem;" placeholder="Haupttext und Abschnitte für das Pop-up Fenster...">${getField(item, 'modalContent', lang) || getField(item, 'desc', lang)}</textarea>
+            <textarea id="sp-modal-content-${lang}" class="form-input" style="min-height: 140px; font-family: inherit; font-size: 0.9rem;" placeholder="Haupttext und Abschnitte für das Pop-up Fenster...">${getModalField(item, 'modalContent', lang, 'schwerpunkte')}</textarea>
           </div>
 
           <div class="form-group">
@@ -1946,7 +1997,7 @@
                 <button type="button" class="btn-fmt" onclick="insertFormatting('sp-modal-steps-${lang}', 'li')" title="Aufzählung">&lt;li&gt;</button>
               </div>
             </div>
-            <textarea id="sp-modal-steps-${lang}" class="form-input" style="min-height: 90px; font-family: monospace; font-size: 0.88rem;" placeholder="Ablaufschritte, Hinweise oder ergänzende Informationen...">${getField(item, 'modalSteps', lang)}</textarea>
+            <textarea id="sp-modal-steps-${lang}" class="form-input" style="min-height: 100px; font-family: inherit; font-size: 0.9rem;" placeholder="Ablaufschritte, Hinweise oder ergänzende Informationen...">${getModalField(item, 'modalSteps', lang, 'schwerpunkte')}</textarea>
           </div>
         </div>
       </div>
@@ -2194,7 +2245,7 @@
 
           <div class="form-group" style="margin-bottom: 14px;">
             <label class="form-label">Modal Untertitel (${lang.toUpperCase()})</label>
-            <input type="text" id="treat-subtitle-${lang}" class="form-input" placeholder="z. B. Mikrochirurgische und endoskopische Eingriffe zur Nervenwurzelentlastung" value="${getField(item, 'modalSubtitle', lang)}">
+            <input type="text" id="treat-subtitle-${lang}" class="form-input" placeholder="z. B. Mikrochirurgische und endoskopische Eingriffe zur Nervenwurzelentlastung" value="${getModalField(item, 'modalSubtitle', lang, 'treatments')}">
           </div>
 
           <div class="form-group" style="margin-bottom: 14px;">
@@ -2207,7 +2258,7 @@
                 <button type="button" class="btn-fmt" onclick="insertFormatting('treat-fulldesc-${lang}', 'li')" title="Aufzählung">&lt;li&gt;</button>
               </div>
             </div>
-            <textarea id="treat-fulldesc-${lang}" class="form-input" style="min-height: 130px; font-family: monospace; font-size: 0.88rem;" placeholder="Detaillierte Informationen, Ziel der Operation, Nutzen...">${getField(item, 'fullDesc', lang) || getField(item, 'modalContent', lang) || getField(item, 'desc', lang)}</textarea>
+            <textarea id="treat-fulldesc-${lang}" class="form-input" style="min-height: 140px; font-family: inherit; font-size: 0.9rem;" placeholder="Detaillierte Informationen, Ziel der Operation, Nutzen...">${getModalField(item, 'fullDesc', lang, 'treatments') || getModalField(item, 'modalContent', lang, 'treatments')}</textarea>
           </div>
 
           <div class="form-group" style="margin-bottom: 14px;">
@@ -2220,12 +2271,12 @@
                 <button type="button" class="btn-fmt" onclick="insertFormatting('treat-steps-${lang}', 'li')" title="Aufzählung">&lt;li&gt;</button>
               </div>
             </div>
-            <textarea id="treat-steps-${lang}" class="form-input" style="min-height: 90px; font-family: monospace; font-size: 0.88rem;" placeholder="1. Vorbereitung, 2. Operation, 3. Nachsorge...">${getField(item, 'modalSteps', lang)}</textarea>
+            <textarea id="treat-steps-${lang}" class="form-input" style="min-height: 100px; font-family: inherit; font-size: 0.9rem;" placeholder="1. Vorbereitung, 2. Operation, 3. Nachsorge...">${getModalField(item, 'modalSteps', lang, 'treatments')}</textarea>
           </div>
 
           <div class="form-group">
             <label class="form-label">Dringender Hinweis / Notiz (${lang.toUpperCase()})</label>
-            <input type="text" id="treat-alert-${lang}" class="form-input" placeholder="z. B. Neu auftretende Lähmungen müssen unverzüglich ärztlich abgeklärt werden." value="${getField(item, 'modalAlert', lang)}">
+            <input type="text" id="treat-alert-${lang}" class="form-input" placeholder="z. B. Neu auftretende Lähmungen müssen unverzüglich ärztlich abgeklärt werden." value="${getModalField(item, 'modalAlert', lang, 'treatments')}">
           </div>
         </div>
       </div>

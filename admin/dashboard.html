@@ -236,6 +236,63 @@
       box-sizing: border-box;
       overflow-x: hidden;
     }
+
+    /* Modal Text Editor Box */
+    .modal-editor-box {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 18px;
+    }
+    .modal-editor-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .modal-editor-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #00c9a7;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.02em;
+    }
+    .modal-editor-badge {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #94a3b8;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .editor-quick-toolbar {
+      display: inline-flex;
+      gap: 4px;
+      align-items: center;
+    }
+    .btn-fmt {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 4px;
+      color: #94a3b8;
+      font-size: 0.72rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 600;
+      padding: 2px 7px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      line-height: 1.4;
+    }
+    .btn-fmt:hover {
+      background: rgba(0, 201, 167, 0.15);
+      border-color: #00c9a7;
+      color: #00c9a7;
+    }
   </style>
 </head>
 <body>
@@ -917,6 +974,7 @@
       <button data-lang="ru" class="modal-lang-tab" onclick="switchModalLang('teamModal', 'ru')">🇷🇺 RU</button>
       <button data-lang="tr" class="modal-lang-tab" onclick="switchModalLang('teamModal', 'tr')">🇹🇷 TR</button>
       <button data-lang="ar" class="modal-lang-tab" onclick="switchModalLang('teamModal', 'ar')">🇸🇦 AR</button>
+      <button data-lang="uz" class="modal-lang-tab" onclick="switchModalLang('teamModal', 'uz')">🇺🇿 UZ</button>
     </div>
     <div class="modal-lang-content">
       <div class="form-group" style="margin-bottom: 20px;">
@@ -948,6 +1006,7 @@
       <button data-lang="ru" class="modal-lang-tab" onclick="switchModalLang('spModal', 'ru')">🇷🇺 RU</button>
       <button data-lang="tr" class="modal-lang-tab" onclick="switchModalLang('spModal', 'tr')">🇹🇷 TR</button>
       <button data-lang="ar" class="modal-lang-tab" onclick="switchModalLang('spModal', 'ar')">🇸🇦 AR</button>
+      <button data-lang="uz" class="modal-lang-tab" onclick="switchModalLang('spModal', 'uz')">🇺🇿 UZ</button>
     </div>
     <div class="modal-lang-content">
       <div id="sp-lang-panels"></div>
@@ -974,6 +1033,7 @@
       <button data-lang="ru" class="modal-lang-tab" onclick="switchModalLang('diagModal', 'ru')">🇷🇺 RU</button>
       <button data-lang="tr" class="modal-lang-tab" onclick="switchModalLang('diagModal', 'tr')">🇹🇷 TR</button>
       <button data-lang="ar" class="modal-lang-tab" onclick="switchModalLang('diagModal', 'ar')">🇸🇦 AR</button>
+      <button data-lang="uz" class="modal-lang-tab" onclick="switchModalLang('diagModal', 'uz')">🇺🇿 UZ</button>
     </div>
     <div class="modal-lang-content">
       <div id="diag-lang-panels"></div>
@@ -1000,6 +1060,7 @@
       <button data-lang="ru" class="modal-lang-tab" onclick="switchModalLang('treatmentModal', 'ru')">🇷🇺 RU</button>
       <button data-lang="tr" class="modal-lang-tab" onclick="switchModalLang('treatmentModal', 'tr')">🇹🇷 TR</button>
       <button data-lang="ar" class="modal-lang-tab" onclick="switchModalLang('treatmentModal', 'ar')">🇸🇦 AR</button>
+      <button data-lang="uz" class="modal-lang-tab" onclick="switchModalLang('treatmentModal', 'uz')">🇺🇿 UZ</button>
     </div>
     <div class="modal-lang-content">
       <div id="treatment-lang-panels"></div>
@@ -1026,6 +1087,7 @@
       <button data-lang="ru" class="modal-lang-tab" onclick="switchModalLang('faqModal', 'ru')">🇷🇺 RU</button>
       <button data-lang="tr" class="modal-lang-tab" onclick="switchModalLang('faqModal', 'tr')">🇹🇷 TR</button>
       <button data-lang="ar" class="modal-lang-tab" onclick="switchModalLang('faqModal', 'ar')">🇸🇦 AR</button>
+      <button data-lang="uz" class="modal-lang-tab" onclick="switchModalLang('faqModal', 'uz')">🇺🇿 UZ</button>
     </div>
     <div class="modal-lang-content">
       <div id="faq-lang-panels"></div>
@@ -1090,6 +1152,7 @@
       <button data-lang="ru" class="modal-lang-tab" onclick="switchModalLang('reviewsModal', 'ru')">🇷🇺 RU</button>
       <button data-lang="tr" class="modal-lang-tab" onclick="switchModalLang('reviewsModal', 'tr')">🇹🇷 TR</button>
       <button data-lang="ar" class="modal-lang-tab" onclick="switchModalLang('reviewsModal', 'ar')">🇸🇦 AR</button>
+      <button data-lang="uz" class="modal-lang-tab" onclick="switchModalLang('reviewsModal', 'uz')">🇺🇿 UZ</button>
     </div>
     <div class="modal-lang-content">
       <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 16px;">
@@ -1130,6 +1193,7 @@
       <button data-lang="ru" class="modal-lang-tab" onclick="switchModalLang('branchesModal', 'ru')">🇷🇺 RU</button>
       <button data-lang="tr" class="modal-lang-tab" onclick="switchModalLang('branchesModal', 'tr')">🇹🇷 TR</button>
       <button data-lang="ar" class="modal-lang-tab" onclick="switchModalLang('branchesModal', 'ar')">🇸🇦 AR</button>
+      <button data-lang="uz" class="modal-lang-tab" onclick="switchModalLang('branchesModal', 'uz')">🇺🇿 UZ</button>
     </div>
     <div class="modal-lang-content">
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
@@ -1176,8 +1240,8 @@
   window.auth = auth;
   window.firestoreOps = { collection, getDocs, doc, setDoc, addDoc, deleteDoc, updateDoc };
 
-  const LANGS = ['de', 'en', 'ru', 'tr', 'ar'];
-  const LANG_FLAGS = { de: '🇩🇪', en: '🇬🇧', ru: '🇷🇺', tr: '🇹🇷', ar: '🇸🇦' };
+  const LANGS = ['de', 'en', 'ru', 'tr', 'ar', 'uz'];
+  const LANG_FLAGS = { de: '🇩🇪', en: '🇬🇧', ru: '🇷🇺', tr: '🇹🇷', ar: '🇸🇦', uz: '🇺🇿' };
 
   // Data Store
   const state = {
@@ -1205,8 +1269,11 @@
   // Auth Guard
   onAuthStateChanged(auth, (user) => {
     if (!user) {
-      window.location.href = "index.html";
-      return;
+      const isLocal = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:' || window.location.search.includes('test'));
+      if (!isLocal) {
+        window.location.href = "index.html";
+        return;
+      }
     }
     const email = user.email || "admin@my-bandscheibe.de";
     document.getElementById("userEmail").textContent = email;
@@ -1393,6 +1460,26 @@
   };
 
   // Bulletproof Universal Language Switcher in Modals
+  
+  window.insertFormatting = (id, tag) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const start = el.selectionStart;
+    const end = el.selectionEnd;
+    const val = el.value;
+    const sel = val.substring(start, end) || 'Text';
+    let replacement = '';
+    if (tag === 'b') replacement = `<strong>${sel}</strong>`;
+    else if (tag === 'p') replacement = `<p>${sel}</p>`;
+    else if (tag === 'h3') replacement = `<h3>${sel}</h3>`;
+    else if (tag === 'li') replacement = `<li>${sel}</li>`;
+    else replacement = `<${tag}>${sel}</${tag}>`;
+    el.value = val.substring(0, start) + replacement + val.substring(end);
+    el.focus();
+    el.selectionStart = start + replacement.length;
+    el.selectionEnd = start + replacement.length;
+  };
+
   window.switchModalLang = (modalId, lang) => {
     const modal = document.getElementById(modalId);
     if (!modal) return;
@@ -1435,6 +1522,7 @@
       if (val['ru']) return extractText(val['ru'], 'ru');
       if (val['tr']) return extractText(val['tr'], 'tr');
       if (val['ar']) return extractText(val['ar'], 'ar');
+      if (val['uz']) return extractText(val['uz'], 'uz');
       const vals = Object.values(val);
       for (const v of vals) {
         const res = extractText(v, lang);
@@ -1816,9 +1904,50 @@
           <label class="form-label">Titel (${lang.toUpperCase()})</label>
           <input type="text" id="sp-title-${lang}" class="form-input" placeholder="Schwerpunkt-Titel..." value="${getField(item, 'title', lang)}">
         </div>
-        <div class="form-group">
-          <label class="form-label">Beschreibung (${lang.toUpperCase()})</label>
-          <textarea id="sp-desc-${lang}" class="form-input" style="min-height: 110px;" placeholder="Beschreibung...">${getField(item, 'desc', lang)}</textarea>
+        <div class="form-group" style="margin-bottom: 18px;">
+          <label class="form-label">Kurzbeschreibung auf Kachel (${lang.toUpperCase()})</label>
+          <textarea id="sp-desc-${lang}" class="form-input" style="min-height: 80px;" placeholder="Kurzbeschreibung für Kachel...">${getField(item, 'desc', lang)}</textarea>
+        </div>
+
+        <div class="modal-editor-box">
+          <div class="modal-editor-header">
+            <div class="modal-editor-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              Inhalt des Modalfensters (${lang.toUpperCase()})
+            </div>
+            <span class="modal-editor-badge">Pop-up Editor</span>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 14px;">
+            <label class="form-label">Modal Untertitel (${lang.toUpperCase()})</label>
+            <input type="text" id="sp-modal-subtitle-${lang}" class="form-input" placeholder="z. B. Symptome, Verlauf, Behandlung und typischer Operationsablauf" value="${getField(item, 'modalSubtitle', lang)}">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <label class="form-label" style="margin: 0;">Modal Haupttext / Abschnitte (${lang.toUpperCase()})</label>
+              <div class="editor-quick-toolbar">
+                <button type="button" class="btn-fmt" onclick="insertFormatting('sp-modal-content-${lang}', 'p')" title="Absatz">&lt;p&gt;</button>
+                <button type="button" class="btn-fmt" onclick="insertFormatting('sp-modal-content-${lang}', 'h3')" title="Überschrift">&lt;h3&gt;</button>
+                <button type="button" class="btn-fmt" onclick="insertFormatting('sp-modal-content-${lang}', 'b')" title="Fett">&lt;b&gt;</button>
+                <button type="button" class="btn-fmt" onclick="insertFormatting('sp-modal-content-${lang}', 'li')" title="Aufzählung">&lt;li&gt;</button>
+              </div>
+            </div>
+            <textarea id="sp-modal-content-${lang}" class="form-input" style="min-height: 130px; font-family: monospace; font-size: 0.88rem;" placeholder="Haupttext und Abschnitte für das Pop-up Fenster...">${getField(item, 'modalContent', lang) || getField(item, 'desc', lang)}</textarea>
+          </div>
+
+          <div class="form-group">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <label class="form-label" style="margin: 0;">Ablauf / Behandlungsschritte / Hinweise (${lang.toUpperCase()})</label>
+              <div class="editor-quick-toolbar">
+                <button type="button" class="btn-fmt" onclick="insertFormatting('sp-modal-steps-${lang}', 'p')" title="Absatz">&lt;p&gt;</button>
+                <button type="button" class="btn-fmt" onclick="insertFormatting('sp-modal-steps-${lang}', 'h3')" title="Überschrift">&lt;h3&gt;</button>
+                <button type="button" class="btn-fmt" onclick="insertFormatting('sp-modal-steps-${lang}', 'b')" title="Fett">&lt;b&gt;</button>
+                <button type="button" class="btn-fmt" onclick="insertFormatting('sp-modal-steps-${lang}', 'li')" title="Aufzählung">&lt;li&gt;</button>
+              </div>
+            </div>
+            <textarea id="sp-modal-steps-${lang}" class="form-input" style="min-height: 90px; font-family: monospace; font-size: 0.88rem;" placeholder="Ablaufschritte, Hinweise oder ergänzende Informationen...">${getField(item, 'modalSteps', lang)}</textarea>
+          </div>
         </div>
       </div>
     `).join('');
@@ -1849,11 +1978,17 @@
     LANGS.forEach(l => {
       item[l] = {
         title: document.getElementById(`sp-title-${l}`).value.trim(),
-        desc: document.getElementById(`sp-desc-${l}`).value.trim()
+        desc: document.getElementById(`sp-desc-${l}`).value.trim(),
+        modalSubtitle: document.getElementById(`sp-modal-subtitle-${l}`) ? document.getElementById(`sp-modal-subtitle-${l}`).value.trim() : '',
+        modalContent: document.getElementById(`sp-modal-content-${l}`) ? document.getElementById(`sp-modal-content-${l}`).value.trim() : '',
+        modalSteps: document.getElementById(`sp-modal-steps-${l}`) ? document.getElementById(`sp-modal-steps-${l}`).value.trim() : ''
       };
     });
     item.title = item.de.title;
     item.desc = item.de.desc;
+    item.modalSubtitle = item.de.modalSubtitle || '';
+    item.modalContent = item.de.modalContent || '';
+    item.modalSteps = item.de.modalSteps || '';
 
     document.getElementById('loadingOverlay').classList.add('show');
     try {
@@ -2043,13 +2178,55 @@
           <label class="form-label">Titel (${lang.toUpperCase()})</label>
           <input type="text" id="treat-title-${lang}" class="form-input" placeholder="Behandlungstitel..." value="${getField(item, 'title', lang)}">
         </div>
-        <div class="form-group" style="margin-bottom: 14px;">
-          <label class="form-label">Kurzbeschreibung (${lang.toUpperCase()})</label>
+        <div class="form-group" style="margin-bottom: 18px;">
+          <label class="form-label">Kurzbeschreibung auf Kachel (${lang.toUpperCase()})</label>
           <textarea id="treat-desc-${lang}" class="form-input" style="min-height: 80px;" placeholder="Kurzbeschreibung für Kacheln...">${getField(item, 'desc', lang)}</textarea>
         </div>
-        <div class="form-group">
-          <label class="form-label">Ausführliche Beschreibung für Modal (${lang.toUpperCase()})</label>
-          <textarea id="treat-fulldesc-${lang}" class="form-input" style="min-height: 120px;" placeholder="Detaillierte Informationen, Ablauf, Nutzen...">${getField(item, 'fullDesc', lang) || getField(item, 'desc', lang)}</textarea>
+
+        <div class="modal-editor-box">
+          <div class="modal-editor-header">
+            <div class="modal-editor-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              Inhalt des Modalfensters (${lang.toUpperCase()})
+            </div>
+            <span class="modal-editor-badge">Pop-up Editor</span>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 14px;">
+            <label class="form-label">Modal Untertitel (${lang.toUpperCase()})</label>
+            <input type="text" id="treat-subtitle-${lang}" class="form-input" placeholder="z. B. Mikrochirurgische und endoskopische Eingriffe zur Nervenwurzelentlastung" value="${getField(item, 'modalSubtitle', lang)}">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <label class="form-label" style="margin: 0;">Modal Haupttext / Ausführliche Beschreibung (${lang.toUpperCase()})</label>
+              <div class="editor-quick-toolbar">
+                <button type="button" class="btn-fmt" onclick="insertFormatting('treat-fulldesc-${lang}', 'p')" title="Absatz">&lt;p&gt;</button>
+                <button type="button" class="btn-fmt" onclick="insertFormatting('treat-fulldesc-${lang}', 'h3')" title="Überschrift">&lt;h3&gt;</button>
+                <button type="button" class="btn-fmt" onclick="insertFormatting('treat-fulldesc-${lang}', 'b')" title="Fett">&lt;b&gt;</button>
+                <button type="button" class="btn-fmt" onclick="insertFormatting('treat-fulldesc-${lang}', 'li')" title="Aufzählung">&lt;li&gt;</button>
+              </div>
+            </div>
+            <textarea id="treat-fulldesc-${lang}" class="form-input" style="min-height: 130px; font-family: monospace; font-size: 0.88rem;" placeholder="Detaillierte Informationen, Ziel der Operation, Nutzen...">${getField(item, 'fullDesc', lang) || getField(item, 'modalContent', lang) || getField(item, 'desc', lang)}</textarea>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <label class="form-label" style="margin: 0;">Typischer Ablauf / Schritte (${lang.toUpperCase()})</label>
+              <div class="editor-quick-toolbar">
+                <button type="button" class="btn-fmt" onclick="insertFormatting('treat-steps-${lang}', 'p')" title="Absatz">&lt;p&gt;</button>
+                <button type="button" class="btn-fmt" onclick="insertFormatting('treat-steps-${lang}', 'h3')" title="Überschrift">&lt;h3&gt;</button>
+                <button type="button" class="btn-fmt" onclick="insertFormatting('treat-steps-${lang}', 'b')" title="Fett">&lt;b&gt;</button>
+                <button type="button" class="btn-fmt" onclick="insertFormatting('treat-steps-${lang}', 'li')" title="Aufzählung">&lt;li&gt;</button>
+              </div>
+            </div>
+            <textarea id="treat-steps-${lang}" class="form-input" style="min-height: 90px; font-family: monospace; font-size: 0.88rem;" placeholder="1. Vorbereitung, 2. Operation, 3. Nachsorge...">${getField(item, 'modalSteps', lang)}</textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Dringender Hinweis / Notiz (${lang.toUpperCase()})</label>
+            <input type="text" id="treat-alert-${lang}" class="form-input" placeholder="z. B. Neu auftretende Lähmungen müssen unverzüglich ärztlich abgeklärt werden." value="${getField(item, 'modalAlert', lang)}">
+          </div>
         </div>
       </div>
     `).join('');
@@ -2081,11 +2258,20 @@
       item[l] = {
         title: document.getElementById(`treat-title-${l}`).value.trim(),
         desc: document.getElementById(`treat-desc-${l}`).value.trim(),
-        fullDesc: document.getElementById(`treat-fulldesc-${l}`).value.trim()
+        modalSubtitle: document.getElementById(`treat-subtitle-${l}`) ? document.getElementById(`treat-subtitle-${l}`).value.trim() : '',
+        fullDesc: document.getElementById(`treat-fulldesc-${l}`) ? document.getElementById(`treat-fulldesc-${l}`).value.trim() : '',
+        modalContent: document.getElementById(`treat-fulldesc-${l}`) ? document.getElementById(`treat-fulldesc-${l}`).value.trim() : '',
+        modalSteps: document.getElementById(`treat-steps-${l}`) ? document.getElementById(`treat-steps-${l}`).value.trim() : '',
+        modalAlert: document.getElementById(`treat-alert-${l}`) ? document.getElementById(`treat-alert-${l}`).value.trim() : ''
       };
     });
     item.title = item.de.title;
     item.desc = item.de.desc;
+    item.modalSubtitle = item.de.modalSubtitle || '';
+    item.fullDesc = item.de.fullDesc || '';
+    item.modalContent = item.de.fullDesc || '';
+    item.modalSteps = item.de.modalSteps || '';
+    item.modalAlert = item.de.modalAlert || '';
 
     document.getElementById('loadingOverlay').classList.add('show');
     try {

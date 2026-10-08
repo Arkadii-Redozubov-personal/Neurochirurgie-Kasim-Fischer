@@ -2935,3 +2935,27 @@ html, body {
     margin-top: 24px !important;
   }
 }
+
+/* Hero Inner Sub - Vertical Centering for Title and Icons Header */
+.hero-inner-sub {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding-top: 100px !important;
+  padding-bottom: 40px !important;
+}
+.hero-inner-sub .container {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  flex: 1 !important;
+}
+.hero-inner-sub .container > div[style*="display: flex"],
+.hero-inner-sub .container > div[style*="display:flex"] {
+  align-items: center !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+.hero-inner-sub .badges_marker {
+  padding-bottom: 0 !important;
+}

@@ -1,84 +1,49 @@
 # Neurochirurgie Fischer — Medical Practice Website
 
-> A multilingual, fully responsive medical website built for a neurosurgery & spinal surgery practice in NRW, Germany.
+> A multilingual, fully responsive medical website and custom CMS built for a neurosurgery & spinal surgery practice in NRW, Germany.
 
-**🌐 Live Site:** [my-bandscheibe.de](https://my-bandscheibe.de)
+**Live Site:** [my-bandscheibe.de](https://my-bandscheibe.de)
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
-A complete, production-ready static website for a multi-location neurosurgical practice. The site serves patients in **5 languages** and features an interactive video-modal system for medical education content.
+A complete, production-ready web platform for a multi-location neurosurgical practice. The site serves patients in **6 languages**, features an interactive video-modal system for medical education content, and includes an administrative CMS with automated deployment.
 
 ### Key Features
 
-- **5 language versions** — German (DE), English (EN), Russian (RU), Turkish (TR), Arabic (AR) with RTL support
-- **Responsive design** — Optimized for mobile, MacBook, 1080p and ultra-wide (2560px) monitors
-- **Interactive video modals** — 11+ medical explainer videos per language with auto-play/stop
+- **6 language versions** — German (DE), English (EN), Russian (RU), Turkish (TR), Arabic (AR) with RTL support, and Uzbek (UZ)
+- **Interactive video modals** — Medical explainer videos per language with split-panel layout, procedure steps, and auto-play/stop
+- **Custom CMS & Admin Panel** — Firebase-backed dashboard for managing doctors, treatments, clinical focus areas, reviews, and office hours
+- **Automated CI/CD** — GitHub Actions workflow synchronizing CMS updates into static HTML and deploying via FTP to the production server
 - **Multi-location** — 3 clinic locations in NRW (Mönchengladbach, Viersen, Düsseldorf)
-- **Doctolib integration** — Direct appointment booking widget
-- **SEO optimized** — hreflang tags, structured data (JSON-LD), sitemap, meta tags per language
-- **Cookie consent** — GDPR-compliant banner for German medical context
+- **Responsive design** — Optimized for mobile, MacBook, 1080p and ultra-wide (2560px) monitors
+- **Doctolib integration** — Direct appointment booking widget alongside contact forms
+- **SEO & GDPR compliant** — Localized hreflang tags, structured data (JSON-LD), sitemap, and cookie consent
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
-| Structure | HTML5 (Semantic) |
-| Styling | Vanilla CSS3 (No frameworks) |
-| Logic | Vanilla JavaScript (ES6) |
-| Fonts | Google Fonts (Plus Jakarta Sans, Inter) |
-| Icons | Inline SVG |
-| Video | Local MP4 with dubbed versions per language |
+| Structure | Semantic HTML5 |
+| Styling | Vanilla CSS3 (Custom design, no frameworks) |
+| Logic | Vanilla JavaScript (ES6+) |
+| Backend & CMS | Google Firebase (Firestore, Authentication) |
+| CI/CD & Hosting | GitHub Actions, FTP Deploy, Apache (ALL-INKL) |
+| Typography | Google Fonts (Plus Jakarta Sans, Inter) |
+| Media | Localized MP4 video explainers, optimized WebP images |
 
 ---
 
-## 📁 Project Structure
+## Multilingual Architecture
 
-```
-/
-├── index.html                  # Main landing page (DE)
-├── praxis-schwerpunkte.html    # Diseases & conditions page
-├── behandlungen.html           # Treatments & surgeries page
-├── diagnostik.html             # Diagnostics page
-├── sprechzeiten.html           # Appointment / contact page
-├── unser-team.html             # Our team page
-├── zweitmeinung.html           # Second opinion page
-├── patienten.html              # Patient info page
-├── presseschau.html            # Press page
-├── impressum.html              # Legal notice (Impressum)
-├── datenschutz.html            # Privacy policy (Datenschutz)
-│
-├── en/                         # English language versions
-├── ru/                         # Russian language versions
-├── tr/                         # Turkish language versions
-├── ar/                         # Arabic language versions (RTL)
-│
-├── video/                      # Medical explainer videos (MP4)
-│   ├── *_en-US_dubbed.mp4      # English dubbed versions
-│   └── *_ru_dubbed.mp4         # Russian dubbed versions
-│
-├── img/                        # Optimized WebP images
-├── fonts/                      # Self-hosted font files
-├── pdfs/                       # Patient brochures (PDF)
-│
-├── index-styles.css            # Styles for the main landing page
-├── style.css                   # Shared styles for all other pages
-├── sitemap.xml                 # SEO sitemap
-└── robots.txt                  # SEO robots config
-```
+Each language lives in its own subdirectory (`/en/`, `/ru/`, `/tr/`, `/ar/`, `/uz/`) and shares the same styling and media assets via relative paths. Arabic includes dedicated RTL styles. Proper `hreflang` alternate tags connect all language variants for search engines.
 
 ---
 
-## 🌍 Multilingual Architecture
-
-Each language lives in its own subdirectory and shares the same CSS, video and image assets via relative paths. Proper `hreflang` alternate link tags connect all language variants for Google.
-
----
-
-## 📱 Responsive Breakpoints
+## Responsive Breakpoints
 
 | Breakpoint | Target |
 |---|---|
@@ -89,9 +54,9 @@ Each language lives in its own subdirectory and shares the same CSS, video and i
 
 ---
 
-## 🎬 Video System
+## Video System
 
-Each medical topic has up to 3 language versions of its explainer video. Videos open in a split-panel modal (video left, text content right) with auto-play on open and auto-stop on close.
+Medical topics feature localized explainer videos. Each video opens in a split-panel modal (video on the left, structured clinical text and procedure steps on the right) with auto-play on open and auto-stop on close.
 
 ---
 

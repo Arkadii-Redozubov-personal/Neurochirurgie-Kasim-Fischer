@@ -1,0 +1,722 @@
+/* =============================================
+   DRUCKZENTRUM — Briefbogen A4 & Visitenkarten
+   Ported 1:1 from Holding-NabiOta-Health-Group-Germany
+   (CorporateStationerySection + globals.css stationery block)
+   ============================================= */
+
+/* ---------- Admin module wrapper (AdminStationeryPanel) ---------- */
+.stn-module-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 20px 24px;
+  border: 1px solid var(--border, rgba(255,255,255,0.08));
+  border-radius: var(--radius-md, 12px);
+  background: var(--bg-card, #111827);
+}
+
+.stn-module-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text, #f1f5f9);
+}
+
+.stn-module-title svg { color: #d5b878; }
+
+.stn-module-sub {
+  font-size: 0.875rem;
+  color: var(--text-muted, #94a3b8);
+}
+
+.stn-locale-switch {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--border, rgba(255,255,255,0.08));
+  border-radius: 10px;
+  background: rgba(255,255,255,0.03);
+}
+
+.stn-locale-switch > svg { margin: 0 4px 0 8px; color: var(--text-dim, #64748b); }
+
+.stn-locale-label {
+  margin-right: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted, #94a3b8);
+}
+
+.stn-locale-btn {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-muted, #94a3b8);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.stn-locale-btn:hover { background: rgba(255,255,255,0.06); color: var(--text, #f1f5f9); }
+
+.stn-locale-btn.active {
+  background: #1b3822;
+  color: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+
+.stn-module-card {
+  overflow: hidden;
+  border: 1px solid rgba(222, 205, 181, 0.8);
+  border-radius: var(--radius-md, 12px);
+  background: #fff;
+}
+
+/* ---------- NabiOta logo lockup (port of components/ui/Logo.tsx) ---------- */
+.stn-logo {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.stn-logo img {
+  display: block;
+  flex-shrink: 0;
+  width: 62px;
+  height: 54px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 12px rgba(219, 171, 66, 0.35));
+}
+
+.stn-logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  user-select: none;
+}
+
+.stn-logo-brand {
+  display: block;
+  font-family: 'Cinzel', 'Playfair Display', 'Times New Roman', Georgia, serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 0.82;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.stn-logo-sub {
+  display: block;
+  margin-top: 4px;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 9.2px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.stn-logo--light .stn-logo-brand {
+  background-image: linear-gradient(to bottom, #9e7a32, #856524, #634912);
+}
+
+.stn-logo--light .stn-logo-sub { color: #7b6a45; }
+
+.stn-logo--dark .stn-logo-brand {
+  background-image: linear-gradient(to bottom, #fff5d5, #e2b34b, #9e731c);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.stn-logo--dark .stn-logo-sub {
+  color: #e8cd8c;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.stn-logo--sm { gap: 10px; }
+.stn-logo--sm img { width: 46px; height: 40px; }
+.stn-logo--sm .stn-logo-brand { font-size: 20px; }
+.stn-logo--sm .stn-logo-sub { margin-top: 3px; font-size: 7.8px; letter-spacing: 0.14em; }
+
+/* ---------- Screen section (Tailwind classes converted) ---------- */
+.nabiota-stationery-screen {
+  position: relative;
+  overflow: hidden;
+  padding: 48px 0;
+  border-top: 1px solid #e8e0d1;
+  border-bottom: 1px solid #e8e0d1;
+  background: #f5f1e8;
+  color: #142318;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+}
+
+.stn-glow {
+  position: absolute;
+  top: -112px;
+  right: -96px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(213, 184, 120, 0.1);
+  filter: blur(64px);
+  pointer-events: none;
+}
+
+.stn-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.stn-head {
+  max-width: 768px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.stn-title {
+  font-family: 'Playfair Display', Georgia, Cambria, serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #142318;
+}
+
+.stn-intro {
+  max-width: 672px;
+  margin: 12px auto 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #596157;
+}
+
+.stn-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.stn-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid #8c9886;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #2c3b2e;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.stn-btn:hover { border-color: #c5a56a; background: #fff; transform: translateY(-1px); }
+
+.stn-btn--primary {
+  border-color: #0a2115;
+  background: #0a2115;
+  color: #f8e7bc;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+}
+
+.stn-btn--primary:hover { border-color: #173824; background: #173824; }
+
+.stn-hint {
+  max-width: 672px;
+  margin: 12px auto 0;
+  font-size: 11px;
+  line-height: 1.65;
+  color: #74776f;
+}
+
+.stn-grid {
+  display: grid;
+  align-items: start;
+  justify-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.stn-col { width: 100%; max-width: 410px; }
+.stn-col--cards { display: flex; flex-direction: column; gap: 16px; }
+
+.stationery-letter-preview {
+  position: relative;
+  aspect-ratio: 0.707;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 24px;
+  border: 1px solid #e5dfd3;
+  background: #fff;
+  box-shadow: 0 18px 45px rgba(28, 39, 29, 0.13);
+}
+
+.stn-lp-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e8e0d1;
+}
+
+.stn-lp-legal {
+  padding-top: 4px;
+  text-align: right;
+  font-size: 8px;
+  line-height: 1.65;
+  color: #77756d;
+}
+
+.stn-lp-legal p:first-child { font-weight: 600; color: #142318; }
+
+.stn-lp-sender {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 8px;
+  color: #77756d;
+}
+
+.stn-lp-lines { display: flex; flex-direction: column; gap: 8px; margin-top: 40px; }
+.stn-lp-lines--body { gap: 10px; margin-top: 12px; }
+.stn-lp-line { height: 1px; background: #e8e5de; }
+.stn-lp-lines--body .stn-lp-line { background: #eeece7; }
+
+.stn-lp-subject {
+  margin-top: 32px;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #a1844b;
+}
+
+.stn-lp-footer {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(213, 184, 120, 0.6);
+  font-size: 7px;
+  line-height: 1.65;
+  color: #7a786f;
+}
+
+.stn-lp-footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2px 8px;
+}
+
+.stn-lp-footer p { margin-top: 4px; }
+
+.stn-lp-gold {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #8d6b2d, #d7b96f, #8d6b2d);
+}
+
+.stn-caption {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  color: #596157;
+}
+
+.stn-col--cards .stn-caption { margin-top: 8px; }
+
+.stn-pagecount {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 11px;
+  color: #74776f;
+}
+
+@media (min-width: 640px) {
+  .nabiota-stationery-screen { padding: 64px 0; }
+  .stn-container { padding: 0 32px; }
+  .stn-head { margin-bottom: 48px; }
+  .stn-title { font-size: 36px; }
+  .stn-intro { font-size: 15px; }
+  .stn-btn { font-size: 14px; }
+  .stationery-letter-preview { padding: 32px; }
+  .stn-lp-footer { right: 32px; bottom: 32px; left: 32px; }
+}
+
+@media (min-width: 1024px) {
+  .nabiota-stationery-screen { padding: 80px 0; }
+  .stn-title { font-size: 42px; }
+  .stn-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+}
+
+/* ---------- NabiOta corporate stationery preview and print layouts ---------- */
+.stationery-card-face {
+  position: relative;
+  display: flex;
+  aspect-ratio: 85 / 55;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: clamp(18px, 4vw, 30px);
+  box-shadow: 0 16px 36px rgba(28, 39, 29, 0.16);
+}
+
+.stationery-card-front {
+  color: #fff9ea;
+  border: 1px solid rgba(213, 184, 120, 0.58);
+  background:
+    radial-gradient(circle at 91% 12%, transparent 0 23%, rgba(213, 184, 120, 0.16) 23.2% 23.5%, transparent 23.7% 34%, rgba(213, 184, 120, 0.1) 34.2% 34.5%, transparent 34.7%),
+    #0a2115;
+}
+
+.stationery-card-back {
+  color: #26362b;
+  border: 1px solid #e3d8bd;
+  background: linear-gradient(135deg, #fffefa, #f7f2e6);
+}
+
+.stationery-card-front .stationery-card-front-name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 82%;
+  font-size: 10px;
+  color: #d9c99e;
+}
+
+.stationery-card-front-name strong {
+  color: #fff9ea;
+  font-family: 'Playfair Display', Georgia, Cambria, serif;
+  font-size: clamp(13px, 2vw, 18px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.stationery-card-gold-line {
+  position: absolute;
+  right: 24px;
+  bottom: 18px;
+  width: 54px;
+  height: 3px;
+  border-radius: 999px;
+  background: #d5b878;
+}
+
+.stationery-card-back-company {
+  max-width: 90%;
+  padding-bottom: 9px;
+  border-bottom: 1px solid rgba(164, 133, 72, 0.35);
+  font-family: 'Playfair Display', Georgia, Cambria, serif;
+  font-size: clamp(12px, 1.7vw, 16px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.stationery-card-back-details {
+  display: grid;
+  gap: 4px;
+  font-size: clamp(9px, 1.3vw, 12px);
+  line-height: 1.2;
+}
+
+.stationery-print-source {
+  display: none;
+}
+
+.stationery-print-sheet {
+  display: none;
+  box-sizing: border-box;
+  width: 210mm;
+  height: 297mm;
+  overflow: hidden;
+  background: #fff;
+  break-after: page;
+  page-break-after: always;
+}
+
+.stationery-print-sheet:last-child {
+  break-after: auto;
+  page-break-after: auto;
+}
+
+.stationery-print-letter {
+  position: relative;
+  padding: 16mm 18mm 23mm;
+  color: #26362b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.stationery-print-letter-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 0.3mm solid #ded6c5;
+  padding-bottom: 7mm;
+}
+
+.stationery-print-letter-header > .stn-logo {
+  flex: 0 0 auto;
+}
+
+.stationery-print-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 1mm;
+  padding-top: 1mm;
+  text-align: right;
+  font-size: 8pt;
+  line-height: 1.35;
+}
+
+.stationery-print-legal strong {
+  color: #142318;
+  font-size: 9pt;
+}
+
+.stationery-print-sender-line {
+  margin-top: 13mm;
+  width: 85mm;
+  border-bottom: 0.2mm solid #aaa;
+  padding-bottom: 1mm;
+  color: #545b54;
+  font-size: 7.5pt;
+}
+
+.stationery-print-recipient {
+  width: 85mm;
+  height: 36mm;
+  padding-top: 4mm;
+  color: #999;
+  font-size: 8pt;
+}
+
+.stationery-print-date {
+  margin-left: auto;
+  width: 65mm;
+  text-align: right;
+  color: #626860;
+  font-size: 9pt;
+}
+
+.stationery-print-body {
+  margin-top: 14mm;
+  color: #8a754a;
+  font-size: 9pt;
+}
+
+.stationery-print-letter-footer {
+  position: absolute;
+  right: 18mm;
+  bottom: 11mm;
+  left: 18mm;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 6mm;
+  border-top: 0.3mm solid #d5b878;
+  padding-top: 4mm;
+  color: #535b53;
+  font-size: 7pt;
+  line-height: 1.45;
+}
+
+.stationery-print-letter-footer > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.stationery-print-letter-footer strong {
+  margin-bottom: 1.2mm;
+  color: #18291d;
+  font-size: 7.2pt;
+}
+
+.stationery-print-gold-rule {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1.5mm;
+  background: linear-gradient(90deg, #8d6b2d, #d7b96f, #8d6b2d);
+}
+
+.stationery-print-card-sheet {
+  display: none;
+  grid-template-columns: repeat(2, 85mm);
+  grid-template-rows: repeat(4, 55mm);
+  align-content: center;
+  justify-content: center;
+  gap: 7mm 6mm;
+}
+
+.stationery-print-card-cut {
+  box-sizing: border-box;
+  width: 85mm;
+  height: 55mm;
+  border: 0.2mm dashed #9c9c9c;
+}
+
+.stationery-card-face.stationery-card-print {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: auto;
+  border-radius: 0;
+  padding: 5mm;
+  box-shadow: none;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.stationery-card-print .stationery-card-front-name {
+  gap: 1mm;
+  max-width: 82%;
+  font-size: 7pt;
+}
+
+.stationery-card-print .stationery-card-front-name strong {
+  font-size: 10pt;
+}
+
+.stationery-card-print .stationery-card-back-company {
+  padding-bottom: 2mm;
+  font-size: 9pt;
+}
+
+.stationery-card-print .stationery-card-back-details {
+  gap: 1mm;
+  font-size: 7.3pt;
+}
+
+.stationery-card-print .stationery-card-gold-line {
+  right: 5mm;
+  bottom: 4mm;
+  width: 14mm;
+  height: 0.8mm;
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html,
+  body {
+    width: 210mm !important;
+    min-width: 210mm !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+
+  body[data-nabiota-stationery-print] {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  body[data-nabiota-stationery-print] > :not(#nabiota-stationery-print-root) {
+    display: none !important;
+  }
+
+  body[data-nabiota-stationery-print] #nabiota-stationery-print-root {
+    position: static !important;
+    inset: auto !important;
+    display: block !important;
+    width: 210mm !important;
+    height: auto !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    visibility: visible !important;
+  }
+
+  body[data-nabiota-stationery-print] #nabiota-stationery-print-root * {
+    visibility: visible !important;
+  }
+
+  body[data-nabiota-stationery-print] .stationery-print-sheet {
+    display: none !important;
+  }
+
+  body[data-nabiota-stationery-print="letter"] [data-print-document="letter"],
+  body[data-nabiota-stationery-print="all"] [data-print-document="letter"] {
+    display: block !important;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  body[data-nabiota-stationery-print="letter"] [data-print-document="letter"] {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  body[data-nabiota-stationery-print="all"] [data-print-document="blank"] {
+    display: block !important;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  body[data-nabiota-stationery-print="cards"] [data-print-document="card-front"],
+  body[data-nabiota-stationery-print="cards"] [data-print-document="card-back"],
+  body[data-nabiota-stationery-print="all"] [data-print-document="card-front"],
+  body[data-nabiota-stationery-print="all"] [data-print-document="card-back"] {
+    display: grid !important;
+  }
+
+  body[data-nabiota-stationery-print="cards"] [data-print-document="card-front"],
+  body[data-nabiota-stationery-print="all"] [data-print-document="card-front"] {
+    break-after: page;
+    page-break-after: always;
+  }
+
+  body[data-nabiota-stationery-print="cards"] [data-print-document="card-back"],
+  body[data-nabiota-stationery-print="all"] [data-print-document="card-back"] {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  body[data-nabiota-stationery-print="cards"] #nabiota-stationery-print-root > [data-print-document="letter"],
+  body[data-nabiota-stationery-print="cards"] #nabiota-stationery-print-root > [data-print-document="blank"] {
+    display: none !important;
+  }
+
+  body[data-nabiota-stationery-print="letter"] #nabiota-stationery-print-root > [data-print-document="blank"],
+  body[data-nabiota-stationery-print="letter"] #nabiota-stationery-print-root > [data-print-document^="card-"] {
+    display: none !important;
+  }
+}

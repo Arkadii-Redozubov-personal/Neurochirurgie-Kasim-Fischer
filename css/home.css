@@ -37,14 +37,22 @@
 
 @media (max-width: 768px) {
   .brand-title-gold {
-    font-size: 1.25rem !important;
+    font-size: 1.45rem !important;
     letter-spacing: 1.2px !important;
     white-space: nowrap !important;
   }
   .brand-sub-gold {
-    font-size: 0.52rem !important;
-    letter-spacing: 1.6px !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.16em !important;
     white-space: nowrap !important;
+  }
+  .footer-brand .brand-title-gold {
+    font-size: 1.65rem !important;
+    letter-spacing: 1.5px !important;
+  }
+  .footer-brand .brand-sub-gold {
+    font-size: 0.78rem !important;
+    letter-spacing: 0.18em !important;
   }
 }
 @media (max-width: 480px) {
@@ -52,29 +60,43 @@
     height: 48px !important;
   }
   .brand-title-gold {
-    font-size: 1.15rem !important;
+    font-size: 1.35rem !important;
     letter-spacing: 1px !important;
     white-space: nowrap !important;
   }
   .brand-sub-gold {
-    font-size: 0.46rem !important;
-    letter-spacing: 1.2px !important;
+    font-size: 0.65rem !important;
+    letter-spacing: 0.14em !important;
     white-space: nowrap !important;
+  }
+  .footer-brand .brand-title-gold {
+    font-size: 1.5rem !important;
+    letter-spacing: 1.2px !important;
+  }
+  .footer-brand .brand-sub-gold {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.16em !important;
   }
 }
 @media (max-width: 380px) {
   .navbar a img {
-    height: 42px !important;
+    height: 44px !important;
   }
   .brand-title-gold {
-    font-size: 1.02rem !important;
+    font-size: 1.22rem !important;
     letter-spacing: 0.8px !important;
     white-space: nowrap !important;
   }
   .brand-sub-gold {
-    font-size: 0.41rem !important;
-    letter-spacing: 1px !important;
+    font-size: 0.58rem !important;
+    letter-spacing: 0.12em !important;
     white-space: nowrap !important;
+  }
+  .footer-brand .brand-title-gold {
+    font-size: 1.38rem !important;
+  }
+  .footer-brand .brand-sub-gold {
+    font-size: 0.66rem !important;
   }
 }
 
@@ -2627,35 +2649,7 @@ html[lang='ar'] .expertise-card:hover::after {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Fixes for mobile dropdown alignment and underlines */
-.mobile-menu .mobile-dropdown-toggle {
-    padding: 16px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.mobile-menu .mobile-dropdown-toggle a {
-    border-bottom: none;
-    padding: 0 !important;
-}
-
-.mobile-menu .mobile-dropdown-menu {
-    margin-left: 0;
-    padding-left: 0;
-    border-left: none;
-    margin-top: 0;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    align-items: center;
-}
-
-.mobile-menu .mobile-dropdown-menu a {
-    border-bottom: none;
-    padding: 10px 0 !important;
-    font-size: 1.25rem !important;
-    font-weight: 500 !important;
-    color: rgba(255,255,255,0.85);
-}
+/* (Legacy dropdown rules superseded by Mobile Burger Menu section) */
 
 
 
@@ -3298,75 +3292,7 @@ html, body {
 }
 
 
-/* ── Mobile Layout & Centering Enhancements ──────────────── */
-
-/* Burger Menu Full Centering & Clean Alignment */
-@media (max-width: 1080px) {
-  .mobile-menu {
-    display: none;
-    flex-direction: column;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding: 50px 24px 30px !important;
-    box-sizing: border-box;
-  }
-  .mobile-menu a {
-    text-align: center !important;
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-    font-size: 1.35rem !important;
-    padding: 12px 0 !important;
-  }
-  .mobile-dropdown-wrapper {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .mobile-dropdown-toggle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    padding: 12px 0 !important;
-  }
-  .mobile-dropdown-toggle a {
-    font-size: 1.35rem !important;
-  }
-  .mobile-dropdown-menu {
-    align-items: center !important;
-    text-align: center !important;
-  }
-  .mobile-dropdown-menu a {
-    text-align: center !important;
-    font-size: 1.15rem !important;
-    padding: 8px 0 !important;
-  }
-  .mobile-lang-switcher {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: auto !important;
-    max-width: 320px;
-    margin: 20px auto 0 !important;
-    gap: 8px !important;
-    align-self: center;
-  }
-  .mobile-lang-switcher a {
-    font-size: 0.75rem !important;
-    padding: 5px 14px !important;
-    width: auto !important;
-    max-width: none !important;
-    display: inline-block !important;
-  }
-  .mobile-menu .btn-book {
-    display: none !important;
-  }
-}
+/* (Legacy centered menu block superseded by Mobile Burger Menu section) */
 
 /* Photo 1: Stats Alignment & Symmetry */
 @media (max-width: 768px) {
@@ -3602,12 +3528,18 @@ html, body {
     color: var(--primary, #1cc2b2) !important;
   }
 
-  /* Submenu Container (Clean, no vertical gold line) */
+  /* Submenu Container: Full width stretch, no gaps */
+  .mobile-menu .mobile-dropdown-menu,
   .mobile-dropdown-menu {
     display: none !important;
     flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
     position: relative !important;
-    padding: 2px 0 6px 0 !important;
+    padding: 0 !important;
     margin: 0 !important;
     border: none !important;
     box-sizing: border-box !important;
@@ -3623,7 +3555,10 @@ html, body {
     content: none !important;
   }
 
-  /* Sublink item: Flush on left, transition arrow on right */
+  /* Sublink item: 100% edge-to-edge stretch, text flush left, arrow flush right */
+  .mobile-menu .mobile-dropdown-menu a.mobile-sublink,
+  .mobile-menu a.mobile-sublink,
+  a.mobile-sublink,
   .mobile-sublink {
     position: relative !important;
     z-index: 1 !important;
@@ -3631,12 +3566,16 @@ html, body {
     align-items: center !important;
     justify-content: space-between !important;
     width: 100% !important;
-    padding: 13px 18px !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    align-self: stretch !important;
+    margin: 0 !important;
+    padding: 14px 18px !important;
     color: rgba(255, 255, 255, 0.88) !important;
     text-decoration: none !important;
     font-size: 0.98rem !important;
     font-weight: 500 !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
     transition: background 0.2s ease, color 0.2s ease !important;
     box-sizing: border-box !important;
     text-align: left !important;

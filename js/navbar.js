@@ -10,12 +10,14 @@
 
       if (isExpanded) {
         mobileMenu.style.display = 'none';
+        document.body.style.overflow = '';
         burgerMenu.classList.remove('open');
         burgerMenu.setAttribute('aria-expanded', 'false');
         if (burgerIcon) burgerIcon.style.display = 'block';
         if (closeIcon) closeIcon.style.display = 'none';
       } else {
         mobileMenu.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
         burgerMenu.classList.add('open');
         burgerMenu.setAttribute('aria-expanded', 'true');
         if (burgerIcon) burgerIcon.style.display = 'none';
@@ -31,10 +33,46 @@
       }
     });
 
+    // Mobile Dropdown Accordion Toggle
+    mobileMenu.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const wrapper = toggle.closest('.mobile-dropdown-wrapper');
+        if (wrapper) {
+          wrapper.classList.toggle('open');
+        }
+      });
+      toggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          e.stopPropagation();
+          const wrapper = toggle.closest('.mobile-dropdown-wrapper');
+          if (wrapper) {
+            wrapper.classList.toggle('open');
+          }
+        }
+      });
+    });
+
+    // Auto-expand dropdown if any sublink is active or current page
+    const curPath = window.location.pathname.split('/').pop() || 'index.html';
+    mobileMenu.querySelectorAll('a.mobile-link, a.mobile-sublink').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && (href === curPath || href.endsWith('/' + curPath))) {
+        link.classList.add('active');
+        const parentWrapper = link.closest('.mobile-dropdown-wrapper');
+        if (parentWrapper) {
+          parentWrapper.classList.add('open');
+        }
+      }
+    });
+
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         if (!link.closest('.mobile-dropdown-toggle')) {
           mobileMenu.style.display = 'none';
+          document.body.style.overflow = '';
           burgerMenu.classList.remove('open');
           burgerMenu.setAttribute('aria-expanded', 'false');
           const burgerIcon = burgerMenu.querySelector('.burger-icon');

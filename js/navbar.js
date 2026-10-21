@@ -2,15 +2,49 @@
 // Mobile Menu Toggle
   const burgerMenu = document.getElementById('burgerMenu');
   const mobileMenu = document.getElementById('mobileMenu');
-  burgerMenu.addEventListener('click', () => {
-    if (mobileMenu.style.display === 'flex') {
-      mobileMenu.style.display = 'none';
-      burgerMenu.textContent = '☰';
-    } else {
-      mobileMenu.style.display = 'flex';
-      burgerMenu.textContent = '✕';
-    }
-  });
+  if (burgerMenu && mobileMenu) {
+    const toggleMenu = () => {
+      const isExpanded = mobileMenu.style.display === 'flex' || burgerMenu.classList.contains('open');
+      const burgerIcon = burgerMenu.querySelector('.burger-icon');
+      const closeIcon = burgerMenu.querySelector('.close-icon');
+
+      if (isExpanded) {
+        mobileMenu.style.display = 'none';
+        burgerMenu.classList.remove('open');
+        burgerMenu.setAttribute('aria-expanded', 'false');
+        if (burgerIcon) burgerIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+      } else {
+        mobileMenu.style.display = 'flex';
+        burgerMenu.classList.add('open');
+        burgerMenu.setAttribute('aria-expanded', 'true');
+        if (burgerIcon) burgerIcon.style.display = 'none';
+        if (closeIcon) closeIcon.style.display = 'block';
+      }
+    };
+
+    burgerMenu.addEventListener('click', toggleMenu);
+    burgerMenu.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+      }
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (!link.closest('.mobile-dropdown-toggle')) {
+          mobileMenu.style.display = 'none';
+          burgerMenu.classList.remove('open');
+          burgerMenu.setAttribute('aria-expanded', 'false');
+          const burgerIcon = burgerMenu.querySelector('.burger-icon');
+          const closeIcon = burgerMenu.querySelector('.close-icon');
+          if (burgerIcon) burgerIcon.style.display = 'block';
+          if (closeIcon) closeIcon.style.display = 'none';
+        }
+      });
+    });
+  }
 
   // FAQ Accordion Toggle
   const faqItems = document.querySelectorAll('.faq-question');

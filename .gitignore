@@ -21,3 +21,4 @@ Thumbs.db
 
 publish-config.php
 *.zip
+.agents/

@@ -103,14 +103,38 @@
 
   document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
-// Sticky Navbar
+// Sticky Navbar & Mobile Lang Switcher Toggle
   const navbar = document.querySelector('.navbar');
   if (navbar) {
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
       if (window.scrollY > 10) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  }
+
+  // Touch support for language dropdown
+  const langSwitcher = document.querySelector('.lang-switcher');
+  if (langSwitcher) {
+    langSwitcher.addEventListener('click', (e) => {
+      if (e.target.closest('.lang-current')) {
+        const dd = langSwitcher.querySelector('.lang-dropdown');
+        if (dd) {
+          const isFlex = window.getComputedStyle(dd).display === 'flex';
+          dd.style.display = isFlex ? 'none' : 'flex';
+        }
+      }
+    });
+    document.addEventListener('click', (e) => {
+      if (!langSwitcher.contains(e.target)) {
+        const dd = langSwitcher.querySelector('.lang-dropdown');
+        if (dd && dd.style.display === 'flex') {
+          dd.style.display = '';
+        }
       }
     });
   }

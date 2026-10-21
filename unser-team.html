@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-<link href="css/main.css?v=2.0" rel="stylesheet"/>
+<link href="css/main.css?v=2.1" rel="stylesheet"/>
 <link href="css/pages/team.css" rel="stylesheet"/>
 
 <link href="https://my-bandscheibe.de/unser-team.html" hreflang="de" rel="alternate"/>
@@ -85,17 +85,17 @@
   </script>
 <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"/></head>
 <body>
-<div class="page-wrapper">
-<div class="hero-inner-sub" style="background: linear-gradient(rgba(9, 31, 34, 0.48), rgba(9, 31, 34, 0.48)), url('img/team_together.webp') center 50% / cover no-repeat #091f22;"><div class="container"><nav class="navbar" style="margin-bottom: 60px;">
-<a href="index.html" class="nav-brand" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+<nav class="navbar" id="mainNavbar">
+  <a href="index.html" class="nav-brand" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
     <img src="img/nLogo.svg" alt="NabiOta Health Group Germany" style="height:50px;width:auto;border-radius:12px;flex-shrink:0;"/>
     <div class="brand-text-lockup" style="display:flex;flex-direction:column;line-height:1.1;justify-content:center;direction:ltr;text-align:left;">
       <span class="brand-title-gold" style="font-family:'Cinzel', 'Cinzel Decorative', 'Georgia', serif;font-weight:800;font-size:1.55rem;letter-spacing:0.06em;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 30%, #c69c3a 60%, #f7e68a 85%, #b88d28 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#e8c170;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.45));white-space:nowrap;">NABIOTA</span>
       <span class="brand-sub-gold" style="font-family:'Manrope', 'Montserrat', 'Plus Jakarta Sans', sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.20em;text-transform:uppercase;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 45%, #c69c3a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#c69c3a;white-space:nowrap;margin-top:2px;">HEALTH GROUP GERMANY</span>
     </div>
   </a>
-<div class="nav-links">
-<a href="index.html">Startseite</a>
+
+  <div class="nav-links">
+    <a href="index.html">Startseite</a>
 <a href="unser-team.html">Praxis</a>
 <div class="nav-dropdown-wrapper">
 <a tabindex="0">Leistungen</a>
@@ -109,7 +109,8 @@
 <a href="patienten.html">Für Patienten</a>
 <a href="presseschau.html">Presse</a>
 <a href="sprechzeiten.html">Kontakt</a>
-</div>
+  </div>
+
   <div class="nav-actions">
     <div class="lang-switcher">
       <div class="lang-current">
@@ -117,12 +118,12 @@
         <span style="font-size: 0.7em; opacity: 0.8; margin-left: 2px;">▼</span>
       </div>
       <div class="lang-dropdown">
-        <a href="unser-team.html"><span>Deutsch</span> <span class="lang-code">DE</span></a>
-        <a href="en/unser-team.html"><span>English</span> <span class="lang-code">EN</span></a>
-        <a href="ru/unser-team.html"><span>Русский</span> <span class="lang-code">RU</span></a>
-        <a href="tr/unser-team.html"><span>Türkçe</span> <span class="lang-code">TR</span></a>
-        <a href="ar/unser-team.html"><span>العربية</span> <span class="lang-code">AR</span></a>
-        <a href="uz/unser-team.html"><span>Oʻzbekcha</span> <span class="lang-code">UZ</span></a>
+        <a href="unser-team.html" class="active"><span>Deutsch</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">DE</span></a>
+        <a href="en/unser-team.html"><span>English</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">EN</span></a>
+        <a href="ru/unser-team.html"><span>Русский</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">RU</span></a>
+        <a href="tr/unser-team.html"><span>Türkçe</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">TR</span></a>
+        <a href="ar/unser-team.html"><span>العربية</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">AR</span></a>
+        <a href="uz/unser-team.html"><span>Oʻzbekcha</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">UZ</span></a>
       </div>
     </div>
     <a href="sprechzeiten.html" class="btn-book hidden-mobile">
@@ -131,7 +132,9 @@
     </a>
     <div class="burger-menu" id="burgerMenu" aria-label="Menü öffnen" style="display: none;">☰</div>
   </div>
-</nav><div class="mobile-menu" id="mobileMenu"  style="display:none">
+</nav>
+
+<div class="mobile-menu" id="mobileMenu"  style="display:none">
 <a href="index.html">Startseite</a>
 <a href="unser-team.html">Praxis</a>
 <div class="mobile-dropdown-wrapper">
@@ -157,7 +160,10 @@
 <a href="ar/unser-team.html">AR</a>
 <a href="uz/unser-team.html">UZ</a>
 </div>
-</div><div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 40px; margin: auto 0; padding: 20px 0;"><div class="hero-main" style="max-width: 800px; margin-top: 0;"><h1 class="hero-title" style="font-size: 4rem; color: white;">Unsere <span >Philosophie &amp; Team</span></h1><p class="hero-desc" style="max-width: 500px; font-size: 1.1rem; line-height: 1.6; color: rgba(255,255,255,0.8);">Wir legen großen Wert auf eine fundierte Diagnostik, individuelle Beratung und evidenzbasierte Therapieverfahren für Ihre Gesundheit.</p></div><div class="badges_marker" style="display: flex; flex-direction: column; gap: 24px; max-width: 350px; "><div style="display: flex; gap: 16px; align-items: center;">
+</div>
+
+<div class="page-wrapper">
+<div class="hero-inner-sub" style="background: linear-gradient(rgba(9, 31, 34, 0.48), rgba(9, 31, 34, 0.48)), url('img/team_together.webp') center 50% / cover no-repeat #091f22;"><div class="container"><div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 40px; margin: auto 0; padding: 20px 0;"><div class="hero-main" style="max-width: 800px; margin-top: 0;"><h1 class="hero-title" style="font-size: 4rem; color: white;">Unsere <span >Philosophie &amp; Team</span></h1><p class="hero-desc" style="max-width: 500px; font-size: 1.1rem; line-height: 1.6; color: rgba(255,255,255,0.8);">Wir legen großen Wert auf eine fundierte Diagnostik, individuelle Beratung und evidenzbasierte Therapieverfahren für Ihre Gesundheit.</p></div><div class="badges_marker" style="display: flex; flex-direction: column; gap: 24px; max-width: 350px; "><div style="display: flex; gap: 16px; align-items: center;">
 <div style="width: 48px; height: 48px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); flex-shrink: 0;">
 <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
 </div>

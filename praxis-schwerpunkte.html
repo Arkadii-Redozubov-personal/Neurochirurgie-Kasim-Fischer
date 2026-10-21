@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-<link href="css/main.css?v=2.0" rel="stylesheet"/>
+<link href="css/main.css?v=2.1" rel="stylesheet"/>
 <link href="css/pages/diseases.css" rel="stylesheet"/>
 
 <link href="https://my-bandscheibe.de/praxis-schwerpunkte.html" hreflang="de" rel="alternate"/>
@@ -31,21 +31,22 @@
 <link href="https://my-bandscheibe.de/praxis-schwerpunkte.html" hreflang="x-default" rel="alternate"/>
 </head>
 <body>
-<div class="page-wrapper">
-<div class="hero-inner-sub" style="background:linear-gradient(to right,rgba(9,31,34,0.95) 0%,rgba(9,31,34,0.6) 100%),url('img/diseases.webp') center/cover no-repeat #091f22;"><div class="container"><nav class="navbar" style="margin-bottom:60px;">
-<a href="index.html" class="nav-brand" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+<nav class="navbar" id="mainNavbar">
+  <a href="index.html" class="nav-brand" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
     <img src="img/nLogo.svg" alt="NabiOta Health Group Germany" style="height:50px;width:auto;border-radius:12px;flex-shrink:0;"/>
     <div class="brand-text-lockup" style="display:flex;flex-direction:column;line-height:1.1;justify-content:center;direction:ltr;text-align:left;">
       <span class="brand-title-gold" style="font-family:'Cinzel', 'Cinzel Decorative', 'Georgia', serif;font-weight:800;font-size:1.55rem;letter-spacing:0.06em;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 30%, #c69c3a 60%, #f7e68a 85%, #b88d28 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#e8c170;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.45));white-space:nowrap;">NABIOTA</span>
       <span class="brand-sub-gold" style="font-family:'Manrope', 'Montserrat', 'Plus Jakarta Sans', sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.20em;text-transform:uppercase;background:linear-gradient(135deg, #fff3b3 0%, #e8c170 45%, #c69c3a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:#c69c3a;white-space:nowrap;margin-top:2px;">HEALTH GROUP GERMANY</span>
     </div>
   </a>
-<div class="nav-links">
-<a href="index.html">Startseite</a>
+
+  <div class="nav-links">
+    <a href="index.html">Startseite</a>
 <a href="unser-team.html">Praxis</a>
 <div class="nav-dropdown-wrapper"><a tabindex="0">Leistungen</a><div class="nav-dropdown-menu"><a href="praxis-schwerpunkte.html">Erkrankungen</a><a href="diagnostik.html">Diagnostik</a><a href="behandlungen.html">Behandlungen &amp; OPs</a><a href="zweitmeinung.html">Zweitmeinung</a></div></div>
 <a href="patienten.html">Für Patienten</a><a href="presseschau.html">Presse</a><a href="sprechzeiten.html">Kontakt</a>
-</div>
+  </div>
+
   <div class="nav-actions">
     <div class="lang-switcher">
       <div class="lang-current">
@@ -53,12 +54,12 @@
         <span style="font-size: 0.7em; opacity: 0.8; margin-left: 2px;">▼</span>
       </div>
       <div class="lang-dropdown">
-        <a href="praxis-schwerpunkte.html"><span>Deutsch</span> <span class="lang-code">DE</span></a>
-        <a href="en/praxis-schwerpunkte.html"><span>English</span> <span class="lang-code">EN</span></a>
-        <a href="ru/praxis-schwerpunkte.html"><span>Русский</span> <span class="lang-code">RU</span></a>
-        <a href="tr/praxis-schwerpunkte.html"><span>Türkçe</span> <span class="lang-code">TR</span></a>
-        <a href="ar/praxis-schwerpunkte.html"><span>العربية</span> <span class="lang-code">AR</span></a>
-        <a href="uz/praxis-schwerpunkte.html"><span>Oʻzbekcha</span> <span class="lang-code">UZ</span></a>
+        <a href="praxis-schwerpunkte.html" class="active"><span>Deutsch</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">DE</span></a>
+        <a href="en/praxis-schwerpunkte.html"><span>English</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">EN</span></a>
+        <a href="ru/praxis-schwerpunkte.html"><span>Русский</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">RU</span></a>
+        <a href="tr/praxis-schwerpunkte.html"><span>Türkçe</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">TR</span></a>
+        <a href="ar/praxis-schwerpunkte.html"><span>العربية</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">AR</span></a>
+        <a href="uz/praxis-schwerpunkte.html"><span>Oʻzbekcha</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">UZ</span></a>
       </div>
     </div>
     <a href="sprechzeiten.html" class="btn-book hidden-mobile">
@@ -68,6 +69,7 @@
     <div class="burger-menu" id="burgerMenu" aria-label="Menü öffnen" style="display: none;">☰</div>
   </div>
 </nav>
+
 <div class="mobile-menu" id="mobileMenu"  style="display:none">
 <a href="index.html">Startseite</a><a href="unser-team.html">Praxis</a>
 <div class="mobile-dropdown-wrapper"><div class="mobile-dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('active');"><a style="margin:0;padding:0;">Leistungen</a><span style="color:rgba(255,255,255,0.7);">▼</span></div><div class="mobile-dropdown-menu"><a href="praxis-schwerpunkte.html">Erkrankungen</a><a href="diagnostik.html">Diagnostik</a><a href="behandlungen.html">Behandlungen &amp; OPs</a><a href="zweitmeinung.html">Zweitmeinung</a></div></div>
@@ -81,6 +83,9 @@
 <a href="uz/praxis-schwerpunkte.html">UZ</a>
 </div>
 </div>
+
+<div class="page-wrapper">
+<div class="hero-inner-sub" style="background:linear-gradient(to right,rgba(9,31,34,0.95) 0%,rgba(9,31,34,0.6) 100%),url('img/diseases.webp') center/cover no-repeat #091f22;"><div class="container">
 <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:40px;margin:auto 0;padding:20px 0;">
 <div class="hero-main" style="max-width:800px;margin-top:0;"><h1 class="hero-title hero-title-sub" style="font-size:4rem;color:white;">Unsere <span >Schwerpunkte</span></h1><p class="hero-desc" style="max-width:500px;font-size:1.1rem;line-height:1.6;color:rgba(255,255,255,0.8);">Diagnostik und Behandlung von Erkrankungen des zentralen und peripheren Nervensystems.</p></div>
 <div class="badges_marker" style="display:flex;flex-direction:column;gap:24px;max-width:350px;">

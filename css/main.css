@@ -3072,8 +3072,14 @@ html, body {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
-  padding-top: 100px !important;
+  padding-top: clamp(140px, 16vh, 175px) !important;
   padding-bottom: 40px !important;
+}
+@media (max-width: 768px) {
+  .hero-inner-sub {
+    padding-top: 105px !important;
+    padding-bottom: 32px !important;
+  }
 }
 .hero-inner-sub .container {
   display: flex !important;

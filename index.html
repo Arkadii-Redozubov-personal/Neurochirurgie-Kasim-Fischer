@@ -206,7 +206,7 @@
 }
 </style>
   <link rel="preload" as="image" href="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1600&q=80">
-  <link href="css/home.css?v=2.0" rel="stylesheet"/>
+  <link href="css/home.css?v=2.1" rel="stylesheet"/>
   <link rel="alternate" hreflang="de" href="https://my-bandscheibe.de/index.html">
   <link rel="alternate" hreflang="en" href="https://my-bandscheibe.de/en/index.html">
   <link rel="alternate" hreflang="ru" href="https://my-bandscheibe.de/ru/index.html">
@@ -272,7 +272,6 @@
 
 <!-- Navbar (must be OUTSIDE .hero-inner to avoid transform stacking context bug) -->
 <nav class="navbar" id="mainNavbar">
-  <!-- Brand Group (Left) -->
   <a href="index.html" class="nav-brand" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
     <img src="img/nLogo.svg" alt="NabiOta Health Group Germany" style="height:50px;width:auto;border-radius:12px;flex-shrink:0;"/>
     <div class="brand-text-lockup" style="display:flex;flex-direction:column;line-height:1.1;justify-content:center;direction:ltr;text-align:left;">
@@ -281,7 +280,6 @@
     </div>
   </a>
 
-  <!-- Navigation Group (Center) -->
   <div class="nav-links">
     <a href="index.html">Startseite</a>
     <a href="unser-team.html">Praxis</a>
@@ -292,22 +290,16 @@
         <a href="diagnostik.html">Diagnostik</a>
         <a href="behandlungen.html">Behandlungen &amp; OPs</a>
         <a href="zweitmeinung.html">Zweitmeinung</a>
-      </div>
-    </div>
-    <a href="patienten.html">Für Patienten</a>
-    <a href="presseschau.html">Presse</a>
-    <a href="sprechzeiten.html">Kontakt</a>
   </div>
 
-  <!-- Actions Group (Right - grouped together like in MVZ) -->
   <div class="nav-actions">
     <div class="lang-switcher">
       <div class="lang-current">
         <span>DE</span>
-        <span style="font-size: 0.7em; opacity: 0.8;">▼</span>
+        <span style="font-size: 0.7em; opacity: 0.8; margin-left: 2px;">▼</span>
       </div>
       <div class="lang-dropdown">
-        <a href="index.html"><span>Deutsch</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">DE</span></a>
+        <a href="index.html" class="active"><span>Deutsch</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">DE</span></a>
         <a href="en/index.html"><span>English</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">EN</span></a>
         <a href="ru/index.html"><span>Русский</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">RU</span></a>
         <a href="tr/index.html"><span>Türkçe</span> <span class="lang-code" style="font-size: 0.75rem; opacity: 0.7;">TR</span></a>

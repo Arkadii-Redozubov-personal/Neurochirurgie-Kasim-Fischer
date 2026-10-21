@@ -3196,11 +3196,11 @@ html, body {
     color: #ffffff !important;
   }
 
-  /* Active page link (card with gold left indicator) */
+  /* Active page link (card with green left indicator) */
   .mobile-menu a.mobile-link.active {
     background: rgba(255, 255, 255, 0.04) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    border-left: 3.5px solid #cca43b !important;
+    border-left: 3.5px solid var(--primary, #1cc2b2) !important;
     color: #ffffff !important;
     font-weight: 600 !important;
   }
@@ -3212,7 +3212,7 @@ html, body {
   }
 
   .mobile-menu a.mobile-link.active .link-chevron {
-    color: rgba(255, 255, 255, 0.75);
+    color: var(--primary, #1cc2b2) !important;
   }
 
   /* Dropdown Wrapper */
@@ -3229,7 +3229,7 @@ html, body {
   /* Expanded Dropdown Card */
   .mobile-dropdown-wrapper.open {
     background: rgba(10, 32, 35, 0.75) !important;
-    border: 1px solid rgba(45, 95, 90, 0.4) !important;
+    border: 1px solid rgba(28, 194, 178, 0.35) !important;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
     margin: 4px 0 !important;
     overflow: hidden !important;
@@ -3263,7 +3263,7 @@ html, body {
   .mobile-dropdown-wrapper.open .mobile-dropdown-toggle {
     background: rgba(255, 255, 255, 0.04) !important;
     border-radius: 15px 15px 0 0 !important;
-    border-left: 3.5px solid #cca43b !important;
+    border-left: 3.5px solid var(--primary, #1cc2b2) !important;
     color: #ffffff !important;
     font-weight: 600 !important;
   }
@@ -3276,15 +3276,15 @@ html, body {
 
   .mobile-dropdown-wrapper.open .dropdown-chevron {
     transform: rotate(180deg);
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--primary, #1cc2b2) !important;
   }
 
-  /* Submenu Container */
+  /* Submenu Container (Clean, no vertical gold line) */
   .mobile-dropdown-menu {
     display: none !important;
     flex-direction: column !important;
     position: relative !important;
-    padding: 6px 0 8px 0 !important;
+    padding: 2px 0 6px 0 !important;
     margin: 0 !important;
     border: none !important;
     box-sizing: border-box !important;
@@ -3294,33 +3294,29 @@ html, body {
     display: flex !important;
   }
 
-  /* Vertical timeline line */
+  /* No vertical gold line */
   .mobile-dropdown-menu::before {
-    content: '' !important;
-    position: absolute !important;
-    left: 27px !important;
-    top: 16px !important;
-    bottom: 24px !important;
-    width: 1.5px !important;
-    background: rgba(202, 160, 72, 0.45) !important;
-    z-index: 0 !important;
+    display: none !important;
+    content: none !important;
   }
 
-  /* Sublink item */
+  /* Sublink item: Flush on left, transition arrow on right */
   .mobile-sublink {
     position: relative !important;
     z-index: 1 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    padding: 13px 18px 13px 22px !important;
-    color: rgba(255, 255, 255, 0.85) !important;
+    width: 100% !important;
+    padding: 13px 18px !important;
+    color: rgba(255, 255, 255, 0.88) !important;
     text-decoration: none !important;
     font-size: 0.98rem !important;
     font-weight: 500 !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
-    transition: background 0.2s, color 0.2s !important;
+    transition: background 0.2s ease, color 0.2s ease !important;
     box-sizing: border-box !important;
+    text-align: left !important;
     -webkit-tap-highlight-color: transparent;
   }
 
@@ -3330,37 +3326,45 @@ html, body {
 
   .mobile-sublink:hover,
   .mobile-sublink:active {
-    background: rgba(255, 255, 255, 0.04) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
     color: #ffffff !important;
   }
 
   .mobile-sublink .sublink-left {
     display: flex !important;
     align-items: center !important;
-    gap: 14px !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  .mobile-sublink .sublink-text {
+    text-align: left !important;
   }
 
   .mobile-sublink .sublink-dot {
-    width: 7px !important;
-    height: 7px !important;
-    border-radius: 50% !important;
-    background: #cca43b !important;
-    box-shadow: 0 0 6px rgba(204, 164, 59, 0.6) !important;
-    flex-shrink: 0 !important;
+    display: none !important;
   }
 
   .mobile-sublink .sublink-chevron {
     color: rgba(255, 255, 255, 0.4) !important;
     flex-shrink: 0 !important;
+    margin-left: auto !important;
+    transition: transform 0.2s ease, color 0.2s ease !important;
+  }
+
+  .mobile-sublink:hover .sublink-chevron {
+    color: var(--primary, #1cc2b2) !important;
+    transform: translateX(2px) !important;
   }
 
   .mobile-sublink.active {
-    color: #ffffff !important;
+    color: var(--primary, #1cc2b2) !important;
     font-weight: 600 !important;
   }
-  .mobile-sublink.active .sublink-dot {
-    background: #f5dc94 !important;
-    box-shadow: 0 0 8px rgba(245, 220, 148, 0.9) !important;
+  .mobile-sublink.active .sublink-chevron {
+    color: var(--primary, #1cc2b2) !important;
   }
 
   /* RTL Support for Arabic */
@@ -3373,22 +3377,34 @@ html, body {
   }
   [dir=rtl] .mobile-menu a.mobile-link.active {
     border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
-    border-right: 3.5px solid #cca43b !important;
+    border-right: 3.5px solid var(--primary, #1cc2b2) !important;
   }
   [dir=rtl] .mobile-dropdown-wrapper.open .mobile-dropdown-toggle {
     border-left: 1px solid transparent !important;
-    border-right: 3.5px solid #cca43b !important;
+    border-right: 3.5px solid var(--primary, #1cc2b2) !important;
   }
   [dir=rtl] .mobile-dropdown-menu::before {
-    left: auto !important;
-    right: 27px !important;
+    display: none !important;
+    content: none !important;
   }
   [dir=rtl] .mobile-sublink {
-    padding: 13px 22px 13px 18px !important;
+    padding: 13px 18px !important;
+    text-align: right !important;
   }
-  [dir=rtl] .link-chevron,
-  [dir=rtl] .sublink-chevron {
-    transform: rotate(180deg);
+  [dir=rtl] .mobile-sublink .sublink-left,
+  [dir=rtl] .mobile-sublink .sublink-text {
+    text-align: right !important;
+  }
+  [dir=rtl] .mobile-sublink .sublink-chevron {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    transform: rotate(180deg) !important;
+  }
+  [dir=rtl] .link-chevron {
+    transform: rotate(180deg) !important;
+  }
+  [dir=rtl] .mobile-sublink:hover .sublink-chevron {
+    transform: rotate(180deg) translateX(2px) !important;
   }
 
   /* ── Language Switcher (Pill Container) ───────────────── */
@@ -3432,42 +3448,15 @@ html, body {
   }
 
   .mobile-lang-switcher a.active {
-    background: linear-gradient(135deg, #f5dc94 0%, #d4aa48 50%, #c49836 100%) !important;
-    color: #0b1f22 !important;
+    background: var(--primary, #1cc2b2) !important;
+    color: #07191b !important;
     font-weight: 700 !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0 2px 10px rgba(28, 194, 178, 0.35) !important;
   }
 
-  /* ── Bottom Doctolib CTA Button ───────────────────────── */
+  /* ── Doctolib CTA Button (Removed per request) ───────────────────────── */
   .mobile-menu-cta {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 10px !important;
-    width: 100% !important;
-    background: linear-gradient(135deg, #f5dc94 0%, #d4aa48 50%, #c49836 100%) !important;
-    color: #0b1f22 !important;
-    text-decoration: none !important;
-    font-size: 1.05rem !important;
-    font-weight: 700 !important;
-    padding: 16px 22px !important;
-    border-radius: 9999px !important;
-    box-shadow: 0 6px 20px rgba(198, 156, 58, 0.25) !important;
-    box-sizing: border-box !important;
-    margin-top: 4px !important;
-    transition: transform 0.2s, box-shadow 0.2s !important;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .mobile-menu-cta:hover,
-  .mobile-menu-cta:active {
-    transform: translateY(-1px) !important;
-    box-shadow: 0 8px 24px rgba(198, 156, 58, 0.35) !important;
-    color: #0b1f22 !important;
-  }
-
-  .mobile-menu-cta svg {
-    flex-shrink: 0 !important;
+    display: none !important;
   }
 }
 

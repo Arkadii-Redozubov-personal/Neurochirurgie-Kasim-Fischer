@@ -3876,39 +3876,47 @@ html, body {
 
 /* ── Desktop Card (Photo 1) ── */
 .fd-desktop-card {
-  width: 350px !important;
+  position: relative !important;
+  width: 365px !important;
   background: rgba(9, 30, 34, 0.96) !important;
   backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(28, 194, 178, 0.35) !important;
   border-radius: 24px !important;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.52), 0 0 25px rgba(0, 229, 191, 0.1) !important;
-  padding: 22px 22px 20px 22px !important;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55) !important;
+  padding: 20px 20px 18px 20px !important;
   display: flex !important;
   flex-direction: column !important;
-  gap: 16px !important;
+  gap: 15px !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease !important;
   box-sizing: border-box !important;
 }
 
 .fd-desktop-card:hover {
   transform: translateY(-4px) !important;
-  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.58), 0 0 32px rgba(0, 229, 191, 0.16) !important;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.65) !important;
 }
 
 .fd-header {
   display: flex !important;
   align-items: center !important;
-  gap: 14px !important;
+  gap: 12px !important;
+  padding-right: 36px !important; /* Leaves room for close button in top-right corner */
+  box-sizing: border-box !important;
+}
+
+[dir="rtl"] .fd-header {
+  padding-right: 0 !important;
+  padding-left: 36px !important;
 }
 
 .fd-badge {
-  width: 44px !important;
-  height: 44px !important;
+  width: 42px !important;
+  height: 42px !important;
   border-radius: 50% !important;
   background: #062325 !important;
   border: 1.5px solid #00e5bf !important;
-  box-shadow: 0 0 14px rgba(0, 229, 191, 0.35) !important;
+  box-shadow: none !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -3922,18 +3930,23 @@ html, body {
 
 .fd-title {
   color: #ffffff !important;
-  font-size: 1.25rem !important;
+  font-size: 1.15rem !important;
   font-weight: 700 !important;
   margin: 0 !important;
   flex: 1 !important;
   letter-spacing: -0.01em !important;
   font-family: inherit !important;
   line-height: 1.25 !important;
+  white-space: nowrap !important; /* Stretches on one line without wrapping */
 }
 
+/* Close button placed in top right corner */
 .fd-close-btn {
-  width: 32px !important;
-  height: 32px !important;
+  position: absolute !important;
+  top: 18px !important;
+  right: 18px !important;
+  width: 30px !important;
+  height: 30px !important;
   border-radius: 50% !important;
   background: rgba(255, 255, 255, 0.08) !important;
   border: 1px solid rgba(255, 255, 255, 0.16) !important;
@@ -3945,11 +3958,17 @@ html, body {
   transition: all 0.2s ease !important;
   flex-shrink: 0 !important;
   padding: 0 !important;
+  z-index: 10 !important;
 }
 
 .fd-close-btn:hover {
   background: rgba(255, 255, 255, 0.2) !important;
   transform: scale(1.06) !important;
+}
+
+[dir="rtl"] .fd-close-btn {
+  right: auto !important;
+  left: 18px !important;
 }
 
 .fd-btn-group {
@@ -3964,16 +3983,16 @@ html, body {
   justify-content: center !important;
   gap: 10px !important;
   width: 100% !important;
-  padding: 14px 20px !important;
+  padding: 13px 20px !important;
   border-radius: 9999px !important;
   background: #00e5bf !important;
   color: #061c1e !important;
   font-weight: 700 !important;
-  font-size: 1.05rem !important;
+  font-size: 1.02rem !important;
   text-decoration: none !important;
   border: none !important;
+  box-shadow: none !important;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  box-shadow: 0 4px 18px rgba(0, 229, 191, 0.32) !important;
   box-sizing: border-box !important;
 }
 
@@ -3981,7 +4000,7 @@ html, body {
   background: #1affd3 !important;
   color: #061c1e !important;
   transform: translateY(-1px) !important;
-  box-shadow: 0 6px 24px rgba(0, 229, 191, 0.45) !important;
+  box-shadow: none !important;
 }
 
 .fd-btn-primary svg {
@@ -3995,12 +4014,12 @@ html, body {
   justify-content: center !important;
   gap: 10px !important;
   width: 100% !important;
-  padding: 14px 20px !important;
+  padding: 13px 20px !important;
   border-radius: 9999px !important;
   background: rgba(255, 255, 255, 0.05) !important;
   color: #ffffff !important;
   font-weight: 600 !important;
-  font-size: 1.05rem !important;
+  font-size: 1.02rem !important;
   text-decoration: none !important;
   border: 1.5px solid rgba(255, 255, 255, 0.22) !important;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
@@ -4076,7 +4095,7 @@ html, body {
     border: 1.5px solid rgba(28, 194, 178, 0.35) !important;
     border-radius: 999px !important;
     padding: 7px 10px 7px 8px !important;
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45), 0 0 15px rgba(0, 229, 191, 0.1) !important;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45) !important;
     cursor: pointer !important;
     user-select: none !important;
     transition: transform 0.18s, border-color 0.18s !important;
@@ -4139,7 +4158,7 @@ html, body {
     border: 1.5px solid rgba(28, 194, 178, 0.35) !important;
     border-radius: 20px !important;
     padding: 16px 14px 14px !important;
-    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 229, 191, 0.1) !important;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.6) !important;
     backdrop-filter: blur(16px) !important;
     -webkit-backdrop-filter: blur(16px) !important;
     opacity: 0 !important;
@@ -4166,7 +4185,7 @@ html, body {
     content: '' !important;
     position: absolute !important;
     bottom: -7px !important;
-    right: 32px !important;
+    right: 48px !important;
     width: 12px !important;
     height: 12px !important;
     background: #091e22 !important;
@@ -4181,7 +4200,7 @@ html, body {
   }
   [dir="rtl"] .fd-mobile-popup::after {
     right: auto !important;
-    left: 32px !important;
+    left: 48px !important;
   }
 }
 

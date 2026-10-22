@@ -2694,3 +2694,355 @@ html, body {
 .about-text-content p:last-child {
   margin-bottom: 40px;
 }
+
+
+/* ═════════════════════════════════════════════════════════════════
+   FLOATING APPOINTMENT WIDGET (Desktop Card + Mobile Sliding Menu)
+   Matches Photo 1 (Desktop) & Photo 2 (Mobile)
+   ═════════════════════════════════════════════════════════════════ */
+.floating-doctolib {
+  position: fixed !important;
+  right: 30px !important;
+  bottom: 30px !important;
+  z-index: 9999 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  animation: none !important;
+  font-family: inherit !important;
+  display: block !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+[dir="rtl"] .floating-doctolib {
+  right: auto !important;
+  left: 30px !important;
+}
+
+/* ── Desktop Card (Photo 1) ── */
+.fd-desktop-card {
+  width: 350px !important;
+  background: rgba(9, 30, 34, 0.96) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(28, 194, 178, 0.35) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.52), 0 0 25px rgba(0, 229, 191, 0.1) !important;
+  padding: 22px 22px 20px 22px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  box-sizing: border-box !important;
+}
+
+.fd-desktop-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.58), 0 0 32px rgba(0, 229, 191, 0.16) !important;
+}
+
+.fd-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+}
+
+.fd-badge {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  background: #062325 !important;
+  border: 1.5px solid #00e5bf !important;
+  box-shadow: 0 0 14px rgba(0, 229, 191, 0.35) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #00e5bf !important;
+  flex-shrink: 0 !important;
+}
+
+.fd-badge svg {
+  stroke: #00e5bf !important;
+}
+
+.fd-title {
+  color: #ffffff !important;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  flex: 1 !important;
+  letter-spacing: -0.01em !important;
+  font-family: inherit !important;
+  line-height: 1.25 !important;
+}
+
+.fd-close-btn {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  flex-shrink: 0 !important;
+  padding: 0 !important;
+}
+
+.fd-close-btn:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  transform: scale(1.06) !important;
+}
+
+.fd-btn-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+.fd-btn-primary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+  padding: 14px 20px !important;
+  border-radius: 9999px !important;
+  background: #00e5bf !important;
+  color: #061c1e !important;
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  text-decoration: none !important;
+  border: none !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 18px rgba(0, 229, 191, 0.32) !important;
+  box-sizing: border-box !important;
+}
+
+.fd-btn-primary:hover {
+  background: #1affd3 !important;
+  color: #061c1e !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 24px rgba(0, 229, 191, 0.45) !important;
+}
+
+.fd-btn-primary svg {
+  flex-shrink: 0 !important;
+  stroke: #061c1e !important;
+}
+
+.fd-btn-secondary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+  padding: 14px 20px !important;
+  border-radius: 9999px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 1.05rem !important;
+  text-decoration: none !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.22) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-sizing: border-box !important;
+}
+
+.fd-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+}
+
+.fd-btn-secondary svg {
+  flex-shrink: 0 !important;
+  stroke: #ffffff !important;
+}
+
+.fd-secure {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 0.88rem !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  line-height: 1.4 !important;
+  margin-top: 2px !important;
+}
+
+.fd-secure svg {
+  color: #00e5bf !important;
+  width: 14px !important;
+  height: 14px !important;
+  flex-shrink: 0 !important;
+  stroke: #00e5bf !important;
+}
+
+/* ── Mobile Wrapper & Pill (Photo 2) ── */
+.fd-mobile-wrapper {
+  display: none;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .fd-desktop-card {
+    display: none !important;
+  }
+  .fd-mobile-wrapper {
+    display: block !important;
+  }
+  .floating-doctolib {
+    right: 16px !important;
+    bottom: 18px !important;
+    width: auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  [dir="rtl"] .floating-doctolib {
+    right: auto !important;
+    left: 16px !important;
+  }
+
+  .fd-mobile-pill {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    background: rgba(9, 31, 34, 0.96) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1.5px solid rgba(28, 194, 178, 0.35) !important;
+    border-radius: 999px !important;
+    padding: 7px 10px 7px 8px !important;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45), 0 0 15px rgba(0, 229, 191, 0.1) !important;
+    cursor: pointer !important;
+    user-select: none !important;
+    transition: transform 0.18s, border-color 0.18s !important;
+  }
+  .fd-mobile-pill:active {
+    transform: scale(0.97) !important;
+  }
+  [dir="rtl"] .fd-mobile-pill {
+    padding: 7px 8px 7px 10px !important;
+  }
+
+  .fd-pill-badge {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: #00e5bf !important;
+    color: #072023 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+  .fd-pill-badge svg {
+    stroke: #072023 !important;
+  }
+
+  .fd-pill-text {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 1.02rem !important;
+    white-space: nowrap !important;
+  }
+
+  .fd-pill-close {
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+    padding: 0 !important;
+    transition: background 0.2s !important;
+  }
+  .fd-pill-close:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+  }
+
+  /* ── Mobile Sliding Popup (Appears ABOVE the pill) ── */
+  .fd-mobile-popup {
+    position: absolute !important;
+    bottom: calc(100% + 14px) !important;
+    right: 0 !important;
+    width: min(315px, calc(100vw - 32px)) !important;
+    background: rgba(9, 31, 34, 0.98) !important;
+    border: 1.5px solid rgba(28, 194, 178, 0.35) !important;
+    border-radius: 20px !important;
+    padding: 16px 14px 14px !important;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 229, 191, 0.1) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(12px) scale(0.96) !important;
+    pointer-events: none !important;
+    transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s !important;
+    z-index: 1001 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  .floating-doctolib.fd-open .fd-mobile-popup {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) scale(1) !important;
+    pointer-events: auto !important;
+  }
+
+  /* Pointer notch pointing down to the pill */
+  .fd-mobile-popup::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -7px !important;
+    right: 32px !important;
+    width: 12px !important;
+    height: 12px !important;
+    background: #091e22 !important;
+    border-right: 1.5px solid rgba(28, 194, 178, 0.35) !important;
+    border-bottom: 1.5px solid rgba(28, 194, 178, 0.35) !important;
+    transform: rotate(45deg) !important;
+  }
+
+  [dir="rtl"] .fd-mobile-popup {
+    right: auto !important;
+    left: 0 !important;
+  }
+  [dir="rtl"] .fd-mobile-popup::after {
+    right: auto !important;
+    left: 32px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-doctolib {
+    right: 12px !important;
+    bottom: 14px !important;
+  }
+  [dir="rtl"] .floating-doctolib {
+    left: 12px !important;
+    right: auto !important;
+  }
+  .fd-pill-text {
+    font-size: 0.95rem !important;
+  }
+}

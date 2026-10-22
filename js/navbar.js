@@ -210,3 +210,58 @@
       }
     });
   }
+
+// ── Floating Appointment Widget Toggle (Desktop & Mobile) ─────
+function toggleFdMobile(e) {
+  if (e && e.target && e.target.closest('.fd-pill-close')) return;
+  const widget = document.querySelector('.floating-doctolib');
+  if (widget) {
+    widget.classList.toggle('fd-open');
+    const pill = widget.querySelector('.fd-mobile-pill');
+    if (pill) {
+      pill.setAttribute('aria-expanded', widget.classList.contains('fd-open') ? 'true' : 'false');
+    }
+  }
+}
+window.toggleFdMobile = toggleFdMobile;
+
+function closeFdWidget(e) {
+  if (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  const widget = document.querySelector('.floating-doctolib');
+  if (widget) {
+    if (widget.classList.contains('fd-open')) {
+      widget.classList.remove('fd-open');
+      const pill = widget.querySelector('.fd-mobile-pill');
+      if (pill) pill.setAttribute('aria-expanded', 'false');
+    } else {
+      widget.style.display = 'none';
+    }
+  }
+}
+window.closeFdWidget = closeFdWidget;
+
+// Close mobile popup if clicking outside
+document.addEventListener('click', function(e) {
+  const widget = document.querySelector('.floating-doctolib');
+  if (widget && widget.classList.contains('fd-open')) {
+    if (!widget.contains(e.target)) {
+      widget.classList.remove('fd-open');
+      const pill = widget.querySelector('.fd-mobile-pill');
+      if (pill) pill.setAttribute('aria-expanded', 'false');
+    }
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    const widget = document.querySelector('.floating-doctolib');
+    if (widget && widget.classList.contains('fd-open')) {
+      widget.classList.remove('fd-open');
+      const pill = widget.querySelector('.fd-mobile-pill');
+      if (pill) pill.setAttribute('aria-expanded', 'false');
+    }
+  }
+});

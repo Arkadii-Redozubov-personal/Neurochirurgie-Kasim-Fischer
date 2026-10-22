@@ -1433,7 +1433,7 @@
         "hours": "Randevu ile özel muayene",
         "services": "Özel omurga muayenesi · İkinci görüş · Minimal invaziv tedavi planlaması",
         "phone": "(0211) 828 937 10",
-        "address": "Königsallee 60F, 40212 Düsseldorf",
+        "address": "Münsterstr. 519, 40472 Düsseldorf",
         "transport": "KÖ-Galerie · Steinstraße/Königsallee metro istasyonuna yürüme mesafesinde"
       },
       "city": "Düsseldorf",
@@ -1442,7 +1442,7 @@
         "hours": "Privatsprechstunde nach Vereinbarung",
         "services": "Privatärztliche Wirbelsäulensprechstunde · Zweitmeinungen · Minimalinvasive Behandlungsplanung",
         "phone": "(0211) 828 937 10",
-        "address": "Königsallee 60F, 40212 Düsseldorf",
+        "address": "Münsterstr. 519, 40472 Düsseldorf",
         "transport": "KÖ-Galerie · U-Bahn Steinstraße/Königsallee fußläufig"
       },
       "ru": {
@@ -1450,7 +1450,7 @@
         "hours": "Частный прием по договоренности",
         "services": "Частный прием по заболеваниям позвоночника · Второе мнение · Планирование малоинвазивного лечения",
         "phone": "(0211) 828 937 10",
-        "address": "Königsallee 60F, 40212 Düsseldorf",
+        "address": "Münsterstr. 519, 40472 Düsseldorf",
         "transport": "KÖ-Galerie · Метро Steinstraße/Königsallee в пешей доступности"
       },
       "ar": {
@@ -1458,7 +1458,7 @@
         "hours": "استشارة خاصة حسب الموعد",
         "services": "عيادة خاصة لآلام العمود الفقري · رأي طبي ثانٍ · تخطيط العلاج طفيف التوغل",
         "phone": "(0211) 828 937 10",
-        "address": "Königsallee 60F, 40212 Düsseldorf",
+        "address": "Münsterstr. 519, 40472 Düsseldorf",
         "transport": "مركز KÖ-Galerie · مترو Steinstraße/Königsallee على بعد مسافة سير"
       },
       "id": "branch_3",
@@ -1467,11 +1467,11 @@
         "hours": "Private consultation by appointment",
         "services": "Private spine consultation · Second opinions · Minimally invasive treatment planning",
         "phone": "(0211) 828 937 10",
-        "address": "Königsallee 60F, 40212 Düsseldorf",
+        "address": "Münsterstr. 519, 40472 Düsseldorf",
         "transport": "KÖ-Galerie · Subway Steinstraße/Königsallee within walking distance"
       },
       "phone": "(0211) 828 937 10",
-      "address": "Königsallee 60F, 40212 Düsseldorf",
+      "address": "Münsterstr. 519, 40472 Düsseldorf",
       "btn_link": "https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer",
       "order": 2
     }

@@ -1681,6 +1681,16 @@
   background: #fff;
   color: var(--bg-dark);
 }
+.fd-btn-secondary {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+}
+.fd-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+}
+
 .fd-secure {
   display: flex;
   align-items: center;

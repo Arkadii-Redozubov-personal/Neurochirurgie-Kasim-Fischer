@@ -2396,12 +2396,12 @@
       "id": "branch_3",
       "order": 2,
       "city": "Düsseldorf",
-      "address": "Königsallee 60F, 40212 Düsseldorf",
+      "address": "Münsterstr. 519, 40472 Düsseldorf",
       "phone": "(0211) 828 937 10",
       "btn_link": "https://www.doctolib.de/neurochirurgie/moenchengladbach/kasim-fischer",
       "de": {
         "city": "Düsseldorf",
-        "address": "Königsallee 60F, 40212 Düsseldorf",
+        "address": "Münsterstr. 519, 40472 Düsseldorf",
         "phone": "(0211) 828 937 10",
         "hours": "Privatsprechstunde nach Vereinbarung",
         "services": "Privatärztliche Wirbelsäulensprechstunde · Zweitmeinungen · Minimalinvasive Behandlungsplanung",
@@ -2409,7 +2409,7 @@
       },
       "en": {
         "city": "Düsseldorf",
-        "address": "Königsallee 60F, 40212 Düsseldorf",
+        "address": "Münsterstr. 519, 40472 Düsseldorf",
         "phone": "(0211) 828 937 10",
         "hours": "Private consultation by appointment",
         "services": "Private spine consultation · Second opinions · Minimally invasive treatment planning",
@@ -2417,7 +2417,7 @@
       },
       "ru": {
         "city": "Дюссельдорф",
-        "address": "Königsallee 60F, 40212 Düsseldorf",
+        "address": "Münsterstr. 519, 40472 Düsseldorf",
         "phone": "(0211) 828 937 10",
         "hours": "Частный прием по договоренности",
         "services": "Частный прием по заболеваниям позвоночника · Второе мнение · Планирование малоинвазивного лечения",
@@ -2425,7 +2425,7 @@
       },
       "tr": {
         "city": "Düsseldorf",
-        "address": "Königsallee 60F, 40212 Düsseldorf",
+        "address": "Münsterstr. 519, 40472 Düsseldorf",
         "phone": "(0211) 828 937 10",
         "hours": "Randevu ile özel muayene",
         "services": "Özel omurga muayenesi · İkinci görüş · Minimal invaziv tedavi planlaması",
@@ -2433,7 +2433,7 @@
       },
       "ar": {
         "city": "دوسلدورف",
-        "address": "Königsallee 60F, 40212 Düsseldorf",
+        "address": "Münsterstr. 519, 40472 Düsseldorf",
         "phone": "(0211) 828 937 10",
         "hours": "استشارة خاصة حسب الموعد",
         "services": "عيادة خاصة لآلام العمود الفقري · رأي طبي ثانٍ · تخطيط العلاج طفيف التوغل",
@@ -2441,11 +2441,11 @@
       },
       "uz": {
         "city": "Düsseldorf",
-        "address": "Schadowstraße 74, 40212 Düsseldorf",
+        "address": "Münsterstr. 519, 40472 Düsseldorf",
         "phone": "(0211) 942 590 00",
         "hours": "Kelishuvga koʻra / Xususiy qabul",
         "services": "Xususiy qabul va ikkinchi tibbiy xulosa · Neyroxirurgik konsultatsiya",
-        "transport": "Düsseldorf shahar markazida qulay joylashgan (Schadowstraße metro bekati yaqinida). Schadow-Arkaden avtoturargohi toʻgʻridan-toʻgʻri yaqinida."
+        "transport": "Düsseldorfda qulay joylashgan. Avtoturargoh toʻgʻridan-toʻgʻri yaqinida."
       }
     }
   ]

@@ -255,7 +255,7 @@
         </div>
         <p style="color: var(--text-dark); margin: 0; font-size: 1.02rem; line-height: 1.6;">Sollten Sie eine Überweisung mit Dringlichkeitscode haben, rufen Sie 116 117 an und fragen nach einem Akuttermin bei uns (Praxis für Neurochirurgie Dr. K. Fischer-Rahimov & Kollegen). Alternativ bitten Sie Ihren Hausarzt bei uns im Rahmen der „Hausarztvermittlung“ einen Termin zu vereinbaren.</p>
       </div>
-      <!-- PATIENT QUESTIONNAIRE PREPARATION BLOCK -->
+      
       <div style="background: linear-gradient(135deg, rgba(28, 194, 178, 0.025) 0%, #ffffff 100%); border: 1px solid rgba(28, 194, 178, 0.18); border-left: 5px solid var(--primary); padding: 22px 24px; border-radius: 10px; margin-bottom: 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
           <span style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: var(--primary); color: white; border-radius: 50%; box-shadow: 0 2px 6px rgba(28, 194, 178, 0.25); flex-shrink: 0;">
@@ -265,6 +265,55 @@
         </div>
         <p style="color: var(--text-dark); margin: 0; font-size: 1.02rem; line-height: 1.6;">Liebe Patientinnen und Patienten,<br>damit wir uns bei Ihrem ersten Termin bestmöglich auf Ihre Beschwerden konzentrieren können, bitten wir Sie, unseren Patientenfragebogen möglichst bereits zu Hause auszufüllen.<br><br><a href="https://app.arzt-direkt.de/webforms/permalink/neurochirurgiefischer/formular-otk-pkv" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(28, 194, 178, 0.08); color: #0d8276; border: 1px solid rgba(28, 194, 178, 0.25); padding: 8px 16px; border-radius: 6px; font-weight: 600; text-decoration: none; margin: 8px 0; transition: all 0.2s; box-shadow: 0 1px 4px rgba(0,0,0,0.02);" onmouseover="this.style.background='var(--primary)';this.style.color='#fff';" onmouseout="this.style.background='rgba(28, 194, 178, 0.08)';this.style.color='#0d8276';"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg><span>Patientenfragebogen online ausfüllen &rarr;</span></a><br><br>Bitte bringen Sie außerdem Ihre aktuellen MRT-/CT-Aufnahmen einschließlich Befundbericht zum Termin mit – digital, auf CD oder in der Ihnen vorliegenden Form.<br><br>Vielen Dank für Ihre Unterstützung.<br>Ihre Fachärzte für Neurochirurgie<br>Dr. med. K. Fischer-Rahimov & Kollegen</p>
       </div>
+
+      
+
+      
+
+      <!-- TOP SECTION: FORM + CONTACT INFO -->
+      <div class="contact-top-grid">
+        <!-- LEFT: FORM -->
+        <div class="contact-form-container">
+          <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 32px;">Kontakt</h2>
+          
+          <form id="contact-form" onsubmit="sendEmail(event)" class="contact-form">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <input type="text" id="user_name" name="user_name" required class="form-input" placeholder="Ihr Name" style="padding: 16px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit;">
+              <input type="email" id="user_email" name="user_email" required class="form-input" placeholder="Ihre E-Mail" style="padding: 16px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit;">
+            </div>
+            
+            <select class="form-input" name="standort" style="width: 100%; padding: 16px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit; background: white;">
+              <option value="" disabled selected>Standort auswählen</option>
+              <option value="viersen">Viersen</option>
+              <option value="moenchengladbach">Mönchengladbach</option>
+              <option value="duesseldorf">Düsseldorf</option>
+            </select>
+            
+            <textarea id="message" name="message" required class="form-textarea" placeholder="Ihre Nachricht" style="flex: 1; min-height: 120px; padding: 16px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit; resize: vertical;"></textarea>
+            
+            <!-- SECURITY DISCLAIMER -->
+            <div style="font-size: 0.9rem; color: #666; margin-top: 4px; margin-bottom: 8px; line-height: 1.5;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom; margin-right: 4px; color: #dc3545;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              Datenschutzhinweis: Bitte senden Sie über dieses Kontaktformular keine medizinischen Unterlagen, Arztbriefe oder MRT/CT-Bilder. Nutzen Sie für den Versand sensibler Gesundheitsdaten den sicheren Kanal im Bereich <a href="zweitmeinung.html" >Zweitmeinung</a> oder bringen Sie diese persönlich zum Termin mit.
+            </div>
+
+            <div id="form-status" style="display: none; margin-top: 16px; margin-bottom: 16px; font-weight: 600;"></div>
+            <button type="submit" id="submit-btn" class="btn-primary" style="padding: 16px 32px; font-size: 1.1rem; border: none; cursor: pointer; width: 100%;">Nachricht senden</button>
+          </form>
+        </div>
+        
+        <!-- RIGHT: CONTACT INFO LIST -->
+        <div class="contact-info-container">
+    
+          <div class="contact-info-card">
+            <div class="ci-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="ci-content">
+              <h4>Adresse (Viersen)</h4>
+              <p style="margin: 0; font-weight: 600; color: var(--text-dark);">Theodor-Heuss-Platz 10, 41747 Viersen, 4. OG</p>
+            </div>
+          </div>
         
           <div class="contact-info-card">
             <div class="ci-icon-wrapper">
@@ -282,7 +331,7 @@
             </div>
             <div class="ci-content">
               <h4>Adresse (Düsseldorf)</h4>
-              <p style="margin: 0; font-weight: 600; color: var(--text-dark);">Münsterstr. 519, 40472 Düsseldorf</p>
+              <p style="margin: 0; font-weight: 600; color: var(--text-dark);">Münsterstr. 519, 40472 Düsseldorf (5. OG)</p>
             </div>
           </div>
         

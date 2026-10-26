@@ -227,21 +227,34 @@ window.toggleFdMobile = toggleFdMobile;
 
 function closeFdWidget(e) {
   if (e) {
-    e.preventDefault();
-    e.stopPropagation();
+    if (typeof e.preventDefault === 'function') e.preventDefault();
+    if (typeof e.stopPropagation === 'function') e.stopPropagation();
   }
-  const widget = document.querySelector('.floating-doctolib');
+  const widget = (e && e.target && typeof e.target.closest === 'function')
+    ? e.target.closest('.floating-doctolib')
+    : document.querySelector('.floating-doctolib');
   if (widget) {
-    if (widget.classList.contains('fd-open')) {
-      widget.classList.remove('fd-open');
-      const pill = widget.querySelector('.fd-mobile-pill');
-      if (pill) pill.setAttribute('aria-expanded', 'false');
-    } else {
-      widget.style.display = 'none';
-    }
+    widget.classList.remove('fd-open');
+    widget.classList.add('fd-hidden');
+    widget.style.setProperty('display', 'none', 'important');
   }
 }
 window.closeFdWidget = closeFdWidget;
+
+// Reliable click handler for any Doctolib close button (desktop or mobile) across all pages
+document.addEventListener('click', function(e) {
+  const closeBtn = e.target && typeof e.target.closest === 'function' ? e.target.closest('.fd-close-btn, .fd-pill-close, .fd-close') : null;
+  if (closeBtn) {
+    e.preventDefault();
+    e.stopPropagation();
+    const widget = closeBtn.closest('.floating-doctolib') || document.querySelector('.floating-doctolib');
+    if (widget) {
+      widget.classList.remove('fd-open');
+      widget.classList.add('fd-hidden');
+      widget.style.setProperty('display', 'none', 'important');
+    }
+  }
+}, true);
 
 // Close mobile popup if clicking outside
 document.addEventListener('click', function(e) {

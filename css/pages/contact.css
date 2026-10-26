@@ -217,7 +217,7 @@
       background: var(--primary);
       color: #fff;
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(28, 194, 178, 0.45);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
     }
     .branch-map-link-overlay {
       display: none;

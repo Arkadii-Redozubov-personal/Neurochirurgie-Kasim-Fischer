@@ -390,7 +390,15 @@
       .hero-inner-sub .hero-title { font-size: min(2.5rem, 10vw) !important; word-break: break-word; hyphens: auto; line-height: 1.1; margin-bottom: 12px; }
       .hero-desc { font-size: 0.85rem !important; margin-bottom: 16px !important; line-height: 1.4; }
       .hero-actions { flex-direction: column; align-items: stretch !important; gap: 12px !important; margin-top: 16px !important; }
-      .hero-actions .btn-primary, .hero-actions .btn-outline { width: 100%; justify-content: center; padding: 14px; font-size: 1.05rem !important; }
+      .hero-actions .btn-primary, .hero-actions .btn-outline {
+        width: 100%;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 14px;
+        font-size: 1.05rem !important;
+        gap: 10px !important;
+      }
       .hero-actions .phone-link { width: 100%; text-align: center; font-size: 1.1rem !important; }
       .trusted-stats { flex-direction: row !important; flex-wrap: nowrap !important; justify-content: space-between; gap: 12px !important; width: 100%; }
       .trusted-stat { gap: 8px !important; }
@@ -420,7 +428,15 @@
       .service-card, .treatment-card, .step-card, .process-timeline, .contact-card, .testimonial-card, .service-card-new { padding: 20px !important; }
       .cta-card { padding: 40px 20px !important; }
       
-      .btn-dark, .btn-primary, .btn-white, .btn-outline-white { width: 100% !important; display: block !important; text-align: center !important; box-sizing: border-box; }
+      .btn-dark, .btn-primary, .btn-white, .btn-outline-white, .btn-outline {
+        width: 100% !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        box-sizing: border-box;
+        gap: 10px !important;
+      }
       .contact-grid, .services-grid, .steps-grid, .treatment-grid, .team-grid { gap: 12px !important; }
       .hero-inner-sub { padding-bottom: 32px !important; }
       .hero-bottom-bar { position: static !important; margin-top: 32px !important; margin-bottom: -80px !important; }
@@ -437,6 +453,63 @@
     .testimonials-section .section-title { color: var(--text-dark); }
     .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1200px; margin: 0 auto; }
     .testimonial-card { background: white; border-radius: var(--radius-lg); padding: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.04); border: 1px solid #f1f5f9; display: flex; flex-direction: column; }
+    .google-icon-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      line-height: 1;
+    }
+    .google-icon-link:hover {
+      transform: scale(1.15);
+      opacity: 0.85;
+    }
+    .google-reviews-badge-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(28, 194, 178, 0.08);
+      border: 1px solid rgba(28, 194, 178, 0.2);
+      padding: 8px 18px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .google-reviews-badge-link:hover {
+      background: rgba(28, 194, 178, 0.16) !important;
+      border-color: rgba(28, 194, 178, 0.4) !important;
+      transform: translateY(-1px);
+    }
+    .testimonial-link-google {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #0e746b;
+      text-decoration: none;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid #f1f5f9;
+      transition: color 0.2s ease, gap 0.2s ease;
+    }
+    .testimonial-link-google:hover {
+      color: var(--primary, #1cc2b2);
+      text-decoration: underline;
+      gap: 9px;
+    }
+    .testimonial-link-google svg {
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+    .testimonial-link-google:hover svg {
+      transform: translate(2px, -2px);
+    }
+    [dir="rtl"] .testimonial-link-google:hover svg {
+      transform: translate(-2px, -2px);
+    }
     .rating-summary { font-size: 1.05rem; font-weight: 500; color: var(--text-light); margin-bottom: 0; }
     .stars { color: #fbbf24; font-size: 1.2rem; letter-spacing: 2px; margin-bottom: 16px; display: block; }
     .testimonial-text { font-size: 1.05rem; line-height: 1.7; color: var(--text-dark); margin-bottom: 32px; font-style: italic; flex-grow: 1; }
@@ -2223,6 +2296,7 @@
 .doctor-showcase-img {
   width: 40%;
   max-width: 400px;
+  height: auto;
   border-radius: var(--radius-md);
   object-fit: cover;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
